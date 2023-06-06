@@ -5,6 +5,7 @@ const initialState = {
   email: '',
   age: '',
   address: '',
+  password: '',
 };
 const formReducer = (state, action) => {
   switch (action.type) {
@@ -16,6 +17,8 @@ const formReducer = (state, action) => {
       return { ...state, age: action.payload };
     case 'UPDATE_ADDRESS':
       return { ...state, address: action.payload };
+    case 'UPDATE_PASSWORD':
+      return { ...state, password: action.payload };
     case 'RESET_FORM':
       return initialState;
     default:
@@ -40,6 +43,7 @@ const Register = () => {
       email: state.email,
       age: state.age,
       address: state.address,
+      password: state.password,
     };
 
     try {
@@ -103,6 +107,14 @@ const Register = () => {
         value={state.address}
         onChange={handleInputChange}
         placeholder="Enter your address"
+        className="form-input"
+      />
+      <input
+        type="text"
+        name="password"
+        value={state.password}
+        onChange={handleInputChange}
+        placeholder="Enter your Password"
         className="form-input"
       />
       <button type="submit" className="form-button">Submit</button>
