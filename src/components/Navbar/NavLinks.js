@@ -12,22 +12,22 @@ const NavLinks = ({ className }) => {
         </NavLink>
       </li>
       <li>
-        <NavLink to={t("aboutLink")} activeclassname="active">
+        <NavLink to="/about" activeclassname="active">
           {t("aboutLink")}
         </NavLink>
       </li>
       <li>
-        <NavLink to={t("coursesLink")} activeclassname="active">
+        <NavLink to="/courses" activeclassname="active">
           {t("coursesLink")}
         </NavLink>
       </li>
       <li>
-        <NavLink to={t("pagesLink")} activeclassname="active">
+        <NavLink to="/pages" activeclassname="active">
           {t("pagesLink")}
         </NavLink>
       </li>
       <li>
-        <NavLink to={t("contactLink")} activeclassname="active">
+        <NavLink to="/contact" activeclassname="active">
           {t("contactLink")}
         </NavLink>
       </li>
