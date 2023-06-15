@@ -1,0 +1,137 @@
+// Navbar.scss
+@import "../../globalStyles/colors";
+.navbar {
+	background-color: #0b127e;
+	color: $white-color;
+	transition: 0.3s ease;
+	// for mobile
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 999;
+	}
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 0;
+		min-height: 3.5rem;
+		transition: 0.3s ease;
+		@media (max-width: 991px) {
+			min-height: 2.5rem;
+			transition: 0.3s ease;
+		}
+		.logo {
+			font-size: 1.5rem;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			cursor: pointer;
+			img {
+				font-size: 16px;
+				max-width: 100%;
+				width: 3rem;
+			}
+			.logo_title {
+				background: linear-gradient($primary-color, $secondary-color);
+				background-repeat: no-repeat;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				@media (max-width: 767px) {
+					font-size: 1.3rem;
+				}
+			}
+		}
+		.nav-links {
+			list-style: none;
+			display: flex;
+			padding-left: 0;
+			margin: 1rem 0;
+			li {
+				padding: 0 0.5rem;
+				margin: 0 0.5rem;
+				@media (max-width: 1017px) {
+					padding: 0 0.3rem;
+				}
+				a {
+					color: $white-color;
+					text-decoration: none;
+
+					&.active {
+						color: $primary-color;
+					}
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+	}
+
+	.nav__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		.cta-button {
+			padding: 0.7rem;
+			background-color: $white-color;
+			color: #333;
+			border: none;
+			border-radius: 4px;
+			font-weight: bold;
+			box-shadow: 0 0 5px inset $third-color;
+			cursor: pointer;
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	#burger_menu {
+		width: 30px;
+		height: 18px;
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		&.open {
+			span:nth-child(1) {
+				transform: translateY(6px) rotate(45deg);
+			}
+
+			span:nth-child(2) {
+				opacity: 0;
+			}
+
+			span:nth-child(3) {
+				transform: translateY(-10px) rotate(-45deg);
+			}
+		}
+
+		span {
+			width: 100%;
+			height: 2px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			background-color: $primary-color;
+			border-radius: 5px;
+			transition: transform 0.3s ease;
+		}
+		@media (max-width: 991px) {
+			display: flex;
+		}
+		@media (max-width: 767px) {
+			width: 26px;
+			// height: 16px;
+		}
+	}
+}
