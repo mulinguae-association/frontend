@@ -1,6 +1,23 @@
 {
-	"welcomeMessage": "Welcome to my website!",
-	"contentText": "This is the content of the website.",
-	"aboutTitle": "About Us",
-	"aboutText": "Learn more about our company."
+	"homeLink": "Home",
+	"aboutLink": "About",
+	"coursesLink": "Courses",
+	"pagesLink": "Pages",
+	"contactLink": "Contact",
+
+	"joinBtn": "PROF Join Us",
+
+	"hero_title": "Promotion of mother & international\nlanguages",
+
+	"before_des_link": "Mother languages matter. Our ",
+	"first_link": "courses ",
+	"after_des_link": "bridge local and international languages, fostering unity in diversity. We advocate for ",
+	"second_link": "multilingualism ",
+	"after_des_link2": "as a cultural concept to promote global unity and peace. Join us to preserve ",
+
+	"third_link": "endangered languages ",
+
+	"last_des_link": "and foster diverse ecosystems. Let us make the promotion of cultural diversity and linguistic heritage a life mission.",
+
+	"hero_button": "Read More"
 }
