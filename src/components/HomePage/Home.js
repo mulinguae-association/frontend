@@ -26,13 +26,13 @@ const Home = () => {
               <span>{t("last_des_link")}</span>
             </p>
 
-            <Link className='hero_btn' to="/About">
+            <Link className='hero_btn change_direction' to="/About">
               <div>
                 <button>
                   {t("hero_button")}
                 </button>
-                <span className={`arrow arrow-first ${langAr ? "chnage_dir" : ""}`}></span>
-                <span className={`arrow arrow-second ${langAr ? "chnage_dir" : ""}`}></span>
+                <span className={`arrow arrow-first ${langAr ? "change_dir" : ""}`}></span>
+                <span className={`arrow arrow-second ${langAr ? "change_dir" : ""}`}></span>
               </div>
             </Link>
           </div>

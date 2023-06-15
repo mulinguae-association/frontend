@@ -1,7 +1,4 @@
 @import "../../globalStyles/colors";
-// for button animation
-$ani-speed: 2s;
-$ani-delay: 1s;
 .hero_section {
 	min-height: calc(100vh - 88px);
 	background-image: linear-gradient(
@@ -22,7 +19,6 @@ $ani-delay: 1s;
 		justify-content: space-between;
 		align-items: center;
 		gap: 2rem;
-
 		.hero_info {
 			width: 49%;
 			text-align: left;
@@ -32,58 +28,47 @@ $ani-delay: 1s;
 			align-items: flex-start;
 			gap: 1.8rem;
 			white-space: pre-line;
-
 			.hero_title {
 				font-size: calc(0.5rem + 3vw);
 				background: linear-gradient(to right, $primary-color, $secondary-color);
 				-webkit-text-fill-color: transparent;
 				-webkit-background-clip: text;
 				margin: 0;
-
 				@media (max-width: 991px) {
 					font-size: calc(0.8rem + 3vw);
 					width: 50%;
 					margin: 0 auto;
 					text-align: center;
 				}
-
 				@media (max-width: 767px) {
 					font-size: calc(1.1rem + 2vw);
 					width: 330px;
 					margin: 0 auto;
 				}
-
 				@media (max-width: 280px) {
 					width: 260px;
 				}
 			}
-
 			.img_info_container {
 				display: none;
 				text-align: center;
 				width: 100%;
-
 				img {
 					max-width: 100%;
 				}
 			}
-
 			.hero_description {
 				color: $white-color;
 				line-height: 1.7;
-
 				@media (min-width: 1200px) {
 					text-align: justify;
 				}
-
 				@media (max-width: 1200px) {
 					text-align: start;
 				}
-
 				@media (max-width: 767px) {
 					text-align: center;
 				}
-
 				.des_link {
 					color: $white-color;
 					font-weight: bold;
@@ -91,7 +76,6 @@ $ani-delay: 1s;
 					text-decoration: none;
 				}
 			}
-
 			.hero_btn {
 				text-decoration: none;
 				letter-spacing: 1px;
@@ -99,7 +83,6 @@ $ani-delay: 1s;
 				color: $primary-color;
 				position: relative;
 				z-index: 1;
-
 				div {
 					font-weight: bold;
 					background-color: $white-color;
@@ -116,89 +99,81 @@ $ani-delay: 1s;
 					justify-content: space-between;
 					align-items: center;
 					position: relative;
-
 					button {
 						all: unset;
 					}
 				}
-
 				&:hover {
 					box-shadow: 0 0 10px #000;
 					border-radius: 50px;
 				}
-
 				&:hover .arrow-first {
-					animation: arrow-movement $ani-speed ease-in-out infinite;
+					animation: arrow-movement-right 2s ease-in-out infinite;
 					opacity: 1;
 				}
-
 				&:hover .arrow-second {
-					animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+					animation: arrow-movement-right 2s 1s ease-in-out infinite;
 					opacity: 1;
 				}
-
 				&:active {
-					transform: scale(0.9);
+					scale: 0.9;
+				}
+				// change direction
+				&.change_direction.rtl {
+					&:hover .arrow-first {
+						animation: arrow-movement-left 2s ease-in-out infinite;
+						opacity: 1;
+					}
+					&:hover .arrow-second {
+						animation: arrow-movement-left 2s 1s ease-in-out infinite;
+						opacity: 1;
+					}
 				}
 			}
 		}
-
 		.img_container {
 			width: 48%;
 			display: flex;
 			justify-content: flex-end;
 			flex: 1 0;
 			height: auto;
-
 			img {
 				max-width: 100%;
 				height: 100%;
 				object-fit: cover;
-
 				@media (min-width: 1250px) {
 					height: 420px;
 				}
 			}
 		}
 	}
-
 	@media (max-width: 991px) {
 		padding: 3rem 0;
-
 		.hero_content {
 			flex-direction: column-reverse;
-
 			.hero_info {
 				width: 100%;
-
 				.img_info_container {
 					display: block;
 				}
 			}
-
 			.img_container {
 				display: none;
 			}
 		}
 	}
 }
-//  for button animation
+// arrow animation
+
+$ani-speed: 2s;
+$ani-delay: 1s;
+
 .arrow {
 	position: absolute;
-	left: 55%;
+	right: 33%;
 	top: 50%;
 	transform-origin: 50% 50%;
 	transform: translate3d(-50%, -50%, 0);
-
-	&.chnage_dir {
-		right: 45%;
-		transform: rotate(175deg);
-	}
-
-	&.chnage_dir::after,
-	&.chnage_dir::before {
-		left: 60px;
-	}
 
 	&:before,
 	&:after {
@@ -208,7 +183,7 @@ $ani-delay: 1s;
 		height: 3px;
 		position: absolute;
 		top: -8px;
-		left: 50px;
+		right: -43px;
 		width: 15px;
 	}
 
@@ -221,17 +196,40 @@ $ani-delay: 1s;
 		transform: rotate(45deg) translateX(-25%);
 		transform-origin: top left;
 	}
+}
 
-	@keyframes arrow-movement {
-		0% {
-			opacity: 0;
-			left: 45%;
-		}
-		70% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0;
-		}
+.arrow.change_dir {
+	left: 63px;
+	right: 0;
+	transform: rotate(175deg) translate3d(-50%, -50%, 0);
+}
+.arrow.change_dir::after,
+.arrow.change_dir::before {
+	top: -5px;
+	right: -76%;
+}
+
+@keyframes arrow-movement-right {
+	0% {
+		opacity: 0;
+		right: 45%;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes arrow-movement-left {
+	0% {
+		opacity: 0;
+		left: 45%;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
