@@ -15,7 +15,7 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    ns: ['home', 'about'], // Specify the namespaces
+    ns: ['home', 'about', 'notFound', 'footer'], // Specify the namespaces
     defaultNS: 'home', // Set the default namespace
     parse: function (data) {
       try {
