@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 const useDirectionChange = (language) => {
+  // run every time i made change 
   useEffect(() => {
     const htmlElement = document.getElementsByTagName('html')[0];
     const elementsToChange = document.getElementsByClassName('change_direction');
@@ -14,13 +15,13 @@ const useDirectionChange = (language) => {
       }
     } else {
       htmlElement.setAttribute('lang', `${language}`); // Set the lang attribute to 'ar'
-      htmlElement.setAttribute('dir', '');
+      htmlElement.setAttribute('dir', 'ltr');
       for (let i = 0; i < elementsToChange.length; i++) {
         elementsToChange[i].classList.remove('rtl');
         elementsToChange[i].classList.add('ltr');
       }
     }
-  }, [language]);
+  });
 };
 
 export default useDirectionChange;
