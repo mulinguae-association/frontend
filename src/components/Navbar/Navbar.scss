@@ -4,7 +4,7 @@
 	background-color: #0b127e;
 	color: $white-color;
 	transition: 0.3s ease;
-	// for mobile
+	// for screen size 991
 	&.fixed {
 		position: fixed;
 		top: 0;
@@ -23,6 +23,7 @@
 		transition: 0.3s ease;
 		@media (max-width: 991px) {
 			min-height: 2.5rem;
+			padding: 0.8rem;
 			transition: 0.3s ease;
 		}
 		.logo {
@@ -34,8 +35,6 @@
 			cursor: pointer;
 			img {
 				font-size: 16px;
-				max-width: 100%;
-				width: 3rem;
 			}
 			.logo_title {
 				background: linear-gradient($primary-color, $secondary-color);
@@ -131,7 +130,6 @@
 		}
 		@media (max-width: 767px) {
 			width: 26px;
-			// height: 16px;
 		}
 	}
 }

@@ -45,14 +45,18 @@ const Navbar = () => {
       <div className="container">
         <div className="content" ref={contentRef}>
           <div className="logo" ref={logoRef} onClick={() => navigate("/")}>
-            <img src='images/cahuacLogo.png' alt="logo" />
+            <picture>
+              <source type='image/webp' srcset='images/cahuacLogo.webp'></source>
+              <source type='image/png' srcset='images/cahuacLogo.png'></source>
+              <img src='images/cahuacLogo.png' width="50px" height="50px" alt="logo" />
+            </picture>
             <span className='logo_title'>
               ACS Mulingua
             </span>
           </div>
           <NavLinks t={t} className={"nav-links"} />
           <div className="nav__buttons">
-            <button className="cta-button">{t("joinBtn")}</button>
+            <button name='join us' className="cta-button" aria-label='join us'>{t("joinBtn")}</button>
             <LanguageSwitcher className="custom-dropdown" />
           </div>
           <div id='burger_menu' className={menuOpen ? "open" : ""} onClick={handleBurgerMenu}>
