@@ -1,15 +1,14 @@
 @import "../../globalStyles/colors";
 .hero_section {
-	min-height: calc(100vh - 88px);
-	background-image: linear-gradient(
+	background: linear-gradient(
 			to bottom,
-			hsla(240, 100%, 50%, 0.9),
+			hsla(235, 100%, 50%, 0.9),
 			rgba(144, 238, 144, 90%)
 		),
-		url("../../../public/images/amazon-people.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+		url("../../../public/images/amazon-people.webp") no-repeat center/cover;
+
 	width: 100%;
+	min-height: calc(100vh - 88px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -55,6 +54,8 @@
 				width: 100%;
 				img {
 					max-width: 100%;
+					width: 100%;
+					height: 100%;
 				}
 			}
 			.hero_description {

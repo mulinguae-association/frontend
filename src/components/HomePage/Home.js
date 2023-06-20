@@ -6,17 +6,21 @@ import i18n from '../../i18n';
 const Home = () => {
   const { t } = useTranslation("home", { ns: "home" });
   const langAr = i18n.language === "Ar" // check if language is Arabic
-
+  const langQu = i18n.language === "Qu" // check if language is Arabic
   return (
-    <section className='hero_section'>
+    <header className='hero_section'>
       <div className='container'>
         <div className='hero_content'>
           <div className='hero_info'>
-            <h1 className='hero_title'>{t("hero_title").split("\\n").join("\n")}</h1>
+            <h1 id='websiteName' style={langQu ? { fontSize: "2.2rem" } : {}} className='hero_title'>{t("hero_title").split("\\n").join("\n")}</h1>
             <div className='img_info_container'>
-              <img src='images/multi-culture.jpg' alt='test' />
+              <picture>
+                <source type='image/webp' srcset='images/multi-culture.webp'></source>
+                <source type='image/png' srcset='images/multi-culture.png'></source>
+                <img src='images/multi-culture.png' alt='multiLang_img' />
+              </picture>
             </div>
-            <p className='hero_description'>
+            <p id='websiteDescription' style={langQu ? { textAlign: "initial" } : {}} className='hero_description'>
               <span>{t("before_des_link")}</span>
               <Link className='des_link' to="/courses">{t("first_link")}</Link>
               <span>{t("after_des_link")}</span>
@@ -25,10 +29,9 @@ const Home = () => {
               <Link className='des_link' to="/">{t("third_link")}</Link>
               <span>{t("last_des_link")}</span>
             </p>
-
             <Link className='hero_btn change_direction' to="/About">
               <div>
-                <button>
+                <button name='read-more' type='button' aria-labelledby='websiteName websiteDescription'>
                   {t("hero_button")}
                 </button>
                 <span className={`arrow arrow-first ${langAr ? "change_dir" : ""}`}></span>
@@ -37,12 +40,15 @@ const Home = () => {
             </Link>
           </div>
           <div className='img_container'>
-            <img src='images/multi-culture.jpg' alt='test' />
+            <picture>
+              <source type='image/webp' srcset='images/multi-culture.webp'></source>
+              <source type='image/png' srcset='images/multi-culture.png'></source>
+              <img src='images/multi-culture.png' alt='multiLang_img' />
+            </picture>
           </div>
         </div>
       </div>
-    </section >
+    </header >
   )
 }
-
 export default Home
