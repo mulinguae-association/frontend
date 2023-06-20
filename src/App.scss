@@ -11,23 +11,34 @@
 }
 
 // removet list style
-ul {
+ul,
+ol {
 	list-style: none;
-	padding-left: 0;
+	padding: 0;
+}
+// style p
+p {
+	line-height: 1.7;
+}
+
+// style images
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 	padding: 0 1rem;
 
-	@media (max-width: 768px) {
-		padding: 0 0.5rem;
+	@media (max-width: 767px) {
+		padding: 0 0.7rem;
 	}
 
 	/* Additional responsive styles for different screen sizes */
 	@media (max-width: 480px) {
-		padding: 0 0.5rem;
+		padding: 0 0.7rem;
 		font-size: 14px;
 	}
 

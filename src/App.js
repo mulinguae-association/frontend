@@ -4,15 +4,24 @@ import Home from './components/HomePage/Home';
 import About from './components/AboutPage/About';
 import Register from './components/RegisterPage/Register';
 import Navbar from './components/Navbar/Navbar';
+import Loader from './components/Loader/Loader'
+import useLoader from './components/Loader/useLoader';
+import NOtFound from "./components/NotFound/NotFound"
+import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
 function App() {
+  const isLoading = useLoader()
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path='/About' element={<About />} />
-        <Route exact path='/Register' element={<Register />} />
-      </Routes>
+      {isLoading ? <Loader /> :
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path='/About' element={<About />} />
+          <Route exact path='/Register' element={<Register />} />
+          <Route path='*' element={<NOtFound />} />
+        </Routes>
+      }
+      <ToTopBtn />
     </div>
   );
 }
