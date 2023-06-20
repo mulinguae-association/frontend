@@ -117,7 +117,9 @@ const Register = () => {
         placeholder="Enter your Password"
         className="form-input"
       />
-      <button type="submit" className="form-button">Submit</button>
+      <button name='submitForm' type="submit" className="form-button"
+        aria-label='Submit Form'
+      >Submit</button>
     </form>
   );
 };
