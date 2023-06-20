@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './CustomDropdown.scss';
 
 const CustomDropdown = ({ options, onSelect, className }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(options[0]);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -12,7 +12,6 @@ const CustomDropdown = ({ options, onSelect, className }) => {
     setIsOpen(false);
     // Save selected language to local storage
     localStorage.setItem('selectedLanguage', option.value);
-
   };
 
   const handleClickOutside = (event) => {
@@ -39,7 +38,7 @@ const CustomDropdown = ({ options, onSelect, className }) => {
   return (
     <div className={className} ref={dropdownRef}>
       <div className="selected-option" onClick={() => setIsOpen(!isOpen)}>
-        {selectedOption ? `${selectedOption?.value === "Ar" ? "اللغات" : "languages"} (${selectedOption?.value})` : `languages (en) `}
+        {selectedOption ? `${selectedOption?.value === "Ar" ? "اللغات" : "languages"} (${selectedOption?.value})` : `languages (En) `}
         <img className='languages_icon' src='images/icons/languages-icon.png' alt='languagesIcon' />
       </div>
       {isOpen && (
@@ -64,5 +63,4 @@ const CustomDropdown = ({ options, onSelect, className }) => {
     </div>
   );
 };
-
 export default CustomDropdown;
