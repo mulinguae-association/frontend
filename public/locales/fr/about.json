@@ -1,6 +1,14 @@
 {
-	"HelloMessage": "Hello sur mon site web !",
-	"contentTexts": "Ceci est le contenu du site web.",
-	"aboutTitles": "À propos de nous",
-	"aboutTexts": "Découvrez notre entreprise"
+	"homeLink": "Accueil",
+	"header_title": "Les langues maternelles comptent",
+	"currLink": "À propos",
+	"mission_head": "Notre mission",
+	"about_mission": "ACS Mulingua s'est donné pour mission de permettre aux gens de communiquer efficacement et en toute confiance dans différentes langues, leur permettant de réussir dans un monde de plus en plus internationalisé tout en protégeant et en développant leurs langues locales et régionales. Le multilinguisme, en tant que concept social et culturel, a le potentiel de le faire. Il peut arrêter le linguicide et le linguicisme tout en promouvant les langues internationales ainsi que les langues locales et régionales. Notre mission vise également à instiller l'espoir, à faire progresser l'équité et à catalyser la réussite dans les communautés et les établissements d'enseignement. Pour ce faire, nous proposons des cours encourageants et responsabilisants aux dirigeants communautaires, aux travailleurs et aux étudiants de tous âges qui se consacrent à l'éducation.",
+	"about_mission2": "Nous visons à favoriser une communauté d'apprenants en langues et à promouvoir la compréhension et la collaboration interculturelles.",
+	"story_head": "Notre histoire",
+	"about_story": "ACS Mulingua est une académie qui opère sous l'égide de l'Asociacion Ccahuac Solidarité (ACS). ACS est une organisation à but non lucratif, fondée en 2010 par un petit groupe de personnes à Lima, au Pérou, pour agir sur le grave problème de la pauvreté et de la dégradation de l'environnement. ACS promeut actuellement un projet visant à rendre les gens autonomes dans la production alimentaire et à sensibiliser le public au réchauffement climatique et à l'insécurité alimentaire. Nous avons toujours cru que l'éducation est l'outil essentiel qui peut transformer les communautés et les sortir de la misère de la misère. ACS Mulingua s'inscrit dans ces initiatives avec un objectif plus large d'atteindre les communautés du monde entier.",
+	"vision_head": "Notre vision",
+	"about_vision": "Notre vision est d'être un fournisseur leader d'éducation multilingue en ligne, permettant aux individus et aux organisations du monde entier d'atteindre leurs objectifs linguistiques et éducatifs. Nous envisageons un monde où les individus peuvent communiquer couramment dans différentes langues, brisant les barrières culturelles et favorisant la compréhension et le respect mutuels. Notre objectif est de rendre l'enseignement des langues accessible à tous, quel que soit le lieu ou l'origine, et de tirer parti de la technologie pour améliorer l'expérience d'apprentissage des langues. Nous reconnaissons la diversité des apprenants et leurs origines culturelles et adoptons des pratiques d'enseignement ancrées dans les cultures et les langues locales.",
+	"tutors_head": "Nos tuteurs",
+	"about_tutors": "Nos tuteurs sont des professionnels expérimentés, attachés à leurs devoirs et à la déontologie énoncée dans la Charte des Enseignants et sont majoritairement multi ou bilingues. En outre, ils sont engagés dans une formation permanente et un apprentissage tout au long de la vie, défini au sens large comme la recherche continue, volontaire et motivée de connaissances. Les enseignants sont valorisés et ce sont eux qui portent ce projet tant dans sa gestion que dans sa mise en œuvre."
 }

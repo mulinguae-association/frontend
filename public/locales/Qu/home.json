@@ -1,19 +1,17 @@
 {
-	"homeLink": "",
-	"aboutLink": "",
-	"coursesLink": "",
-	"pagesLink": "",
-	"contactLink": "",
-
-	"joinBtn": "",
-
-	"hero_title": "",
-	"before_des_link": "",
-	"first_link": "",
-	"after_des_link": "",
-	"second_link": "",
-	"after_des_link2": "",
-	"third_link": "",
-	"last_des_link": "",
-	"hero_button": ""
+	"homeLink": "Yachay",
+	"aboutLink": "Rimay",
+	"coursesLink": "Wasiqkuna",
+	"pagesLink": "Pachakuna",
+	"contactLink": "Kanay",
+	"joinBtn": "PROF Ñuqaykunaqa ñanaykuna",
+	"hero_title": "Ñuqanchisqa rikch'aykunata yanapasqa\nmama qallarikuna\n& tawantin sutiyuq\nrikch'aykuna",
+	"before_des_link": "Ñuqa yachan rikchay. Ñuqaqa ",
+	"first_link": "wasiqkuna ",
+	"after_des_link": "chaymantami tukuy qallarikunapuraqmi, tawantin sutiyuq wamantinmi yanapasqaykunawanmi. Ñuqaqa yachaymi ",
+	"second_link": "tukuy ñuqapuraqmi ",
+	"after_des_link2": "uyarisqaywanmi kaniyan ñawinchisqa rikch'aykuna yanapasqayuqmi. Ñuqaykunaqa ñuqa ñawpaq mamapuraqmi ",
+	"third_link": "hatun rikch'aykunapuraqmi ",
+	"last_des_link": "tukuylla tawantin sutiyuq wamantapasqaykuna yanapasqa. Kaymantami sumaqpaq kawsaykuna rurasqayuqmi yanapasqaykichu.",
+	"hero_button": "Yachachiy"
 }

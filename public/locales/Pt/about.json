@@ -1,6 +1,14 @@
 {
-	"welcomeMessage": "Bem-vindo ao meu site!",
-	"contentText": "Este é o conteúdo do site.",
-	"aboutTitle": "Sobre nós",
-	"aboutText": "Descubra a nossa empresa"
+	"homeLink": "Início",
+	"header_title": "As línguas maternas importam",
+	"currLink": "Sobre",
+	"mission_head": "Nossa missão",
+	"about_mission": "ACS Mulingua tem como missão permitir que as pessoas se comuniquem de forma eficaz e confiante em diferentes línguas, permitindo-lhes ter sucesso num mundo cada vez mais internacionalizado, ao mesmo tempo que protegem e desenvolvem as suas línguas locais e regionais. O multilinguismo, como conceito social e cultural, tem potencial para fazer isto. Pode deter o linguicídio e o linguicismo, promovendo as línguas internacionais, bem como as línguas locais e regionais. A nossa missão é também infundir esperança, promover a equidade e catalisar o sucesso nas comunidades e nas instituições educativas. Para isso, oferecemos cursos enriquecedores e empoderadores para líderes comunitários, trabalhadores e alunos de todas as idades que se dedicam à educação.",
+	"about_mission2": "O nosso objetivo é fomentar uma comunidade de estudantes de línguas e promover a compreensão e a colaboração entre culturas.",
+	"story_head": "Nossa história",
+	"about_story": "ACS Mulingua é uma academia que funciona sob os auspícios da Association Ccahuac Solidarité (ACS). A ACS é uma organização sem fins lucrativos, fundada em 2010 por um pequeno grupo de pessoas em Lima, Peru, para atuar sobre o grave problema da pobreza e da degradação ambiental. Atualmente, a ACS está impulsionando um projeto para capacitar as pessoas na produção de alimentos e aumentar a conscientização sobre o aquecimento global e a insegurança alimentar. Sempre acreditámos que a educação é a ferramenta essencial que pode transformar as comunidades e tirá-las da pobreza. A ACS Mulingua enquadra-se nestas iniciativas com o objetivo mais amplo de chegar às comunidades de todo o mundo.",
+	"vision_head": "Nossa visão",
+	"about_vision": "Nossa visão é ser um fornecedor líder de ensino virtual multilíngue, permitindo que indivíduos e organizações de todo o mundo atinjam os seus objetivos linguísticos e educativos. Imaginamos um mundo em que as pessoas possam comunicar fluentemente em diferentes línguas, quebrando barreiras culturais e promovendo a compreensão e o respeito mútuo. O nosso objetivo é tornar o ensino das línguas acessível a todos, independentemente do local ou da origem, e aproveitar a tecnologia para melhorar a experiência de aprendizagem das línguas. Reconhecemos a diversidade dos alunos e das suas origens culturais e adoptamos práticas de ensino enraizadas nas culturas e línguas locais.",
+	"tutors_head": "Nossos tutores",
+	"about_tutors": "Os nossos tutores são profissionais experientes, comprometidos com as suas funções e com a ética definida na Carta dos Professores e são, na sua maioria, multilíngues ou bilingues. Além disso, dedicam-se ao treinamento permanente e à aprendizagem ao longo da vida, definida em termos gerais como a procura contínua, voluntária e motivada do conhecimento. Os professores são valorizados e são eles que lideram este projeto, tanto na sua gestão como na sua implementação."
 }
