@@ -2,7 +2,6 @@
 .custom-dropdown {
 	position: relative;
 	width: 170px;
-
 	.selected-option {
 		display: flex;
 		align-items: center;
@@ -17,12 +16,12 @@
 		cursor: pointer;
 		.languages_icon {
 			width: 30px;
+			height: 30px;
 		}
 		&:hover.thin-scroll::-webkit-scrollbar-thumb {
 			background-color: #fff;
 		}
 	}
-
 	.options {
 		position: absolute;
 		top: calc(100% + 1.5rem);
@@ -39,18 +38,16 @@
 		height: 177px;
 		border-radius: 0 0 6px 6px;
 		overflow-y: auto;
-
+		z-index: 999;
 		li {
 			display: flex;
 			justify-content: flex-start;
 			padding: 10px;
 			cursor: pointer;
-
 			&:hover {
 				background-color: #3333338c;
 				color: $primary-color;
 			}
-
 			&.selected {
 				background-color: #3333338c;
 				color: $primary-color;
