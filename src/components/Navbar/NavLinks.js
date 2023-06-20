@@ -17,13 +17,13 @@ const NavLinks = ({ className }) => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/courses" activeclassname="active">
-          {t("coursesLink")}
+        <NavLink to="/pages" activeclassname="active">
+          {t("pagesLink")}
         </NavLink>
       </li>
       <li>
-        <NavLink to="/pages" activeclassname="active">
-          {t("pagesLink")}
+        <NavLink to="/courses" activeclassname="active">
+          {t("coursesLink")}
         </NavLink>
       </li>
       <li>
