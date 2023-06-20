@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomDropdown from './Navbar/customDropdown/CustomDropDown';
 import useDirectionChange from './useDirectionChange';
+import Loader from './Loader/Loader';
 
 function LanguageSwitcher({ className }) {
   const { i18n } = useTranslation();
@@ -20,7 +21,7 @@ function LanguageSwitcher({ className }) {
   const handleSelect = (option) => {
     setIsLoading(true)
     localStorage.setItem('selectedLanguage', option.value); // Save selected language to local storage
-    i18n.changeLanguage(option.value, () => setTimeout(() => setIsLoading(false), 1000));
+    i18n.changeLanguage(option.value, () => setTimeout(() => setIsLoading(false), 500));
   };
   // get language value from local storage
   useEffect(() => {
@@ -32,7 +33,7 @@ function LanguageSwitcher({ className }) {
 
   return (
     <>
-      {isLoading && <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>Loading...</div>}
+      {isLoading && <Loader />}
       <CustomDropdown className={className} options={options} onSelect={handleSelect} />
 
     </>
