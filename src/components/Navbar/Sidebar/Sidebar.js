@@ -11,7 +11,7 @@ const Sidebar = (props) => {
   }
   return (
     <div onClick={handleEvent} className={`sidebar ${props.menuOpen ? 'open' : ''}`}>
-      <button className="cta-button">{props.t("joinBtn")}</button>
+      <button name='join us' className="cta-button" aria-label='join us'>{props.t("joinBtn")}</button>
       <NavLinks className={"sideLinks change_direction"} />
       <LanguageSwitcher className={"custom-dropdown"} />
     </div>
