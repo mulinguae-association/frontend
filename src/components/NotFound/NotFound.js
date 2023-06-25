@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 const NotFound = () => {
   const { t, i18n } = useTranslation("notFound")
   const checkLang = i18n.language === "Ar"
-  console.log(checkLang)
   return (
     <div className='not-found'>
       <div className='container'>
