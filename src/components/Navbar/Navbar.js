@@ -6,7 +6,7 @@ import LanguageSwitcher from '../LanguageSwitcher';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Sidebar from './Sidebar/Sidebar';
-import NavLinks from './NavLinks';
+import NavLinks from './NavLinks/NavLinks';
 
 const Navbar = () => {
   const { t } = useTranslation("home", { ns: "home" });
@@ -46,9 +46,11 @@ const Navbar = () => {
         <div className="content" ref={contentRef}>
           <div className="logo" ref={logoRef} onClick={() => navigate("/")}>
             <picture>
-              <source type='image/webp' srcset='images/cahuacLogo.webp'></source>
-              <source type='image/png' srcset='images/cahuacLogo.png'></source>
-              <img src='images/cahuacLogo.png' width="50px" height="50px" alt="logo" />
+              <source type='image/webp'
+                srcSet={process.env.PUBLIC_URL + '/images/cahuacLogo.webp'}></source>
+              <source type='image/png'
+                srcSet={process.env.PUBLIC_URL + '/images/cahuacLogo.png'}></source>
+              <img src={process.env.PUBLIC_URL + '/images/cahuacLogo.png'} width="50px" height="50px" alt="logo" />
             </picture>
             <span className='logo_title'>
               ACS Mulingua
