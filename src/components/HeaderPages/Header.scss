@@ -1,14 +1,15 @@
 @import "../../globalStyles/colors";
 .header_pages {
 	width: 100%;
-	background: linear-gradient(45deg, #00a2ff 56%, lightgreen 100%);
+	background: radial-gradient(
+		ellipse at top,
+		$primary-color -65%,
+		$darkBlue-color 80%
+	);
 	min-height: 300px;
 	text-align: left;
-	align-items: start;
+	align-items: flex-start;
 	overflow: hidden;
-	&.change_direction.rtl {
-		background: linear-gradient(-45deg, #00a2ff 56%, lightgreen 100%);
-	}
 	.wrapper_container {
 		display: flex;
 		justify-content: center;
@@ -17,13 +18,19 @@
 		.breadcrumb {
 			min-width: 100px;
 			display: flex;
-			justify-content: start;
+			justify-content: flex-start;
 			gap: 0.8rem;
+			color: $white-color;
 			@media (max-width: 767px) {
 				margin-bottom: 2rem;
 			}
-			.breadcrumb_item a:active {
-				color: #444;
+			.breadcrumb_item {
+				a {
+					color: lightgreen;
+					&:active {
+						color: #444;
+					}
+				}
 			}
 		}
 	}
@@ -46,7 +53,7 @@
 			font-size: 24px;
 			letter-spacing: 1px;
 			transform: skewX(164deg);
-			background: linear-gradient(to bottom, $white-color, lightgreen);
+			background: $secondary-color;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			font-weight: 700;
