@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import "./Home.scss"
 import { Link } from 'react-router-dom';
 import i18n from '../../i18n';
-const Home = () => {
+const Home = ({ imgAnimation }) => {
   const { t } = useTranslation("home", { ns: "home" });
   const langAr = i18n.language === "Ar" // check if language is Arabic
   const langQu = i18n.language === "Qu" // check if language is Arabic
@@ -13,18 +13,18 @@ const Home = () => {
         <div className='hero_content'>
           <div className='hero_info'>
             <h1 id='websiteName' style={langQu ? { fontSize: "2.2rem" } : {}} className='hero_title'>{t("hero_title").split("\\n").join("\n")}</h1>
-            <div className='img_info_container'>
+            <div className={`img_info_container ${imgAnimation ? "reload-animation" : ""} `}>
               <picture>
-                <source type='image/webp' srcset='images/multi-culture.webp'></source>
-                <source type='image/png' srcset='images/multi-culture.png'></source>
-                <img src='images/multi-culture.png' alt='multiLang_img' />
+                <source type='image/webp' srcSet={process.env.PUBLIC_URL + '/images/multi-culture.png'}></source>
+                <source type='image/png' srcSet={process.env.PUBLIC_URL + '/images/multi-culture.png'}></source>
+                <img src={process.env.PUBLIC_URL + '/images/multi-culture.png'} alt='multiLang_img' />
               </picture>
             </div>
             <p id='websiteDescription' style={langQu ? { textAlign: "initial" } : {}} className='hero_description'>
               <span>{t("before_des_link")}</span>
               <Link className='des_link' to="/courses">{t("first_link")}</Link>
               <span>{t("after_des_link")}</span>
-              <Link className='des_link' to="/">{t("second_link")}</Link>
+              <Link className='des_link' to="/pages/Multilingualism">{t("second_link")}</Link>
               <span>{t("after_des_link2")}</span>
               <Link className='des_link' to="/">{t("third_link")}</Link>
               <span>{t("last_des_link")}</span>
@@ -39,11 +39,11 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          <div className='img_container'>
+          <div className={`img_container reload-animation  ${imgAnimation ? "reload-animation" : ""}`}>
             <picture>
-              <source type='image/webp' srcset='images/multi-culture.webp'></source>
-              <source type='image/png' srcset='images/multi-culture.png'></source>
-              <img src='images/multi-culture.png' alt='multiLang_img' />
+              <source type='image/webp' srcSet='images/multi-culture.webp'></source>
+              <source type='image/png' srcSet='images/multi-culture.png'></source>
+              <img src={process.env.PUBLIC_URL + 'images/multi-culture.png'} alt='multiLang_img' />
             </picture>
           </div>
         </div>
