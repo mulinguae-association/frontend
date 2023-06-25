@@ -7,15 +7,11 @@
 	border: none;
 	border-radius: 50px;
 	background: radial-gradient(
-			ellipse at center,
-			$primary-color 50%,
-			transparent
-		),
-		radial-gradient(ellipse at right, $secondary-color 50%, transparent),
-		radial-gradient(ellipse at left, $secondary-color 50%, transparent),
-		radial-gradient(ellipse at top, $secondary-color 50%, transparent),
-		radial-gradient(ellipse at bottom, $secondary-color 50%, transparent);
-	box-shadow: inset 0 0 2px #999;
+		ellipse at center,
+		$primary-color 50%,
+		transparent
+	);
+	box-shadow: inset 0 0 15px $darkBlue-color;
 	color: white;
 	z-index: 999;
 	cursor: pointer;
