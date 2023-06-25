@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useTranslation("about", { ns: "about" });
   return (
     <main className='about_us'>
-      <Header t={t} pageName={t("currLink")} />
+      <Header pageName={t("currLink")} />
       <section className='about_us_info'>
         <div className='container'>
           <div className='our_mission'>
