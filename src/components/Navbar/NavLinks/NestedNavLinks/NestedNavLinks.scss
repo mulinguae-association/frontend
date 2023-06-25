@@ -1,0 +1,30 @@
+.nestedNavLinks {
+	position: absolute;
+	top: 4rem;
+	z-index: 99;
+	background-color: hsla(222, 100%, 8%, 0.7);
+	width: 500px;
+	height: auto;
+	min-height: 100px;
+	border-radius: 0 0 20px 20px;
+	left: 50%;
+	top: calc(100% + 86px);
+	transform: translate(-50%, -50%);
+	padding: 0 20px 4px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	.nestedNavContainer {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 70%;
+	}
+	li {
+		padding: 10px !important;
+	}
+	.book_list {
+		width: 12%;
+	}
+}
