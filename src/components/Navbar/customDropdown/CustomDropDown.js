@@ -39,7 +39,7 @@ const CustomDropdown = ({ options, onSelect, className }) => {
     <div className={className} ref={dropdownRef}>
       <div className="selected-option" onClick={() => setIsOpen(!isOpen)}>
         {selectedOption ? `${selectedOption?.value === "Ar" ? "اللغات" : "languages"} (${selectedOption?.value})` : `languages (En) `}
-        <img className='languages_icon' src='images/icons/languages-icon.png' alt='languagesIcon' />
+        <img className='languages_icon' src={process.env.PUBLIC_URL + '/images/icons/languages-icon.png'} alt='languagesIcon' />
       </div>
       {isOpen && (
         <ul className="options thin-scroll">
@@ -53,7 +53,7 @@ const CustomDropdown = ({ options, onSelect, className }) => {
                 {option.label}
 
                 {selectedOption?.value === option?.value &&
-                  <img src="images/icons/right-icon.png" alt="right-icon" />
+                  <img src={process.env.PUBLIC_URL + "/images/icons/right-icon.png"} alt="right-icon" />
                 }
               </span>
             </li>
