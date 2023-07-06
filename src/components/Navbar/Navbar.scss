@@ -20,7 +20,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1rem 0;
+		padding: 0.8rem 0;
 		min-height: 3.5rem;
 		transition: 0.3s ease;
 		@media (max-width: 991px) {
@@ -35,6 +35,13 @@
 			align-items: center;
 			gap: 10px;
 			cursor: pointer;
+			.img_container {
+				width: 55px;
+				position: relative;
+				@media (max-width: 767px) {
+					width: 50px;
+				}
+			}
 			img {
 				font-size: 16px;
 			}
