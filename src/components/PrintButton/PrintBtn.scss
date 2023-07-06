@@ -1,0 +1,36 @@
+@import "../../globalStyles/colors";
+.print_container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: flex-end;
+	.print_btn {
+		all: unset;
+		color: $secondary-color;
+		background-color: $darkBlue-color;
+		min-width: 100px;
+		width: 80px;
+		padding: 6px 8px;
+		font-weight: bold;
+		font-size: 0.9rem;
+		border-radius: 2px;
+		text-transform: capitalize;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+		&:hover {
+			color: $white-color;
+		}
+	}
+	img {
+		width: 1.4rem;
+		color: $primary-color;
+	}
+}
+@media print {
+	.print_container {
+		display: none;
+	}
+}
