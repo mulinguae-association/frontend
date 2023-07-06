@@ -1,0 +1,46 @@
+@import "../../globalStyles/colors";
+.section {
+	.page_title {
+		font-size: 1.8rem;
+		color: $darkBlue-color;
+	}
+	padding: 50px 0;
+	.head {
+		color: $primaryDark-color;
+		max-width: 50%;
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
+	}
+	.about {
+		font-size: 15.5px;
+		color: #444;
+		font-weight: 500;
+		letter-spacing: 0.9px;
+		text-transform: none;
+		line-height: 1.7;
+		word-break: break-word;
+	}
+	span,
+	p {
+		.link {
+			color: blue;
+			word-wrap: break-word;
+			font-weight: 500;
+			display: inline-block;
+			padding: 6px;
+			&:active {
+				scale: 0.99;
+			}
+		}
+	}
+	p > .link {
+		padding: 0;
+	}
+}
+
+@media print {
+	@page {
+		margin: 1cm;
+	}
+}
