@@ -1,7 +1,7 @@
 
 import React from 'react'
 import "./Linguicide.scss"
-import "../globalStyle.scss"
+import "../pagesStyle.scss"
 import { useTranslation } from 'react-i18next'
 import PrintBtn from '../../PrintButton/PrintBtn'
 import { useRef } from 'react'
