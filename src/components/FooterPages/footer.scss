@@ -28,7 +28,7 @@ footer {
 						margin: 0;
 					}
 					.item {
-						padding-bottom: 2px;
+						padding: 6px 0;
 						&:active {
 							scale: 0.99;
 						}
@@ -56,7 +56,7 @@ footer {
 			border-width: 100px 100px 104px 100px;
 			z-index: -1;
 		}
-		&.change_direction.rtl::after {
+		&.rtl::after {
 			left: 0;
 			right: unset;
 			border-color: transparent transparent $secondary-color $secondary-color;
