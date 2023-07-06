@@ -3,13 +3,18 @@ import { useTranslation } from 'react-i18next';
 import Header from '../HeaderPages/Header';
 import "./About.scss"
 import Footer from '../FooterPages/Footer';
+import PrintBtn from '../PrintButton/PrintBtn';
+import { useRef } from 'react';
 const About = () => {
   const { t } = useTranslation("about", { ns: "about" });
+  const { t: global } = useTranslation("global", { ns: "global" });
+  const componentRef = useRef()
   return (
-    <main className='about_us'>
+    <main className='about_us' >
       <Header pageName={t("currLink")} />
-      <section className='about_us_info'>
+      <section className='about_us_info' ref={componentRef}>
         <div className='container'>
+          <PrintBtn print={global("print")} componentRef={componentRef} />
           <div className='our_mission'>
             <h2 className='header'>{t("mission_head")}</h2>
             <p className='about'>
