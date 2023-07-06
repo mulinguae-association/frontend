@@ -1,13 +1,17 @@
 @import "./globalStyles/colors";
 // change direction of the elements
+[dir="rtl"] {
+	// prevent rtl from making any spaces
+	overflow-x: hidden;
+}
 .ltr {
 	flex-direction: row;
 	text-align: left;
 }
-
 .rtl {
 	flex-direction: row-reverse;
 	text-align: right;
+	overflow-x: hidden;
 }
 
 // removet list style
@@ -27,6 +31,17 @@ p {
 img {
 	max-width: 100%;
 	height: auto;
+	font-size: 11px;
+}
+
+// hide text for descriptive links
+.visually-hidden {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 .container {
@@ -78,6 +93,7 @@ img {
 $arrow-size: 5px; // Adjust the size of the arrow
 
 .arrow_down {
+	transition: 0.3s ease;
 	&::before {
 		content: "";
 		display: flex;
@@ -89,6 +105,9 @@ $arrow-size: 5px; // Adjust the size of the arrow
 		border-right: $arrow-size solid transparent;
 		border-top: $arrow-size solid #fff; // Customize the color of the arrow
 		transform: translateY(50%);
+	}
+	&.rotate {
+		transform: rotateX(-180deg);
 	}
 }
 
