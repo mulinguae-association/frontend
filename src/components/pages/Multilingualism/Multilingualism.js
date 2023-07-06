@@ -2,13 +2,19 @@ import React from 'react'
 import "./Multilingualism.scss"
 import "../globalStyle.scss"
 import { useTranslation } from 'react-i18next'
+import PrintBtn from '../../PrintButton/PrintBtn'
+import { useRef } from 'react'
 const Multilingualism = () => {
   const { t } = useTranslation('pages/multilingualism', { ns: 'multilingualism' });
-
+  const { t: global } = useTranslation('global', { ns: 'global' });
+  const componentRef = useRef()
   return (
     <main>
       <div className='container'>
-        <section className='section multilingulism_info'>
+        <section className='section multilingulism_info' ref={componentRef}>
+          <div className='print_btn'>
+            <PrintBtn print={global("print")} componentRef={componentRef} />
+          </div>
           <h2 className='page_title'>{t("page_title")}</h2>
           <h2 className='head'>{t("definition_head")}</h2>
           <p className='about'>{t("about_definition")}</p>
@@ -36,7 +42,7 @@ const Multilingualism = () => {
           <h2 className='head'>{t("linguaFranca_head")}</h2>
           <p className='about'>
             <span>{t("about_linguaFranca")}</span>
-            <span><a className='link' href="##">{t("link5")}</a></span>
+            <span><a className='link' href="https://www.un.org/fr/department-global-communications">{t("link5")}</a></span>
             <span>{t("about_linguaFranca2")}</span>
             <span><a className='link' href="https://www.un.org/en/multilingualism-web-standards">{t("link6")}</a></span>
             <span><a className='link' href="https://www.un.org/en/our-work/official-languages">{t("link7")}</a></span>
