@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomDropdown from './Navbar/customDropdown/CustomDropDown';
-import useDirectionChange from './useDirectionChange';
 import Loader from './Loader/Loader';
+import { useCookies } from 'react-cookie';
+import { AppContext } from '../AppContext';
+import { useContext } from 'react';
+import useDirectionChange from "../utils/useDirectionChange"
 
 function LanguageSwitcher({ className }) {
   const { i18n } = useTranslation();
-  useDirectionChange(i18n.language)
-  const [isLoading, setIsLoading] = useState(false);
+  const { isLoading, setIsLoading } = useContext(AppContext);
+  const [cookies, setCookie] = useCookies(['selectedLanguage'])
+
 
   const options = [
     { label: 'English', value: 'En' },
@@ -20,22 +24,25 @@ function LanguageSwitcher({ className }) {
   ];
   const handleSelect = (option) => {
     setIsLoading(true)
-    localStorage.setItem('selectedLanguage', option.value); // Save selected language to local storage
+    setCookie('selectedLanguage', option.value); // Save selected language to local storage
     i18n.changeLanguage(option.value, () => setTimeout(() => setIsLoading(false), 500));
   };
   // get language value from local storage
   useEffect(() => {
-    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    const selectedLanguage = cookies.selectedLanguage;
     if (selectedLanguage) {
       i18n.changeLanguage(selectedLanguage);
     }
-  }, [i18n]);
-
+  }, [cookies, i18n]);
+  useDirectionChange(i18n.language)
   return (
     <>
       {isLoading && <Loader />}
-      <CustomDropdown className={className} options={options} onSelect={handleSelect} />
-
+      <CustomDropdown
+        className={className}
+        cookies={cookies}
+        options={options}
+        onSelect={handleSelect} />
     </>
   );
 }
