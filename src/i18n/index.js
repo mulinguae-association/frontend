@@ -35,6 +35,8 @@ i18n
 			"pages/multilingualism",
 			"pages/linguicide",
 			"pages/pagesLinks",
+			"pages/teachers",
+			"pages/students",
 			"notFound",
 			"header",
 			"footer",
