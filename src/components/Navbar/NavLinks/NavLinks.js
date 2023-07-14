@@ -39,7 +39,7 @@ const NavLinks = ({ className }) => {
           onClick={handleClick}
         >
           {t('pagesLink')}
-          <span className='arrow_down'></span>
+          <span className={`arrow_down ${isCurrElement ? 'rotate' : ''}`}></span>
         </NavLink>
         {isCurrElement &&
           <NestedNavLinks setIsCurrElement={setIsCurrElement} t={t} />
