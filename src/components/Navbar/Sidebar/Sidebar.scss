@@ -33,6 +33,9 @@
 		padding: 10px;
 		border-radius: 0 0 12px 12px;
 		li {
+			border-bottom: 1px solid #858585;
+			pointer-events: none;
+			cursor: pointer;
 			&:last-child {
 				border: none;
 			}
@@ -40,7 +43,7 @@
 				position: relative;
 				.nestedNavLinks {
 					all: unset;
-					div {
+					.nestedNavContainer {
 						flex-direction: column;
 						align-items: flex-start;
 						li {
@@ -58,9 +61,6 @@
 					}
 				}
 			}
-			border-bottom: 1px solid #858585;
-			pointer-events: none;
-			cursor: pointer;
 			a {
 				display: flex;
 				align-items: center;
