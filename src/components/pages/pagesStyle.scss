@@ -37,6 +37,17 @@
 	p > .link {
 		padding: 0;
 	}
+	.warning {
+		text-align: center;
+		margin-top: 4rem;
+		color: orangered;
+		background-color: $darkBlue-color;
+		box-shadow: 0 0 10px #000;
+	}
+	.text-bold {
+		font-weight: bold;
+		color: $primaryDark-color;
+	}
 }
 
 @media print {
