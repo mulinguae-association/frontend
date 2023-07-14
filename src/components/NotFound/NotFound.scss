@@ -9,15 +9,17 @@
 	text-align: center;
 	background: radial-gradient(ellipse at top, $primary-color, $darkBlue-color),
 		radial-gradient(ellipse at bottom, $secondary-color, #000);
-	position: relative;
 	z-index: 1;
 	.content {
 		position: relative;
+		width: 350px;
+		margin: 0 auto;
+		z-index: 1;
 		.crescent {
 			position: absolute;
 			margin: auto;
 			top: -2rem;
-			left: 2rem;
+			left: 1rem;
 			width: 100px;
 			height: 100px;
 			background-color: transparent;

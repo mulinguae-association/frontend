@@ -8,10 +8,10 @@ const NotFound = () => {
     <div className='not-found'>
       <div className='container'>
         <div className='content'>
-          <div className="crescent"></div>
           <h1 className='text-styled'>404</h1>
-          <p style={checkLang ? { letterSpacing: "0.5rem" } : {}}> {t("not_found")}</p>
+          <div className="crescent"></div>
         </div>
+        <p style={checkLang ? { letterSpacing: "0.5rem" } : {}}> {t("not_found")}</p>
       </div>
     </div>
   )
