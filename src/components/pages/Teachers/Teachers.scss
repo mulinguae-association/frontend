@@ -1,0 +1,108 @@
+@import "../../../globalStyles/colors";
+.teachers_overview {
+	background-color: #eee;
+	padding: 10px;
+	border-radius: 10px;
+}
+.teachers_head {
+	color: $darkBlue-color;
+	font-size: 1.8rem;
+}
+.teachers_head .special {
+	color: $primaryDark-color;
+}
+
+.teacher_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+.teacher_card {
+	background-color: $white-color;
+	box-shadow: 0 10px 10px 10px #ddd;
+	// box-shadow: 0 10px 10px 10px #000;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px;
+	padding-bottom: 25px;
+	border-radius: 15px;
+	margin-bottom: 25px;
+}
+.teacher_card .teacher_content {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	user-select: none;
+}
+.teacher_card .imageContainer {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.teacher_card .teacher_name {
+	font-size: large;
+	word-spacing: -2px;
+	margin: 5px 0 0 0;
+}
+.teacher_card .teacher_job {
+	display: block;
+	font-size: small;
+	text-transform: uppercase;
+	color: $primaryDark-color;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 5px 0 0 0;
+}
+.teacher_card .teacher_brief {
+	margin: 0;
+	font-size: 14px;
+}
+.teacher_card .teacher_link {
+	display: inline-block;
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 10px;
+	text-decoration: none;
+	color: $primaryDark-color;
+	border: 1px solid $primary-color;
+	padding: 8px 12px;
+	transition: 0.7s ease;
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+}
+.teacher_card .teacher_link::before {
+	position: absolute;
+	top: -0px;
+	left: 0;
+	content: "";
+	height: 0%;
+	width: 100%;
+	text-decoration: none;
+	background-color: $primaryDark-color;
+	border-radius: 0px 0 50% 50%;
+	transition: 0.7s ease;
+	color: $white-color;
+	z-index: -1;
+}
+.teacher_card .teacher_link:hover::before {
+	background-color: $primaryDark-color;
+	color: $white-color;
+	height: 180%;
+	width: 100%;
+	z-index: -11;
+}
+.teacher_card .teacher_link:hover {
+	color: $white-color;
+}

@@ -2,9 +2,13 @@ import React, { useRef } from 'react'
 import "./Teachers.scss"
 import { useTranslation } from 'react-i18next';
 import PrintBtn from '../../PrintButton/PrintBtn';
+import getTeachersData from "../../../asset.json"
+import TeachersOverview from "./TeachersOverview"
+
+
+
 const Teachers = () => {
   const { t } = useTranslation('pages/teachers', { ns: 'teachers' });
-  console.log(t("page_title"))
   const { t: global } = useTranslation('global', { ns: 'global' });
   const componentRef = useRef();
   return (
@@ -57,6 +61,10 @@ const Teachers = () => {
               {t("sec5_link5")}
             </a>
           </p>
+          <div className='teachers_overview'>
+            <h3 className='teachers_head'>Our <span className='special'>teachers</span></h3>
+            <TeachersOverview getTeachersData={getTeachersData} />
+          </div>
           <p className='warning'>{t("warning")}</p>
         </section>
       </div>

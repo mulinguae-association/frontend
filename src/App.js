@@ -8,6 +8,7 @@ import useLoader from "./components/Loader/useLoader";
 import NOtFound from "./components/NotFound/NotFound";
 import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
 import React, { useEffect, useState } from "react";
+import TeacherProfile from "./components/pages/Teachers/TeacherProfile";
 function App() {
 	const isLoading = useLoader();
 	const [imgAnimation, setImgAnimation] = useState(false);
@@ -34,6 +35,7 @@ function App() {
 						<Route exact path='/About' element={<LazyAbout />} />
 						<Route exact path='/Register' element={<Register />} />
 						<Route path='/pages/:pageId' element={<LazyPagesDetails />} />
+						<Route path='/pages/teachers/:teacherId' element={<TeacherProfile />} />
 						<Route path='*' element={<NOtFound />} />
 					</Routes>
 				</React.Suspense>
