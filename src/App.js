@@ -9,6 +9,7 @@ import NOtFound from "./components/NotFound/NotFound";
 import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
 import React, { useEffect, useState } from "react";
 import TeacherProfile from "./components/pages/Teachers/TeacherProfile";
+import Dashboard from "./components/Dashboard/Dashboard";
 function App() {
 	const isLoading = useLoader();
 	const [imgAnimation, setImgAnimation] = useState(false);
@@ -36,6 +37,7 @@ function App() {
 						<Route exact path='/Register' element={<Register />} />
 						<Route path='/pages/:pageId' element={<LazyPagesDetails />} />
 						<Route path='/pages/teachers/:teacherId' element={<TeacherProfile />} />
+						<Route path='/dashboard' element={<Dashboard />} />
 						<Route path='*' element={<NOtFound />} />
 					</Routes>
 				</React.Suspense>
