@@ -1,26 +1,29 @@
-const express = require('express');
-const app = express();
-const cors = require('cors');
-const bodyParser = require("body-parser")
-const routes = require("./routes")
-const { connectToDatabase } = require('./db/db');
-const dotenv = require("dotenv");
-dotenv.config();
-// use cors
-app.use(cors())
-app.use(express.json())
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import routes from './routes/index.js';
+import dotenv from 'dotenv'; // Move dotenv import to the top
+dotenv.config(); // Load environment variables from .env
+import { connectToDatabase } from './db/db.js';
 
-app.use(bodyParser.json())
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(cors());
+app.use(bodyParser.json());
+
 // Connect to MongoDB
 connectToDatabase()
   .then(() => {
-    console.log("Connected to MongoDB");
+    console.log('Connected to MongoDB');
   })
   .catch((error) => {
-    console.error("MongoDB connection error:", error);
+    console.error('MongoDB connection error:', error);
   });
 
 // Mount the routes
-app.use("/api", routes);
-// start the server
-app.listen(5000, () => console.log("your port is working on 5000"))
+app.use('/uploads', express.static('uploads'));
+app.use('/api', routes);
+
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
