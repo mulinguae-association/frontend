@@ -1,13 +1,28 @@
-import Header from '../../../HeaderPages/Header'
+import React from "react"
+import Header from '../../../HeaderPages'
 import { useParams } from 'react-router-dom';
-import NotFound from '../../../NotFound/NotFound';
-import Footer from '../../../FooterPages/Footer';
-import Multilingualism from '../../../pages/Multilingualism/Multilingualism';
-import Linguicide from '../../../pages/Linguicide/Linguicide';
-import Teachers from '../../../pages/Teachers/Teachers';
-import Students from '../../../pages/Students/Students';
-import Blogs from '../../../pages/Blogs/Blogs';
 import { useTranslation } from 'react-i18next';
+const Teachers = React.lazy(() =>
+  import("../../../pages/Teachers")
+);
+const Students = React.lazy(() =>
+  import("../../../pages/Students")
+);
+const Blogs = React.lazy(() =>
+  import("../../../pages/Blogs")
+);
+const Linguicide = React.lazy(() =>
+  import("../../../pages/Linguicide")
+);
+const Multilingualism = React.lazy(() =>
+  import("../../../pages/Multilingualism")
+);
+const Footer = React.lazy(() =>
+  import("../../../FooterPages")
+);
+const NotFound = React.lazy(() =>
+  import("../../../NotFound")
+);
 
 const PagesDetails = () => {
   const { t: trans } = useTranslation("pages/pagesLinks")

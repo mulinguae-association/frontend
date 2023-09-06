@@ -1,25 +1,25 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/HomePage/Home";
 import Register from "./components/RegisterPage/Register";
-import Navbar from "./components/Navbar/Navbar";
-import Loader from "./components/Loader/Loader";
+import Navbar from "./components/Navbar";
+import Loader from "./components/Loader";
 import useLoader from "./components/Loader/useLoader";
-import NOtFound from "./components/NotFound/NotFound";
-import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
 import React, { useEffect, useState } from "react";
-import TeacherProfile from "./components/pages/Teachers/TeacherProfile";
-import Dashboard from "./components/Dashboard/Dashboard";
+import PagesDetails from "./components/Navbar/NavLinks/NestedNavLinks/PagesDetails";
+import ToTopBtn from "./components/ToTopBtn";
+const Home = React.lazy(() => import("./components/HomePage"));
+const LazyAbout = React.lazy(() => import("./components/AboutPage"));
+const TeacherProfile = React.lazy(() => import("./components/pages/Teachers"));
+const Dashboard = React.lazy(() => import("./components/Dashboard"));
+const NotFound = React.lazy(() => import("./components/NotFound"));
+
 function App() {
 	const isLoading = useLoader();
 	const [imgAnimation, setImgAnimation] = useState(false);
-	const LazyAbout = React.lazy(() => import("./components/AboutPage/About"));
-	const LazyPagesDetails = React.lazy(() =>
-		import("./components/Navbar/NavLinks/NestedNavLinks/PagesDetails")
-	);
 	useEffect(() => {
 		setImgAnimation(true);
 	}, []);
+
 	return (
 		<div className='App'>
 			<Navbar />
@@ -33,12 +33,12 @@ function App() {
 							path='/'
 							element={<Home imgAnimation={imgAnimation} />}
 						/>
-						<Route exact path='/About' element={<LazyAbout />} />
-						<Route exact path='/Register' element={<Register />} />
-						<Route path='/pages/:pageId' element={<LazyPagesDetails />} />
+						<Route path='/About' element={<LazyAbout />} />
+						<Route path='/Register' element={<Register />} />
+						<Route path='/pages/:pageId' element={<PagesDetails />} />
 						<Route path='/pages/teachers/:teacherId' element={<TeacherProfile />} />
 						<Route path='/dashboard' element={<Dashboard />} />
-						<Route path='*' element={<NOtFound />} />
+						<Route path='*' element={<NotFound />} />
 					</Routes>
 				</React.Suspense>
 			)}
