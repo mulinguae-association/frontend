@@ -5,8 +5,8 @@ import "./Navbar.scss";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Sidebar from "./Sidebar/Sidebar.js";
-import NavLinks from "./NavLinks/NavLinks";
+import Sidebar from "./Sidebar";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
 	const { t } = useTranslation("home", { ns: "home" });

@@ -3,7 +3,7 @@ import React from 'react'
 import "./Linguicide.scss"
 import "../pagesStyle.scss"
 import { useTranslation } from 'react-i18next'
-import PrintBtn from '../../PrintButton/PrintBtn'
+import PrintBtn from '../../PrintButton'
 import { useRef } from 'react'
 const Linguicide = () => {
   const { t } = useTranslation('pages/linguicide', { ns: 'linguicide' });

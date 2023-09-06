@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import "./NestedNavLinks.scss"
 import { useTranslation } from 'react-i18next'
 const NestedNavLinks = (props) => {
@@ -43,10 +43,20 @@ const NestedNavLinks = (props) => {
         <li>
           <NavLink
             to="/pages/Teachers"
+            end
             activeclassname="active"
           >
             {t('Teachers')}
           </NavLink>
+        </li>
+        <li>
+          <Link
+            to="/pages/Teachers#meetOurTeachers"
+            end
+            activeclassname="active"
+          >
+            {"Meet our teachers"}
+          </Link>
         </li>
         <li>
           <NavLink
@@ -62,6 +72,14 @@ const NestedNavLinks = (props) => {
             activeclassname="active"
           >
             {t('Blogs')}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/pages/100-basic-phrases/"
+            activeclassname="active"
+          >
+            {"100 basic phrases"}
           </NavLink>
         </li>
       </ul >

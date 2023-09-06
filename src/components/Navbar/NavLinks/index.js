@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import NestedNavLinks from './NestedNavLinks/NestedNavLinks';
+import NestedNavLinks from './NestedNavLinks';
 
 const NavLinks = ({ className }) => {
   const { t } = useTranslation('home', { ns: 'home' });
   const [isCurrElement, setIsCurrElement] = useState(false);
-
   const handleClick = (e) => {
     e.preventDefault();
     setIsCurrElement(prev => !prev);

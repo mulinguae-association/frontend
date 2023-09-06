@@ -1,16 +1,27 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./Teachers.scss"
+import "../pagesStyle.scss"
 import { useTranslation } from 'react-i18next';
-import PrintBtn from '../../PrintButton/PrintBtn';
-import getTeachersData from "../../../asset.json"
+import PrintBtn from '../../PrintButton';
 import TeachersOverview from "./TeachersOverview"
-
-
+import { useLocation } from 'react-router-dom';
 
 const Teachers = () => {
   const { t } = useTranslation('pages/teachers', { ns: 'teachers' });
   const { t: global } = useTranslation('global', { ns: 'global' });
   const componentRef = useRef();
+  const location = useLocation()
+  useEffect(() => {
+    // Check if there's a hash in the URL and scroll to the corresponding section
+    const hash = window.location.hash;
+    console.log(hash)
+    if (hash) {
+      const targetElement = document.querySelector(hash);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
   return (
     <main>
       <div className='container'>
@@ -61,9 +72,9 @@ const Teachers = () => {
               {t("sec5_link5")}
             </a>
           </p>
-          <div className='teachers_overview'>
-            <h3 className='teachers_head'>Our <span className='special'>teachers</span></h3>
-            <TeachersOverview getTeachersData={getTeachersData} />
+          <div id="meetOurTeachers" className='teachers_overview '>
+            <h3 className='teachers_head'>{t("sec6_head")} <span className='special'>{t("sec6_head_special")}</span></h3>
+            <TeachersOverview t={t} />
           </div>
           <p className='warning'>{t("warning")}</p>
         </section>

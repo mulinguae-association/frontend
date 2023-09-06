@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Sidebar.scss"
 import LanguageSwitcher from '../../LanguageSwitcher'
-import NavLinks from '../NavLinks/NavLinks'
+import NavLinks from '../NavLinks'
 import { useContext } from 'react'
-import { AppContext } from '../../../AppContext'
+import { AppContext } from '../../../contexts/AppContext'
 import { langDirection } from '../../../utils/languageUtils'
 const Sidebar = (props) => {
   const changeDir = langDirection()

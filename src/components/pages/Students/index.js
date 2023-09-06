@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import { useTranslation } from 'react-i18next';
-import PrintBtn from '../../PrintButton/PrintBtn';
+import PrintBtn from '../../PrintButton';
 import "./Students.scss"
+import "../pagesStyle.scss"
 const Students = () => {
   const { t } = useTranslation('pages/students', { ns: 'students' });
   console.log(t("page_title"))

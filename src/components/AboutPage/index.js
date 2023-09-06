@@ -1,9 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-import Header from '../HeaderPages/Header';
+import Header from '../HeaderPages';
 import "./About.scss"
-import Footer from '../FooterPages/Footer';
-import PrintBtn from '../PrintButton/PrintBtn';
+import Footer from '../FooterPages';
+import PrintBtn from '../PrintButton';
 import { useRef } from 'react';
 const About = () => {
   const { t } = useTranslation("about", { ns: "about" });
