@@ -1,6 +1,10 @@
 // routes/index.js
 
-const express = require("express");
+import express from 'express';
+import teacherCardRoutes from './teacherCardRoutes.js';
+
 const router = express.Router();
 
-module.exports = router;
+router.use('/', teacherCardRoutes);
+
+export default router;
