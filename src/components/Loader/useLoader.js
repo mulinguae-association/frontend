@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useEffect } from "react";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../../contexts/AppContext";
 
 const useLoader = () => {
 	const { isLoading, setIsLoading } = useContext(AppContext);

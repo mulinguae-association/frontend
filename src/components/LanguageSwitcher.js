@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomDropdown from './Navbar/customDropdown/CustomDropDown';
-import Loader from './Loader/Loader';
+import Loader from './Loader';
 import { useCookies } from 'react-cookie';
-import { AppContext } from '../AppContext';
+import { AppContext } from '../contexts/AppContext';
 import { useContext } from 'react';
 import useDirectionChange from "../utils/useDirectionChange"
 
