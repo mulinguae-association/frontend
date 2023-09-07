@@ -45,9 +45,9 @@ const TeacherProfile = () => {
               <h3>{t('sec7_email')}: <span>{teacher.email}</span></h3>
               <h3>{t('sec7_phone')}: <span>{teacher.telephone}</span></h3>
             </div>
-            <img width="300px" height="300px" src={teacher?.image} alt={teacher?.name} onError={(e) => {
+            <img width="300px" height="300px" src={teacher?.image} onError={(e) => {
               e.target.src = "/images/fallBackUser.png";
-            }} />
+            }} alt={teacher?.firstName + ' image'} />
           </div>
           <div className='secondary_info'>
             <div className='block'>

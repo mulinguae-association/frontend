@@ -43,7 +43,6 @@ const NestedNavLinks = (props) => {
         <li>
           <NavLink
             to="/pages/Teachers"
-            end
             activeclassname="active"
           >
             {t('Teachers')}
@@ -52,7 +51,6 @@ const NestedNavLinks = (props) => {
         <li>
           <Link
             to="/pages/Teachers#meetOurTeachers"
-            end
             activeclassname="active"
           >
             {t("Meet our teachers")}
