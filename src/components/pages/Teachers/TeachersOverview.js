@@ -49,7 +49,6 @@ const TeachersOverview = ({ t }) => {
   }
   return (
     <Swiper
-      style={{ width: "90%" }}
       slidesPerView={3}
       grabCursor={true}
       navigation
@@ -103,7 +102,7 @@ const TeachersOverview = ({ t }) => {
             </div>
           </li>
         </SwiperSlide>
-      )) : <div className='no_teachers'>No Teachers Available</div>}
+      )) : <div className='no_teachers'>{t('sec7_noTeachers')}</div>}
     </Swiper>
   )
 }
