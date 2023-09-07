@@ -2,7 +2,7 @@
 @import "../../../globalStyles/colors";
 
 .teachers_overview {
-	background-color: #eee;
+	background-color: #0b137e11;
 	padding: 10px;
 	border-radius: 10px;
 
@@ -189,6 +189,12 @@
 				}
 			}
 		}
+	}
+	.no_teachers {
+		font-size: 17px;
+		font-weight: bold;
+		text-align: center;
+		letter-spacing: 1px;
 	}
 }
 

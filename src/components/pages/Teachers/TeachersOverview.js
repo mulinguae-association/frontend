@@ -13,7 +13,7 @@ import { notifyError, notifySuccess } from '../../Notify';
 const TeachersOverview = ({ t }) => {
   const { teachers, setTeachers, getTeachers } = useContext(AppContext)
   const [editingTeacher, setEditingTeacher] = useState(null);
-
+  console.log(teachers)
   useEffect(() => {
     getTeachers()
   }, []);
@@ -74,7 +74,7 @@ const TeachersOverview = ({ t }) => {
         disableOnInteraction: true,
       }}
     >
-      {teachers?.map(teacher => (
+      {teachers.length > 0 ? teachers.map(teacher => (
         <SwiperSlide tag='ul' key={teacher._id}>
           <li className='teacher_card'>
             <div className='teacher_content'>
@@ -103,7 +103,7 @@ const TeachersOverview = ({ t }) => {
             </div>
           </li>
         </SwiperSlide>
-      ))}
+      )) : <div className='no_teachers'>No Teachers Available</div>}
     </Swiper>
   )
 }
