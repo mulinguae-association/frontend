@@ -9,7 +9,7 @@ import PagesDetails from "./components/Navbar/NavLinks/NestedNavLinks/PagesDetai
 import ToTopBtn from "./components/ToTopBtn";
 const Home = React.lazy(() => import("./components/HomePage"));
 const LazyAbout = React.lazy(() => import("./components/AboutPage"));
-const TeacherProfile = React.lazy(() => import("./components/pages/Teachers"));
+const TeacherProfile = React.lazy(() => import("./components/pages/Teachers/TeacherProfile"));
 const Dashboard = React.lazy(() => import("./components/Dashboard"));
 const NotFound = React.lazy(() => import("./components/NotFound"));
 
