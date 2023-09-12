@@ -25,7 +25,7 @@ export async function createBlogPost(req, res) {
 export async function getPendingBlogPosts(req, res) {
   try {
 
-    const pendingPosts = await BlogPost.find({ status: "pending" });
+    const pendingPosts = await BlogPost.find({ status: "pending" })
     //format the createdAt date for each pending post in the response
     const formattedPosts = pendingPosts.map((post) => ({
       ...post.toObject(),
@@ -71,11 +71,19 @@ export async function deleteBlogPost(req, res) {
 
 export async function getAcceptedBlogPosts(req, res) {
   try {
-    const acceptedPosts = await BlogPost.find({ status: "accepted" })
+    const acceptedPosts = await BlogPost.find({ status: "accepted" }).populate({
+      path: 'comments',
+      model: 'Comment',
+      populate: [
+        {
+          path: "replies", model: "Comment"
+        }
+      ]
+    }).exec()
     const formattedPosts = acceptedPosts.map((post) => ({
       ...post.toObject(),
       createdAt: formatRelativeDate(post.createdAt),
-    }));
+    }))
     res.status(200).json(formattedPosts);
   } catch (error) {
     console.error("Error retrieving accepted blog posts:", error);

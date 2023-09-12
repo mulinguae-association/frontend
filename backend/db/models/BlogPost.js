@@ -7,6 +7,12 @@ const blogPostSchema = new mongoose.Schema({
   content: { type: String, required: true },
   status: { type: String, default: "pending" },
   createdAt: { type: Date, default: Date.now },
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    }
+  ]
 });
 
 

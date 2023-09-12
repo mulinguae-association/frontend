@@ -3,9 +3,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import routes from './routes/index.js';
 import dotenv from 'dotenv'; // Move dotenv import to the top
-dotenv.config(); // Load environment variables from .env
 import { connectToDatabase } from './db/db.js';
-
+dotenv.config(); // Load environment variables from .env
 
 const app = express();
 const PORT = process.env.PORT || 5000;
