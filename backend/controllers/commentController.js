@@ -64,7 +64,7 @@ async function acceptComment(req, res) {
 
     // Perform the logic to update the status of the blog post with the provided ID to "accepted"
     // For example:
-    const comment = await Comment.findById(id).populate({ path: "replies" });
+    const comment = await Comment.findById(id);
     comment.status = "accepted";
     await comment.save();
 

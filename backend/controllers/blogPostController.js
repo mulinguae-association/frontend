@@ -78,7 +78,8 @@ export async function getAcceptedBlogPosts(req, res) {
         {
           path: "replies", model: "Comment"
         }
-      ]
+      ],
+      match: { status: "accepted" },
     }).exec()
     const formattedPosts = acceptedPosts.map((post) => ({
       ...post.toObject(),
