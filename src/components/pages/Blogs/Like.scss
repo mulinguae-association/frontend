@@ -1,0 +1,63 @@
+.heart-btn {
+	position: absolute;
+	right: -30px;
+	.content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		.heart {
+			height: 20px;
+			width: 60px;
+			background: url("../../../../public/images/heart.png") no-repeat;
+			background-position: left;
+			background-size: 2900%;
+			z-index: 99;
+			&.heart-active {
+				background-position: right;
+				animation: animate 0.8s steps(28) 1;
+			}
+		}
+	}
+}
+@keyframes animate {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
+.like {
+	margin-left: 30px;
+	font-size: 21px;
+	font-family: "Montserrat", sans-serif;
+	color: grey;
+}
+.numb {
+	position: absolute;
+	right: 14px;
+	top: 3px;
+	font-size: 13px;
+}
+// .numb:before {
+// 	content: "12";
+// 	font-size: 21px;
+// 	font-weight: 600;
+// 	font-family: sans-serif;
+// 	background-color: #fff;
+// 	color: #9c9496;
+// 	margin-left: -15px;
+// 	padding: 10px;
+// }
+// .numb:after {
+// 	content: "";
+// 	position: absolute;
+// 	left: -33px;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	border-color: transparent rgb(255, 255, 255) transparent transparent;
+// 	border-style: solid;
+// 	border-width: 6px 10px;
+// 	z-index: -1;
+// }

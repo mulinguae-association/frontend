@@ -122,6 +122,68 @@ input[type="file"] {
 }
 
 // End edit teacher form
-
-//end edit teacher form
-// edit teacher form
+// start Blogs
+.dashboard .blogs {
+	padding: 60px 0;
+	color: #fff;
+	.pendingPosts {
+		.content_container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 10px;
+			height: 600px;
+			overflow-y: auto;
+			.content {
+				position: relative;
+				background-color: #f0f0f0;
+				width: 400px;
+				height: 300px;
+				padding: 15px;
+				overflow-y: auto;
+				border-radius: 10px;
+				font-size: 15px;
+				h3 {
+					color: $darkBlue-color;
+					margin-bottom: 0;
+				}
+				p {
+					color: #333;
+				}
+				.subTitle {
+					font-size: 14px;
+					color: #333;
+					font-style: italic;
+					font-weight: 500;
+				}
+				.date {
+					position: absolute;
+					top: 20px;
+					right: 15px;
+					color: #333;
+					font-weight: 500;
+					font-size: 14px;
+				}
+				.btns {
+					display: flex;
+					gap: 8px;
+					button {
+						all: unset;
+						background: #fff;
+						border: 1px solid #bbb;
+						padding: 6px 18px;
+						font-size: 15px;
+						border-radius: 7px;
+						color: darkblue;
+						cursor: pointer;
+						font-weight: bold;
+					}
+					.refuse {
+						color: red;
+					}
+				}
+			}
+		}
+	}
+}
+// end Blogs

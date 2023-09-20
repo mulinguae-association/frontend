@@ -6,6 +6,7 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [teachers, setTeachers] = useState([]);
+  const [notificationPopup, setNotificationPopup] = useState(null);
   console.log(teachers)
   const getTeachers = async () => {
     try {
@@ -21,7 +22,9 @@ export const AppProvider = ({ children }) => {
     setIsLoading,
     teachers,
     setTeachers,
-    getTeachers
+    getTeachers,
+    notificationPopup,
+    setNotificationPopup
   };
 
   return (

@@ -31,7 +31,8 @@ const PagesDetails = () => {
   const { t } = useTranslation("header")
 
   let pageContent;
-  let renderHeaderFooter = true
+  let renderHeader = true
+  let renderFooter = true
   switch (pageId) {
     case 'Multilingualism':
       pageContent = <Multilingualism />;
@@ -47,17 +48,19 @@ const PagesDetails = () => {
       break;
     case 'Blogs':
       pageContent = <Blogs />;
+      renderFooter = false
       break;
     default:
       pageContent = <NotFound />;
-      renderHeaderFooter = false
+      renderHeader = false
+      renderFooter = false
       break;
   }
 
   return <div>
-    {renderHeaderFooter && <Header pageName={`${t("currpage")} >> ${translatedPageId}`} />}
+    {renderHeader && <Header pageName={`${t("currpage")} >> ${translatedPageId}`} />}
     {pageContent}
-    {renderHeaderFooter && <Footer />}
+    {renderFooter && <Footer />}
   </div>;
 }
 

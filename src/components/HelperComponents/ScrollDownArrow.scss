@@ -1,0 +1,106 @@
+@import "../../globalStyles/colors";
+.arrows {
+	width: 60px;
+	height: 72px;
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	path {
+		stroke: $primary-color;
+		fill: transparent;
+		stroke-width: 2px;
+		animation: arrow 2s infinite;
+		-webkit-animation: arrow 2s infinite;
+		&.a1 {
+			animation-delay: -1s;
+			-webkit-animation-delay: -1s;
+		}
+		&.a2 {
+			animation-delay: -0.5s;
+			-webkit-animation-delay: -0.5s;
+		}
+		&.a3 {
+			animation-delay: 0s;
+			-webkit-animation-delay: 0s;
+		}
+	}
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes arrow {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Add vendor prefixes for keyframes */
+@-moz-keyframes arrow {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes arrow {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Add vendor prefixes for -webkit-keyframes */
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}

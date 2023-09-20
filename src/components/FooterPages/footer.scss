@@ -63,12 +63,11 @@ footer {
 		}
 	}
 	.bottom_footer {
-		min-height: 180px;
+		min-height: 150px;
 		.content {
 			display: flex;
 			.info {
 				width: 48%;
-				height: 2rem;
 				p:first-child {
 					span {
 						a {
@@ -96,7 +95,7 @@ footer {
 				display: flex;
 				width: 50%;
 				justify-content: flex-end;
-				align-items: center;
+				align-items: flex-start;
 				margin-top: 1rem;
 				gap: 0.5rem;
 				.icon {

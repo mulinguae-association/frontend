@@ -3,11 +3,11 @@ import "./footer.scss";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { langDirection } from "../../utils/languageUtils";
-const Footer = () => {
+const Footer = ({ footerRef }) => {
 	const { t } = useTranslation("footer", { ns: "footer" });
 	const changeDir = langDirection();
 	return (
-		<footer className='change_direction'>
+		<footer ref={footerRef} className='footer change_direction'>
 			<div className={`top_footer ${changeDir}`}>
 				<div className='container'>
 					<div className='footer_list'>

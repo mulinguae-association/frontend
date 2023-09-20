@@ -1,49 +1,19 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Dashboard.scss"
 import "../pages/Teachers"
 import { createTeacher } from '../../utils/apiUtility';
 import { notifySuccess, notifyError } from '../Notify';
-import InputField from '../HelperComponents/InputField';
-import Tooltip from '../HelperComponents/toolTip';
+import { acceptBlogPost, acceptComment, fetchPendingPosts, fetchPendingComments, refuseComment, removeBlogPost } from "../../utils/blog-api";
+import TeachersController from './TeachersController';
+import BlogsController from './BlogsController';
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const fileInputRef = useRef(null);
+  const [pendingComments, setPendingComments] = useState([]);
+  const [pendingPosts, setPendingPosts] = useState([]);
 
-  const [formState, setFormState] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    jobBrief: '',
-    aboutTeacher: '',
-    telephone: '', // Add telephone state
-    teaching_philosophy: '',
-    career_summary: '',
-    teaching_methods: '',
-    qualification_cert: '',
-    teacher_collaboration: '',
-    classroom_management: '',
-    behavior_management: '',
-    additional_info: '',
-    selectedImage: null,
-  });
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    const maxImageSize = 1024 * 1024; // 1 MB
-
-    if (file && file.size <= maxImageSize) {
-      setFormState({ ...formState, selectedImage: file });
-    } else {
-      alert('Image size exceeds the maximum allowed limit.');
-      setFormState({ ...formState, selectedImage: null });
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
-      }
-    }
-  };
-
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e, formState, setFormState) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -74,7 +44,7 @@ const Dashboard = () => {
           email: '',
           jobBrief: '',
           aboutTeacher: '',
-          telephone: '', // Clear telephone field
+          telephone: '',
           teaching_philosophy: '',
           career_summary: '',
           teaching_methods: '',
@@ -94,86 +64,96 @@ const Dashboard = () => {
       setIsLoading(false);
     }
   };
+  useEffect(() => {
+    const fetchPendingData = async () => {
+      try {
+        const data = await fetchPendingPosts();
+        setPendingPosts(data)
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchPendingData();
+  }, []);
+
+  const handleAccept = async (blogId) => {
+    try {
+      await acceptBlogPost(blogId);
+      setPendingPosts((prevPosts) =>
+        prevPosts.filter((blog) => blog._id !== blogId)
+      );
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const handleRefuse = async (blogId) => {
+    try {
+      await removeBlogPost(blogId);
+      setPendingPosts((prevPosts) =>
+        prevPosts.filter((blog) => blog._id !== blogId)
+      );
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  useEffect(() => {
+    try {
+      const fetchPendingData = async () => {
+        const data = await fetchPendingComments()
+        setPendingComments(data)
+      }
+      fetchPendingData()
+    } catch (err) {
+      console.log(err.message)
+    }
+  }, [])
+
+  const handleAcceptComment = async (commentId) => {
+    console.log(commentId);
+    try {
+      await acceptComment(commentId);
+      setPendingComments((prev) =>
+        prev.filter((comment) => comment._id !== commentId)
+      );
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const handleRefuseComment = async (commentId) => {
+    try {
+      await refuseComment(commentId).then((res) => {
+        console.log(res)
+        if (res.status === 200) {
+          setPendingComments((prev) =>
+            prev.filter((comment) => comment._id !== commentId)
+          );
+        } else {
+          console.log("error refusing comment")
+        }
+      });
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   return (
     <main className="page_content dashboard">
       <div className='container'>
-        <section className='teacher_form' >
-          <h1>Add Teacher Information</h1>
-          <form className="teacher_form" onSubmit={handleFormSubmit}>
-            <div className="teacher_name block">
-              <InputField
-                label="First Name"
-                type="text"
-                placeholder="Enter First Name"
-                value={formState.firstName}
-                onChange={(e) => setFormState({ ...formState, firstName: e.target.value })}
-                required
-              />
-              <InputField
-                label="Last Name"
-                type="text"
-                placeholder="Enter Last Name"
-                value={formState.lastName}
-                onChange={(e) => setFormState({ ...formState, lastName: e.target.value })}
-                required
-              />
-            </div>
-            <div className="block">
-              <InputField
-                label="Email"
-                type="email"
-                placeholder="Enter Email"
-                value={formState.email}
-                onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                required
-              />
-              <InputField
-                label="Job Brief"
-                type="text"
-                placeholder="Enter Job Brief"
-                value={formState.jobBrief}
-                onChange={(e) => setFormState({ ...formState, jobBrief: e.target.value })}
-                required
-              />
-            </div>
-            <div className='block'>
-              <label className='visually-hidden' htmlFor="aboutTeacher">About Teacher</label>
-              <textarea
-                id="aboutTeacher"
-                placeholder="Enter About Teacher"
-                value={formState.aboutTeacher}
-                onChange={(e) => setFormState({ ...formState, aboutTeacher: e.target.value })}
-                rows={2}
-                cols={23}
-                required
-              />
-              <InputField
-                label="Telephone"
-                type="tel" // Use "tel" type for telephone input
-                placeholder="Enter Telephone / Cellphone"
-                value={formState.telephone}
-                onChange={(e) => setFormState({ ...formState, telephone: e.target.value })}
-                required
-              />
-            </div>
-            <label className="upload_image" htmlFor="image">
-              {!formState.selectedImage ? 'Upload Image' : formState.selectedImage.name}
-              <Tooltip text="choose image less than 1MB" />
-            </label>
-            <input
-              id="image"
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              required
-            />
-            <button type="submit">
-              {isLoading ? 'Adding Teacher...' : 'Add Teacher'}
-            </button>
-          </form>
-        </section>
+        <TeachersController
+          handleFormSubmit={handleFormSubmit}
+          isLoading={isLoading}
+        />
+        <BlogsController
+          pendingPosts={pendingPosts}
+          pendingComments={pendingComments}
+          handleAccept={handleAccept}
+          handleRefuse={handleRefuse}
+          handleAcceptComment={handleAcceptComment}
+          handleRefuseComment={handleRefuseComment}
+        />
       </div>
     </main>
   );

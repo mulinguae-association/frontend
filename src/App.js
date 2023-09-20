@@ -10,6 +10,7 @@ import ToTopBtn from "./components/ToTopBtn";
 const Home = React.lazy(() => import("./components/HomePage"));
 const LazyAbout = React.lazy(() => import("./components/AboutPage"));
 const TeacherProfile = React.lazy(() => import("./components/pages/Teachers/TeacherProfile"));
+const CreateBlog = React.lazy(() => import("./components/pages/Blogs/CreateBlog"));
 const Dashboard = React.lazy(() => import("./components/Dashboard"));
 const NotFound = React.lazy(() => import("./components/NotFound"));
 
@@ -37,6 +38,7 @@ function App() {
 						<Route path='/Register' element={<Register />} />
 						<Route path='/pages/:pageId' element={<PagesDetails />} />
 						<Route path='/pages/teachers/:teacherId' element={<TeacherProfile />} />
+						<Route path='/pages/Blogs/create-new-blog' element={<CreateBlog />} />
 						<Route path='/dashboard' element={<Dashboard />} />
 						<Route path='*' element={<NotFound />} />
 					</Routes>
