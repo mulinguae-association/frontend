@@ -1,21 +1,12 @@
 import BlogPost from "../db/models/BlogPost.js";
-import { formatRelativeDate } from "../utils/dateUtils.js";
+
 export async function createBlogPost(req, res) {
   try {
     const { title, subTitle, content } = req.body;
-    // Create a new blog post document
     const blogPost = new BlogPost({ title, subTitle, content });
-
-    // Save the blog post to the database
     await blogPost.save();
 
-    // Format the createdAt date to a user-friendly format
-    const relativeTime = formatRelativeDate(blogPost.createdAt);
-    // Send the response with the formatted date
-    res.json({
-      ...blogPost.toObject(),
-      createdAt: relativeTime,
-    });
+    res.json(blogPost.toObject());
   } catch (error) {
     console.error("Error submitting blog post:", error);
     res.status(500).json({ error: "An error occurred" });
@@ -24,29 +15,18 @@ export async function createBlogPost(req, res) {
 
 export async function getPendingBlogPosts(req, res) {
   try {
-
-    const pendingPosts = await BlogPost.find({ status: "pending" })
-    //format the createdAt date for each pending post in the response
-    const formattedPosts = pendingPosts.map((post) => ({
-      ...post.toObject(),
-      createdAt: formatRelativeDate(post.createdAt),
-    }));
-    // Log the retrieved data
-    return res.status(200).json(formattedPosts);
+    const pendingPosts = await BlogPost.find({ status: "pending" });
+    res.status(200).json(pendingPosts.map((post) => post.toObject()));
   } catch (error) {
     console.error("Error retrieving blog posts:", error);
-    return res.status(500).json({ error: "An error occurred" });
+    res.status(500).json({ error: "An error occurred" });
   }
 }
 
 export async function acceptBlogPost(req, res) {
   try {
     const { id } = req.params;
-
-    // Perform the logic to update the status of the blog post with the provided ID to "accepted"
-    // For example:
     await BlogPost.findByIdAndUpdate(id, { status: "accepted" });
-
     return res.status(200).json({ message: "Blog post accepted successfully" });
   } catch (error) {
     console.error("Error accepting blog post:", error);
@@ -57,8 +37,6 @@ export async function acceptBlogPost(req, res) {
 export async function deleteBlogPost(req, res) {
   try {
     const { id } = req.params;
-    // Perform the logic to delete the blog post with the provided ID
-    // For example:
     await BlogPost.findByIdAndDelete(id);
     return res
       .status(200)
@@ -71,23 +49,64 @@ export async function deleteBlogPost(req, res) {
 
 export async function getAcceptedBlogPosts(req, res) {
   try {
-    const acceptedPosts = await BlogPost.find({ status: "accepted" }).populate({
-      path: 'comments',
-      model: 'Comment',
-      populate: [
-        {
-          path: "replies", model: "Comment"
-        }
-      ],
-      match: { status: "accepted" },
-    }).exec()
-    const formattedPosts = acceptedPosts.map((post) => ({
-      ...post.toObject(),
-      createdAt: formatRelativeDate(post.createdAt),
-    }))
-    res.status(200).json(formattedPosts);
+    const limit = parseInt(req.query.limit) || 5;
+    const acceptedPosts = await BlogPost.find({ status: "accepted" })
+      .sort({ createdAt: -1 })
+      .limit(limit)
+      .populate({
+        path: "comments",
+        model: "Comment",
+        match: { status: "accepted" },
+        options: { sort: { createdAt: -1 } },
+        populate: [
+          {
+            path: "replies",
+            model: "Comment",
+            match: { status: "accepted" },
+            options: { sort: { createdAt: -1 } }
+          },
+        ],
+      })
+      .exec();
+
+    res.status(200).json(acceptedPosts);
   } catch (error) {
     console.error("Error retrieving accepted blog posts:", error);
+    res.status(500).json({ error: "An error occurred" });
+  }
+}
+
+export async function searchBlogPosts(req, res) {
+  const searchQuery = req.query.q;
+  try {
+    const searchRegex = new RegExp(searchQuery, "i"); // Case-insensitive search
+    const searchResults = await BlogPost.find({
+      status: "accepted",
+      $or: [
+        { title: { $regex: searchRegex } },
+        { userName: { $regex: searchRegex } },
+      ],
+    }).sort({ createdAt: -1 }).populate({
+      path: "comments",
+      model: "BlogPost",
+    }).populate({
+      path: "comments",
+      model: "Comment",
+      match: { status: "accepted" },
+      options: { sort: { createdAt: -1 } },
+      populate: [
+        {
+          path: "replies",
+          model: "Comment",
+          match: { status: "accepted" },
+          options: { sort: { createdAt: -1 } }
+        },
+      ],
+    }).exec();
+
+    res.status(200).json(searchResults);
+  } catch (error) {
+    console.error("Error searching blog posts:", error);
     res.status(500).json({ error: "An error occurred" });
   }
 }
