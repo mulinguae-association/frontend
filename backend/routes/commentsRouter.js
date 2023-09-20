@@ -4,12 +4,16 @@ import {
   deleteComment, // Added: Import deleteComment function
   getPendingComments,
   acceptComment,
-  // commentReplies
+  createReplyComment,
+  updatedComment,
 } from "../controllers/commentController.js";
 const router = express.Router();
 
 // API route for adding a comment to a blog post
 router.post("/:id", createComment);
+router.post("/reply/:id", createReplyComment);
+
+router.patch("/update/:id", updatedComment);
 
 // API route for deleting a comment from a blog post
 router.delete("/:id", deleteComment);
@@ -18,7 +22,5 @@ router.delete("/:id", deleteComment);
 router.get("/pending", getPendingComments);
 router.patch("/accept/:id", acceptComment);
 router.get("/accept/:id", acceptComment);
-// router.post("/:parentCommentId/replies", commentReplies);
-// router.get("/", getComments);
 
 export default router;

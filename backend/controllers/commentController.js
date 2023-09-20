@@ -5,9 +5,8 @@ import Comment from "../db/models/Comment.js";
 // Define your functions
 async function createComment(req, res) {
   try {
-    const { content, id, parentCommentId } = req.body;
+    const { content, id } = req.body;
     console.log(content, id);
-    const parentComment = await Comment.findById(parentCommentId);
     // Find the blog post with the provided ID
     const blogPost = await BlogPost.findById(id);
     const blogId = id;
@@ -18,17 +17,9 @@ async function createComment(req, res) {
     const comment = new Comment({
       content,
       blogId,
-      parentComment: parentCommentId,
     });
 
     await comment.save();
-    if (parentComment) {
-      parentComment.replies.push(comment);
-      await parentComment.save();
-    }
-    // Sort the comments array in descending order based on createdAt timestamps
-    blogPost.comments.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-
     // Add the new comment to the comments array
     blogPost.comments.push(comment);
 
@@ -41,6 +32,65 @@ async function createComment(req, res) {
     });
   } catch (error) {
     console.error("Error adding comment:", error);
+    res.status(500).json({ error: "An error occurred" });
+  }
+}
+async function updatedComment(req, res) {
+  const { id } = req.params
+  const { content } = req.body;
+  console.log(id, content)
+  try {
+    // Find the blog post with the provided ID
+    const comment = await Comment.findById(id);
+    if (!comment) {
+      return res.status(404).json({ error: "Comment not found" })
+    }
+    if (comment.authorId === req.userId) {
+      // Update the comment content
+      comment.content = content;
+      comment.status = "pending";
+
+      // Save the updated comment
+      await comment.save();
+
+      res.status(201).json({ message: "Comment updated successfully" });
+    } else {
+      res.status(401).json({ error: "Unauthorized to update this comment" });
+    }
+  } catch (error) {
+    console.error("Error updating comment:", error);
+    res.status(500).json({ error: "An error occurred" });
+  }
+}
+
+// Create a reply comment and push it into the parent comment's replies array
+async function createReplyComment(req, res) {
+  const { content, blogId, parentCommentId } = req.body;
+  try {
+    const parentComment = await Comment.findById(parentCommentId);
+
+    if (!parentComment) {
+      return res.status(404).json({ error: "Parent comment not found" });
+    }
+
+    const comment = new Comment({
+      content,
+      blogId,
+      parentComment: parentCommentId,
+    });
+
+    await comment.save();
+
+    // Push the reply comment into the parent comment's replies array
+    parentComment.replies.push(comment);
+    await parentComment.save();
+
+    res.status(201).json({
+      message: "Reply added successfully",
+      comment: comment,
+    });
+  } catch (error) {
+    console.error("Error adding reply comment:", error);
     res.status(500).json({ error: "An error occurred" });
   }
 }
@@ -86,7 +136,7 @@ async function deleteComment(req, res) {
       return res.status(404).json({ error: "Comment not found" });
     }
 
-    if (comment.authorId == req.userId.toString()) {
+    if (comment.authorId == req.userId) {
       // Remove the comment from the comments array
       await Comment.findByIdAndDelete(id);
       res.status(200).json({ message: "Comment deleted successfully" });
@@ -103,6 +153,8 @@ async function deleteComment(req, res) {
 // Export your functions
 export {
   createComment,
+  createReplyComment,
+  updatedComment,
   deleteComment,
   getPendingComments,
   acceptComment,
