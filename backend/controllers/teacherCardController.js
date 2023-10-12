@@ -5,6 +5,9 @@ import { convertToWebp } from '../utils/imageConversion.js';
 import { __dirname } from '../utils/dirname.js';
 export const createTeacherCard = async (req, res) => {
   try {
+    if (req.role !== "admin") {
+      return res.status(403).json({ error: "No permission." });
+    }
     const { firstName, lastName, email, jobBrief, telephone, aboutTeacher, teaching_philosophy, career_summary, teaching_methods, qualification_cert, teacher_collaboration, classroom_management, behavior_management, additional_info } = req.body;
     let image = '';
 
@@ -13,7 +16,7 @@ export const createTeacherCard = async (req, res) => {
       const imagePath = `uploads/${req.file.filename}`;
 
       if (req.file.mimetype !== 'image/webp') {
-        image = await convertToWebp(imagePath, baseUrl);
+        image = await convertToWebp(imagePath, baseUrl, 'uploads');
       } else {
         image = `${baseUrl}/uploads/${req.file.filename}`;
       }
@@ -33,6 +36,9 @@ export const updateTeacherCard = async (req, res) => {
   try {
     const teacherId = req.params.id;
     const { firstName, lastName, email, jobBrief, telephone, aboutTeacher, image } = req.body;
+    if (req.role !== "admin") {
+      return res.status(403).json({ error: "No permission." });
+    }
 
     const teacher = await Teacher.findById(teacherId);
     if (!teacher) {
@@ -47,7 +53,7 @@ export const updateTeacherCard = async (req, res) => {
       const imagePath = `uploads/${req.file.filename}`;
 
       if (req.file.mimetype !== 'image/webp') {
-        newImage = await convertToWebp(imagePath, baseUrl);
+        newImage = await convertToWebp(imagePath, baseUrl, 'uploads');
       } else {
         newImage = `${baseUrl}/uploads/${req.file.filename}`;
       }
@@ -59,7 +65,6 @@ export const updateTeacherCard = async (req, res) => {
           try {
             await fs.access(oldImagePath, fs.constants.F_OK);
             await fs.unlink(oldImagePath);
-            console.log('Old image file deleted:', oldImagePath);
           } catch (error) {
             console.error('Error deleting old image file:', error);
           }
@@ -96,6 +101,9 @@ export const getTeachersCard = async (req, res) => {
 
 export const deleteTeacherCard = async (req, res) => {
   try {
+    if (req.role !== "admin") {
+      return res.status(403).json({ error: "No permission." });
+    }
     const teacherId = req.params.id;
 
     const teacher = await Teacher.findById(teacherId);
@@ -109,7 +117,6 @@ export const deleteTeacherCard = async (req, res) => {
       try {
         await fs.access(imagePath, fs.constants.F_OK);
         await fs.unlink(imagePath);
-        console.log('Image file deleted:', imagePath);
       } catch (error) {
         console.error('Error deleting image file:', error);
       }

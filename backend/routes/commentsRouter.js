@@ -7,20 +7,26 @@ import {
   createReplyComment,
   updatedComment,
 } from "../controllers/commentController.js";
+import authenticateUser from "../middleware/authMiddlewar.js";
+import updateInteraction from "../controllers/ineractionsController.js";
 const router = express.Router();
 
 // API route for adding a comment to a blog post
-router.post("/:id", createComment);
-router.post("/reply/:id", createReplyComment);
+router.post("/:id", authenticateUser, createComment);
+router.post("/reply/:id", authenticateUser, createReplyComment);
 
-router.patch("/update/:id", updatedComment);
+router.patch("/update/:id", authenticateUser, updatedComment);
 
 // API route for deleting a comment from a blog post
-router.delete("/:id", deleteComment);
+router.delete("/:id", authenticateUser, deleteComment);
+// interaction with comments
+router.post("/:modelType/:id/:action", authenticateUser, updateInteraction);
+router.post("/:modelType/:id/:action", authenticateUser, updateInteraction);
+router.post("/:modelType/:id/:action", authenticateUser, updateInteraction);
 
 //admin
-router.get("/pending", getPendingComments);
-router.patch("/accept/:id", acceptComment);
-router.get("/accept/:id", acceptComment);
+router.get("/pending", authenticateUser, getPendingComments);
+router.patch("/accept/:id", authenticateUser, acceptComment);
+router.get("/accept/:id", authenticateUser, acceptComment);
 
 export default router;

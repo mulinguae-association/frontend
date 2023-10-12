@@ -4,7 +4,7 @@ import sharp from 'sharp';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { __dirname } from './dirname.js';
-const convertToWebp = async (imagePath, baseUrl) => {
+const convertToWebp = async (imagePath, baseUrl, uploadFolder) => {
   // Parse the input image path to get the file extension and filename
   const { name } = path.parse(imagePath);
   try {
@@ -14,7 +14,7 @@ const convertToWebp = async (imagePath, baseUrl) => {
       .toBuffer();
 
     const originalFilename = path.basename(name);
-    const rembgImagePath = `uploads/${originalFilename}.webp`;
+    const rembgImagePath = `${uploadFolder}/${originalFilename}.webp`;
     await sharp(rembgOutput).webp().toFile(path.join(__dirname, '..', rembgImagePath));
     await fs.unlink(imagePath);
 

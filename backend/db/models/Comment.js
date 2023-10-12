@@ -2,9 +2,12 @@ import mongoose from "mongoose";
 
 const commentSchema = new mongoose.Schema({
   content: String,
-  authorId: String,
   createdAt: { type: Date, default: Date.now },
   status: { type: String, default: "pending" },
+  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+  unlikes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+  loves: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+  postedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   blogId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "BlogPost",
