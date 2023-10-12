@@ -7,6 +7,7 @@ import {
   updateTeacherCard
 } from '../controllers/teacherCardController.js';
 import { v4 as uuidv4 } from 'uuid';
+import authenticateUser from '../middleware/authMiddlewar.js';
 
 const router = express.Router();
 
@@ -23,9 +24,9 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // API routes
-router.post('/teachersCard', upload.single('image'), createTeacherCard);
-router.delete('/deleteTeacherCard/:id', deleteTeacherCard);
-router.patch('/updateTeacher/:id', upload.single('image'), updateTeacherCard);
+router.post('/teachersCard', upload.single('image'), authenticateUser, createTeacherCard);
+router.delete('/deleteTeacherCard/:id', authenticateUser, deleteTeacherCard);
+router.patch('/updateTeacher/:id', authenticateUser, upload.single('image'), updateTeacherCard);
 router.get('/teachers', getTeachersCard);
 
 export default router;

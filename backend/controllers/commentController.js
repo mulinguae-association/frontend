@@ -1,12 +1,17 @@
 // Import your modules here
 import BlogPost from "../db/models/BlogPost.js";
 import Comment from "../db/models/Comment.js";
+import User from "../db/models/User.js";
 
 // Define your functions
 async function createComment(req, res) {
   try {
     const { content, id } = req.body;
-    console.log(content, id);
+    const authorId = req.userId;
+    const authorName = req.userName;
+    // find author info
+    const author = await User.findById(authorId)
+
     // Find the blog post with the provided ID
     const blogPost = await BlogPost.findById(id);
     const blogId = id;
@@ -17,6 +22,10 @@ async function createComment(req, res) {
     const comment = new Comment({
       content,
       blogId,
+      authorId,
+      authorName,
+      postedBy: author,
+      status: req.role === "admin" ? "accepted" : "pending"
     });
 
     await comment.save();
@@ -38,24 +47,21 @@ async function createComment(req, res) {
 async function updatedComment(req, res) {
   const { id } = req.params
   const { content } = req.body;
-  console.log(id, content)
   try {
     // Find the blog post with the provided ID
     const comment = await Comment.findById(id);
     if (!comment) {
       return res.status(404).json({ error: "Comment not found" })
     }
-    if (comment.authorId === req.userId) {
+    if (comment.postedBy._id.toString() === req.userId.toString() || req.role === "admin") {
       // Update the comment content
       comment.content = content;
-      comment.status = "pending";
+      comment.status = req.role === "admin" ? "accepted" : "pending";
 
       // Save the updated comment
       await comment.save();
 
       res.status(201).json({ message: "Comment updated successfully" });
-    } else {
-      res.status(401).json({ error: "Unauthorized to update this comment" });
     }
   } catch (error) {
     console.error("Error updating comment:", error);
@@ -66,9 +72,12 @@ async function updatedComment(req, res) {
 // Create a reply comment and push it into the parent comment's replies array
 async function createReplyComment(req, res) {
   const { content, blogId, parentCommentId } = req.body;
+  const authorId = req.userId;
+  const authorName = req.userName;
   try {
     const parentComment = await Comment.findById(parentCommentId);
-
+    // find author info
+    const author = await User.findById(authorId)
     if (!parentComment) {
       return res.status(404).json({ error: "Parent comment not found" });
     }
@@ -77,6 +86,10 @@ async function createReplyComment(req, res) {
       content,
       blogId,
       parentComment: parentCommentId,
+      authorId,
+      authorName,
+      postedBy: author,
+      status: req.role === "admin" ? "accepted" : "pending"
     });
 
     await comment.save();
@@ -97,6 +110,9 @@ async function createReplyComment(req, res) {
 
 async function getPendingComments(req, res) {
   try {
+    if (req.role !== "admin") {
+      return res.status(403).json({ error: "No permission." });
+    }
     const pendingComments = await Comment.find({ status: "pending" }).populate({
       path: 'replies',
       model: 'Comment',
@@ -128,15 +144,14 @@ async function acceptComment(req, res) {
 async function deleteComment(req, res) {
   const { id } = req.params;
   const authorId = req.userId;
-  console.log(authorId);
+
   try {
     const comment = await Comment.findById(id);
-    console.log(comment);
     if (!comment) {
       return res.status(404).json({ error: "Comment not found" });
     }
 
-    if (comment.authorId == req.userId) {
+    if (comment.postedBy._id.toString() === authorId.toString() || req.role === "admin") {
       // Remove the comment from the comments array
       await Comment.findByIdAndDelete(id);
       res.status(200).json({ message: "Comment deleted successfully" });

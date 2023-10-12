@@ -1,20 +1,30 @@
 import BlogPost from "../db/models/BlogPost.js";
+import User from "../db/models/User.js";
 
 export async function createBlogPost(req, res) {
   try {
     const { title, subTitle, content } = req.body;
-    const blogPost = new BlogPost({ title, subTitle, content });
+    const authorId = req.userId;
+    const author = await User.findById(authorId)
+    const blogPost = new BlogPost({ title, subTitle, content, postedBy: author });
+    req.role === "admin" ? blogPost.status = "accepted" : blogPost.status = "pending"
     await blogPost.save();
 
-    res.json(blogPost.toObject());
+    return res.json({
+      message: "Blog post submitted successfully",
+      blogPost: blogPost.toObject(),
+    });
   } catch (error) {
     console.error("Error submitting blog post:", error);
-    res.status(500).json({ error: "An error occurred" });
+    return res.json({ error: "An error occurred" });
   }
 }
 
 export async function getPendingBlogPosts(req, res) {
   try {
+    if (req.role !== "admin") {
+      return res.status(403).json({ error: "No permission." });
+    }
     const pendingPosts = await BlogPost.find({ status: "pending" });
     res.status(200).json(pendingPosts.map((post) => post.toObject()));
   } catch (error) {
@@ -26,6 +36,9 @@ export async function getPendingBlogPosts(req, res) {
 export async function acceptBlogPost(req, res) {
   try {
     const { id } = req.params;
+    if (req.role !== "admin") {
+      return res.status(403).json({ error: "No permission." });
+    }
     await BlogPost.findByIdAndUpdate(id, { status: "accepted" });
     return res.status(200).json({ message: "Blog post accepted successfully" });
   } catch (error) {
@@ -37,13 +50,20 @@ export async function acceptBlogPost(req, res) {
 export async function deleteBlogPost(req, res) {
   try {
     const { id } = req.params;
-    await BlogPost.findByIdAndDelete(id);
-    return res
-      .status(200)
-      .json({ message: "Blog post deleted successfully" });
+    const userId = req.userId;
+
+    const blogPost = await BlogPost.findById(id);
+    if (blogPost.authorId == userId || req.role === "admin") {
+      await BlogPost.findByIdAndDelete(id);
+      return res
+        .json({ message: "Blog post deleted successfully" });
+    } else {
+      return res
+        .json({ error: "No permission to delete blog post" });
+    }
+
   } catch (error) {
-    console.error("Error deleting blog post:", error);
-    return res.status(500).json({ error: "An error occurred" });
+    return res.json({ error: "An error occurred" });
   }
 }
 
@@ -54,21 +74,37 @@ export async function getAcceptedBlogPosts(req, res) {
       .sort({ createdAt: -1 })
       .limit(limit)
       .populate({
+        path: "postedBy",
+        model: "User",
+        select: "_id name profileImage role"
+      })
+      .populate({
         path: "comments",
         model: "Comment",
         match: { status: "accepted" },
         options: { sort: { createdAt: -1 } },
         populate: [
           {
+            path: "postedBy",
+            model: "User",
+            select: "_id name profileImage role"
+          },
+          {
             path: "replies",
             model: "Comment",
             match: { status: "accepted" },
-            options: { sort: { createdAt: -1 } }
+            options: { sort: { createdAt: -1 } },
+            populate: [
+              {
+                path: "postedBy",
+                model: "User",
+                select: "_id name profileImage role"
+              },
+            ]
           },
-        ],
-      })
-      .exec();
 
+        ],
+      }).exec();
     res.status(200).json(acceptedPosts);
   } catch (error) {
     console.error("Error retrieving accepted blog posts:", error);
@@ -90,19 +126,36 @@ export async function searchBlogPosts(req, res) {
       path: "comments",
       model: "BlogPost",
     }).populate({
-      path: "comments",
-      model: "Comment",
-      match: { status: "accepted" },
-      options: { sort: { createdAt: -1 } },
-      populate: [
-        {
-          path: "replies",
-          model: "Comment",
-          match: { status: "accepted" },
-          options: { sort: { createdAt: -1 } }
-        },
-      ],
-    }).exec();
+      path: "postedBy",
+      model: "User",
+      select: "_id name profileImage role"
+    })
+      .populate({
+        path: "comments",
+        model: "Comment",
+        match: { status: "accepted" },
+        options: { sort: { createdAt: -1 } },
+        populate: [
+          {
+            path: "postedBy",
+            model: "User",
+            select: "_id name profileImage role"
+          },
+          {
+            path: "replies",
+            model: "Comment",
+            match: { status: "accepted" },
+            options: { sort: { createdAt: -1 } },
+            populate: [
+              {
+                path: "postedBy",
+                model: "User",
+                select: "_id name profileImage role"
+              },
+            ]
+          },
+        ],
+      }).exec();
 
     res.status(200).json(searchResults);
   } catch (error) {
