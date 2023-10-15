@@ -1,0 +1,98 @@
+@import "../../globalStyles/colors";
+.settings_page {
+  background-color: #efefef;
+  height: calc(100vh - 90px);
+  padding: 50px 0;
+  h1 {
+    margin: 0;
+  }
+  span {
+    font-size: 14px;
+    margin-left: 15px;
+    color: #333;
+    // font-weight: 400;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    background-color: #fff;
+    padding: 40px 100px;
+    border-radius: 25px;
+    margin: 25px auto;
+    border: 1px solid $lightgray-color;
+    box-shadow: 0 0 10px #3333338f;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 40px 20px;
+    }
+    .input_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+      border-bottom: 2px solid $lightgray-color;
+      padding-bottom: 30px;
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      label {
+        font-weight: bold;
+      }
+      input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+        height: 40px;
+        border: 2px solid #ddd;
+        padding-left: 10px;
+        border-radius: 12px;
+        font-size: 15px;
+        &[type="file"] {
+          display: none;
+        }
+      }
+      &:last-of-type {
+        & > img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+        }
+      }
+    }
+    button {
+      width: -moz-fit-content;
+      width: fit-content;
+      margin: 0 0 0 auto;
+      background-color: $primaryDark-color;
+      color: #ffd;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  .upload_image {
+    background-color: $lightgray-color;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  @media (max-width: 768px) {
+    & {
+      min-height: 100vh;
+    }
+  }
+}
