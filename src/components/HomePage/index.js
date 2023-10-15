@@ -19,9 +19,8 @@ const Home = ({ imgAnimation }) => {
 							{t("hero_title").split("\\n").join("\n")}
 						</h1>
 						<div
-							className={`img_info_container ${
-								imgAnimation ? "reload-animation" : ""
-							} `}>
+							className={`img_info_container ${imgAnimation ? "reload-animation" : ""
+								} `}>
 							<picture>
 								<source
 									type='image/webp'
@@ -68,20 +67,17 @@ const Home = ({ imgAnimation }) => {
 									{t("hero_button")}
 								</button>
 								<span
-									className={`arrow arrow-first ${
-										langAr ? "change_dir" : ""
-									}`}></span>
+									className={`arrow arrow-first ${langAr ? "change_dir" : ""
+										}`}></span>
 								<span
-									className={`arrow arrow-second ${
-										langAr ? "change_dir" : ""
-									}`}></span>
+									className={`arrow arrow-second ${langAr ? "change_dir" : ""
+										}`}></span>
 							</div>
 						</Link>
 					</div>
 					<div
-						className={`img_container reload-animation  ${
-							imgAnimation ? "reload-animation" : ""
-						}`}>
+						className={`img_container reload-animation  ${imgAnimation ? "reload-animation" : ""
+							}`}>
 						<picture>
 							<source
 								type='image/webp'

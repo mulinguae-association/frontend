@@ -1,189 +1,189 @@
 @import "../../globalStyles/colors";
 .teacher_form {
-	display: flex;
-	flex-direction: column;
-	gap: 25px;
-	width: 500px;
-	h1 {
-		font-size: 35px;
-		color: $primary-color;
-	}
-	.block {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.input_field {
-			width: 48%;
-		}
-	}
-	input {
-		padding: 12px;
-		width: 100%;
-		&:focus {
-			outline: none;
-		}
-	}
-	textarea {
-		padding: 10px 0 0 15px;
-		outline: none;
-	}
-	input,
-	textarea,
-	button,
-	label {
-		border: none;
-		border-radius: 10px;
-		border: 2px solid #eee;
-		font-size: 16px;
-	}
-	button[type="submit"] {
-		padding: 10px;
-		font-weight: bold;
-		font-size: 16px;
-		cursor: pointer;
-		color: $primaryDark-color;
-		width: 80%;
-		margin: 0 auto;
-	}
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 500px;
+  h1 {
+    font-size: 35px;
+    color: $primary-color;
+  }
+  .block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .input_field {
+      width: 48%;
+    }
+  }
+  input {
+    padding: 12px;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  textarea {
+    padding: 10px 0 0 15px;
+    outline: none;
+  }
+  input,
+  textarea,
+  button,
+  label {
+    border: none;
+    border-radius: 10px;
+    border: 2px solid $lightgray-color;
+    font-size: 16px;
+  }
+  button[type="submit"] {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: $primaryDark-color;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 // for all input images
 input[type="file"] {
-	display: none;
+  display: none;
 }
 .upload_image {
-	background-color: #eee;
-	cursor: pointer;
-	padding: 8px 15px;
-	border-radius: 10px;
-	text-align: center;
-	font-weight: bold;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
+  background-color: $lightgray-color;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 // --------------dashboard page---------------
 .dashboard {
-	min-height: calc(100vh - 90px);
-	background: url("../../../public/images/circle-blues.webp") center;
-	position: relative;
-	z-index: 2;
-	&:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgb(238 238 238 / 6%);
-		z-index: -1;
-	}
+  min-height: calc(100vh - 90px);
+  background: url("../../../public/images/circle-blues.webp") center;
+  position: relative;
+  z-index: 2;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238 238 238 / 6%);
+    z-index: -1;
+  }
 }
 // --------------end dashboard page---------------
 // edit form
 .edit_form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 80%;
-	gap: 4px;
-	margin: 0 auto;
-	padding: 40px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  gap: 4px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
 
-	input,
-	textarea {
-		border-radius: 4px;
-		border: none;
-		border: 1.6px solid lightblue;
-		max-width: 100%;
-		width: 100%;
-		margin: 2px 0;
-		&:focus-visible {
-			outline: none;
-		}
+  input,
+  textarea {
+    border-radius: 4px;
+    border: none;
+    border: 1.6px solid lightblue;
+    max-width: 100%;
+    width: 100%;
+    margin: 2px 0;
+    &:focus-visible {
+      outline: none;
+    }
 
-		&:focus {
-			outline: none;
-		}
-	}
+    &:focus {
+      outline: none;
+    }
+  }
 
-	.updateBtn {
-		cursor: pointer;
-		border: none;
-		background-color: $secondary-color; // Assuming you have a $secondary-color variable defined elsewhere in your SASS
-		color: $primaryDark-color; // Assuming you have a $primaryDark-color variable defined elsewhere in your SASS
-		padding: 4px;
-		font-weight: bold;
-		letter-spacing: 1px;
-		border: 1px dashed;
-		width: 100%;
-	}
+  .updateBtn {
+    cursor: pointer;
+    border: none;
+    background-color: $secondary-color; // Assuming you have a $secondary-color variable defined elsewhere in your SASS
+    color: $primaryDark-color; // Assuming you have a $primaryDark-color variable defined elsewhere in your SASS
+    padding: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px dashed;
+    width: 100%;
+  }
 }
 
 // End edit teacher form
 // start Blogs
 .dashboard .blogs {
-	padding: 60px 0;
-	color: #fff;
-	.pendingPosts {
-		.content_container {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			gap: 10px;
-			height: 600px;
-			overflow-y: auto;
-			.content {
-				position: relative;
-				background-color: #f0f0f0;
-				width: 400px;
-				height: 300px;
-				padding: 15px;
-				overflow-y: auto;
-				border-radius: 10px;
-				font-size: 15px;
-				h3 {
-					color: $darkBlue-color;
-					margin-bottom: 0;
-				}
-				p {
-					color: #333;
-				}
-				.subTitle {
-					font-size: 14px;
-					color: #333;
-					font-style: italic;
-					font-weight: 500;
-				}
-				.date {
-					position: absolute;
-					top: 20px;
-					right: 15px;
-					color: #333;
-					font-weight: 500;
-					font-size: 14px;
-				}
-				.btns {
-					display: flex;
-					gap: 8px;
-					button {
-						all: unset;
-						background: #fff;
-						border: 1px solid #bbb;
-						padding: 6px 18px;
-						font-size: 15px;
-						border-radius: 7px;
-						color: darkblue;
-						cursor: pointer;
-						font-weight: bold;
-					}
-					.refuse {
-						color: red;
-					}
-				}
-			}
-		}
-	}
+  padding: 60px 0;
+  color: $white-color;
+  .pendingPosts {
+    .content_container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      height: 600px;
+      overflow-y: auto;
+      .content {
+        position: relative;
+        background-color: #f0f0f0;
+        width: 400px;
+        height: 300px;
+        padding: 15px;
+        overflow-y: auto;
+        border-radius: 10px;
+        font-size: 15px;
+        h3 {
+          color: $darkBlue-color;
+          margin-bottom: 0;
+        }
+        p {
+          color: #333;
+        }
+        .subTitle {
+          font-size: 14px;
+          color: #333;
+          font-style: italic;
+          font-weight: 500;
+        }
+        .date {
+          position: absolute;
+          top: 20px;
+          right: 15px;
+          color: #333;
+          font-weight: 500;
+          font-size: 14px;
+        }
+        .btns {
+          display: flex;
+          gap: 8px;
+          button {
+            all: unset;
+            background: $white-color;
+            border: 1px solid #bbb;
+            padding: 6px 18px;
+            font-size: 15px;
+            border-radius: 7px;
+            color: darkblue;
+            cursor: pointer;
+            font-weight: bold;
+          }
+          .refuse {
+            color: red;
+          }
+        }
+      }
+    }
+  }
 }
 // end Blogs

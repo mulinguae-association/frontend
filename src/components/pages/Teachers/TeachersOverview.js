@@ -9,11 +9,13 @@ import { deleteTeacher } from '../../../utils/apiUtility';
 import { AppContext } from '../../../contexts/AppContext';
 import EditTeacherForm from '../../Dashboard/EditTeacherForm';
 import { notifyError, notifySuccess } from '../../Notify';
+import { useAuth } from '../../../contexts/AuthContext';
 
 const TeachersOverview = ({ t }) => {
   const { teachers, setTeachers, getTeachers } = useContext(AppContext)
   const [editingTeacher, setEditingTeacher] = useState(null);
-  console.log(teachers)
+  const { isAuth, userData } = useAuth();
+
   useEffect(() => {
     getTeachers()
   }, []);
@@ -95,10 +97,14 @@ const TeachersOverview = ({ t }) => {
                 : <EditTeacherForm teacher={editingTeacher} onUpdate={handleUpdateTeacher} />
               }
               <Link className='teacher_link' to={`/pages/Teachers/${teacher.firstName}${teacher._id}`}>{t("sec6_link1")}</Link>
-              <button className='deleteBtn' onClick={() => handleDeleteTeacher(teacher._id)}>x</button>
-              <button className='editBtn' onClick={(e) => handleEditTeacher(teacher)}>
-                <img height={"64px"} src='/images/icons/edit.png' alt='edit teacher card' />
-              </button>
+              {isAuth && (userData.role === "admin") &&
+                <>
+                  <button className='deleteBtn' onClick={() => handleDeleteTeacher(teacher._id)}>x</button>
+                  <button className='editBtn' onClick={(e) => handleEditTeacher(teacher)}>
+                    <img height={"64px"} src='/images/icons/edit.png' alt='edit teacher card' />
+                  </button>
+                </>
+              }
             </div>
           </li>
         </SwiperSlide>

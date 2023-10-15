@@ -2,384 +2,385 @@
 @import "../../../globalStyles/colors";
 
 .teachers_overview {
-	background-color: #0b137e11;
-	padding: 10px;
-	border-radius: 10px;
+  background-color: #0b137e11;
+  padding: 10px;
+  border-radius: 10px;
 
-	.teachers_head {
-		color: $darkBlue-color;
-		font-size: 1.8rem;
+  .teachers_head {
+    color: $darkBlue-color;
+    font-size: 1.8rem;
 
-		.special {
-			color: $primaryDark-color;
-		}
-	}
-	.swiper {
-		width: 90%;
-	}
-	// Styles for .teacher_card
-	.teacher_card {
-		background-color: $white-color;
-		box-shadow: 0 10px 10px 10px #ddd;
-		position: relative;
-		width: 90%;
-		min-height: 350px;
-		height: 100%;
-		margin: 0 auto;
-		text-align: center;
-		padding: 15px;
-		padding-bottom: 25px;
-		border-radius: 15px;
-		margin-bottom: 25px;
-		overflow: hidden;
+    .special {
+      color: $primaryDark-color;
+    }
+  }
+  .swiper {
+    width: 90%;
+  }
+  // Styles for .teacher_card
+  .teacher_card {
+    background-color: $white-color;
+    box-shadow: 0 10px 10px 10px #ddd;
+    position: relative;
+    width: 90%;
+    min-height: 350px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
 
-		// Styles for .teacher_content
-		.teacher_content {
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
-			gap: 15px;
-			user-select: none;
+    // Styles for .teacher_content
+    .teacher_content {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      user-select: none;
 
-			// Styles for .imageContainer
-			.imageContainer {
-				width: 110px;
-				height: 110px;
-				margin: 0 auto;
-				border-radius: 50%;
-				background-color: #eee;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				overflow: hidden;
-				position: relative;
+      // Styles for .imageContainer
+      .imageContainer {
+        width: 110px;
+        height: 110px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
 
-				// Styles for .teacher_image
-				.teacher_image {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
+        // Styles for .teacher_image
+        .teacher_image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
 
-			// Styles for .teacher_name
-			.teacher_name {
-				font-size: large;
-				word-spacing: -2px;
-				margin: 5px 0 0 0;
-			}
+      // Styles for .teacher_name
+      .teacher_name {
+        font-size: large;
+        word-spacing: -2px;
+        margin: 5px 0 0 0;
+      }
 
-			// Styles for .teacher_job
-			.teacher_job {
-				display: block;
-				font-size: small;
-				height: auto;
-				text-transform: uppercase;
-				color: $primaryDark-color;
-				font-weight: bold;
-				letter-spacing: 1px;
-				margin: 5px 0 0 0;
-			}
+      // Styles for .teacher_job
+      .teacher_job {
+        display: block;
+        font-size: small;
+        height: auto;
+        text-transform: uppercase;
+        color: $primaryDark-color;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 5px 0 0 0;
+      }
 
-			// Styles for .teacher_brief
-			.teacher_brief {
-				width: 97%;
-				padding-right: 10px;
-				margin: 0;
-				font-size: 14px;
-				overflow-wrap: break-word;
-			}
+      // Styles for .teacher_brief
+      .teacher_brief {
+        width: 97%;
+        padding-right: 10px;
+        margin: 0;
+        font-size: 14px;
+        overflow-wrap: break-word;
+      }
 
-			// Styles for .teacher_link
-			.teacher_link {
-				display: inline-block;
-				min-width: 100px;
-				max-width: 150px;
-				margin: 0 auto;
-				margin-top: 10px;
-				text-decoration: none;
-				color: $primaryDark-color;
-				border: 1px solid $primary-color;
-				padding: 8px 12px;
-				transition: 0.7s ease;
-				position: relative;
-				overflow: hidden;
-				z-index: 10;
+      // Styles for .teacher_link
+      .teacher_link {
+        display: inline-block;
+        min-width: 100px;
+        max-width: 150px;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-decoration: none;
+        color: $primaryDark-color;
+        border: 1px solid $primary-color;
+        padding: 8px 12px;
+        transition: 0.7s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
 
-				&::before {
-					position: absolute;
-					top: -0px;
-					left: 0;
-					content: "";
-					height: 0%;
-					width: 100%;
-					text-decoration: none;
-					background-color: $primaryDark-color;
-					border-radius: 0px 0 50% 50%;
-					transition: 0.7s ease;
-					color: $white-color;
-					z-index: -1;
-				}
+        &::before {
+          position: absolute;
+          top: -0px;
+          left: 0;
+          content: "";
+          height: 0%;
+          width: 100%;
+          text-decoration: none;
+          background-color: $primaryDark-color;
+          border-radius: 0px 0 50% 50%;
+          transition: 0.7s ease;
+          color: $white-color;
+          z-index: -1;
+        }
 
-				&:hover::before {
-					background-color: $primaryDark-color;
-					color: $white-color;
-					height: 180%;
-					width: 100%;
-					z-index: -11;
-				}
+        &:hover::before {
+          background-color: $primaryDark-color;
+          color: $white-color;
+          height: 180%;
+          width: 100%;
+          z-index: -11;
+        }
 
-				&:hover {
-					color: $white-color;
-				}
-			}
+        &:hover {
+          color: $white-color;
+        }
+      }
 
-			// Styles for .deleteBtn within .teacher_content
-			.deleteBtn {
-				width: 30px;
-				height: 30px;
-				border-radius: 50%;
-				border: none;
-				font-size: 20px;
-				font-weight: bold;
-				color: red;
-				position: absolute;
-				left: 26px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				border: 1px solid;
-				transition: 0.7s ease;
-				background-color: #000;
+      // Styles for .deleteBtn within .teacher_content
+      .deleteBtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: red;
+        position: absolute;
+        left: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid;
+        transition: 0.7s ease;
+        background-color: #000;
 
-				&:hover {
-					border-color: red;
-					background: white;
-				}
-			}
+        &:hover {
+          border-color: red;
+          background: white;
+        }
+      }
 
-			// Styles for .editBtn within .teacher_content
-			.editBtn {
-				width: 30px;
-				height: 30px;
-				border-radius: 50%;
-				border: none;
-				font-size: 20px;
-				font-weight: bold;
-				border-color: green;
-				position: absolute;
-				right: 26px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				border: 1px solid;
-				transition: 0.7s ease;
-				background: white;
+      // Styles for .editBtn within .teacher_content
+      .editBtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        border-color: green;
+        position: absolute;
+        right: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid;
+        transition: 0.7s ease;
+        background: white;
 
-				img {
-					object-fit: cover;
-				}
+        img {
+          object-fit: cover;
+        }
 
-				&:hover {
-					border-color: green;
-					background-color: yellow;
-					color: #fff;
-				}
-			}
-		}
-	}
-	.no_teachers {
-		font-size: 17px;
-		font-weight: bold;
-		text-align: center;
-		letter-spacing: 1px;
-	}
-	@media (max-width: 767px) {
-		.swiper {
-			width: 100%;
-		}
-	}
+        &:hover {
+          border-color: green;
+          background-color: yellow;
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .no_teachers {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  @media (max-width: 767px) {
+    .swiper {
+      width: 100%;
+    }
+  }
 }
 
 // Styles for .teacher_profile
 .teacher_profile {
-	padding: 60px 0;
-	background: url("../../../../public/images/interlaced.png");
-	background-attachment: fixed;
-	min-height: calc(100vh - 210px);
-	position: relative;
-	z-index: 1;
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: #ffffff53;
-		z-index: -1;
-	}
-	// Styles for .back_btn
-	.back_btn {
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-		color: $darkBlue-color;
-		font-size: larger;
+  padding: 60px 0;
+  background: url("../../../../public/images/interlaced.png");
+  background-attachment: fixed;
+  min-height: calc(100vh - 210px);
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff53;
+    z-index: -1;
+  }
+  // Styles for .back_btn
+  .back_btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $darkBlue-color;
+    font-size: larger;
 
-		.back_icon {
-			height: 24px;
-			padding: 0;
-			margin: 0;
-		}
-	}
+    .back_icon {
+      height: 24px;
+      padding: 0;
+      margin: 0;
+      color: $medium-darkblue;
+    }
+  }
 
-	// Styles for .main_info
-	.main_info {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: -moz-fit-content;
-		width: fit-content;
-		margin: 0 auto;
-		gap: 50px;
-		padding: 28px;
-		border-radius: 8px;
-		border-bottom: 2px solid $secondary-color;
+  // Styles for .main_info
+  .main_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 28px;
+    border-radius: 8px;
+    border-bottom: 2px solid $secondary-color;
 
-		// Styles for .info within .main_info
-		.info {
-			width: -moz-fit-content;
-			width: fit-content;
-			padding: 20px 0;
-			text-align: center;
-			border-radius: 20px;
+    // Styles for .info within .main_info
+    .info {
+      width: -moz-fit-content;
+      width: fit-content;
+      padding: 20px 0;
+      text-align: center;
+      border-radius: 20px;
 
-			h3 {
-				text-transform: capitalize;
-				border-bottom: 1px solid $primaryDark-color;
-				padding-bottom: 10px;
-				color: $darkBlue-color;
-				margin: 5px 0;
-				width: -moz-fit-content;
-				width: fit-content;
+      h3 {
+        text-transform: capitalize;
+        border-bottom: 1px solid $primaryDark-color;
+        padding-bottom: 10px;
+        color: $darkBlue-color;
+        margin: 5px 0;
+        width: -moz-fit-content;
+        width: fit-content;
 
-				&:last-child {
-					border: none;
-				}
+        &:last-child {
+          border: none;
+        }
 
-				span {
-					font-weight: bold;
-					text-transform: none;
-					color: $primaryDark-color;
-				}
-			}
+        span {
+          font-weight: bold;
+          text-transform: none;
+          color: $primaryDark-color;
+        }
+      }
 
-			@media (max-width: 768px) {
-				& {
-					padding: 20px 0;
+      @media (max-width: 768px) {
+        & {
+          padding: 20px 0;
 
-					h3 {
-						margin: 5px auto;
-						text-align: center;
-					}
-				}
-			}
-		}
+          h3 {
+            margin: 5px auto;
+            text-align: center;
+          }
+        }
+      }
+    }
 
-		// Styles for image within .main_info
-		img {
-			width: 200px;
-			height: 200px;
-			background-color: #eee;
-			border-radius: 50%;
-			box-shadow: 0 8px 10px #33333384;
-			object-fit: cover;
-		}
-	}
+    // Styles for image within .main_info
+    img {
+      width: 200px;
+      height: 200px;
+      background-color: $lightgray-color;
+      border-radius: 50%;
+      box-shadow: 0 8px 10px #33333384;
+      object-fit: cover;
+    }
+  }
 
-	// Styles for .secondary_info
-	.secondary_info {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: stretch;
-		gap: 10px;
-		margin-top: 30px;
+  // Styles for .secondary_info
+  .secondary_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 30px;
 
-		// Styles for .block within .secondary_info
-		.block {
-			width: 46%;
-			h3 {
-				width: -moz-fit-content;
-				width: fit-content;
-				border-radius: 50px;
-				padding: 10px 15px;
-				border: 1.5px solid lightgreen;
-				color: #0b127e;
-				font-size: 17px;
-				font-weight: 700;
-				text-transform: capitalize;
-				background: linear-gradient(360deg, #51a7d3, #ffffff);
-			}
+    // Styles for .block within .secondary_info
+    .block {
+      width: 46%;
+      h3 {
+        width: -moz-fit-content;
+        width: fit-content;
+        border-radius: 50px;
+        padding: 10px 15px;
+        border: 1.5px solid lightgreen;
+        color: $darkBlue-color;
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: capitalize;
+        background: linear-gradient(360deg, #51a7d3, $white-color);
+      }
 
-			p {
-				padding: 40px 45px;
-				margin: 0;
-				font-size: 16px;
-				font-weight: 500;
-				letter-spacing: 0.9px;
-				text-transform: none;
-				background-color: #0b137e11;
-				color: #000;
-				border-radius: 10px;
-				position: relative;
-				overflow: hidden;
-				z-index: 1;
-			}
-		}
+      p {
+        padding: 40px 45px;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.9px;
+        text-transform: none;
+        background-color: #0b137e11;
+        color: #000;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+    }
 
-		@media (max-width: 768px) {
-			flex-direction: column;
+    @media (max-width: 768px) {
+      flex-direction: column;
 
-			&:last-child {
-				border: none;
-			}
+      &:last-child {
+        border: none;
+      }
 
-			.block {
-				width: 100%;
-				h3 {
-					text-align: center;
-					margin: 16px auto;
-				}
-				p {
-					padding: 20px;
-				}
-			}
-		}
-	}
+      .block {
+        width: 100%;
+        h3 {
+          text-align: center;
+          margin: 16px auto;
+        }
+        p {
+          padding: 20px;
+        }
+      }
+    }
+  }
 }
 
 // Global styles
 .btn {
-	all: unset;
+  all: unset;
 }
 
 @media (max-width: 767px) {
-	// Responsive styles for .teacher_profile .main_info
-	.teacher_profile .main_info {
-		width: 100%;
-		display: flex;
-		flex-direction: column-reverse;
-	}
+  // Responsive styles for .teacher_profile .main_info
+  .teacher_profile .main_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-	// Responsive styles for .secondary_info p
-	.secondary_info p {
-		width: 100%;
-		padding: 0;
-	}
+  // Responsive styles for .secondary_info p
+  .secondary_info p {
+    width: 100%;
+    padding: 0;
+  }
 }

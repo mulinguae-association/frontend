@@ -1,74 +1,95 @@
+@import "../../../../globalStyles/colors";
 .heart-btn {
-	.content {
-		position: relative;
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-		.heart {
-			height: 20px;
-			width: 48px;
-			background: url("../../../../../public/images/heart.png") no-repeat;
-			background-position: left;
-			background-size: 2900%;
-			z-index: 99;
-			&.heart-active {
-				background-position: right;
-				animation: animate 0.8s steps(28) 1;
-			}
-		}
-		.numb {
-			position: absolute;
-			right: 7px;
-			top: 5px;
-			font-size: 13px;
-			color: #aab8c2;
-			&.interaction_active {
-				color: #000;
-			}
-		}
-	}
+  .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .heart {
+      height: 20px;
+      width: 48px;
+      background: url("../../../../../public/images/heart.png") no-repeat;
+      background-position: left;
+      background-size: 2900%;
+      z-index: 99;
+      &.heart-active {
+        background-position: right;
+        animation: animate 0.8s steps(28) 1;
+      }
+    }
+    .numb {
+      position: absolute;
+      right: 7px;
+      top: 5px;
+      font-size: 13px;
+      color: #aab8c2;
+      &.interaction_active {
+        color: #000;
+      }
+    }
+  }
+  @media (max-width: 360px) {
+    & {
+      .content {
+        .heart {
+          width: 40px;
+        }
+      }
+    }
+  }
 }
 .interaction_comments {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	bottom: -22px;
-	right: -8px;
-	.interaction_btn {
-		.content {
-			position: relative;
-			display: flex;
-			align-items: center;
-			cursor: pointer;
-			.unlike,
-			.love {
-				color: #aab8c2;
-				font-size: 16px;
-				z-index: 99;
-				&.interaction_active {
-					color: #0556b3;
-				}
-			}
-			.numb {
-				color: #aab8c2;
-				font-size: 11px;
-				font-weight: bold;
-				position: relative;
-				top: 5px;
-				&.interaction_active {
-					color: #0556b3;
-				}
-			}
-		}
-	}
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  bottom: -22px;
+  right: -8px;
+  .interaction_btn {
+    .content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .unlike,
+      .love {
+        color: #aab8c2;
+        font-size: 16px;
+        z-index: 99;
+        &.interaction_active {
+          color: $primaryDark-color;
+        }
+      }
+      .numb {
+        color: #aab8c2;
+        font-size: 11px;
+        font-weight: bold;
+        position: relative;
+        top: 5px;
+        &.interaction_active {
+          color: $primaryDark-color;
+        }
+      }
+    }
+  }
+  @media (max-width: 360px) {
+    gap: 10px;
+    .interaction_btn {
+      .content {
+        .unlike,
+        .love {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes animate {
-	0% {
-		background-position: left;
-	}
-	100% {
-		background-position: right;
-	}
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }

@@ -15,7 +15,7 @@
       width: 500px;
       margin: 0 auto;
       padding: 40px;
-      background-color: #fff;
+      background-color: $white-color;
       border-radius: 10px;
       border-top: 3px solid $darkBlue-color;
 
@@ -73,7 +73,7 @@
 
         button {
           background-color: $darkBlue-color;
-          color: #fff;
+          color: $white-color;
           border: none;
           border-radius: 4px;
           padding: 10px 20px;
@@ -95,7 +95,7 @@
         transform: translateX(-50%);
         font-size: 50px;
         color: $medium-darkblue;
-        background: linear-gradient(178deg, #f0f0f0, #fff);
+        background: linear-gradient(178deg, #f0f0f0, $white-color);
         overflow: hidden;
         height: 53px;
         border-radius: 50%;

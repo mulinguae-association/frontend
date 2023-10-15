@@ -8,12 +8,13 @@ const ReplyForm = ({ commentsId, handleSubmit }) => {
   return (
     <div className="reply_form">
       <textarea
+        className='textArea-font'
         value={replyConetnt}
         onChange={(e) => setReplyContent(e.target.value)}
         placeholder="Write your reply..."
         required
       />
-      <button disabled={isBtnLoading['replyCommentBtn']} onClick={() => handleSubmit(commentsId, replyConetnt, setReplyContent)}>
+      <button className='button-font' disabled={isBtnLoading['replyCommentBtn']} onClick={() => handleSubmit(commentsId, replyConetnt, setReplyContent)}>
         {isBtnLoading['replyCommentBtn'] ? "Loading..." : "Submit Reply"}
       </button>
     </div>

@@ -1,9 +1,8 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:5000';
 // create,get,delete Teachers
 const createTeacher = async (formData) => {
   try {
-    const res = await axios.post(`${baseUrl}/api/teachersCard`, formData);
+    const res = await axios.post(`/api/teachersCard, ${formData}`);
     if (res.status === 200) { return { success: true } } else { return { success: false } }
   } catch (error) {
     console.error('Error adding teacher:', error);
@@ -21,7 +20,7 @@ const updateTeacher = async (teacherId, updatedTeacher) => {
     }
 
     // Make the PATCH request with the FormData
-    const res = await axios.patch(`${baseUrl}/api/updateTeacher/${teacherId}`, formData, {
+    const res = await axios.patch(`/api/updateTeacher/${teacherId}`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data', // Set the content type to multipart/form-data
       },
@@ -39,7 +38,7 @@ const updateTeacher = async (teacherId, updatedTeacher) => {
 
 const fetchTeachers = async () => {
   try {
-    const response = await axios.get(`${baseUrl}/api/teachers`);
+    const response = await axios.get('/api/teachers');
     return response.data;
   } catch (error) {
     console.error('Error fetching teachers:', error);
@@ -49,7 +48,7 @@ const fetchTeachers = async () => {
 
 const deleteTeacher = async (teacherId) => {
   try {
-    const res = await axios.delete(`${baseUrl}/api/deleteTeacherCard/${teacherId}`);
+    const res = await axios.delete(`/api/deleteTeacherCard/${teacherId}`);
     console.log(res)
     if (res.status === 200) { return { success: true } } else { return { success: false } }
   } catch (error) {

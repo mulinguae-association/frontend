@@ -4,6 +4,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { AppContext } from '../../../contexts/AppContext';
 import "./Teachers.scss"
 import { useTranslation } from 'react-i18next';
+import { BiSolidArrowToLeft } from 'react-icons/bi';
+import { IoIosArrowBack } from 'react-icons/io';
 const TeacherProfile = () => {
   const { teachers, getTeachers } = useContext(AppContext)
   const { t, i18n } = useTranslation('pages/teachers', { ns: 'teachers' });
@@ -36,7 +38,9 @@ const TeacherProfile = () => {
   return (
     <main className='page_content teacher_profile'>
       <div className='container'>
-        <button className='btn back_btn' onClick={goBack}><span style={lang ? { rotate: "180deg" } : {}} className='back_icon'><img width={25} height={25} src='/images/icons/backArrow.png' alt='back arrow' /></span> {t('sec7_link1')}</button>
+        <button className='btn back_btn' onClick={goBack}><span style={lang ? { rotate: "180deg" } : {}} className='back_icon'>
+          <IoIosArrowBack size={26} />
+        </span> {t('sec7_link1')}</button>
         <section className='teacher_content'>
           <div className='main_info'>
             <div className='info'>

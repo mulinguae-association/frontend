@@ -1,13 +1,21 @@
 import React, { createContext, useState } from 'react';
 import { fetchTeachers } from '../utils/apiUtility';
+import { useContext } from 'react';
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isBtnLoading, setIsBtnLoading] = useState({});
   const [teachers, setTeachers] = useState([]);
   const [notificationPopup, setNotificationPopup] = useState(null);
-  console.log(teachers)
+  // Function to set loading state for a specific button
+  const setButtonLoading = (buttonKey, isLoading) => {
+    setIsBtnLoading((prevState) => ({
+      ...prevState,
+      [buttonKey]: isLoading,
+    }));
+  };
   const getTeachers = async () => {
     try {
       const fetchedTeachers = await fetchTeachers();
@@ -24,7 +32,9 @@ export const AppProvider = ({ children }) => {
     setTeachers,
     getTeachers,
     notificationPopup,
-    setNotificationPopup
+    setNotificationPopup,
+    isBtnLoading,
+    setButtonLoading
   };
 
   return (
@@ -33,3 +43,4 @@ export const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
+export const useGlobal = () => useContext(AppContext);

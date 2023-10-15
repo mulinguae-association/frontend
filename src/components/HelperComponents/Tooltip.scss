@@ -1,27 +1,29 @@
+@import "../../globalStyles/colors";
 // Tooltip.scss
 .tooltip-container {
-	position: relative;
-	.tooltip-icon {
-		cursor: pointer;
-		height: 20px;
-	}
+  position: relative;
+  .tooltip-icon {
+    cursor: pointer;
+    height: 20px;
+  }
 
-	.tooltip-text {
-		position: absolute;
-		width: 300px;
-		height: fit-content;
-		top: calc(100% + 5px);
-		left: 50%;
-		transform: translateX(-50%);
-		padding: 10px;
-		background-color: #333;
+  .tooltip-text {
+    position: absolute;
+    width: 300px;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #333;
 
-		border-radius: 4px;
-		color: #fff;
-		color: yellow;
-		font-size: 14px;
-		opacity: 1;
-		visibility: visible;
-		transition: opacity 0.3s, visibility 0.3s;
-	}
+    border-radius: 4px;
+    color: $white-color;
+    color: yellow;
+    font-size: 14px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
 }

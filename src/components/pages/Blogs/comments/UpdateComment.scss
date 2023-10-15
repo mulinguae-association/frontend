@@ -1,38 +1,39 @@
+@import "../../../../globalStyles/colors";
 // UpdateComment.scss
 .update_parent {
-	background-color: #f0f0f0 !important;
-	border-radius: 10px;
-	height: 100px;
-	.update_form {
-		background-color: inherit;
-	}
+  background-color: #f0f0f0 !important;
+  border-radius: 10px;
+  height: 100px;
+  .update_form {
+    background-color: inherit;
+  }
 }
 .update_form {
-	display: flex;
-	border-radius: 10px;
-	width: 100%;
-	height: 90px;
-	justify-content: space-between;
-	background-color: #fff;
-	padding: 0 10px;
-	.custom_textarea {
-		border: none;
-		outline: none;
-		padding: 10px 0;
-		line-height: 1.5;
-		// overflow: auto; /* Hide the scroll bar */
-		resize: none; /* Disable user resizing */
-		background: none;
-		height: 100%;
-		width: 100%;
-		&::-webkit-scrollbar {
-			width: 0;
-		}
-	}
-	button {
-		all: unset;
-		cursor: pointer;
-		color: blue;
-		align-self: flex-end;
-	}
+  display: flex;
+  border-radius: 10px;
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+  background-color: $white-color;
+  padding: 0 10px;
+  .custom_textarea {
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    line-height: 1.5;
+    // overflow: auto; /* Hide the scroll bar */
+    resize: none; /* Disable user resizing */
+    background: none;
+    height: 100%;
+    width: 100%;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  button {
+    all: unset;
+    cursor: pointer;
+    color: $third-color;
+    align-self: flex-end;
+  }
 }

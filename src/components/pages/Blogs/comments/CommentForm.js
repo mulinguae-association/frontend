@@ -54,9 +54,9 @@ const CommentForm = ({ blogId, setComments }) => {
           value={comment}
           rows='4'
           onChange={(e) => setComment(e.target.value)}
-          className='textarea'
+          className='textarea textArea-font'
           required></textarea>
-        <button disabled={isBtnLoading['postComment']} type='submit' className='submit-button'>
+        <button disabled={isBtnLoading['postComment']} type='submit' className='submit-button button-font'>
           {isBtnLoading['postComment'] ? "Post..." : "Post"}
         </button>
       </form>

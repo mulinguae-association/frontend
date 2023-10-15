@@ -1,15 +1,15 @@
 @import "../../globalStyles/colors";
 .about_us_info {
-	padding: 50px 0;
-	text-transform: capitalize;
-	.header {
-		color: $primaryDark-color;
-	}
-	.about {
-		font-size: 15.5px;
-		color: #444;
-		font-weight: 500;
-		letter-spacing: 0.9px;
-		text-transform: none;
-	}
+  padding: 50px 0;
+  text-transform: capitalize;
+  .header {
+    color: $primaryDark-color;
+  }
+  .about {
+    font-size: 15.5px;
+    color: #444;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    text-transform: none;
+  }
 }

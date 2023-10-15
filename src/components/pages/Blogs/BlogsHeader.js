@@ -22,7 +22,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
 
   return (
     <>
-      <div className="links">
+      <div className="links button-font">
         <Link to="/pages/Blogs/Create-new-blog">+ Create A Blog</Link>
         <div>
           <input
