@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import 'quill/dist/quill.snow.css'
 import ReactQuill from 'react-quill'
+import { useTranslation } from "react-i18next";
 
-console.warn = function () { };
 const TextEditor = ({ content, setContent }) => {
+  const { i18n } = useTranslation()
+
   var modules = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
@@ -21,10 +23,8 @@ const TextEditor = ({ content, setContent }) => {
       [{ 'align': [] }],
 
       ['clean'],
-
     ]
   };
-
 
   var formats = [
     "header", "height", "bold", "italic",
@@ -40,7 +40,7 @@ const TextEditor = ({ content, setContent }) => {
   return (
     <div className="text-area">
       <ReactQuill
-        // theme="snow"
+        key={i18n.language}
         modules={modules}
         formats={formats}
         placeholder="write your content ...."

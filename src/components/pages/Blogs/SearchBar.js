@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import InputField from '../../HelperComponents/InputField'; // Import your InputField component
 
 const SearchBar = ({ searchQuery, handleSearchChange }) => {
   return (
-    <input
-      className="search smSC"
+    <InputField
+      // className="search smSC"
+      label="Search by title or user name"
       type="text"
       placeholder="Search by title or user name"
       value={searchQuery}
@@ -12,5 +14,4 @@ const SearchBar = ({ searchQuery, handleSearchChange }) => {
   );
 };
 
-
-export default SearchBar
+export default SearchBar;

@@ -1,0 +1,129 @@
+/* Shared styles for .comment */
+@import "../../../../globalStyles/colors";
+.comment {
+	background-color: rgba($darkBlue-color, 0.1);
+	border-radius: 4px;
+	padding: 10px 22px;
+	margin: 12px 0;
+	margin-left: 0;
+	border: 1px solid;
+	overflow: hidden;
+	border-color: lightsteelblue;
+	.comment_head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: darkblue;
+		margin-bottom: 0;
+		// color: #fff;
+		.comment_date {
+			font-size: 12px;
+			color: #000;
+			letter-spacing: 2px;
+			font-weight: bold;
+			margin-top: 0;
+			color: darkgreen;
+		}
+	}
+	.parent_comment {
+		position: relative;
+		display: flex;
+		gap: 10px;
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: #fff;
+		}
+		.parent_comment_info {
+			width: 100%;
+		}
+	}
+	.comment_content {
+		border-left: 2px solid orangered;
+		padding: 10px;
+		border-radius: 4px;
+		color: darkblue;
+		margin-top: 0;
+		box-shadow: 0 4px 10px rgba(102, 102, 102, 0.2);
+		width: 100%;
+		margin-bottom: 6px;
+		background-color: #fff;
+	}
+	.nested_comments_container {
+		display: flex;
+		gap: 10px;
+		padding-top: 0;
+		margin-bottom: 8px;
+		padding: 10px 15px;
+
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+		.nested_comments {
+			width: -moz-fit-content;
+			width: fit-content;
+			border-radius: 0 15px;
+			border-left: 2px solid #0556b3;
+			margin: 8px 0;
+			padding: 10px 15px;
+			background: #fff;
+			position: relative;
+			min-width: 155px;
+			line-height: 1.5;
+			span {
+				font-size: 10px;
+				font-weight: bold;
+				display: flex;
+				justify-content: end;
+			}
+			& > span {
+				color: darkgreen;
+			}
+		}
+	}
+
+	.replies {
+		margin: 20px 0 25px 25px;
+		display: flex;
+		flex-direction: column;
+	}
+	.comment_author {
+		font-size: 12px;
+		font-weight: bold;
+		color: #0556b3;
+		text-transform: capitalize;
+		margin: 0;
+	}
+	.reply_form {
+		display: flex;
+		margin-top: 30px;
+		textarea {
+			border-right: 0px;
+			width: 300px;
+			height: 40px;
+			padding: 8px;
+			border-radius: 4px 0 0 4px;
+			&:focus {
+				outline: none;
+				border: 2px solid orangered;
+				border-right: 0;
+				filter: none;
+			}
+		}
+		button {
+			border: none;
+			background: darkblue;
+			color: #fff;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	}
+}
+
+/* Shared styles for .comments_content */
+.comments_content {
+	position: relative;
+}

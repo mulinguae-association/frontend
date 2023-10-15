@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import TextEditor from "../../../TextEditor";
 import "./Blogs.scss";
 import { submitBlogPost } from "../../../utils/blog-api";
-import { notifySuccess } from "../../Notify";
+import { notifyError } from "../../Notify";
 import { AppContext } from "../../../contexts/AppContext";
 import { useContext } from "react";
 import NotificationPopup from "../../HelperComponents/NotificationPopup";
+import { useAuth } from "../../../contexts/AuthContext";
+import { useBlogPosts } from "../../../contexts/BlogsContext";
+import InputField from "../../HelperComponents/InputField";
 
 const CreateBlog = () => {
   // State variables
@@ -14,8 +17,11 @@ const CreateBlog = () => {
   const [content, setContent] = useState("");
   const [preview, setPreview] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { notificationPopup, setNotificationPopup } = useContext(AppContext)
-  console.log("cont:" + content, "sub:" + subtitle, "title:" + title)
+  const { notificationPopup, setNotificationPopup } = useContext(AppContext);
+  const { acceptedPosts, setAcceptedPosts } = useBlogPosts()
+  const { userData } = useAuth()
+  const avatar = userData.profileImage;
+
   // Function to toggle between preview and edit mode
   const togglePreview = () => {
     if (title !== "" && content !== "") {
@@ -61,18 +67,18 @@ const CreateBlog = () => {
     e.preventDefault();
     try {
       setIsSubmitting(true)
-      notifySuccess("Successfully sent blog info")
-      const success = await submitBlogPost(title, subtitle, content);
-      console.log(success);
-      if (success) {
-        setNotificationPopup({ message: "Your Blog has been submitted for review." });
-        // Reset form fields
-        setTitle("");
-        setSubtitle("");
-        setContent("");
-      }
+      const res = await submitBlogPost(title, subtitle, content, avatar);
+      setAcceptedPosts([res.blogPost, ...acceptedPosts])
+      userData.role !== "admin" ?
+        setNotificationPopup({ message: "Your Blog has been submitted for review." })
+        : setNotificationPopup({ message: "Your Blog has been submitted." })
+      // Reset form fields
+      setTitle("");
+      setSubtitle("");
+      setContent("");
+
     } catch (error) {
-      notifySuccess("Faild sending blog info")
+      notifyError(error.message)
       console.error("Error submitting blog post:", error);
     } finally {
       setIsSubmitting(false)
@@ -96,20 +102,22 @@ const CreateBlog = () => {
           <h1>Create A <span className="special">Blog</span></h1>
           {!preview && (
             <div className="titles">
-              <input
+              <InputField
                 className="input-field"
+                label="Blog Title"
                 type="text"
                 placeholder="Write your blog title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 required
               />
-              <input
+              <InputField
                 className="input-field"
+                label="Blog Subtitle"
                 type="text"
-                placeholder="Write your blog subtitle" // New subtitle input
+                placeholder="Write your blog subtitle"
                 value={subtitle}
-                onChange={(e) => setSubtitle(e.target.value)} // Update subtitle state
+                onChange={(e) => setSubtitle(e.target.value)}
               />
             </div>
           )}

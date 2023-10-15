@@ -1,12 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'; // Import useRef
-import { updatedComment } from '../../../utils/blog-api';
-import { notifyError, notifySuccess } from '../../Notify';
+import { updatedComment } from '../../../../utils/blog-api';
+import { notifyError, notifySuccess } from '../../../Notify';
 import "./UpdateComment.scss";
 import { BiSend } from 'react-icons/bi';
+import { useAuth } from '../../../../contexts/AuthContext';
+import { IoMdCheckmarkCircle } from 'react-icons/io';
+import { useContext } from 'react';
+import { AppContext } from '../../../../contexts/AppContext';
 
-const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setIsEditComment }) => {
-  console.log(editCommentId)
+const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setIsEditComment, setComments }) => {
+  const { userData } = useAuth()
   const [value, setValue] = useState(initialValue);
+  const { setNotificationPopup } = useContext(AppContext)
 
   const textareaRef = useRef(null);
 
@@ -21,18 +26,26 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
     const requestedBody = {
       content: value
     }
+    const isAdmin = userData.role === "admin";
 
     try {
       const res = await updatedComment(editCommentId, requestedBody)
       console.log(res)
       if (res.status === 201) {
-        notifySuccess("Successfully updated comment")
+        isAdmin ?
+          notifySuccess("Successfully updated comment")
+          : setNotificationPopup({
+            message: "Your comment has been submitted for review.",
+            duration: 3000, // Duration in milliseconds
+            icon: <IoMdCheckmarkCircle />, // Icon to display
+          });
+        updateCommentLocally(editCommentId, value, isAdmin ? "accepted" : "pending");
         setIsEditComment(false)
-        updateCommentLocally(editCommentId, "pending");
       } else {
         notifyError("Failed updating comment") // Corrected typo
       }
-    } catch {
+    } catch (err) {
+      console.log(err)
       notifyError("Failed updating comment")
     }
   }
@@ -40,7 +53,7 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
   return (
     <form onSubmit={handleUpdateComment} className='update_form'>
       <textarea
-        ref={textareaRef} // Assign the ref to the textarea element
+        ref={textareaRef}
         className='custom_textarea'
         value={value}
         onChange={(e) => setValue(e.target.value)}

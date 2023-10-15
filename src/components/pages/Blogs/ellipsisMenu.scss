@@ -5,6 +5,8 @@
 	display: inline-block;
 	display: flex;
 	justify-content: end;
+	align-items: end;
+	height: 6px;
 	.menu-trigger {
 		cursor: pointer;
 	}
@@ -23,10 +25,9 @@
 		background-color: #bae6ff;
 		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 		list-style: none;
-
 		border-radius: 8px;
 		margin: 0;
-		z-index: 99;
+		z-index: 999;
 
 		li {
 			padding: 8px 16px;

@@ -1,19 +1,18 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:5000';
-
-export async function submitBlogPost(title, subTitle, content) {
+export async function submitBlogPost(title, subTitle, content, avatar) {
   try {
-    const response = await axios.post(`${baseUrl}/api/blogPosts`, {
+    const response = await axios.post(`/api/blogPosts`, {
       title,
       subTitle,
       content,
+      avatar
     });
 
     if (response.status === 200) {
       console.log("Blog post submitted successfully");
       // Reset form fields
-      return true;
+      return response.data;
     } else {
       throw new Error("Error submitting blog post");
     }
@@ -24,7 +23,7 @@ export async function submitBlogPost(title, subTitle, content) {
 
 export async function fetchPendingPosts() {
   try {
-    const response = await axios.get(`${baseUrl}/api/blogPosts/pending`);
+    const response = await axios.get(`/api/blogPosts/pending`);
 
     if (response.status === 200) {
       return response.data;
@@ -38,7 +37,7 @@ export async function fetchPendingPosts() {
 
 export async function fetchAcceptedPosts(limit) {
   try {
-    const response = await axios.get(`${baseUrl}/api/blogPosts/accepted?limit=${limit}`);
+    const response = await axios.get(`/api/blogPosts/accepted?limit=${limit}`);
 
     if (response.status === 200) {
       return response.data;
@@ -52,37 +51,42 @@ export async function fetchAcceptedPosts(limit) {
 
 export async function acceptBlogPost(blogId) {
   try {
-    const response = await axios.patch(`${baseUrl}/api/blogPosts/${blogId}/accept`);
+    const response = await axios.patch(`/api/blogPosts/${blogId}/accept`);
     if (response.status === 200) {
       return { status: 200, data: response.data }
     } else {
       return { status: response.status, Error: "Error accepting blog post" }
     }
   }
-  catch (err) {
-    return { status: 500, err: "Error accepting blog post" }
+  catch (error) {
+    if (error.response && error.response.status === 401) {
+      const message = error.response.data.error;
+      return { status: 401, message };
+    } else
+      console.error("Error creating comment:", error.message);
+    return { status: 500, error: "Error creating comment: " + error.message };
   }
 }
 
 export async function removeBlogPost(blogId) {
   try {
-    const response = await axios.delete(`${baseUrl}/api/blogPosts/${blogId}`);
+    const response = await axios.delete(`/api/blogPosts/${blogId}`);
 
     if (response.status === 200) {
-      return { status: 200, data: response.data }
+      return response.data
     } else {
-      return { status: response.status, error: "Error deleting blog post" }
+      return response.data
     }
   }
   catch (error) {
-    return { status: 500, error: "Error deleting blog post" }
+    return { error: error.response.data.error }
   }
 
 }
 
 export async function searchBlogPosts(query) {
   try {
-    const response = await axios.get(`${baseUrl}/api/blogPosts/search?q=${query}`)
+    const response = await axios.get(`/api/blogPosts/search?q=${query}`)
     if (response.status === 200) {
       return { status: 200, data: response.data };
     } else {
@@ -97,7 +101,7 @@ export async function searchBlogPosts(query) {
 
 export async function createComment(blogId, commentData) {
   try {
-    const response = await axios.post(`${baseUrl}/api/comments/${blogId}`, commentData);
+    const response = await axios.post(`/api/comments/${blogId}`, commentData);
     console.log("Response from createComment:", response);
 
     if (response.status === 201) {
@@ -107,13 +111,18 @@ export async function createComment(blogId, commentData) {
       return { status: response.status, error: "Error creating comment" };
     }
   } catch (error) {
-    console.error("Error creating comment:", error.message);
+    console.log(error)
+    if (error.response && error.response.status === 401) {
+      const message = error.response.data.error;
+      return { status: 401, message };
+    } else
+      console.error("Error creating comment:", error.message);
     return { status: 500, error: "Error creating comment: " + error.message };
   }
 }
 export async function fetchPendingComments() {
   try {
-    const response = await axios.get(`${baseUrl}/api/comments/pending`);
+    const response = await axios.get(`/api/comments/pending`);
 
     if (response.status === 200) {
       return response.data;
@@ -127,7 +136,7 @@ export async function fetchPendingComments() {
 
 export async function acceptComment(commentId) {
   try {
-    const response = await axios.patch(`${baseUrl}/api/comments/accept/${commentId}`);
+    const response = await axios.patch(`/api/comments/accept/${commentId}`);
     if (response.status === 200) {
       return { status: 200, data: response.data };
     } else {
@@ -135,13 +144,17 @@ export async function acceptComment(commentId) {
       return { status: response.status, error: "Error accepting comment" };
     }
   } catch (error) {
-    console.error("Error accepting comment", error.message);
-    return { status: 500, error: "Error accepting comment " + error.message };
+    if (error.response && error.response.status === 401) {
+      const message = error.response.data.error;
+      return { status: 401, message };
+    } else
+      console.error("Error creating comment:", error.message);
+    return { status: 500, error: "Error creating comment: " + error.message };
   }
 }
 export async function refuseComment(commentId) {
   try {
-    const response = await axios.delete(`${baseUrl}/api/comments/${commentId}`);
+    const response = await axios.delete(`/api/comments/${commentId}`);
     if (response.status === 200) {
       return { status: response.status, data: response.data };
     } else {
@@ -149,8 +162,12 @@ export async function refuseComment(commentId) {
       return { status: response.status, error: "Error refusing comment" };
     }
   } catch (error) {
-    console.error("Error refusing comment", error.message);
-    return { status: 500, error: "Error refusing comment " + error.message };
+    if (error.response && error.response.status === 401) {
+      const message = error.response.data.error;
+      return { status: 401, message };
+    } else
+      console.error("Error creating comment:", error.message);
+    return { status: 500, error: "Error creating comment: " + error.message };
   }
 }
 
@@ -161,7 +178,7 @@ export async function handleReplySubmit(content, blogId, parentCommentId) {
       parentCommentId,
     };
 
-    const response = await axios.post(`${baseUrl}/api/comments/reply/${blogId}`, requestBody);
+    const response = await axios.post(`/api/comments/reply/${blogId}`, requestBody);
     if (response.status === 201) {
       return { status: 201, data: response.data };
     } else {
@@ -169,14 +186,16 @@ export async function handleReplySubmit(content, blogId, parentCommentId) {
       return { status: response.status, error: "Error submitting reply" };
     }
   } catch (error) {
-    console.error("Error submitting reply", error.message);
-    return { status: 500, error: "Error submitting reply " + error.message };
+    const message = error.response.data.error;
+    if (error.response && error.response.status === 401) {
+      return { status: 401, message }
+    }
   }
 }
 
 export async function updatedComment(commentId, requestedBody) {
   try {
-    const response = await axios.patch(`${baseUrl}/api/comments/update/${commentId}`, requestedBody);
+    const response = await axios.patch(`/api/comments/update/${commentId}`, requestedBody);
     if (response.status === 201) {
       return { status: 201, data: response.data };
     } else {
@@ -184,8 +203,47 @@ export async function updatedComment(commentId, requestedBody) {
       return { status: response.status, error: "Error updating comment" };
     }
   } catch (error) {
-    console.error("Error updating comment", error.message);
-    return { status: 500, error: "Error updating comment " + error.message };
+    if (error.response && error.response.status === 401) {
+      const message = error.response.data.error;
+      return { status: 401, message };
+    } else
+      if (error.response && error.response.status === 401) {
+        const message = error.response.data.error;
+        return { status: 401, message };
+      } else
+        console.error("Error creating comment:", error.message);
+    return { status: 500, error: "Error creating comment: " + error.message };
+  }
+}
+export async function interactWithComment(modelType, id, action) {
+
+  try {
+    const response = await axios.post(`/api/comments/${modelType}/${id}/${action}`);
+
+    if (response.status === 200) {
+      return { status: 200, data: response.data };
+    } else {
+      console.error(`Error updating comment (Status ${response.status})`);
+      return { status: response.status, error: `Error updating comment (Status ${response.status})` };
+    }
+  } catch (error) {
+    if (error.response && error.response.status === 401) {
+      const message = error.response.data.error;
+      return { status: 401, message };
+    } else {
+      console.error(`Error updating comment (${action})`, error);
+      return { status: 500, error: `Error updating comment (${action})` };
+    }
+
   }
 }
 
+export const getAcceptedComments = async () => {
+  try {
+    const response = await axios.get('/api/comments/accepted');
+    return response.data;
+  } catch (error) {
+    console.error('Error retrieving accepted comments:', error);
+    throw error;
+  }
+};

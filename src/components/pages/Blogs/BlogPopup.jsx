@@ -1,40 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import "./BlogPopup.scss";
 import { formatRelativeTime } from "../../HelperComponents/RelativeDate";
-import Like from "./Like";
 import EllipsisMenu from "./EllipsisMenu";
-import UpdateComment from "./UpdateComment";
+import UpdateComment from "./comments/UpdateComment";
 import { useCommentEditState } from "../../HelperComponents/useCommentEditState";
+import { useAuth } from "../../../contexts/AuthContext";
+import InteractionComponent from "./interaction/InteractionComments";
+import ReplyForm from "./comments/ReplyForm";
+import Comment from "./comments/Comment";
+import CommentReply from "./comments/CommentReply";
 
 const BlogPopup = ({
 	blog,
 	show,
 	showFullContent,
 	showAllComments,
-	replyContent,
-	setReplyContent,
 	handleSubmit,
 	comments,
+	updateLike,
 	handleRemoveComment,
-	clearReply,
 	updateCommentLocally,
 }) => {
-	const [likes, setLikes] = useState({});
-	const [likeCounts, setLikeCounts] = useState({});
+	const { userData } = useAuth();
 	const { isEditComment, handleEdit, setIsEditComment, editCommentId } =
 		useCommentEditState();
-
-	const handleClick = (id) => {
-		const updatedLikes = { ...likes };
-		const updatedLikeCounts = { ...likeCounts };
-
-		updatedLikeCounts[id] =
-			(updatedLikeCounts[id] || 0) + (updatedLikes[id] ? -1 : 1);
-		updatedLikes[id] = !updatedLikes[id];
-
-		setLikeCounts(updatedLikeCounts);
-		setLikes(updatedLikes);
-	};
 
 	return (
 		<div className='blog_popup'>
@@ -51,88 +40,47 @@ const BlogPopup = ({
 						<h1 className='comment_title'>Comments</h1>
 					</div>
 					{comments.map((comment) =>
-						comment.status === "accepted" ? (
+						comment?.status === "accepted" ? (
 							<div key={comment._id} className='comments_content'>
 								<div className='comment'>
-									<EllipsisMenu
-										handleDelete={() => handleRemoveComment(comment?._id)}
-										handleEdit={(state) => handleEdit(comment?._id, state)}
-									/>
-									<div className='comment_head'>
-										<h2>@{comment?.author}</h2>
-										<span className='comment_date'>
-											{formatRelativeTime(comment?.createdAt)}
-										</span>
-									</div>
-									{isEditComment && editCommentId === comment._id ? (
-										<UpdateComment
-											editCommentId={comment._id}
-											comments={comments}
-											initialValue={comment?.content}
-											setIsEditComment={setIsEditComment}
+									<div key={comment._id} className='comments_content'>
+										{/* Map and display all comments */}
+										<Comment
+											comment={comment}
+											userData={userData}
+											isEditComment={isEditComment}
+											editCommentId={editCommentId}
+											handleRemoveComment={handleRemoveComment}
+											handleEdit={handleEdit}
 											updateCommentLocally={updateCommentLocally}
+											updateLike={updateLike}
+											handleSubmit={handleSubmit}
 										/>
-									) : (
-										<p className='comment_content'>{comment?.content}</p>
-									)}
+									</div>
 									<div className='replies'>
 										{comment &&
 											comment?.replies.map((reply) =>
 												reply.status === "accepted" ? (
-													<div
-														style={
-															isEditComment && editCommentId === reply._id
-																? { width: "100%" }
-																: { width: "fit-content" }
-														}
-														key={reply?._id}
-														className='nested_comments'>
-														<EllipsisMenu
-															handleDelete={() =>
-																handleRemoveComment(reply?._id)
-															}
-															handleEdit={(state) =>
-																handleEdit(reply?._id, state)
-															}
-														/>
-														{isEditComment && editCommentId === reply._id ? (
-															<UpdateComment
-																editCommentId={reply._id}
-																comments={comments}
-																initialValue={reply?.content}
-																setIsEditComment={setIsEditComment}
-																updateCommentLocally={updateCommentLocally}
-															/>
-														) : (
-															<div>{reply?.content}</div>
-														)}
-														<span>{formatRelativeTime(reply.createdAt)}</span>
-														<Like
-															isLiked={likes[reply._id] || false}
-															likeCount={likeCounts[reply._id] || 0}
-															handleClick={() => handleClick(reply._id)}
-														/>
-													</div>
+													<CommentReply
+														comment={reply}
+														isEditComment={isEditComment}
+														setIsEditComment={setIsEditComment}
+														editCommentId={editCommentId}
+														handleRemoveComment={handleRemoveComment}
+														handleEdit={handleEdit}
+														updateCommentLocally={updateCommentLocally}
+														updateLike={updateLike}
+														handleSubmit={handleSubmit}
+													/>
 												) : (
 													""
 												)
 											)}
 									</div>
-									<div className='reply_form'>
-										<textarea
-											value={replyContent[comment?._id]}
-											onChange={(e) => setReplyContent(e.target.value)}
-											placeholder='Write your reply...'
-											required
-										/>
-										<button
-											onClick={() => {
-												handleSubmit(comment?._id);
-												clearReply(comment._id);
-											}}>
-											Submit Reply
-										</button>
-									</div>
+									<ReplyForm
+										commentsId={comment?._id}
+										handleSubmit={handleSubmit}
+									/>
 								</div>
 							</div>
 						) : (
