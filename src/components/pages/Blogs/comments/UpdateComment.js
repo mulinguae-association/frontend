@@ -49,6 +49,13 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
       notifyError("Failed updating comment")
     }
   }
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      // Submit the form when Enter is pressed
+      handleUpdateComment(e);
+    }
+  };
 
   return (
     <form onSubmit={handleUpdateComment} className='update_form'>
@@ -57,11 +64,15 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
         className='custom_textarea'
         value={value}
         onChange={(e) => setValue(e.target.value)}
+        onKeyPress={handleKeyPress}
         required
       />
-      <button type='submit'>
-        <BiSend size={20} />
-      </button>
+      <div className='update_btns'>
+        <button onClick={() => setIsEditComment(false)}>cancel</button>
+        <button type='submit'>
+          <BiSend size={20} />
+        </button>
+      </div>
     </form>
   )
 }

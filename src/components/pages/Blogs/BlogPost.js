@@ -13,6 +13,7 @@ import BlogContent from "./BlogContent";
 import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext";
 import InteractionComponent from "./interaction/InteractionComments";
+import { useEffect } from "react";
 
 const BlogPost = ({ blog, setAcceptedPosts }) => {
   const [showFullContent, setShowFullContent] = useState(false);
@@ -22,6 +23,16 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
   const { notificationPopup, setNotificationPopup } = useContext(AppContext);
   const { userData, isAuth } = useAuth();
 
+  useEffect(() => {
+    if (showAllComments) {
+      document.body.style.overflow = "hidden"; // Disable scrolling on the body
+    } else {
+      document.body.style.overflow = "auto"; // Re-enable scrolling on the body
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showAllComments]);
   // Functions
   const updateCommentLocally = (commentId, value, updatedContent) => {
     setComments((prevComments) => {
@@ -120,9 +131,10 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
   };
 
   const handleSubmit = async (parentCommentId, replyContent, setReplyContent) => {
+    const buttonKey = `replyCommentBtn_${parentCommentId}`
     if (replyContent.trim() !== "") {
       try {
-        setButtonLoading("replyCommentBtn", true)
+        setButtonLoading(buttonKey, true)
         const res = await handleReplySubmit(
           replyContent,
           blog._id,
@@ -152,14 +164,14 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
         }
       }
       catch (error) {
-        setButtonLoading("replyCommentBtn", false)
+        setButtonLoading(buttonKey, false)
         if (error.response && error.response.status === 401) {
           notifyError(error.message)
         } else {
           console.log(error)
         }
       } finally {
-        setButtonLoading("replyCommentBtn", false)
+        setButtonLoading(buttonKey, false)
       }
     }
   };

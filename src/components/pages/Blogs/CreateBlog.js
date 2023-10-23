@@ -85,7 +85,7 @@ const CreateBlog = () => {
     }
 
     if (!preview) {
-      if (title.trim() === "" || content.trim() === "") {
+      if (title === "" || content === "") {
         // Prevent submission if either the title or content is empty
         alert("Please fill in both the title and content fields.");
       } else {

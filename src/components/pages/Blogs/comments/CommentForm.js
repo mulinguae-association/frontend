@@ -11,6 +11,7 @@ const CommentForm = ({ blogId, setComments }) => {
   const { setNotificationPopup } = useContext(AppContext)
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const { userData } = useAuth()
+  const buttonKey = `postComment_${blogId}`
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     const commentData = {
@@ -18,7 +19,7 @@ const CommentForm = ({ blogId, setComments }) => {
       id: blogId,
     };
     try {
-      setButtonLoading("postComment", true)
+      setButtonLoading(buttonKey, true)
       const res = await createComment(blogId, commentData)
       if (res.status === 201) {
         setComment("")
@@ -35,17 +36,22 @@ const CommentForm = ({ blogId, setComments }) => {
         notifyError(res.message)
       }
     } catch (err) {
-      setButtonLoading("postComment", false)
+      setButtonLoading(buttonKey, false)
       if (err.response && err.response.status === 401) {
         console.log(err)
       } else {
         console.log(err)
       }
     } finally {
-      setButtonLoading("postComment", false)
+      setButtonLoading(buttonKey, false)
     }
   };
-
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleCommentSubmit(e);
+    }
+  };
   return (
     <>
       <form onSubmit={handleCommentSubmit} className='comment-form'>
@@ -55,9 +61,11 @@ const CommentForm = ({ blogId, setComments }) => {
           rows='4'
           onChange={(e) => setComment(e.target.value)}
           className='textarea textArea-font'
-          required></textarea>
-        <button disabled={isBtnLoading['postComment']} type='submit' className='submit-button button-font'>
-          {isBtnLoading['postComment'] ? "Post..." : "Post"}
+          required
+          onKeyDown={handleKeyPress}
+        ></textarea>
+        <button disabled={isBtnLoading[buttonKey]} type='submit' className='submit-button button-font'>
+          {isBtnLoading[buttonKey] ? "Post..." : "Post"}
         </button>
       </form>
       {notification && (

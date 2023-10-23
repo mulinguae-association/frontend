@@ -27,7 +27,7 @@ const CommentReply = ({
       />
       <div
         style={
-          isEditComment && editCommentId === comment._id
+          isEditComment && editCommentId._id === comment._id
             ? { width: "100%" }
             : { width: "fit-content" }
         }
@@ -37,10 +37,10 @@ const CommentReply = ({
         {isAuth && (comment.postedBy._id === userData?.userId || userData?.role === "admin") && (
           <EllipsisMenu
             handleDelete={() => handleRemoveComment(comment._id)}
-            handleEdit={(state) => handleEdit(comment._id, state)}
+            handleEdit={(state) => handleEdit(comment, state)}
           />
         )}
-        {isEditComment && editCommentId === comment._id ? (
+        {isEditComment && editCommentId._id === comment._id ? (
           <UpdateComment
             editCommentId={comment._id}
             comments={comment}

@@ -18,18 +18,18 @@ const Comment = ({
 }) => {
   const { userData, isAuth } = useAuth()
   return (
-    <div>
+    <div className='comment_info'>
       {isAuth && (comment.replies.postedBy?._id === userData?.userId || userData?.role === "admin") && (
         <EllipsisMenu
           handleDelete={() => handleRemoveComment(comment?._id)}
-          handleEdit={(state) => handleEdit(comment.postedBy._id, state)}
+          handleEdit={(state) => handleEdit(comment, state)}
         />
       )}
       <div className='comment_head'>
         <h2>@{comment.postedBy?.name}</h2>
         <span className='comment_date'>{formatRelativeTime(comment?.createdAt)}</span>
       </div>
-      {isEditComment && editCommentId === comment.postedBy._id ? (
+      {isEditComment && (editCommentId.postedBy._id === comment.postedBy._id && editCommentId._id === comment._id) ? (
         <UpdateComment
           editCommentId={comment._id}
           comments={comment}

@@ -9,7 +9,6 @@
   }
 }
 .update_form {
-  display: flex;
   border-radius: 10px;
   width: 100%;
   height: 90px;
@@ -30,10 +29,20 @@
       width: 0;
     }
   }
-  button {
-    all: unset;
-    cursor: pointer;
-    color: $third-color;
-    align-self: flex-end;
+  .update_btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.8rem;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -28px;
+    button {
+      background: none;
+      border: none;
+      color: $third-color;
+      cursor: pointer;
+    }
   }
 }
