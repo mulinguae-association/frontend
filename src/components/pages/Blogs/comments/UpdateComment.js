@@ -52,7 +52,6 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      // Submit the form when Enter is pressed
       handleUpdateComment(e);
     }
   };

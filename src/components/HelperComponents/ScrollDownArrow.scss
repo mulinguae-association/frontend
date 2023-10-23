@@ -11,19 +11,19 @@
 		stroke: $primary-color;
 		fill: transparent;
 		stroke-width: 2px;
-		animation: arrow 2s infinite;
 		-webkit-animation: arrow 2s infinite;
+		animation: arrow 2s infinite;
 		&.a1 {
-			animation-delay: -1s;
 			-webkit-animation-delay: -1s;
+			animation-delay: -1s;
 		}
 		&.a2 {
-			animation-delay: -0.5s;
 			-webkit-animation-delay: -0.5s;
+			animation-delay: -0.5s;
 		}
 		&.a3 {
-			animation-delay: 0s;
 			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
 		}
 	}
 }

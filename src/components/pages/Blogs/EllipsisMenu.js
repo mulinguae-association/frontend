@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import "./ellipsisMenu.scss";
 import { useClickOutside } from '../../../utils/ClickOutside';
 function EllipsisMenu(props) {
-  // console.log(props)
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [isEditComment, setIsEditComment] = useState(false);
-  // setIsEditComment(true)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
