@@ -1,0 +1,47 @@
+{
+  "titles": {
+    "mainTitle": "Contact Us",
+    "teacherFormTitle": "Welcome Teacher",
+    "studentFormTitle": "Welcome Student"
+  },
+  "buttons": {
+    "teacherButton": "Are you A Teacher?",
+    "studentButton": "Are you A Student?"
+  },
+  "messages": {
+    "submissionMessage": "Your Info has been submitted for review"
+  },
+  "teacherForm": {
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "phoneNumberLabel": "Phone Number (optional)",
+    "countryLabel": "Country",
+    "languagesSpokenLabel": "Languages spoken",
+    "subjectsTaughtLabel": "Subjects taught?",
+    "addressLabel": "Address",
+    "uploadCvLabel": "Upload CV",
+    "cvUploadButtonText": "Submit",
+    "fullNamePlaceholder": "Your full name",
+    "emailPlaceholder": "Your email",
+    "phoneNumberPlaceholder": "Your phone number",
+    "countryPlaceholder": "Your country",
+    "languagesSpokenPlaceholder": "(e.g., English, Arabic,...)",
+    "subjectsTaughtPlaceholder": "e.g., Math, science, etc.",
+    "addressPlaceholder": "Su dirección"
+  },
+  "studentForm": {
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "phoneNumberLabel": "Phone Number",
+    "countryLabel": "Country",
+    "ageLabel": "Age",
+    "languagesSpokenLabel": "Language/s spoken",
+    "submitButton": "Submit",
+    "fullNamePlaceholder": "Your full name",
+    "emailPlaceholder": "Your email",
+    "phoneNumberPlaceholder": "Your phone number",
+    "countryPlaceholder": "Your country",
+    "agePlaceholder": "Your age",
+    "languagesSpokenPlaceholder": "Enter langs (e.g., English, Arabic,...)"
+  }
+}

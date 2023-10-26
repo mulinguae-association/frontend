@@ -24,6 +24,7 @@ const TeacherProfile = React.lazy(() => import("./components/pages/Teachers/Teac
 const CreateBlog = React.lazy(() => import("./components/pages/Blogs/CreateBlog"));
 const Dashboard = React.lazy(() => import("./components/Dashboard"));
 const PrivacyPolicy = React.lazy(() => import("./components/Privacy&terms/PrivacyPolicy"));
+const Contact = React.lazy(() => import("./components/ContactPage"));
 const NotFound = React.lazy(() => import("./components/NotFound"));
 axios.defaults.baseURL = 'http://localhost:5000';
 axios.defaults.withCredentials = true
@@ -79,6 +80,10 @@ function App() {
 						<Route path=":lang/user/settings" element={<UserSettings />} />
 						<Route path=":lang/courses" element={<Courses />} />
 						<Route path=":lang/privacy-policy" element={<PrivacyPolicy />} />
+						<Route path="/forgot-password" element={<ForgotPassword />} />
+						<Route path="/reset/:id/:token" element={<ResetPassword />} />
+						<Route path="/user/settings" element={<UserSettings />} />
+						<Route path='/contact' element={<Contact />} />
 						<Route path='*' element={<NotFound />} />
 					</Routes >
 				</React.Suspense >

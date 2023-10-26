@@ -1,0 +1,48 @@
+{
+  "titles": {
+    "mainTitle": "اتصل بنا",
+    "teacherFormTitle": "مرحبًا بالمعلم",
+    "studentFormTitle": "مرحبًا بالطالب"
+  },
+  "buttons": {
+    "teacherButton": "هل أنت معلم؟",
+    "studentButton": "هل أنت طالب؟",
+    "loadingText": "جار التحميل..."
+  },
+  "messages": {
+    "submissionMessage": "تم تقديم معلوماتك للمراجعة"
+  },
+  "teacherForm": {
+    "nameLabel": "الاسم",
+    "emailLabel": "البريد الإلكتروني",
+    "phoneNumberLabel": "رقم الهاتف (اختياري)",
+    "countryLabel": "البلد",
+    "languagesSpokenLabel": "اللغات المُتحدث بها",
+    "subjectsTaughtLabel": "المواد التي تُدرس؟",
+    "addressLabel": "العنوان",
+    "uploadCvLabel": "تحميل السيرة الذاتية",
+    "cvUploadButtonText": "إرسال",
+    "fullNamePlaceholder": "الاسم الكامل الخاص بك",
+    "emailPlaceholder": "بريدك الإلكتروني",
+    "phoneNumberPlaceholder": "رقم هاتفك",
+    "countryPlaceholder": "بلدك",
+    "languagesSpokenPlaceholder": "(مثل: الإنجليزية، العربية، ...)",
+    "subjectsTaughtPlaceholder": "مثل: الرياضيات، العلوم، إلخ",
+    "AddressPlaceholder": "عنوانك"
+  },
+  "studentForm": {
+    "nameLabel": "الاسم",
+    "emailLabel": "البريد الإلكتروني",
+    "phoneNumberLabel": "رقم الهاتف",
+    "countryLabel": "البلد",
+    "ageLabel": "العمر",
+    "languagesSpokenLabel": "اللغة/اللغات المُتحدث بها",
+    "submitButton": "إرسال",
+    "fullNamePlaceholder": "الاسم الكامل الخاص بك",
+    "emailPlaceholder": "بريدك الإلكتروني",
+    "phoneNumberPlaceholder": "رقم هاتفك",
+    "countryPlaceholder": "بلدك",
+    "agePlaceholder": "عمرك",
+    "languagesSpokenPlaceholder": "أدخل اللغات (مثل: الإنجليزية، العربية، ...)"
+  }
+}

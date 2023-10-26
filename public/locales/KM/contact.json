@@ -1,0 +1,51 @@
+{
+  "titles": {
+    "mainTitle": "Kontakte Nou",
+    "teacherFormTitle": "Bienveni Profesè",
+    "studentFormTitle": "Bienveni Élev"
+  },
+  "buttons": {
+    "teacherButton": "Eski ou enn Profesè?",
+    "studentButton": "Eski ou enn Élev?",
+    "loadingText": "loding..."
+  },
+  "messages": {
+    "submissionMessage": "Zot lavi finn soumet pou revizyon"
+  },
+  "teacherForm": {
+    "nameLabel": "Non",
+    "emailLabel": "Imel",
+    "phoneNumberLabel": "Nimero Tel (loptiyon)",
+    "countryLabel": "Pey",
+    "languagesSpokenLabel": "Langaz koté ou kozé",
+    "subjectsTaughtLabel": "Sibjet ki ou diriz?",
+    "addressLabel": "Adrès",
+    "uploadCvLabel": "Chareze CV",
+    "cvUploadButtonText": "Soumet",
+    "fullNamePlaceholder": "Dilo non ou",
+    "emailPlaceholder": "Dilo imel ou",
+    "phoneNumberPlaceholder": "Dilo nimero telefon ou",
+    "countryPlaceholder": "Dilo pey ou",
+    "languagesSpokenPlaceholder": "(par exemple, Anglè, Arab,...)",
+    "subjectsTaughtPlaceholder": "par exemple, Matematik, Syans, etc.",
+    "addressPlaceholder": "Dilo adrès ou"
+  },
+  "studentForm": {
+    "nameLabel": "Non",
+    "emailLabel": "Imel",
+    "phoneNumberLabel": "Nimero Tel (loptiyon)",
+    "countryLabel": "Pey",
+    "languagesSpokenLabel": "Langaz koté ou kozé",
+    "subjectsTaughtLabel": "Sibjet ki ou diriz?",
+    "addressLabel": "Adrès",
+    "uploadCvLabel": "Chareze CV",
+    "cvUploadButtonText": "Soumet",
+    "fullNamePlaceholder": "Dilo non ou",
+    "emailPlaceholder": "Dilo imel ou",
+    "phoneNumberPlaceholder": "Dilo nimero telefon ou",
+    "countryPlaceholder": "Dilo pey ou",
+    "languagesSpokenPlaceholder": "(par exemple, Anglè, Arab,...)",
+    "subjectsTaughtPlaceholder": "par exemple, Matematik, Syans, etc.",
+    "addressPlaceholder": "Dilo adrès ou"
+  }
+}
