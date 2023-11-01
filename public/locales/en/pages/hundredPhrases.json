@@ -1,0 +1,204 @@
+{
+  "headerTitle": "100 basic Phrases to learn before visiting a foreign country",
+  "phrases": [
+    {
+      "title": "Greetings",
+      "img": "/images/hundredPhrases/greetings.webp",
+      "alt": "Greetings Image",
+      "phrases": [
+        "Hi! / Hello.",
+        "Good morning.",
+        "Good afternoon.",
+        {
+          "subtitle": "Asking questions",
+          "phrases": ["How are you?"]
+        },
+        {
+          "subtitle": "Reply",
+          "phrases": [
+            "Fine, thanks.",
+            "Okay/ Ok.",
+            "And you?",
+            "Good / more or less."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Goodbyes",
+      "img": "/images/hundredPhrases/goodBuy.webp",
+      "alt": "Goodbyes Image",
+      "phrases": ["Bye.", "Goodbye.", "See you later.", "Good night."]
+    },
+    {
+      "title": "Apologize",
+      "img": "/images/hundredPhrases/Apologize.webp",
+      "alt": "Apologize Image",
+      "phrases": ["Excuse me.", "I'm sorry."]
+    },
+    {
+      "title": "Asking for help and answers",
+      "img": "/images/hundredPhrases/Asking for help.webp",
+      "alt": "Asking for Help Image",
+      "phrases": [
+        "Where is the immigration office/ police station / Travel agency?",
+        "It is ……….in the main square/ near the market / on the forth floor.",
+        "What does the word “impeccable” mean?",
+        "Exemplary, flawless."
+      ]
+    },
+    {
+      "title": "Market",
+      "img": "/images/hundredPhrases/market.webp",
+      "alt": "Market Image",
+      "phrases": [
+        "What are these?",
+        "They are tomatoes.",
+        "How much is it?",
+        "It is 1 (one) pound per kilo.",
+        "How do you say ¨cabbage¨ in Spanish/ Arabic/ Quechua, etc. etc.?",
+        "It´s called “col” in Spanish.",
+        "Could you speak more slowly please?",
+        "Of course!",
+        "Do you understand?",
+        "I don´t understand.",
+        "Do you speak Quechua/ Spanish/ French?",
+        "I speak ……………….."
+      ]
+    },
+    {
+      "title": "Important daily expressions",
+      "img": "/images/hundredPhrases/daily expressions.webp",
+      "alt": "Daily Expressions Image",
+      "phrases": [
+        "Sure.",
+        "Yes",
+        "No.",
+        "I don´t know.",
+        "Please.",
+        "Thank you.",
+        "You´re welcome.",
+        "No problem.",
+        "Ok; all right."
+      ]
+    },
+    {
+      "title": "Introducing and being introduced.",
+      "img": "/images/hundredPhrases/introducing.webp",
+      "alt": "Introducing Image",
+      "phrases": [
+        "This is Ms. Arletta.",
+        "I´d like you (informal) to meet some of my friends.",
+        "Nice to meet you.",
+        "My pleasure.",
+        "Do you (formal) know Maria?",
+        "How do you do.",
+        "I´m Angelo.",
+        "What´s your name?",
+        "My name is Angelo."
+      ]
+    },
+    {
+      "title": "Talking about your country of origin",
+      "img": "/images/hundredPhrases/talking about country.webp",
+      "alt": "Talking about Country Image",
+      "phrases": [
+        "Where are you from?",
+        "I´m from Peru/ Egypt/ Mauritius/ Brazil/ etc.",
+        "Are you Chinese?",
+        "Yes, I am.",
+        "No, I´m Peruvian/Egyptian/Mauritian/Brazilian/ etc."
+      ]
+    },
+    {
+      "title": "Telling someone how long you´re staying.",
+      "phrases": [
+        "How long are you staying?",
+        "Two weeks.",
+        "Just a few days.",
+        "One month.",
+        "Some days only."
+      ]
+    },
+    {
+      "title": "Telling how you like a place.",
+      "phrases": [
+        "How do you like it here?",
+        "I love it.",
+        "It´s great.",
+        "Well, not that much."
+      ]
+    },
+    {
+      "title": "Talking about work.",
+      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "alt": "Talking about Work Image",
+      "phrases": [
+        "What do you do?",
+        "I´m a teacher/ engineer/ carpenter/fitter/ doctor/ etc.",
+        "I work with computers.",
+        "I take care of my two kids",
+        "Do you like your job?",
+        "Yes, I do.",
+        "Not that much/ not really…it´s boring.",
+        "It´s all right for now."
+      ]
+    },
+    {
+      "title": "Talking about school.",
+      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "alt": "Talking about School Image",
+      "phrases": [
+        "Are you a student?",
+        "Yes.",
+        "What are you studying?",
+        "I´m studying natural calamities/ law/ medicine.",
+        "Where is your school?",
+        "Not so far from my house.",
+        "Quite near from here.",
+        "Walking distance."
+      ]
+    },
+    {
+      "title": "Talking about leisure activities",
+      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "alt": "Leisure Activities Image",
+      "phrases": [
+        "What do you do for fun?",
+        "I like dancing.",
+        "I love to travel.",
+        "I listen to music.",
+        "What kind of music do you like?",
+        "I like almost all music.",
+        "I´m into jazz.",
+        "How about you?",
+        "Do you like sports?",
+        "Yes, I do.",
+        "No, I don´t I like to play tennis/ volleyball/ ping pong/ football/ etc."
+      ]
+    },
+    {
+      "title": "Making friends/ small talks.",
+      "img": "/images/hundredPhrases/makingFriends.webp",
+      "alt": "Making Friends Image",
+      "phrases": [
+        "Are you thirsty?",
+        "What would you like to drink?",
+        "Would you like something to drink?",
+        "No, but I´m hungry.",
+        "I´d like a beer, please.",
+        "A cup of coffee, please.",
+        "How was the weather yesterday?",
+        "Not very different from today/ it was very sunny yesterday/ It has been raining all day/",
+        {
+          "subtitle": "Taking a taxi",
+          "phrases": [
+            "Is this taxi free?",
+            "Yes, where do you want to go?",
+            "Hotel Down Town"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "headerTitle": "100 Frases básicas para aprender antes de visitar un país ",
+  "phrases": [
+    {
+      "title": "Saludos",
+      "img": "/images/hundredPhrases/greetings.webp",
+      "alt": "Imagen de Saludos",
+      "phrases": [
+        "¡Hola!",
+        "Buenos días.",
+        "Buenas tardes.",
+        {
+          "subtitle": "Preguntando preguntas",
+          "phrases": ["¿Cómo estás?"]
+        },
+        {
+          "subtitle": "Respuesta",
+          "phrases": [
+            "Bien, gracias.",
+            "Está bien.",
+            "¿Y tú?",
+            "Bien / más o menos."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Despedidas",
+      "img": "/images/hundredPhrases/goodBuy.webp",
+      "alt": "Imagen de Despedidas",
+      "phrases": ["Adiós.", "Hasta luego.", "Buenas noches."]
+    },
+    {
+      "title": "Disculparse",
+      "img": "/images/hundredPhrases/Apologize.webp",
+      "alt": "Imagen de Disculparse",
+      "phrases": ["Disculpa.", "Lo siento."]
+    },
+    {
+      "title": "Pedir ayuda y respuestas",
+      "img": "/images/hundredPhrases/Asking for help.webp",
+      "alt": "Imagen de Pedir Ayuda",
+      "phrases": [
+        "¿Dónde está la oficina de inmigración / comisaría / agencia de viajes?",
+        "Está en la plaza principal / cerca del mercado / en el cuarto piso.",
+        "¿Qué significa la palabra 'impecable'?",
+        "Ejemplar, sin defectos."
+      ]
+    },
+    {
+      "title": "Mercado",
+      "img": "/images/hundredPhrases/market.webp",
+      "alt": "Imagen de Mercado",
+      "phrases": [
+        "¿Qué son estos?",
+        "Son tomates.",
+        "¿Cuánto cuesta?",
+        "Cuesta 1 (uno) libra por kilo.",
+        "¿Cómo se dice 'repollo' en español / árabe / quechua, etc.?",
+        "Se llama 'col' en español.",
+        "¿Puedes hablar más despacio, por favor?",
+        "¡Por supuesto!",
+        "¿Entiendes?",
+        "No entiendo.",
+        "¿Hablas quechua / español / francés?",
+        "Hablo ... "
+      ]
+    },
+    {
+      "title": "Expresiones diarias importantes",
+      "img": "/images/hundredPhrases/daily expressions.webp",
+      "alt": "Imagen de Expresiones Diarias",
+      "phrases": [
+        "Claro.",
+        "Sí",
+        "No.",
+        "No sé.",
+        "Por favor.",
+        "Gracias.",
+        "De nada.",
+        "No hay problema.",
+        "Bien; está bien."
+      ]
+    },
+    {
+      "title": "Presentación y ser presentado",
+      "img": "/images/hundredPhrases/introducing.webp",
+      "alt": "Imagen de Presentación",
+      "phrases": [
+        "Esta es la señorita Arletta.",
+        "Me gustaría que conozcas a algunos de mis amigos.",
+        "Encantado de conocerte.",
+        "Es un placer.",
+        "¿Conoces a María?",
+        "¿Cómo estás?",
+        "Soy Angelo.",
+        "¿Cuál es tu nombre?",
+        "Mi nombre es Angelo."
+      ]
+    },
+    {
+      "title": "Hablando sobre tu país de origen",
+      "img": "/images/hundredPhrases/talking about country.webp",
+      "alt": "Imagen de País de Origen",
+      "phrases": [
+        "¿De dónde eres?",
+        "Soy de Perú / Egipto / Mauricio / Brasil / etc.",
+        "¿Eres chino?",
+        "Sí, lo soy.",
+        "No, soy peruano / egipcio / mauriciano / brasileño / etc."
+      ]
+    },
+    {
+      "title": "Decir cuánto tiempo te quedarás",
+      "phrases": [
+        "¿Cuánto tiempo te quedarás?",
+        "Dos semanas.",
+        "Solo unos días.",
+        "Un mes.",
+        "Solo algunos días."
+      ]
+    },
+    {
+      "title": "Decir si te gusta un lugar",
+      "phrases": [
+        "¿Qué te parece este lugar?",
+        "Me encanta.",
+        "Es genial.",
+        "Bueno, no tanto."
+      ]
+    },
+    {
+      "title": "Hablando sobre el trabajo",
+      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "alt": "Imagen de Trabajo",
+      "phrases": [
+        "¿A qué te dedicas?",
+        "Soy profesor / ingeniero / carpintero / técnico / médico / etc.",
+        "Trabajo con computadoras.",
+        "Cuido de mis dos hijos.",
+        "¿Te gusta tu trabajo?",
+        "Sí, me gusta.",
+        "No mucho / no realmente... es aburrido.",
+        "Está bien por ahora."
+      ]
+    },
+    {
+      "title": "Hablando sobre la escuela",
+      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "alt": "Imagen de Escuela",
+      "phrases": [
+        "¿Eres estudiante?",
+        "Sí.",
+        "¿Qué estás estudiando?",
+        "Estoy estudiando catástrofes naturales / derecho / medicina.",
+        "¿Dónde está tu escuela?",
+        "No está lejos de mi casa.",
+        "Bastante cerca de aquí.",
+        "A poca distancia a pie."
+      ]
+    },
+    {
+      "title": "Hablando sobre actividades de ocio",
+      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "alt": "Imagen de Actividades de Ocio",
+      "phrases": [
+        "¿Qué haces por diversión?",
+        "Me gusta bailar.",
+        "Me encanta viajar.",
+        "Escucho música.",
+        "¿Qué tipo de música te gusta?",
+        "Me gusta casi toda la música.",
+        "Me gusta el jazz.",
+        "¿Y tú?",
+        "¿Te gustan los deportes?",
+        "Sí, me gustan.",
+        "No, no me gustan; prefiero jugar tenis / voleibol / ping pong / fútbol / etc."
+      ]
+    },
+    {
+      "title": "Haciendo amigos / conversaciones informales",
+      "img": "/images/hundredPhrases/makingFriends.webp",
+      "alt": "Imagen de Haciendo Amigos",
+      "phrases": [
+        "¿Tienes sed?",
+        "¿Qué te gustaría beber?",
+        "¿Te gustaría algo para beber?",
+        "No, pero tengo hambre.",
+        "Me gustaría una cerveza, por favor.",
+        "Una taza de café, por favor.",
+        "¿Cómo estuvo el clima ayer?",
+        "No muy diferente de hoy / ayer hizo mucho sol / ha estado lloviendo todo el día /.",
+        {
+          "subtitle": "Tomar un taxi",
+          "phrases": [
+            "¿Este taxi está libre?",
+            "Sí, ¿a dónde quieres ir?",
+            "Hotel Down Town"
+          ]
+        }
+      ]
+    }
+  ]
+}

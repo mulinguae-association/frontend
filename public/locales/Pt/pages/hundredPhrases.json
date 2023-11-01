@@ -1,0 +1,204 @@
+{
+  "headerTitle": "100 Frases básicas para aprender antes de visitar um país estrangeiro.",
+  "phrases": [
+    {
+      "title": "Saudações",
+      "img": "/images/hundredPhrases/greetings.webp",
+      "alt": "Imagem de Saudações",
+      "phrases": [
+        "Oi! / Olá.",
+        "Bom dia.",
+        "Boa tarde.",
+        {
+          "subtitle": "Fazendo Perguntas",
+          "phrases": ["Como você está?"]
+        },
+        {
+          "subtitle": "Resposta",
+          "phrases": [
+            "Bem, obrigado.",
+            "Ok.",
+            "E você?",
+            "Bem / mais ou menos."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Despedidas",
+      "img": "/images/hundredPhrases/goodBuy.webp",
+      "alt": "Imagem de Despedidas",
+      "phrases": ["Tchau.", "Adeus.", "Até logo.", "Boa noite."]
+    },
+    {
+      "title": "Pedir Desculpas",
+      "img": "/images/hundredPhrases/Apologize.webp",
+      "alt": "Imagem de Pedir Desculpas",
+      "phrases": ["Com licença.", "Desculpe."]
+    },
+    {
+      "title": "Pedir Ajuda e Respostas",
+      "img": "/images/hundredPhrases/Asking for help.webp",
+      "alt": "Imagem de Pedir Ajuda",
+      "phrases": [
+        "Onde fica o escritório de imigração / delegacia de polícia / agência de viagens?",
+        "Fica ……….na praça principal / perto do mercado / no quarto andar.",
+        "O que significa a palavra “impecável”?",
+        "Exemplar, sem falhas."
+      ]
+    },
+    {
+      "title": "No Mercado",
+      "img": "/images/hundredPhrases/market.webp",
+      "alt": "Imagem de Mercado",
+      "phrases": [
+        "O que são essas coisas?",
+        "São tomates.",
+        "Quanto custa?",
+        "É 1 (um) euro por quilo.",
+        "Como se diz “repolho” em espanhol / árabe / quéchua, etc.?",
+        "Em espanhol, é chamado de “col”.",
+        "Você poderia falar mais devagar, por favor?",
+        "Claro!",
+        "Você entende?",
+        "Eu não entendo.",
+        "Você fala quéchua / espanhol / francês?",
+        "Eu falo ……………….."
+      ]
+    },
+    {
+      "title": "Expressões Diárias Importantes",
+      "img": "/images/hundredPhrases/daily expressions.webp",
+      "alt": "Imagem de Expressões Diárias",
+      "phrases": [
+        "Claro.",
+        "Sim",
+        "Não.",
+        "Eu não sei.",
+        "Por favor.",
+        "Obrigado.",
+        "De nada.",
+        "Sem problema.",
+        "Ok; tudo bem."
+      ]
+    },
+    {
+      "title": "Apresentação e Ser Apresentado",
+      "img": "/images/hundredPhrases/introducing.webp",
+      "alt": "Imagem de Apresentação",
+      "phrases": [
+        "Esta é a Sra. Arletta.",
+        "Eu gostaria que você (informal) conhecesse alguns dos meus amigos.",
+        "Prazer em conhecê-lo.",
+        "Meu prazer.",
+        "Você conhece a Maria (formal)?",
+        "Como vai.",
+        "Eu sou o Angelo.",
+        "Qual é o seu nome?",
+        "Meu nome é Angelo."
+      ]
+    },
+    {
+      "title": "Falando sobre seu País de Origem",
+      "img": "/images/hundredPhrases/talking about country.webp",
+      "alt": "Imagem de Conversa sobre o País de Origem",
+      "phrases": [
+        "De onde você é?",
+        "Eu sou do Peru / Egito / Maurício / Brasil / etc.",
+        "Você é chinês (formal)?",
+        "Sim, sou.",
+        "Não, sou peruano / egípcio / mauriciano / brasileiro / etc."
+      ]
+    },
+    {
+      "title": "Dizendo por Quanto Tempo Você Vai Ficar",
+      "phrases": [
+        "Por quanto tempo você vai ficar?",
+        "Duas semanas.",
+        "Apenas alguns dias.",
+        "Um mês.",
+        "Apenas alguns dias."
+      ]
+    },
+    {
+      "title": "Dizendo se Você Gosta do Lugar",
+      "phrases": [
+        "Como você gosta daqui?",
+        "Eu adoro.",
+        "É ótimo.",
+        "Bem, não muito."
+      ]
+    },
+    {
+      "title": "Falando sobre o Trabalho",
+      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "alt": "Imagem de Conversa sobre o Trabalho",
+      "phrases": [
+        "O que você faz?",
+        "Eu sou professor / engenheiro / carpinteiro / técnico / médico / etc.",
+        "Eu trabalho com computadores.",
+        "Eu cuido dos meus dois filhos.",
+        "Você gosta do seu trabalho?",
+        "Sim, gosto.",
+        "Não muito / não, é chato.",
+        "Está bom por enquanto."
+      ]
+    },
+    {
+      "title": "Falando sobre a Escola",
+      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "alt": "Imagem de Conversa sobre a Escola",
+      "phrases": [
+        "Você é estudante?",
+        "Sim.",
+        "O que você está estudando?",
+        "Estou estudando desastres naturais / direito / medicina.",
+        "Onde fica a sua escola?",
+        "Não muito longe da minha casa.",
+        "Bem perto daqui.",
+        "A uma curta distância a pé."
+      ]
+    },
+    {
+      "title": "Falando sobre Atividades de Lazer",
+      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "alt": "Imagem de Atividades de Lazer",
+      "phrases": [
+        "O que você faz para se divertir?",
+        "Gosto de dançar.",
+        "Adoro viajar.",
+        "Eu ouço música.",
+        "Que tipo de música você gosta?",
+        "Gosto de quase todos os tipos de música.",
+        "Gosto de jazz.",
+        "E você?",
+        "Gosta de esportes?",
+        "Sim, gosto.",
+        "Não, eu não gosto. Prefiro jogar tênis / vôlei / pingue-pongue / futebol, etc."
+      ]
+    },
+    {
+      "title": "Fazendo Amigos / Pequenas Conversas",
+      "img": "/images/hundredPhrases/makingFriends.webp",
+      "alt": "Imagem de Fazendo Amigos",
+      "phrases": [
+        "Você está com sede?",
+        "O que você gostaria de beber?",
+        "Gostaria de beber alguma coisa?",
+        "Não, mas estou com fome.",
+        "Eu gostaria de uma cerveja, por favor.",
+        "Uma xícara de café, por favor.",
+        "Como estava o tempo ontem?",
+        "Não muito diferente de hoje / estava muito ensolarado ontem / choveu o dia todo /",
+        {
+          "subtitle": "Pegando um Táxi",
+          "phrases": [
+            "Esse táxi está livre?",
+            "Sim, para onde você quer ir?",
+            "Hotel no Centro."
+          ]
+        }
+      ]
+    }
+  ]
+}

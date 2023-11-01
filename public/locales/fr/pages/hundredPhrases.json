@@ -1,0 +1,204 @@
+{
+  "headerTitle": "100 Phrases de base à apprendre avant de visiter un pays étranger.",
+  "phrases": [
+    {
+      "title": "Salutations",
+      "img": "/images/hundredPhrases/greetings.webp",
+      "alt": "Image de salutations",
+      "phrases": [
+        "Salut ! / Bonjour.",
+        "Bonjour.",
+        "Bon après-midi.",
+        {
+          "subtitle": "Poser des questions",
+          "phrases": ["Comment ça va ?"]
+        },
+        {
+          "subtitle": "Réponse",
+          "phrases": [
+            "Bien, merci.",
+            "D'accord.",
+            "Et toi ?",
+            "Bien / plus ou moins."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Au revoir",
+      "img": "/images/hundredPhrases/goodBuy.webp",
+      "alt": "Image d'adieux",
+      "phrases": ["Au revoir.", "Goodbye.", "À plus tard.", "Bonne nuit."]
+    },
+    {
+      "title": "S'excuser",
+      "img": "/images/hundredPhrases/Apologize.webp",
+      "alt": "Image d'excuses",
+      "phrases": ["Excusez-moi.", "Je suis désolé."]
+    },
+    {
+      "title": "Demander de l'aide et des réponses",
+      "img": "/images/hundredPhrases/Asking for help.webp",
+      "alt": "Image de demande d'aide",
+      "phrases": [
+        "Où se trouve le bureau de l'immigration / le commissariat de police / l'agence de voyage ?",
+        "Il est ……….sur la place principale / près du marché / au quatrième étage.",
+        "Que signifie le mot “impeccable” ?",
+        "Exemplaire, sans défaut."
+      ]
+    },
+    {
+      "title": "Au marché",
+      "img": "/images/hundredPhrases/market.webp",
+      "alt": "Image de marché",
+      "phrases": [
+        "Qu'est-ce que c'est ?",
+        "Ce sont des tomates.",
+        "Combien ça coûte ?",
+        "C'est 1 (un) euro par kilo.",
+        "Comment dit-on le mot 'chou' en espagnol / arabe / quechua, etc. ?",
+        "On l'appelle “col” en espagnol.",
+        "Pourriez-vous parler plus lentement, s'il vous plaît ?",
+        "Bien sûr !",
+        "Comprenez-vous ?",
+        "Je ne comprends pas.",
+        "Parlez-vous quechua / espagnol / français ?",
+        "Je parle ……………….."
+      ]
+    },
+    {
+      "title": "Expressions quotidiennes importantes",
+      "img": "/images/hundredPhrases/daily expressions.webp",
+      "alt": "Image des expressions quotidiennes",
+      "phrases": [
+        "Bien sûr.",
+        "Oui.",
+        "Non.",
+        "Je ne sais pas.",
+        "S'il vous plaît.",
+        "Merci.",
+        "De rien.",
+        "Pas de problème.",
+        "D'accord ; très bien."
+      ]
+    },
+    {
+      "title": "Présentation et être présenté.",
+      "img": "/images/hundredPhrases/introducing.webp",
+      "alt": "Image de présentation",
+      "phrases": [
+        "Voici Mme Arletta.",
+        "Je vous présente quelques-uns de mes amis.",
+        "Enchanté(e).",
+        "Avec plaisir.",
+        "Connaissez-vous Maria (formel) ?",
+        "Comment ça va.",
+        "Je suis Angelo.",
+        "Comment tu t'appelles ?",
+        "Je m'appelle Angelo."
+      ]
+    },
+    {
+      "title": "Parler de votre pays d'origine",
+      "img": "/images/hundredPhrases/talking about country.webp",
+      "alt": "Image de discussion sur le pays d'origine",
+      "phrases": [
+        "D'où venez-vous ?",
+        "Je viens du Pérou / d'Égypte / de l'île Maurice / du Brésil / etc.",
+        "Êtes-vous chinois (formel) ?",
+        "Oui, je le suis.",
+        "Non, je suis péruvien / égyptien / mauricien / brésilien / etc."
+      ]
+    },
+    {
+      "title": "Dire combien de temps vous restez.",
+      "phrases": [
+        "Combien de temps restez-vous ?",
+        "Deux semaines.",
+        "Juste quelques jours.",
+        "Un mois.",
+        "Seulement quelques jours."
+      ]
+    },
+    {
+      "title": "Dire si vous aimez l'endroit.",
+      "phrases": [
+        "Comment trouves-tu cet endroit ?",
+        "J'adore.",
+        "C'est génial.",
+        "Eh bien, pas tellement."
+      ]
+    },
+    {
+      "title": "Parler de votre travail.",
+      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "alt": "Image de discussion sur le travail",
+      "phrases": [
+        "Que faites-vous ?",
+        "Je suis enseignant / ingénieur / charpentier / ajusteur / médecin / etc.",
+        "Je travaille avec des ordinateurs.",
+        "Je m'occupe de mes deux enfants.",
+        "Aimez-vous votre travail ?",
+        "Oui, j'aime.",
+        "Pas tellement / pas vraiment... c'est ennuyeux.",
+        "Ça va pour le moment."
+      ]
+    },
+    {
+      "title": "Parler de l'école.",
+      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "alt": "Image de discussion sur l'école",
+      "phrases": [
+        "Êtes-vous étudiant ?",
+        "Oui.",
+        "Qu'étudiez-vous ?",
+        "J'étudie les catastrophes naturelles / le droit / la médecine.",
+        "Où se trouve votre école ?",
+        "Pas très loin de chez moi.",
+        "Assez près d'ici.",
+        "À distance de marche."
+      ]
+    },
+    {
+      "title": "Parler des loisirs",
+      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "alt": "Image des loisirs",
+      "phrases": [
+        "Que faites-vous pour vous amuser ?",
+        "J'aime danser.",
+        "J'adore voyager.",
+        "J'écoute de la musique.",
+        "Quel genre de musique aimez-vous ?",
+        "J'aime presque tous les types de musique.",
+        "J'aime le jazz.",
+        "Et vous ?",
+        "Aimez-vous le sport ?",
+        "Oui, j'aime.",
+        "Non, je n'aime pas. Je préfère jouer au tennis / au volley-ball / au ping-pong / au football, etc."
+      ]
+    },
+    {
+      "title": "Se faire des amis / petites conversations",
+      "img": "/images/hundredPhrases/makingFriends.webp",
+      "alt": "Image pour se faire des amis",
+      "phrases": [
+        "Avez-vous soif ?",
+        "Qu'aimeriez-vous boire ?",
+        "Voulez-vous quelque chose à boire ?",
+        "Non, mais j'ai faim.",
+        "Je voudrais une bière, s'il vous plaît.",
+        "Une tasse de café, s'il vous plaît.",
+        "Comment était le temps hier ?",
+        "Pas très différent d'aujourd'hui / il faisait très ensoleillé hier / il pleut toute la journée /",
+        {
+          "subtitle": "Prendre un taxi",
+          "phrases": [
+            "Ce taxi est-il libre ?",
+            "Oui, où voulez-vous aller ?",
+            "Hôtel en centre-ville."
+          ]
+        }
+      ]
+    }
+  ]
+}

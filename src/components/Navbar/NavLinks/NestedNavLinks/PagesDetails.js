@@ -11,6 +11,9 @@ const Students = React.lazy(() =>
 const Blogs = React.lazy(() =>
   import("../../../pages/Blogs")
 );
+const HundredPhrases = React.lazy(() =>
+  import("../../../pages/hundredPhrases")
+);
 const Linguicide = React.lazy(() =>
   import("../../../pages/Linguicide")
 );
@@ -49,6 +52,9 @@ const PagesDetails = () => {
     case 'Blogs':
       pageContent = <Blogs />;
       renderFooter = false
+      break;
+    case '100-basic-phrases':
+      pageContent = <HundredPhrases />;
       break;
     default:
       pageContent = <NotFound />;
