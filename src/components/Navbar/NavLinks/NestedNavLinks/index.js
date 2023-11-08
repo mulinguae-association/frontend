@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import "./NestedNavLinks.scss"
 import { useTranslation } from 'react-i18next'
+// import i18next from 'i18next';
 const NestedNavLinks = (props) => {
-  const { t } = useTranslation("pages/pagesLinks")
+  const { t, i18n: { language: lang } } = useTranslation("pages/pagesLinks")
   const NestedLinksRef = useRef(null)
   const handleClickOutside = (event) => {
     if (NestedLinksRef.current &&
@@ -26,7 +27,7 @@ const NestedNavLinks = (props) => {
       <ul className='nestedNavContainer'>
         <li>
           <NavLink
-            to="/pages/Multilingualism"
+            to={`/${lang}/pages/Multilingualism`}
             activeclassname="active"
           >
             {t('Multilingualism')}
@@ -34,7 +35,7 @@ const NestedNavLinks = (props) => {
         </li>
         <li>
           <NavLink
-            to="/pages/Linguicide"
+            to={`/${lang}/pages/Linguicide`}
             activeclassname="active"
           >
             {t('Linguicide')}
@@ -42,7 +43,7 @@ const NestedNavLinks = (props) => {
         </li>
         <li>
           <NavLink
-            to="/pages/Teachers"
+            to={`/${lang}/pages/Teachers`}
             activeclassname="active"
           >
             {t('Teachers')}
@@ -50,7 +51,7 @@ const NestedNavLinks = (props) => {
         </li>
         <li>
           <Link
-            to="/pages/Teachers#meetOurTeachers"
+            to={`/${lang}/pages/Teachers#meetOurTeachers`}
             activeclassname="active"
           >
             {t("Meet our teachers")}
@@ -58,7 +59,7 @@ const NestedNavLinks = (props) => {
         </li>
         <li>
           <NavLink
-            to="/pages/Students"
+            to={`/${lang}/pages/Students`}
             activeclassname="active"
           >
             {t('Students')}
@@ -66,7 +67,7 @@ const NestedNavLinks = (props) => {
         </li>
         <li>
           <NavLink
-            to="/pages/Blogs"
+            to={`/${lang}/pages/Blogs`}
             activeclassname="active"
           >
             {t('Blogs')}
@@ -74,7 +75,7 @@ const NestedNavLinks = (props) => {
         </li>
         <li>
           <NavLink
-            to="/pages/100-basic-phrases/"
+            to={`/${lang}/pages/100-basic-phrases/`}
             activeclassname="active"
           >
             {t("100 basic phrases")}

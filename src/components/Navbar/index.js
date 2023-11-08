@@ -9,7 +9,7 @@ import Sidebar from "./Sidebar";
 import NavLinks from "./NavLinks";
 
 const Navbar = () => {
-	const { t } = useTranslation("home", { ns: "home" });
+	const { t, i18n: { language: lang } } = useTranslation("home", { ns: "home" });
 	const navigate = useNavigate();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const navRef = useRef();
@@ -44,7 +44,7 @@ const Navbar = () => {
 		<nav className={`navbar ${menuOpen ? "fixed" : ""}`}>
 			<div className='container'>
 				<div className='content' ref={contentRef}>
-					<div className='logo' ref={logoRef} onClick={() => navigate("/")}>
+					<div className='logo' ref={logoRef} onClick={() => navigate(`/${lang}/`)}>
 						<picture className='img_container'>
 							<source
 								type='image/webp'

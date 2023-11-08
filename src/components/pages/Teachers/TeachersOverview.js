@@ -10,6 +10,7 @@ import { AppContext } from '../../../contexts/AppContext';
 import EditTeacherForm from '../../Dashboard/EditTeacherForm';
 import { notifyError, notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
+import i18next from 'i18next';
 
 const TeachersOverview = ({ t }) => {
   const { teachers, setTeachers, getTeachers } = useContext(AppContext)
@@ -96,7 +97,7 @@ const TeachersOverview = ({ t }) => {
                 </>
                 : <EditTeacherForm teacher={editingTeacher} onUpdate={handleUpdateTeacher} />
               }
-              <Link className='teacher_link' to={`/pages/Teachers/${teacher.firstName}${teacher._id}`}>{t("sec6_link1")}</Link>
+              <Link className='teacher_link' to={`/${i18next.language}/pages/Teachers/${teacher.firstName}${teacher._id}`}>{t("sec6_link1")}</Link>
               {isAuth && (userData.role === "admin") &&
                 <>
                   <button className='deleteBtn' onClick={() => handleDeleteTeacher(teacher._id)}>x</button>

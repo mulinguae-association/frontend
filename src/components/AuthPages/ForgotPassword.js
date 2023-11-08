@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaGlobe } from "react-icons/fa";
 import { useGlobal } from '../../contexts/AppContext';
 import InputField from '../HelperComponents/InputField'; // Import your InputField component
+import i18next from 'i18next';
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -63,7 +64,7 @@ function ForgotPassword() {
           <span className='earth_icon'><FaGlobe /></span>
         </div>
       </div>
-      <p>Don't have an account? <Link to="/register">Sign up</Link></p>
+      <p>Don't have an account? <Link to={`/${i18next.language}/register`}>Sign up</Link></p>
     </main>
   );
 }

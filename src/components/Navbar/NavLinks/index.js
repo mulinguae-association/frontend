@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import NestedNavLinks from './NestedNavLinks';
 
 const NavLinks = ({ className }) => {
-  const { t } = useTranslation('home', { ns: 'home' });
+  const { t, i18n: { language: lang } } = useTranslation('home', { ns: 'home' });
   const [isCurrElement, setIsCurrElement] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const NavLinks = ({ className }) => {
       <li>
         <NavLink
           exact="true"
-          to="/"
+          to={`/${lang}/`}
           activeclassname="active"
         >
           {t('homeLink')}
@@ -25,7 +25,7 @@ const NavLinks = ({ className }) => {
       </li>
       <li>
         <NavLink
-          to="/about"
+          to={`/${lang}/about`}
           activeclassname="active"
         >
           {t('aboutLink')}
@@ -33,7 +33,7 @@ const NavLinks = ({ className }) => {
       </li>
       <li>
         <NavLink
-          to="/pages"
+          to={`/${lang}/pages`}
           activeclassname="active"
           onClick={handleClick}
         >
@@ -46,7 +46,7 @@ const NavLinks = ({ className }) => {
       </li>
       <li>
         <NavLink
-          to="/courses"
+          to={`/${lang}/courses`}
           activeclassname='active'
         >
           {t('coursesLink')}
@@ -54,7 +54,7 @@ const NavLinks = ({ className }) => {
       </li>
       <li>
         <NavLink
-          to="/contact"
+          to={`/${lang}/contact`}
           activeclassname='active'
         >
           {t('contactLink')}

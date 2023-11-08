@@ -5,6 +5,7 @@ import { submitLogout } from '../../../utils/auth-api';
 import { notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
 import UserMenu from './UserMenu';
+import i18next from 'i18next';
 
 const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) => {
   const { userData, isAuth, setIsAuth } = useAuth();
@@ -23,7 +24,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
   return (
     <>
       <div className="links button-font">
-        <Link to="/pages/Blogs/Create-new-blog">+ Create A Blog</Link>
+        <Link to={`/${i18next.language}/pages/Blogs/Create-new-blog`}>+ Create A Blog</Link>
         <div>
           <input
             className="search bgSC"
@@ -45,8 +46,8 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
           </div>
         ) :
           <div className="auth_Links">
-            <Link to="/login">Login</Link>
-            <Link to="/Register">Register</Link>
+            <Link to={`/${i18next.language}/login`}>Login</Link>
+            <Link to={`/${i18next.language}/Register`}>Register</Link>
           </div>
         }
       </div>

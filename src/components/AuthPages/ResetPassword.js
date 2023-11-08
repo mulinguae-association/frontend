@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FaGlobe } from 'react-icons/fa';
 import { notifyError } from '../Notify';
+import i18next from 'i18next';
 
 function ResetPassword() {
   const [password, setPassword] = useState('');
@@ -31,7 +32,7 @@ function ResetPassword() {
       })
       if (res.status === 200) {
         alert("successfuly reset password")
-        navigate("/login")
+        navigate(`/${i18next.language}/login`)
       } else {
         notifyError(res.message)
       }

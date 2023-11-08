@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { FaGlobe } from 'react-icons/fa';
 import { useGlobal } from '../../contexts/AppContext';
 import InputField from '../HelperComponents/InputField'
+import i18next from 'i18next';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -42,7 +43,7 @@ function Login() {
           password: '',
         });
         notifySuccess("Login successful");
-        navigate("/pages/Blogs");
+        navigate(`/${i18next.language}/pages/Blogs`);
         const response = await axios.get('/api/auth/profile');
         setUserData(response.data);
       }
@@ -82,9 +83,9 @@ function Login() {
                 required
               />
             </div>
-            <Link to="/forgot-password">Forgot your Password</Link>
+            <Link to={`/${i18next.language}/forgot-password`}>Forgot your Password</Link>
             <button disabled={isBtnLoading['loginBtn']} type="submit"> {isBtnLoading['loginBtn'] ? "Loading..." : "Login"} </button>
-            <span> Not a member <Link to="/register">Register here!</Link></span>
+            <span> Not a member <Link to={`/${i18next.language}/register`}>Register here!</Link></span>
           </form>
           <span className='earth_icon'><FaGlobe /></span>
         </div>

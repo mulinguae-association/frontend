@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useClickOutside } from '../../../utils/ClickOutside'
 import { useAuth } from '../../../contexts/AuthContext'
+import i18next from 'i18next'
 
 const UserMenu = ({ handleLogout, setShowMenuUser }) => {
   const { isAuth, userData } = useAuth()
@@ -12,11 +13,11 @@ const UserMenu = ({ handleLogout, setShowMenuUser }) => {
   return (
     <div ref={userMenu} className='user_menu'>
       {(isAuth && userData.role === "admin") &&
-        <Link to='/dashboard' className='user-link'>
+        <Link to={`/${i18next.language}/dashboard`} className='user-link'>
           Dashboard
         </Link>
       }
-      <Link to="/user/settings" className='user-link'>
+      <Link to={`/${i18next.language}/user/settings`} className='user-link'>
         Settings
       </Link>
       <button onClick={handleLogout} className='logout-button'>

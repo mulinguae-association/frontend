@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 const customBackend = {
 	loadPath: function (lng, ns) {
@@ -11,10 +12,9 @@ const customBackend = {
 	},
 };
 
-const otherMethods = ["cookie", "localStorage"];
-
 i18n
 	.use(Backend)
+	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
 		fallbackLng: "en",
@@ -23,9 +23,10 @@ i18n
 			escapeValue: false,
 		},
 		detection: {
-			order: ["path", ...otherMethods],
+			order: ["cookie", "navigator"],
 			lookupFromPathIndex: 0,
 			checkWhitelist: true,
+			caches: ["cookie"]
 		},
 		suspense: false,
 		backend: customBackend,

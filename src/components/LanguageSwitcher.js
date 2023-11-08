@@ -6,12 +6,14 @@ import { useCookies } from 'react-cookie';
 import { AppContext } from '../contexts/AppContext';
 import { useContext } from 'react';
 import useDirectionChange from "../utils/useDirectionChange"
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function LanguageSwitcher({ className }) {
   const { i18n } = useTranslation();
   const { isLoading, setIsLoading } = useContext(AppContext);
   const [cookies, setCookie] = useCookies(['selectedLanguage'])
-
+  const navigate = useNavigate();
+  const location = useLocation()
 
   const options = [
     { label: 'English', value: 'En' },
@@ -24,16 +26,24 @@ function LanguageSwitcher({ className }) {
   ];
   const handleSelect = (option) => {
     setIsLoading(true)
-    setCookie('selectedLanguage', option.value); // Save selected language to local storage
-    i18n.changeLanguage(option.value, () => setTimeout(() => setIsLoading(false), 500));
+    setCookie('selectedLanguage', option.value); // Save selected language to cookies
+    i18n.changeLanguage(option.value, () => setTimeout(() => setIsLoading(false), 400));
+    const currPath = window.location.pathname.split("/").slice(2).join("/");
+    navigate(`/${option.value}/${currPath}`);
   };
-  // get language value from local storage
+  // Function to map URL language to option value
+  const mapUrlLanguageToOptionValue = (urlLanguage) => {
+    return options.find((option) => option.value.toLowerCase() === urlLanguage.toLowerCase());
+  };
+
   useEffect(() => {
-    const selectedLanguage = cookies.selectedLanguage;
-    if (selectedLanguage) {
-      i18n.changeLanguage(selectedLanguage);
+    const urlLanguage = location.pathname.split("/")[1];
+    const selectedOption = mapUrlLanguageToOptionValue(urlLanguage);
+    if (selectedOption) {
+      handleSelect(selectedOption);
     }
-  }, [cookies, i18n]);
+  }, []);
+
   useDirectionChange(i18n.language)
   return (
     <>

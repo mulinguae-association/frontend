@@ -4,7 +4,7 @@ import "./Home.scss";
 import { Link } from "react-router-dom";
 import i18n from "../../i18n";
 const Home = ({ imgAnimation }) => {
-	const { t } = useTranslation("home", { ns: "home" });
+	const { t, i18n: { language: lang } } = useTranslation("home", { ns: "home" });
 	const langAr = i18n.language === "Ar"; // check if language is Arabic
 	const langQu = i18n.language === "Qu"; // check if language is Arabic
 	return (
@@ -41,20 +41,20 @@ const Home = ({ imgAnimation }) => {
 							style={langQu ? { textAlign: "initial" } : {}}
 							className='hero_description'>
 							<span>{t("before_des_link")}</span>
-							<Link className='des_link' to='/courses'>
+							<Link className='des_link' to={`/${lang}/courses`}>
 								{t("first_link")}
 							</Link>
 							<span>{t("after_des_link")}</span>
-							<Link className='des_link' to='/pages/Multilingualism'>
+							<Link className='des_link' to={`/${lang}/pages/Multilingualism`}>
 								{t("second_link")}
 							</Link>
 							<span>{t("after_des_link2")}</span>
-							<Link className='des_link' to='/'>
+							<Link className='des_link' to={`/${lang}/`}>
 								{t("third_link")}
 							</Link>
 							<span>{t("last_des_link")}</span>
 						</p>
-						<Link className='hero_btn change_direction' to='/About'>
+						<Link className='hero_btn change_direction' to={`/${lang}/about`}>
 							<div className='btn_container'>
 								<button
 									name='read-more'

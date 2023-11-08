@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router';
 import { FaGlobe } from 'react-icons/fa';
 import { useGlobal } from "../../contexts/AppContext";
 import InputField from '../HelperComponents/InputField'; // Import your InputField component
-
+import i18next from "i18next";
+console.log(i18next.language)
 function Registration() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -52,7 +53,7 @@ function Registration() {
           profileImage: '',
         });
         notifySuccess(res.message + " " + formData.name);
-        navigate("/login");
+        navigate(`${i18next.language}/login}`);
       }
     } catch (error) {
       notifyError(error.message);
