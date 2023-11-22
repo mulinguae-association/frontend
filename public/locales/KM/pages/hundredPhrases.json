@@ -1,200 +1,196 @@
 {
+  "headerTitle": "100 basic Phrases to learn before visiting a foreign country",
   "phrases": [
     {
-      "title": "Greetings",
+      "title": "Kuma Salye",
       "img": "/images/hundredPhrases/greetings.webp",
       "alt": "Greetings Image",
       "phrases": [
-        "Hi! / Hello.",
-        "Good morning.",
-        "Good afternoon.",
+        "Alo/ Ki manier",
+        "Bonzur",
+        "Bonn apremidi",
         {
-          "subtitle": "Asking questions",
-          "phrases": ["How are you?"]
+          "subtitle": "Dimann kesyon",
+          "phrases": ["Ki manier?"]
         },
         {
-          "subtitle": "Reply",
-          "phrases": [
-            "Fine, thanks.",
-            "Okay/ Ok.",
-            "And you?",
-            "Good / more or less."
-          ]
+          "subtitle": "Repons",
+          "phrases": ["Korek, mersi.", "Oke", "E twa?", "Korek/ pli zu mwin"]
         }
       ]
     },
     {
-      "title": "Goodbyes",
+      "title": "Bonzour",
       "img": "/images/hundredPhrases/goodBuy.webp",
       "alt": "Goodbyes Image",
-      "phrases": ["Bye.", "Goodbye.", "See you later.", "Good night."]
+      "phrases": ["Bay.", "O revwar.", "Un zwenn plitar.", "Bonn nwi."]
     },
     {
-      "title": "Apologize",
+      "title": "Dimann ekskiz",
       "img": "/images/hundredPhrases/Apologize.webp",
       "alt": "Apologize Image",
-      "phrases": ["Excuse me.", "I'm sorry."]
+      "phrases": ["Ekskiz mwa", "Pardonn mwa"]
     },
     {
-      "title": "Asking for help and answers",
+      "title": "Dimann kudme e repons",
       "img": "/images/hundredPhrases/Asking for help.webp",
       "alt": "Asking for Help Image",
       "phrases": [
-        "Where is the immigration office/ police station / Travel agency?",
-        "It is ……….in the main square/ near the market / on the forth floor.",
-        "What does the word “impeccable” mean?",
-        "Exemplary, flawless."
+        "Kot ofis imgrasyon / stasyon lapolis/ lazans vwayaz ete?",
+        "Li truv ……………….dan sant vil/ pre avek bazar/ lor katriem letaz.",
+        "Kapv dir mwa ki sa vedir “ inpekab”?",
+        "Ekzanpler, san fot."
       ]
     },
     {
-      "title": "Market",
+      "title": "Bazar",
       "img": "/images/hundredPhrases/market.webp",
       "alt": "Market Image",
       "phrases": [
-        "What are these?",
-        "They are tomatoes.",
-        "How much is it?",
-        "It is 1 (one) pound per kilo.",
-        "How do you say ¨cabbage¨ in Spanish/ Arabic/ Quechua, etc. etc.?",
-        "It´s called “col” in Spanish.",
-        "Could you speak more slowly please?",
-        "Of course!",
-        "Do you understand?",
-        "I don´t understand.",
-        "Do you speak Quechua/ Spanish/ French?",
-        "I speak ……………….."
+        "Ki ete sa ?",
+        "Apel sa pomdamur.",
+        "Ki so pri?",
+        "Li 1 liv (45 rupi) kilo.",
+        "Kuma tradir “ cabbage” an kreol Morisyen.",
+        "Nou apel sa “lisu” an kreol",
+        "Eski ou kapav koz plis lantman sil vu ple.",
+        "Byen sir!",
+        "Ou konpran",
+        "Mo pa konpran",
+        "Eski ou koz Angle/ Espanyol/ Quechwa/ Franse?",
+        "Mo koz ……………….."
       ]
     },
     {
-      "title": "Important daily expressions",
+      "title": "Bann ekspresyon zurnalye",
       "img": "/images/hundredPhrases/daily expressions.webp",
       "alt": "Daily Expressions Image",
       "phrases": [
-        "Sure.",
-        "Yes",
-        "No.",
-        "I don´t know.",
-        "Please.",
-        "Thank you.",
-        "You´re welcome.",
-        "No problem.",
-        "Ok; all right."
+        "Byen sir",
+        "Wi",
+        "Non",
+        "Mo pa kone",
+        "Sil te ple",
+        "Mersi",
+        "Pa dekwa",
+        "Pena problem",
+        "Ok, tu korek"
       ]
     },
     {
-      "title": "Introducing and being introduced.",
+      "title": "Prezansazyon",
       "img": "/images/hundredPhrases/introducing.webp",
       "alt": "Introducing Image",
       "phrases": [
-        "This is Ms. Arletta.",
-        "I´d like you (informal) to meet some of my friends.",
-        "Nice to meet you.",
-        "My pleasure.",
-        "Do you (formal) know Maria?",
-        "How do you do.",
-        "I´m Angelo.",
-        "What´s your name?",
-        "My name is Angelo."
+        "Mo prezant twa/ ou Arletta",
+        "Mo invit twa rankont mo bann kamarad",
+        "Byen kontan",
+        "Enn plezir",
+        "To finn deza zwenn Maria?",
+        "Ki manyer",
+        "Mo apel Anzelo",
+        "Kuma to apele?",
+        "Mo apel Anzelo"
       ]
     },
     {
-      "title": "Talking about your country of origin",
+      "title": "Koz lor to pei dorizinn",
       "img": "/images/hundredPhrases/talking about country.webp",
       "alt": "Talking about Country Image",
       "phrases": [
-        "Where are you from?",
-        "I´m from Peru/ Egypt/ Mauritius/ Brazil/ etc.",
-        "Are you Chinese?",
-        "Yes, I am.",
-        "No, I´m Peruvian/Egyptian/Mauritian/Brazilian/ etc."
+        "Ki pei to sorti?",
+        "Mo pei apel Peru( Lezip/ Moris/ Brezil eksetera.",
+        "To enn Sinwa?",
+        "Wi!",
+        "Non, Mo enn Peruvien/ Ezipsyen/ MOrisyen/ Brezilyen/ eksetera."
       ]
     },
     {
-      "title": "Telling someone how long you´re staying.",
+      "title": "Dir kikenn komye tan to pe reste",
       "phrases": [
-        "How long are you staying?",
-        "Two weeks.",
-        "Just a few days.",
-        "One month.",
-        "Some days only."
+        "Komye tan to pe reste?",
+        "De semen",
+        "Zis detrwa zur",
+        "Enn mwa",
+        "De twa zur Selman"
       ]
     },
     {
-      "title": "Telling how you like a place.",
+      "title": "Exprim to satisfaksyon a enn landrwa",
       "phrases": [
-        "How do you like it here?",
-        "I love it.",
-        "It´s great.",
-        "Well, not that much."
+        "Kuma ou truv sa plas la?",
+        "Mo kontan li",
+        "Li vreman zoli",
+        "Byen, pa boukou"
       ]
     },
     {
-      "title": "Talking about work.",
+      "title": "Koz lor travay",
       "img": "/images/hundredPhrases/talking_about_work.webp",
       "alt": "Talking about Work Image",
       "phrases": [
-        "What do you do?",
-        "I´m a teacher/ engineer/ carpenter/fitter/ doctor/ etc.",
-        "I work with computers.",
-        "I take care of my two kids",
-        "Do you like your job?",
-        "Yes, I do.",
-        "Not that much/ not really…it´s boring.",
-        "It´s all right for now."
+        "Ki to fer dan lavi?",
+        "Mo enn profeser( inzenyer/ sarpantye/ fiter/dokter( eksetera",
+        "Mo travay avek kompwuter",
+        "Mo okip mo de zanfan",
+        "Ou kontan ou travay?",
+        "Wi, mo kontan",
+        "Pa otan/ pa vreman …….li boring",
+        "Li plito korek pu le moman"
       ]
     },
     {
-      "title": "Talking about school.",
+      "title": "Koz lor lekol",
       "img": "/images/hundredPhrases/talking_about_school.webp",
       "alt": "Talking about School Image",
       "phrases": [
-        "Are you a student?",
-        "Yes.",
-        "What are you studying?",
-        "I´m studying natural calamities/ law/ medicine.",
-        "Where is your school?",
-        "Not so far from my house.",
-        "Quite near from here.",
-        "Walking distance."
+        "To enn etidya?",
+        "Wi",
+        "Ki to pe aprann?",
+        "Mo pe aprann bann katastrof natirel/ la lwa/ Medsinn",
+        "Kot to lekol ete?",
+        "Pa lwai depi mo lakaz",
+        "Bien pre depi isi",
+        "Kapav marse pu ale"
       ]
     },
     {
-      "title": "Talking about leisure activities",
+      "title": "Koz lor bann lwazir",
       "img": "/images/hundredPhrases/talking_about_activities.webp",
       "alt": "Leisure Activities Image",
       "phrases": [
-        "What do you do for fun?",
-        "I like dancing.",
-        "I love to travel.",
-        "I listen to music.",
-        "What kind of music do you like?",
-        "I like almost all music.",
-        "I´m into jazz.",
-        "How about you?",
-        "Do you like sports?",
-        "Yes, I do.",
-        "No, I don´t I like to play tennis/ volleyball/ ping pong/ football/ etc."
+        "Ki to fer pu dister twa?",
+        "Mo kontan danse",
+        "Mo kontan vwayaze",
+        "Mo kontan lamizik",
+        "Ki kalite lamizik to kontan?",
+        "Mo kontan preske tu kalite lamizik",
+        "Mo kontan Diaaz",
+        "Twa?",
+        "Eski to kontan ispor?",
+        "Wi, mo kontan",
+        "Non, m opa kontan zwe tenis/ volebol/ pingpong/ futbol/eksetera"
       ]
     },
     {
-      "title": "Making friends/ small talks.",
+      "title": "Fer kamarad/ bann ti koze",
       "img": "/images/hundredPhrases/makingFriends.webp",
       "alt": "Making Friends Image",
       "phrases": [
-        "Are you thirsty?",
-        "What would you like to drink?",
-        "Would you like something to drink?",
-        "No, but I´m hungry.",
-        "I´d like a beer, please.",
-        "A cup of coffee, please.",
-        "How was the weather yesterday?",
-        "Not very different from today/ it was very sunny yesterday/ It has been raining all day/",
+        "Eski to swaf?",
+        "Ki to kontan bwar?",
+        "Eski to oule kitsz pub war?",
+        "Non, me mo finn?",
+        "Mo tia kontan enn ti labyer, sil te ple.",
+        "Enn tas kafe, sil te ple",
+        "Kuma letan ti ete yer?",
+        "Pa diferan depi zordi/ Ti ena soley yer/ Ti ena lapli tut lazurne",
         {
-          "subtitle": "Taking a taxi",
+          "subtitle": "Pran enn taksi",
           "phrases": [
-            "Is this taxi free?",
-            "Yes, where do you want to go?",
-            "Hotel Down Town"
+            "Eski sa taksi la lib?",
+            "Wi, kot ou anvi ale?",
+            "Lotel Sant Vil (Down Tawn)"
           ]
         }
       ]
