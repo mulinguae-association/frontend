@@ -1,0 +1,194 @@
+{
+  "headerTitle": "100 Ch'ama Phrases Achuña Waki Payuni",
+  "phrases": [
+    {
+      "title": "Ch'ama",
+      "img": "/images/hundredPhrases/greetings.webp",
+      "alt": "Ch'ama Image",
+      "phrases": [
+        "Qamña! / Kamisaki.",
+        "Saphi wathi.",
+        "Saphi utjawi.",
+        {
+          "subtitle": "Ukhamata",
+          "phrases": ["Imaynallatakis?"]
+        },
+        {
+          "subtitle": "Janiw utjawi",
+          "phrases": ["Jamillä, gracias.", "Jayka/ Jaykichu.", "Ñawi/ Ñawi."]
+        }
+      ]
+    },
+    {
+      "title": "Phaxsi",
+      "img": "/images/hundredPhrases/goodBuy.webp",
+      "alt": "Phaxsi Image",
+      "phrases": ["Jupañani.", "Jupañani.", "Jupañaniruq.", "Jupañani."]
+    },
+    {
+      "title": "Disculpaki",
+      "img": "/images/hundredPhrases/Apologize.webp",
+      "alt": "Disculpaki Image",
+      "phrases": ["Qhuyayni.", "Uñjasqayni."]
+    },
+    {
+      "title": "Achiriña utjawiwa ukhamata",
+      "img": "/images/hundredPhrases/Asking for help.webp",
+      "alt": "Achiriña utjawiwa ukhamata Image",
+      "phrases": [
+        "Imillatawa imigración/ policía/ agencia de viaje?",
+        "Wañusqa ……….piñasqa/ kausaypi/ kallpapi/ ch'antapi.",
+        "Imaynallatakis “impeccable” sut'i kani?",
+        "Achachalla, uñt'asi."
+      ]
+    },
+    {
+      "title": "Utamarka",
+      "img": "/images/hundredPhrases/market.webp",
+      "alt": "Utamarka Image",
+      "phrases": [
+        "Imaynataki?",
+        "Piñasqa.",
+        "Yupa yuyaykani?",
+        "Piña 1 (usa) lliura mikhuna.",
+        "Imaynaq “cabbage” sut'i kani aru/ arabi/ kichwa, etc. etc.?",
+        "Culqi sut'iy España aru.",
+        "¿Manaqa yuyanapaq?",
+        "Ari ari!",
+        "¿Imaynaqmi yuyaynan?",
+        "Mana yuyanmi.",
+        "¿Qhupanqaqa aru/ kastilla/ fransiska?",
+        "Ñawiñaqmi ……………….."
+      ]
+    },
+    {
+      "title": "Jiwanta kay ch'ixiwanaka",
+      "img": "/images/hundredPhrases/daily expressions.webp",
+      "alt": "Jiwanta kay ch'ixiwanaka Image",
+      "phrases": [
+        "Arí.",
+        "Arí",
+        "Mana.",
+        "Mana yuyanmi.",
+        "Yuyanmi.",
+        "Yusqani.",
+        "Yusqani.",
+        "Mana purinmanta.",
+        "Arí; ñawi."
+      ]
+    },
+    {
+      "title": "Manasapa",
+      "img": "/images/hundredPhrases/introducing.webp",
+      "alt": "Manasapa Image",
+      "phrases": [
+        "Kayña Arletta.",
+        "Ñawiñan yuyanakupaqmi sumaqkunapas.",
+        "Ñawiyanayki.",
+        "Näqayki.",
+        "Mana (formal) Mariapi yuyanapaq?",
+        "Imaynallatakis.",
+        "Ángelo nayra.",
+        "Imataqmi sut'iyki?",
+        "Nayra Ángelo."
+      ]
+    },
+    {
+      "title": "Jach'a marka qalqinaka",
+      "img": "/images/hundredPhrases/talking about country.webp",
+      "alt": "Jach'a marka qalqinaka Image",
+      "phrases": [
+        "Imaynataki?",
+        "Perúpi/ Ijiti/ Murispi/ Brasilpi/ etc.",
+        "Chinapi yuyanapaq?",
+        "Arí, Payqa.",
+        "Manañawi, Peruanipi/ Ijitipi/ Murisipi/ Brasilipi/ etc."
+      ]
+    },
+    {
+      "title": "Imaymanta ch'amaña ukhamata",
+      "phrases": [
+        "Imaynallatakis?",
+        "Llama pachaw.",
+        "Tusa días.",
+        "Junkapi.",
+        "Wasi días."
+      ]
+    },
+    {
+      "title": "Imaypiqa ukhamata",
+      "phrases": ["Imaypiqa?", "Suma willkamanta.", "Sumaqmi.", "Manañawi."]
+    },
+    {
+      "title": "Imaynan ukhamata",
+      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "alt": "Imaynan Image",
+      "phrases": [
+        "Imaynallatakis?",
+        "Ñawiñaqa/ Arwiyñaqa/ T'antayñaqa/ Samitayñaqa/ Pukllayñaqa/ etc.",
+        "K'anaqa computadurawan.",
+        "Uñjasqa papakunaña.",
+        "Qamyañaqa munanakupaq?",
+        "Arí, munanmi.",
+        "Mana munanmi/ mana yuyanmanta… sami.",
+        "Arími qhawanmi."
+      ]
+    },
+    {
+      "title": "Imaypiqa yanapaq",
+      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "alt": "Imaypiqa yanapaq Image",
+      "phrases": [
+        "Imaypiqa yanapaq?",
+        "Arí.",
+        "Imaypiqa yachanapaq?",
+        "Ñawinqa yanapaq/ Yachanqa yanapaq/ Yuraq yanapaq.",
+        "Imaypiqa qillqanapaq?",
+        "Manaraq wasiwanpi.",
+        "Manañam wasiwanmi.",
+        "Tantawanmi."
+      ]
+    },
+    {
+      "title": "Imaypiqa sumaqkunapaq",
+      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "alt": "Imaypiqa sumaqkunapaq Image",
+      "phrases": [
+        "Imaypiqa t'ikarqonapaq?",
+        "Ñawiñaqa tusukyani.",
+        "Ñawiñaqa ñawpakunaqyani.",
+        "Ñawiñaqa muzukyani.",
+        "Imaypiqa muzukyani?",
+        "Ñawiñaqa chunkukunapaq.",
+        "Imaynallatakis?",
+        "Ñawiñam nisqanmi?",
+        "Imaykunam kani?",
+        "Arí, ñawiñam.",
+        "Mana, ñawiñam; ñawiñamni tinni/ p'awqarini/ ping pong/ futbol/ etc."
+      ]
+    },
+    {
+      "title": "Jañanapaq/ P'uyt'aynapaq.",
+      "img": "/images/hundredPhrases/makingFriends.webp",
+      "alt": "Jañanapaq/ P'uyt'aynapaq Image",
+      "phrases": [
+        "Imaynataki?",
+        "Imaypiqa unqusqayki?",
+        "Imaypiqa unqusqaqmi?",
+        "Mana, hinantayki.",
+        "Ñawiñaqa ch'ichaqaqmi, payqa.",
+        "Ch'umpi caféqaqmi, payqa.",
+        "Ñawpaki wasipi kani?",
+        "Masi chaypiqa/ Uqaq chaypiqa/ Inti kani/ Yaku kani/",
+        {
+          "subtitle": "Ch'allana taksipasqa",
+          "phrases": [
+            "Kayka taksiqa ch'allanapaqmi?",
+            "Arí, imaynaqqa mikhunman?",
+            "Wasi Marka"
+          ]
+        }
+      ]
+    }
+  ]
+}
