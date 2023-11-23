@@ -1,199 +1,200 @@
 {
+  "headerTitle": "100 frasi di base da imparare prima di visitare un paese straniero",
   "phrases": [
     {
-      "title": "Greetings",
+      "title": "Saluti",
       "img": "/images/hundredPhrases/greetings.webp",
-      "alt": "Greetings Image",
+      "alt": "Immagine di saluti",
       "phrases": [
-        "Hi! / Hello.",
-        "Good morning.",
-        "Good afternoon.",
+        "Ciao! / Salve.",
+        "Buongiorno.",
+        "Buon pomeriggio.",
         {
-          "subtitle": "Asking questions",
-          "phrases": ["How are you?"]
+          "subtitle": "Fare domande",
+          "phrases": ["Come stai?"]
         },
         {
-          "subtitle": "Reply",
+          "subtitle": "Risposta",
           "phrases": [
-            "Fine, thanks.",
-            "Okay/ Ok.",
-            "And you?",
-            "Good / more or less."
+            "Bene, grazie.",
+            "Va bene / Ok.",
+            "E tu?",
+            "Bene / più o meno."
           ]
         }
       ]
     },
     {
-      "title": "Goodbyes",
+      "title": "Addii",
       "img": "/images/hundredPhrases/goodBuy.webp",
-      "alt": "Goodbyes Image",
-      "phrases": ["Bye.", "Goodbye.", "See you later.", "Good night."]
+      "alt": "Immagine degli addii",
+      "phrases": ["Arrivederci.", "Addio.", "Ci vediamo dopo.", "Buona notte."]
     },
     {
-      "title": "Apologize",
+      "title": "Scuse",
       "img": "/images/hundredPhrases/Apologize.webp",
-      "alt": "Apologize Image",
-      "phrases": ["Excuse me.", "I'm sorry."]
+      "alt": "Immagine delle scuse",
+      "phrases": ["Mi scusi.", "Mi dispiace."]
     },
     {
-      "title": "Asking for help and answers",
+      "title": "Chiedere aiuto e risposte",
       "img": "/images/hundredPhrases/Asking for help.webp",
-      "alt": "Asking for Help Image",
+      "alt": "Immagine di richiesta di aiuto",
       "phrases": [
-        "Where is the immigration office/ police station / Travel agency?",
-        "It is ……….in the main square/ near the market / on the forth floor.",
-        "What does the word “impeccable” mean?",
-        "Exemplary, flawless."
+        "Dove si trova l'ufficio immigrazione / la stazione di polizia / l'agenzia di viaggi?",
+        "È ……….nella piazza principale / vicino al mercato / al quarto piano.",
+        "Cosa significa la parola 'impeccabile'?",
+        "Esemplare, senza difetti."
       ]
     },
     {
-      "title": "Market",
+      "title": "Mercato",
       "img": "/images/hundredPhrases/market.webp",
-      "alt": "Market Image",
+      "alt": "Immagine di mercato",
       "phrases": [
-        "What are these?",
-        "They are tomatoes.",
-        "How much is it?",
-        "It is 1 (one) pound per kilo.",
-        "How do you say ¨cabbage¨ in Spanish/ Arabic/ Quechua, etc. etc.?",
-        "It´s called “col” in Spanish.",
-        "Could you speak more slowly please?",
-        "Of course!",
-        "Do you understand?",
-        "I don´t understand.",
-        "Do you speak Quechua/ Spanish/ French?",
-        "I speak ……………….."
+        "Cosa sono queste?",
+        "Sono pomodori.",
+        "Quanto costa?",
+        "È 1 (uno) sterlina al chilo.",
+        "Come si dice ¨cavolo¨ in spagnolo / arabo / quechua, ecc. ecc.?",
+        "Si chiama “col” in spagnolo.",
+        "Puoi parlare più lentamente per favore?",
+        "Certo!",
+        "Capisci?",
+        "Non capisco.",
+        "Parli quechua / spagnolo / francese?",
+        "Parlo ……………….."
       ]
     },
     {
-      "title": "Important daily expressions",
+      "title": "Espressioni quotidiane importanti",
       "img": "/images/hundredPhrases/daily expressions.webp",
-      "alt": "Daily Expressions Image",
+      "alt": "Immagine di espressioni quotidiane",
       "phrases": [
-        "Sure.",
-        "Yes",
+        "Certamente.",
+        "Sì",
         "No.",
-        "I don´t know.",
-        "Please.",
-        "Thank you.",
-        "You´re welcome.",
-        "No problem.",
-        "Ok; all right."
+        "Non lo so.",
+        "Per favore.",
+        "Grazie.",
+        "Prego.",
+        "Nessun problema.",
+        "Ok; va bene."
       ]
     },
     {
-      "title": "Introducing and being introduced.",
+      "title": "Presentarsi e essere presentati.",
       "img": "/images/hundredPhrases/introducing.webp",
-      "alt": "Introducing Image",
+      "alt": "Immagine di presentazione",
       "phrases": [
-        "This is Ms. Arletta.",
-        "I´d like you (informal) to meet some of my friends.",
-        "Nice to meet you.",
-        "My pleasure.",
-        "Do you (formal) know Maria?",
-        "How do you do.",
-        "I´m Angelo.",
-        "What´s your name?",
-        "My name is Angelo."
+        "Questa è la signora Arletta.",
+        "Mi piacerebbe che tu (informale) conoscessi alcuni dei miei amici.",
+        "Piacere di conoscerti.",
+        "Il piacere è mio.",
+        "Conosci Maria (formale)?",
+        "Come stai.",
+        "Sono Angelo.",
+        "Come ti chiami?",
+        "Mi chiamo Angelo."
       ]
     },
     {
-      "title": "Talking about your country of origin",
+      "title": "Parlare del tuo paese d'origine",
       "img": "/images/hundredPhrases/talking about country.webp",
-      "alt": "Talking about Country Image",
+      "alt": "Immagine di parlare del paese",
       "phrases": [
-        "Where are you from?",
-        "I´m from Peru/ Egypt/ Mauritius/ Brazil/ etc.",
-        "Are you Chinese?",
-        "Yes, I am.",
-        "No, I´m Peruvian/Egyptian/Mauritian/Brazilian/ etc."
+        "Di dove sei?",
+        "Sono del Perù / Egitto / Mauritius / Brasile / ecc.",
+        "Sei cinese?",
+        "Sì, lo sono.",
+        "No, sono peruviano / egiziano / mauriziano / brasiliano / ecc."
       ]
     },
     {
-      "title": "Telling someone how long you´re staying.",
+      "title": "Dire a qualcuno quanto tempo rimarrai.",
       "phrases": [
-        "How long are you staying?",
-        "Two weeks.",
-        "Just a few days.",
-        "One month.",
-        "Some days only."
+        "Quanto tempo rimani?",
+        "Due settimane.",
+        "Solo pochi giorni.",
+        "Un mese.",
+        "Solo alcuni giorni."
       ]
     },
     {
-      "title": "Telling how you like a place.",
+      "title": "Dire come ti piace un posto.",
       "phrases": [
-        "How do you like it here?",
-        "I love it.",
-        "It´s great.",
-        "Well, not that much."
+        "Come ti trovi qui?",
+        "Mi piace molto.",
+        "È fantastico.",
+        "Beh, non così tanto."
       ]
     },
     {
-      "title": "Talking about work.",
+      "title": "Parlare del lavoro.",
       "img": "/images/hundredPhrases/talking_about_work.webp",
-      "alt": "Talking about Work Image",
+      "alt": "Immagine di parlare del lavoro",
       "phrases": [
-        "What do you do?",
-        "I´m a teacher/ engineer/ carpenter/fitter/ doctor/ etc.",
-        "I work with computers.",
-        "I take care of my two kids",
-        "Do you like your job?",
-        "Yes, I do.",
-        "Not that much/ not really…it´s boring.",
-        "It´s all right for now."
+        "Cosa fai?",
+        "Sono un insegnante / ingegnere / falegname / installatore / medico / ecc.",
+        "Lavoro con i computer.",
+        "Mi occupo dei miei due figli.",
+        "Ti piace il tuo lavoro?",
+        "Sì, mi piace.",
+        "Non così tanto / non proprio… è noioso.",
+        "Va bene per ora."
       ]
     },
     {
-      "title": "Talking about school.",
+      "title": "Parlare della scuola.",
       "img": "/images/hundredPhrases/talking_about_school.webp",
-      "alt": "Talking about School Image",
+      "alt": "Immagine di parlare della scuola",
       "phrases": [
-        "Are you a student?",
-        "Yes.",
-        "What are you studying?",
-        "I´m studying natural calamities/ law/ medicine.",
-        "Where is your school?",
-        "Not so far from my house.",
-        "Quite near from here.",
-        "Walking distance."
+        "Sei uno studente?",
+        "Sì.",
+        "Cosa stai studiando?",
+        "Sto studiando calamità naturali / legge / medicina.",
+        "Dove si trova la tua scuola?",
+        "Non così lontano da casa mia.",
+        "Piuttosto vicino da qui.",
+        "A distanza di una passeggiata."
       ]
     },
     {
-      "title": "Talking about leisure activities",
+      "title": "Parlare delle attività ricreative",
       "img": "/images/hundredPhrases/talking_about_activities.webp",
-      "alt": "Leisure Activities Image",
+      "alt": "Immagine di parlare delle attività",
       "phrases": [
-        "What do you do for fun?",
-        "I like dancing.",
-        "I love to travel.",
-        "I listen to music.",
-        "What kind of music do you like?",
-        "I like almost all music.",
-        "I´m into jazz.",
-        "How about you?",
-        "Do you like sports?",
-        "Yes, I do.",
-        "No, I don´t I like to play tennis/ volleyball/ ping pong/ football/ etc."
+        "Cosa fai per divertirti?",
+        "Mi piace ballare.",
+        "Adoro viaggiare.",
+        "Ascolto musica.",
+        "Che tipo di musica ti piace?",
+        "Mi piace quasi tutta la musica.",
+        "Sono appassionato di jazz.",
+        "E tu?",
+        "Ti piace lo sport?",
+        "Sì, mi piace.",
+        "No, non mi piace. Mi piace giocare a tennis / pallavolo / ping pong / calcio / ecc."
       ]
     },
     {
-      "title": "Making friends/ small talks.",
+      "title": "Fare amicizia/ piccole chiacchiere.",
       "img": "/images/hundredPhrases/makingFriends.webp",
-      "alt": "Making Friends Image",
+      "alt": "Immagine di fare amicizia",
       "phrases": [
-        "Are you thirsty?",
-        "What would you like to drink?",
-        "Would you like something to drink?",
-        "No, but I´m hungry.",
-        "I´d like a beer, please.",
-        "A cup of coffee, please.",
-        "How was the weather yesterday?",
-        "Not very different from today/ it was very sunny yesterday/ It has been raining all day/",
+        "Hai sete?",
+        "Cosa vorresti bere?",
+        "Vuoi qualcosa da bere?",
+        "No, ma ho fame.",
+        "Vorrei una birra, per favore.",
+        "Una tazza di caffè, per favore.",
+        "Com'era il tempo ieri?",
+        "Non molto diverso da oggi / ieri era molto soleggiato / ha piovuto tutto il giorno /",
         {
-          "subtitle": "Taking a taxi",
+          "subtitle": "Prendere un taxi",
           "phrases": [
-            "Is this taxi free?",
-            "Yes, where do you want to go?",
+            "Questo taxi è libero?",
+            "Sì, dove vuoi andare?",
             "Hotel Down Town"
           ]
         }
