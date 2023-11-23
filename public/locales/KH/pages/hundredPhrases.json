@@ -1,0 +1,204 @@
+{
+  "headerTitle": "100 fraz bazik pou aprann anvan w vizite yon lot peyi",
+  "phrases": [
+    {
+      "title": "Salitasyon",
+      "img": "/images/hundredPhrases/greetings.webp",
+      "alt": "Salitasyon Imaj",
+      "phrases": [
+        "Allo! / Bonjou.",
+        "Bon maten.",
+        "Bon apremidi.",
+        {
+          "subtitle": "Poze kesyon",
+          "phrases": ["Kijan ou ye?"]
+        },
+        {
+          "subtitle": "Repons",
+          "phrases": [
+            "Byen, mesi.",
+            "Dakò / Ok.",
+            "E ou menm?",
+            "Byen / pi oswa mwens."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Orevwa",
+      "img": "/images/hundredPhrases/goodBuy.webp",
+      "alt": "Orevwa Imaj",
+      "phrases": ["Orevwa.", "Adye.", "Nou wè pita.", "Bon nwit."]
+    },
+    {
+      "title": "Eskize",
+      "img": "/images/hundredPhrases/Apologize.webp",
+      "alt": "Eskize Imaj",
+      "phrases": ["Eskize mwen.", "Mwen dezole."]
+    },
+    {
+      "title": "Mande pou dènye ak repons",
+      "img": "/images/hundredPhrases/Asking for help.webp",
+      "alt": "Mande pou dènye Imaj",
+      "phrases": [
+        "Kote biwo imigrasyon an / lapolis / ajans vwayaj la?",
+        "Li nan pwen prensipal la / tou pre makè a / nan katye a.",
+        "Kisa mo a 'impeccable' vle di?",
+        "Egzanp, san defo."
+      ]
+    },
+    {
+      "title": "Mache",
+      "img": "/images/hundredPhrases/market.webp",
+      "alt": "Mache Imaj",
+      "phrases": [
+        "Kisa sa yo ye?",
+        "Yo se tomat.",
+        "Konbyen li ye?",
+        "Li se 1 (yon) pòn pa kilo.",
+        "Kijan ou di 'chou' an espayòl / arab / kichwa, elatriye.?",
+        "Yo rele li 'col' an espayòl.",
+        "Eske ou ka pale plis dousman silvouple?",
+        "Men sezon!",
+        "Eske ou konprann?",
+        "Mwen pa konprann.",
+        "Eske ou pale kichwa / espayòl / franse?",
+        "Mwen pale ……………….."
+      ]
+    },
+    {
+      "title": "Eksprésyon enpòtan chak jou",
+      "img": "/images/hundredPhrases/daily expressions.webp",
+      "alt": "Eksprésyon chak jou Imaj",
+      "phrases": [
+        "Sigò.",
+        "Wi",
+        "Non.",
+        "Mwen pa konnen.",
+        "Tanpri.",
+        "Mèsi.",
+        "Dènye.",
+        "Pa pwoblèm.",
+        "Dakò; tout dwa."
+      ]
+    },
+    {
+      "title": "Prezantasyon ak prezante.",
+      "img": "/images/hundredPhrases/introducing.webp",
+      "alt": "Prezantasyon Imaj",
+      "phrases": [
+        "Se Madam Arletta sa a.",
+        "Mwen ta renmen ou (enfòmèl) rankontre kèk zanmi mwen yo.",
+        "Plèzi fè konesans ou.",
+        "Poutèt mwen.",
+        "Ou konnen Mariya (fòmèl) ou?",
+        "Kijan ou ye.",
+        "Mwen se Angelo.",
+        "Kijan ou rele?",
+        "Non mwen se Angelo."
+      ]
+    },
+    {
+      "title": "Pale sou peyi orijin ou",
+      "img": "/images/hundredPhrases/talking about country.webp",
+      "alt": "Pale sou peyi Imaj",
+      "phrases": [
+        "Kote ou soti?",
+        "Mwen soti nan Perye / Lizayi / Moris / Brezil / elatriye.",
+        "Eske ou se chinwa?",
+        "Wi, mwen se.",
+        "Non, mwen se Peryen / Lizayen / Morisyen / Brezilyen / elatriye."
+      ]
+    },
+    {
+      "title": "Di yon moun konbyen tan ou rete.",
+      "phrases": [
+        "Konbyen tan ou pral rete?",
+        "De semèn.",
+        "Jis yon kèk jou.",
+        "Yon mwa.",
+        "Kèk jou sèlman."
+      ]
+    },
+    {
+      "title": "Di kijan ou renmen yon kote.",
+      "phrases": [
+        "Kijan ou renmen li isit la?",
+        "Mwen renmen li.",
+        "Li bèl.",
+        "E byen, pa anpil."
+      ]
+    },
+    {
+      "title": "Pale sou travay.",
+      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "alt": "Pale sou travay Imaj",
+      "phrases": [
+        "Kisa ou fè?",
+        "Mwen se yon pwofesè / enjenyè / chabrakon / montè / doktè / elatriye.",
+        "Mwen travay ak òdinatè.",
+        "Mwen swete pitit mwen de.",
+        "Eske ou renmen travay ou?",
+        "Wi, mwen renmen li.",
+        "Pa anpil / pa vre … li anndan.",
+        "Li byen pou kounye a."
+      ]
+    },
+    {
+      "title": "Pale sou lekòl.",
+      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "alt": "Pale sou lekòl Imaj",
+      "phrases": [
+        "Eske ou se yon elèv?",
+        "Wi.",
+        "Kisa ou ap etidye?",
+        "Mwen ap etidye katastwòf natirèl / lwa / medsin.",
+        "Ki kote lekòl ou ye?",
+        "Pa twò lwen lakay mwen.",
+        "Byen pre sòti isit la.",
+        "Se nan distans machwé."
+      ]
+    },
+    {
+      "title": "Pale sou aktivite k ap plezi",
+      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "alt": "Pale sou aktivite Imaj",
+      "phrases": [
+        "Kisa ou fè pou plezi?",
+        "Mwen renmen danse.",
+        "Mwen renmen vwayaje.",
+        "Mwen koute mizik.",
+        "Ki kalite mizik ou renmen?",
+        "Mwen renmen prèske tout kalite mizik.",
+        "Mwen renmen jazz.",
+        "E ou menm?",
+        "Eske ou renmen espò?",
+        "Wi, mwen renmen li.",
+        "Non, mwen pa renmen li, mwen renmen jwe tenis / vòlibòl / ping pong / foutbòl / elatriye."
+      ]
+    },
+    {
+      "title": "Fè zanmi / ti pale.",
+      "img": "/images/hundredPhrases/makingFriends.webp",
+      "alt": "Fè zanmi Imaj",
+      "phrases": [
+        "Eske ou swaf?",
+        "Kisa ou ta renmen bwè?",
+        "Eske ou ta renmen yon bagay bwè?",
+        "Non, men mwen grangou.",
+        "Mwen ta renmen yon biè, tanpri.",
+        "Yon tas kafe, tanpri.",
+        "Kijan tan an te ye yè?",
+        "Pa twò diferan soti jòdi a / li te trè soley ye / li te ap lapli depi tout jou /",
+        {
+          "subtitle": "Pran yon taks",
+          "phrases": [
+            "Eske taks sa a gratis?",
+            "Wi, kote ou vle ale?",
+            "Otel Down Town"
+          ]
+        }
+      ]
+    }
+  ]
+}
