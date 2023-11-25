@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import i18n from "../../i18n";
 const Home = ({ imgAnimation }) => {
 	const { t, i18n: { language: lang } } = useTranslation("home", { ns: "home" });
-	const langAr = i18n.language === "Ar"; // check if language is Arabic
+	const langAr = ["Ar", "Ur"].includes(i18n.language) // check if language is Arabic
 	const langQu = i18n.language === "Qu"; // check if language is Arabic
 	return (
 		<main className='hero_section'>

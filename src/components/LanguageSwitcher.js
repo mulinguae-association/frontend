@@ -16,13 +16,18 @@ function LanguageSwitcher({ className }) {
   const location = useLocation()
 
   const options = [
-    { label: 'English', value: 'En' },
-    { label: 'Spanish', value: 'Es' },
-    { label: 'French', value: 'Fr' },
-    { label: 'portuguese', value: 'Pt' },
     { label: 'Arabic', value: 'Ar' },
-    { label: 'Quechua', value: 'Qu' },
+    { label: 'English', value: 'En' },
+    { label: 'French', value: 'Fr' },
+    { label: 'Hindi', value: 'Hi' },
     { label: 'Kreol Morisyen', value: 'KM' },
+    { label: 'Mandarin', value: 'Mn' },
+    { label: 'portuguese', value: 'Pt' },
+    { label: 'Quechua', value: 'Qu' },
+    { label: 'Russian', value: 'Ru' },
+    { label: 'Spanish', value: 'Es' },
+    { label: 'Urdu', value: 'Ur' },
+
   ];
   const handleSelect = (option) => {
     setIsLoading(true)
