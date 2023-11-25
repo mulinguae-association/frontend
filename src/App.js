@@ -15,6 +15,7 @@ import ResetPassword from "./components/AuthPages/ResetPassword";
 import UserSettings from "./components/AuthPages/UserSettings";
 import { useCookies } from 'react-cookie';
 import i18n from "./i18n";
+import Courses from "./components/CoursesPage";
 
 const Home = React.lazy(() => import("./components/HomePage"));
 const LazyAbout = React.lazy(() => import("./components/AboutPage"));
@@ -73,12 +74,14 @@ function App() {
 						<Route path=":lang/forgot-password" element={<ForgotPassword />} />
 						<Route path=":lang/reset/:id/:token" element={<ResetPassword />} />
 						<Route path=":lang/user/settings" element={<UserSettings />} />
+						<Route path=":lang/courses" element={<Courses />} />
 						<Route path='*' element={<NotFound />} />
-					</Routes>
-				</React.Suspense>
-			)}
+					</Routes >
+				</React.Suspense >
+			)
+			}
 			<ToTopBtn />
-		</div>
+		</div >
 	);
 }
 
