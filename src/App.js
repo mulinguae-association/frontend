@@ -16,6 +16,7 @@ import UserSettings from "./components/AuthPages/UserSettings";
 import { useCookies } from 'react-cookie';
 import i18n from "./i18n";
 import Courses from "./components/CoursesPage";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const Home = React.lazy(() => import("./components/HomePage"));
 const LazyAbout = React.lazy(() => import("./components/AboutPage"));
@@ -49,6 +50,7 @@ function App() {
 				<Loader />
 			) : (
 				<React.Suspense fallback={<Loader />}>
+					<ScrollToTop />
 					<Routes>
 						<Route path="/" element={<Navigate to="/En" />} />
 						<Route
