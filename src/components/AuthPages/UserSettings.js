@@ -6,6 +6,7 @@ import { notifyError, notifySuccess } from '../Notify';
 import Tooltip from '../HelperComponents/toolTip';
 import { useBlogPosts } from '../../contexts/BlogsContext';
 import { useGlobal } from '../../contexts/AppContext';
+import { useTranslation } from 'react-i18next';
 
 function UserSettings() {
   const { userData, setUserData } = useAuth();
@@ -14,7 +15,7 @@ function UserSettings() {
   const [email, setEmail] = useState(userData?.email);
   const [profileImage, setProfileImage] = useState({});
   const { isBtnLoading, setButtonLoading } = useGlobal();
-
+  const { t } = useTranslation("authPages/userProfile")
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -71,22 +72,22 @@ function UserSettings() {
   return (
     <main className='settings_page'>
       <div className='container'>
-        <h1>Account Settings</h1>
-        <span>Change your profile and account settings</span>
+        <h1>{t("pageTitle")}</h1>
+        <span>{t("pageDescription")}</span>
         <form onSubmit={handleSubmit}>
           <div className='input_container'>
-            <label>Name</label>
+            <label>{t("nameLabel")}</label>
             <input type="text" value={name} onChange={handleNameChange} />
           </div>
           <div className='input_container'>
-            <label>Email</label>
+            <label>{t("emailLabel")}</label>
             <input type="email" value={email} onChange={handleEmailChange} />
           </div>
           <div className='input_container'>
             <img src={userData?.profileImage ? userData?.profileImage : "/images/fallBackUser.png"} alt='personal profile' onError={(e) => e.target.src = "/images/fallBackUser.png"} />
             <label className="upload_image" htmlFor="image">
-              {!profileImage ? 'Change Image' : profileImage?.name || 'Change Image'}
-              <Tooltip text="choose an image less than 1MB" />
+              {!profileImage ? t("changeImageText") : profileImage?.name || t("changeImageText")}
+              <Tooltip text={t("chooseImageTooltip")} />
             </label>
             <input
               id="image"
@@ -96,7 +97,7 @@ function UserSettings() {
               onChange={handleImageChange}
             />
           </div>
-          <button disabled={isBtnLoading["userSettingsBtn"]} type="submit">{isBtnLoading["userSettingsBtn"] ? "Saving..." : "Save Changes"}</button>
+          <button disabled={isBtnLoading["userSettingsBtn"]} type="submit">{isBtnLoading["userSettingsBtn"] ? t("savingText") : t("saveChangesButton")}</button>
         </form>
       </div>
     </main>

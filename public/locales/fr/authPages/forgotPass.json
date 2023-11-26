@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Mot de passe oublié",
+  "instructions": "Les instructions pour réinitialiser votre mot de passe ont été envoyées à votre adresse e-mail.",
+  "emailLabel": "E-mail :",
+  "emailPlaceholder": "Entrez votre e-mail",
+  "sendResetEmail": "Envoyer l'e-mail de réinitialisation",
+  "loading": "Chargement...",
+  "noAccount": "Vous n'avez pas de compte ?",
+  "signUpLink": "S'inscrire",
+  "provideEmailPrompt": "Veuillez fournir l'adresse e-mail associée à votre compte, et nous vous enverrons rapidement un lien pour réinitialiser votre mot de passe.",
+  "gmailLink": "Accéder à Gmail"
+}

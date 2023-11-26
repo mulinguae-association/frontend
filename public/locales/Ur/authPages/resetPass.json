@@ -1,0 +1,11 @@
+{
+  "pageTitle": "پاسورڈ دوبارہ ترتیب دیں",
+  "successMessage": "آپ کا پاسورڈ کامیابی سے دوبارہ ترتیب دیا گیا ہے۔",
+  "newPasswordLabel": "نیا پاسورڈ:",
+  "confirmPasswordLabel": "پاسورڈ کی تصدیق کریں:",
+  "newPasswordPlaceholder": "اپنا نیا پاسورڈ درج کریں",
+  "confirmPasswordPlaceholder": "اپنے نئے پاسورڈ کی تصدیق کریں",
+  "resetButton": "پاسورڈ دوبارہ ترتیب دیں",
+  "resetSuccessMessage": "آپ کا پاسورڈ کامیابی سے دوبارہ ترتیب دیا گیا ہے۔",
+  "loadingText": "لوڈ ہو رہا ہے..."
+}

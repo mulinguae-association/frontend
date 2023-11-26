@@ -5,14 +5,18 @@ import axios from 'axios';
 import { FaGlobe } from 'react-icons/fa';
 import { notifyError } from '../Notify';
 import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+import { useGlobal } from '../../contexts/AppContext';
 
 function ResetPassword() {
+  const { t } = useTranslation("authPages/resetPass")
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [resetSuccessful, setResetSuccessful] = useState(false);
   const { id, token } = useParams();
+  const { isBtnLoading, setButtonLoading } = useGlobal();
   const navigate = useNavigate()
-  console.log(password, confirmPassword)
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
@@ -26,6 +30,7 @@ function ResetPassword() {
 
     // Send a request to your server to reset the password
     try {
+      setButtonLoading("resetBtn", true);
       const res = await axios.post(`/api/auth/reset-password/${id}/${token}`, {
         password: password,
         confirmPassword: confirmPassword,
@@ -40,6 +45,8 @@ function ResetPassword() {
       setResetSuccessful(true);
     } catch (error) {
       notifyError(error.response.data.message)
+    } finally {
+      setButtonLoading("resetBtn", false);
     }
   };
 
@@ -48,13 +55,13 @@ function ResetPassword() {
       <div className='container'>
         <div className='content'>
 
-          <h2>Reset Password</h2>
+          <h2>{t("pageTitle")}</h2>
           {resetSuccessful ? (
-            <p>Your password has been successfully reset.</p>
+            <p>{t("successMessage")}</p>
           ) : (
             <form onSubmit={handleSubmit}>
               <div className='group'>
-                <label htmlFor="password">New Password:</label>
+                <label htmlFor="password">{t("newPasswordLabel")}</label>
                 <input
                   type="password"
                   id="password"
@@ -62,11 +69,11 @@ function ResetPassword() {
                   value={password}
                   onChange={handlePasswordChange}
                   required
-                  placeholder="Enter your new password"
+                  placeholder={t("newPasswordPlaceholder")}
                 />
               </div>
               <div className='group'>
-                <label htmlFor="confirmPassword">Confirm Password:</label>
+                <label htmlFor="confirmPassword">{t("confirmPasswordLabel")}</label>
                 <input
                   type="password"
                   id="confirmPassword"
@@ -74,10 +81,11 @@ function ResetPassword() {
                   value={confirmPassword}
                   onChange={handleConfirmPasswordChange}
                   required
-                  placeholder="Confirm your new password"
+                  placeholder={t("confirmPasswordPlaceholder")}
                 />
               </div>
-              <button type="submit">Reset Password</button>
+              <button disabled={isBtnLoading['resetBtn']} type="submit">
+                {isBtnLoading['resetBtn'] ? t("loadingText") : t("resetButton")}</button>
             </form>
           )}
           <span className='earth_icon'><FaGlobe /></span>

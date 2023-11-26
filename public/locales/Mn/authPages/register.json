@@ -1,0 +1,17 @@
+{
+  "registerTitle": "注册",
+  "nameLabel": "姓名：",
+  "emailLabel": "邮箱：",
+  "passwordLabel": "密码：",
+  "confirmPasswordLabel": "确认密码：",
+  "namePlaceholder": "您的姓名",
+  "emailPlaceholder": "您的邮箱",
+  "passwordPlaceholder": "您的密码",
+  "confirmPasswordPlaceholder": "确认密码",
+  "passwordLengthError": "密码必须至少为6个字符。",
+  "passwordMatchError": "密码不匹配。请确保密码和确认密码相符。",
+  "registerButton": "注册",
+  "loadingText": "加载中...",
+  "haveAccountText": "已经有账号？",
+  "loginLinkText": "登录"
+}

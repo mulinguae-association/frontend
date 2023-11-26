@@ -1,0 +1,17 @@
+{
+  "registerTitle": "Register",
+  "nameLabel": "Non:",
+  "emailLabel": "Imel:",
+  "passwordLabel": "Modpas:",
+  "confirmPasswordLabel": "Konfirme Modpas:",
+  "namePlaceholder": "Tonn Non",
+  "emailPlaceholder": "Tonn Imel",
+  "passwordPlaceholder": "Tonn Modpas",
+  "confirmPasswordPlaceholder": "Konfirme Modpas",
+  "passwordLengthError": "Modpas bizin ena omwen 6 lеt.",
+  "passwordMatchError": "Modpas pa koresponn. Verifie ki modpas-la ek konfirmasyon modpas-la koresponn.",
+  "registerButton": "Register",
+  "loadingText": "Loading...",
+  "haveAccountText": "Ou enkor pa enn manm?",
+  "loginLinkText": "Login"
+}

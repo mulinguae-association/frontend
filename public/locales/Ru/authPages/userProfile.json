@@ -1,0 +1,10 @@
+{
+  "pageTitle": "Настройки аккаунта",
+  "pageDescription": "Измените свой профиль и настройки аккаунта",
+  "nameLabel": "Имя",
+  "emailLabel": "Электронная почта",
+  "changeImageText": "Изменить изображение",
+  "chooseImageTooltip": "Выберите изображение размером менее 1 МБ",
+  "saveChangesButton": "Сохранить изменения",
+  "savingText": "Сохранение..."
+}

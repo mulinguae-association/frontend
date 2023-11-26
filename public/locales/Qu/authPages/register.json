@@ -1,0 +1,17 @@
+{
+  "registerTitle": "Rikuchiy",
+  "nameLabel": "Suti:",
+  "emailLabel": "Chaski pukyu:",
+  "passwordLabel": "Ñanpas:",
+  "confirmPasswordLabel": "Ñanpasmi Konfirmachiy:",
+  "namePlaceholder": "Suti yachay",
+  "emailPlaceholder": "Chaski pukyu yachay",
+  "passwordPlaceholder": "Ñanpas yachay",
+  "confirmPasswordPlaceholder": "Ñanpasmi konfirmachiy",
+  "passwordLengthError": "Ñanpasqa rikuchisqa 6 hark'aypi",
+  "passwordMatchError": "Ñanpasqa huch'uykunata rikuchiy. Ñanpasqa ñanpasmi konfirmachiyta huch'uyta kachun.",
+  "registerButton": "Rikuchiy",
+  "loadingText": "Yanapan...",
+  "haveAccountText": "Ama llank'aynin?",
+  "loginLinkText": "Yachachiqkuna"
+}

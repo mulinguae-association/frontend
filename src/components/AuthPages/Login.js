@@ -10,8 +10,10 @@ import { FaGlobe } from 'react-icons/fa';
 import { useGlobal } from '../../contexts/AppContext';
 import InputField from '../HelperComponents/InputField'
 import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 function Login() {
+  const { t } = useTranslation("authPages/login")
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -59,33 +61,33 @@ function Login() {
     <main className='auth_form'>
       <div className='container'>
         <div className='content'>
-          <h1>Login</h1>
+          <h1>{t("pageTitle")}</h1>
           <form onSubmit={handleSubmit}>
             <div className='group'>
-              <label>Email:</label>
+              <label>{t("emailLabel")}</label>
               <InputField
                 type="email"
                 name="email"
-                placeholder='write your email'
+                placeholder={t("emailPlaceholder")}
                 value={formData.email}
                 onChange={handleInputChange}
                 required
               />
             </div>
             <div className='group'>
-              <label>Password:</label>
+              <label>{t("passwordLabel")}</label>
               <InputField
                 type="password"
                 name="password"
-                placeholder='write your password'
+                placeholder={t("passwordPlaceholder")}
                 value={formData.password}
                 onChange={handleInputChange}
                 required
               />
             </div>
-            <Link to={`/${i18next.language}/forgot-password`}>Forgot your Password</Link>
-            <button disabled={isBtnLoading['loginBtn']} type="submit"> {isBtnLoading['loginBtn'] ? "Loading..." : "Login"} </button>
-            <span> Not a member <Link to={`/${i18next.language}/register`}>Register here!</Link></span>
+            <Link to={`/${i18next.language}/forgot-password`}>{t("forgotPasswordLink")}</Link>
+            <button disabled={isBtnLoading['loginBtn']} type="submit"> {isBtnLoading['loginBtn'] ? t("loadingText") : t("loginButton")} </button>
+            <span> {t("notMemberText")} <Link to={`/${i18next.language}/register`}>{t("registerLinkText")}</Link></span>
           </form>
           <span className='earth_icon'><FaGlobe /></span>
         </div>

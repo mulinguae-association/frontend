@@ -1,0 +1,11 @@
+{
+  "pageTitle": "Réinitialiser le mot de passe",
+  "successMessage": "Votre mot de passe a été réinitialisé avec succès.",
+  "newPasswordLabel": "Nouveau mot de passe :",
+  "confirmPasswordLabel": "Confirmer le mot de passe :",
+  "newPasswordPlaceholder": "Entrez votre nouveau mot de passe",
+  "confirmPasswordPlaceholder": "Confirmez votre nouveau mot de passe",
+  "resetButton": "Réinitialiser le mot de passe",
+  "resetSuccessMessage": "Votre mot de passe a été réinitialisé avec succès.",
+  "loadingText": "Chargement..."
+}

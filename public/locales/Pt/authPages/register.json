@@ -1,0 +1,17 @@
+{
+  "registerTitle": "Registrar",
+  "nameLabel": "Nome:",
+  "emailLabel": "E-mail:",
+  "passwordLabel": "Senha:",
+  "confirmPasswordLabel": "Confirmar Senha:",
+  "namePlaceholder": "Seu Nome",
+  "emailPlaceholder": "Seu E-mail",
+  "passwordPlaceholder": "Sua Senha",
+  "confirmPasswordPlaceholder": "Confirmar Senha",
+  "passwordLengthError": "A senha deve ter pelo menos 6 caracteres.",
+  "passwordMatchError": "As senhas não coincidem. Por favor, verifique se a senha e a confirmação da senha estão iguais.",
+  "registerButton": "Registrar",
+  "loadingText": "Carregando...",
+  "haveAccountText": "Já tem uma conta?",
+  "loginLinkText": "Login"
+}

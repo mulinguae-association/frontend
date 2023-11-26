@@ -1,0 +1,17 @@
+{
+  "registerTitle": "رجسٹر کریں",
+  "nameLabel": "نام:",
+  "emailLabel": "ای میل:",
+  "passwordLabel": "پاس ورڈ:",
+  "confirmPasswordLabel": "پاس ورڈ کی تصدیق کریں:",
+  "namePlaceholder": "آپ کا نام",
+  "emailPlaceholder": "آپ کا ای میل",
+  "passwordPlaceholder": "آپ کا پاس ورڈ",
+  "confirmPasswordPlaceholder": "پاس ورڈ کی تصدیق کریں",
+  "passwordLengthError": "پاس ورڈ کم از کم 6 حروف کا ہونا ضروری ہے۔",
+  "passwordMatchError": "پاس ورڈ میچ نہیں ہوتے۔ براہ کرم یقینی بنائیں کہ پاس ورڈ اور تصدیقی پاس ورڈ میچ ہوں۔",
+  "registerButton": "رجسٹر کریں",
+  "loadingText": "لوڈ ہو رہا ہے...",
+  "haveAccountText": "پہلے ہی اکاونٹ ہے؟",
+  "loginLinkText": "لاگ ان"
+}

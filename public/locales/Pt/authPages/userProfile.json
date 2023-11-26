@@ -1,0 +1,10 @@
+{
+  "pageTitle": "Configurações da conta",
+  "pageDescription": "Altere o seu perfil e configurações da conta",
+  "nameLabel": "Nome",
+  "emailLabel": "E-mail",
+  "changeImageText": "Alterar imagem",
+  "chooseImageTooltip": "Escolha uma imagem com menos de 1 MB",
+  "saveChangesButton": "Salvar alterações",
+  "savingText": "Salvando..."
+}

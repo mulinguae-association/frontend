@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Forgot Password",
+  "instructions": "Instructions to reset your password have been sent to your email.",
+  "emailLabel": "Email:",
+  "emailPlaceholder": "write your email",
+  "sendResetEmail": "Send Reset Email",
+  "loading": "Loading...",
+  "noAccount": "Don't have an account?",
+  "signUpLink": "Sign up",
+  "provideEmailPrompt": "Please provide the email address linked to your account, and we'll promptly send you a password reset link.",
+  "gmailLink": "Go to your Gmail"
+}

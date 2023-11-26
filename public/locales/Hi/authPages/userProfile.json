@@ -1,0 +1,10 @@
+{
+  "pageTitle": "खाता सेटिंग्स",
+  "pageDescription": "अपनी प्रोफ़ाइल और खाता सेटिंग्स बदलें",
+  "nameLabel": "नाम",
+  "emailLabel": "ईमेल",
+  "changeImageText": "छवि बदलें",
+  "chooseImageTooltip": "1MB से कम एक छवि चुनें",
+  "saveChangesButton": "परिवर्तन सहेजें",
+  "savingText": "सहेजा जा रहा है..."
+}

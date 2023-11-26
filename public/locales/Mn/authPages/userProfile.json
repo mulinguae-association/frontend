@@ -1,0 +1,10 @@
+{
+  "pageTitle": "帐户设置",
+  "pageDescription": "更改您的个人资料和帐户设置",
+  "nameLabel": "姓名",
+  "emailLabel": "电子邮件",
+  "changeImageText": "更改图片",
+  "chooseImageTooltip": "选择小于1MB的图像",
+  "saveChangesButton": "保存更改",
+  "savingText": "保存中..."
+}

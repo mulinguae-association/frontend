@@ -1,0 +1,10 @@
+{
+  "pageTitle": "Account Settings",
+  "pageDescription": "Change your profile and account settings",
+  "nameLabel": "Name",
+  "emailLabel": "Email",
+  "changeImageText": "Change Image",
+  "chooseImageTooltip": "Choose an image less than 1MB",
+  "saveChangesButton": "Save Changes",
+  "savingText": "Saving..."
+}

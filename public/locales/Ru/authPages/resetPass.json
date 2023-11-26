@@ -1,0 +1,11 @@
+{
+  "pageTitle": "Сброс пароля",
+  "successMessage": "Ваш пароль успешно сброшен.",
+  "newPasswordLabel": "Новый пароль:",
+  "confirmPasswordLabel": "Подтвердите пароль:",
+  "newPasswordPlaceholder": "Введите новый пароль",
+  "confirmPasswordPlaceholder": "Подтвердите новый пароль",
+  "resetButton": "Сбросить пароль",
+  "resetSuccessMessage": "Ваш пароль успешно сброшен.",
+  "loadingText": "Загрузка..."
+}

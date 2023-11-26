@@ -1,0 +1,12 @@
+{
+  "pageTitle": "लॉग इन",
+  "emailLabel": "ईमेल:",
+  "passwordLabel": "पासवर्ड:",
+  "emailPlaceholder": "अपना ईमेल लिखें",
+  "passwordPlaceholder": "अपना पासवर्ड लिखें",
+  "forgotPasswordLink": "क्या आपने अपना पासवर्ड भूल गए",
+  "loginButton": "लॉग इन",
+  "loadingText": "लोड हो रहा है...",
+  "notMemberText": "सदस्य नहीं हैं",
+  "registerLinkText": "यहाँ रजिस्टर करें!"
+}

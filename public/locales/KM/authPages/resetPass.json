@@ -1,0 +1,11 @@
+{
+  "pageTitle": "Resit Modpas",
+  "successMessage": "Modpas ou finn resit avek sikse.",
+  "newPasswordLabel": "Nouv Modpas:",
+  "confirmPasswordLabel": "Konfirme Modpas:",
+  "newPasswordPlaceholder": "Tonn nouv modpas ou",
+  "confirmPasswordPlaceholder": "Konfirme nouv modpas ou",
+  "resetButton": "Resit Modpas",
+  "resetSuccessMessage": "Modpas ou finn resit avek sikse.",
+  "loadingText": "Loading..."
+}

@@ -1,0 +1,17 @@
+{
+  "registerTitle": "S'inscrire",
+  "nameLabel": "Nom :",
+  "emailLabel": "E-mail :",
+  "passwordLabel": "Mot de passe :",
+  "confirmPasswordLabel": "Confirmer le mot de passe :",
+  "namePlaceholder": "Votre nom",
+  "emailPlaceholder": "Votre e-mail",
+  "passwordPlaceholder": "Votre mot de passe",
+  "confirmPasswordPlaceholder": "Confirmez le mot de passe",
+  "passwordLengthError": "Le mot de passe doit comporter au moins 6 caractères.",
+  "passwordMatchError": "Les mots de passe ne correspondent pas. Veuillez vous assurer que le mot de passe et sa confirmation sont identiques.",
+  "registerButton": "S'inscrire",
+  "loadingText": "Chargement...",
+  "haveAccountText": "Vous avez déjà un compte ?",
+  "loginLinkText": "Connexion"
+}

@@ -1,0 +1,17 @@
+{
+  "registerTitle": "Регистрация",
+  "nameLabel": "Имя:",
+  "emailLabel": "Электронная почта:",
+  "passwordLabel": "Пароль:",
+  "confirmPasswordLabel": "Подтвердите пароль:",
+  "namePlaceholder": "Ваше имя",
+  "emailPlaceholder": "Ваша электронная почта",
+  "passwordPlaceholder": "Ваш пароль",
+  "confirmPasswordPlaceholder": "Подтвердите пароль",
+  "passwordLengthError": "Пароль должен содержать не менее 6 символов.",
+  "passwordMatchError": "Пароли не совпадают. Убедитесь, что пароль и подтверждение пароля совпадают.",
+  "registerButton": "Регистрация",
+  "loadingText": "Загрузка...",
+  "haveAccountText": "Уже есть аккаунт?",
+  "loginLinkText": "Войти"
+}

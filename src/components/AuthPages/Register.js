@@ -7,8 +7,11 @@ import { FaGlobe } from 'react-icons/fa';
 import { useGlobal } from "../../contexts/AppContext";
 import InputField from '../HelperComponents/InputField'; // Import your InputField component
 import i18next from "i18next";
-console.log(i18next.language)
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 function Registration() {
+  const { t } = useTranslation("authPages/register")
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
@@ -30,12 +33,12 @@ function Registration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password.length < 6) {
-      notifyError("Password must be at least 6 characters long.")
+      notifyError(t("passwordLengthError"))
       return;
     }
 
     if (formData.password !== formData.confirmPassword) {
-      notifyError("Passwords do not match. Please make sure the password and confirm password match.")
+      notifyError(t("passwordMatchError"))
       return;
     }
 
@@ -53,7 +56,7 @@ function Registration() {
           profileImage: '',
         });
         notifySuccess(res.message + " " + formData.name);
-        navigate(`${i18next.language}/login}`);
+        navigate(`/${i18next.language}/login`);
       }
     } catch (error) {
       notifyError(error.message);
@@ -68,53 +71,55 @@ function Registration() {
     <main className='auth_form'>
       <div className='container'>
         <div className='content'>
-          <h1>Register</h1>
+          <h1>{t("registerTitle")}</h1>
           <form onSubmit={handleSubmit}>
             <div className='group'>
               <InputField
-                label="Name:"
+                label={t("nameLabel")}
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                placeholder="Your Name"
+                placeholder={t("namePlaceholder")}
               />
             </div>
 
             <div className='group'>
               <InputField
-                label="Email:"
+                label={t("emailLabel")}
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="Your Email"
+                placeholder={t("emailPlaceholder")}
                 required
               />
             </div>
 
             <div className='group'>
               <InputField
-                label="Password:"
+                label={t("passwordLabel")}
                 type="password"
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                placeholder="Your Password"
+                placeholder={t("passwordPlaceholder")}
               />
             </div>
 
             <div className='group'>
               <InputField
-                label="Confirm Password:"
+                label={t("confirmPasswordLabel")}
                 type="password"
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleInputChange}
-                placeholder="Confirm Password"
+                placeholder={t("confirmPasswordPlaceholder")}
               />
             </div>
-            <button disabled={isBtnLoading['registerBtn']} type="submit">{isBtnLoading['registerBtn'] ? "Loading..." : "Register"}</button>
+            <button disabled={isBtnLoading['registerBtn']} type="submit">{isBtnLoading['registerBtn'] ? t("loadingText") : t("registerButton")}</button>
+            <span> {t("haveAccountText")} <Link to={`/${i18next.language}/login`}>{t("loginLinkText")}</Link></span>
+
           </form>
           <span className='earth_icon'><FaGlobe /></span>
         </div>

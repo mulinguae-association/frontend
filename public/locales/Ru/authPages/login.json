@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Вход",
+  "emailLabel": "Электронная почта:",
+  "passwordLabel": "Пароль:",
+  "emailPlaceholder": "Введите вашу почту",
+  "passwordPlaceholder": "Введите ваш пароль",
+  "forgotPasswordLink": "Забыли пароль",
+  "loginButton": "Войти",
+  "loadingText": "Загрузка...",
+  "notMemberText": "Не участник",
+  "registerLinkText": "Зарегистрируйтесь здесь!"
+}

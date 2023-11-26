@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Inicio de sesión",
+  "emailLabel": "Correo electrónico:",
+  "passwordLabel": "Contraseña:",
+  "emailPlaceholder": "Escribe tu correo electrónico",
+  "passwordPlaceholder": "Escribe tu contraseña",
+  "forgotPasswordLink": "¿Olvidaste tu contraseña?",
+  "loginButton": "Iniciar sesión",
+  "loadingText": "Cargando...",
+  "notMemberText": "No eres miembro",
+  "registerLinkText": "¡Regístrate aquí!"
+}

@@ -1,0 +1,12 @@
+{
+  "pageTitle": "登录",
+  "emailLabel": "邮箱：",
+  "passwordLabel": "密码：",
+  "emailPlaceholder": "填写您的邮箱",
+  "passwordPlaceholder": "填写您的密码",
+  "forgotPasswordLink": "忘记密码",
+  "loginButton": "登录",
+  "loadingText": "加载中...",
+  "notMemberText": "不是会员",
+  "registerLinkText": "在此注册！"
+}

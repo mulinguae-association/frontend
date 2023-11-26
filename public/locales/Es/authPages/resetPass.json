@@ -1,0 +1,11 @@
+{
+  "pageTitle": "Restablecer contraseña",
+  "successMessage": "Tu contraseña se ha restablecido correctamente.",
+  "newPasswordLabel": "Nueva contraseña:",
+  "confirmPasswordLabel": "Confirmar contraseña:",
+  "newPasswordPlaceholder": "Ingresa tu nueva contraseña",
+  "confirmPasswordPlaceholder": "Confirma tu nueva contraseña",
+  "resetButton": "Restablecer contraseña",
+  "resetSuccessMessage": "Tu contraseña se ha restablecido correctamente.",
+  "loadingText": "Cargando..."
+}

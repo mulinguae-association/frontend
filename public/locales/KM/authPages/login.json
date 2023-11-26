@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Login",
+  "emailLabel": "Imel:",
+  "passwordLabel": "Modpas:",
+  "emailPlaceholder": "Eskriv ou imel",
+  "passwordPlaceholder": "Eskriv ou modpas",
+  "forgotPasswordLink": "Oubli modpas ou",
+  "loginButton": "Login",
+  "loadingText": "Loading...",
+  "notMemberText": "Pa enn manm",
+  "registerLinkText": "Register isi!"
+}

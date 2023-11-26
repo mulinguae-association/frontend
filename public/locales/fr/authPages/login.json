@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Connexion",
+  "emailLabel": "E-mail :",
+  "passwordLabel": "Mot de passe :",
+  "emailPlaceholder": "Entrez votre e-mail",
+  "passwordPlaceholder": "Entrez votre mot de passe",
+  "forgotPasswordLink": "Mot de passe oublié",
+  "loginButton": "Connexion",
+  "loadingText": "Chargement...",
+  "notMemberText": "Pas encore membre",
+  "registerLinkText": "Inscrivez-vous ici !"
+}

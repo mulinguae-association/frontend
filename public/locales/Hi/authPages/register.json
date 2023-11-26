@@ -1,0 +1,17 @@
+{
+  "registerTitle": "रजिस्टर करें",
+  "nameLabel": "नाम:",
+  "emailLabel": "ईमेल:",
+  "passwordLabel": "पासवर्ड:",
+  "confirmPasswordLabel": "पासवर्ड की पुष्टि करें:",
+  "namePlaceholder": "आपका नाम",
+  "emailPlaceholder": "आपका ईमेल",
+  "passwordPlaceholder": "आपका पासवर्ड",
+  "confirmPasswordPlaceholder": "पासवर्ड की पुष्टि करें",
+  "passwordLengthError": "पासवर्ड कम से कम 6 वर्णों का होना चाहिए।",
+  "passwordMatchError": "पासवर्ड मेल नहीं खा रहे हैं। कृपया सुनिश्चित करें कि पासवर्ड और पासवर्ड की पुष्टि मेल खा रहे हैं।",
+  "registerButton": "रजिस्टर करें",
+  "loadingText": "लोड हो रहा है...",
+  "haveAccountText": "पहले से ही खाता है?",
+  "loginLinkText": "लॉग इन करें"
+}

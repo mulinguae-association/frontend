@@ -1,0 +1,17 @@
+{
+  "registerTitle": "التسجيل",
+  "nameLabel": "الاسم:",
+  "emailLabel": "البريد الإلكتروني:",
+  "passwordLabel": "كلمة المرور:",
+  "confirmPasswordLabel": "تأكيد كلمة المرور:",
+  "namePlaceholder": "اسمك",
+  "emailPlaceholder": "بريدك الإلكتروني",
+  "passwordPlaceholder": "كلمة المرور الخاصة بك",
+  "confirmPasswordPlaceholder": "تأكيد كلمة المرور",
+  "passwordLengthError": "يجب أن تكون كلمة المرور على الأقل 6 أحرف.",
+  "passwordMatchError": "كلمات المرور غير متطابقة. يرجى التأكد من تطابق كلمة المرور وتأكيد كلمة المرور.",
+  "registerButton": "تسجيل",
+  "loadingText": "جار التحميل...",
+  "haveAccountText": "هل لديك حساب بالفعل؟",
+  "loginLinkText": "تسجيل الدخول"
+}

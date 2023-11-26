@@ -1,0 +1,11 @@
+{
+  "pageTitle": "Redefinir Senha",
+  "successMessage": "Sua senha foi redefinida com sucesso.",
+  "newPasswordLabel": "Nova Senha:",
+  "confirmPasswordLabel": "Confirmar Senha:",
+  "newPasswordPlaceholder": "Digite sua nova senha",
+  "confirmPasswordPlaceholder": "Confirme sua nova senha",
+  "resetButton": "Redefinir Senha",
+  "resetSuccessMessage": "Sua senha foi redefinida com sucesso.",
+  "loadingText": "Carregando..."
+}

@@ -1,0 +1,11 @@
+{
+  "pageTitle": "Reset Password",
+  "successMessage": "Your password has been successfully reset.",
+  "newPasswordLabel": "New Password:",
+  "confirmPasswordLabel": "Confirm Password:",
+  "newPasswordPlaceholder": "Enter your new password",
+  "confirmPasswordPlaceholder": "Confirm your new password",
+  "resetButton": "Reset Password",
+  "resetSuccessMessage": "Your password has been successfully reset.",
+  "loadingText": "Loading..."
+}

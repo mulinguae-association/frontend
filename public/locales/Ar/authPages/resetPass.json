@@ -1,0 +1,11 @@
+{
+  "pageTitle": "إعادة تعيين كلمة المرور",
+  "successMessage": "تم إعادة تعيين كلمة المرور بنجاح.",
+  "newPasswordLabel": "كلمة المرور الجديدة:",
+  "confirmPasswordLabel": "تأكيد كلمة المرور:",
+  "newPasswordPlaceholder": "أدخل كلمة المرور الجديدة",
+  "confirmPasswordPlaceholder": "تأكيد كلمة المرور الجديدة",
+  "resetButton": "إعادة تعيين كلمة المرور",
+  "resetSuccessMessage": "تم إعادة تعيين كلمة المرور بنجاح.",
+  "loadingText": "جار التحميل..."
+}

@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Olvidé mi contraseña",
+  "instructions": "Se han enviado instrucciones para restablecer tu contraseña a tu correo electrónico.",
+  "emailLabel": "Correo electrónico:",
+  "emailPlaceholder": "Escribe tu correo electrónico",
+  "sendResetEmail": "Enviar correo de restablecimiento",
+  "loading": "Cargando...",
+  "noAccount": "¿No tienes una cuenta?",
+  "signUpLink": "Registrarse",
+  "provideEmailPrompt": "Por favor, proporciona la dirección de correo electrónico asociada a tu cuenta, y te enviaremos rápidamente un enlace para restablecer tu contraseña.",
+  "gmailLink": "Ir a tu Gmail"
+}

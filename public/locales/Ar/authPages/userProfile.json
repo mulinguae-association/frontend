@@ -1,0 +1,10 @@
+{
+  "pageTitle": "إعدادات الحساب",
+  "pageDescription": "قم بتغيير إعدادات ملفك الشخصي والحساب",
+  "nameLabel": "الاسم",
+  "emailLabel": "البريد الإلكتروني",
+  "changeImageText": "تغيير الصورة",
+  "chooseImageTooltip": "اختر صورة أقل من 1 ميغابايت",
+  "saveChangesButton": "حفظ التغييرات",
+  "savingText": "جار الحفظ..."
+}

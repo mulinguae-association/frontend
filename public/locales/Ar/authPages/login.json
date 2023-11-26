@@ -1,0 +1,12 @@
+{
+  "pageTitle": "تسجيل الدخول",
+  "emailLabel": "البريد الإلكتروني:",
+  "passwordLabel": "كلمة المرور:",
+  "emailPlaceholder": "أدخل بريدك الإلكتروني",
+  "passwordPlaceholder": "أدخل كلمة المرور الخاصة بك",
+  "forgotPasswordLink": "هل نسيت كلمة المرور الخاصة بك",
+  "loginButton": "تسجيل الدخول",
+  "loadingText": "جار التحميل...",
+  "notMemberText": "لست عضوًا",
+  "registerLinkText": "سجل هنا!"
+}

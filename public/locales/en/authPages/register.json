@@ -1,0 +1,17 @@
+{
+  "registerTitle": "Register",
+  "nameLabel": "Name:",
+  "emailLabel": "Email:",
+  "passwordLabel": "Password:",
+  "confirmPasswordLabel": "Confirm Password:",
+  "namePlaceholder": "Your Name",
+  "emailPlaceholder": "Your Email",
+  "passwordPlaceholder": "Your Password",
+  "confirmPasswordPlaceholder": "Confirm Password",
+  "passwordLengthError": "Password must be at least 6 characters long.",
+  "passwordMatchError": "Passwords do not match. Please make sure the password and confirm password match.",
+  "registerButton": "Register",
+  "loadingText": "Loading...",
+  "haveAccountText": "Already have an account?",
+  "loginLinkText": "Login"
+}

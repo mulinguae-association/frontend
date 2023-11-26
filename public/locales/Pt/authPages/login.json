@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Login",
+  "emailLabel": "E-mail:",
+  "passwordLabel": "Senha:",
+  "emailPlaceholder": "Digite seu e-mail",
+  "passwordPlaceholder": "Digite sua senha",
+  "forgotPasswordLink": "Esqueceu sua senha",
+  "loginButton": "Entrar",
+  "loadingText": "Carregando...",
+  "notMemberText": "Não é membro",
+  "registerLinkText": "Registre-se aqui!"
+}
