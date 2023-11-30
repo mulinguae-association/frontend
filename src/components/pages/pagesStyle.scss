@@ -1,25 +1,29 @@
 @import "../../globalStyles/colors";
 .section {
   .page_title {
-    font-size: 1.8rem;
+    font-size: -webkit-calc(1.325rem + 0.9vw);
+    font-size: calc(1.325rem + 0.9vw);
     color: $darkBlue-color;
   }
   padding: 50px 0;
   .head {
+    font-size: -webkit-calc(1.325rem + 0.9vw);
+    font-size: calc(1.225rem + 0.9vw);
     color: $primaryDark-color;
-    max-width: 50%;
+    max-width: 90%;
     @media (max-width: 768px) {
       max-width: 100%;
     }
   }
   .about {
-    font-size: 15.5px;
+    font-size: 17px;
     color: $darkgray-color;
     font-weight: 500;
     letter-spacing: 0.9px;
     text-transform: none;
     line-height: 1.7;
     word-break: break-word;
+    margin-top: 0;
   }
   span,
   p {
@@ -27,7 +31,7 @@
       color: $third-color;
       word-wrap: break-word;
       font-weight: 500;
-      display: inline-block;
+      display: inline;
       padding: 6px;
       &:active {
         scale: 0.99;
