@@ -26,7 +26,7 @@ const TopFooter = () => {
                   </Link>
                 </li>
                 <li className='item'>
-                  <Link className='link_item' to={`/${i18next.language}/`}>
+                  <Link className='link_item' to={`/${i18next.language}/pages/FAQs`}>
                     {t("link2")}
                   </Link>
                 </li>
