@@ -1,0 +1,80 @@
+{
+  "header": "Спасибо за посещение веб-сайта ACS Mulingua! Ваш отзыв очень важен для нас. Пожалуйста, опишите любые проблемы, с которыми вы столкнулись при изучении страниц, или предложения по улучшению сайта.",
+  "form": {
+    "head": "Часто задаваемые вопросы",
+    "emailLabel": "Электронная почта:",
+    "emailPlaceholder": "Введите вашу почту",
+    "fullNameLabel": "Полное имя:",
+    "fullNamePlaceholder": "Введите ваше полное имя",
+    "affiliationLabel": "Принадлежность:",
+    "detailsLabel": "Детали:",
+    "detailsPlaceholder": "Введите детали",
+    "urlLabel": "URL:",
+    "urlPlaceholder": "Введите URL",
+    "submitButton": "Отправить",
+    "submittingButton": "Отправка..."
+  },
+  "errorMessages": {
+    "validEmail": "Пожалуйста, введите действительный адрес электронной почты (например, samy@gmail.com)",
+    "emailEmpty": "Пожалуйста, введите вашу почту",
+    "fullNameEmpty": "Пожалуйста, введите ваше полное имя",
+    "detailsEmpty": "Пожалуйста, введите детали",
+    "typeEmpty": "Пожалуйста, выберите тип",
+    "affiliationEmpty": "Пожалуйста, укажите принадлежность",
+    "otherAffiliationEmpty": "Пожалуйста, укажите другую принадлежность",
+    "otherBrowserEmpty": "Пожалуйста, укажите другой браузер",
+    "otherOSEmpty": "Пожалуйста, укажите другую операционную систему",
+    "browserEmpty": "Пожалуйста, укажите браузер",
+    "OSEmpty": "Пожалуйста, укажите операционную систему",
+    "screenshotEmpty": "Пожалуйста, добавьте скриншот проблемы",
+    "screenshotAlert": "Размер файла превышает 5 МБ. Пожалуйста, выберите файл меньшего размера.",
+    "successMessage": "Спасибо за ваш отзыв! Ваше сообщение отправлено.",
+    "failMessage": "Ошибка отправки отзыва"
+  },
+  "affiliationSelect": {
+    "label": "Какова ваша принадлежность к ACS Mulingua?",
+    "selectPlaceholder": "Выберите принадлежность",
+    "options": {
+      "prospectiveStudent": "Будущий студент или преподаватель",
+      "currentStudent": "Текущий студент",
+      "currentTeacher": "Текущий преподаватель",
+      "other": "Другое"
+    },
+    "otherPlaceholder": "Укажите другую принадлежность"
+  },
+  "typeSelect": {
+    "label": "Тип:",
+    "selectPlaceholder": "Выберите тип",
+    "options": {
+      "bug": "Ошибка",
+      "featureSuggestion": "Предложение функции",
+      "comment": "Комментарий",
+      "correction": "Исправление",
+      "help": "Помощь",
+      "siteSearch": "Поиск по сайту",
+      "admissionQuestion": "Вопрос о приеме"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "Браузер:",
+    "selectBrowserPlaceholder": "Выберите",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "Другой"
+    },
+    "otherBrowserPlaceholder": "Укажите другой браузер",
+    "OSLabel": "Операционная система:",
+    "selectOSPlaceholder": "Выберите",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "Другая"
+    },
+    "otherOSPlaceholder": "Укажите другую операционную систему",
+    "screenshotLabel": "Скриншот:"
+  }
+}

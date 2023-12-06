@@ -1,0 +1,80 @@
+{
+  "header": "ACS Mulingua वेबसाइट पर आने के लिए धन्यवाद! आपकी प्रतिक्रिया महत्त्वपूर्ण है और हमारे लिए बहुत महत्त्वपूर्ण है। कृपया किसी भी समस्या के बारे में विस्तार से बताएं जो आपने पृष्ठों को अन्वेषण करते समय अनुभव की हो या सुधारने के लिए सुझाव।",
+  "form": {
+    "head": "सामान्य प्रश्न",
+    "emailLabel": "ईमेल:",
+    "emailPlaceholder": "अपना ईमेल दर्ज करें",
+    "fullNameLabel": "पूरा नाम:",
+    "fullNamePlaceholder": "अपना पूरा नाम दर्ज करें",
+    "affiliationLabel": "संबंध:",
+    "detailsLabel": "विवरण:",
+    "detailsPlaceholder": "विवरण दर्ज करें",
+    "urlLabel": "URL:",
+    "urlPlaceholder": "URL दर्ज करें",
+    "submitButton": "जमा करें",
+    "submittingButton": "भेजा जा रहा है..."
+  },
+  "errorMessages": {
+    "validEmail": "कृपया एक मान्य ईमेल दर्ज करें (उदाहरण: samy@gmail.com)",
+    "emailEmpty": "कृपया अपना ईमेल दर्ज करें",
+    "fullNameEmpty": "कृपया अपना पूरा नाम दर्ज करें",
+    "detailsEmpty": "कृपया विवरण दर्ज करें",
+    "typeEmpty": "कृपया प्रकार का चयन करें",
+    "affiliationEmpty": "कृपया अपना संबंध दर्ज करें",
+    "otherAffiliationEmpty": "कृपया अपना अन्य संबंध दर्ज करें",
+    "otherBrowserEmpty": "कृपया अपना अन्य ब्राउज़र दर्ज करें",
+    "otherOSEmpty": "कृपया अपना अन्य ऑपरेटिंग सिस्टम दर्ज करें",
+    "browserEmpty": "कृपया अपना ब्राउज़र दर्ज करें",
+    "OSEmpty": "कृपया अपना ऑपरेटिंग सिस्टम दर्ज करें",
+    "screenshotEmpty": "कृपया समस्या के लिए एक स्क्रीनशॉट जोड़ें",
+    "screenshotAlert": "फ़ाइल का आकार 5MB से अधिक है। कृपया एक छोटी फ़ाइल चुनें।",
+    "successMessage": "आपकी प्रतिक्रिया के लिए धन्यवाद! आपका संदेश सफलतापूर्वक भेजा गया है।",
+    "failMessage": "प्रतिक्रिया भेजने में त्रुटि"
+  },
+  "affiliationSelect": {
+    "label": "ACS Mulingua से आपका संबंध क्या है?",
+    "selectPlaceholder": "संबंध चुनें",
+    "options": {
+      "prospectiveStudent": "संभावित छात्र या शिक्षक",
+      "currentStudent": "वर्तमान छात्र",
+      "currentTeacher": "वर्तमान शिक्षक",
+      "other": "अन्य"
+    },
+    "otherPlaceholder": "अन्य संबंध निर्दिष्ट करें"
+  },
+  "typeSelect": {
+    "label": "प्रकार:",
+    "selectPlaceholder": "प्रकार चुनें",
+    "options": {
+      "bug": "बग",
+      "featureSuggestion": "सुविधा सुझाव",
+      "comment": "टिप्पणी",
+      "correction": "सुधार",
+      "help": "सहायता",
+      "siteSearch": "साइट खोज",
+      "admissionQuestion": "प्रवेश संबंधी सवाल"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "ब्राउज़र:",
+    "selectBrowserPlaceholder": "कृपया चुनें",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "अन्य"
+    },
+    "otherBrowserPlaceholder": "अन्य ब्राउज़र निर्दिष्ट करें",
+    "OSLabel": "ऑपरेटिंग सिस्टम:",
+    "selectOSPlaceholder": "कृपया चुनें",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "अन्य"
+    },
+    "otherOSPlaceholder": "अन्य ऑपरेटिंग सिस्टम निर्दिष्ट करें",
+    "screenshotLabel": "स्क्रीनशॉट:"
+  }
+}

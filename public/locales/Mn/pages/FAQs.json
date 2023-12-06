@@ -1,0 +1,80 @@
+{
+  "header": "感谢您访问ACS Mulingua网站！您的反馈对我们非常重要。请提供您在浏览页面时遇到的任何问题的详细信息，或者对改进网站的建议。",
+  "form": {
+    "head": "常见问题",
+    "emailLabel": "邮箱：",
+    "emailPlaceholder": "输入您的邮箱",
+    "fullNameLabel": "全名：",
+    "fullNamePlaceholder": "输入您的全名",
+    "affiliationLabel": "所属：",
+    "detailsLabel": "详情：",
+    "detailsPlaceholder": "输入详情",
+    "urlLabel": "网址：",
+    "urlPlaceholder": "输入网址",
+    "submitButton": "提交",
+    "submittingButton": "正在发送..."
+  },
+  "errorMessages": {
+    "validEmail": "请输入有效的电子邮箱（例如，samy@gmail.com）",
+    "emailEmpty": "请输入您的邮箱",
+    "fullNameEmpty": "请输入您的全名",
+    "detailsEmpty": "请输入详情",
+    "typeEmpty": "请选择类型",
+    "affiliationEmpty": "请输入所属",
+    "otherAffiliationEmpty": "请输入其他所属",
+    "otherBrowserEmpty": "请输入其他浏览器",
+    "otherOSEmpty": "请输入其他操作系统",
+    "browserEmpty": "请输入浏览器",
+    "OSEmpty": "请输入操作系统",
+    "screenshotEmpty": "请添加问题的截图",
+    "screenshotAlert": "文件大小超过5MB。请选择一个更小的文件。",
+    "successMessage": "感谢您的反馈！您的消息已发送。",
+    "failMessage": "发送反馈时出错"
+  },
+  "affiliationSelect": {
+    "label": "您在ACS Mulingua的所属是？",
+    "selectPlaceholder": "选择所属",
+    "options": {
+      "prospectiveStudent": "未来的学生或教师",
+      "currentStudent": "在校学生",
+      "currentTeacher": "在校教师",
+      "other": "其他"
+    },
+    "otherPlaceholder": "指定其他所属"
+  },
+  "typeSelect": {
+    "label": "类型：",
+    "selectPlaceholder": "选择类型",
+    "options": {
+      "bug": "错误",
+      "featureSuggestion": "功能建议",
+      "comment": "评论",
+      "correction": "更正",
+      "help": "帮助",
+      "siteSearch": "网站搜索",
+      "admissionQuestion": "入学问题"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "浏览器：",
+    "selectBrowserPlaceholder": "请选择",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "其他"
+    },
+    "otherBrowserPlaceholder": "指定其他浏览器",
+    "OSLabel": "操作系统：",
+    "selectOSPlaceholder": "请选择",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "其他"
+    },
+    "otherOSPlaceholder": "指定其他操作系统",
+    "screenshotLabel": "截图："
+  }
+}

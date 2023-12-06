@@ -1,0 +1,80 @@
+{
+  "header": "شكرًا لزيارتكم موقع ACS Mulingua! تعتبر ملاحظاتكم قيمة للغاية ومهمة جدًا بالنسبة لنا. يرجى تقديم تفاصيل حول أي مشكلة واجهتكم أثناء استكشاف الصفحات أو الاقتراحات التي قد تكون لديكم لتحسين الموقع.",
+  "form": {
+    "head": "الأسئلة الشائعة",
+    "emailLabel": "البريد الإلكتروني:",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "fullNameLabel": "الاسم الكامل:",
+    "fullNamePlaceholder": "أدخل الاسم الكامل",
+    "affiliationLabel": "الانتماء:",
+    "detailsLabel": "التفاصيل:",
+    "detailsPlaceholder": "أدخل التفاصيل",
+    "urlLabel": "الرابط:",
+    "urlPlaceholder": "أدخل الرابط",
+    "submitButton": "إرسال",
+    "submittingButton": "جارٍ الإرسال..."
+  },
+  "errorMessages": {
+    "validEmail": "الرجاء إدخال بريد إلكتروني صالح (مثال: samy@gmail.com)",
+    "emailEmpty": "الرجاء إدخال بريدك الإلكتروني",
+    "fullNameEmpty": "الرجاء إدخال الاسم الكامل",
+    "detailsEmpty": "الرجاء إدخال التفاصيل",
+    "typeEmpty": "الرجاء اختيار النوع",
+    "affiliationEmpty": "الرجاء إدخال انتمائك",
+    "otherAffiliationEmpty": "الرجاء إدخال انتمائك الآخر",
+    "otherBrowserEmpty": "الرجاء إدخال المتصفح الآخر",
+    "otherOSEmpty": "الرجاء إدخال نظام التشغيل الآخر",
+    "browserEmpty": "الرجاء إدخال المتصفح",
+    "OSEmpty": "الرجاء إدخال نظام التشغيل",
+    "screenshotEmpty": "الرجاء إضافة لقطة شاشة للمشكلة",
+    "screenshotAlert": "حجم الملف يتجاوز 5 ميغابايت. يرجى اختيار ملف أصغر.",
+    "successMessage": "شكرًا لتقديم ملاحظاتكم! تم إرسال رسالتكم بنجاح.",
+    "failMessage": "خطأ في إرسال الملاحظات"
+  },
+  "affiliationSelect": {
+    "label": "ما هو انتماؤك لـ ACS Mulingua؟",
+    "selectPlaceholder": "حدد الانتماء",
+    "options": {
+      "prospectiveStudent": "طالب مستقبلي أو معلم",
+      "currentStudent": "طالب حالي",
+      "currentTeacher": "معلم حالي",
+      "other": "آخر"
+    },
+    "otherPlaceholder": "حدد انتماؤك الآخر"
+  },
+  "typeSelect": {
+    "label": "النوع:",
+    "selectPlaceholder": "حدد النوع",
+    "options": {
+      "bug": "خلل",
+      "featureSuggestion": "اقتراح ميزة",
+      "comment": "تعليق",
+      "correction": "تصحيح",
+      "help": "مساعدة",
+      "siteSearch": "بحث في الموقع",
+      "admissionQuestion": "سؤال بخصوص القبول"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "المتصفح:",
+    "selectBrowserPlaceholder": "الرجاء الاختيار",
+    "browserOptions": {
+      "chrome": "كروم",
+      "firefox": "فايرفوكس",
+      "safari": "سفاري",
+      "edge": "إيدج",
+      "other": "آخر"
+    },
+    "otherBrowserPlaceholder": "حدد متصفحك الآخر",
+    "OSLabel": "نظام التشغيل:",
+    "selectOSPlaceholder": "الرجاء الاختيار",
+    "OSOptions": {
+      "windows": "ويندوز",
+      "macOS": "ماكOS",
+      "linux": "لينكس",
+      "other": "آخر"
+    },
+    "otherOSPlaceholder": "حدد نظام التشغيل الآخر",
+    "screenshotLabel": "لقطة الشاشة:"
+  }
+}

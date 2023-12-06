@@ -1,0 +1,80 @@
+{
+  "header": "Merci de visiter le site web ACS Mulingua ! Vos retours sont précieux et très importants pour nous. Veuillez fournir des détails sur tout problème rencontré lors de l'exploration des pages ou des suggestions que vous pourriez avoir pour améliorer le site.",
+  "form": {
+    "head": "FAQ",
+    "emailLabel": "E-mail :",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "fullNameLabel": "Nom complet :",
+    "fullNamePlaceholder": "Entrez votre nom complet",
+    "affiliationLabel": "Affiliation :",
+    "detailsLabel": "Détails :",
+    "detailsPlaceholder": "Entrez les détails",
+    "urlLabel": "URL :",
+    "urlPlaceholder": "Entrez l'URL",
+    "submitButton": "Envoyer",
+    "submittingButton": "Envoi en cours..."
+  },
+  "errorMessages": {
+    "validEmail": "Veuillez entrer une adresse e-mail valide (par exemple, samy@gmail.com)",
+    "emailEmpty": "Veuillez saisir votre adresse e-mail",
+    "fullNameEmpty": "Veuillez saisir votre nom complet",
+    "detailsEmpty": "Veuillez saisir les détails",
+    "typeEmpty": "Veuillez sélectionner le type",
+    "affiliationEmpty": "Veuillez saisir votre affiliation",
+    "otherAffiliationEmpty": "Veuillez saisir votre autre affiliation",
+    "otherBrowserEmpty": "Veuillez saisir votre autre navigateur",
+    "otherOSEmpty": "Veuillez saisir votre autre système d'exploitation",
+    "browserEmpty": "Veuillez saisir votre navigateur",
+    "OSEmpty": "Veuillez saisir votre système d'exploitation",
+    "screenshotEmpty": "Veuillez ajouter une capture d'écran pour le problème",
+    "screenshotAlert": "La taille du fichier dépasse 5 Mo. Veuillez choisir un fichier plus petit.",
+    "successMessage": "Merci pour vos retours ! Votre message a été envoyé avec succès.",
+    "failMessage": "Erreur lors de l'envoi du message"
+  },
+  "affiliationSelect": {
+    "label": "Quelle est votre affiliation à ACS Mulingua ?",
+    "selectPlaceholder": "Sélectionnez l'affiliation",
+    "options": {
+      "prospectiveStudent": "Étudiant ou Enseignant potentiel",
+      "currentStudent": "Étudiant actuel",
+      "currentTeacher": "Enseignant actuel",
+      "other": "Autre"
+    },
+    "otherPlaceholder": "Précisez l'autre affiliation"
+  },
+  "typeSelect": {
+    "label": "Type :",
+    "selectPlaceholder": "Sélectionnez le type",
+    "options": {
+      "bug": "Bogue",
+      "featureSuggestion": "Suggestion de fonctionnalité",
+      "comment": "Commentaire",
+      "correction": "Correction",
+      "help": "Aide",
+      "siteSearch": "Recherche sur le site",
+      "admissionQuestion": "Question d'admission"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "Navigateur :",
+    "selectBrowserPlaceholder": "Veuillez sélectionner",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "Autre"
+    },
+    "otherBrowserPlaceholder": "Précisez un autre navigateur",
+    "OSLabel": "Système d'exploitation :",
+    "selectOSPlaceholder": "Veuillez sélectionner",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "Autre"
+    },
+    "otherOSPlaceholder": "Précisez un autre système d'exploitation",
+    "screenshotLabel": "Capture d'écran :"
+  }
+}

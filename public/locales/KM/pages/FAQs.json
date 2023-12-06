@@ -1,0 +1,80 @@
+{
+  "header": "Mersi pou vizit ACS Mulingua sitwèb la! Nou ena enportans bokou pou zot zwenn. Tanpri, donn detay lor nenport ki problem zot ti zwenn lor bann paj yo oubyen sipsyon zot kapav ena pou amelyore sitwèb la.",
+  "form": {
+    "head": "FAQs",
+    "emailLabel": "Imel:",
+    "emailPlaceholder": "Antre imel zot",
+    "fullNameLabel": "Non Konplet:",
+    "fullNamePlaceholder": "Antre non konplet zot",
+    "affiliationLabel": "Afilyasyon:",
+    "detailsLabel": "Detay:",
+    "detailsPlaceholder": "Antre detay",
+    "urlLabel": "URL:",
+    "urlPlaceholder": "Antre URL",
+    "submitButton": "Soumet",
+    "submittingButton": "Anviway"
+  },
+  "errorMessages": {
+    "validEmail": "Tanpri antre en imel valab (ex: samy@gmail.com)",
+    "emailEmpty": "Tanpri antre imel zot",
+    "fullNameEmpty": "Tanpri antre non konplet zot",
+    "detailsEmpty": "Tanpri antre detay",
+    "typeEmpty": "Tanpri seleksyonnen lekòl la",
+    "affiliationEmpty": "Tanpri antre afilyasyon zot",
+    "otherAffiliationEmpty": "Tanpri antre lòt afilyasyon zot",
+    "otherBrowserEmpty": "Tanpri antre lòt navigatè",
+    "otherOSEmpty": "Tanpri antre lòt sistem operasyon",
+    "browserEmpty": "Tanpri antre navigatè zot",
+    "OSEmpty": "Tanpri antre sistem operasyon zot",
+    "screenshotEmpty": "Tanpri ajoute en kaptir ekran pou problem la",
+    "screenshotAlert": "Screenshot la tro gro. Si ou kapav, swazir enn fichye pli pti.",
+    "successMessage": "Mersi pou to konesans! To messaz inn voye.",
+    "failMessage": "Ero voye Konesans"
+  },
+  "affiliationSelect": {
+    "label": "Ki afilyasyon ACS Mulingua zot?",
+    "selectPlaceholder": "Seleksyonnen Afilyasyon",
+    "options": {
+      "prospectiveStudent": "Elev prospektif oswa Profesè",
+      "currentStudent": "Elev Lazetid",
+      "currentTeacher": "Profesè Lazetid",
+      "other": "Lòt"
+    },
+    "otherPlaceholder": "Deklar Lòt Afilyasyon"
+  },
+  "typeSelect": {
+    "label": "Lekòl:",
+    "selectPlaceholder": "Seleksyonnen Lekòl",
+    "options": {
+      "bug": "Enpase",
+      "featureSuggestion": "Sipsyon Karakteristik",
+      "comment": "Kòmantè",
+      "correction": "Koreksyon",
+      "help": "Ede",
+      "siteSearch": "Rechèch Sit",
+      "admissionQuestion": "Kesyon sou Admisyon"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "Navigatè:",
+    "selectBrowserPlaceholder": "Tanpri Seleksyone",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "Lòt"
+    },
+    "otherBrowserPlaceholder": "Deklar Lòt navigatè",
+    "OSLabel": "Sistem Operasyon:",
+    "selectOSPlaceholder": "Tanpri Seleksyone",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "Lòt"
+    },
+    "otherOSPlaceholder": "Deklar Lòt sistem operasyon",
+    "screenshotLabel": "Kaptir Ekran:"
+  }
+}

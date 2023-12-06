@@ -1,0 +1,80 @@
+{
+  "header": "ACS Mulingua ویب سائٹ کا دورہ کرنے کا شکریہ! آپ کی رائے ہمارے لیے بہت قیمتی ہے اور ہمارے لیے بہت اہم ہے۔ براہ کرم ویب سائٹ میں جانے کے دوران کسی بھی مسئلے کی تفصیلات یا ویب سائٹ میں بہتری کے لیے کوئی تجاویز فراہم کریں۔",
+  "form": {
+    "head": "عمومی سوالات",
+    "emailLabel": "ای میل:",
+    "emailPlaceholder": "اپنا ای میل درج کریں",
+    "fullNameLabel": "پورا نام:",
+    "fullNamePlaceholder": "اپنا پورا نام درج کریں",
+    "affiliationLabel": "وابستگی:",
+    "detailsLabel": "تفصیلات:",
+    "detailsPlaceholder": "تفصیلات درج کریں",
+    "urlLabel": "URL:",
+    "urlPlaceholder": "URL درج کریں",
+    "submitButton": "جمع کریں",
+    "submittingButton": "جاری ہے..."
+  },
+  "errorMessages": {
+    "validEmail": "براہ کرم ایک درست ای میل درج کریں (مثال: samy@gmail.com)",
+    "emailEmpty": "براہ کرم اپنا ای میل درج کریں",
+    "fullNameEmpty": "براہ کرم اپنا پورا نام درج کریں",
+    "detailsEmpty": "براہ کرم تفصیلات درج کریں",
+    "typeEmpty": "براہ کرم قسم منتخب کریں",
+    "affiliationEmpty": "براہ کرم اپنی وابستگی درج کریں",
+    "otherAffiliationEmpty": "براہ کرم دوسری وابستگی درج کریں",
+    "otherBrowserEmpty": "براہ کرم اپنا دوسرا براؤزر درج کریں",
+    "otherOSEmpty": "براہ کرم اپنا دوسرا آپریٹنگ سسٹم درج کریں",
+    "browserEmpty": "براہ کرم اپنا براؤزر درج کریں",
+    "OSEmpty": "براہ کرم اپنا آپریٹنگ سسٹم درج کریں",
+    "screenshotEmpty": "براہ کرم مسئلے کی ایک چھوٹی سی تصویر شامل کریں",
+    "screenshotAlert": "فائل کا سائز 5 ایم بی سے زیادہ ہے۔ براہ کرم ایک چھوٹی فائل منتخب کریں۔",
+    "successMessage": "آپ کی رائے کا شکریہ! آپ کا پیغام بھیج دیا گیا ہے۔",
+    "failMessage": "رائے بھیجنے میں خرابی واقع ہوئی"
+  },
+  "affiliationSelect": {
+    "label": "ACS Mulingua سے آپ کی کونسی وابستگی ہے؟",
+    "selectPlaceholder": "وابستگی منتخب کریں",
+    "options": {
+      "prospectiveStudent": "مستقبل کا طالب علم یا اساتذہ",
+      "currentStudent": "موجودہ طالب علم",
+      "currentTeacher": "موجودہ اساتذہ",
+      "other": "دیگر"
+    },
+    "otherPlaceholder": "دیگر وابستگی مخصوص کریں"
+  },
+  "typeSelect": {
+    "label": "قسم:",
+    "selectPlaceholder": "قسم منتخب کریں",
+    "options": {
+      "bug": "خرابی",
+      "featureSuggestion": "خصوصیت کی سفارش",
+      "comment": "تبصرہ",
+      "correction": "تصحیح",
+      "help": "مدد",
+      "siteSearch": "سائٹ تلاش",
+      "admissionQuestion": "داخلہ سے متعلق سوال"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "براؤزر:",
+    "selectBrowserPlaceholder": "براہ کرم منتخب کریں",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "دیگر"
+    },
+    "otherBrowserPlaceholder": "دوسرا براؤزر مخصوص کریں",
+    "OSLabel": "آپریٹنگ سسٹم:",
+    "selectOSPlaceholder": "براہ کرم منتخب کریں",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "دیگر"
+    },
+    "otherOSPlaceholder": "دوسرا آپریٹنگ سسٹم مخصوص کریں",
+    "screenshotLabel": "چھوٹی سی تصویر:"
+  }
+}

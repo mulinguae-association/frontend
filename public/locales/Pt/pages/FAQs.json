@@ -1,0 +1,80 @@
+{
+  "header": "Obrigado por visitar o site da ACS Mulingua! Seu feedback é muito valorizado e importante para nós. Por favor, forneça detalhes sobre qualquer problema que tenha encontrado ao explorar as páginas ou sugestões que possa ter para melhorar o site.",
+  "form": {
+    "head": "Perguntas Frequentes",
+    "emailLabel": "E-mail:",
+    "emailPlaceholder": "Insira seu e-mail",
+    "fullNameLabel": "Nome completo:",
+    "fullNamePlaceholder": "Insira seu nome completo",
+    "affiliationLabel": "Afiliação:",
+    "detailsLabel": "Detalhes:",
+    "detailsPlaceholder": "Insira os detalhes",
+    "urlLabel": "URL:",
+    "urlPlaceholder": "Insira a URL",
+    "submitButton": "Enviar",
+    "submittingButton": "Enviando..."
+  },
+  "errorMessages": {
+    "validEmail": "Por favor, insira um e-mail válido (por exemplo, samy@gmail.com)",
+    "emailEmpty": "Por favor, insira seu e-mail",
+    "fullNameEmpty": "Por favor, insira seu nome completo",
+    "detailsEmpty": "Por favor, insira os detalhes",
+    "typeEmpty": "Por favor, selecione o tipo",
+    "affiliationEmpty": "Por favor, insira sua afiliação",
+    "otherAffiliationEmpty": "Por favor, insira sua outra afiliação",
+    "otherBrowserEmpty": "Por favor, insira seu outro navegador",
+    "otherOSEmpty": "Por favor, insira seu outro sistema operacional",
+    "browserEmpty": "Por favor, insira seu navegador",
+    "OSEmpty": "Por favor, insira seu sistema operacional",
+    "screenshotEmpty": "Por favor, adicione uma captura de tela para o problema",
+    "screenshotAlert": "O tamanho do arquivo excede 5MB. Por favor, escolha um arquivo menor.",
+    "successMessage": "Obrigado pelo seu feedback! Sua mensagem foi enviada com sucesso.",
+    "failMessage": "Erro ao enviar o feedback"
+  },
+  "affiliationSelect": {
+    "label": "Qual é a sua afiliação à ACS Mulingua?",
+    "selectPlaceholder": "Selecione a afiliação",
+    "options": {
+      "prospectiveStudent": "Estudante ou Professor Prospectivo",
+      "currentStudent": "Estudante Atual",
+      "currentTeacher": "Professor Atual",
+      "other": "Outro"
+    },
+    "otherPlaceholder": "Especifique Outra Afiliação"
+  },
+  "typeSelect": {
+    "label": "Tipo:",
+    "selectPlaceholder": "Selecione o tipo",
+    "options": {
+      "bug": "Erro",
+      "featureSuggestion": "Sugestão de Recurso",
+      "comment": "Comentário",
+      "correction": "Correção",
+      "help": "Ajuda",
+      "siteSearch": "Busca no Site",
+      "admissionQuestion": "Pergunta de Admissão"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "Navegador:",
+    "selectBrowserPlaceholder": "Por favor, selecione",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "Outro"
+    },
+    "otherBrowserPlaceholder": "Especifique outro navegador",
+    "OSLabel": "Sistema Operacional:",
+    "selectOSPlaceholder": "Por favor, selecione",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "Outro"
+    },
+    "otherOSPlaceholder": "Especifique outro sistema operacional",
+    "screenshotLabel": "Captura de Tela:"
+  }
+}

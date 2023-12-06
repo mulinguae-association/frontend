@@ -1,0 +1,80 @@
+{
+  "header": "Thank you for visiting the ACS Mulingua website! Your feedback is highly valued and very important for us. Please provide details about any problem you encountered while exploring the pages or suggestions you might have to improve the website.",
+  "form": {
+    "head": "FAQs",
+    "emailLabel": "E-mail:",
+    "emailPlaceholder": "Enter your email",
+    "fullNameLabel": "Full Name:",
+    "fullNamePlaceholder": "Enter your full name",
+    "affiliationLabel": "Affiliation:",
+    "detailsLabel": "Details:",
+    "detailsPlaceholder": "Enter details",
+    "urlLabel": "URL:",
+    "urlPlaceholder": "Enter URL",
+    "submitButton": "Submit",
+    "submittingButton": "Sending..."
+  },
+  "errorMessages": {
+    "validEmail": "Please enter a valid email (e.g., samy@gmail.com)",
+    "emailEmpty": "Please enter your email",
+    "fullNameEmpty": "Please enter your full name",
+    "detailsEmpty": "Please enter details",
+    "typeEmpty": "Please select the type",
+    "affiliationEmpty": "Please enter your affiliation",
+    "otherAffiliationEmpty": "Please enter your other affiliation",
+    "otherBrowserEmpty": "Please enter your other browser",
+    "otherOSEmpty": "Please enter your other operating system",
+    "browserEmpty": "Please enter your browser",
+    "OSEmpty": "Please enter your operating system",
+    "screenshotEmpty": "Please add a screenshot for the problem",
+    "screenshotAlert": "File size exceeds 5MB. Please choose a smaller file.",
+    "successMessage": "Thank you for your feedback! Your message has been sent.",
+    "failMessage": "error sending Feedback"
+  },
+  "affiliationSelect": {
+    "label": "What is your ACS Mulingua affiliation?",
+    "selectPlaceholder": "Select Affiliation",
+    "options": {
+      "prospectiveStudent": "Prospective Student or Teacher",
+      "currentStudent": "Current Student",
+      "currentTeacher": "Current Teacher",
+      "other": "Other"
+    },
+    "otherPlaceholder": "Specify Other Affiliation"
+  },
+  "typeSelect": {
+    "label": "Type:",
+    "selectPlaceholder": "Select Type",
+    "options": {
+      "bug": "Bug",
+      "featureSuggestion": "Feature Suggestion",
+      "comment": "Comment",
+      "correction": "Correction",
+      "help": "Help",
+      "siteSearch": "Site search",
+      "admissionQuestion": "Admission question"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "Browser:",
+    "selectBrowserPlaceholder": "Please Select",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "Other"
+    },
+    "otherBrowserPlaceholder": "Specify Other browser",
+    "OSLabel": "Operating System:",
+    "selectOSPlaceholder": "Please Select",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "Other"
+    },
+    "otherOSPlaceholder": "Specify Other operating system",
+    "screenshotLabel": "Screenshot:"
+  }
+}

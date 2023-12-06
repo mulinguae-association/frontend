@@ -1,0 +1,80 @@
+{
+  "header": "ACS Mulingua wikitapasina munaykitaqmi! Aríkiqaqa uyarichiyki, kayninpi tukuyta munaniyki ACS Mulingua wikitapasinaqa tukuyta rimasqakuypi tukuyta munayta khuyaytanchu.",
+  "form": {
+    "head": "FAQ",
+    "emailLabel": "Imel:",
+    "emailPlaceholder": "Imel yachan",
+    "fullNameLabel": "Sutin:",
+    "fullNamePlaceholder": "Sutin yachan",
+    "affiliationLabel": "Añay:",
+    "detailsLabel": "Rimay:",
+    "detailsPlaceholder": "Rimay yachan",
+    "urlLabel": "URL:",
+    "urlPlaceholder": "URL yachan",
+    "submitButton": "Yachay",
+    "submittingButton": "Yachaywan..."
+  },
+  "errorMessages": {
+    "validEmail": "Kayninpi iskay imel yachanmi yachan (masi, samy@gmail.com)",
+    "emailEmpty": "Imel yachanmi yachan",
+    "fullNameEmpty": "Sutin yachanmi yachan",
+    "detailsEmpty": "Rimay yachanmi yachan",
+    "typeEmpty": "Añaymi yachanmi yachan",
+    "affiliationEmpty": "Añaymi yachanmi yachan",
+    "otherAffiliationEmpty": "Añaymi llaqtanchu yachanmi yachan",
+    "otherBrowserEmpty": "Añaymi llaqtanchu yachanmi yachan",
+    "otherOSEmpty": "Añaymi llaqtanchu yachanmi yachan",
+    "browserEmpty": "Llaqtanchu yachanmi yachan",
+    "OSEmpty": "Llaqtanchu yachanmi yachan",
+    "screenshotEmpty": "Puklla kaptikunapi khuyay yachanmi yachan",
+    "screenshotAlert": "Screenshot-qa hina kachkan 5MB-ta yuyayta atiykuy. Yuyaypi yachasqa yachan.",
+    "successMessage": "Kayninpi yachaykachun! Yachanpis munaniyki kachunchu.",
+    "failMessage": "Feedback yachaywanmi llaqtanchu"
+  },
+  "affiliationSelect": {
+    "label": "ACS Mulingua wikitapasinaqa añayninkichu?",
+    "selectPlaceholder": "Añayninkichu",
+    "options": {
+      "prospectiveStudent": "Añayninkichu ñuqaqa maestro ñanpi",
+      "currentStudent": "Añayninkichu ñuqaqa maestro",
+      "currentTeacher": "Añayninkichu ñuqaqa maestro",
+      "other": "Ñuqaqa"
+    },
+    "otherPlaceholder": "Ñuqaqa añayninkichu"
+  },
+  "typeSelect": {
+    "label": "Kayninpi:",
+    "selectPlaceholder": "Kaynininkichu",
+    "options": {
+      "bug": "Pukllay",
+      "featureSuggestion": "Yachan kuyuchiy",
+      "comment": "Rimay",
+      "correction": "Achikyay",
+      "help": "Yachan",
+      "siteSearch": "Wikitapasina rimay",
+      "admissionQuestion": "Yachan kancha"
+    }
+  },
+  "bugComponent": {
+    "browserLabel": "Llaqtan:",
+    "selectBrowserPlaceholder": "Kaynininkichu",
+    "browserOptions": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "safari": "Safari",
+      "edge": "Edge",
+      "other": "Ñuqaqa"
+    },
+    "otherBrowserPlaceholder": "Ñuqaqa llaqtan",
+    "OSLabel": "Sistemapipas:",
+    "selectOSPlaceholder": "Kaynininkichu",
+    "OSOptions": {
+      "windows": "Windows",
+      "macOS": "MacOS",
+      "linux": "Linux",
+      "other": "Ñuqaqa"
+    },
+    "otherOSPlaceholder": "Ñuqaqa sistemapipas",
+    "screenshotLabel": "Kaptikunapi khuyay:"
+  }
+}
