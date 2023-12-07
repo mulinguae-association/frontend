@@ -7,7 +7,7 @@ async function addQuestion(req, res) {
   try {
     const { fullName, email } = req.body
     const { originalname, buffer } = req.file || { originalname: null, buffer: null };
-    const questionsTemplate = path.join(__dirname, "../email_templates/add_Questions.html")
+    const questionsTemplate = path.join(__dirname, "../email_templates/add_feedback.html")
     const htmlTemplate = await fs.readFile(questionsTemplate, "utf-8")
     const renderedHTML = htmlTemplate.replace(/{{\s*([^}]+)\s*}}/g, (_, match) => req.body[match.trim()] !== undefined ? req.body[match.trim()] : `<span style="color:red; font-size:15px">No value provided</span>`)
     const mailOptions = {
