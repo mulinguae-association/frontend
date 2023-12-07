@@ -1,11 +1,11 @@
 import User from "../db/models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import nodemailer from "nodemailer"
 import { convertToWebp } from "../utils/imageConversion.js";
 import { __dirname } from '../utils/dirname.js';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { sendEmail } from "../utils/emailSender.js";
 async function register(req, res) {
   try {
     const { name, email, password, confirmPassword, profileImage } = req.body;
@@ -82,7 +82,7 @@ const logout = (req, res) => {
 }
 
 async function forgotPasssword(req, res) {
-  const { email } = req.body;
+  const { email, lang } = req.body;
 
   try {
     if (!email) {
@@ -99,28 +99,23 @@ async function forgotPasssword(req, res) {
       const templatePath = path.join(__dirname, "../email_templates/reset_password.html");
       const htmlTemplate = await fs.readFile(templatePath, 'utf-8')
 
-      const link = `http://localhost:3000/reset/${user._id}/${token}`;
+      const link = `http://localhost:3000/${lang}/reset/${user._id}/${token}`;
       const formateHtml = htmlTemplate.replace('{{resetLink}}', link)
 
-      const transport = nodemailer.createTransport({
-        service: "Gmail",
-        auth: {
-          user: process.env.EMAIL,
-          pass: process.env.EMAIL_PASS
-        },
-      });
       const mailOptions = {
         from: "ascmulingua@gmail.com",
         to: email,
         subject: 'Password Rest Request',
         html: formateHtml,
       }
-      transport.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          return res.status(400).json({ message: "Error" });
-        }
+
+      try {
+        await sendEmail(mailOptions);
         return res.status(200).json({ message: "Email Sent" });
-      });
+      } catch (error) {
+        return res.status(400).json({ message: "Faild to send email" });
+      }
+
     } else {
       return res.status(400).json({ error: "Invaild Email" })
     }
