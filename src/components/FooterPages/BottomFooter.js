@@ -12,7 +12,7 @@ const BottomFooter = () => {
           <div className='info'>
             <p>
               <span>
-                <Link to={`/${i18next.language}/`}>{t("link12")}</Link>
+                <Link to={`/${i18next.language}/privacy-policy`}>{t("link12")}</Link>
               </span>
               <span>|</span>
               <span>
