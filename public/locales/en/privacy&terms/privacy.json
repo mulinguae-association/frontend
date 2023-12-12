@@ -1,0 +1,558 @@
+{
+  "EffectiveDate": "Effective date: July 1, 2023",
+  "ContentHead": "Welcome to ACS Mulingua´s Private Policy.",
+  "Introduction": "This Policy tells you how we collect and use your personal data (also known as personal information). It also informs you about how we keep your data safe and the choices you may have, so please make sure you read it. We want this Policy to be easy to read. In some sections, you can click to get more detail about what we do. Please note, all parts of this Policy apply to all the things we do. We may give further notices for some Services and places, and these should be read in conjunction with this Policy. Our Services may contain links to other sites. We do not control these sites and we encourage you to read their privacy notices. Our Services should not be used by individuals who are less than 16 years old.",
+  "Policy Coverage": {
+    "title": "What does this Policy cover?",
+    "policyPoints": [
+      "This Policy tells you how we collect and use your personal data (also known as personal information). It also informs you about how we keep your data safe and the choices you may have, so please make sure you read it.",
+      "We want this Policy to be easy to read. In some sections, you can click to get more detail about what we do. Please note, all parts of this Policy apply to all the things we do. We may give further notices for some Services and places, and these should be read in conjunction with this Policy.",
+      "Our Services may contain links to other sites. We do not control these sites and we encourage you to read their privacy notices.",
+      "Our Services should not be used by individuals who are less than 16 years old."
+    ]
+  },
+  "Collect Data": {
+    "summary": "What data do we collect, use, and share? (summary)",
+    "noticeAtCollection": "This section constitutes our notice at collection pursuant to the CCPA.",
+    "categories": [
+      {
+        "category": "Personal Identifiers",
+        "description": "Such as name, alias, postal address, email address, telephone number, online identifier, Internet Protocol address, account name, education, employment, credit or debit card number, any financial information, and sensitive information like Social Security number, account log-in, and information on government identification cards.",
+        "purpose": "Providing our Services and carrying out your requests.",
+        "uses": [
+          "To register and secure your account.",
+          "To receive and respond to calls and messages from you.",
+          "To check your identity and eligibility for our Services.",
+          "To help you get the best pricing and products we have.",
+          "To direct you to the websites of our partners.",
+          "To process transactions between you and us, or our partners.",
+          "To personalize the Service you get.",
+          "To keep your data up to date.",
+          "To provide customer service and support.",
+          "To complete data rights requests you have made.",
+          "To enable you to use social sharing tools.",
+          "To track sales and get paid by our partners.",
+          "To allow you to use our Services on one device and pick up seamlessly where you left off on another device."
+        ]
+      },
+      {
+        "category": "Improving and promoting our Services and those of others.",
+        "description": "Such as analysis and market research, presenting Services clearly and effectively, running sweepstakes and surveys, creating better products, and other related purposes.",
+        "purpose": "To help improve and promote our Services, and the Services of our partners.",
+        "uses": [
+          "To carry out analysis and market research.",
+          "To help present our Services clearly and in the most effective way.",
+          "To run sweepstakes and surveys.",
+          "To help us and our partners create better products for you.",
+          "To process any rewards we may offer to you.",
+          "To send updates and Service messages about your products and services.",
+          "To let you know about our services and promotions by email, social media (e.g., Facebook), and using push notifications (where you agree).",
+          "To let you know about the Services of other Red Ventures’ brands.",
+          "To build, train, and augment models which help us understand your likely interests and those of other consumers.",
+          "To target advertising to you, on this and other websites, based on data we have collected or created.",
+          "To provide location-based offers based on your device’s physical location (where you agree).",
+          "To help us understand if and how our and others marketing works."
+        ]
+      },
+      {
+        "category": "Operating our business.",
+        "description": "Such as tasks necessary for running our Services and business, securing our business and preventing fraud, creating reports for internal or external purposes, complying with legitimate legal requests, and other related purposes.",
+        "purpose": "In the course of running our business we may use your data.",
+        "uses": [
+          "To conduct tasks necessary for running our Services and business.",
+          "To help secure our business and prevent fraud.",
+          "To create reports for internal or external purposes.",
+          "To comply with legitimate legal requests.",
+          "To audit our business and processes.",
+          "To protect the interests of our business, and those of our partners.",
+          "For other purposes not described in this Privacy Policy that you consent to (from time to time) and as otherwise permitted by law."
+        ]
+      },
+      {
+        "category": "Protected Classification Characteristics",
+        "description": "Sensitive personal information such as your age, race, ancestry, national origin, citizenship, marital status, and sex."
+      },
+      {
+        "category": "Commercial Information",
+        "description": "Information about products or services you purchased, obtained, or considered."
+      },
+      {
+        "category": "Internet or Network Activity Information",
+        "description": "Includes browsing history, search history, and interaction with websites or applications."
+      },
+      {
+        "category": "Geolocation Information",
+        "description": "Data derived from your device to locate you within a geographic area."
+      },
+      {
+        "category": "Audio or Visual Information",
+        "description": "Such as audio or screen records (with your permission)."
+      },
+      {
+        "category": "Inferences",
+        "description": "Drawn from the data above which could create a profile reflecting your preferences, characteristics, behavior, etc."
+      }
+    ],
+    "OtherDisclosures": [
+      {
+        "title": "Other Disclosures",
+        "content": "We may share your personal data with your consent or to comply with laws or other legal processes."
+      },
+      {
+        "title": "Sale of Personal Data",
+        "notice": "We do not sell, rent, or loan your personal data to third parties for money.",
+        "details": "However, subject to your privacy choices, we may share your data (Identifiers, Internet or Network Activity Data, and Geo-location Information sections of the above chart) to social media platforms, analytics providers, and advertising companies, and this may be treated as a “sale” under certain laws. See the How Can You Control Your Data section of this Policy for more detail on your privacy choices."
+      },
+      {
+        "title": "Data Retention",
+        "content": "We keep your data for as long as we need to in order to provide you Services and to comply with our business and legal obligations. When we no longer need your data for our stated purposes, we securely delete it."
+      },
+      {
+        "title": "Collection of Data from Children",
+        "content": "We recognize the importance of protecting the privacy and safety of children. Our Services are not directed towards children. We do not knowingly collect data about children under the age of 16 or minors otherwise defined in local law or regulation without verifiable parental consent. If we learn that someone under 16 has given us their data, we will use reasonable efforts to remove that data from our databases."
+      }
+    ]
+  },
+
+  "dataCollection": {
+    "title": "What data do we collect?",
+    "description": "When you use our Services, we collect and use data in four main ways:",
+    "waysOfCollection": [
+      "You give us data when using our Services (such as your name or email).",
+      "Data is collected automatically as you use our Services (such as your IP address).",
+      "We obtain data from other parties to help run our Services.",
+      "We use or combine the data we get to infer things about you (such as, what appears to interest you)."
+    ],
+    "legitimatePurposes": "We collect the data needed for our legitimate purposes.",
+
+    "detailsCollection": "To provide our Services to you, we use data. Some of this data is personal data. That means it relates to someone we may be able to identify. We collect some of this data from you and others, and some of it we create.Some personal data is sensitive, this includes data about race, politics, religion and beliefs, health, as well as SSN. Generally, we do not collect sensitive data but it may be necessary to use some of our Services. Where this is the case, you have a choice to provide the data (and use the Services) or not.",
+
+    "dataYouProvide": {
+      "title": "Data you provide to us",
+      "description": "To use some of our Services, you need to share some of your data with us, using online forms or other means. What data we need will depend on the Service you wish to use, but it may include the following:",
+      "dataList": [
+        "Name or username",
+        "Email",
+        "Postal address",
+        "Billing address",
+        "Phone number",
+        "Payment card",
+        "Car make and model",
+        "Education"
+      ],
+      "sensitiveDataDes": "Sometimes, the data we need to offer our Services is sensitive, such as:",
+      "sensitiveDataList": [
+        "Military service",
+        "National identifier, such as SSN",
+        "Credit history",
+        "Income and account balances"
+      ],
+      "additionalData": "You may choose to share other data with us, such as your status, images, comments, interests, likes and dislikes, and survey answers."
+    },
+    "dataCollectedAutomatically": {
+      "title": "Data collected automatically",
+      "description": "When you use our Services, we and our business partners may collect some data automatically.",
+      "collectedData": [
+        "ISP",
+        "Source (how you got to our site)",
+        "Clicks, page views, and other actions",
+        "Visit length",
+        "Cookie and other IDs",
+        "IP address",
+        "Device and browser data",
+        "Replays of your sessions",
+        "Emails you have opened"
+      ],
+      "additionalDataCollection": "With your consent, we may also collect more precise location data."
+    },
+    "dataFromOtherSources": {
+      "title": "Data we get from other sources",
+      "description": "Depending on the Service you are using, we may obtain data from other parties.",
+      "obtainedData": [
+        "Name",
+        "Email",
+        "Address",
+        "Phone number",
+        "Business",
+        "Role",
+        "Age",
+        "Gender",
+        "Family size",
+        "Education",
+        "Likely interests",
+        "Purchases",
+        "Off site actions (e.g., banner ads clicked)",
+        "Public data (e.g., online posts)",
+        "Credit reports"
+      ],
+      "consentObtained": "We may also ask for your consent to obtain data about you from other sources (e.g., financial service providers)"
+    },
+    "dataWeCreate": {
+      "title": "Data we create",
+      "description": "We may use or combine any data we get to create new data about you.",
+      "createdData": [
+        "Approximate location",
+        "Inferences about your interests and preferences",
+        "Interest cohorts",
+        "Linked devices"
+      ],
+      "sensitiveDataNote": "Please note: We do not use the data we collect to infer sensitive data about you."
+    },
+    "anonymousData": {
+      "title": "Anonymous data",
+      "description": "We may combine your data with the data of others to create anonymous data.",
+      "createdDataDescription": "This data cannot be used to single you out, it is not considered personal, and we do not try to re-identify you from this data."
+    },
+    "howDoWeUseData": {
+      "title": "How do we use your data?",
+      "description": "We use your data to serve you and operate our business.",
+      "serviceProvision": {
+        "title": "Providing our Service and carrying out your requests.",
+        "description": "When providing our Services we may use your data for various purposes.",
+        "purposes": [
+          "To register and secure your account.",
+          "To receive and respond to calls and messages from you.",
+          "To check your identity and eligibility for our Services.",
+          "To help you get the best pricing and products we have.",
+          "To direct you to the websites of our partners.",
+          "To process transactions between you and us, or our partners.",
+          "To personalize the Service you get.",
+          "To keep your data updated with the best information we have.",
+          "To provide customer service and support.",
+          "To complete data rights requests you have made.",
+          "To enable you to use social sharing tools.",
+          "To track sales and get paid by our partners."
+        ]
+      },
+      "improvingAndPromotingServices": {
+        "title": "Improving and promoting the Services of us and others.",
+        "description": "To help improve and promote our Services, and the Services of our partners, we may use your data for different objectives.",
+        "objectives": [
+          "To carry out analysis and market research.",
+          "To help present our Services clearly and in the most effective way.",
+          "To run sweepstakes and surveys.",
+          "To help us and our partners create better products for you.",
+          "To process any rewards we may offer to you.",
+          "To send updates and Service messages about your products and services.",
+          "To let you know about our services and promotions by email, social media (e.g., Facebook), and using push notifications (where you agree).",
+          "To let you know about the Services of other Red Ventures’ brands.",
+          "To build, train, and augment models which help us understand your likely interests,and those of other consumers.",
+          "To target advertising to you, on this and other websites, based on data we have,collected or created.",
+          "To help us understand if and how our and others marketing works."
+        ]
+      },
+      "operatingBusiness": {
+        "title": "Operating our business.",
+        "description": "In the course of running our business, we may use your data for various operational reasons.",
+        "operationalReasons": [
+          "To conduct tasks necessary for running our Services and business.",
+          "To help secure our business and prevent fraud.",
+          "To create reports for internal or external purposes.",
+          "To comply with legitimate legal requests.",
+          "To audit our business and processes.",
+          "To protect the interests of our business, and those of our partners."
+        ]
+      },
+      "otherPurposes": "For other purposes not described in this Privacy Policy that you consent to (from time to time) and as otherwise permitted by law."
+    }
+  },
+  "howDoWeUseCookies": {
+    "title": "How do we use cookies?",
+    "description": "Cookies are small text files widely used on websites. We use cookies and similar tools on our websites to track returning visitors, store data for later use, and target advertising.",
+    "note": "Adjusting browser settings to block cookies may impact some of our Services' functionality. Refer to our Cookie Policy for detailed information about the cookies we use and their purposes."
+  },
+  "dataSharing": {
+    "title": "When do we share data with others?",
+    "description": "To offer our Services and run our business, we must share some data.",
+    "reasonsForSharing": {
+      "title": "Reasons for Sharing",
+      "list": [
+        "We may share data with third parties to provide our Services. For example, with the partners whose products you have selected.",
+        "We may share data with third parties whose services we use to run our business. For example, we pay for a third party to host our databases for us.",
+        "We may share data with third parties to comply with the law and defend our interests, and those of our partners. For example, we share data with lawyers, external advisors, and other professionals.",
+        "We may share the data collected within the ACS Mulingua. This helps us keep your data safe and stored efficiently. Our other brands may use this data to provide Services you ask for, to suggest our other Services, and show you adverts based on your interests (that we have learned from all the data we collected).",
+        "We might also share your data with third parties when:"
+      ]
+    },
+
+    "otherReasons": [
+      {
+        "title": "Buying and Selling Assets",
+        "description": "Sometimes we may need to share your data with a party that wants to buy our enterprise or an asset that we own, or when we buy the assets of others. Before we do this, we will make sure we appropriately safeguard your data."
+      },
+      {
+        "title": "Client Businesses",
+        "description": "When we collect data on behalf of our clients, we will share your data with them."
+      },
+      {
+        "title": "Service Providers",
+        "description": "We may share your data with parties whose services we use to run our business. Where we use these third-party services, our providers are not allowed to use our data for their own purposes."
+      },
+      {
+        "title": "Partner Promotions",
+        "description": "We may offer contests, sweepstakes, or other events with third party partners. If you enter one of these, your data will be shared with the third party. Please note that they will have their own rules for using your data and you should read their policies."
+      },
+      {
+        "title": "Audience Measurement",
+        "description": "We may share your data with companies who help us to learn about who is using our Services, and how they are used."
+      },
+      {
+        "title": "Watching Videos",
+        "description": "With appropriate consent, we might share data about what videos you watch with other companies, like advertisers or social media sites, but only if it's allowed by the law."
+      },
+      {
+        "title": "Ads and Marketing",
+        "description": "With your permission (as needed), we might share data with companies that show ads, like Google, Live Ramp, The Trade Desk, and Facebook. This helps us to show you ads that match your interests. We also help other people advertise their products, so you might see their messages on our sites or other places online."
+      },
+      {
+        "title": "Legal Requirement",
+        "description": "We may share your data with others, if we believe the law says we have to do it, or if the government asks for it. We also need to protect our rights and the rights of our clients, so we might also share your data to get advice from lawyers and experts."
+      },
+      {
+        "title": "Emergencies",
+        "description": "If we believe someone is in danger, we reserve the right to share data to help protect them."
+      },
+      {
+        "title": "Other People and Messages",
+        "description": "When you agree, some Services might share your data with other companies that want to send you messages about their services. They might contact you by email, phone, mail, or other ways. Please note that they have their own privacy rules too."
+      },
+      {
+        "title": "Anonymous Data",
+        "description": "We create and share general data about our consumers - you cannot be singled out within this data."
+      },
+      {
+        "title": "Data Transfer",
+        "description": "ACS Mulingua has contacts in different countries and we share data between and among them. This means that your data may be stored and used in another country. When this happens, we use legal controls to help ensure your data is treated in keeping with the rules of the country it was collected. However, your data may also be subject to the local laws of the country in which we are using it. This may mean that courts, the police, or other agencies may be able to access it, if their law permits."
+      }
+    ],
+    "note": "Please note: we only share sensitive data when providing you with Services and for other purposes permitted by law."
+  },
+  "socialFeatures": {
+    "title": "Social Features",
+    "description": "Some of our Services let you use 'Social Features' that are offered by third parties. For example, you may be able to 'like' or 'share' things on Facebook / Instagram, Google / YouTube, Linked In, Snapchat, Tik Tok, and Twitter. To use these features, you may need to have an account with the provider, and you should make sure you understand their privacy practices.\n\n If you choose to use Social Features on our Services or access our Services from Social Features, both we and the provider may have access to data about your use. If you are logged in to a provider's services, they may be able to connect your visit with other personal data they hold about you. We (and others) may use this data to place ads based on your interests on these providers' services. In addition, we may ask you if we can access and collect data from your accounts, and post content to your contacts for you.\n\n When you link a Social Feature provider with an account for one of our Services, you grant us access to certain data about you to provide content and services. This access is governed by the privacy policy and choices you make with that provider."
+  },
+  "dataUsage": {
+    "title": "Why we can use your data",
+    "description": [
+      "To collect and use your data, we must have a valid reason.",
+      "These reasons vary based on what we are doing but they will normally be because:"
+    ],
+    "reasons": [
+      "You have given us your consent to use your data.",
+      "We need to fulfill a contract we have with you or take steps towards forming a contract.",
+      "It is our legal duty to use your data in certain ways.",
+      "Using your data for certain reasons is legitimate.",
+      "We need to have good reasons to collect and use your data. Our key reasons are:"
+    ],
+
+    "keyReasons": [
+      {
+        "title": "Contract",
+        "description": "We use your data when we have an agreement with you, or when we need to do things before making an agreement."
+      },
+      {
+        "title": "Consent",
+        "description": "You give us your consent to use your data in certain ways (you can change your mind later if you want)."
+      },
+      {
+        "title": "Legal requirement",
+        "description": "We (or another company) must use your data to follow the laws or regulations to which we are subject."
+      },
+      {
+        "title": "Other legitimate purposes",
+        "description": [
+          "We have good reasons to use your data to better serve you, to help us make our services better, or to keep our business running well. Some examples include:"
+        ],
+        "examples": [
+          "Sharing data with our partners as part of our Services.",
+          "Sharing data with partners who help us offer rewards and benefits.",
+          "Sending you emails of your results when you use our Services.",
+          "Getting in touch to let you know about our Services, and changes to them.",
+          "Doing research to learn more about what people like (or don't like) about our Services.",
+          "Checking and improving our processes to make sure everything is done right.",
+          "Keeping our services safe and available online.",
+          "Stopping fraud to protect you and others.",
+          "Sometimes, we might use your data if we think it will help protect an individual (either you or another consumer)."
+        ]
+      }
+    ]
+  },
+  "dataRetention": {
+    "title": "How long do we keep your data?",
+    "description": [
+      "We keep your data for as long as it is needed to provide you with our Services.",
+      "To determine how long we need to keep your data, we consider:"
+    ],
+    "considerations": [
+      "the amount of data,",
+      "the type of data,",
+      "the risks that unintended use or disclosure could bring, and",
+      "whether we can do what we need to by using less data."
+    ],
+    "additionalInfo": [
+      "In addition, we may also keep and use your data for as long as it is needed for legal or contractual reasons, dispute resolution, fraud prevention, and security.",
+      "We keep your data for as long as we need it to offer our Services to you, and for other valid business reasons, such as:"
+    ],
+
+    "validReasons": [
+      "Financial record-keeping",
+      "Complying with the law or other regulatory requirements",
+      "Ensuring the security and availability of our Services"
+    ],
+    "decition": {
+      "title": "When we decide how long to keep your data, we think about how much we have, what kind of data it is, the risks that unintended use or disclosure could bring, and what the law says. This means we may keep some of your data for longer than we hold other data. Of course, you have choices too - you may request that we delete or correct your data.",
+      "description": [
+        "At any time, we may make your data anonymous, which means it can't be linked with you.",
+        "When we no longer need to keep data for our purposes, or when we get a valid request to delete, we begin a process to safely delete the data from our systems."
+      ]
+    }
+  },
+  "dataSafety": {
+    "title": "How do we keep your data safe?",
+    "description": [
+      "We take the protection of your data very seriously.",
+      "We use best practices to help keep your data safe. However, there is always some risk when storing data or sending it over the internet. As such, we cannot guarantee the security of your data, and you should know that sharing it is done at your own risk.",
+      "To the extent we store and use de-identified data, we will not attempt to reidentify the data unless permitted by law."
+    ],
+    "moreDetails": [
+      "We work hard to keep your data safe and secure. We use tools and techniques to monitor and protect the data we collect and use about you.",
+      "We also have rules in place to make sure that your data can only be used by those who have valid business reasons, such as providing our Services to you.",
+      "While we work hard to protect your data, it's important to know that no method of sending data online or storing it is perfect. Sometimes things can happen beyond our control.",
+      "If we ever need to tell you about a problem with your data, we will let you know as best we can use messages, letters, or phone calls.",
+      "If you create an account on our websites, you may need to create a password. It's really important to keep this password to yourself and not share it with anyone. You are responsible for making sure nobody else can access your account using your password or device. If you ever think someone else might be using your account, please tell us right away so we can help."
+    ]
+  },
+
+  "dataControl": {
+    "title": "How can you control your data?",
+    "description": [
+      "You can make certain choices about the way we collect, use, store, and share your data.",
+      "Sometimes these choices apply to everyone who uses a Service (for example, anyone who gets a newsletter from us can opt-out of future emails); other times these choices only apply to those covered by a certain privacy law.",
+      "We manage all of the requests raised to us as the law requires. This means there may be legal reasons why we cannot complete all requests.",
+      "Please note: we may need proof of your identity before we can start your request.",
+      "To make these choices you should use the links to the forms below to submit a request."
+    ],
+    "moreDetails": {
+      "title": "Your data choices",
+      "description": "You have choices about your data and how we communicate with you, using our online form here data.",
+
+      "dataControlChoices": [
+        {
+          "title": "Access to your data",
+          "description": "You can request access to the data we have about you, and we will honor valid requests."
+        },
+        {
+          "title": "Changes to your data",
+          "description": "It's important to keep your data accurate and up to date. If you need to update your data, please let us know. Sometimes, we have to keep data for legal reasons, but we will try to update it."
+        },
+        {
+          "title": "Deleting your data",
+          "description": "You can request that we delete the data we have about you. Sometimes we have to keep your data for specific reasons, like following the law or resolving problems, but we'll delete what we must."
+        },
+        {
+          "title": "Objecting to certain uses",
+          "description": "If there's something you don't like about how we use your data, please tell us. We'll listen and see if we can make changes. For example, you can opt-out of targeted advertising by using our cookie controls."
+        },
+        {
+          "title": "Withdrawing your consent",
+          "description": "If you change your mind and want to withdraw your consent for things you previously agreed to, you can tell us. Just remember that, if you do that, we might not be able to provide some Services to you."
+        },
+        {
+          "title": "Request Submission and Limitations",
+          "description": "If you choose to submit a request to us, it may limit your ability to use some of our Services (e.g., if we have deleted the data used to provide the Service), but we will not alter how we provide our Services to you."
+        },
+        {
+          "title": "Identity Verification for Data Protection",
+          "description": "To protect your data, we need to make sure it's really you making these requests. So, we often ask for some information to verify your identity. Once you submit a request to us, we will email you with a link to our identity verification service."
+        },
+        {
+          "title": "Alternative Contact Methods",
+          "description": "If you want to make any of these choices but prefer not to use our online form, you can contact us by email or mail, using the details below.",
+          "contactDetails": [
+            {
+              "title": "Email:",
+              "desc": "Acsmulingua@gmail.com"
+            },
+            {
+              "title": "Mail:",
+              "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Peru. (Attn: Privacy Officer)"
+            }
+          ]
+        },
+        {
+          "title": "Privacy Control Preference Signals",
+          "description": "We recognize the Global Privacy Control preference signals so you can make your own privacy choices."
+        },
+        {
+          "title": "Authorized Agents",
+          "description": "If someone else, like the parent or guardian of individuals aged 16 to 18, needs to make these choices for you, they can do it too. They just need to follow the same steps we mentioned."
+        },
+        {
+          "title": "Request Denial Explanation and Appeal",
+          "description": "If you submit a request and we can’t honor it, we’ll tell you why. We will also make an appeal form available to you, if you are not satisfied with our decision."
+        }
+      ],
+
+      "communicationPreferences": {
+        "title": "Communication preferences",
+        "description": "You can also choose how we communicate with you. Here are your options:",
+        "options": [
+          {
+            "title": "Communication preferences",
+            "description": "You can also choose how we communicate with you. Here are your options:"
+          },
+          {
+            "title": "Promotional Emails",
+            "description": "If you don't want to receive emails with special offers or surveys, you can unsubscribe by following the instructions in the emails. But don't worry, we may still send you important messages about our Services."
+          },
+          {
+            "title": "Promotional Mailings",
+            "description": "If you don't want to receive physical mail from us, like offers or catalogs, just let us know. Send us an email with 'NO SNAIL MAIL' in the subject line, along with your name, address, and zip code. Even if you ask us to stop, you might still get some mailings that were already on their way before we removed your name."
+          },
+          {
+            "title": "Text Messages and Push Notifications",
+            "description": "If you receive text messages with promotions from us, you can opt-out by replying with 'STOP' or 'UNSUBSCRIBE.' You can also control push notifications on your device."
+          },
+          {
+            "title": "Transactional or Service Communications",
+            "description": "Please note: We may still need to communicate with you for transactional or Service reasons. For example, sending a password reset email or updates to our terms."
+          }
+        ]
+      }
+    }
+  },
+
+  "complaints": {
+    "title": "Complaints",
+    "description": "We would appreciate it if you gave us a chance to address any complaints you may have. You can use the details below to submit a complaint, and you may also be able to raise a complaint with your local regulator."
+  },
+
+  "contactUs": {
+    "title": "How can you contact us?",
+    "description": "Contact us using the details below if you have any questions about this Policy or would like to make a complaint.",
+    "contactDetails": [
+      {
+        "title": "Email:",
+        "desc": "Acsmulingua@gmail.com"
+      },
+      {
+        "title": "Mail:",
+        "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Peru. (Attn: Privacy Officer)"
+      }
+    ]
+  },
+  "changesToPolicy": {
+    "title": "Changes to this Policy",
+    "description": [
+      "Sometimes we need to make changes to how we collect, use, and protect your data.",
+      "When we do, we will let you know by updating this policy.",
+      "If the changes we make are important, we'll also post a special notice on our website.",
+      "Any changes will usually only affect the data we collect after the new policy has been published.",
+      "Any data we collected before the changes will still be covered by the old policy.",
+      "We will also let you know when we last made these changes by publishing the date we last changed it.",
+      "ACS MULINGUA is committed to building inclusive digital products.",
+      "For questions about accessibility, requests for accommodations, or to submit an accessibility issue, contact us."
+    ],
+    "lastUpdated": "13/10/2023, 10:39:06"
+  }
+}

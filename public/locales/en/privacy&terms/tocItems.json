@@ -1,0 +1,75 @@
+{
+  "Head": "Contents",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "What does this Policy cover?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "What data do we collect, use, and share? (summary)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "What data do we collect?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "How do we use your data?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "How do we use cookies?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "When do we share data with others?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "Social features.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "Why we can use your data.",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "How long do we keep your data?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "How do we keep your data safe?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "How can you control your data?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "Complaints.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "How can you contact us?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "Changes to this Policy",
+      "link": "data-changing"
+    }
+  ]
+}
