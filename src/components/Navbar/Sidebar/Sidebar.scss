@@ -2,7 +2,7 @@
 .sidebar {
   background-color: #181d25;
   position: fixed;
-  top: 75px;
+  top: 76px;
   left: 0;
   height: 100%;
   width: 100%; /* Adjust the width according to your design */
@@ -19,10 +19,12 @@
     all: unset;
     cursor: pointer;
     text-align: center;
-    background: linear-gradient(to right, $primary-color, $secondary-color);
-    color: $white-color;
-    width: 100%;
+    background: #eee;
+    border-bottom: 2px solid #0044ff;
+    color: darkblue;
     padding: 1rem 0;
+    width: 100%;
+    font-weight: 500;
   }
   .sideLinks {
     color: rgb(0, 0, 0);

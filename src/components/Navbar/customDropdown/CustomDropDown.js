@@ -34,11 +34,19 @@ const CustomDropdown = ({ options, onSelect, className, cookies }) => {
 	return (
 		<div className={className} ref={dropdownRef}>
 			<div className='selected-option' onClick={() => setIsOpen(!isOpen)}>
-				{selectedOption
+				{/* {selectedOption
 					? `${selectedOption?.value === "Ar" ? "اللغات" : "languages"} (${
 							selectedOption?.value
 					  })`
-					: `languages (En) `}
+					: `languages (En) `} */}
+				{/* ? `${selectedOption?.value === "Ar" ? "اللغات" : "languages"} (${ */}
+				{/* selectedOption?.value */}
+				{/* })` */}
+				{/* :  */}
+				{selectedOption ?
+					<span style={selectedOption?.value === "Ar" ? { left: "-10px", right: "auto" } : {}} className="theLang">{selectedOption?.value}</span> :
+					<span style={selectedOption?.value === "Ar" ? { left: "-10px", right: "auto" } : {}} className="theLang">En</span>
+				}
 				<div>
 					<img
 						className='languages_icon'
@@ -49,7 +57,7 @@ const CustomDropdown = ({ options, onSelect, className, cookies }) => {
 				</div>
 			</div>
 			{isOpen && (
-				<ul className='options thin-scroll'>
+				<ul style={selectedOption?.value === "Ar" ? { left: 0, right: "auto" } : {}} className='options thin-scroll'>
 					{options.map((option) => (
 						<li
 							key={option.value}
