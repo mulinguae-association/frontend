@@ -2,8 +2,9 @@
 .hero_section {
   background: linear-gradient(
       to bottom,
-      hsla(235, 100%, 50%, 0.9),
-      rgba(144, 238, 144, 90%)
+      rgba(darkblue, 0.92) 0%,
+      rgba($medium-darkblue, 92%) 50%,
+      rgba(82, 197, 82, 0.92) 100%
     ),
     url("../../../public/images/amazon-people.webp") no-repeat center/cover;
 
@@ -85,12 +86,14 @@
         color: $primaryDark-color;
         position: relative;
         z-index: 1;
-        transition: 0.4s ease;
+        transition: 0.5s ease;
+        border-radius: 30px;
         .btn_container {
           font-weight: bold;
           background-color: $white-color;
           border-radius: 30px;
           padding: 8px 32px;
+          min-width: -webkit-fill-available;
           min-width: -moz-fit-content;
           min-width: fit-content;
           width: 190px;
@@ -103,15 +106,18 @@
           align-items: center;
           position: relative;
           border: 1px solid $primaryDark-color;
-          box-shadow: inset 0 0 10px;
-
+          box-shadow: 0 0 10px $primaryDark-color inset;
           button {
             all: unset;
           }
+          &:hover {
+            border-color: #fff;
+          }
         }
         &:hover {
-          box-shadow: 0 0 10px $medium-darkblue;
-          border-radius: 50px;
+          box-shadow: 0 0 15px #cad7ec;
+          border: none;
+          border-radius: 30px;
         }
         &:hover .arrow-first {
           animation: arrow-movement-right 2s ease-in-out infinite;
@@ -122,7 +128,7 @@
           opacity: 1;
         }
         &:active {
-          scale: 0.9;
+          scale: 0.95;
         }
         // change direction
         &.change_direction.rtl {
