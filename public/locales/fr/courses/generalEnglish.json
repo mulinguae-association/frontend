@@ -1,0 +1,147 @@
+{
+  "courses": {
+    "heading": "Nos cours",
+    "subHeading": "ACS Mulingua propose les cours suivants :",
+    "sectionTitles": {
+      "esl": "1. Anglais langue seconde (ALS) - Anglais général (six niveaux)",
+      "efp": "2. Anglais à des fins spécifiques (APS)",
+      "languages": "En tant que promoteur des langues, ACS Mulingua est très désireux de rechercher des enseignants pour n'importe quelle langue que vous souhaitez apprendre. Laissez simplement quelques mots dans la boîte de contact."
+    },
+    "common": {
+      "contactUsLink": "Contactez-nous"
+    },
+    "specificPurposeCourses": [
+      "Anglais pour la comptabilité",
+      "Anglais pour l'anthropologie",
+      "Anglais pour les études de développement",
+      "Anglais des affaires",
+      "Anglais pour les études internationales",
+      "Anglais juridique",
+      "Anglais pour les études syndicales",
+      "Anglais pour les voyages et le tourisme",
+      "Anglais pour les études féminines"
+    ],
+    "languagesList": [
+      { "label": "amari", "value": "Am" },
+      { "label": "arabic", "value": "Ar" },
+      { "label": "aymara", "value": "Ay" },
+      { "label": "cantonese", "value": "Ca" },
+      { "label": "french", "value": "Fr" },
+      { "label": "hindi", "value": "Hi" },
+      { "label": "italian", "value": "It" },
+      { "label": "kreolHaiti", "value": "KH" },
+      { "label": "kreolMorisyen", "value": "KM" },
+      { "label": "mandarin", "value": "Mn" },
+      { "label": "portuguese", "value": "Pt" },
+      { "label": "quechua", "value": "Qu" },
+      { "label": "russian", "value": "Ru" },
+      { "label": "spanish", "value": "Es" },
+      { "label": "urdu", "value": "Ur" }
+    ],
+    "englishCoursesTitle": {
+      "Level": "Niveau :",
+      "Duration": "Durée :",
+      "RecommendedFeeForTeacher": "Frais recommandés pour l'enseignant :",
+      "Description": "Description :",
+      "LearningOutcomes": "Objectifs pédagogiques :"
+    },
+    "englishCourses": [
+      {
+        "id": "1",
+        "CourseName": "Anglais général pour les débutants absolus",
+        "Level": "Niveau 1 ou A1 (Débutant)",
+        "Duration": "50 heures",
+        "RecommendedFeeForTeacher": "10 à 25 $ US par heure (individuel)",
+        "Description": "Les débutants absolus sont des apprenants qui n'ont eu aucune instruction ou très peu dans la langue cible. Cela se distingue des faux débutants qui sont des apprenants qui ont étudié la langue cible auparavant mais n'ont jamais acquis une véritable maîtrise de la langue.",
+        "LearningOutcomes": [
+          "Poser et répondre à des questions simples sur des sujets très familiers",
+          "Utiliser des phrases et des phrases simples pour décrire où ils vivent et les personnes qu'ils connaissent",
+          "Comprendre des mots familiers et des phrases très basiques lorsqu'ils sont prononcés lentement et clairement",
+          "Lire des mots, des phrases et des phrases simples",
+          "Écrire de courtes cartes postales simples et remplir des formulaires avec des détails personnels"
+        ]
+      },
+      {
+        "id": "2",
+        "CourseName": "Anglais général",
+        "Level": "Niveau 2 (A1+ ou Élémentaire)",
+        "Duration": "50 heures",
+        "RecommendedFeeForTeacher": "10 à 30 $ US par heure (individuel)",
+        "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 1 ou qui ont déjà des connaissances de base dans la langue cible. Il couvre des sujets tels que les articles définis et indéfinis, les félicitations, donner / justifier des opinions, les compétences en orthographe, les noms et les pronoms, les aspects positifs et négatifs.",
+        "LearningOutcomes": [
+          "Communiquer dans des tâches simples et routinières sur des sujets familiaux et des activités",
+          "Faire une description simple de leur famille et d'autres personnes, des conditions de vie, de leur parcours éducatif et de leur emploi actuel ou le plus récent",
+          "Comprendre des phrases et un vocabulaire courant dans des domaines communs",
+          "Lire des textes très courts et simples, trouver des informations spécifiques et prévisibles dans des publicités, des prospectus, des menus et des horaires, et comprendre de courtes lettres personnelles simples",
+          "Écrire des notes et des messages courts et simples, des lettres personnelles simples telles que remercier quelqu'un"
+        ]
+      },
+      {
+        "id": "3",
+        "CourseName": "Anglais général",
+        "Level": "Niveau 3 (A2 ou Pré-Intermédiaire)",
+        "Duration": "50 heures",
+        "RecommendedFeeForTeacher": "10 à 40 $ US par heure (individuel)",
+        "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 2 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant passera un test pour déterminer son niveau). Le cours couvre des sujets tels que l'utilisation des temps continus et parfaits, la voix passive, les adverbes et le vocabulaire lié aux présentations, aux restaurants et lieux de loisirs, aux plats communs, aux expériences personnelles, à la météo et au changement climatique.",
+        "LearningOutcomes": [
+          "Gérer la plupart des situations lorsqu'ils voyagent dans des endroits où les gens parlent anglais",
+          "Parler des expériences et des événements, des rêves, des espoirs et des ambitions, donner des raisons et des explications pour les opinions et les plans, raconter l'histoire d'un livre ou d'un film et décrire des réactions",
+          "Comprendre les points principaux d'un discours clair sur le travail, l'école et les loisirs, comprendre le point principal de nombreuses émissions de radio ou de télévision sur l'actualité ou des sujets familiers, lorsque le locuteur parle lentement et clairement",
+          "Écrire simplement sur des sujets familiers, écrire des lettres personnelles décrivant des expériences et des impressions"
+        ]
+      },
+      {
+        "id": "4",
+        "CourseName": "Anglais général",
+        "Level": "Niveau 4 (B1 ou Intermédiaire)",
+        "Duration": "50 heures",
+        "RecommendedFeeForTeacher": "15 à 40 $ US par heure (individuel)",
+        "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 3 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant passera un test pour déterminer son niveau)",
+        "LearningOutcomes": [
+          "Parler régulièrement avec n'importe quel locuteur anglais",
+          "Discuter en détail de sujets familiers, donner leur avis et expliquer les avantages et les inconvénients",
+          "Comprendre des discours et des conférences longs et suivre des arguments complexes si le sujet est raisonnablement familier, comprendre la plupart des actualités télévisées et des émissions d'actualités courantes et la majorité des films dans des accents courants",
+          "Lire des articles et des rapports sur des sujets courants et comprendre des romans modernes",
+          "Écrire clairement et en détail sur une grande variété de sujets, y compris des essais, des rapports et des lettres sur des événements et des expériences personnelles"
+        ]
+      },
+      {
+        "id": "5",
+        "CourseName": "Anglais général",
+        "Level": "Niveau 5 (B2 ou Intermédiaire supérieur)",
+        "Duration": "50 heures",
+        "RecommendedFeeForTeacher": "15 à 40 $ US par heure (individuel)",
+        "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 4 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant devra passer un test pour déterminer son niveau)",
+        "LearningOutcomes": [
+          "Parler couramment sans chercher la langue",
+          "Donner des idées et des opinions et mettre en relation leurs idées avec celles des autres locuteurs",
+          "Parler de sujets complexes et développer des arguments",
+          "Comprendre un discours long et complexe",
+          "Comprendre la plupart des émissions de télévision et des films",
+          "Comprendre des textes littéraires factuels longs et complexes, avec des styles différents",
+          "Comprendre des articles spécialisés et de longues instructions techniques",
+          "Écrire un texte long, clair et bien structuré pour exprimer leurs points de vue",
+          "Écrire sur un sujet complexe dans une lettre, un essai ou un rapport",
+          "Écrire dans un style approprié"
+        ]
+      },
+      {
+        "id": "6",
+        "CourseName": "Anglais général",
+        "Level": "Niveau 6 (C1 ou Avancé)",
+        "Duration": "50 heures",
+        "RecommendedFeeForTeacher": "15 à 40 $ US par heure (individuel)",
+        "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 5 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant devra passer un test pour déterminer son niveau)",
+        "LearningOutcomes": [
+          "Participer de manière fluide et sans effort à n'importe quelle conversation et avoir une bonne connaissance des expressions idiomatiques et des locutions familières",
+          "Présenter une description ou un argument clair et fluide dans un style approprié au contexte et avec une structure logique efficace",
+          "Comprendre n'importe quel type de langue parlée, en direct ou enregistrée, à une vitesse native rapide lorsque le apprenant a un certain temps pour se familiariser avec différents accents",
+          "Lire avec facilité des textes abstraits structurellement ou linguistiquement complexes tels que des manuels, des articles spécialisés et des œuvres littéraires",
+          "Écrire des textes clairs et fluides dans un style approprié",
+          "Écrire des lettres, des rapports ou des articles complexes qui présentent un cas avec une structure logique efficace",
+          "Écrire des résumés et des critiques d'œuvres professionnelles ou littéraires"
+        ]
+      }
+    ]
+  }
+}

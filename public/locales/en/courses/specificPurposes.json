@@ -1,0 +1,188 @@
+{
+  "specificPurposesTitle": {
+    "duration": "Duration:",
+    "recommendedFeeForTeacher": "Recommended Fee for Teacher:",
+    "targetAudience": "Target Audience:",
+    "description": "Description:",
+    "goals": "Goals:",
+    "methodology": "Methodology:",
+    "areasCovered": "Areas Covered:",
+    "requiredLevel": "Required Level:"
+  },
+  "specificPurposes": [
+    {
+      "id": "english-for-development-studies",
+      "name": "english For Development Studies",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 20 to US$ 40 per hr",
+      "targetAudience": "Professionals and students in Development Studies who are non-native English speakers.",
+      "description": "This course covers a multidisciplinary program that includes anthropology, sociology, world geography, political science, international relations, and gender studies, with a focus on the fundamentals of development.",
+      "goals": [
+        "Increase the learner's range of vocabulary and technical terms in development studies.",
+        "Practice and increase comprehension of development texts and international economic and financial terms.",
+        "Develop confidence in communicating in a variety of situations with colleagues, business partners, and on political and social platforms both in speaking and writing.",
+        "Extend the knowledge of international development systems."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for rural, national, and international development.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, and the use of English for different branches of development studies.",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "english-for-accounting",
+      "name": "english For Accounting",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 20 to US$ 40 per hr",
+      "targetAudience": "Accountants, auditors, bankers, professionals of the financial sector, and students in these fields who are non-native English speakers.",
+      "description": "This course focuses on the fundamentals of accounting.",
+      "goals": [
+        "Increase the learner's range of vocabulary in accounting.",
+        "Practice and increase comprehension of accounting texts and international financial terms.",
+        "Develop confidence in communicating in a variety of situations with colleagues and business partners, both in speaking and writing.",
+        "Extend the knowledge of the international financial system."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for the international financial system.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, and the use of English for different branches of accounting such as financial accounting, management accounting, cost accounting, tax accounting, and auditing.",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "legal-english",
+      "name": "legal English",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 20 to US$ 40 per hr",
+      "targetAudience": "Lawyers, law students, and professionals who are non-native English speakers with a focus on the fundamentals of international legal English of Anglo-Saxon and Anglo-American jurisdictions in practice.",
+      "description": "This course aims to increase the learners' range of legal English vocabulary and comprehension of legal texts in various areas of law with a hands-on approach.",
+      "goals": [
+        "Increase the learners' range of legal English vocabulary.",
+        "Practice and increase comprehension of legal texts in various areas of law with a hands-on approach.",
+        "Develop confidence in communicating in applied Legal English Language, both in speaking and writing.",
+        "Extend the knowledge of international Legal English practice."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for International English Legal vocabulary.",
+      "areasCovered": "The course covers areas such as the power of language, the characteristics of legal language, language skills development, and the use of English for different branches of law such as commercial, human rights, family, labor, and international law.",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "english-for-trade-union-studies",
+      "name": "english for trade union studies",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 10 to US$ 40 per hr",
+      "targetAudience": "Trade unionists and students in trade union and labor studies who are non-native English speakers.",
+      "description": "This course is aimed at trade unionists and students in trade union and labor studies who are non-native English speakers. It covers a multidisciplinary program that includes labor policies, development strategies, labor response to the challenges of globalization, ILO conventions, worker´s and trade union´s rights, social justice, and workers enterprises. \n The course focuses on the history of the worker´s movement around the world and the use of English as lingua franca in the construction of international worker´s solidarity.",
+      "goals": [
+        "Increase the learner´s range of vocabulary and technical terms in workers struggle history, international labor standards, multinational companies, development policies, and research cooperation on global labor issues.",
+        "Practice and increase comprehension of the literature of the worker´s struggle.",
+        "Develop confidence in communicating in a variety of situations with colleagues, on political and social platforms both in speaking and writing.",
+        "Extend the knowledge of international workers solidarity."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. The reading texts are authentic or semi-authentic and provide context for worker´s emancipation.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of multilingualism in building workers solidarity.\n(A detailed syllabus is available when you join the course.)",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "english-for-travel-and-tourism",
+      "name": "English for Travel and Tourism",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 20 to US$ 40 per hr",
+      "targetAudience": "Professionals and students in the travel and tourism industry who are non-native English speakers.",
+      "description": "This course covers a multidisciplinary program that includes geography, psychology, culinary, catering, leisure, and related disciplines. The course focuses on the fundamentals of travel and tourism.",
+      "goals": [
+        "Increase the learner´s range of vocabulary and technical terms in tourism and catering.",
+        "Practice and increase comprehension of travel and catering.",
+        "Develop confidence in communicating in a variety of situations with colleagues, business partners, and on political and social platforms both in speaking and writing.",
+        "Extend the knowledge of the global travel and tourism industry."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for the travel and tourism industry.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of English and multilingualism in the travel and tourism industry.(A detailed syllabus is available when you join the course.)",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "english-for-women-studies",
+      "name": "English for women and gender studies",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 10 to US$ 40 per hr",
+      "targetAudience": "Professionals and students in all fields of study who are non-native English speakers.",
+      "description": "This course covers an interdisciplinary program that includes an introduction to gender, sexuality, and women´s studies. The course focuses on the concept of gender equality, international women´s struggles around the world, and the use of English as lingua franca in the construction of international women´s solidarity.",
+      "goals": [
+        "Increase the learner´s range of vocabulary and technical terms in women´s and gender studies.",
+        "Practice and increase comprehension of the literature of the worker´s struggle.",
+        "Develop confidence in communicating in a variety of situations with colleagues, on political and social platforms both in speaking and writing.",
+        "Extend the knowledge of international women’s and gender struggles."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for women´s and gender studies.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of multilingualism in building women´s solidarity.\n(A detailed syllabus is available when you join the course.)",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "business-english",
+      "name": "Business English",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 20 to US$ 40 per hr",
+      "targetAudience": "Professionals operating in any business sectors and students of business studies who are non-native English speakers.",
+      "description": "This course focuses on developing the learner´s communication skills in a business environment.",
+      "goals": [
+        "Increase the learner´s knowledge of the business environment.",
+        "Practice and increase comprehension of business texts and the latest trends in the business world.",
+        "Develop confidence in communicating in a variety of situations with colleagues and business partners, both in speaking and writing.",
+        "Extend the knowledge of the global business."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for International financial system.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of English for different branches of business such as finance, international marketing, career development, selling, and personnel management.\n (A detailed syllabus is available when you join the course.)",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "english-for-international-studies",
+      "name": "English for International Studies",
+      "duration": "50 hours per level",
+      "recommendedFeeRange": "US$ 20 to US$ 40 per hr",
+      "targetAudience": "Professionals who are non-native English speakers, working on international relations issues and global challenges such as inequality and poverty, climate change, migration, wars, diplomacy, IT, artificial intelligence, and related sectors. This includes journalists, professionals pursuing a diplomatic career, officers or directors in international organizations, NGOs, trade unions, and public officers.",
+      "description": "This course focuses on developing the learner´s communication skills on global issues.",
+      "goals": [
+        "Increase the learner´s knowledge of globalization and global challenges.",
+        "Practice and increase comprehension of textbooks and articles treating global issues.",
+        "Develop confidence in communicating in a variety of situations with colleagues and social partners, both in speaking and writing.",
+        "Extend the knowledge of the world we are living."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for the international systems.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of English to understand international themes.\n (A detailed syllabus is available when you join the course.)",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "english-for-anthropology",
+      "name": "English for Anthropology",
+      "duration": "50 hours per level",
+      "recommendedFeeRange": "US$ 20 to US$ 40 per hr",
+      "targetAudience": "Professionals and students who are non-native English speakers, working on anthropological research and studies such as the diversity of humankind around the world, social organizations, the local and the global, the value of human life from the grassroots, social change, and cultural diversity. This includes journalists, professionals pursuing a diplomatic career, officers or directors in local or international organizations and NGOs.",
+      "description": "This course focuses on developing the learner´s communication skills on local and global issues.",
+      "goals": [
+        "Increase the learner´s knowledge of anthropology.",
+        "Practice and increase comprehension of textbooks and articles treating local and global issues.",
+        "Develop confidence in communicating in a variety of situations with colleagues and social partners, both in speaking and writing.",
+        "Extend the knowledge of the world we are living."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for anthropological.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of English to understand international themes.\n(A detailed syllabus is available when you join the course.)",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    },
+    {
+      "id": "english-for-agriculture",
+      "name": "English for Agriculture",
+      "duration": "50 hours",
+      "recommendedFeeRange": "US$ 10 to US$ 30 per hr",
+      "targetAudience": "Professionals of agriculture and agroindustry, farmers, gardeners, and students in these fields who are non-native English speakers.",
+      "description": "This course focuses on the fundamentals of agriculture and agroindustry. English: Agriculture addresses topics including soil preparation, seeding methods, farm equipment, livestock, and organic farming.",
+      "goals": [
+        "Increase the learner's range of vocabulary in agriculture and agroindustry.",
+        "Practice and increase comprehension of agriculture and agroindustry texts.",
+        "Develop confidence in communicating in a variety of situations with colleagues and business partners, both in speaking and writing.",
+        "Extend the knowledge of agriculture and agroindustry.",
+        "Increase the learner's range of vocabulary in agriculture, agroindustry, and related sectors.",
+        "Practice and increase comprehension of agriculture and agroindustry texts and related fields.",
+        "Develop confidence in communicating in a variety of situations with colleagues and business partners, both in speaking and writing.",
+        "Extend the knowledge of the agricultural, agroindustry, and related fields."
+      ],
+      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for the agricultural and agroindustry sectors.",
+      "areasCovered": "The course covers areas such as the power of language, language skills development, and the use of English for different branches of agriculture such as agronomy, forestry, animal husbandry, horticulture, fishery science, and agricultural engineering.",
+      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "specificPurposesTitle": {
+    "duration": "Durée :",
+    "recommendedFeeForTeacher": "Frais recommandés pour l'enseignant :",
+    "targetAudience": "Public cible :",
+    "description": "Description :",
+    "goals": "Objectifs :",
+    "methodology": "Méthodologie :",
+    "areaCovered": "Domaines couverts :",
+    "requiredLevel": "Niveau requis"
+  },
+  "specificPurposes": [
+    {
+      "id": "anglais-pour-les-études-de-développement",
+      "name": "Anglais pour les études du développement",
+      "duration": "50 heures",
+      "recommendedFeeRange": "20 à 40 $ US par heure",
+      "targetAudience": "Professionnels et étudiants en études du développement non natifs en anglais.",
+      "description": "Ce cours couvre un programme multidisciplinaire incluant l'anthropologie, la sociologie, la géographie mondiale, la science politique, les relations internationales et les études de genre, mettant l'accent sur les fondamentaux du développement.",
+      "goals": [
+        "Élargir la gamme de vocabulaire du participant et les termes techniques dans les études du développement.",
+        "Pratiquer et améliorer la compréhension des textes de développement et des termes économiques et financiers internationaux.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues, des partenaires commerciaux, sur des plateformes politiques et sociales, à l'oral et à l'écrit.",
+        "Approfondir la connaissance des systèmes de développement internationaux."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour le développement rural, national et international.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques et l'utilisation de l'anglais pour différentes branches des études de développement.",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-pour-la-comptabilité",
+      "name": "Anglais pour la comptabilité",
+      "duration": "50 heures",
+      "recommendedFeeRange": "20 à 40 $ US par heure",
+      "targetAudience": "Comptables, auditeurs, banquiers, professionnels du secteur financier et étudiants dans ces domaines non natifs en anglais.",
+      "description": "Ce cours met l'accent sur les fondamentaux de la comptabilité.",
+      "goals": [
+        "Élargir la gamme de vocabulaire du participant dans le domaine de la comptabilité.",
+        "Pratiquer et améliorer la compréhension des textes comptables et des termes financiers internationaux.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues et des partenaires commerciaux, à l'oral et à l'écrit.",
+        "Approfondir la connaissance du système financier international."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour le système financier international.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques et l'utilisation de l'anglais pour différentes branches de la comptabilité telles que la comptabilité financière, la comptabilité de gestion, la comptabilité des coûts, la comptabilité fiscale et l'audit.",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-juridique",
+      "name": "Anglais juridique",
+      "duration": "50 heures",
+      "recommendedFeeRange": "20 à 40 $ US par heure",
+      "targetAudience": "Avocats, étudiants en droit et professionnels non natifs en anglais, axés sur les fondamentaux de l'anglais juridique international des juridictions anglo-saxonnes et anglo-américaines en pratique.",
+      "description": "Ce cours vise à élargir la gamme de vocabulaire en anglais juridique des apprenants et à améliorer leur compréhension des textes juridiques dans divers domaines du droit avec une approche pratique.",
+      "goals": [
+        "Élargir la gamme de vocabulaire en anglais juridique des apprenants.",
+        "Pratiquer et améliorer la compréhension des textes juridiques dans divers domaines du droit avec une approche pratique.",
+        "Développer la confiance pour communiquer en anglais juridique appliqué, à l'oral et à l'écrit.",
+        "Approfondir la connaissance de la pratique de l'anglais juridique international."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour le vocabulaire juridique international en anglais.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, les caractéristiques du langage juridique, le développement des compétences linguistiques et l'utilisation de l'anglais pour différentes branches du droit telles que le droit commercial, des droits de l'homme, de la famille, du travail et du droit international.",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-pour-les-études-syndicales",
+      "name": "Anglais pour les études syndicales",
+      "duration": "50 heures",
+      "recommendedFeeRange": "10 à 40 $ US par heure",
+      "targetAudience": "Syndicalistes et étudiants en études syndicales non natifs en anglais.",
+      "description": "Ce cours s'adresse aux syndicalistes et aux étudiants en études syndicales non natifs en anglais. Il couvre un programme multidisciplinaire incluant les politiques du travail, les stratégies de développement, la réponse du travail aux défis de la mondialisation, les conventions de l'OIT, les droits des travailleurs et des syndicats, la justice sociale et les entreprises ouvrières. Le cours met l'accent sur l'histoire du mouvement ouvrier dans le monde et l'utilisation de l'anglais comme lingua franca dans la construction de la solidarité internationale des travailleurs.",
+      "goals": [
+        "Élargir la gamme de vocabulaire et les termes techniques dans l'histoire de la lutte des travailleurs, les normes du travail internationales, les entreprises multinationales, les politiques de développement et la coopération à la recherche sur les questions mondiales du travail.",
+        "Pratiquer et améliorer la compréhension de la littérature de la lutte des travailleurs.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues, sur des plateformes politiques et sociales, à l'oral et à l'écrit.",
+        "Approfondir la connaissance de la solidarité internationale des travailleurs."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour l'émancipation des travailleurs.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques, l'utilisation du multilinguisme dans la construction de la solidarité des travailleurs. (Un programme détaillé est disponible lorsque vous rejoignez le cours.)",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-pour-les-voyages-et-le-tourisme",
+      "name": "Anglais pour le voyage et le tourisme",
+      "duration": "50 heures",
+      "recommendedFeeRange": "20 à 40 $ US par heure",
+      "targetAudience": "Professionnels et étudiants de l'industrie du voyage et du tourisme non natifs en anglais.",
+      "description": "Ce cours couvre un programme multidisciplinaire incluant la géographie, la psychologie, la cuisine, la restauration, les loisirs et disciplines connexes. Le cours met l'accent sur les fondamentaux du voyage et du tourisme.",
+      "goals": [
+        "Élargir la gamme de vocabulaire et les termes techniques dans le tourisme et la restauration.",
+        "Pratiquer et améliorer la compréhension des textes sur le voyage et la restauration.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues, des partenaires commerciaux, et sur des plateformes politiques et sociales, à l'oral et à l'écrit.",
+        "Approfondir la connaissance de l'industrie mondiale du voyage et du tourisme."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour l'industrie du voyage et du tourisme.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques, l'utilisation de l'anglais et du multilinguisme dans l'industrie du voyage et du tourisme. (Un programme détaillé est disponible lorsque vous rejoignez le cours.)",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-pour-les-études-féminines",
+      "name": "Anglais pour les études des femmes et du genre",
+      "duration": "50 heures",
+      "recommendedFeeRange": "10 à 40 $ US par heure",
+      "targetAudience": "Professionnels et étudiants de tous les domaines d'études non natifs en anglais.",
+      "description": "Ce cours couvre un programme interdisciplinaire incluant une introduction au genre, à la sexualité et aux études sur les femmes. Le cours met l'accent sur le concept d'égalité des sexes, les luttes internationales des femmes dans le monde et l'utilisation de l'anglais comme lingua franca dans la construction de la solidarité internationale des femmes.",
+      "goals": [
+        "Élargir la gamme de vocabulaire et les termes techniques dans les études sur les femmes et le genre.",
+        "Pratiquer et améliorer la compréhension de la littérature des luttes des femmes.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues, sur des plateformes politiques et sociales, à l'oral et à l'écrit.",
+        "Approfondir la connaissance des luttes internationales des femmes et du genre."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour les études sur les femmes et le genre.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques, l'utilisation du multilinguisme dans la construction de la solidarité des femmes. (Un programme détaillé est disponible lorsque vous rejoignez le cours.)",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-des-affaires",
+      "name": "Anglais des affaires",
+      "duration": "50 heures",
+      "recommendedFeeRange": "20 à 40 $ US par heure",
+      "targetAudience": "Professionnels opérant dans tous les secteurs d'activité et étudiants en études commerciales non natifs en anglais.",
+      "description": "Ce cours vise à développer les compétences en communication du participant dans un environnement commercial.",
+      "goals": [
+        "Élargir la connaissance du participant sur l'environnement commercial.",
+        "Pratiquer et améliorer la compréhension des textes commerciaux et des dernières tendances dans le monde des affaires.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues et partenaires commerciaux, à l'oral et à l'écrit.",
+        "Étendre la connaissance du monde des affaires à l'échelle mondiale."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour le système financier international.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques, l'utilisation de l'anglais pour différentes branches des affaires telles que la finance, le marketing international, le développement de carrière, la vente et la gestion du personnel. (Un programme détaillé est disponible lorsque vous rejoignez le cours.)",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-pour-les-études-internationales",
+      "name": "Anglais pour les études internationales",
+      "duration": "50 heures par niveau",
+      "recommendedFeeRange": "20 à 40 $ US par heure",
+      "targetAudience": "Professionnels non natifs en anglais travaillant sur des questions de relations internationales et des défis mondiaux tels que l'inégalité et la pauvreté, le changement climatique, la migration, les guerres, la diplomatie, l'informatique, l'intelligence artificielle et les secteurs connexes. Cela inclut les journalistes, les professionnels poursuivant une carrière diplomatique, les fonctionnaires ou directeurs d'organisations internationales, d'ONG, de syndicats et de fonctionnaires publics.",
+      "description": "Ce cours vise à développer les compétences en communication du participant sur les questions mondiales.",
+      "goals": [
+        "Élargir la connaissance du participant sur la mondialisation et les défis mondiaux.",
+        "Pratiquer et améliorer la compréhension des manuels et des articles traitant de questions mondiales.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues et partenaires sociaux, à l'oral et à l'écrit.",
+        "Étendre la connaissance du monde dans lequel nous vivons."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour les systèmes internationaux.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques, l'utilisation de l'anglais pour comprendre les thèmes internationaux. (Un programme détaillé est disponible lorsque vous rejoignez le cours.)",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-pour-l'anthropologie",
+      "name": "Anglais pour l'anthropologie",
+      "duration": "50 heures par niveau",
+      "recommendedFeeRange": "20 à 40 $ US par heure",
+      "targetAudience": "Professionnels et étudiants non natifs en anglais travaillant sur la recherche anthropologique et les études telles que la diversité de l'humanité à travers le monde, les organisations sociales, le local et le global, la valeur de la vie humaine depuis la base, le changement social et la diversité culturelle. Cela inclut les journalistes, les professionnels poursuivant une carrière diplomatique, les fonctionnaires ou directeurs d'organisations locales ou internationales et d'ONG.",
+      "description": "Ce cours vise à développer les compétences en communication du participant sur les questions locales et mondiales.",
+      "goals": [
+        "Élargir la connaissance du participant sur l'anthropologie.",
+        "Pratiquer et améliorer la compréhension des manuels et des articles traitant de questions locales et mondiales.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues et partenaires sociaux, à l'oral et à l'écrit.",
+        "Étendre la connaissance du monde dans lequel nous vivons."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive avec une approche basée sur les textes et les tâches est utilisée. Les textes de lecture sont authentiques ou semi-authentiques et fournissent un contexte pour l'anthropologie.",
+      "areasCovered": "Le cours couvre des domaines tels que la puissance du langage, le développement des compétences linguistiques, l'utilisation de l'anglais pour comprendre les thèmes internationaux. (Un programme détaillé est disponible lorsque vous rejoignez le cours.)",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme langue seconde ou équivalent."
+    },
+    {
+      "id": "anglais-pour-l-agriculture",
+      "name": "Anglais pour l'Agriculture",
+      "duration": "50 heures",
+      "recommendedFeeRange": "US$ 10 à US$ 30 par heure",
+      "targetAudience": "Professionnels de l'agriculture et de l'agro-industrie, agriculteurs, jardiniers et étudiants dans ces domaines qui ne sont pas des locuteurs natifs de l'anglais.",
+      "description": "Ce cours se concentre sur les fondamentaux de l'agriculture et de l'agro-industrie. L'anglais pour l'agriculture aborde des sujets tels que la préparation du sol, les méthodes de semis, l'équipement agricole, l'élevage et l'agriculture biologique.",
+      "goals": [
+        "Augmenter le vocabulaire de l'apprenant en agriculture et agro-industrie.",
+        "Pratiquer et accroître la compréhension des textes sur l'agriculture et l'agro-industrie.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues et des partenaires commerciaux, à l'oral et à l'écrit.",
+        "Élargir les connaissances en agriculture et agro-industrie.",
+        "Augmenter le vocabulaire de l'apprenant en agriculture, agro-industrie et secteurs connexes.",
+        "Pratiquer et accroître la compréhension des textes sur l'agriculture et l'agro-industrie et domaines connexes.",
+        "Développer la confiance pour communiquer dans diverses situations avec des collègues et des partenaires commerciaux, à l'oral et à l'écrit.",
+        "Élargir les connaissances en agriculture, agro-industrie et domaines connexes."
+      ],
+      "methodology": "Une méthodologie largement communicative et interactive est utilisée, avec une approche basée sur les textes et les tâches. Les textes de lecture sont authentiques ou semi-authentiques, fournissant un contexte pour les secteurs de l'agriculture et de l'agro-industrie.",
+      "areasCovered": "Le cours couvre des domaines tels que le pouvoir du langage, le développement des compétences linguistiques et l'utilisation de l'anglais dans différents domaines de l'agriculture, tels que l'agronomie, la sylviculture, l'élevage, l'horticulture, la science des pêches et le génie agricole.",
+      "requiredLevel": "Niveau intermédiaire à avancé en anglais comme deuxième langue ou équivalent."
+    }
+  ]
+}

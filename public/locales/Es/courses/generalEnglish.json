@@ -1,0 +1,147 @@
+{
+  "courses": {
+    "heading": "Nuestros cursos",
+    "subHeading": "ACS Mulingua ofrece los siguientes cursos:",
+    "sectionTitles": {
+      "esl": "1. Inglés como segundo idioma (ESL) - Inglés general (seis niveles)",
+      "efp": "2. Inglés con fines específicos (EFP)",
+      "languages": "Como promotor de idiomas, ACS Mulingua está muy interesado en buscar profesores de cualquier idioma que desees aprender. Simplemente deja algunas palabras en el Cuadro de Contacto"
+    },
+    "common": {
+      "contactUsLink": "Contáctanos"
+    },
+    "specificPurposeCourses": [
+      "Inglés para Contabilidad",
+      "Inglés para Antropología",
+      "Inglés para Estudios de Desarrollo",
+      "Inglés de Negocios",
+      "Inglés para Estudios Internacionales",
+      "Inglés Jurídico",
+      "Inglés para Estudios Sindicales",
+      "Inglés para Viajes y Turismo",
+      "Inglés para Estudios de Mujeres"
+    ],
+    "languagesList": [
+      { "label": "amari", "value": "Am" },
+      { "label": "arabic", "value": "Ar" },
+      { "label": "aymara", "value": "Ay" },
+      { "label": "cantonese", "value": "Ca" },
+      { "label": "french", "value": "Fr" },
+      { "label": "hindi", "value": "Hi" },
+      { "label": "italian", "value": "It" },
+      { "label": "kreolHaiti", "value": "KH" },
+      { "label": "kreolMorisyen", "value": "KM" },
+      { "label": "mandarin", "value": "Mn" },
+      { "label": "portuguese", "value": "Pt" },
+      { "label": "quechua", "value": "Qu" },
+      { "label": "russian", "value": "Ru" },
+      { "label": "spanish", "value": "Es" },
+      { "label": "urdu", "value": "Ur" }
+    ],
+    "englishCoursesTitle": {
+      "Level": "Nivel:",
+      "Duration": "Duración:",
+      "RecommendedFeeForTeacher": "Tarifa recomendada para el profesor:",
+      "Description": "Descripción:",
+      "LearningOutcomes": "Resultados de aprendizaje:"
+    },
+    "englishCourses": [
+      {
+        "id": "1",
+        "CourseName": "Inglés General para Principiantes Absolutos",
+        "Level": "Nivel 1 o A1 (Principiante)",
+        "Duration": "50 horas",
+        "RecommendedFeeForTeacher": "$10 a $25 por hora (individual)",
+        "Description": "Los Principiantes Absolutos son aprendices que no han tenido ninguna o muy poca instrucción en el idioma objetivo. Se distingue de los falsos principiantes, que son aprendices que han estudiado el idioma objetivo antes pero nunca adquieren un verdadero dominio del idioma.",
+        "LearningOutcomes": [
+          "Hacer y responder preguntas simples sobre temas muy familiares",
+          "Usar frases y oraciones simples para describir dónde viven y las personas que conocen",
+          "Entender palabras familiares y frases muy básicas cuando se hablan lentamente y claramente",
+          "Leer palabras, frases y oraciones simples",
+          "Escribir tarjetas postales cortas y simples y completar formularios con detalles personales"
+        ]
+      },
+      {
+        "id": "2",
+        "CourseName": "Inglés General",
+        "Level": "Nivel 2 (A1+ o Elemental)",
+        "Duration": "50 horas",
+        "RecommendedFeeForTeacher": "$10 a $30 por hora (individual)",
+        "Description": "Este curso es para aprendices que han completado el nivel 1 o ya tienen un conocimiento básico del idioma objetivo. Cubre temas como artículos definidos e indefinidos, felicitaciones, dar/justificar opiniones, habilidades de ortografía, sustantivos y pronombres, positivos y negativos.",
+        "LearningOutcomes": [
+          "Comunicarse en tareas simples y rutinarias sobre temas familiares y actividades",
+          "Hacer una descripción simple de su familia y otras personas, condiciones de vida, antecedentes educativos y su trabajo actual o más reciente",
+          "Entender frases y vocabulario común en áreas comunes",
+          "Leer textos muy cortos y simples y encontrar información específica y predecible en anuncios, prospectos, menús y horarios, y entender cartas personales cortas y simples",
+          "Escribir notas y mensajes cortos y simples, cartas personales simples como agradecimiento a alguien"
+        ]
+      },
+      {
+        "id": "3",
+        "CourseName": "Inglés General",
+        "Level": "Nivel 3 (A2 o Preintermedio)",
+        "Duration": "50 horas",
+        "RecommendedFeeForTeacher": "$10 a $40 por hora (individual)",
+        "Description": "Este curso es para aprendices que han completado el nivel 2 o han alcanzado este nivel en otro entorno. (El aprendiz presentará un examen para determinar su nivel). El curso cubre temas como el uso de los tiempos continuos y perfectos, la voz pasiva, adverbios y vocabulario relacionado con presentaciones, restaurantes y lugares de ocio, platos comunes, experiencias personales, clima y cambio climático.",
+        "LearningOutcomes": [
+          "Manejar la mayoría de las situaciones cuando viajan a lugares donde las personas hablan inglés",
+          "Hablar sobre experiencias y eventos, sueños, esperanzas y ambiciones, dar razones y explicaciones para opiniones y planes, contar la historia de un libro o película y describir reacciones",
+          "Entender los puntos principales de un discurso claro sobre trabajo, escuela y ocio, entender el punto principal en muchos programas de radio o televisión sobre actualidad o temas familiares, cuando el hablante habla lentamente y claramente",
+          "Escribir de manera sencilla sobre temas familiares, escribir cartas personales que describan experiencias e impresiones"
+        ]
+      },
+      {
+        "id": "4",
+        "CourseName": "Inglés General",
+        "Level": "Nivel 4 (B1 o Intermedio)",
+        "Duration": "50 horas",
+        "RecommendedFeeForTeacher": "$15 a $40 por hora (individual)",
+        "Description": "Este curso es para aprendices que han completado el nivel 3 o han alcanzado este nivel en otro entorno. (El aprendiz presentará un examen para determinar su nivel)",
+        "LearningOutcomes": [
+          "Hablar regularmente con cualquier hablante de inglés",
+          "Discutir temas familiares en detalle y dar sus opiniones y explicar ventajas e inconvenientes",
+          "Entender discursos y conferencias largas y seguir argumentos complejos si el tema es razonablemente familiar, entender la mayoría de las noticias de televisión y programas de actualidad y la mayoría de las películas en acentos comunes",
+          "Leer artículos e informes sobre temas comunes y entender novelas modernas",
+          "Escribir de manera clara y detallada sobre una amplia gama de temas, incluidos ensayos, informes y cartas sobre eventos y experiencias personales"
+        ]
+      },
+      {
+        "id": "5",
+        "CourseName": "Inglés General",
+        "Level": "Nivel 5 (B2 o Intermedio superior)",
+        "Duration": "50 horas",
+        "RecommendedFeeForTeacher": "$15 a $40 por hora (individual)",
+        "Description": "Este curso es para aprendices que han completado el nivel 4 o han alcanzado este nivel en otro entorno. (El aprendiz deberá presentar un examen para determinar su nivel)",
+        "LearningOutcomes": [
+          "Hablar con fluidez sin buscar el lenguaje",
+          "Dar ideas y opiniones y relacionar sus ideas con las de otros hablantes",
+          "Hablar sobre temas complejos y desarrollar argumentos",
+          "Entender discursos largos y complejos",
+          "Entender la mayoría de los programas de televisión y películas",
+          "Entender textos literarios factuales largos y complejos, con diferentes estilos",
+          "Entender artículos especializados e instrucciones técnicas largas",
+          "Escribir textos largos, claros y bien estructurados para expresar sus puntos de vista",
+          "Escribir sobre un tema complejo en una carta, un ensayo o un informe",
+          "Escribir en un estilo apropiado"
+        ]
+      },
+      {
+        "id": "6",
+        "CourseName": "Inglés General",
+        "Level": "Nivel 6 (C1 o Avanzado)",
+        "Duration": "50 horas",
+        "RecommendedFeeForTeacher": "$15 a $40 por hora (individual)",
+        "Description": "Este curso es para aprendices que han completado el nivel 5 o han alcanzado este nivel en otro entorno. (El aprendiz deberá presentar un examen para determinar su nivel)",
+        "LearningOutcomes": [
+          "Participar con fluidez y sin esfuerzo en cualquier conversación y tener un buen conocimiento de expresiones idiomáticas y giros coloquiales",
+          "Presentar una descripción o argumento claro y fluido en un estilo apropiado al contexto y con una estructura lógica efectiva",
+          "Entender cualquier tipo de lenguaje hablado, en vivo o grabado, a una velocidad nativa rápida cuando el aprendiz tiene algún tiempo para familiarizarse con diferentes acentos",
+          "Leer con facilidad textos abstractos estructuralmente o lingüísticamente complejos como manuales, artículos especializados y obras literarias",
+          "Escribir textos claros y fluidos en un estilo apropiado",
+          "Escribir cartas, informes o artículos complejos que presenten un caso con una estructura lógica efectiva",
+          "Escribir resúmenes y reseñas de obras profesionales o literarias"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "courses": {
+    "heading": "Our Courses",
+    "subHeading": "ACS Mulingua provides the following courses:",
+    "sectionTitles": {
+      "esl": "1. English as a Second Language (ESL) - General English (six levels)",
+      "efp": "2. English for Specific Purposes (EFP)",
+      "languages": "As a promoter of languages, ACS Mulingua is very keen to look for teachers of any language that you want to learn. Just drop some words in the Contact Box"
+    },
+    "common": {
+      "contactUsLink": "Contact us"
+    },
+    "specificPurposeCourses": [
+      "English for Accounting",
+      "English for Anthropology",
+      "English for Development Studies",
+      "Business English",
+      "English for International Studies",
+      "Legal English",
+      "English for Trade Union Studies",
+      "English for Travel and Tourism",
+      "English for Women Studies",
+      "English for Agriculture"
+    ],
+    "languagesList": [
+      { "label": "amari", "value": "Am" },
+      { "label": "arabic", "value": "Ar" },
+      { "label": "aymara", "value": "Ay" },
+      { "label": "cantonese", "value": "Ca" },
+      { "label": "french", "value": "Fr" },
+      { "label": "hindi", "value": "Hi" },
+      { "label": "italian", "value": "It" },
+      { "label": "kreolHaiti", "value": "KH" },
+      { "label": "kreolMorisyen", "value": "KM" },
+      { "label": "mandarin", "value": "Mn" },
+      { "label": "portuguese", "value": "Pt" },
+      { "label": "quechua", "value": "Qu" },
+      { "label": "russian", "value": "Ru" },
+      { "label": "spanish", "value": "Es" },
+      { "label": "urdu", "value": "Ur" }
+    ],
+    "englishCoursesTitle": {
+      "Level": "Level:",
+      "Duration": "Duration:",
+      "RecommendedFeeForTeacher": "Recommended Fee for Teacher:",
+      "Description": "Description:",
+      "LearningOutcomes": "Learning Outcomes:"
+    },
+    "englishCourses": [
+      {
+        "id": "1",
+        "CourseName": "General English for Absolute Beginners",
+        "Level": "Level 1 or A1 (Beginner)",
+        "Duration": "50 hours",
+        "RecommendedFeeForTeacher": "US $10 to US $25 per hr (one-to-one)",
+        "Description": "Absolute Beginners are learners who have had no or very little instruction in the target language. It is distinguished from false beginners who are learners who have studied the target language before but never acquire a real grasp of the language.",
+        "LearningOutcomes": [
+          "Ask and answer simple questions on very familiar topics",
+          "Use simple phrases and sentences to describe where they live and people they know",
+          "Understand familiar words and very basic phrases when spoken slowly and clearly",
+          "Read simple words, phrases, and sentences",
+          "Write short, simple postcards and fill in forms with personal details"
+        ]
+      },
+      {
+        "id": "2",
+        "CourseName": "General English",
+        "Level": "Level 2 (A1+ or Elementary)",
+        "Duration": "50 hours",
+        "RecommendedFeeForTeacher": "US $10 to US $30 per hr (one-to-one)",
+        "Description": "This course is for learners who have completed level 1 or have already a basic knowledge of the target language. It covers subjects such as definite and indefinite articles, congratulating, giving / justifying opinions, spelling skills, nouns and pronouns, positive and negative.",
+        "LearningOutcomes": [
+          "Communicate in simple and routine tasks on family topics and activities",
+          "Make simple description of their family and other people, living conditions, educational background and their present or most recent job",
+          "Understand phrases and common vocabulary on common areas",
+          "Read very short, simple texts and find specific, predictable information in advertisements, prospectuses, menus and time tables and understand short simple personal letters",
+          "Write short, simple notes and messages, simple personal letters such as thanking someone"
+        ]
+      },
+      {
+        "id": "3",
+        "CourseName": "General English",
+        "Level": "Level 3 (A2 or Pre-Intermediate)",
+        "Duration": "50 hours",
+        "RecommendedFeeForTeacher": "US $10 to US $40 per hr (one-to-one)",
+        "Description": "This course is for learners who have completed level 2 or have reached this level in another set-up. (The learner will sit a test to determine his or her level). The course covers subjects such as the use of the continuous and perfect tenses, passive voice, adverbs and vocabulary surrounding presentation, restaurant and leisure venues, common dishes, personal experiences, weather and climate change.",
+        "LearningOutcomes": [
+          "Deal with most situations when they travel in places where people speak English",
+          "Talk about experiences and events, dreams, hopes and ambitions, give reasons and explanations for opinions and plans, tell the story of a book or film and describe reactions",
+          "Understand the main points of a clear speech on work, school and leisure, understand the main point on many radio or TV programs on current affairs or familiar topics, when the speaker speaks slowly and clearly",
+          "Write simply about familiar topics, write personal letters describing experiences and impressions"
+        ]
+      },
+      {
+        "id": "4",
+        "CourseName": "General English",
+        "Level": "Level 4 (B1 or Intermediate)",
+        "Duration": "50 hours",
+        "RecommendedFeeForTeacher": "US $15 to US $40 per hr (one-to-one)",
+        "Description": "This course is for learners who have completed level 3 or have reached this level in another set-up. (The learner will sit a test to determine his or her level)",
+        "LearningOutcomes": [
+          "Speak regularly with any English speakers",
+          "Discuss familiar topics in detail and give their opinions and explain advantages and disadvantages",
+          "Understand long speeches and lectures and follow complex arguments if the topic is reasonably familiar, understand most TV news and current affairs programs and the majority of films in common accents",
+          "Read articles and reports about common topics and understand modern novels",
+          "Write clearly and in detail about a wide range of subjects, including essays, reports and letters about events and personal experiences"
+        ]
+      },
+      {
+        "id": "5",
+        "CourseName": "General English",
+        "Level": "Level 5 (B2 or Upper Intermediate)",
+        "Duration": "50 hours",
+        "RecommendedFeeForTeacher": "US $15 to US $40 per hr (one-to-one)",
+        "Description": "This course is for learners who have completed level 4 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
+        "LearningOutcomes": [
+          "Speak fluently without searching for language",
+          "Give ideas and opinions and relate their ideas to those of other speakers",
+          "Talk about complex subjects and develop arguments",
+          "Understand long complex speech",
+          "Understand most television programs and films",
+          "Understand long and complex factual literary texts, with different styles",
+          "Understand specialized articles and long technical instructions",
+          "Write long, clear, well-structured text to express their points of view",
+          "Write about complex subject in a letter, an essay or a report",
+          "Write in an appropriate style"
+        ]
+      },
+      {
+        "id": "6",
+        "CourseName": "General English",
+        "Level": "Level 6 (C1 or Advanced)",
+        "Duration": "50 hours",
+        "RecommendedFeeForTeacher": "US $15 to US $40 per hr (one-to-one)",
+        "Description": "This course is for learners who have completed level 5 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
+        "LearningOutcomes": [
+          "Take part fluently and effortlessly in any conversation and have a good familiarity with idiomatic expressions and colloquialisms",
+          "Present a clear, smoothly-flowing description or argument in a style appropriate to the context and with an effective logical structure",
+          "Understand any kind of spoken language, live or broadcast, at fast native speed when the learner has some time to get familiar with different accent",
+          "Read with ease abstract structurally or linguistically complex texts such as manuals, specialized articles and literary works",
+          "Write clear, smoothly flowing texts in an appropriate style",
+          "Write complex letters, reports or articles which present a case with an effective logical structure",
+          "Write summaries and reviews of professional or literary works"
+        ]
+      }
+    ]
+  }
+}

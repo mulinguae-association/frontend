@@ -1,0 +1,188 @@
+{
+  "specificPurposesTitle": {
+    "duration": "Duração:",
+    "recommendedFeeForTeacher": "Taxa recomendada para o professor:",
+    "targetAudience": "Público-alvo:",
+    "description": "Descrição:",
+    "goals": "Objetivos:",
+    "methodology": "Metodologia:",
+    "areaCovered": "Áreas abordadas:",
+    "requiredLevel": "Nível necessário"
+  },
+  "specificPurposes": [
+    {
+      "id": "inglês-para-estudos-de-desenvolvimento",
+      "name": "Inglês para Estudos de Desenvolvimento",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
+      "targetAudience": "Profissionais e estudantes em Estudos de Desenvolvimento que não são falantes nativos de inglês.",
+      "description": "Este curso abrange um programa multidisciplinar que inclui antropologia, sociologia, geografia mundial, ciência política, relações internacionais e estudos de gênero, com foco nos fundamentos do desenvolvimento.",
+      "goals": [
+        "Aumentar o vocabulário e termos técnicos do aluno em estudos de desenvolvimento.",
+        "Praticar e aumentar a compreensão de textos de desenvolvimento e termos econômicos e financeiros internacionais.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas, parceiros de negócios e em plataformas políticas e sociais, tanto na fala quanto na escrita.",
+        "Ampliar o conhecimento dos sistemas internacionais de desenvolvimento."
+      ],
+      "methodology": "É utilizada uma metodologia amplamente comunicativa e interativa, juntamente com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para o desenvolvimento rural, nacional e internacional.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas e uso do inglês para diferentes ramos dos estudos de desenvolvimento.",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-para-contabilidade",
+      "name": "Inglês para Contabilidade",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
+      "targetAudience": "Contadores, auditores, banqueiros, profissionais do setor financeiro e estudantes dessas áreas que não são falantes nativos de inglês.",
+      "description": "Este curso se concentra nos fundamentos da contabilidade.",
+      "goals": [
+        "Aumentar o vocabulário do aluno em contabilidade.",
+        "Praticar e aumentar a compreensão de textos contábeis e termos financeiros internacionais.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas e parceiros de negócios, tanto na fala quanto na escrita.",
+        "Ampliar o conhecimento do sistema financeiro internacional."
+      ],
+      "methodology": "É utilizada uma metodologia amplamente comunicativa e interativa, juntamente com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para o sistema financeiro internacional.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas e uso do inglês para diferentes ramos da contabilidade, como contabilidade financeira, contabilidade gerencial, contabilidade de custos, contabilidade tributária e auditoria.",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-jurídico",
+      "name": "Inglês Jurídico",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
+      "targetAudience": "Advogados, estudantes de direito e profissionais que não são falantes nativos de inglês, com foco nos fundamentos do inglês jurídico internacional das jurisdições anglo-saxã e anglo-americana na prática.",
+      "description": "Este curso visa aumentar o vocabulário do aluno em inglês jurídico e a compreensão de textos jurídicos em várias áreas do direito com uma abordagem prática.",
+      "goals": [
+        "Aumentar o vocabulário do aluno em inglês jurídico.",
+        "Praticar e aumentar a compreensão de textos jurídicos em várias áreas do direito com uma abordagem prática.",
+        "Desenvolver confiança na comunicação em inglês jurídico aplicado, tanto na fala quanto na escrita.",
+        "Ampliar o conhecimento da prática internacional do inglês jurídico."
+      ],
+      "methodology": "É utilizada uma metodologia amplamente comunicativa e interativa, juntamente com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para o vocabulário jurídico internacional em inglês.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, as características da linguagem jurídica, desenvolvimento de habilidades linguísticas e o uso do inglês para diferentes ramos do direito, como direito comercial, direitos humanos, direito de família, direito do trabalho e direito internacional.",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-para-estudos-sindicais",
+      "name": "Inglês para Estudos Sindicais",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 10 a US$ 40 por hora",
+      "targetAudience": "Sindicalistas e estudantes em estudos sindicais e trabalhistas que não são falantes nativos de inglês.",
+      "description": "Este curso é destinado a sindicalistas e estudantes em estudos sindicais e trabalhistas que não são falantes nativos de inglês. Ele abrange um programa multidisciplinar que inclui políticas trabalhistas, estratégias de desenvolvimento, resposta trabalhista aos desafios da globalização, convenções da OIT, direitos dos trabalhadores e sindicatos, justiça social e empresas de trabalhadores. \n O curso se concentra na história do movimento trabalhista em todo o mundo e no uso do inglês como língua franca na construção da solidariedade internacional dos trabalhadores.",
+      "goals": [
+        "Aumentar o vocabulário do aluno e os termos técnicos na história da luta dos trabalhadores, padrões internacionais de trabalho, empresas multinacionais, políticas de desenvolvimento e cooperação em questões globais do trabalho.",
+        "Praticar e aumentar a compreensão da literatura da luta dos trabalhadores.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas, em plataformas políticas e sociais, tanto na fala quanto na escrita.",
+        "Ampliar o conhecimento da solidariedade internacional dos trabalhadores."
+      ],
+      "methodology": "É utilizada uma metodologia amplamente comunicativa e interativa, juntamente com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para a emancipação dos trabalhadores.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas, uso do multilinguismo na construção da solidariedade dos trabalhadores.\n(Um programa detalhado está disponível quando você ingressa no curso.)",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-para-viagens-e-turismo",
+      "name": "Inglês para Viagens e Turismo",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
+      "targetAudience": "Profissionais e estudantes da indústria de viagens e turismo que não são falantes nativos de inglês.",
+      "description": "Este curso abrange um programa multidisciplinar que inclui geografia, psicologia, culinária, catering, lazer e disciplinas relacionadas. O curso se concentra nos fundamentos de viagens e turismo.",
+      "goals": [
+        "Aumentar o vocabulário e termos técnicos do aluno em turismo e catering.",
+        "Praticar e aumentar a compreensão de viagens e catering.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas, parceiros de negócios e em plataformas políticas e sociais, tanto na fala quanto na escrita.",
+        "Ampliar o conhecimento da indústria global de viagens e turismo."
+      ],
+      "methodology": "É utilizada uma metodologia amplamente comunicativa e interativa, juntamente com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para a indústria de viagens e turismo.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas, uso do inglês e multilinguismo na indústria de viagens e turismo.\n(Um programa detalhado está disponível quando você ingressa no curso.)",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-para-estudos-de-mulheres",
+      "name": "Inglês para Estudos de Mulheres e Gênero",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 10 a US$ 40 por hora",
+      "targetAudience": "Profissionais e estudantes em todas as áreas de estudo que não são falantes nativos de inglês.",
+      "description": "Este curso abrange um programa interdisciplinar que inclui uma introdução aos estudos de gênero, sexualidade e mulheres. O curso se concentra no conceito de igualdade de gênero, lutas internacionais das mulheres ao redor do mundo e o uso do inglês como língua franca na construção da solidariedade internacional das mulheres.",
+      "goals": [
+        "Aumentar o vocabulário e termos técnicos do aluno em estudos de mulheres e gênero.",
+        "Praticar e aumentar a compreensão da literatura da luta das mulheres.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas, em plataformas políticas e sociais, tanto na fala quanto na escrita.",
+        "Ampliar o conhecimento das lutas internacionais das mulheres e de gênero."
+      ],
+      "methodology": "É utilizada uma metodologia amplamente comunicativa e interativa, juntamente com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para os estudos de mulheres e gênero.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas, uso do multilinguismo na construção da solidariedade das mulheres.\n(Um programa detalhado está disponível quando você ingressa no curso.)",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-empresarial",
+      "name": "Inglês Empresarial",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
+      "targetAudience": "Profissionais que atuam em qualquer setor de negócios e estudantes de ciências empresariais que não são falantes nativos de inglês.",
+      "description": "Este curso foca no desenvolvimento das habilidades de comunicação do aluno em um ambiente de negócios.",
+      "goals": [
+        "Aumentar o conhecimento do aluno sobre o ambiente de negócios.",
+        "Praticar e aumentar a compreensão de textos de negócios e das últimas tendências no mundo dos negócios.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas e parceiros de negócios, tanto na fala quanto na escrita.",
+        "Expandir o conhecimento dos negócios globais."
+      ],
+      "methodology": "Uma metodologia amplamente comunicativa e interativa, com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para o sistema financeiro internacional.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas, uso do inglês para diferentes ramos de negócios, como finanças, marketing internacional, desenvolvimento de carreira, vendas e gestão de pessoal. (Um programa detalhado está disponível quando você ingressa no curso.)",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-para-estudos-internacionais",
+      "name": "Inglês para Estudos Internacionais",
+      "duration": "50 horas por nível",
+      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
+      "targetAudience": "Profissionais não falantes nativos de inglês que trabalham em questões de relações internacionais e desafios globais, como desigualdade e pobreza, mudanças climáticas, migração, guerras, diplomacia, TI, inteligência artificial e setores relacionados. Isso inclui jornalistas, profissionais que buscam uma carreira diplomática, oficiais ou diretores em organizações internacionais, ONGs, sindicatos e funcionários públicos.",
+      "description": "Este curso se concentra no desenvolvimento das habilidades de comunicação do aluno em questões globais.",
+      "goals": [
+        "Aumentar o conhecimento do aluno sobre globalização e desafios globais.",
+        "Praticar e aumentar a compreensão de livros didáticos e artigos que tratam de questões globais.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas e parceiros sociais, tanto na fala quanto na escrita.",
+        "Expandir o conhecimento do mundo em que vivemos."
+      ],
+      "methodology": "Uma metodologia amplamente comunicativa e interativa, com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para os sistemas internacionais.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas, uso do inglês para entender temas internacionais. (Um programa detalhado está disponível quando você ingressa no curso.)",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "inglês-para-antropologia",
+      "name": "Inglês para Antropologia",
+      "duration": "50 horas por nível",
+      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
+      "targetAudience": "Profissionais e estudantes não falantes nativos de inglês que trabalham em pesquisas e estudos antropológicos, como a diversidade da humanidade ao redor do mundo, organizações sociais, o local e o global, o valor da vida humana a partir da base, mudança social e diversidade cultural. Isso inclui jornalistas, profissionais que buscam uma carreira diplomática, oficiais ou diretores em organizações locais ou internacionais e ONGs.",
+      "description": "Este curso se concentra no desenvolvimento das habilidades de comunicação do aluno em questões locais e globais.",
+      "goals": [
+        "Aumentar o conhecimento do aluno sobre antropologia.",
+        "Praticar e aumentar a compreensão de livros didáticos e artigos que tratam de questões locais e globais.",
+        "Desenvolver confiança na comunicação em diversas situações com colegas e parceiros sociais, tanto na fala quanto na escrita.",
+        "Expandir o conhecimento do mundo em que vivemos."
+      ],
+      "methodology": "Uma metodologia amplamente comunicativa e interativa, com uma abordagem baseada em texto e tarefas. Os textos de leitura são autênticos ou semi-autênticos e fornecem contexto para a antropologia.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas, uso do inglês para entender temas internacionais. (Um programa detalhado está disponível quando você ingressa no curso.)",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    },
+    {
+      "id": "ingles-para-agricultura",
+      "name": "Inglês para Agricultura",
+      "duration": "50 horas",
+      "recommendedFeeRange": "US$ 10 a US$ 30 por hora",
+      "targetAudience": "Profissionais da agricultura e agroindústria, agricultores, jardineiros e estudantes nesses campos que não são falantes nativos de inglês.",
+      "description": "Este curso foca nos fundamentos da agricultura e agroindústria. Inglês para Agricultura aborda tópicos como preparo do solo, métodos de semeadura, equipamentos agrícolas, criação de animais e agricultura orgânica.",
+      "goals": [
+        "Aumentar o vocabulário do aprendiz em agricultura e agroindústria.",
+        "Praticar e aumentar a compreensão de textos sobre agricultura e agroindústria.",
+        "Desenvolver confiança para se comunicar em diversas situações com colegas e parceiros de negócios, tanto oral quanto escrito.",
+        "Ampliar o conhecimento em agricultura e agroindústria.",
+        "Aumentar o vocabulário do aprendiz em agricultura, agroindústria e setores relacionados.",
+        "Praticar e aumentar a compreensão de textos sobre agricultura e agroindústria e campos relacionados.",
+        "Desenvolver confiança para se comunicar em diversas situações com colegas e parceiros de negócios, tanto oral quanto escrito.",
+        "Ampliar o conhecimento em agricultura, agroindústria e campos relacionados."
+      ],
+      "methodology": "É utilizada uma metodologia amplamente comunicativa e interativa, com uma abordagem baseada em textos e tarefas. Os textos de leitura são autênticos ou semi-autênticos, proporcionando contexto para os setores de agricultura e agroindústria.",
+      "areasCovered": "O curso abrange áreas como o poder da linguagem, desenvolvimento de habilidades linguísticas e o uso do inglês em diferentes ramos da agricultura, como agronomia, silvicultura, criação de animais, horticultura, ciência pesqueira e engenharia agrícola.",
+      "requiredLevel": "Nível intermediário a avançado de inglês como segunda língua ou equivalente."
+    }
+  ]
+}
