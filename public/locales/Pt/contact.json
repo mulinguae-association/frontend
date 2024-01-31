@@ -1,55 +1,3 @@
-<<<<<<< Updated upstream
-{
-  "titles": {
-    "mainTitle": "Contate-nos",
-    "teacherFormTitle": "Bem-vindo Professor",
-    "studentFormTitle": "Bem-vindo Aluno"
-  },
-  "buttons": {
-    "teacherButton": "És professor?",
-    "studentButton": "És aluno?",
-    "loadingText": "carregando..."
-  },
-  "messages": {
-    "submissionMessage": "Sua informação foi enviada para revisão"
-  },
-  "teacherForm": {
-    "nameLabel": "Nome",
-    "emailLabel": "E-mail",
-    "phoneNumberLabel": "Número de Telefone (opcional)",
-    "countryLabel": "País",
-    "languagesSpokenLabel": "Idiomas falados",
-    "subjectsTaughtLabel": "Disciplinas ensinadas?",
-    "addressLabel": "Endereço",
-    "uploadCvLabel": "Carregar CV",
-    "cvUploadButtonText": "Enviar",
-    "fullNamePlaceholder": "Seu nome completo",
-    "emailPlaceholder": "Seu e-mail",
-    "phoneNumberPlaceholder": "Seu número de telefone",
-    "countryPlaceholder": "Seu país",
-    "languagesSpokenPlaceholder": "(por exemplo, Inglês, Árabe, ...)",
-    "subjectsTaughtPlaceholder": "por exemplo, Matemática, Ciências, etc.",
-    "AddressPlaceholder": "Seu endereço"
-  },
-  "studentForm": {
-    "nameLabel": "Nome",
-    "emailLabel": "E-mail",
-    "phoneNumberLabel": "Número de Telefone",
-    "countryLabel": "País",
-    "ageLabel": "Idade",
-    "languagesSpokenLabel": "Idioma/s falado/s",
-    "submitButton": "Enviar",
-    "fullNamePlaceholder": "Seu nome completo",
-    "emailPlaceholder": "Seu e-mail",
-    "phoneNumberPlaceholder": "Seu número de telefone",
-    "countryPlaceholder": "Seu país",
-    "agePlaceholder": "Sua idade",
-    "languagesSpokenPlaceholder": "Insira idiomas (por exemplo, Inglês, Árabe, ...)",
-    "cvUploadButtonText": "carregando..."
-  }
-}
-||||||| Stash base
-=======
 {
   "titles": {
     "mainTitle": "Contate-nos",
@@ -114,4 +62,3 @@
     "cvUploadButtonText": "carregando..."
   }
 }
->>>>>>> Stashed changes

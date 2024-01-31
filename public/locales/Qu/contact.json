@@ -1,55 +1,3 @@
-<<<<<<< Updated upstream
-{
-  "titles": {
-    "mainTitle": "Ñuqa Qanmi",
-    "teacherFormTitle": "Kamachiqpiy Teacher",
-    "studentFormTitle": "Kamachiqpiy Student"
-  },
-  "buttons": {
-    "teacherButton": "Kamachiqpiy Teachermi?",
-    "studentButton": "Kamachiqpiy Studentmi?",
-    "loadingText": "chaypi..."
-  },
-  "messages": {
-    "submissionMessage": "Yachachiqpaqmi Info has been submitted for review"
-  },
-  "teacherForm": {
-    "nameLabel": "Suti yachana",
-    "emailLabel": "Email",
-    "phoneNumberLabel": "Q'epasni simi (manammi lliwllamanta)",
-    "countryLabel": "Llaqta",
-    "languagesSpokenLabel": "Simi musquy",
-    "subjectsTaughtLabel": "Yachanaykuna?",
-    "addressLabel": "Chaski",
-    "uploadCvLabel": "CV Upload",
-    "cvUploadButtonText": "Yachachiqpaq",
-    "fullNamePlaceholder": "Suti yachana",
-    "emailPlaceholder": "Suti email",
-    "phoneNumberPlaceholder": "Suti q'epasni simi",
-    "countryPlaceholder": "Suti llaqta",
-    "languagesSpokenPlaceholder": "(ejemplo, Inglés, Árabe,...)",
-    "subjectsTaughtPlaceholder": "ejemplo, Matemáticas, Ciencias, etc.",
-    "addressPlaceholder": "Suti chaski"
-  },
-  "studentForm": {
-    "nameLabel": "Suti yachana",
-    "emailLabel": "Email",
-    "phoneNumberLabel": "Q'epasni simi",
-    "countryLabel": "Llaqta",
-    "ageLabel": "Tantan",
-    "languagesSpokenLabel": "Langaz koté ou kozé",
-    "submitButton": "Yachachiqpaq",
-    "fullNamePlaceholder": "Suti yachana",
-    "emailPlaceholder": "Suti email",
-    "phoneNumberPlaceholder": "Suti q'epasni simi",
-    "countryPlaceholder": "Suti llaqta",
-    "agePlaceholder": "Suti tantan",
-    "languagesSpokenPlaceholder": "Tann langaz (par exemple, Anglés, Arabe,...)",
-    "cvUploadButtonText": "chaypi..."
-  }
-}
-||||||| Stash base
-=======
 {
   "titles": {
     "mainTitle": "Ñuqa Qanmi",
@@ -114,4 +62,3 @@
     "cvUploadButtonText": "chaypi..."
   }
 }
->>>>>>> Stashed changes
