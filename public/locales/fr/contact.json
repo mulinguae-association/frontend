@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "titles": {
     "mainTitle": "Contactez-nous",
@@ -47,3 +48,70 @@
     "cvUploadButtonText": "chargement..."
   }
 }
+||||||| Stash base
+=======
+{
+  "titles": {
+    "mainTitle": "Contactez-nous",
+    "teacherFormTitle": "Bienvenue Enseignant",
+    "studentFormTitle": "Bienvenue Étudiant"
+  },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "Heures de Tutorat",
+      "value": "Nous proposons des séances de tutorat 24/7."
+    },
+    "officeHours": {
+      "title": "Heures de Bureau",
+      "value": {
+        "mondayToFriday": "Lundi à Vendredi : 7h - 23h",
+        "saturdayAndSunday": "Samedi et Dimanche : 8h - 17h"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
+  "buttons": {
+    "teacherButton": "Êtes-vous un enseignant ?",
+    "studentButton": "Êtes-vous un étudiant ?",
+    "loadingText": "chargement..."
+  },
+  "messages": {
+    "submissionMessage": "Vos informations ont été soumises pour examen"
+  },
+  "teacherForm": {
+    "nameLabel": "Nom",
+    "emailLabel": "E-mail",
+    "phoneNumberLabel": "Numéro de téléphone (facultatif)",
+    "countryLabel": "Pays",
+    "languagesSpokenLabel": "Langues parlées",
+    "subjectsTaughtLabel": "Matières enseignées ?",
+    "addressLabel": "Adresse",
+    "uploadCvLabel": "Télécharger le CV",
+    "cvUploadButtonText": "Soumettre",
+    "fullNamePlaceholder": "Votre nom complet",
+    "emailPlaceholder": "Votre e-mail",
+    "phoneNumberPlaceholder": "Votre numéro de téléphone",
+    "countryPlaceholder": "Votre pays",
+    "languagesSpokenPlaceholder": "(par exemple, Anglais, Arabe, ...)",
+    "subjectsTaughtPlaceholder": "par exemple, Mathématiques, Sciences, etc.",
+    "AddressPlaceholder": "Votre adresse"
+  },
+  "studentForm": {
+    "nameLabel": "Nom",
+    "emailLabel": "E-mail",
+    "phoneNumberLabel": "Numéro de téléphone",
+    "countryLabel": "Pays",
+    "ageLabel": "Âge",
+    "languagesSpokenLabel": "Langue(s) parlée(s)",
+    "submitButton": "Soumettre",
+    "fullNamePlaceholder": "Votre nom complet",
+    "emailPlaceholder": "Votre e-mail",
+    "phoneNumberPlaceholder": "Votre numéro de téléphone",
+    "countryPlaceholder": "Votre pays",
+    "agePlaceholder": "Votre âge",
+    "languagesSpokenPlaceholder": "Entrez les langues (par exemple, Anglais, Arabe, ...)",
+    "cvUploadButtonText": "chargement..."
+  }
+}
+>>>>>>> Stashed changes

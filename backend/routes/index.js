@@ -14,7 +14,6 @@ router.use("/blogPosts", blogPostRoutes);
 router.use("/comments", blogsComments);
 router.use("/auth", authRoute);
 router.use("/", FAQs);
-
 router.use("/", contactRoutes);
 
 

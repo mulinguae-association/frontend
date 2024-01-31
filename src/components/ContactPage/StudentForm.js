@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGlobal } from '../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
+import InputField from '../HelperComponents/InputField';
 
 const StudentForm = ({ handleSubmit }) => {
   const { t } = useTranslation("contact");
@@ -24,76 +25,65 @@ const StudentForm = ({ handleSubmit }) => {
   return (
     <div className='form_container'>
       <h2>{t("titles.studentFormTitle")}</h2>
-      <form method="post" enctype="multipart/form-data" onSubmit={(e) => handleSubmit(e, formData, "student", setFormData)}>
-        <div>
-          <label htmlFor="fullName">{t("studentForm.nameLabel")}</label>
-          <input
+      <form method="post" encType="multipart/form-data" onSubmit={(e) => handleSubmit(e, formData, "student", setFormData)}>
+        <div className='content'>
+          <InputField
+            label={t("studentForm.nameLabel")}
             type="text"
-            id="fullName"
-            name="fullName"
             placeholder={t("studentForm.fullNamePlaceholder")}
             value={formData.fullName}
             onChange={handleChange}
+            name="fullName"
             required
           />
-        </div>
-        <div>
-          <label htmlFor="email">{t("studentForm.emailLabel")}</label>
-          <input
+
+          <InputField
+            label={t("studentForm.emailLabel")}
             type="email"
-            id="email"
-            name="email"
             placeholder={t("studentForm.emailPlaceholder")}
             value={formData.email}
             onChange={handleChange}
+            name="email"
             required
           />
-        </div>
-        <div>
-          <label htmlFor="phoneNumber">{t("studentForm.phoneNumberLabel")}</label>
-          <input
+
+          <InputField
+            label={t("studentForm.phoneNumberLabel")}
             type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
             placeholder={t("studentForm.phoneNumberPlaceholder")}
             value={formData.phoneNumber}
             onChange={handleChange}
+            name="phoneNumber"
           />
-        </div>
-        <div>
-          <label htmlFor="country">{t("studentForm.countryLabel")}</label>
-          <input
+
+          <InputField
+            label={t("studentForm.countryLabel")}
             type="text"
-            id="country"
-            name="country"
             placeholder={t("studentForm.countryPlaceholder")}
             value={formData.country}
             onChange={handleChange}
+            name="country"
             required
           />
-        </div>
-        <div>
-          <label htmlFor="age">{t("studentForm.ageLabel")}</label>
-          <input
+
+          <InputField
+            label={t("studentForm.ageLabel")}
             type="number"
-            id="age"
-            name="age"
             placeholder={t("studentForm.agePlaceholder")}
             value={formData.age}
             onChange={handleChange}
+            name="age"
             required
           />
-        </div>
-        <div>
-          <label>{t("studentForm.languagesSpokenLabel")}</label>
-          <input
+
+          <InputField
+            label={t("studentForm.languagesSpokenLabel")}
             type="text"
-            id="languagesSpoken"
-            name="languagesSpoken"
             placeholder={t("studentForm.languagesSpokenPlaceholder")}
-            title="Example: English, Spanish, French"
+            title={t("studentForm.languagesSpokenTitle")}
             value={formData.languagesSpoken}
             onChange={handleChange}
+            name="languagesSpoken"
             required
           />
         </div>

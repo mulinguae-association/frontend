@@ -4,6 +4,21 @@
     "teacherFormTitle": "Welcome Teacher",
     "studentFormTitle": "Welcome Student"
   },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "Tutoring Hours",
+      "value": "We offer tutoring 24/7."
+    },
+    "officeHours": {
+      "title": "Office Hours",
+      "value": {
+        "mondayToFriday": "Monday to Friday: 7am - 11pm",
+        "saturdayAndSunday": "Saturday and Sunday: 8am - 5pm"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
   "buttons": {
     "teacherButton": "Are you A Teacher?",
     "studentButton": "Are you A Student?",

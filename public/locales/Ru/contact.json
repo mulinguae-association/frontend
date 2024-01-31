@@ -1,0 +1,64 @@
+{
+  "titles": {
+    "mainTitle": "Нука Канми",
+    "teacherFormTitle": "Форма Преподавателя",
+    "studentFormTitle": "Форма Студента"
+  },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "Учебные Часы",
+      "value": "Предлагаем учебу круглосуточно, 7 дней в неделю."
+    },
+    "officeHours": {
+      "title": "Часы Офиса",
+      "value": {
+        "mondayToFriday": "Понедельник - Пятница: 7 утра - 11 вечера",
+        "saturdayAndSunday": "Суббота и Воскресенье: 8 утра - 5 вечера"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
+  "buttons": {
+    "teacherButton": "Стать Преподавателем?",
+    "studentButton": "Стать Студентом?",
+    "loadingText": "загрузка..."
+  },
+  "messages": {
+    "submissionMessage": "Информация отправлена на рассмотрение"
+  },
+  "teacherForm": {
+    "nameLabel": "Фамилия и Имя",
+    "emailLabel": "Электронная почта",
+    "phoneNumberLabel": "Номер телефона (с кодом страны)",
+    "countryLabel": "Страна",
+    "languagesSpokenLabel": "Знание языков",
+    "subjectsTaughtLabel": "Преподаваемые предметы",
+    "addressLabel": "Адрес",
+    "uploadCvLabel": "Загрузить Резюме",
+    "cvUploadButtonText": "Отправить",
+    "fullNamePlaceholder": "Фамилия и Имя",
+    "emailPlaceholder": "Введите вашу почту",
+    "phoneNumberPlaceholder": "Номер телефона",
+    "countryPlaceholder": "Страна",
+    "languagesSpokenPlaceholder": "(например, Английский, Арабский,...)",
+    "subjectsTaughtPlaceholder": "Например, Математика, Науки, и т.д.",
+    "addressPlaceholder": "Ваш адрес"
+  },
+  "studentForm": {
+    "nameLabel": "Фамилия и Имя",
+    "emailLabel": "Электронная почта",
+    "phoneNumberLabel": "Номер телефона",
+    "countryLabel": "Страна",
+    "ageLabel": "Возраст",
+    "languagesSpokenLabel": "Знание языков",
+    "submitButton": "Отправить",
+    "fullNamePlaceholder": "Фамилия и Имя",
+    "emailPlaceholder": "Введите вашу почту",
+    "phoneNumberPlaceholder": "Номер телефона",
+    "countryPlaceholder": "Страна",
+    "agePlaceholder": "Ваш возраст",
+    "languagesSpokenPlaceholder": "Знание языков (например, Английский, Арабский,...)",
+    "cvUploadButtonText": "Загрузка..."
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGlobal } from '../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
+import InputField from '../HelperComponents/InputField';
 
 const TeacherForm = ({ handleSubmit }) => {
   const { t } = useTranslation("contact");
@@ -38,98 +39,81 @@ const TeacherForm = ({ handleSubmit }) => {
     <div className='form_container'>
       <h2>{t("titles.teacherFormTitle")}</h2>
       <form method="post" action='/submit-info' encType="multipart/form-data" onSubmit={(e) => handleSubmit(e, formData, "teacher", setFormData)}>
-        <div>
-          <label htmlFor="name">{t("teacherForm.nameLabel")}</label>
-          <input
+        <div className='content'>
+          <InputField
+            label={t("teacherForm.fullNameLabel")}
             type="text"
-            id="fullName"
-            name="fullName"
             placeholder={t("teacherForm.fullNamePlaceholder")}
             value={formData.fullName}
             onChange={handleChange}
+            name="fullName"
             required
           />
-        </div>
-        <div>
-          <label htmlFor="email">{t("teacherForm.emailLabel")}</label>
-          <input
+          <InputField
+            label={t("teacherForm.emailLabel")}
             type="email"
-            id="email"
-            name="email"
             placeholder={t("teacherForm.emailPlaceholder")}
             value={formData.email}
             onChange={handleChange}
+            name="email"
             required
           />
-        </div>
-        <div>
-          <label htmlFor="phoneNumber">{t("teacherForm.phoneNumberLabel")}</label>
-          <input
+          <InputField
+            label={t("teacherForm.phoneNumberLabel")}
             type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
             placeholder={t("teacherForm.phoneNumberPlaceholder")}
             value={formData.phoneNumber}
             onChange={handleChange}
+            name="phoneNumber"
           />
-        </div>
-        <div>
-          <label htmlFor="country">{t("teacherForm.countryLabel")}</label>
-          <input
+          <InputField
+            label={t("teacherForm.countryLabel")}
             type="text"
-            id="country"
-            name="country"
             placeholder={t("teacherForm.countryPlaceholder")}
             value={formData.country}
             onChange={handleChange}
+            name="country"
             required
           />
-        </div>
-        <div>
-          <label>{t("teacherForm.languagesSpokenLabel")}</label>
-          <input
+          <InputField
+            label={t("teacherForm.languagesSpokenLabel")}
             type="text"
-            id="languagesSpoken"
-            name="languagesSpoken"
             placeholder={t("teacherForm.languagesSpokenPlaceholder")}
-            title="Example: English, Spanish, French"
+            title={t("teacherForm.languagesSpokenTitle")}
             value={formData.languagesSpoken}
             onChange={handleChange}
+            name="languagesSpoken"
             required
           />
-        </div>
-        <div>
-          <label htmlFor="subjectsTaught">{t("teacherForm.subjectsTaughtLabel")}</label>
-          <input
+          <InputField
+            label={t("teacherForm.subjectsTaughtLabel")}
             type="text"
-            id="subjectsTaught"
-            name="subjectsTaught"
             placeholder={t("teacherForm.subjectsTaughtPlaceholder")}
             value={formData.subjectsTaught}
             onChange={handleChange}
+            name="subjectsTaught"
             required
           />
-        </div>
-        <div>
-          <label htmlFor="address">{t("teacherForm.addressLabel")}</label>
-          <textarea
-            id="address"
-            name="address"
-            placeholder={t("teacherForm.addressPlaceholder")}
-            value={formData.address}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className='group uploadCv'>
-          <label htmlFor="cv">{formData.cv ? formData.cv.name : t("teacherForm.uploadCvLabel")}</label>
-          <input
-            type="file"
-            id="cv"
-            name="cv"
-            accept=".pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-            onChange={handleChange}
-          />
+          <div>
+            <textarea
+              id="address"
+              name="address"
+              placeholder={t("teacherForm.addressLabel")}
+              value={formData.address}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className='group uploadCv'>
+            <label htmlFor="cv">{formData.cv ? formData.cv.name : t("teacherForm.uploadCvLabel")}</label>
+            <input
+              type="file"
+              id="cv"
+              name="cv"
+              accept=".pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              onChange={handleChange}
+            />
+          </div>
         </div>
         <button disabled={isBtnLoading["teacher"]} type="submit">
           {isBtnLoading["teacher"] ? t("buttons.loadingText") : t("teacherForm.cvUploadButtonText")}

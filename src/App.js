@@ -79,11 +79,8 @@ function App() {
 						<Route path=":lang/reset/:id/:token" element={<ResetPassword />} />
 						<Route path=":lang/user/settings" element={<UserSettings />} />
 						<Route path=":lang/courses" element={<Courses />} />
+						<Route path=':lang/contact' element={<Contact />} />
 						<Route path=":lang/privacy-policy" element={<PrivacyPolicy />} />
-						<Route path="/forgot-password" element={<ForgotPassword />} />
-						<Route path="/reset/:id/:token" element={<ResetPassword />} />
-						<Route path="/user/settings" element={<UserSettings />} />
-						<Route path='/contact' element={<Contact />} />
 						<Route path='*' element={<NotFound />} />
 					</Routes >
 				</React.Suspense >

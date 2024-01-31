@@ -1,0 +1,64 @@
+{
+  "titles": {
+    "mainTitle": "努卡·坎米",
+    "teacherFormTitle": "教师表格",
+    "studentFormTitle": "学生表格"
+  },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "辅导时间",
+      "value": "我们提供全天候辅导服务。"
+    },
+    "officeHours": {
+      "title": "办公时间",
+      "value": {
+        "mondayToFriday": "星期一至星期五：上午7点 - 晚上11点",
+        "saturdayAndSunday": "星期六和星期天：上午8点 - 下午5点"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
+  "buttons": {
+    "teacherButton": "成为教师？",
+    "studentButton": "成为学生？",
+    "loadingText": "加载中..."
+  },
+  "messages": {
+    "submissionMessage": "您的信息已提交审核"
+  },
+  "teacherForm": {
+    "nameLabel": "姓名",
+    "emailLabel": "电子邮件",
+    "phoneNumberLabel": "电话号码（包括国际区号）",
+    "countryLabel": "国家",
+    "languagesSpokenLabel": "掌握的语言",
+    "subjectsTaughtLabel": "教授的科目",
+    "addressLabel": "地址",
+    "uploadCvLabel": "上传简历",
+    "cvUploadButtonText": "提交",
+    "fullNamePlaceholder": "请输入您的姓名",
+    "emailPlaceholder": "请输入您的电子邮件",
+    "phoneNumberPlaceholder": "请输入您的电话号码",
+    "countryPlaceholder": "请输入您的国家",
+    "languagesSpokenPlaceholder": "（例如，英语，阿拉伯语，...）",
+    "subjectsTaughtPlaceholder": "例如，数学，科学等",
+    "addressPlaceholder": "请输入您的地址"
+  },
+  "studentForm": {
+    "nameLabel": "姓名",
+    "emailLabel": "电子邮件",
+    "phoneNumberLabel": "电话号码",
+    "countryLabel": "国家",
+    "ageLabel": "年龄",
+    "languagesSpokenLabel": "掌握的语言",
+    "submitButton": "提交",
+    "fullNamePlaceholder": "请输入您的姓名",
+    "emailPlaceholder": "请输入您的电子邮件",
+    "phoneNumberPlaceholder": "请输入您的电话号码",
+    "countryPlaceholder": "请输入您的国家",
+    "agePlaceholder": "请输入您的年龄",
+    "languagesSpokenPlaceholder": "掌握的语言（例如，英语，阿拉伯语，...）",
+    "cvUploadButtonText": "上传中..."
+  }
+}

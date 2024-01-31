@@ -4,6 +4,21 @@
     "teacherFormTitle": "مرحبًا بالمعلم",
     "studentFormTitle": "مرحبًا بالطالب"
   },
+  "contactInfo": {
+    "phone": "+٥١ (٩٣٩) ٤٩٩-٠٨٧",
+    "tutoringHours": {
+      "title": "ساعات التدريس",
+      "value": "نحن نقدم التدريس على مدار الساعة طوال أيام الأسبوع."
+    },
+    "officeHours": {
+      "title": "ساعات العمل",
+      "value": {
+        "mondayToFriday": "الاثنين إلى الجمعة: ٧ صباحًا - ١١ مساءً",
+        "saturdayAndSunday": "السبت والأحد: ٨ صباحًا - ٥ مساءً"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
   "buttons": {
     "teacherButton": "هل أنت معلم؟",
     "studentButton": "هل أنت طالب؟",

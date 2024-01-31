@@ -1,0 +1,64 @@
+{
+  "titles": {
+    "mainTitle": "ञुका कंमी",
+    "teacherFormTitle": "शिक्षक फॉर्म",
+    "studentFormTitle": "छात्र फॉर्म"
+  },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "ट्यूटरिंग घंटे",
+      "value": "हम 24/7 ट्यूटरिंग प्रदान करते हैं।"
+    },
+    "officeHours": {
+      "title": "कार्यालय का समय",
+      "value": {
+        "mondayToFriday": "सोमवार से शुक्रवार: सुबह 7 बजे से रात 11 बजे तक",
+        "saturdayAndSunday": "शनिवार और रविवार: सुबह 8 बजे से शाम 5 बजे तक"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
+  "buttons": {
+    "teacherButton": "शिक्षक बनें?",
+    "studentButton": "छात्र बनें?",
+    "loadingText": "लोड हो रहा है..."
+  },
+  "messages": {
+    "submissionMessage": "जानकारी की समीक्षा के लिए भेजी गई है"
+  },
+  "teacherForm": {
+    "nameLabel": "नाम",
+    "emailLabel": "ईमेल",
+    "phoneNumberLabel": "फ़ोन नंबर (देश कोड के साथ)",
+    "countryLabel": "देश",
+    "languagesSpokenLabel": "बोली जाने वाली भाषाएं",
+    "subjectsTaughtLabel": "शिक्षित विषय",
+    "addressLabel": "पता",
+    "uploadCvLabel": "सीवी अपलोड करें",
+    "cvUploadButtonText": "जमा करें",
+    "fullNamePlaceholder": "नाम",
+    "emailPlaceholder": "ईमेल दर्ज करें",
+    "phoneNumberPlaceholder": "फ़ोन नंबर दर्ज करें",
+    "countryPlaceholder": "देश",
+    "languagesSpokenPlaceholder": "(उदाहरण के लिए, अंग्रेजी, अरबी,...)",
+    "subjectsTaughtPlaceholder": "उदाहरण के लिए, गणित, विज्ञान, आदि।",
+    "addressPlaceholder": "पता"
+  },
+  "studentForm": {
+    "nameLabel": "नाम",
+    "emailLabel": "ईमेल",
+    "phoneNumberLabel": "फ़ोन नंबर",
+    "countryLabel": "देश",
+    "ageLabel": "आयु",
+    "languagesSpokenLabel": "बोली जाने वाली भाषाएं",
+    "submitButton": "जमा करें",
+    "fullNamePlaceholder": "नाम",
+    "emailPlaceholder": "ईमेल दर्ज करें",
+    "phoneNumberPlaceholder": "फ़ोन नंबर दर्ज करें",
+    "countryPlaceholder": "देश",
+    "agePlaceholder": "आपकी आयु",
+    "languagesSpokenPlaceholder": "भाषाएं (उदाहरण के लिए, अंग्रेजी, अरबी,...)",
+    "cvUploadButtonText": "लोड हो रहा है..."
+  }
+}

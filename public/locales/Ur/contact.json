@@ -1,0 +1,64 @@
+{
+  "titles": {
+    "mainTitle": "نوکا کامی",
+    "teacherFormTitle": "استاد فارم",
+    "studentFormTitle": "طالب علم فارم"
+  },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "ٹیوٹرنگ ہوس",
+      "value": "ہم 24/7 ٹیوٹرنگ فراہم کرتے ہیں۔"
+    },
+    "officeHours": {
+      "title": "آفس ہوس",
+      "value": {
+        "mondayToFriday": "پیر سے جمعہ: صبح 7 بجے سے شام 11 بجے تک",
+        "saturdayAndSunday": "اتوار اور یکم: صبح 8 بجے سے شام 5 بجے تک"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
+  "buttons": {
+    "teacherButton": "استاد بنیں؟",
+    "studentButton": "طالب علم بنیں؟",
+    "loadingText": "لوڈ ہو رہا ہے..."
+  },
+  "messages": {
+    "submissionMessage": "آپ کی معلومات کو جائزہ کرنے کے لئے بھیج دیا گیا ہے"
+  },
+  "teacherForm": {
+    "nameLabel": "نام",
+    "emailLabel": "ای میل",
+    "phoneNumberLabel": "فون نمبر (ملک کوڈ کے ساتھ)",
+    "countryLabel": "ملک",
+    "languagesSpokenLabel": "بولی جانے والی زبانیں",
+    "subjectsTaughtLabel": "سکھائے گئے مضامین",
+    "addressLabel": "پتہ",
+    "uploadCvLabel": "سی وی اپ لوڈ کریں",
+    "cvUploadButtonText": "بھیجیں",
+    "fullNamePlaceholder": "نام",
+    "emailPlaceholder": "آپ کا ای میل درج کریں",
+    "phoneNumberPlaceholder": "آپ کا فون نمبر درج کریں",
+    "countryPlaceholder": "آپ کا ملک درج کریں",
+    "languagesSpokenPlaceholder": "(مثال کے طور پر، انگریزی، عربی،...)",
+    "subjectsTaughtPlaceholder": "مثال کے طور پر، ریاضی، سائنس، وغیرہ۔",
+    "addressPlaceholder": "آپ کا پتہ"
+  },
+  "studentForm": {
+    "nameLabel": "نام",
+    "emailLabel": "ای میل",
+    "phoneNumberLabel": "فون نمبر",
+    "countryLabel": "ملک",
+    "ageLabel": "عمر",
+    "languagesSpokenLabel": "بولی جانے والی زبانیں",
+    "submitButton": "بھیجیں",
+    "fullNamePlaceholder": "نام",
+    "emailPlaceholder": "آپ کا ای میل درج کریں",
+    "phoneNumberPlaceholder": "آپ کا فون نمبر درج کریں",
+    "countryPlaceholder": "آپ کا ملک درج کریں",
+    "agePlaceholder": "آپ کی عمر درج کریں",
+    "languagesSpokenPlaceholder": "بولی جانے والی زبانیں (مثال کے طور پر، انگریزی، عربی،...)",
+    "cvUploadButtonText": "لوڈ ہو رہا ہے..."
+  }
+}

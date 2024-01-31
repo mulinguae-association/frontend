@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "titles": {
     "mainTitle": "Kontakte Nou",
@@ -49,3 +50,72 @@
     "addressPlaceholder": "Dilo adrès ou"
   }
 }
+||||||| Stash base
+=======
+{
+  "titles": {
+    "mainTitle": "Kontakte Nou",
+    "teacherFormTitle": "Bienveni Profesè",
+    "studentFormTitle": "Bienveni Élev"
+  },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "Lekol Partikilye",
+      "value": "Nou ofer lekol 24/7."
+    },
+    "officeHours": {
+      "title": "Ezour Ofis",
+      "value": {
+        "mondayToFriday": "Lindi ziska Vandredi: 7am - 11pm",
+        "saturdayAndSunday": "Samdi ek Dimans: 8am - 5pm"
+      }
+    },
+    "email": "acsmulingua@gmail.com"
+  },
+  "buttons": {
+    "teacherButton": "Eski ou enn Profesè?",
+    "studentButton": "Eski ou enn Élev?",
+    "loadingText": "loding..."
+  },
+  "messages": {
+    "submissionMessage": "Zot lavi finn soumet pou revizyon"
+  },
+  "teacherForm": {
+    "nameLabel": "Non",
+    "emailLabel": "Imel",
+    "phoneNumberLabel": "Nimero Tel (loptiyon)",
+    "countryLabel": "Pey",
+    "languagesSpokenLabel": "Langaz koté ou kozé",
+    "subjectsTaughtLabel": "Sibjet ki ou diriz?",
+    "addressLabel": "Adrès",
+    "uploadCvLabel": "Chareze CV",
+    "cvUploadButtonText": "Soumet",
+    "fullNamePlaceholder": "Dilo non ou",
+    "emailPlaceholder": "Dilo imel ou",
+    "phoneNumberPlaceholder": "Dilo nimero telefon ou",
+    "countryPlaceholder": "Dilo pey ou",
+    "languagesSpokenPlaceholder": "(par exemple, Anglè, Arab,...)",
+    "subjectsTaughtPlaceholder": "par exemple, Matematik, Syans, etc.",
+    "addressPlaceholder": "Dilo adrès ou"
+  },
+  "studentForm": {
+    "nameLabel": "Non",
+    "emailLabel": "Imel",
+    "phoneNumberLabel": "Nimero Tel (loptiyon)",
+    "countryLabel": "Pey",
+    "languagesSpokenLabel": "Langaz koté ou kozé",
+    "subjectsTaughtLabel": "Sibjet ki ou diriz?",
+    "addressLabel": "Adrès",
+    "uploadCvLabel": "Chareze CV",
+    "cvUploadButtonText": "Soumet",
+    "fullNamePlaceholder": "Dilo non ou",
+    "emailPlaceholder": "Dilo imel ou",
+    "phoneNumberPlaceholder": "Dilo nimero telefon ou",
+    "countryPlaceholder": "Dilo pey ou",
+    "languagesSpokenPlaceholder": "(par exemple, Anglè, Arab,...)",
+    "subjectsTaughtPlaceholder": "par exemple, Matematik, Syans, etc.",
+    "addressPlaceholder": "Dilo adrès ou"
+  }
+}
+>>>>>>> Stashed changes

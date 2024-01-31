@@ -1,44 +1,94 @@
 @import "../../globalStyles/colors";
+@import "../../globalStyles/sharedStyle";
+
 .contact {
   text-align: center;
-  background-color: #f0f0f0;
-  min-height: 100vh;
-  width: 100%;
+  background-color: #f2f5f7;
   position: relative;
   padding: 50px 0;
   color: $medium-darkblue;
   z-index: 1;
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    clip-path: polygon(0% 100%, 100% 0%, 100% 0%, 100% 100%);
-    background-color: orange;
-    width: 100%;
-    height: 90%;
-    z-index: -1;
+
+  .contact_info {
+    display: flex;
+    justify-content: space-between;
+    min-height: 170px;
+    margin-top: 2rem;
+
+    .col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    .col:first-child,
+    .col:last-child {
+      background-color: darkblue;
+      width: 100%;
+    }
+
+    .col:nth-child(2) {
+      width: 100%;
+      background-color: rgba($primaryDark-color, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-height: 100%;
+    }
+
+    p,
+    h2 {
+      margin: 0;
+      color: white;
+      font-size: calc(0.8rem + 0.3vw);
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      .col:nth-child(2),
+      .col:first-child,
+      .col:last-child {
+        padding: 15px 0;
+      }
+    }
   }
+
   .contact_content {
-    background: #fff;
+    background: white;
     position: relative;
-    padding: 50px 10px;
-    margin-top: 50px;
-    box-shadow: 0 0 40px;
+    padding: 50px 10px 70px 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 50px auto;
+    box-shadow: 0 0 40px $blue-shadow-light;
+    transition: 1s ease;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+
     .user-type-buttons {
       display: flex;
       justify-content: center;
+
       .vertical-line {
         height: 100%;
         width: 2px;
-        background-color: #ccc;
+        background-color: $lightgray-color;
       }
+
       button {
         border: none;
         width: auto;
         padding: 10px 20px;
         cursor: pointer;
         position: relative;
+
         &:after {
           content: "";
           position: absolute;
@@ -48,17 +98,25 @@
           top: 0;
           transition: 0.5s ease;
         }
+
         &:first-child:after {
-          background-color: orange;
+          background-color: $primary-color;
         }
+
         &:last-child:after {
           background-color: $secondary-color;
         }
+
+        &.active:after {
+          width: 50%;
+        }
+
         &:hover:after {
           width: 100%;
         }
       }
     }
+
     .form_container {
       h2 {
         border-bottom: 1px solid;
@@ -67,6 +125,7 @@
         margin: 30px auto;
         padding: 6px 0;
         position: relative;
+
         &::after {
           content: "";
           position: absolute;
@@ -78,68 +137,91 @@
           transform: rotate(45deg) translateX(-50%);
         }
       }
+
       form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 600px;
-        margin: 0 auto;
-        padding: 0 10px;
+        .content {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          width: 80%;
+          margin: 0 auto;
+          padding: 0 10px;
+        }
+
         div {
           display: flex;
           align-items: center;
           justify-content: space-between;
+          width: 48%;
+
           label {
             font-weight: bold;
             text-align: start;
           }
+
           input:not(input[type="radio"], input[type="checkbox"]),
           textarea {
             border: none;
             height: 40px;
-            width: 250px;
-            max-width: 250px;
-            min-width: 250px;
+            width: 100%;
+            max-width: 100%;
             max-height: 100px;
             border-radius: 10px;
-            text-transform: capitalize;
             padding: 0 10px;
-            background-color: #eee;
+            background-color: #f2f5f7;
             resize: none;
+
             &:focus {
               outline: none;
               border-top: 2px solid $secondary-color;
             }
           }
+
+          input[name="languagesSpoken"],
+          input[name="country"],
+          input[name="subjectsTaught"] {
+            text-transform: capitalize;
+          }
+
           textarea {
             padding: 10px;
             overflow-y: auto;
           }
         }
+
         .uploadCv {
           label {
-            background: #0056b3;
+            background: $medium-darkblue;
             padding: 10px 18px;
             font-size: 14px;
             border-radius: 25px;
+            width: 100%;
+            text-align: center;
             cursor: pointer;
-            color: #fff;
+            color: white;
           }
         }
+
         button[type="submit"] {
           cursor: pointer;
-          background-color: $secondary-color;
-          border: none;
+          background-color: $green-color;
+          border: 2px solid #fff;
           width: -moz-fit-content;
           width: fit-content;
-          text-align: end;
-          padding: 10px 22px;
-          border-radius: 4px;
+          padding: 10px 3rem;
+          border-radius: 30px;
           font-weight: bold;
           letter-spacing: 0.5px;
           margin-top: 1rem;
-          color: $darkBlue-color;
+          color: white;
+          transition: 0.5s ease;
+
+          &:hover {
+            box-shadow: 0 0 10px $darkBlue-color;
+            border: 2px solid #fff;
+          }
         }
+
         fieldset {
           border: none;
           display: flex;
@@ -149,22 +231,34 @@
           text-align: center;
           gap: 15px;
         }
+
         @media (max-width: 767px) {
-          & {
+          width: 100%;
+
+          .content {
             width: 100%;
-            div {
-              input:not(input[type="radio"], input[type="checkbox"]),
-              textarea {
-                width: 100%;
-                width: unset;
-                min-width: unset;
-              }
+          }
+
+          div {
+            width: 47%;
+
+            input:not(input[type="radio"], input[type="checkbox"]),
+            textarea {
+              width: 100%;
+              min-width: unset;
+            }
+
+            @media (max-width: 280px) {
+              width: 100%;
             }
           }
         }
       }
     }
+
+    position: relative;
   }
+
   h1 {
     margin: 0;
   }
