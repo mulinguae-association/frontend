@@ -10,8 +10,26 @@
   "confirmPasswordPlaceholder": "Ñanpasmi konfirmachiy",
   "passwordLengthError": "Ñanpasqa rikuchisqa 6 hark'aypi",
   "passwordMatchError": "Ñanpasqa huch'uykunata rikuchiy. Ñanpasqa ñanpasmi konfirmachiyta huch'uyta kachun.",
+  "Label_Agree_To": "Mwan ",
+  "Text_The_Terms": "dispozisyon ",
+  "Text_and": "ek ",
+  "Text_Privacy_Policy": "lapolitik laprivasi",
   "registerButton": "Rikuchiy",
   "loadingText": "Yanapan...",
   "haveAccountText": "Ama llank'aynin?",
-  "loginLinkText": "Yachachiqkuna"
+  "loginLinkText": "Yachachiqkuna",
+  "Error_Required_Name": "Non obligatwar.",
+  "Error_Required_Email": "Imel obligatwar.",
+  "Error_Required_Password": "Parey obligatwar.",
+  "Error_Required_Confirm_Password": "Konfirme Parey obligatwar.",
+  "Error_Strong_password": "Parey pa for.",
+  "Error_Invalid_Email_Format": "Imel pa valab.",
+  "Error_Required_Terms": "Ou bizin aksepte dispozisyon.",
+  "strongPasswordRules": {
+    "uppercase": "Parey bizin ena omwen enn let an kapital.",
+    "lowercase": "Parey bizin ena omwen enn let an minuskil.",
+    "digit": "Parey bizin ena omwen enn chif.",
+    "specialCharacter": "Parey bizin ena omwen enn karakter espesyal.",
+    "length": "Parey bizin avek omwen 8 karakter."
+  }
 }

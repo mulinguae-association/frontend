@@ -10,8 +10,26 @@
   "confirmPasswordPlaceholder": "确认密码",
   "passwordLengthError": "密码必须至少为6个字符。",
   "passwordMatchError": "密码不匹配。请确保密码和确认密码相符。",
+  "Label_Agree_To": "我同意 ",
+  "Text_The_Terms": "条款 ",
+  "Text_and": "和 ",
+  "Text_Privacy_Policy": "隐私政策",
   "registerButton": "注册",
   "loadingText": "加载中...",
   "haveAccountText": "已经有账号？",
-  "loginLinkText": "登录"
+  "loginLinkText": "登录",
+  "Error_Required_Name": "姓名为必填项。",
+  "Error_Required_Email": "邮箱为必填项。",
+  "Error_Required_Password": "密码为必填项。",
+  "Error_Required_Confirm_Password": "确认密码为必填项。",
+  "Error_Strong_password": "密码不够强。",
+  "Error_Invalid_Email_Format": "邮箱格式无效。",
+  "Error_Required_Terms": "您必须同意条款。",
+  "strongPasswordRules": {
+    "uppercase": "密码必须包含至少一个大写字母。",
+    "lowercase": "密码必须包含至少一个小写字母。",
+    "digit": "密码必须包含至少一个数字。",
+    "specialCharacter": "密码必须包含至少一个特殊字符。",
+    "length": "密码长度至少为8个字符。"
+  }
 }

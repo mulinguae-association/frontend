@@ -1,0 +1,66 @@
+.shape {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -184;
+  filter: blur(70px);
+  &.one,
+  &.two {
+    background: rgba($primary-color, 1);
+  }
+  &.one {
+    width: 110px;
+    height: 110px;
+    right: -55px;
+    top: -10px;
+  }
+  &.two {
+    width: 90px;
+    height: 90px;
+    bottom: 15px;
+    left: -60px;
+  }
+  &.three,
+  &.four {
+    background: $secondary-color;
+    box-shadow: 0 0 10px $secondary-color inset, 0 0 20px $secondary-color;
+    filter: blur(0px);
+    animation: 4s linear infinite;
+  }
+  &.three {
+    width: 50px;
+    height: 50px;
+    right: -75px;
+    bottom: 120px;
+    animation-name: move;
+  }
+  &.four {
+    width: 30px;
+    height: 30px;
+    left: -60px;
+    top: 120px;
+    animation-name: movefromtop;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    bottom: 120px;
+  }
+  50% {
+    bottom: 100px;
+  }
+}
+@keyframes movefromtop {
+  0%,
+  100% {
+    top: 120px;
+  }
+  50% {
+    top: 100px;
+  }
+}

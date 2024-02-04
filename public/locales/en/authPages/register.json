@@ -8,10 +8,28 @@
   "emailPlaceholder": "Your Email",
   "passwordPlaceholder": "Your Password",
   "confirmPasswordPlaceholder": "Confirm Password",
+  "Label_Agree_To": "I agree to ",
+  "Text_The_Terms": "the terms ",
+  "Text_and": "and ",
+  "Text_Privacy_Policy": "privacy policy",
   "passwordLengthError": "Password must be at least 6 characters long.",
   "passwordMatchError": "Passwords do not match. Please make sure the password and confirm password match.",
   "registerButton": "Register",
   "loadingText": "Loading...",
   "haveAccountText": "Already have an account?",
-  "loginLinkText": "Login"
+  "loginLinkText": "Login",
+  "Error_Required_Name": "Name is required.",
+  "Error_Required_Email": "Email is required.",
+  "Error_Required_Password": "Password is required.",
+  "Error_Required_Confirm_Password": "Confirm Password is required.",
+  "Error_Strong_password": "Password is not strong",
+  "Error_Invalid_Email_Format": "Email is not valid",
+  "Error_Required_Terms": "You must agree to the terms.",
+  "strongPasswordRules": {
+    "uppercase": "Password must contain at least one uppercase letter.",
+    "lowercase": "Password must contain at least one lowercase letter.",
+    "digit": "Password must contain at least one digit.",
+    "specialCharacter": "Password must contain at least one special character.",
+    "length": "Password must be at least 8 characters long."
+  }
 }

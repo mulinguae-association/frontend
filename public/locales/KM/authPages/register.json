@@ -10,8 +10,26 @@
   "confirmPasswordPlaceholder": "Konfirme Modpas",
   "passwordLengthError": "Modpas bizin ena omwen 6 lеt.",
   "passwordMatchError": "Modpas pa koresponn. Verifie ki modpas-la ek konfirmasyon modpas-la koresponn.",
+  "Label_Agree_To": "Eu concordo com ",
+  "Text_The_Terms": "os termos ",
+  "Text_and": "e ",
+  "Text_Privacy_Policy": "política de privacidade",
   "registerButton": "Register",
   "loadingText": "Loading...",
   "haveAccountText": "Ou enkor pa enn manm?",
-  "loginLinkText": "Login"
+  "loginLinkText": "Login",
+  "Error_Required_Name": "Nome é obrigatório.",
+  "Error_Required_Email": "E-mail é obrigatório.",
+  "Error_Required_Password": "Senha é obrigatória.",
+  "Error_Required_Confirm_Password": "Confirmação de Senha é obrigatória.",
+  "Error_Strong_password": "Senha não é forte",
+  "Error_Invalid_Email_Format": "E-mail não é válido",
+  "Error_Required_Terms": "Você deve concordar com os termos.",
+  "strongPasswordRules": {
+    "uppercase": "A senha deve conter pelo menos uma letra maiúscula.",
+    "lowercase": "A senha deve conter pelo menos uma letra minúscula.",
+    "digit": "A senha deve conter pelo menos um dígito.",
+    "specialCharacter": "A senha deve conter pelo menos um caractere especial.",
+    "length": "A senha deve ter pelo menos 8 caracteres."
+  }
 }

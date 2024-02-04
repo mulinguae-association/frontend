@@ -1,9 +1,11 @@
 /* AuthStyle.scss */
 @import "../../globalStyles/colors";
+@import "../../globalStyles/sharedStyle";
+
 .auth_form {
   margin: 0 auto;
   text-align: center;
-  background: #f0f0f0f0;
+  background: $pale-gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,16 +14,36 @@
   .container {
     .content {
       position: relative;
-      width: 500px;
+      width: 600px;
       margin: 0 auto;
       padding: 40px;
-      background-color: $white-color;
+      background-color: rgba($white-color, 1);
       border-radius: 10px;
       border-top: 3px solid $darkBlue-color;
+      box-shadow: 0 0 40px $blue-shadow-light;
+      z-index: 1;
 
-      h2 {
-        font-size: 24px;
+      h1 {
+        font-size: 28px;
+        border-bottom: 1px solid;
+        padding: 6px 0;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0 auto;
         margin-bottom: 20px;
+        position: relative;
+        color: $primaryDark-color;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -7.5px;
+          left: 50%;
+          width: 8px;
+          height: 8px;
+          background-color: $medium-darkblue;
+          transform: rotate(45deg) translateX(-50%);
+        }
       }
 
       form {
@@ -43,7 +65,7 @@
           text-align: center;
         }
 
-        input {
+        input:not([type="checkbox"]) {
           width: 100%;
           padding: 10px;
           margin-bottom: 10px;
@@ -87,6 +109,38 @@
             background-color: $medium-darkblue;
           }
         }
+        .group.termsAgreement {
+          display: flex;
+          align-items: center;
+          input {
+            cursor: pointer;
+          }
+          label {
+            margin: 0;
+            -webkit-user-select: none;
+            user-select: none;
+          }
+        }
+        .group.password {
+          position: relative;
+          #password_eye {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            font-size: 18px;
+            width: -moz-fit-content;
+            width: fit-content;
+          }
+          #password_error {
+            color: red;
+            font-weight: bold;
+            margin: 0;
+            text-align: start;
+            font-size: small;
+            -webkit-user-select: none;
+            user-select: none;
+          }
+        }
       }
       .earth_icon {
         position: absolute;
@@ -95,7 +149,7 @@
         transform: translateX(-50%);
         font-size: 50px;
         color: $medium-darkblue;
-        background: linear-gradient(178deg, #f0f0f0, $white-color);
+        background: linear-gradient(178deg, $pale-gray, $white-color);
         overflow: hidden;
         height: 53px;
         border-radius: 50%;

@@ -90,6 +90,8 @@ function Login() {
             <span> {t("notMemberText")} <Link to={`/${i18next.language}/register`}>{t("registerLinkText")}</Link></span>
           </form>
           <span className='earth_icon'><FaGlobe /></span>
+          <div className='shape three'></div>
+          <div className='shape four'></div>
         </div>
       </div>
     </main>

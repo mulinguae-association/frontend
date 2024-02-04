@@ -2,7 +2,7 @@ import axios from 'axios';
 export async function submitRegister(RegisterData) {
   try {
     const response = await axios.post(`/api/auth/register`, RegisterData);
-
+    console.log(response)
     if (response.status === 200) {
       console.log("Data Sent Successfuly");
       // Reset form fields
@@ -11,7 +11,8 @@ export async function submitRegister(RegisterData) {
       throw new Error("Error sending Register data");
     }
   } catch (error) {
-    throw new Error("Error sending Register data: " + error.message);
+    console.log(error.response.data.error)
+    return { error: error.response.data.error }
   }
 }
 // Login
