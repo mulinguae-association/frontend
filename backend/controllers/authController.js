@@ -15,7 +15,6 @@ async function register(req, res) {
     if (!token) { res.status(400).json({ error: "recaptcha token is missing!" }) }
     const human = await validateHuman(token);
     if (human) {
-
       // Check if name i entered 
       if (!name) {
         return res.status(400).json({ error: `Name is required` })
