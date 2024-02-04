@@ -6,31 +6,54 @@ import { __dirname } from '../utils/dirname.js';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { sendEmail } from "../utils/emailSender.js";
+import { validateHuman } from "../utils/validateHuman.js"
+import validator from "validator";
 async function register(req, res) {
   try {
-    const { name, email, password, confirmPassword, profileImage } = req.body;
-    // Check if name i entered 
-    if (!name) {
-      return res.json({ error: `name is required` })
-    }
-    // Check is password is good
-    if (!password || password.length < 6) {
-      return res.json({ error: `Password is required and should be at least 6 characters long` })
-    }
-    if (password !== confirmPassword) {
-      return res.json({ error: "passwords don't match" })
-    }
-    // Check if email already exists
-    const existingUser = await User.findOne({ email })
-    if (existingUser) {
-      return res.json({ error: "email already exists." });
-    }
+    const { name, email, password, confirmPassword, profileImage, terms, token } = req.body;
+    // check human validation 
+    if (!token) { res.status(400).json({ error: "recaptcha token is missing!" }) }
+    const human = await validateHuman(token);
+    if (human) {
 
-    const newUser = new User({ name, email, password, profileImage });
-    await newUser.save();
-    return res.status(200).json({ message: "registered successfully" });
+      // Check if name i entered 
+      if (!name) {
+        return res.status(400).json({ error: `Name is required` })
+      }
+      if (!email) {
+        return res.status(400).json({ error: `Email is required` })
+      }
+      if (!validator.isEmail(email)) {
+        return res.status(400).json({ error: "Email is not valid" })
+      }
+      if (!terms) {
+        return res.status(400).json({ error: `Terms is required` })
+      }
+      // Check is password is good
+      if (!validator.isStrongPassword(password)) {
+        return res.status(400).json({ error: `password is not strong` })
+      }
+      if (!password || password.length < 8) {
+        return res.status(400).json({ error: `Password is required and should be at least 8 characters long` })
+      }
+      if (password !== confirmPassword) {
+        return res.status(400).json({ error: "passwords don't match" })
+      }
+      // Check if email already exists
+      const existingUser = await User.findOne({ email })
+      if (existingUser) {
+        return res.status(400).json({ error: "email already exists." });
+      }
+      const newUser = new User({ name, email, password, terms, profileImage });
+      await newUser.save();
+      return res.status(200).json({ message: "Registered successfully" });
+    } else {
+      res.status(400).json({ error: "Please, you're not folling us, bot." });
+      return;
+    }
   } catch (error) {
     console.error("Error during registration:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

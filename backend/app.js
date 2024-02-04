@@ -1,8 +1,8 @@
+import dotenv from 'dotenv'; // Move dotenv import to the top
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import routes from './routes/index.js';
-import dotenv from 'dotenv'; // Move dotenv import to the top
 import { connectToDatabase } from './db/db.js';
 import createAdminUser from './utils/createAdminUser.js';
 import cookieParser from 'cookie-parser';
@@ -18,7 +18,7 @@ app.use(cors({
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
 //middleware 
 
 // Connect to MongoDB
