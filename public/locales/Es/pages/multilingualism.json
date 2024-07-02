@@ -23,30 +23,59 @@
   "link5": "Departamento de Comunicaciones Globales",
   "about_linguaFranca2": "ha establecido ",
   "link6": "estándares mínimos para el multilingüismo en la web de la ONU",
-  "link7": "https://www.un.org/en/our-work/official-languages",
+  "link7": " https://www.un.org/en/our-work/official-languages",
 
   "langFacts_head": "Algunos datos para comprender la situación de los idiomas en el mundo.",
-  "about_langFacts": "Hay alrededor de 6500 idiomas en el mundo.  (worlddata.info)",
-  "about_langFacts2": "Hace solo 1000 años, el número de idiomas en todo el mundo era de alrededor de 9000. Sin embargo, debido a la creciente globalización, este número está disminuyendo constantemente y conduce a la homogeneidad lingüística. Se estima que en 2050, solo quedarán alrededor de 4500 idiomas, solo 3000 en 2100 y solo 100 para principios del siglo XXIII.",
-  "about_langFacts3": "El 40% de la población mundial no tiene acceso a educación en un idioma que pueda entender. (",
-  "link8": "https://press.un.org/en/2022/ga12425.doc.htm ",
-  "about_langFacts4": "El país con el mayor número de idiomas vivos es Papúa Nueva Guinea, con 840 idiomas vivos. (worlddata.info)",
-  "about_langFacts5": "El chino es el idioma más hablado en el mundo y es el idioma oficial de 5 países.",
-  "about_langFacts6": "El 17,2 % de la población mundial habla chino (1,3 mil millones de personas de los 8 mil millones de personas del mundo)",
-  "about_langFacts7": "El hindi, que es el idioma oficial de la India, es el segundo idioma más hablado con 585 millones de personas.",
-  "about_langFacts8": "El español es el idioma principal en 20 países en todo el mundo. A partir de 2023, se estima que alrededor de 486 millones de personas hablan español como idioma nativo.",
-  "about_langFacts9": "El idioma inglés tiene aproximadamente 400 millones de hablantes nativos en todo el mundo, detrás del chino, el hindi y el español.",
-  "about_langFacts10": "El segundo idioma más común en todo el mundo es el inglés, hablado en 55 países. El francés y el ruso ocupan el segundo y tercer lugar con 14 y 13 respectivamente.",
-  "about_langFacts11": "El inglés se habla en 54 países y es el idioma oficial de 41 países (worlddata.info).",
-  "about_langFacts12": "El multilingüismo es la práctica oficial de la Organización de las Naciones Unidas. Se utilizan seis idiomas como idiomas oficiales, a saber, árabe, chino, inglés, francés, ruso y español.",
-  "link9": "https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf.",
-  "about_langFacts13": "Hay solicitudes para que los seis idiomas se utilicen de manera equitativa. “Para eliminar la 'disparidad entre el uso del inglés y el uso de los otros cinco idiomas oficiales' y 'asegurar el tratamiento completo y equitativo de todos los idiomas oficiales', como lo ordena la Asamblea General de la ONU, el",
-  "link10": "Departamento de Comunicaciones Globales",
-  "about_langFacts14": "ha establecido",
-  "link11": "estándares mínimos para el multilingüismo en la web de la ONU”.",
-  "link12": "https://www.un.org/en/our-work/official-languages.",
-  "about_langFacts15": "La Resolución A/RES/74/135 de la Asamblea General de la ONU proclamó el período 2022 y 2032 como la Década Internacional de las Lenguas Indígenas (IDIL 2022-2032).",
-  "link13": "https://www.unesco.org/en/decades/indigenous-languages.",
-  "about_langFacts16": "El multilingüismo es parte de la realidad de la mayoría de los países en el mundo. No deberíamos retroceder permitiendo que los idiomas desaparezcan. “El multilingüismo siempre ha sido el contexto predeterminado para los seres humanos. Los niños en la mayoría de las partes del mundo crecen con dos o más idiomas disponibles para ellos, y cada vez más, los jóvenes en sus estudios y trabajos se mudan a lugares donde otros idiomas que no son su lengua materna son la norma, y deben aprender a ser bilingües o multilingües”.",
-  "link14": "https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf."
+  "about_langFacts": [
+    {
+      "title": "Hay alrededor de 6500 idiomas en el mundo. (Fuente: worlddata.info)"
+    },
+    {
+      "title": "Hace solo 1000 años, el número de idiomas en todo el mundo era de aproximadamente 9000. Sin embargo, debido a la creciente globalización, este número está disminuyendo constantemente y está llevando a la homogeneidad lingüística. Se estima que en 2050 solo quedarán alrededor de 4500 idiomas, solo 3000 en 2100 y solo 100 al comienzo del siglo XXIII."
+    },
+    {
+      "title": "El 40% de la población mundial no tiene acceso a la educación en un idioma que puedan entender.",
+      "link": " https://press.un.org/en/2022/ga12425.doc.htm"
+    },
+    {
+      "title": "El país con el mayor número de idiomas vivos es Papúa Nueva Guinea, con 840 idiomas vivos. (Fuente: worlddata.info)"
+    },
+    {
+      "title": "El chino es el idioma más hablado en el mundo y es el idioma oficial de 5 países."
+    },
+    {
+      "title": "El 17,2% de la población mundial habla chino (1,3 mil millones de personas de los 8 mil millones de personas del mundo)"
+    },
+    {
+      "title": "El hindi, que es el idioma oficial de la India, es el segundo idioma más hablado con 585 millones de personas."
+    },
+    {
+      "title": "El español es el idioma principal en 20 países en todo el mundo. Según estimaciones de 2023, se estima que alrededor de 486 millones de personas hablan español como lengua materna."
+    },
+    {
+      "title": "El idioma inglés tiene aproximadamente 400 millones de hablantes nativos en todo el mundo, por detrás del chino, el hindi y el español."
+    },
+    {
+      "title": "El segundo idioma más común en todo el mundo es el inglés, hablado en 55 países. El francés y el ruso ocupan el segundo y tercer lugar con 14 y 13 respectivamente."
+    },
+    {
+      "title": "El inglés se habla en 54 países y es el idioma oficial de 41 países. (Fuente: worlddata.info)"
+    },
+    {
+      "title": "El multilingüismo es práctica oficial de la Organización de las Naciones Unidas. Se utilizan seis idiomas como idiomas oficiales, a saber: árabe, chino, inglés, francés, ruso y español.",
+      "link": " https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf"
+    },
+    {
+      "title": "Existen solicitudes para que los seis idiomas se utilicen equitativamente. 'Con el fin de eliminar la disparidad entre el uso del inglés y el uso de los otros cinco idiomas oficiales' y 'garantizar el tratamiento completo y equitativo de todos los idiomas oficiales', como lo ordena la Asamblea General de la ONU, el Departamento de Comunicaciones Globales ha establecido estándares mínimos para el multilingüismo en la web de la ONU.'",
+      "link": " https://www.un.org/en/our-work/official-languages"
+    },
+    {
+      "title": "La Resolución A/RES/74/135 de la Asamblea General de la ONU proclamó el período 2022 y 2032 como la Década Internacional de las Lenguas Indígenas (IDIL 2022-2032).",
+      "link": " https://www.unesco.org/en/decades/indigenous-languages"
+    },
+    {
+      "title": "El multilingüismo es parte de la realidad de la mayoría de los países del mundo. No deberíamos retroceder permitiendo que los idiomas desaparezcan. 'El multilingüismo siempre ha sido el contexto predeterminado para los seres humanos. Los niños en la mayor parte del mundo crecen con dos o más idiomas disponibles para ellos, y cada vez más, los jóvenes en sus estudios y trabajo se trasladan a lugares donde otros idiomas que no son su lengua materna son la norma, y deben aprender a ser bilingües o multilingües'.",
+      "link": " https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
+    }
+  ]
 }

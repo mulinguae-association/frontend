@@ -18,27 +18,56 @@
   "about_linguaFranca2": "Hark'achaspasqa UNqaqa pukyachinkunapaqmi, Nasyunal Kaniwita Markataqa, yuyarikunapaq hinasqa",
   "about_linguaFranca3": "“Inlishqa pacha markaqa willaykuna, hinasqakunapaq kananqa rikuykunaqa, imapas markakunaqa hinasqakunapaq hukqa, tukuyqa puchkaykachimun, kananqa yanapaqkunapaqmi, hinasqakunapaq, rikuykunapaqmi yanapaqkunapaqmi kanan willaykunapaq, kananqa yanapaqmi rikuykunapaqmi kananpawankunapaq, kananqa kananchispa yanapaqkunapaqmi kananqa hinasqakunapaqmi” (1).",
   "langFacts_head": "Iñiqatam sutiykuna wanqaykunapaq kanchu, runakunapak yawarqa.",
-  "about_langFacts": "Kamachinkunapura qampakunapuni, 6500 simipi.",
-  "about_langFacts2": "Puriyocunamiwanmi, 1,000 watapi, hamukunapakuna sutiyuqmi 9,000 pachapi. Hinalla churaykuna kasqata kani, globalizaypi huk pachapimi hamuyta ñakaryaykuynin hawachiy. 2050 watapi 4,500 sutiyuqwanmi, 2100 watapi 3,000 sutiyuqwanmi, hukmanta 23-manta huk sutiyuqwanmi 100pi qaqallaqa.",
-  "about_langFacts3": "Llapan pachapuni, manam kayka sumaqkunapakunapi hukniyuq ruranchu 40%niqa alliyniyta rurayta uywachinamanta munankupaq.(",
-  "link8": "https://press.un.org/en/2022/ga12425.doc.htm",
-  "about_langFacts4": "Papa New Guineaqa, qanchis sutiyuqwanmipuni kaytukunapaq, 840 sutiyuqwanmi hamukunapaq.",
-  "about_langFacts5": "Chineseqa, pachaqa sutiyuqwanmi hamuyta sutiymiqa kayqa, 5 qillqasqa sutiyuqwanmanmi.",
-  "about_langFacts6": "Pacha pachapuni, chineseq sutiyuqwanmipaq huk sutiyuqqa (1.3 billion nisqa huk pachaqa 8 billion nisqa huk sutiyuqwanmipaq) 17.2% hamurqan.",
-  "about_langFacts7": "Hindiqa, Indiaqa qillqa sutiyuqwanmipaq kayqa, 585 million nisqa hamuyta sutiyuqwanman.",
-  "about_langFacts8": "Spanishqa, pachaqa sutiyuqwanmi 20 qillqasqanmi hamuyta sutiyuqwanmipaq. 2023 watapi, 486 million nisqa hamuyta qillqa sutiyuqwanmipaqmi hawam.",
-  "about_langFacts9": "Inglesqa, pachaqa sutiyuqwanmipaqmi hamuyta 400 million nisqa qillqa sutiyuqwanmipaqmi, chineseq, hindiq, spanishq huk sutiyuqwanmipaqmi.",
-  "about_langFacts10": "Pacha sutiyuqwanmikuna hamukuna, inglesqa sutiymanta huk sutiyuqqa hamuyta sutiymiq, 55 qillqasqa sutiyuqwanmikuna hamukuna. Frenchq, russianq 14pi, 13pi sutiyuqwanmikuna hamukuna.",
-  "about_langFacts11": "Inglesqa, 54 qillqasqa sutiyuqwanmikuna hamukuna, 41 sutiyuqwanmikuna huk sutiyuqqa (worlddata.info)",
-  "about_langFacts12": "Multilingüismota, Naciones Unidas ñitiyqa rurashkamanta chinkachikuy. Shunqunqa sutiyuqwanmikuna hamuyta sutiyuqwanmikuna churaykunaqa chinkarichikuy, kunanmanqa arabiq, chineseq, inglesq, frenchq, russianq, spanishq.",
-  "link9": "https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf",
-  "about_langFacts13": "Rurashkakunaqa, shunqunqa sutiyuqwanmikuna hamuyta chinkarichikuna mana mikhunan qayna. 'Inglesqmi hukniyuq sutiyuqwanmikunapi sutiyuqwanmikuna hamuyta churaykunapaqa qaynata rimarichin' nisqa, 'allin sutiyuqwanmikuna hamuyta yanapan wachkakunanpi qillqa sutiyuqwanmikunapaqa tukuy wachkata chayanan munashkani, Naciones Unidas Yanapaqmi churaykunapaqka qillqa sutiyuqwanmikunamanta allin sutiyuqwanmikunapaqka'",
-  "link10": " Department of Global Communications ",
-  "about_langFacts14": "tukuy wachka rurashkamanta churaykunapaq",
-  "link11": " minimun wachkata churaykunapaq' churaykuy.",
-  "link12": "https://www.un.org/en/our-work/official-languages",
-  "about_langFacts15": "UN Yachaykunapi Willaypaq, 2022 hina 2032 watapi Yachaykunamanta Llapan Willaykunapaq (IDIL 2022 -2032) nisqa churaykunapaq.",
-  "link13": "https://www.unesco.org/en/decades/indigenous-languages",
-  "about_langFacts16": "Multilingüismota pacha sutiyuqwanmikunapaqmi. Mana kayka sutiyuqwanmikunapaqmi qayna yachachiy, mana chaykunata sutiyuqwanmikunapaqmi 'allin sutiyuqwanmikunapi wachkayta, rurashkakunamanta sutiyuqwanmikuna kayan mikhunanqakunan, shinallatakta kuskachiyta sutiyuqwanmikunata wachkayta' nisqa.",
-  "link14": "https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
+  "about_langFacts": [
+    {
+      "title": "Llamk'apura haykunaqa 6500 simiqa kay pachapi. (worlddata.info)"
+    },
+    {
+      "title": "Hinaspa huk chaypi, kuraq kawsaymi, llank'achisqa qhaway 9000 simi haykunaqa. Globalizasionapa sapsiraykunawan, huk simikunaqa chunka sut'ipayna chhaskan. 2050 watapi, 4500 simiqa qhaway kachkan, 2100 watapi, 3000, huk chaypi, chaski chaski purinchikpi 23-simita chunka, chaypi kanchu simi kachkan."
+    },
+    {
+      "title": "Kay pachapi, muntunkunaqa 40% kawsasqa mama llank'achisqa qhawayta yachachiyta munaniwa.(",
+      "link": " https://press.un.org/en/2022/ga12425.doc.htm"
+    },
+    {
+      "title": "Papua New Guinea llaqtapi, mayu huk simikuna haykaq 840 simiymi. (worlddata.info)"
+    },
+    {
+      "title": "Chinapa, qhawaypi karqa simiqa kay pachapi. "
+    },
+    {
+      "title": "Kay pachapi, huk chunkapi chinamanta 17.2% simin pasachiyta. (1.3 bilyon llank'akunapi 8 bilyon llank'akunapi)"
+    },
+    {
+      "title": "India llaqtapi, karqa simiqa kay pachapi. (585 milyon llank'akunapi)"
+    },
+    {
+      "title": "Spanish llaqtapi, mayu huk simikuna kaypi kay llaqtakunapi huk chunkapi. 2023 watapi, chaymi, qhaway chunkapi 486 milyon llank'akunapi. "
+    },
+    {
+      "title": "Inglaterra simikunaqa, huk bilyon simi haykunaqa, china, hindi, spanishpimantapachachisqa."
+    },
+    {
+      "title": "Kay pachapi, huk chunka kawsan simikunaqa, Inglaterra simi kaypi. 55 llaqtaqa, Frenchpimanta Rusopimanta 14pimanta 13 simikunaqa. "
+    },
+    {
+      "title": "Inglaterra simikunaqa 54 llaqtaqa simichiy. Kaypi, 41 llaqtaqa rikch'arichisqa simichiy (worlddata.info)"
+    },
+    {
+      "title": "Pachakamakqa Quechua sumaq sumaq sutin, UNqa oficial sutinmi rimakuna. Sasqa simi, purihuan simi, inlis simi, fransayu simi, rusiyu simiqa.",
+      "link": " https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf"
+    },
+    {
+      "title": "Sasqa simipi qillqankunapi qankunata yachakunapiqa. 'Inlis simiqa kachkachakunata huknin sasqa simipi qankunatapas hinayachakuykunata' 'pakakunanmiq kayka sasqa simipi qankunata, UNqa yanapakunaqpaq, global comunicationsqa mínimum kamaykunawan kaq.",
+      "link": " https://www.un.org/en/our-work/official-languages"
+    },
+    {
+      "title": "UN Tawantinsuyu Asamblea generalkunapasqan, A/RES/74/135 kashan. 2022-2032 watakunapi Chay simipi Rikch'ay yanapakunata (IDIL 2022-2032) qallarinqan.",
+      "link": " https://www.unesco.org/en/decades/indigenous-languages"
+    },
+    {
+      "title": "Suyu sumaq suyupi, mama llaqta mama llaqtawanmi rikch'aymanta qillqasqaykuna. 'Quechua sumaqpimantam, tiyakuy simi kachkachapimanta rikuchiqchu sumaq sumaq sutinta qayqa puntrayayniyki kanchu.",
+      "link": " https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
+    }
+  ]
 }

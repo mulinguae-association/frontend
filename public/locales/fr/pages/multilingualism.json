@@ -26,25 +26,56 @@
   "link7": " https://www.un.org/en/our-work/official-languages",
 
   "langFacts_head": "Quelques faits et chiffres pour avoir une idée de la situation des langues dans le monde.",
-  "about_langFacts": "Il y a environ 6500 langues dans le monde. (worlddata.info)",
-  "about_langFacts2": "Il y a seulement 1 000 ans, le nombre de langues dans le monde était d'environ 9 000. Cependant, en raison de la mondialisation croissante, ce nombre diminue progressivement, conduisant à une homogénéisation linguistique. On estime qu'en 2050, il ne restera plus qu'environ 4 500 langues, seulement 3 000 en 2100 et seulement 100 au début du 23e siècle.",
-  "about_langFacts3": "40% de la population mondiale n'a pas accès à l'éducation dans une langue qu'elle peut comprendre.(",
-  "link8": " https://press.un.org/en/2022/ga12425.doc.htm ",
-  "about_langFacts4": "Le pays avec le plus grand nombre de langues vivantes est la Papouasie-Nouvelle-Guinée, avec 840 langues vivantes. (worlddata.info)",
-  "about_langFacts5": "Le chinois est la langue la plus parlée dans le monde et est la langue officielle de 5 pays.",
-  "about_langFacts6": "17,2 % de la population mondiale parle chinois (1,3 milliard de personnes sur les 8 milliards de personnes du monde)",
-  "about_langFacts7": "L'anglais a environ 400 millions de locuteurs natifs dans le monde, derrière le chinois, le hindi et l'espagnol.",
-  "about_langFacts8": "La deuxième langue la plus courante dans le monde est l'anglais, parlée dans 55 pays. Le français et le russe sont deuxième et troisième avec respectivement 14 et 13 pays.",
-  "about_langFacts9": "L'anglais est parlé dans 54 pays et est la langue officielle de 41 pays (worlddata.info)",
-  "about_langFacts10": "Le multilinguisme est la pratique officielle de l'Organisation des Nations unies. Six langues sont utilisées comme langues officielles, à savoir l'arabe, le chinois, l'anglais, le français, le russe et l'espagnol.",
-  "link9": "https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf.",
-  "about_langFacts13": "Il y a des demandes pour que les six langues soient utilisées de manière équitable. “Pour éliminer la 'disparité entre l'utilisation de l'anglais et l'utilisation des cinq autres langues officielles' et 'assurer le traitement complet et équitable de toutes les langues officielles', comme le mandate l'Assemblée générale des Nations unies, le",
-  "link10": "Département de la Communication globale",
-  "about_langFacts14": "a établi",
-  "link11": "des normes minimales pour le multilinguisme web de l'ONU”.",
-  "link12": "https://www.un.org/en/our-work/official-languages.",
-  "about_langFacts15": "La résolution A/RES/74/135 de l'Assemblée générale des Nations Unies a proclamé la période 2022 et 2032 comme la Décennie internationale des langues autochtones (IDIL 2022-2032).",
-  "link13": "https://www.unesco.org/en/decades/indigenous-languages.",
-  "about_langFacts16": "Le multilinguisme fait partie de la réalité de la plupart des pays du monde. Nous ne devrions pas reculer en laissant les langues disparaître. “Le multilinguisme a toujours été le contexte par défaut pour les êtres humains. Les enfants dans la plupart des régions du monde grandissent avec deux langues ou plus à leur disposition, et de plus en plus, les jeunes dans leurs études et leur travail se déplacent vers des endroits où d'autres langues que leur langue maternelle sont la norme, et ils doivent apprendre à être bilingues ou multilingues”.",
-  "link14": "https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf."
+  "about_langFacts": [
+    {
+      "title": "Il y a environ 6500 langues dans le monde. (Source: worlddata.info)"
+    },
+    {
+      "title": "Il y a seulement 1000 ans, le nombre de langues dans le monde était d'environ 9000. Cependant, en raison de la mondialisation croissante, ce nombre diminue constamment et conduit à l'homogénéité linguistique. On estime qu'en 2050, il ne restera environ que 4500 langues, seulement 3000 en 2100 et seulement 100 au début du XXIIIe siècle."
+    },
+    {
+      "title": "40 % de la population mondiale n'a pas accès à l'éducation dans une langue qu'elle peut comprendre.",
+      "link": " https://press.un.org/en/2022/ga12425.doc.htm"
+    },
+    {
+      "title": "Le pays avec le plus grand nombre de langues vivantes est la Papouasie-Nouvelle-Guinée, avec 840 langues vivantes. (Source: worlddata.info)"
+    },
+    {
+      "title": "Le chinois est la langue la plus parlée au monde et est la langue officielle de 5 pays."
+    },
+    {
+      "title": "17,2 % de la population mondiale parle chinois (1,3 milliard de personnes sur 8 milliards de personnes dans le monde)"
+    },
+    {
+      "title": "L'hindi, qui est la langue officielle de l'Inde, est la deuxième langue la plus parlée avec 585 millions de personnes."
+    },
+    {
+      "title": "L'espagnol est la langue principale dans 20 pays dans le monde. Selon les estimations de 2023, environ 486 millions de personnes parlent espagnol comme langue maternelle."
+    },
+    {
+      "title": "La langue anglaise compte environ 400 millions de locuteurs natifs dans le monde, derrière le chinois, l'hindi et l'espagnol."
+    },
+    {
+      "title": "La deuxième langue la plus courante dans le monde est l'anglais, parlée dans 55 pays. Le français et le russe arrivent en deuxième et troisième position avec respectivement 14 et 13 pays."
+    },
+    {
+      "title": "L'anglais est parlé dans 54 pays et est la langue officielle de 41 pays. (Source: worlddata.info)"
+    },
+    {
+      "title": "Le multilinguisme est une pratique officielle de l'Organisation des Nations unies. Six langues sont utilisées comme langues officielles, à savoir l'arabe, le chinois, l'anglais, le français, le russe et l'espagnol.",
+      "link": " https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf"
+    },
+    {
+      "title": "Il y a des demandes pour que les six langues soient utilisées de manière équitable. 'Afin d'éliminer l'écart entre l'utilisation de l'anglais et l'utilisation des cinq autres langues officielles' et 'de garantir le traitement complet et équitable de toutes les langues officielles', comme le mandate l'Assemblée générale des Nations unies, le Département de la communication mondiale a fixé des normes minimales pour le multilinguisme sur le Web des Nations unies.'",
+      "link": " https://www.un.org/en/our-work/official-languages"
+    },
+    {
+      "title": "La résolution A/RES/74/135 de l'Assemblée générale des Nations unies a proclamé la période 2022-2032 comme la Décennie internationale des langues autochtones (IDIL 2022-2032).",
+      "link": " https://www.unesco.org/en/decades/indigenous-languages"
+    },
+    {
+      "title": "Le multilinguisme fait partie de la réalité de la plupart des pays du monde. Nous ne devrions pas reculer en permettant aux langues de disparaître. 'Le multilinguisme a toujours été le contexte par défaut pour les êtres humains. Les enfants dans la plupart des régions du monde grandissent avec deux langues ou plus à leur disposition, et de plus en plus, les jeunes dans leurs études et leur travail se déplacent vers des endroits où d'autres langues que leur langue maternelle sont la norme, et ils doivent apprendre à être bilingues ou multilingues'.",
+      "link": " https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
+    }
+  ]
 }

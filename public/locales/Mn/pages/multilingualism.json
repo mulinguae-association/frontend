@@ -22,30 +22,59 @@
   "link5": "全球传播部",
   "about_linguaFranca3": "已设定",
   "link6": "联合国网站多语种的最低标准”",
-  "link7": "https://www.un.org/en/our-work/official-languages",
+  "link7": " https://www.un.org/en/our-work/official-languages",
 
   "langFacts_head": "一些数据和事实来了解世界语言的状况。",
-  "about_langFacts": "世界上大约有6500种语言。 （worlddata.info）",
-  "about_langFacts2": "仅1000年前，世界范围内的语言数量约为9000种。然而，由于全球化的增加，这个数字稳步减少，并导致语言同质化。据推测，到2050年，可能只剩下约4500种语言，到2100年仅剩3000种，到23世纪初仅剩下100种。",
-  "about_langFacts3": "世界40%的人口无法用他们理解的语言获得教育。（",
-  "link8": "https://press.un.org/en/2022/ga12425.doc.htm ",
-  "about_langFacts4": "拥有最多活语言的国家是巴布亚新几内亚，有840种活语言。 （worlddata.info）",
-  "about_langFacts5": "汉语是世界上使用最广泛的语言，也是5个国家的官方语言。",
-  "about_langFacts6": "全球人口的17.2%说汉语（全球80亿人口中的13亿人）。",
-  "about_langFacts7": "印地语是印度的官方语言，拥有5.85亿使用者。",
-  "about_langFacts8": "西班牙语是全球20个国家的主要语言。截至2023年，据估计，约有4.86亿人以西班牙语为母语。",
-  "about_langFacts9": "英语大约有4亿母语使用者，位居世界第四，排在汉语、印地语和西班牙语之后。",
-  "about_langFacts10": "全球最常见的第二语言是英语，使用55个国家。法语和俄语分别是第二和第三常见的第二语言，分别使用14个和13个国家。",
-  "about_langFacts11": "英语在54个国家被使用，是41个国家的官方语言（worlddata.info）。",
-  "about_langFacts12": "多语种是联合国组织的官方做法。有六种语言被用作官方语言，即阿拉伯语、汉语、英语、法语、俄语和西班牙语。",
-  "link9": "https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf.",
-  "about_langFacts13": "有要求这六种语言平等使用。“为了消除 '英语使用与其他五种官方语言使用之间的差距' 并 '确保对所有官方语言的全面和公平对待'，正如联合国大会要求的那样，",
-  "link10": " 全球传播部 ",
-  "about_langFacts14": "设定了",
-  "link11": " 联合国网站多语种的最低标准”。",
-  "link12": "https://www.un.org/en/our-work/official-languages.",
-  "about_langFacts15": "联合国大会决议A/RES/74/135宣布2022年至2032年为国际土著语言十年（IDIL 2022-2032）。",
-  "link13": "https://www.unesco.org/en/decades/indigenous-languages.",
-  "about_langFacts16": "多语种是世界上大多数国家的现实的一部分。我们不应该让语言消失。 “多语种一直是人类的默认环境。世界大多数地区的儿童都以两种或更多种语言长大，而越来越多的年轻人在学习和工作中移居到其他语言成为主流的地区，他们必须学会双语或多语。”。",
-  "link14": "https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf."
+  "about_langFacts": [
+    {
+      "title": "世界上大约有6500种语言。(来源：worlddata.info)"
+    },
+    {
+      "title": "仅1000年前，全球的语言数量约为9000种。然而，由于全球化的不断加剧，这一数字正在稳步减少，并导致语言同质化。据估计，到2050年，只剩下约4500种语言，到2100年只剩下3000种，到23世纪初只剩下100种。"
+    },
+    {
+      "title": "全球约40%的人口无法理解他们所说的语言而获得教育。",
+      "link": " https://press.un.org/en/2022/ga12425.doc.htm"
+    },
+    {
+      "title": "拥有最多活跃语言的国家是巴布亚新几内亚，有840种活跃语言。(来源：worlddata.info)"
+    },
+    {
+      "title": "中文是世界上使用最广泛的语言，也是5个国家的官方语言。"
+    },
+    {
+      "title": "世界人口的17.2%使用中文（世界80亿人口中的13亿人）"
+    },
+    {
+      "title": "印地语是印度的官方语言，有5.85亿人使用。"
+    },
+    {
+      "title": "西班牙语是全球20个国家的主要语言。据2023年估计，约有4.86亿人以西班牙语为母语。"
+    },
+    {
+      "title": "英语在全球约有4亿母语者，仅次于中文、印地语和西班牙语。"
+    },
+    {
+      "title": "全球最常用的第二语言是英语，在55个国家使用。法语和俄语分别排在第二和第三位，使用国家数量分别为14个和13个。"
+    },
+    {
+      "title": "英语在54个国家被使用，并且是41个国家的官方语言。(来源：worlddata.info)"
+    },
+    {
+      "title": "多语制是联合国的官方做法。有六种语言被用作官方语言，即阿拉伯语、中文、英语、法语、俄语和西班牙语。",
+      "link": " https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf"
+    },
+    {
+      "title": "有要求六种语言公平使用。“为了消除‘英语使用和其他五种官方语言使用之间的差距’，并‘确保对所有官方语言的充分和公正对待’，根据联合国大会的授权，全球传播部制定了联合国网络多语制的最低标准。”",
+      "link": " https://www.un.org/en/our-work/official-languages"
+    },
+    {
+      "title": "联合国大会第A/RES/74/135号决议宣布2022年至2032年为国际母语日和民族语言国际十年(IDIL 2022-2032)。",
+      "link": " https://www.unesco.org/en/decades/indigenous-languages"
+    },
+    {
+      "title": "多语制是世界大多数国家的现实。我们不应该让语言消失。‘多语言一直是人类的默认背景。世界大多数地方的孩子都是用两种或更多语言长大的，越来越多的年轻人在他们的学习和工作中转移到其他语言是该地区的规范的地方，他们必须学会双语或多语言’。",
+      "link": " https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
+    }
+  ]
 }

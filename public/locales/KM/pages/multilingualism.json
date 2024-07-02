@@ -25,27 +25,56 @@
   "about_linguaFranca3": "finn etabli",
   "link6": " des normes minimales pour le multilinguisme web des Nations Unies » https://www.un.org/en/our-work/official-languages )",
   "langFacts_head": "Inpe fe ek sif pu fer enn lide lor sistyasyon langaz dan lemond.",
-  "about_langFacts": "Nou ena otour 6500 langaz dan lemonn. (worlddata.info)",
-  "about_langFacts2": "Selman 1,000 de sela, nomb langaz ti otour 9,000. Avek lefe globalizasyon, nou pe konstat enn diminisyon kontinyel dan nomb langaz ek sa pe amenn enn sitiasyon kot pe ena enn omozenite linguistik. Nou panse ki an 2050 pou rest ennviron 4,500 langaz, selman 3,000 an 2100, ek selman 100 dan debi 23e syek.",
-  "about_langFacts3": "40% popilasyon lemonn pena akse a ledikasyon dan enn langaz ki zot kapav konpran. (",
-  "link8": "https://press.un.org/en/2022/ga12425.doc.htm.",
-  "about_langFacts4": "Peyi ki ena pli gran nomb langaz vivan se Papua New Guinea, avek 840 langaz vivan. (worlddata.info)",
-  "about_langFacts5": "Langaz sinwa se langaz ki plis koze dan lemonn ek se langaz ofisyel dan 5 pei.",
-  "about_langFacts6": "17.2% popilasyon lemonn koz langaz Sinwa (1.3 milyar dimoun lor total 8 milyar dimoun dan lemonn)",
-  "about_langFacts7": "Hindi, ki langaz ofisyel dan Lend, se dezyem langaz ki plis koze avek 585 milyon dimoun.",
-  "about_langFacts8": "Espanyol se langaz prinsipal dan 20 pei lor planete. Selon estimasion 2023, nou estime ki 486 milyon dimoun pe koz Espanyol kouma langaz maternel.",
-  "about_langFacts9": "Langaz Angle se langaz maternel de a pe pre 400 milyon dimoun dan lemonn, deryer Sinwa, Hindi, ek Espanyol.",
-  "about_langFacts10": "Langaz Etranzer plis  koze dan lemonn se lAngle, ki koze dan 55 pei. Franse ek Ris se dezyem ek trwazyem avek 14 ek 13 pei respektivman.",
-  "about_langFacts11": "Langaz Anglè pale dan 54 pei ek se langaz ofisyel dan 41 pei (worlddata.info)",
-  "about_langFacts12": "Multilingwism se praktik ofisyel Lasanble Zeneral Nasyonzini. Sis langaz servi kouma langaz ofisyel. Se Arab,Sinwa, Angle, Franse, Risis, ek Espanyol.",
-  "link9": "https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf.",
-  "about_langFacts13": "Ena demann pou ki tule 6 langaz itilize ekitableman, avek lintansyon elimin disparite  ant itilizasyon langaz Anglè ek lezot 5 langaz ofisyel ek rasir enn tretman konplet ek ekitab tu bann langaz ofisyel kouma finn demande par Lasanble Zeneral Nasyonzini, Departman Kominikasyon Mondyal(",
-  "link10": "  Département des communications mondiales ",
-  "about_langFacts14": ") pe etabli bann norm minimal pou miltilinguism lor sit web Nasyon Zini (",
-  "link11": "des normes minimales pour le multilinguisme Web de l'ONU ». )",
-  "link12": "https://www.un.org/en/our-work/official-languages.",
-  "about_langFacts15": "Rezolisyon A/RES/74/135 Lasanble Zeneral Nasyonzini finn deklar period 2022 ek 2032 kouma Deseni Internasyonal Langaz Lokal (IDIL 2022-2032).",
-  "link13": "https://www.unesco.org/en/decades/indigenous-languages.",
-  "about_langFacts16": "https://www.unesco.org/en/decades/indigenous-languages",
-  "link14": "https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf."
+  "about_langFacts_kreol_morisyen": [
+    {
+      "title": "Environ 6500 langaz dan lemonn. (Sous: worlddata.info)"
+    },
+    {
+      "title": "Selma 1000-an disan, nomb langaz lor latet ti anviron 9000. Par kont, ar gloubalisasyon ki monte, sa nomb la pe diminie kontinuelman ek pe mennen ver omwogenizasyon langaz. On preza ki an 2050, zot pou reste anviron 4500 langaz, en 2100 selma 3000, ek selma 100 dan debyen 23ème syek."
+    },
+    {
+      "title": "40% popilasyon mondial pa ena akses a lekol dan en langaz ki zot kapav konpran.",
+      "link": " https://press.un.org/en/2022/ga12425.doc.htm"
+    },
+    {
+      "title": "Peyi ki ena plis lang vivan se Papua New Guinea, ek 840 lang vivan. (Sous: worlddata.info)"
+    },
+    {
+      "title": "Langaz ki plis pale lor later se langaz Chine ek se langaz ofisiel dan 5 pei."
+    },
+    {
+      "title": "17.2% popilasyon mondial pale langaz Chine (1.3 bilyon moun lor 8 bilyon moun lor later)"
+    },
+    {
+      "title": "Hindi, ki se langaz ofisiel dan Lend, se dezyem pli pale langaz ar 585 milyon moun."
+    },
+    {
+      "title": "Langaz prensipal dan 20 pei lor later se langaz Espagnol. An 2023, estime ki anviron 486 milyon moun pale Espagnol kouma lang maternelle."
+    },
+    {
+      "title": "Langaz Inglez ena sirka 400 milyon pale langaz ar latet, ale anpe ler ki langaz Chine, Hindi ek Espagnol."
+    },
+    {
+      "title": "Dezyem lang pli kouran lor later se Inglez, pale dan 55 pei. Frans ek Rus pli anpe, avek 14 ek 13 pei respektivman."
+    },
+    {
+      "title": "Inglez pale dan 54 pei ek se langaz ofisiel dan 41 pei (Sous: worlddata.info)"
+    },
+    {
+      "title": "Multilingualism se enn pratik ofisiel Nasyon Zini. Sis langaz i servi kouma langaz ofisiel, se Arab, Chinwa, Inglez, Franse, Rus, ek Espagnol.",
+      "link": " https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf"
+    },
+    {
+      "title": "Lapolis Nasyon Zini demande ki sis langaz servi ekitab. 'Pou elimine diferans ant l'utilizasyon langaz Inglez ek l'utilizasyon lezot sink langaz ofisiel' ek 'pou asire le traitman total ek ekitab tou langaz ofisiel', kouma preskri pa Lasanble Jeneral Nasyon Zini, Global Communications Departman met en plas minimem norm pou multilingualism Nasyon Zini sou enternet.'",
+      "link": " https://www.un.org/en/our-work/official-languages"
+    },
+    {
+      "title": "Rezolisyon A/RES/74/135 Lasanble Jeneral Nasyon Zini proklame 2022-2032 kouma dekenn Internacional Langaz Endizenn (IDIL 2022-2032).",
+      "link": " https://www.unesco.org/en/decades/indigenous-languages"
+    },
+    {
+      "title": "Multilingualism fer parti realite plis pei lor later. Nou pa pou al reter bann langaz disparer. 'Multilingualism touzour ti konteks par defo pour lezot. Zanfan dan plis sekter lor later granpi ar de ou plis langaz ki zot disposision, ek depli pe dir zenes dan zot etid ek travay deplase lor ler ki lot langaz ke zot langaz maternal vinn norm, ek zot bizin aprann et antou bilingue ou multilingue.'",
+      "link": " https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
+    }
+  ]
 }

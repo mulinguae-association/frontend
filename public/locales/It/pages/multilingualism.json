@@ -1,53 +1,82 @@
 {
-	"page_title": "Multilinguismo",
-	"definition_head": "Definizione",
-	"about_definition": "Esistono diverse definizioni che è possibile trovare nei dizionari e sulle piattaforme dei social media riguardo al concetto di multilinguismo. Quella che abbraccia l'intero concetto è quella della Commissione europea, l'organo esecutivo dell'Unione europea.",
-	"about_definition2": "« Il multilinguismo è la capacità delle società, delle istituzioni, dei gruppi e degli individui di utilizzare regolarmente più di una lingua nella loro vita quotidiana. »",
-	"about_definition3": "Questa definizione include non solo il bilinguismo e il trilinguismo come parte del concetto, ma abbraccia anche l'espressione delle identità culturali e contribuisce a preservare la democrazia, la trasparenza e la responsabilità.",
-	"about_definition4": "« Nessuna legislazione può entrare in vigore finché non è stata tradotta in tutte le lingue ufficiali e pubblicata nella Gazzetta Ufficiale dell'UE. Le disposizioni relative al regime linguistico dell'UE possono essere modificate solo tramite voto all'unanimità nel Consiglio dell'UE. » (1)",
-	"about_definition5": "L'UNESCO, l'organizzazione delle Nazioni Unite, sostiene che",
-	"about_definition6": "« La diversità linguistica è essenziale per il patrimonio umano. Ogni lingua incarna la saggezza culturale unica di un popolo. La perdita di una lingua è quindi una perdita per tutta l'umanità. » (2)",
-	"importanceLanguage_head": "L'importanza della diversità linguistica",
-	"about_importanceLang": "La lingua fa parte del DNA dell'essere umano. Essa è la premessa di una capacità umana unica. Essa è il fondamento di una civiltà e unisce le persone. Essendo il mezzo per rappresentare la formazione e l'espressione della cultura di una nazione, la lingua deve essere preservata e protetta da qualsiasi tentativo di imporre una lingua dominante.",
-	"about_importanceLang2": "L'UNESCO sottolinea che",
-	"about_importanceLang3": "« Ognuno ha il diritto alla libertà di espressione nella lingua di sua scelta su Internet e nello spazio pubblico, come previsto dagli strumenti internazionali dei diritti umani, in particolare dalla",
-	"link": " Dichiarazione universale dei diritti umani ",
-	"about_importanceLang4": "ed è evidenziato nella",
-	"link2": " Raccomandazione dell'UNESCO sulla promozione e l'uso del multilinguismo e l'accesso alla cibersfera ",
-	"about_importanceLang5": "(2003) » (3)",
-	"about_importanceLang6": "Nonostante l'immensa valore delle lingue, più della metà di tutte le lingue rischiano di cadere in disuso, con gravi conseguenze per la diversità linguistica mondiale e la situazione delle comunità linguistiche, in particolare i popoli indigeni. Nel quadro della sua attuazione della risoluzione delle Nazioni Unite",
-	"link3": " (A/RES/74/135) ",
-	"about_importanceLang7": ", l'UNESCO è l'agenzia leader delle Nazioni Unite per la",
-	"link4": " Decennio internazionale delle lingue indigene ",
-	"about_importanceLang8": "in collaborazione con l'ONU-DESA e altre agenzie rilevanti.",
-	"linguaFranca_head": "L'inglese come lingua franca internazionale",
-	"about_linguaFranca": "L'inglese è considerato la lingua franca dominante della diplomazia internazionale, degli affari, della scienza, della cultura popolare, della tecnologia e dell'aviazione. L'inglese è insegnato come materia nella maggior parte dei paesi del mondo ed è sempre più utilizzato come lingua d'insegnamento a tutti i livelli dell'istruzione. L'inglese è più importante nel curriculum scolastico rispetto a qualsiasi altra lingua straniera nel passato. L'inglese è introdotto precocemente ed è spesso utilizzato come lingua d'insegnamento aggiuntiva. Tuttavia, dobbiamo sottolineare che esiste un dibattito attivo in forum internazionali, come le Nazioni Unite, per accordare lo stesso status alle altre lingue internazionali ufficiali, ovvero l'arabo, il francese, il cinese, il russo e lo spagnolo, e rendere effettivo il multilinguismo. « Al fine di eliminare la "disparità tra l'uso dell'inglese e l'uso delle altre cinque lingue ufficiali" e "assicurare il trattamento completo e equo di tutte le lingue ufficiali", come richiesto dall'Assemblea generale delle Nazioni Unite, il",
-	"link5": " Dipartimento della comunicazione globale ",
-	"about_linguaFranca2": "ha stabilito",
-	"link6": " norme minime per il multilinguismo sul web delle Nazioni Unite » ",
-	"link7": " https://www.un.org/en/our-work/official-languages ",
-	"langFacts_head": "Alcuni fatti e cifre per avere un'idea della situazione delle lingue nel mondo.",
-	"about_langFacts": "Ci sono circa 6500 lingue nel mondo. (worlddata.info)",
-	"about_langFacts2": "Solo 1000 anni fa, il numero di lingue nel mondo era di circa 9000. Tuttavia, a causa della crescente globalizzazione, questo numero diminuisce regolarmente e porta a una omogeneizzazione linguistica. Si stima che nel 2050 resteranno solo circa 4500 lingue, solo 3000 nel 2100 e solo 100 all'inizio del 23° secolo.",
-	"about_langFacts3": "Il 40% della popolazione mondiale non ha accesso a un'istruzione nella propria lingua comprensibile. (",
-	"link8": "https://press.un.org/en/2022/ga12425.doc.htm",
-	"about_langFacts4": "Il paese con il maggior numero di lingue viventi è la Papua Nuova Guinea, con 840 lingue viventi.",
-	"about_langFacts5": "Il cinese è la lingua più parlata al mondo ed è la lingua ufficiale di 5 paesi.",
-	"about_langFacts6": "Il 17,2% della popolazione mondiale parla cinese (1,3 miliardi di persone su 8 miliardi di abitanti del pianeta)",
-	"about_langFacts7": "L'hindi, che è la lingua ufficiale dell'India, è la seconda lingua più parlata con 585 milioni di persone.",
-	"about_langFacts8": "Lo spagnolo è la lingua principale in 20 paesi del mondo. Nel 2023 si stima che circa 486 milioni di persone parlino spagnolo come lingua madre.",
-	"about_langFacts9": "L'inglese ha circa 400 milioni di parlanti nativi nel mondo, dietro il cinese, l'hindi e lo spagnolo.",
-	"about_langFacts10": "La seconda lingua più diffusa al mondo è l'inglese, parlata in 55 paesi. Il francese e il russo sono al secondo e terzo posto con rispettivamente 14 e 13 paesi.",
-	"about_langFacts11": "L'inglese è parlato in 54 paesi ed è la lingua ufficiale di 41 paesi (worlddata.info)",
-	"about_langFacts12": "Il multilinguismo è la pratica ufficiale delle Nazioni Unite. Sono utilizzate sei lingue come lingue ufficiali, ovvero l'arabo, il cinese, l'inglese, il francese, il russo e lo spagnolo. ",
-	"link9": "https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf",
-	"about_langFacts13": "Vi sono richieste per una distribuzione equa delle sei lingue. Al fine di eliminare la disparità tra l'uso dell'inglese e l'uso delle altre cinque lingue ufficiali e di garantire il trattamento completo e equo di tutte le lingue ufficiali, come richiesto dall'Assemblea generale delle Nazioni Unite, il",
-	"link10": " Dipartimento delle comunicazioni globali ",
-	"about_langFacts14": "ha stabilito",
-	"link11": " norme minime per il multilinguismo sul web delle Nazioni Unite ».",
-	"link12": "https://www.un.org/en/our-work/official-languages ",
-	"about_langFacts15": "La risoluzione A/RES/74/135 dell'Assemblea generale delle Nazioni Unite ha proclamato il periodo 2022-2032 Decennio internazionale delle lingue indigene (IDIL 2022-2032).",
-	"link13": "https://www.unesco.org/en/decades/indigenous-languages",
-	"about_langFacts16": "Il multilinguismo fa parte della realtà della maggior parte dei paesi del mondo. Non si dovrebbe tornare indietro facendo scomparire le lingue. « Il multilinguismo è sempre stato il contesto predefinito per gli esseri umani. Nella maggior parte delle regioni del mondo, i bambini crescono con due o più lingue a loro disposizione, e sempre più giovani nel loro studio e nel loro lavoro si spostano in luoghi dove altre lingue oltre alla loro lingua madre sono la norma e devono imparare a essere bilingui o multilingui ».",
-	"link14": "https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
-	}
+  "page_title": "Multilinguismo",
+  "definition_head": "Definizione",
+  "about_definition": "Esistono diverse definizioni che è possibile trovare nei dizionari e sulle piattaforme dei social media riguardo al concetto di multilinguismo. Quella che abbraccia l'intero concetto è quella della Commissione europea, l'organo esecutivo dell'Unione europea.",
+  "about_definition2": "« Il multilinguismo è la capacità delle società, delle istituzioni, dei gruppi e degli individui di utilizzare regolarmente più di una lingua nella loro vita quotidiana. »",
+  "about_definition3": "Questa definizione include non solo il bilinguismo e il trilinguismo come parte del concetto, ma abbraccia anche l'espressione delle identità culturali e contribuisce a preservare la democrazia, la trasparenza e la responsabilità.",
+  "about_definition4": "« Nessuna legislazione può entrare in vigore finché non è stata tradotta in tutte le lingue ufficiali e pubblicata nella Gazzetta Ufficiale dell'UE. Le disposizioni relative al regime linguistico dell'UE possono essere modificate solo tramite voto all'unanimità nel Consiglio dell'UE. » (1)",
+  "about_definition5": "L'UNESCO, l'organizzazione delle Nazioni Unite, sostiene che",
+  "about_definition6": "« La diversità linguistica è essenziale per il patrimonio umano. Ogni lingua incarna la saggezza culturale unica di un popolo. La perdita di una lingua è quindi una perdita per tutta l'umanità. » (2)",
+  "importanceLanguage_head": "L'importanza della diversità linguistica",
+  "about_importanceLang": "La lingua fa parte del DNA dell'essere umano. Essa è la premessa di una capacità umana unica. Essa è il fondamento di una civiltà e unisce le persone. Essendo il mezzo per rappresentare la formazione e l'espressione della cultura di una nazione, la lingua deve essere preservata e protetta da qualsiasi tentativo di imporre una lingua dominante.",
+  "about_importanceLang2": "L'UNESCO sottolinea che",
+  "about_importanceLang3": "« Ognuno ha il diritto alla libertà di espressione nella lingua di sua scelta su Internet e nello spazio pubblico, come previsto dagli strumenti internazionali dei diritti umani, in particolare dalla",
+  "link": " Dichiarazione universale dei diritti umani ",
+  "about_importanceLang4": "ed è evidenziato nella",
+  "link2": " Raccomandazione dell'UNESCO sulla promozione e l'uso del multilinguismo e l'accesso alla cibersfera ",
+  "about_importanceLang5": "(2003) » (3)",
+  "about_importanceLang6": "Nonostante l'immensa valore delle lingue, più della metà di tutte le lingue rischiano di cadere in disuso, con gravi conseguenze per la diversità linguistica mondiale e la situazione delle comunità linguistiche, in particolare i popoli indigeni. Nel quadro della sua attuazione della risoluzione delle Nazioni Unite",
+  "link3": " (A/RES/74/135) ",
+  "about_importanceLang7": ", l'UNESCO è l'agenzia leader delle Nazioni Unite per la",
+  "link4": " Decennio internazionale delle lingue indigene ",
+  "about_importanceLang8": "in collaborazione con l'ONU-DESA e altre agenzie rilevanti.",
+  "linguaFranca_head": "L'inglese come lingua franca internazionale",
+  "about_linguaFranca": "L'inglese è considerato la lingua franca dominante della diplomazia internazionale, degli affari, della scienza, della cultura popolare, della tecnologia e dell'aviazione. L'inglese è insegnato come materia nella maggior parte dei paesi del mondo ed è sempre più utilizzato come lingua d'insegnamento a tutti i livelli dell'istruzione. L'inglese è più importante nel curriculum scolastico rispetto a qualsiasi altra lingua straniera nel passato. L'inglese è introdotto precocemente ed è spesso utilizzato come lingua d'insegnamento aggiuntiva. Tuttavia, dobbiamo sottolineare che esiste un dibattito attivo in forum internazionali, come le Nazioni Unite, per accordare lo stesso status alle altre lingue internazionali ufficiali, ovvero l'arabo, il francese, il cinese, il russo e lo spagnolo, e rendere effettivo il multilinguismo. « Al fine di eliminare la 'disparità tra l'uso dell'inglese e l'uso delle altre cinque lingue ufficiali' e 'assicurare il trattamento completo e equo di tutte le lingue ufficiali', come richiesto dall'Assemblea generale delle Nazioni Unite, il",
+  "link5": " Dipartimento della comunicazione globale ",
+  "about_linguaFranca2": "ha stabilito",
+  "link6": " norme minime per il multilinguismo sul web delle Nazioni Unite » ",
+  "link7": " https://www.un.org/en/our-work/official-languages ",
+  "langFacts_head": "Alcuni fatti e cifre per avere un'idea della situazione delle lingue nel mondo.",
+  "about_langFacts": [
+    {
+      "title": "Ci sono circa 6500 lingue nel mondo. (Fonte: worlddata.info)"
+    },
+    {
+      "title": "Solo 1000 anni fa, il numero di lingue nel mondo era di circa 9000. Tuttavia, a causa della crescente globalizzazione, questo numero sta diminuendo costantemente e sta portando all'omogeneizzazione linguistica. Si presume che nel 2050 rimarranno solo circa 4500 lingue, nel 2100 solo 3000 e solo 100 all'inizio del 23° secolo."
+    },
+    {
+      "title": "Il 40% della popolazione mondiale non ha accesso all'istruzione in una lingua che riescono a capire.",
+      "link": " https://press.un.org/en/2022/ga12425.doc.htm"
+    },
+    {
+      "title": "Il Paese con il maggior numero di lingue parlate è la Papua Nuova Guinea, con 840 lingue parlate. (Fonte: worlddata.info)"
+    },
+    {
+      "title": "Il cinese è la lingua più parlata al mondo ed è la lingua ufficiale di 5 Paesi."
+    },
+    {
+      "title": "Il 17,2% della popolazione mondiale parla cinese (1,3 miliardi di persone su 8 miliardi di persone nel mondo)"
+    },
+    {
+      "title": "L'hindi, che è la lingua ufficiale dell'India, è la seconda lingua più parlata con 585 milioni di persone."
+    },
+    {
+      "title": "Lo spagnolo è la lingua principale in 20 Paesi nel mondo. Nel 2023 si stima che circa 486 milioni di persone parlino spagnolo come lingua madre."
+    },
+    {
+      "title": "La lingua inglese ha circa 400 milioni di parlanti madrelingua in tutto il mondo, seguendo il cinese, l'hindi e lo spagnolo."
+    },
+    {
+      "title": "La lingua straniera più comune al mondo è l'inglese, parlata in 55 Paesi. Il francese e il russo sono al secondo e terzo posto rispettivamente, con 14 e 13 Paesi."
+    },
+    {
+      "title": "L'inglese è parlato in 54 Paesi ed è la lingua ufficiale di 41 Paesi (Fonte: worlddata.info)"
+    },
+    {
+      "title": "Il multilinguismo è una pratica ufficiale dell'Organizzazione delle Nazioni Unite. Sei lingue sono utilizzate come lingue ufficiali, ovvero arabo, cinese, inglese, francese, russo e spagnolo.",
+      "link": " https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf"
+    },
+    {
+      "title": "Ci sono richieste che le sei lingue vengano utilizzate equamente. 'Al fine di eliminare la 'disparità tra l'uso dell'inglese e l'uso delle altre cinque lingue ufficiali' e 'per garantire il pieno e equo trattamento di tutte le lingue ufficiali', come prescritto dall'Assemblea generale dell'ONU, il Dipartimento delle Comunicazioni Globali ha stabilito standard minimi per il multilinguismo web delle Nazioni Unite.'",
+      "link": " https://www.un.org/en/our-work/official-languages"
+    },
+    {
+      "title": "La Risoluzione A/RES/74/135 dell'Assemblea generale delle Nazioni Unite ha proclamato il periodo 2022-2032 come il Decennio internazionale delle lingue indigene (IDIL 2022-2032).",
+      "link": " https://www.unesco.org/en/decades/indigenous-languages"
+    },
+    {
+      "title": "Il multilinguismo è parte della realtà della maggior parte dei Paesi del mondo. Non dovremmo regredire permettendo alle lingue di scomparire. 'Il multilinguismo è sempre stato il contesto predefinito per gli esseri umani. I bambini nella maggior parte del mondo crescono con due o più lingue a loro disposizione, e sempre più giovani nei loro studi e nel lavoro si spostano in luoghi dove altre lingue rispetto alla loro lingua madre sono la norma, e devono imparare a essere bilingui o multilingui.'",
+      "link": " https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
+    }
+  ]
+}
