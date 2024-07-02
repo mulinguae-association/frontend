@@ -6,5 +6,6 @@
   "changeImageText": "Changer l'image",
   "chooseImageTooltip": "Choisissez une image inférieure à 1 Mo",
   "saveChangesButton": "Enregistrer les modifications",
-  "savingText": "Enregistrement en cours..."
+  "savingText": "Enregistrement en cours...",
+  "noChangesMessage": "Aucun changement n'a été effectué."
 }

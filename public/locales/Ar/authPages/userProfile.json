@@ -6,5 +6,6 @@
   "changeImageText": "تغيير الصورة",
   "chooseImageTooltip": "اختر صورة أقل من 1 ميغابايت",
   "saveChangesButton": "حفظ التغييرات",
-  "savingText": "جار الحفظ..."
+  "savingText": "جار الحفظ...",
+  "noChangesMessage": "لم يتم إجراء أي تغييرات."
 }

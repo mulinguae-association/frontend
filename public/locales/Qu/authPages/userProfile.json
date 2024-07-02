@@ -6,5 +6,6 @@
   "changeImageText": "Imaqa Antiy",
   "chooseImageTooltip": "Imaqa huk 1MBman ñawi",
   "saveChangesButton": "Hukch'ata Munay",
-  "savingText": "Yanapan..."
+  "savingText": "Yanapan...",
+  "noChangesMessage": "Mana hukllaqakuna ripusqa."
 }

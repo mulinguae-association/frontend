@@ -6,5 +6,6 @@
   "changeImageText": "Change Limmaz",
   "chooseImageTooltip": "Chwazi enn limaz ki mwins ki 1MB",
   "saveChangesButton": "Anregistrer Chanjman",
-  "savingText": "Anregis... "
+  "savingText": "Anregis... ",
+  "noChangesMessage": "Pa fer okenn diferans."
 }

@@ -6,5 +6,6 @@
   "changeImageText": "छवि बदलें",
   "chooseImageTooltip": "1MB से कम एक छवि चुनें",
   "saveChangesButton": "परिवर्तन सहेजें",
-  "savingText": "सहेजा जा रहा है..."
+  "savingText": "सहेजा जा रहा है...",
+  "noChangesMessage": "कोई परिवर्तन नहीं किया गया।"
 }

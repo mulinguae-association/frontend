@@ -6,5 +6,6 @@
   "changeImageText": "تصویر تبدیل کریں",
   "chooseImageTooltip": "ایک تصویر منتخب کریں جو 1 ایم بی سے کم ہو",
   "saveChangesButton": "ترتیبات محفوظ کریں",
-  "savingText": "محفوظ ہو رہا ہے..."
+  "savingText": "محفوظ ہو رہا ہے...",
+  "noChangesMessage": "کوئی تبدیلی نہیں کی گئی۔"
 }

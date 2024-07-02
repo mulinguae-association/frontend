@@ -6,5 +6,6 @@
   "changeImageText": "更改图片",
   "chooseImageTooltip": "选择小于1MB的图像",
   "saveChangesButton": "保存更改",
-  "savingText": "保存中..."
+  "savingText": "保存中...",
+  "noChangesMessage": "没有进行任何更改。"
 }

@@ -6,5 +6,6 @@
   "changeImageText": "Alterar imagem",
   "chooseImageTooltip": "Escolha uma imagem com menos de 1 MB",
   "saveChangesButton": "Salvar alterações",
-  "savingText": "Salvando..."
+  "savingText": "Salvando...",
+  "noChangesMessage": "Nenhuma alteração foi feita."
 }

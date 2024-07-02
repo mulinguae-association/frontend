@@ -6,5 +6,6 @@
   "changeImageText": "Изменить изображение",
   "chooseImageTooltip": "Выберите изображение размером менее 1 МБ",
   "saveChangesButton": "Сохранить изменения",
-  "savingText": "Сохранение..."
+  "savingText": "Сохранение...",
+  "noChangesMessage": "Изменения не внесены."
 }
