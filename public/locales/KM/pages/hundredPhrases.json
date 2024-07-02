@@ -3,7 +3,7 @@
   "phrases": [
     {
       "title": "Kuma Salye",
-      "img": "/images/hundredPhrases/greetings.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
       "alt": "Greetings Image",
       "phrases": [
         "Alo/ Ki manier",
@@ -21,19 +21,19 @@
     },
     {
       "title": "Bonzour",
-      "img": "/images/hundredPhrases/goodBuy.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255613/zkmdtuweqnxoqlffvbm7.webp",
       "alt": "Goodbyes Image",
       "phrases": ["Bay.", "O revwar.", "Un zwenn plitar.", "Bonn nwi."]
     },
     {
       "title": "Dimann ekskiz",
-      "img": "/images/hundredPhrases/Apologize.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "Apologize Image",
       "phrases": ["Ekskiz mwa", "Pardonn mwa"]
     },
     {
       "title": "Dimann kudme e repons",
-      "img": "/images/hundredPhrases/Asking for help.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
       "alt": "Asking for Help Image",
       "phrases": [
         "Kot ofis imgrasyon / stasyon lapolis/ lazans vwayaz ete?",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Bazar",
-      "img": "/images/hundredPhrases/market.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
       "alt": "Market Image",
       "phrases": [
         "Ki ete sa ?",
@@ -63,7 +63,7 @@
     },
     {
       "title": "Bann ekspresyon zurnalye",
-      "img": "/images/hundredPhrases/daily expressions.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
       "alt": "Daily Expressions Image",
       "phrases": [
         "Byen sir",
@@ -79,7 +79,7 @@
     },
     {
       "title": "Prezansazyon",
-      "img": "/images/hundredPhrases/introducing.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,f_auto,c_fill/v1707255158/introduce_others.jpg_yv2bln.webp",
       "alt": "Introducing Image",
       "phrases": [
         "Mo prezant twa/ ou Arletta",
@@ -95,7 +95,7 @@
     },
     {
       "title": "Koz lor to pei dorizinn",
-      "img": "/images/hundredPhrases/talking about country.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
       "alt": "Talking about Country Image",
       "phrases": [
         "Ki pei to sorti?",
@@ -126,7 +126,7 @@
     },
     {
       "title": "Koz lor travay",
-      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
       "alt": "Talking about Work Image",
       "phrases": [
         "Ki to fer dan lavi?",
@@ -141,7 +141,7 @@
     },
     {
       "title": "Koz lor lekol",
-      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
       "alt": "Talking about School Image",
       "phrases": [
         "To enn etidya?",
@@ -156,7 +156,7 @@
     },
     {
       "title": "Koz lor bann lwazir",
-      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
       "alt": "Leisure Activities Image",
       "phrases": [
         "Ki to fer pu dister twa?",
@@ -174,7 +174,7 @@
     },
     {
       "title": "Fer kamarad/ bann ti koze",
-      "img": "/images/hundredPhrases/makingFriends.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
       "alt": "Making Friends Image",
       "phrases": [
         "Eski to swaf?",

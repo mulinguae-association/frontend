@@ -3,7 +3,7 @@
   "phrases": [
     {
       "title": "Salitasyon",
-      "img": "/images/hundredPhrases/greetings.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
       "alt": "Salitasyon Imaj",
       "phrases": [
         "Allo! / Bonjou.",
@@ -26,19 +26,19 @@
     },
     {
       "title": "Orevwa",
-      "img": "/images/hundredPhrases/goodBuy.webp",
+      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
       "alt": "Orevwa Imaj",
       "phrases": ["Orevwa.", "Adye.", "Nou wè pita.", "Bon nwit."]
     },
     {
       "title": "Eskize",
-      "img": "/images/hundredPhrases/Apologize.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "Eskize Imaj",
       "phrases": ["Eskize mwen.", "Mwen dezole."]
     },
     {
       "title": "Mande pou dènye ak repons",
-      "img": "/images/hundredPhrases/Asking for help.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
       "alt": "Mande pou dènye Imaj",
       "phrases": [
         "Kote biwo imigrasyon an / lapolis / ajans vwayaj la?",
@@ -49,7 +49,7 @@
     },
     {
       "title": "Mache",
-      "img": "/images/hundredPhrases/market.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
       "alt": "Mache Imaj",
       "phrases": [
         "Kisa sa yo ye?",
@@ -68,7 +68,7 @@
     },
     {
       "title": "Eksprésyon enpòtan chak jou",
-      "img": "/images/hundredPhrases/daily expressions.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
       "alt": "Eksprésyon chak jou Imaj",
       "phrases": [
         "Sigò.",
@@ -100,7 +100,7 @@
     },
     {
       "title": "Pale sou peyi orijin ou",
-      "img": "/images/hundredPhrases/talking about country.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
       "alt": "Pale sou peyi Imaj",
       "phrases": [
         "Kote ou soti?",
@@ -131,7 +131,7 @@
     },
     {
       "title": "Pale sou travay.",
-      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
       "alt": "Pale sou travay Imaj",
       "phrases": [
         "Kisa ou fè?",
@@ -146,7 +146,7 @@
     },
     {
       "title": "Pale sou lekòl.",
-      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
       "alt": "Pale sou lekòl Imaj",
       "phrases": [
         "Eske ou se yon elèv?",
@@ -161,7 +161,7 @@
     },
     {
       "title": "Pale sou aktivite k ap plezi",
-      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
       "alt": "Pale sou aktivite Imaj",
       "phrases": [
         "Kisa ou fè pou plezi?",
@@ -179,7 +179,7 @@
     },
     {
       "title": "Fè zanmi / ti pale.",
-      "img": "/images/hundredPhrases/makingFriends.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
       "alt": "Fè zanmi Imaj",
       "phrases": [
         "Eske ou swaf?",

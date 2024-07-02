@@ -3,7 +3,7 @@
   "phrases": [
     {
       "title": "Salutations",
-      "img": "/images/hundredPhrases/greetings.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
       "alt": "Image de salutations",
       "phrases": [
         "Salut ! / Bonjour.",
@@ -26,19 +26,19 @@
     },
     {
       "title": "Au revoir",
-      "img": "/images/hundredPhrases/goodBuy.webp",
+      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
       "alt": "Image d'adieux",
       "phrases": ["Au revoir.", "Goodbye.", "À plus tard.", "Bonne nuit."]
     },
     {
       "title": "S'excuser",
-      "img": "/images/hundredPhrases/Apologize.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "Image d'excuses",
       "phrases": ["Excusez-moi.", "Je suis désolé."]
     },
     {
       "title": "Demander de l'aide et des réponses",
-      "img": "/images/hundredPhrases/Asking for help.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
       "alt": "Image de demande d'aide",
       "phrases": [
         "Où se trouve le bureau de l'immigration / le commissariat de police / l'agence de voyage ?",
@@ -49,7 +49,7 @@
     },
     {
       "title": "Au marché",
-      "img": "/images/hundredPhrases/market.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
       "alt": "Image de marché",
       "phrases": [
         "Qu'est-ce que c'est ?",
@@ -68,7 +68,7 @@
     },
     {
       "title": "Expressions quotidiennes importantes",
-      "img": "/images/hundredPhrases/daily expressions.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
       "alt": "Image des expressions quotidiennes",
       "phrases": [
         "Bien sûr.",
@@ -100,7 +100,7 @@
     },
     {
       "title": "Parler de votre pays d'origine",
-      "img": "/images/hundredPhrases/talking about country.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
       "alt": "Image de discussion sur le pays d'origine",
       "phrases": [
         "D'où venez-vous ?",
@@ -131,7 +131,7 @@
     },
     {
       "title": "Parler de votre travail.",
-      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
       "alt": "Image de discussion sur le travail",
       "phrases": [
         "Que faites-vous ?",
@@ -146,7 +146,7 @@
     },
     {
       "title": "Parler de l'école.",
-      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
       "alt": "Image de discussion sur l'école",
       "phrases": [
         "Êtes-vous étudiant ?",
@@ -161,7 +161,7 @@
     },
     {
       "title": "Parler des loisirs",
-      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
       "alt": "Image des loisirs",
       "phrases": [
         "Que faites-vous pour vous amuser ?",
@@ -179,7 +179,7 @@
     },
     {
       "title": "Se faire des amis / petites conversations",
-      "img": "/images/hundredPhrases/makingFriends.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
       "alt": "Image pour se faire des amis",
       "phrases": [
         "Avez-vous soif ?",

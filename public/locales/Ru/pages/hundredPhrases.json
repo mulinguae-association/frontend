@@ -3,7 +3,7 @@
   "phrases": [
     {
       "title": "Приветствия",
-      "img": "/images/hundredPhrases/greetings.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
       "alt": "Изображение приветствия",
       "phrases": [
         "Привет! / Здравствуйте.",
@@ -26,19 +26,19 @@
     },
     {
       "title": "Прощание",
-      "img": "/images/hundredPhrases/goodBuy.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255613/zkmdtuweqnxoqlffvbm7.webp",
       "alt": "Изображение прощания",
       "phrases": ["Пока.", "До свидания.", "Увидимся позже.", "Спокойной ночи."]
     },
     {
       "title": "Извинения",
-      "img": "/images/hundredPhrases/Apologize.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "Изображение извинений",
       "phrases": ["Извините.", "Простите."]
     },
     {
       "title": "Запросы о помощи и ответы",
-      "img": "/images/hundredPhrases/Asking for help.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
       "alt": "Изображение запроса помощи",
       "phrases": [
         "Где находится паспортный стол / полицейский участок / туристическое агентство?",
@@ -49,7 +49,7 @@
     },
     {
       "title": "Рынок",
-      "img": "/images/hundredPhrases/market.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
       "alt": "Изображение рынка",
       "phrases": [
         "Что это за продукты?",
@@ -68,7 +68,7 @@
     },
     {
       "title": "Важные повседневные выражения",
-      "img": "/images/hundredPhrases/daily expressions.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
       "alt": "Изображение повседневных выражений",
       "phrases": [
         "Конечно.",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Представление и знакомство.",
-      "img": "/images/hundredPhrases/introducing.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,f_auto,c_fill/v1707255158/introduce_others.jpg_yv2bln.webp",
       "alt": "Изображение представления",
       "phrases": [
         "Это госпожа Арлетта.",
@@ -100,7 +100,7 @@
     },
     {
       "title": "Разговор о своей стране происхождения",
-      "img": "/images/hundredPhrases/talking about country.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
       "alt": "Изображение разговора о стране",
       "phrases": [
         "Откуда вы?",
@@ -131,7 +131,7 @@
     },
     {
       "title": "Разговор о работе.",
-      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
       "alt": "Изображение разговора о работе",
       "phrases": [
         "Чем вы занимаетесь?",
@@ -146,7 +146,7 @@
     },
     {
       "title": "Разговор о школе.",
-      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
       "alt": "Изображение разговора о школе",
       "phrases": [
         "Вы студент?",
@@ -161,7 +161,7 @@
     },
     {
       "title": "Разговор о досуге",
-      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
       "alt": "Изображение разговора о досуге",
       "phrases": [
         "Чем вы занимаетесь на отдыхе?",
@@ -179,7 +179,7 @@
     },
     {
       "title": "Знакомство/ маленькие беседы.",
-      "img": "/images/hundredPhrases/makingFriends.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
       "alt": "Изображение знакомства",
       "phrases": [
         "Вы хотите попить?",

@@ -3,7 +3,7 @@
   "phrases": [
     {
       "title": "问候",
-      "img": "/images/hundredPhrases/greetings.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
       "alt": "问候图片",
       "phrases": [
         "嗨！/ 你好。",
@@ -21,19 +21,19 @@
     },
     {
       "title": "告别",
-      "img": "/images/hundredPhrases/goodBuy.webp",
+      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
       "alt": "告别图片",
       "phrases": ["再见。", "再会。", "待会见。", "晚安。"]
     },
     {
       "title": "道歉",
-      "img": "/images/hundredPhrases/Apologize.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "道歉图片",
       "phrases": ["劳驾。", "对不起。"]
     },
     {
       "title": "寻求帮助和答案",
-      "img": "/images/hundredPhrases/Asking for help.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
       "alt": "寻求帮助图片",
       "phrases": [
         "移民局/警察局/旅行社在哪里？",
@@ -44,7 +44,7 @@
     },
     {
       "title": "市场",
-      "img": "/images/hundredPhrases/market.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
       "alt": "市场图片",
       "phrases": [
         "这是什么？",
@@ -63,7 +63,7 @@
     },
     {
       "title": "重要日常表达",
-      "img": "/images/hundredPhrases/daily expressions.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
       "alt": "日常表达图片",
       "phrases": [
         "当然。",
@@ -95,7 +95,7 @@
     },
     {
       "title": "谈论你的祖国",
-      "img": "/images/hundredPhrases/talking about country.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
       "alt": "谈论国家图片",
       "phrases": [
         "你来自哪里？",
@@ -121,7 +121,7 @@
     },
     {
       "title": "谈论工作",
-      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
       "alt": "谈论工作图片",
       "phrases": [
         "你是做什么工作的？",
@@ -136,7 +136,7 @@
     },
     {
       "title": "谈论学校",
-      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
       "alt": "谈论学校图片",
       "phrases": [
         "你是学生吗？",
@@ -151,7 +151,7 @@
     },
     {
       "title": "谈论休闲活动",
-      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
       "alt": "休闲活动图片",
       "phrases": [
         "你有什么消遣？",
@@ -169,7 +169,7 @@
     },
     {
       "title": "交朋友/小谈",
-      "img": "/images/hundredPhrases/makingFriends.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
       "alt": "交朋友图片",
       "phrases": [
         "你渴了吗？",

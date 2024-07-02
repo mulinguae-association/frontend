@@ -3,7 +3,7 @@
   "phrases": [
     {
       "title": "स्वागत",
-      "img": "/images/hundredPhrases/greetings.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
       "alt": "स्वागत चित्र",
       "phrases": [
         "हाय! / नमस्ते।",
@@ -26,19 +26,19 @@
     },
     {
       "title": "विदाई",
-      "img": "/images/hundredPhrases/goodBuy.webp",
+      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
       "alt": "विदाई चित्र",
       "phrases": ["अलविदा।", "फिर मिलेंगे।", "शुभ रात्रि।"]
     },
     {
       "title": "माफ़ी मांगना",
-      "img": "/images/hundredPhrases/Apologize.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "माफ़ी मांगना चित्र",
       "phrases": ["क्षमा करें।", "मुझे खेद है।"]
     },
     {
       "title": "मदद और जवाब मांगना",
-      "img": "/images/hundredPhrases/Asking for help.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
       "alt": "मदद मांगने का चित्र",
       "phrases": [
         "इम्मीग्रेशन ऑफिस / पुलिस स्टेशन / ट्रैवल एजेंसी कहाँ है?",
@@ -49,7 +49,7 @@
     },
     {
       "title": "बाज़ार",
-      "img": "/images/hundredPhrases/market.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
       "alt": "बाज़ार चित्र",
       "phrases": [
         "ये क्या हैं?",
@@ -68,7 +68,7 @@
     },
     {
       "title": "महत्वपूर्ण दैनिक अभिव्यक्तियाँ",
-      "img": "/images/hundredPhrases/daily expressions.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
       "alt": "दैनिक अभिव्यक्तियों का चित्र",
       "phrases": [
         "बिल्कुल।",
@@ -100,7 +100,7 @@
     },
     {
       "title": "अपने मूल के देश के बारे में बात करना",
-      "img": "/images/hundredPhrases/talking about country.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
       "alt": "देश के बारे में चित्र",
       "phrases": [
         "तुम कहाँ से हो?",
@@ -131,7 +131,7 @@
     },
     {
       "title": "काम के बारे में बात करना।",
-      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
       "alt": "काम के बारे में चित्र",
       "phrases": [
         "तुम क्या काम करते हो?",
@@ -146,7 +146,7 @@
     },
     {
       "title": "स्कूल के बारे में बात करना।",
-      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
       "alt": "स्कूल के बारे में चित्र",
       "phrases": [
         "क्या तुम छात्र हो?",
@@ -161,7 +161,7 @@
     },
     {
       "title": "शौक की गतिविधियों के बारे में बात करना",
-      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
       "alt": "मनोरंजन गतिविधियों का चित्र",
       "phrases": [
         "तुम मनोरंजन के लिए क्या करते हो?",
@@ -179,7 +179,7 @@
     },
     {
       "title": "मित्र बनाना / छोटी बातें।",
-      "img": "/images/hundredPhrases/makingFriends.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
       "alt": "मित्र बनाने का चित्र",
       "phrases": [
         "क्या तुम्हें प्यास लगी है?",

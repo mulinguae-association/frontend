@@ -2,7 +2,7 @@
   "phrases": [
     {
       "title": "Greetings",
-      "img": "/images/hundredPhrases/greetings.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
       "alt": "Greetings Image",
       "phrases": [
         "Hi! / Hello.",
@@ -25,19 +25,19 @@
     },
     {
       "title": "Goodbyes",
-      "img": "/images/hundredPhrases/goodBuy.webp",
+      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
       "alt": "Goodbyes Image",
       "phrases": ["Bye.", "Goodbye.", "See you later.", "Good night."]
     },
     {
       "title": "Apologize",
-      "img": "/images/hundredPhrases/Apologize.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "Apologize Image",
       "phrases": ["Excuse me.", "I'm sorry."]
     },
     {
       "title": "Asking for help and answers",
-      "img": "/images/hundredPhrases/Asking for help.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
       "alt": "Asking for Help Image",
       "phrases": [
         "Where is the immigration office/ police station / Travel agency?",
@@ -48,7 +48,7 @@
     },
     {
       "title": "Market",
-      "img": "/images/hundredPhrases/market.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
       "alt": "Market Image",
       "phrases": [
         "What are these?",
@@ -67,7 +67,7 @@
     },
     {
       "title": "Important daily expressions",
-      "img": "/images/hundredPhrases/daily expressions.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
       "alt": "Daily Expressions Image",
       "phrases": [
         "Sure.",
@@ -99,7 +99,7 @@
     },
     {
       "title": "Talking about your country of origin",
-      "img": "/images/hundredPhrases/talking about country.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
       "alt": "Talking about Country Image",
       "phrases": [
         "Where are you from?",
@@ -130,7 +130,7 @@
     },
     {
       "title": "Talking about work.",
-      "img": "/images/hundredPhrases/talking_about_work.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
       "alt": "Talking about Work Image",
       "phrases": [
         "What do you do?",
@@ -145,7 +145,7 @@
     },
     {
       "title": "Talking about school.",
-      "img": "/images/hundredPhrases/talking_about_school.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
       "alt": "Talking about School Image",
       "phrases": [
         "Are you a student?",
@@ -160,7 +160,7 @@
     },
     {
       "title": "Talking about leisure activities",
-      "img": "/images/hundredPhrases/talking_about_activities.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
       "alt": "Leisure Activities Image",
       "phrases": [
         "What do you do for fun?",
@@ -178,7 +178,7 @@
     },
     {
       "title": "Making friends/ small talks.",
-      "img": "/images/hundredPhrases/makingFriends.webp",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
       "alt": "Making Friends Image",
       "phrases": [
         "Are you thirsty?",
