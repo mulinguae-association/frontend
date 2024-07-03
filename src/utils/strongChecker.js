@@ -11,7 +11,7 @@ export const isStrongPassword = (password = '', t) => {
 
   if (!/\d/.test(password)) return t("strongPasswordRules.digit");
 
-  if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) return t("strongPasswordRules.specialCharacter");
+  if (!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) return t("strongPasswordRules.specialCharacter");
 
   if (password.length < 8) return t("strongPasswordRules.length")
 
