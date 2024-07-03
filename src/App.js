@@ -1,35 +1,36 @@
 import "./App.scss";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
-import Register from "./components/AuthPages/Register";
 import Navbar from "./components/Navbar";
 import Loader from "./components/Loader";
-import useLoader from "./components/Loader/useLoader";
-import React, { useEffect, useState } from "react";
-import PagesDetails from "./components/Navbar/NavLinks/NestedNavLinks/PagesDetails";
+import React, { useContext, useEffect, useState } from "react";
 import ToTopBtn from "./components/ToTopBtn";
 import axios from "axios";
-import Login from "./components/AuthPages/Login";
 import ProtectedRoute from "./utils/ProtectedRoute";
-import ForgotPassword from "./components/AuthPages/ForgotPassword";
-import ResetPassword from "./components/AuthPages/ResetPassword";
-import UserSettings from "./components/AuthPages/UserSettings";
 import { useCookies } from 'react-cookie';
 import i18n from "./i18n";
-import Courses from "./components/CoursesPage";
 import ScrollToTop from "./utils/ScrollToTop";
+import { AppContext } from "./contexts/AppContext";
 
 const Home = React.lazy(() => import("./components/HomePage"));
 const LazyAbout = React.lazy(() => import("./components/AboutPage"));
 const TeacherProfile = React.lazy(() => import("./components/pages/Teachers/TeacherProfile"));
 const CreateBlog = React.lazy(() => import("./components/pages/Blogs/CreateBlog"));
+const Register = React.lazy(() => import("./components/AuthPages/Register"));
+const Login = React.lazy(() => import("./components/AuthPages/Login"));
+const ForgotPassword = React.lazy(() => import("./components/AuthPages/ForgotPassword"));
+const ResetPassword = React.lazy(() => import("./components/AuthPages/ResetPassword"));
+const UserSettings = React.lazy(() => import("./components/AuthPages/UserSettings"));
 const Dashboard = React.lazy(() => import("./components/Dashboard"));
-const PrivacyPolicy = React.lazy(() => import("./components/Privacy&terms/PrivacyPolicy"));
+const PagesDetails = React.lazy(() => import("./components/Navbar/NavLinks/NestedNavLinks/PagesDetails"));
+const Courses = React.lazy(() => import("./components/CoursesPage"));
 const Contact = React.lazy(() => import("./components/ContactPage"));
+const PrivacyPolicy = React.lazy(() => import("./components/Privacy&terms/PrivacyPolicy"));
 const NotFound = React.lazy(() => import("./components/NotFound"));
 axios.defaults.baseURL = 'http://localhost:5000';
 axios.defaults.withCredentials = true
 function App() {
-	const isLoading = useLoader();
+	const { isLoading, setIsLoading } = useContext(AppContext);
+
 	const [imgAnimation, setImgAnimation] = useState(false);
 	const [, setCookie] = useCookies(['selectedLanguage'])
 
@@ -37,9 +38,10 @@ function App() {
 	const lang = location.pathname.split("/")[1];
 
 	useEffect(() => {
-		i18n.changeLanguage(lang);
+		setIsLoading(true);
+		i18n.changeLanguage(lang, () => setIsLoading(false));
 		setCookie('selectedLanguage', lang);
-	}, [lang, setCookie]);
+	}, [lang, setCookie, setIsLoading]);
 
 	useEffect(() => {
 		setImgAnimation(true);
