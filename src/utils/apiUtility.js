@@ -2,10 +2,15 @@ import axios from 'axios'
 // create,get,delete Teachers
 const createTeacher = async (formData) => {
   try {
-    const res = await axios.post(`/api/teachersCard, ${formData}`);
-    if (res.status === 200) { return { success: true } } else { return { success: false } }
+    const res = await axios.post(`/api/teachersCard`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    }); if (res.status === 200) { return { success: true } } else { return { success: false } }
   } catch (error) {
     console.error('Error adding teacher:', error);
+    console.log(error.response.data.error);
+    return error.response.data.error
   }
 }
 
