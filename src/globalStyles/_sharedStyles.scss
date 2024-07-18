@@ -1,6 +1,6 @@
+@import "./mixins/mixins.scss";
 .shape {
-  content: "";
-  position: absolute;
+  @include pseudo(block, absolute, "");
   border-radius: 50%;
   z-index: -184;
   filter: blur(70px);

@@ -1,19 +1,20 @@
 /* AuthStyle.scss */
 @import "../../globalStyles/colors";
-@import "../../globalStyles/sharedStyle";
+@import "../../globalStyles/sharedStyles";
+@import "../../globalStyles/mixins/mixins.scss";
 
 .auth_form {
   margin: 0 auto;
   text-align: center;
-  background: $pale-gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  @include flexbox(
+    $alignItems: center,
+    $justifyContent: center,
+    $direction: column
+  );
   height: calc(100vh - 90px);
   .container {
     .content {
-      position: relative;
+      @include rel();
       width: 600px;
       margin: 0 auto;
       padding: 40px;
@@ -24,6 +25,7 @@
       z-index: 1;
 
       h1 {
+        @include rel();
         font-size: 28px;
         border-bottom: 1px solid;
         padding: 6px 0;
@@ -31,16 +33,10 @@
         width: fit-content;
         margin: 0 auto;
         margin-bottom: 20px;
-        position: relative;
         color: $primaryDark-color;
 
         &::after {
-          content: "";
-          position: absolute;
-          bottom: -7.5px;
-          left: 50%;
-          width: 8px;
-          height: 8px;
+          @include pseudo(block, absolute, "", 8px, 8px, 0 0 -7.5px 50%);
           background-color: $medium-darkblue;
           transform: rotate(45deg) translateX(-50%);
         }
@@ -48,9 +44,7 @@
 
       form {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flexbox($justifyContent: center, $direction: column);
         gap: 17px;
         text-align: left;
 
@@ -110,8 +104,7 @@
           }
         }
         .group.termsAgreement {
-          display: flex;
-          align-items: center;
+          @include flexbox($alignItems: center);
           input {
             cursor: pointer;
           }
@@ -122,11 +115,9 @@
           }
         }
         .group.password {
-          position: relative;
+          @include rel();
           #password_eye {
-            position: absolute;
-            right: 15px;
-            top: 12px;
+            @include abs(12px 15px);
             font-size: 18px;
             width: -moz-fit-content;
             width: fit-content;
@@ -143,9 +134,7 @@
         }
       }
       .earth_icon {
-        position: absolute;
-        top: -30px;
-        left: 50%;
+        @include abs(-30px 0 0 50%);
         transform: translateX(-50%);
         font-size: 50px;
         color: $medium-darkblue;

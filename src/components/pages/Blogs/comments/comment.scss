@@ -1,5 +1,6 @@
 /* Shared styles for .comment */
 @import "../../../../globalStyles/colors";
+@import "../../../../globalStyles/mixins/mixins.scss";
 .comment {
   background-color: rgba($darkBlue-color, 0.1);
   border-radius: 4px;
@@ -11,12 +12,10 @@
   overflow: hidden;
   border-color: lightsteelblue;
   .comment_info {
-    position: relative;
+    @include rel();
   }
   .comment_head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox($alignItems: center, $justifyContent: space-between);
     color: darkblue;
     margin-bottom: 0;
     // color: $white-color;
@@ -30,8 +29,8 @@
     }
   }
   .parent_comment {
-    position: relative;
-    display: flex;
+    @include rel();
+    @include flexbox();
     gap: 10px;
     img {
       width: 40px;
@@ -56,16 +55,18 @@
     filter: blur(0);
   }
   .nested_comments_container {
-    display: flex;
+    @include flexbox();
     gap: 10px;
     padding-top: 0;
     margin-bottom: 8px;
     padding: 10px 0 10px 20px;
-
-    img {
+    .img_container {
       width: 35px;
       height: 35px;
-      border-radius: 50%;
+      img {
+        height: 100%;
+        border-radius: 50%;
+      }
     }
     .nested_comments {
       width: -moz-fit-content;
@@ -75,14 +76,13 @@
       margin: 8px 0;
       padding: 10px 15px;
       background: $white-color;
-      position: relative;
+      @include rel();
       min-width: 155px;
       line-height: 1.5;
       span {
         font-size: 10px;
         font-weight: bold;
-        display: flex;
-        justify-content: end;
+        @include flexbox($justifyContent: flex-end);
       }
       & > span {
         color: darkgreen;
@@ -98,8 +98,7 @@
 
   .replies {
     margin: 20px 0 25px 10px;
-    display: flex;
-    flex-direction: column;
+    @include flexbox($direction: column);
   }
   .comment_author {
     font-size: 12px;
@@ -109,8 +108,8 @@
     margin: 0;
   }
   .reply_form {
-    display: flex;
-    position: relative;
+    @include flexbox();
+    @include rel();
     margin-top: 30px;
     right: 12px;
     textarea {
@@ -148,5 +147,5 @@
 
 /* Shared styles for .comments_content */
 .comments_content {
-  position: relative;
+  @include rel();
 }

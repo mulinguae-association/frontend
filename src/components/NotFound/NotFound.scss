@@ -1,80 +1,70 @@
 @import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/mixins.scss";
 .not-found {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: calc(100vh - 88px);
-	width: 100%;
-	text-align: center;
-	background: radial-gradient(ellipse at top, $primary-color, $darkBlue-color),
-		radial-gradient(ellipse at bottom, $secondary-color, #000);
-	z-index: 1;
-	.content {
-		position: relative;
-		width: 350px;
-		margin: 0 auto;
-		z-index: 1;
-		.crescent {
-			position: absolute;
-			margin: auto;
-			top: -2rem;
-			left: 1rem;
-			width: 100px;
-			height: 100px;
-			background-color: transparent;
-			border-radius: 50%;
-			box-shadow: 25px 10px 0px 0px $white-color;
-			rotate: 20deg;
-			z-index: -1;
-			@media (max-width: 767px) {
-				left: 0rem;
-			}
-			&::before {
-				content: "";
-				position: absolute;
-				width: 10px;
-				height: 10px;
-				border-radius: 50%;
-				background-color: #155d97;
-				top: 1.3rem;
-				right: -0.3rem;
-			}
-			&::after {
-				content: "";
-				position: absolute;
-				width: 4px;
-				height: 4px;
-				border-radius: 50%;
-				background-color: #000000;
-				top: 1.6rem;
-				right: -4px;
-			}
-		}
-	}
+  @include flexbox(
+    $alignItems: center,
+    $justifyContent: center,
+    $direction: column
+  );
+  height: calc(100vh - 88px);
+  width: 100%;
+  text-align: center;
+  background: radial-gradient(ellipse at top, $primary-color, $darkBlue-color),
+    radial-gradient(ellipse at bottom, $secondary-color, #000);
+  z-index: 1;
+  .content {
+    @include rel();
+    width: 350px;
+    margin: 0 auto;
+    z-index: 1;
+    .crescent {
+      @include abs(-2rem 0 0 1rem);
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: 25px 10px 0px 0px $white-color;
+      rotate: 20deg;
+      z-index: -1;
+      @media (max-width: 767px) {
+        left: 0rem;
+      }
+      &::before {
+        @include pseudo(block, absolute, "", 10px, 10px, 1.3rem -0.3rem 0 0);
+        border-radius: 50%;
+        background-color: #155d97;
+      }
+      &::after {
+        @include pseudo(block, absolute, "", 4px, 4px, 1.6rem -4rem 0 0);
+        border-radius: 50%;
+        background-color: #000000;
+      }
+    }
+  }
 
-	.text-styled {
-		font-size: 100px;
-		margin: 0px;
-		text-shadow: 4px 4px 0 $primary-color, -4px -4px 0 $secondary-color,
-			-4px 4px 0 $primary-color, 4px -4px 0 #ffff38;
-		letter-spacing: 1rem;
-	}
+  .text-styled {
+    font-size: 100px;
+    margin: 0px;
+    text-shadow: 4px 4px 0 $primary-color, -4px -4px 0 $secondary-color,
+      -4px 4px 0 $primary-color, 4px -4px 0 #ffff38;
+    letter-spacing: 1rem;
+  }
 
-	p {
-		margin-top: -30px;
-		font-size: 24px;
-		font-weight: 500;
-		letter-spacing: 1rem;
-		color: $white-color;
-		text-shadow: 0 0 10px;
-		font-stretch: expanded;
-	}
-	@media (max-width: 991px) {
-		height: calc(100vh - 76px);
-		p {
-			font-size: 18px;
-			letter-spacing: 0.7rem;
-		}
-	}
+  p {
+    margin-top: -30px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    color: $white-color;
+    text-shadow: 0 0 10px;
+    font-stretch: expanded;
+  }
+  @media (max-width: 991px) {
+    height: calc(100vh - 76px);
+    p {
+      font-size: 18px;
+      letter-spacing: 0.7rem;
+    }
+  }
 }

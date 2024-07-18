@@ -1,52 +1,47 @@
 // EllipsisMenu.scss
-
+@import "../../../globalStyles/mixins/mixins.scss";
 .menu-container {
-	position: relative;
-	display: inline-block;
-	display: flex;
-	justify-content: end;
-	align-items: end;
-	height: 6px;
-	.menu-trigger {
-		cursor: pointer;
-	}
+  @include rel();
+  display: inline-block;
+  -webkit-user-select: none;
+  user-select: none;
+  @include flexbox($alignItems: end, $justifyContent: end);
+  height: 6px;
+  .menu-trigger {
+    cursor: pointer;
+  }
 
-	.menu-icon {
-		font-size: 18px; // Adjust the size as needed
-		line-height: 1;
-		font-weight: 500;
-	}
+  .menu-icon {
+    font-size: 18px; // Adjust the size as needed
+    line-height: 1;
+    font-weight: 500;
+  }
 
-	.menu-options {
-		position: absolute;
-		top: calc(100% + 10px);
-		right: 0;
-		width: 150px;
-		background-color: #bae6ff;
-		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-		list-style: none;
-		border-radius: 8px;
-		margin: 0;
-		z-index: 999;
+  .menu-options {
+    @include abs(20px 0 0 0);
+    width: 150px;
+    background-color: #bae6ff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    border-radius: 8px;
+    margin: 0;
+    z-index: 999;
 
-		li {
-			padding: 8px 16px;
-			cursor: pointer;
-			border-radius: 10px;
+    li {
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 10px;
 
-			&:hover {
-				background-color: #f0f0f0af;
-			}
-		}
-		&::after {
-			content: "";
-			position: absolute;
-			border-width: 10px 1px 31px 30px;
-			border-color: transparent transparent #bae6ff transparent;
-			border-style: solid;
-			top: -20px;
-			right: 8px;
-			z-index: -1;
-		}
-	}
+      &:hover {
+        background-color: #f0f0f0af;
+      }
+    }
+    &::after {
+      @include pseudo(block, absolute, "", 0, 0, -20px 8px 0 0);
+      border-width: 10px 1px 31px 30px;
+      border-color: transparent transparent #bae6ff transparent;
+      border-style: solid;
+      z-index: -1;
+    }
+  }
 }

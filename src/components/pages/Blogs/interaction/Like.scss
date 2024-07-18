@@ -1,9 +1,9 @@
 @import "../../../../globalStyles/colors";
+@import "../../../../globalStyles/mixins/mixins.scss";
 .heart-btn {
   .content {
-    position: relative;
-    display: flex;
-    align-items: center;
+    @include rel();
+    @include flexbox($alignItems: center);
     cursor: pointer;
     .heart {
       height: 20px;
@@ -18,9 +18,7 @@
       }
     }
     .numb {
-      position: absolute;
-      right: 7px;
-      top: 5px;
+      @include abs(5px 7px);
       font-size: 13px;
       color: #aab8c2;
       &.interaction_active {
@@ -39,17 +37,13 @@
   }
 }
 .interaction_comments {
-  position: absolute;
-  display: flex;
-  align-items: center;
+  @include abs(0 -8px -22px 0);
+  @include flexbox($alignItems: center);
   gap: 15px;
-  bottom: -22px;
-  right: -8px;
   .interaction_btn {
     .content {
-      position: relative;
-      display: flex;
-      align-items: center;
+      @include rel();
+      @include flexbox($alignItems: center);
       cursor: pointer;
       .unlike,
       .love {
@@ -64,8 +58,7 @@
         color: #aab8c2;
         font-size: 11px;
         font-weight: bold;
-        position: relative;
-        top: 5px;
+        @include rel(5px 0 0 0);
         &.interaction_active {
           color: $primaryDark-color;
         }

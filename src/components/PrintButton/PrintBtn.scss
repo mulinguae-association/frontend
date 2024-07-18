@@ -1,10 +1,12 @@
 @import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/mixins.scss";
 .print_container {
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: flex-end;
+  @include flexbox(
+    $alignItems: flex-end,
+    $justifyContent: flex-end,
+    $direction: column
+  );
   .print_btn {
     all: unset;
     color: $secondary-color;
@@ -17,9 +19,7 @@
     font-size: 0.9rem;
     border: 1px solid $primary-color;
     text-transform: capitalize;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox($alignItems: center, $justifyContent: space-between);
     cursor: pointer;
     transition: box-shadow, color, 0.4s ease;
     &:hover {

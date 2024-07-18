@@ -1,12 +1,11 @@
 @import "../../../globalStyles/colors";
+@import "../../../globalStyles/mixins/mixins.scss";
 .custom-dropdown {
-  position: relative;
+  @include rel();
   width: -moz-fit-content;
   width: fit-content;
   .selected-option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexbox($alignItems: center, $justifyContent: space-between);
     padding: 4px 10px;
     border: 2px solid;
     border-right-color: rgba(144, 238, 144, 0.693);
@@ -15,11 +14,10 @@
     border-bottom-color: rgba(lightgreen, 0.9);
     border-left-color: rgba($third-color, 0.9);
     border-radius: 2px 10px;
-    position: relative;
+    @include rel();
     cursor: pointer;
     div {
-      display: flex;
-      align-items: center;
+      @include flexbox($alignItems: center);
       gap: 5px;
       .languages_icon {
         width: 30px;
@@ -30,9 +28,7 @@
       }
     }
     .theLang {
-      position: absolute;
-      top: -10px;
-      right: -10px;
+      @include abs(-10px -10px 0 0);
       background-color: #0044ff;
       padding: 0 8px;
       border-radius: 25px;
@@ -46,16 +42,13 @@
     }
   }
   .options {
-    position: absolute;
-    top: calc(100% + 1.5rem);
-    right: 0;
+    @include abs(167% 0 0 0);
     right: 0;
     background-color: #000;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    @include flexbox($direction: column);
     border-top: 2px solid;
     border-image: linear-gradient(to right, $secondary-color, #0044ff) 1;
     width: 180px;
@@ -64,8 +57,7 @@
     overflow-y: auto;
     z-index: 999;
     li {
-      display: flex;
-      justify-content: flex-start;
+      @include flexbox($justifyContent: flex-start);
       padding: 10px;
       cursor: pointer;
       &:hover {
@@ -77,9 +69,7 @@
         color: $primary-color;
       }
       .option {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox($alignItems: center, $justifyContent: space-between);
         width: 100%;
         img {
           width: 20px;

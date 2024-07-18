@@ -1,0 +1,30 @@
+@import "../colors";
+
+@mixin about(
+  $background: null,
+  $padding: null,
+  $width: 85%,
+  $box-shadow: null
+) {
+  font-size: 17px;
+  color: $darkgray-color;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  text-transform: none;
+  margin-top: 0;
+  background: if($background, $background, rgba(#fff, 0.9));
+  border-radius: 20px;
+  padding: $padding;
+  font-family: "Lato", sans-serif;
+  box-shadow: if($box-shadow, $box-shadow, 0 0 20px $blue-shadow-light);
+  width: if($width, $width, 85%);
+  margin: 0 auto 10px auto;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    font-size: 15px;
+    padding: if($padding, calc($padding - 15px), 0px);
+  }
+}

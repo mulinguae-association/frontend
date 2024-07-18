@@ -1,4 +1,5 @@
 @import "../../../../globalStyles/colors";
+@import "../../../../globalStyles/mixins/mixins.scss";
 // UpdateComment.scss
 .update_parent {
   background-color: #f0f0f0 !important;
@@ -30,14 +31,10 @@
     }
   }
   .update_btns {
-    display: flex;
-    align-items: center;
-    justify-content: end;
+    @include flexbox($justifyContent: flex-end);
     gap: 0.8rem;
     width: 100%;
-    position: absolute;
-    right: 0;
-    bottom: -28px;
+    @include abs(0 0px -28px 0);
     button {
       background: none;
       border: none;

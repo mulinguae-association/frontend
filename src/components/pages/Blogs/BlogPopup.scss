@@ -1,10 +1,9 @@
 @import "../../../globalStyles/colors";
+@import "../../../globalStyles/mixins/mixins.scss";
 .blog_popup {
-  position: fixed;
+  @include fix(50% 0 0 50%);
   width: 95%;
   height: 95%;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
   background-color: #dae3f0;
   border-radius: 10px;
@@ -23,9 +22,7 @@
     }
   }
   .comments_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($alignItems: center, $justifyContent: center);
     gap: 8px;
     .special {
       font-size: 27px;
@@ -55,17 +52,12 @@
     .popup_close {
       all: unset;
       color: $medium-darkblue;
-      position: relative;
+      @include rel();
       cursor: pointer;
       padding: 4px 0px;
       &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 1px;
+        @include pseudo(block, absolute, "", 50%, 1px, 0 0 0px 0px);
         border-bottom: 2px solid $medium-darkblue;
-        width: 50%;
         transition: 0.7s ease;
       }
       &:hover {
@@ -77,16 +69,12 @@
   }
 }
 .blog_close {
-  position: absolute;
+  @include abs(10px 10px 0 0);
   width: 37px;
   height: 37px;
-  right: 10px;
-  top: 10px;
   background-color: $white-color;
   color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox($alignItems: center, $justifyContent: center);
   border: none;
   font-size: 23px;
   font-weight: bold;
@@ -95,14 +83,14 @@
   cursor: pointer;
 }
 .comments_content {
-  position: relative;
+  @include rel();
 }
 .comment {
   .nested_comments {
     background: $white-color;
     margin: 8px 0;
     border-left: 2px solid $primaryDark-color;
-    position: relative;
+    @include rel();
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -110,9 +98,8 @@
     margin-top: 0;
 
     .interaction_comments {
-      position: absolute;
-      display: flex;
-      align-items: center;
+      @include abs();
+      @include flexbox($alignItems: center);
       gap: 15px;
     }
   }

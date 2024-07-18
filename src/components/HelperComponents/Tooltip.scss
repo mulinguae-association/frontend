@@ -1,19 +1,18 @@
 @import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/mixins";
 // Tooltip.scss
 .tooltip-container {
-  position: relative;
+  @include rel();
   .tooltip-icon {
     cursor: pointer;
     height: 20px;
   }
 
   .tooltip-text {
-    position: absolute;
+    @include abs(125% 0 50% 0);
     width: 300px;
     height: -moz-fit-content;
     height: fit-content;
-    top: calc(100% + 5px);
-    left: 50%;
     transform: translateX(-50%);
     padding: 10px;
     background-color: #333;

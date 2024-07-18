@@ -1,4 +1,5 @@
 @import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/mixins.scss";
 .privacy {
   h1,
   h2 {
@@ -15,8 +16,8 @@
   }
   white-space-collapse: preserve-breaks;
   .content {
-    margin: 100px 0 50px 0;
-    display: flex;
+    padding: 100px 0 50px 0;
+    @include flexbox();
     min-height: calc(300vh - 140px);
     .main_content {
       flex: 2;
@@ -47,8 +48,7 @@
       }
       // collect-data section
       section .collectData .categories {
-        display: flex;
-        flex-wrap: wrap;
+        @include flexbox($wrap: wrap);
         gap: 1%;
         .category {
           max-width: 48%;
@@ -60,8 +60,7 @@
       }
       // dataSharing section
       #data-sharing .other_data_sharing {
-        display: flex;
-        flex-wrap: wrap;
+        @include flexbox($wrap: wrap);
         gap: 15px;
         div {
           width: 48%;
@@ -77,16 +76,13 @@
           margin: 10px 0;
         }
         .keyReasons {
-          display: flex;
-          flex-direction: column;
+          @include flexbox($direction: column);
         }
       }
       // data-control section
       #data-control .more_details .choices,
       #data-control .more_details .communication {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        @include flexbox($justifyContent: space-between, $wrap: wrap);
         gap: 15px;
         .data_control_choices,
         .data_communication {
@@ -95,8 +91,7 @@
           padding: 0 20px;
           .contact {
             .way {
-              display: flex;
-              align-items: baseline;
+              @include flexbox($alignItems: baseline);
               gap: 8px;
               h4 {
                 margin: 0;
@@ -107,9 +102,8 @@
       }
       // contact-us section
       #contact-us .data_communication {
-        display: flex;
+        @include flexbox($alignItems: baseline);
         gap: 8px;
-        align-items: baseline;
         h3 {
           margin: 0;
         }
@@ -119,11 +113,12 @@
         text-align: center;
       }
       ul {
-        display: flex;
-        flex-wrap: wrap;
+        @include flexbox(
+          $alignItems: center,
+          $justifyContent: space-between,
+          $wrap: wrap
+        );
         gap: 10px;
-        align-items: center;
-        justify-content: space-between;
         list-style: inside;
         margin-left: 12px;
         li {
@@ -132,8 +127,7 @@
         }
       }
       .common {
-        display: flex;
-        flex-wrap: wrap;
+        @include flexbox($wrap: wrap);
         gap: 1rem;
         div {
           width: 48%;
@@ -149,7 +143,7 @@
     }
     @media (max-width: 1024px) {
       & {
-        margin-top: 50px;
+        padding-top: 30px;
         .main_content {
           .common,
           section .collectData .categories,
@@ -161,6 +155,7 @@
             div,
             .category {
               width: 100%;
+              padding: 0;
               max-width: 100%;
             }
           }
@@ -169,8 +164,7 @@
     }
     // table of contents
     .toc_items {
-      position: -webkit-sticky;
-      position: sticky;
+      @include sticky();
       height: 519px;
       top: 150px;
       flex: 1;
@@ -179,13 +173,11 @@
         display: none;
       }
       ul {
-        display: flex;
-        flex-direction: column;
+        @include flexbox($direction: column);
         gap: 15px;
         li {
           -webkit-user-select: none;
-          display: flex;
-          align-items: center;
+          @include flexbox($alignItems: center);
           gap: 10px;
           user-select: none;
           font-weight: 500;
@@ -205,10 +197,11 @@
     }
     @media (max-width: 1024px) {
       & {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flexbox(
+          $alignItems: center,
+          $justifyContent: center,
+          $direction: column
+        );
         .main_content ul {
           margin-left: 4px;
         }
