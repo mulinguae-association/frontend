@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomDropdown from './Navbar/customDropdown/CustomDropDown';
 import { useCookies } from 'react-cookie';
-import useDirectionChange from "../utils/useDirectionChange"
+import useDirectionChange from "../utils/useDirectionChange";
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function LanguageSwitcher({ className }) {
@@ -18,7 +18,7 @@ function LanguageSwitcher({ className }) {
     { label: 'Hindi', value: 'Hi' },
     { label: 'Kreol Morisyen', value: 'KM' },
     { label: 'Mandarin', value: 'Mn' },
-    { label: 'portuguese', value: 'Pt' },
+    { label: 'Portuguese', value: 'Pt' },
     { label: 'Quechua', value: 'Qu' },
     { label: 'Russian', value: 'Ru' },
     { label: 'Spanish', value: 'Es' },
@@ -26,11 +26,11 @@ function LanguageSwitcher({ className }) {
   ], []);
 
   const handleSelect = useCallback((option) => {
-    setCookie('selectedLanguage', option.value, { path: '/' }); // Save selected language to cookies
-    const currPath = window.location.pathname.split("/").slice(2).join("/");
+    setCookie('selectedLanguage', option.value, { path: '/' });
+    const currPath = location.pathname.split("/").slice(2).join("/");
     navigate(`/${option.value}/${currPath}`);
     i18n.changeLanguage(option.value);
-  }, [i18n, navigate, setCookie]);
+  }, [i18n, navigate, setCookie, location.pathname]);
 
   const mapUrlLanguageToOptionValue = useCallback((urlLanguage) => {
     return options.find((option) => option.value.toLowerCase() === urlLanguage.toLowerCase());
@@ -39,10 +39,10 @@ function LanguageSwitcher({ className }) {
   useEffect(() => {
     const urlLanguage = location.pathname.split("/")[1];
     const selectedOption = mapUrlLanguageToOptionValue(urlLanguage);
-    if (selectedOption) {
+    if (selectedOption && selectedOption.value !== i18n.language) {
       handleSelect(selectedOption);
     }
-  }, [location.pathname, handleSelect, mapUrlLanguageToOptionValue]);
+  }, [location.pathname, handleSelect, mapUrlLanguageToOptionValue, i18n.language]);
 
   useDirectionChange(i18n.language);
 
