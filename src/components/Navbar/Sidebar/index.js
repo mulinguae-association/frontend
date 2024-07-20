@@ -5,6 +5,8 @@ import NavLinks from '../NavLinks'
 import { useContext } from 'react'
 import { AppContext } from '../../../contexts/AppContext'
 import { langDirection } from '../../../utils/languageUtils'
+import { Link } from 'react-router-dom'
+import i18n from '../../../i18n'
 const Sidebar = (props) => {
   const changeDir = langDirection()
   const { isLoading } = useContext(AppContext);
@@ -25,7 +27,7 @@ const Sidebar = (props) => {
   }
   return (
     <div onClick={handleEvent} className={`sidebar ${props.menuOpen ? 'open' : ''}`}>
-      <button name='join us' className="cta-button" aria-label='join us'>{props.t("joinBtn")}</button>
+      <Link to={`${i18n.language}/contact`} name='join us' className="cta-button" aria-label='join us'>{props.t("joinBtn")}</Link>
       <NavLinks className={`sideLinks ${changeDir}`} />
       <LanguageSwitcher className={"custom-dropdown"} />
     </div>
