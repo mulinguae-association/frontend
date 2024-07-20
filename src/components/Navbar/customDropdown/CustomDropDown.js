@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./CustomDropdown.scss";
 
 const CustomDropdown = ({ options, onSelect, className, cookies }) => {
-	const [selectedOption, setSelectedOption] = useState(options[0]);
+	const [selectedOption, setSelectedOption] = useState(options[1]);
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef(null);
 	const handleOptionClick = (option) => {
@@ -34,18 +34,9 @@ const CustomDropdown = ({ options, onSelect, className, cookies }) => {
 	return (
 		<div className={className} ref={dropdownRef}>
 			<div className='selected-option' onClick={() => setIsOpen(!isOpen)}>
-				{/* {selectedOption
-					? `${selectedOption?.value === "Ar" ? "اللغات" : "languages"} (${
-							selectedOption?.value
-					  })`
-					: `languages (En) `} */}
-				{/* ? `${selectedOption?.value === "Ar" ? "اللغات" : "languages"} (${ */}
-				{/* selectedOption?.value */}
-				{/* })` */}
-				{/* :  */}
 				{selectedOption ?
-					<span style={selectedOption?.value === "Ar" ? { left: "-10px", right: "auto" } : {}} className="theLang">{selectedOption?.value}</span> :
-					<span style={selectedOption?.value === "Ar" ? { left: "-10px", right: "auto" } : {}} className="theLang">En</span>
+					<span className="theLang">{selectedOption?.value}</span> :
+					<span className="theLang">En</span>
 				}
 				<div>
 					<img
@@ -57,7 +48,10 @@ const CustomDropdown = ({ options, onSelect, className, cookies }) => {
 				</div>
 			</div>
 			{isOpen && (
-				<ul style={selectedOption?.value === "Ar" ? { left: 0, right: "auto" } : {}} className='options thin-scroll'>
+				<ul
+					style={["Ar", "Ur"].includes(selectedOption?.value) ? { left: 0, right: "auto" } : {}}
+					className='options thin-scroll'
+				>
 					{options.map((option) => (
 						<li
 							key={option.value}
