@@ -111,18 +111,22 @@
   }
 }
 // for links
-@mixin links($link, $hover, $active, $visited) {
+@mixin links($link, $hover, $active: null, $visited: null) {
   & {
     color: $link;
-    &:visited {
-      color: $visited;
+    @if $visited != null {
+      &:visited {
+        color: $visited;
+      }
     }
     &:hover {
       color: $hover;
     }
-    &:active,
-    &:focus {
-      color: $active;
+    @if $active != null {
+      &:active,
+      &:focus {
+        color: $active;
+      }
     }
   }
 }
