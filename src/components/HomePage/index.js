@@ -94,12 +94,10 @@ const Home = ({ imgAnimation }) => {
 						className={`img_container reload-animation  ${imgAnimation ? "reload-animation" : ""
 							}`}>
 						<picture>
+							<source media="(max-width:640px)" srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_640/v1707246278/earth_fnjwsd.webp 640w" />
+							<source media="(max-width:750px)" srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_750/v1707246278/earth_fnjwsd.webp 750w" />
 							<img
 								fetchpriority="high"
-								srcSet="
-								https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_640/v1707246278/earth_fnjwsd.webp 640w,
-								https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_750/v1707246278/earth_fnjwsd.webp 750w"
-								sizes="(max-width: 640px) 640px, (max-width: 750px) 750px, 100vw"
 								src={"https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_750/v1707246278/earth_fnjwsd.webp"}
 								alt='multiLang_img'
 								loading="eager"
