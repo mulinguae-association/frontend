@@ -55,11 +55,13 @@ const Navbar = () => {
 			<div className='container'>
 				<div className='content' ref={contentRef}>
 					<div className='logo' ref={logoRef} onClick={() => navigate(`/${lang}/`)}>
+
 						<picture className='img_container'>
+							<source srcSet="/images/acs-logo.webp" type="image/webp" />
 							<img
 								width="100%"
 								height="100%"
-								src={"/images/acs-logo.svg"}
+								src={"/images/acs-logo.png"}
 								sizes="(max-width:768px) 50px, 55px"
 								alt='logo'
 							/>
