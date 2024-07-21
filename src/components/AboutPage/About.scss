@@ -1,57 +1,50 @@
 @import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/about";
+@import "../../globalStyles/mixins/mixins.scss";
 .about_us_info {
   padding: 50px 0;
   text-transform: capitalize;
   .header {
-    font-size: -webkit-calc(1.225rem + 0.9vw);
-    font-size: calc(1.225rem + 0.9vw);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: $primaryDark-color;
   }
 
-  .about_img {
-    float: right;
-    width: 400px;
-    height: 258px;
-    margin-left: 10px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 0;
-    box-shadow: 0 0 10px #cad7ec;
-    &.rtl {
-      float: left;
-      margin: 0 10px 0 0;
-    }
-    @media (max-width: 767px) {
-      &,
-      &.rtl {
-        float: none;
-        margin: 0;
-        clip-path: none;
-        shape-outside: none;
+  .group {
+    @include about();
+    border: 1px solid rgba($primaryDark-color, 0.2);
+    border-top: 0;
+    div {
+      padding: 30px;
+      @media (max-width: 768px) {
+        padding: 15px;
       }
+    }
+    .about_img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      max-width: none;
     }
   }
 
-  .our_vision {
-    clear: both;
-  }
-  .title {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: start;
-    gap: 0.5rem;
-    img {
-      width: 50px;
-      height: 50px;
+  article {
+    > .title {
+      @include flexbox(
+        $alignItems: center,
+        $direction: row-reverse,
+        $justifyContent: start
+      );
+      gap: 0.5rem;
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
-  }
-  .about {
-    font-size: 17px;
-    color: #444;
-    font-weight: 500;
-    letter-spacing: 0.9px;
-    text-transform: none;
-    margin-top: 0;
+
+    > .about {
+      @include about(null, 30px);
+      border: 1px solid rgba($primaryDark-color, 0.2);
+    }
   }
 }
