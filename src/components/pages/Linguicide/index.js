@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import PrintBtn from '../../PrintButton';
 
 const Linguicide = () => {
-  const { t } = useTranslation('pages/linguicide', { ns: 'linguicide' });
+  const { t } = useTranslation('pages/linguicide');
   const { t: global } = useTranslation('global', { ns: 'global' });
   const componentRef = useRef();
 
@@ -20,9 +20,6 @@ const Linguicide = () => {
             <h1 className='page_title'>{t("page_title")}</h1>
           </header>
           <article>
-            <header>
-              <h2 className='head'>{t("sec1_head")}</h2>
-            </header>
             <div className='about'>
               <p>{t("sec1_about1")}</p>
               <p>
