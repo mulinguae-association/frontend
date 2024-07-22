@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useCallback, useState } from 'react';
 import { fetchTeachers } from '../utils/apiUtility';
 import { useContext } from 'react';
 
@@ -16,14 +16,14 @@ export const AppProvider = ({ children }) => {
       [buttonKey]: isLoading,
     }));
   };
-  const getTeachers = async () => {
+  const getTeachers = useCallback(async () => {
     try {
       const fetchedTeachers = await fetchTeachers();
       setTeachers(fetchedTeachers);
     } catch (err) {
       console.log(err);
     }
-  };
+  }, []);
   // Create an object containing the values to be exposed in the context
   const contextValues = {
     isLoading,

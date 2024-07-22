@@ -15,7 +15,6 @@ export const AuthProvider = ({ children }) => {
         if (!userData) {
           const res = await axios.get('/api/auth/profile')
           if (res.status === 200) {
-            console.log(userData)
             setUserData(res.data);
           }
           if (res.status === 401) {
