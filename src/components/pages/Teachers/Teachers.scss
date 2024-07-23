@@ -1,27 +1,28 @@
 // Import global styles
 @import "../../../globalStyles/colors";
+@import "../../../globalStyles/mixins/mixins.scss";
 
+.teachers_head {
+  color: $darkBlue-color;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+
+  .special {
+    color: $primaryDark-color;
+  }
+}
 .teachers_overview {
-  background-color: #0b137e11;
+  background-color: rgba($blue-shadow-light, 25%);
   padding: 10px;
   border-radius: 10px;
 
-  .teachers_head {
-    color: $darkBlue-color;
-    font-size: 1.8rem;
-
-    .special {
-      color: $primaryDark-color;
-    }
-  }
   .swiper {
     width: 90%;
   }
   // Styles for .teacher_card
   .teacher_card {
     background-color: $white-color;
-    box-shadow: 0 10px 10px 10px #ddd;
-    position: relative;
+    box-shadow: 0 10px 10px $blue-shadow-light;
+    @include rel();
     width: 90%;
     min-height: 350px;
     height: 100%;
@@ -38,9 +39,9 @@
       width: 100%;
       height: 100%;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
+      @include flexbox($direction: column);
       gap: 15px;
+      -webkit-user-select: none;
       user-select: none;
 
       // Styles for .imageContainer
@@ -50,11 +51,9 @@
         margin: 0 auto;
         border-radius: 50%;
         background-color: #f3f3f3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexbox($alignItems: center, $justifyContent: center);
         overflow: hidden;
-        position: relative;
+        @include rel();
 
         // Styles for .teacher_image
         .teacher_image {
@@ -104,17 +103,12 @@
         border: 1px solid $primary-color;
         padding: 8px 12px;
         transition: 0.7s ease;
-        position: relative;
+        @include rel();
         overflow: hidden;
         z-index: 10;
 
         &::before {
-          position: absolute;
-          top: -0px;
-          left: 0;
-          content: "";
-          height: 0%;
-          width: 100%;
+          @include pseudo(block, absolute, "", 100%, 0%, -0px 0 0 0px);
           text-decoration: none;
           background-color: $primaryDark-color;
           border-radius: 0px 0 50% 50%;
@@ -145,11 +139,8 @@
         font-size: 20px;
         font-weight: bold;
         color: red;
-        position: absolute;
-        left: 26px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include abs(0 20px 0 0);
+        @include flexbox($alignItems: center, $justifyContent: center);
         cursor: pointer;
         border: 1px solid;
         transition: 0.7s ease;
@@ -170,11 +161,8 @@
         font-size: 20px;
         font-weight: bold;
         border-color: green;
-        position: absolute;
-        right: 26px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include abs(0 26px);
+        @include flexbox($alignItems: center, $justifyContent: center);
         cursor: pointer;
         border: 1px solid;
         transition: 0.7s ease;
@@ -206,27 +194,26 @@
 }
 
 // Styles for .teacher_profile
+.not-found {
+  @include flexbox($justifyContent: center, $alignItems: center);
+  min-height: calc(100vh - 90px);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
 .teacher_profile {
   padding: 60px 0;
-  background: url("../../../../public/images/interlaced.png");
+  background: url("https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto/v1707245072/interlaced_rlevtz.png");
   background-attachment: fixed;
   min-height: calc(100vh - 210px);
-  position: relative;
+  @include rel();
   z-index: 1;
   &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    @include pseudo(block, absolute, "", 100%, 100%, 0px 0 0 0px);
     background: #ffffff53;
     z-index: -1;
   }
   // Styles for .back_btn
   .back_btn {
-    display: flex;
-    align-items: center;
+    @include flexbox($alignItems: center);
     cursor: pointer;
     color: $darkBlue-color;
     font-size: larger;
@@ -241,13 +228,14 @@
 
   // Styles for .main_info
   .main_info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox($alignItems: center, $justifyContent: space-between);
     width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
-    gap: 50px;
+    background-color: $white-color;
+    box-shadow: 0 0 10px rgba($blue-shadow-light, 100%);
+    row-gap: 12px;
+    column-gap: 50px;
     padding: 28px;
     border-radius: 8px;
     border-bottom: 2px solid $secondary-color;
@@ -294,24 +282,24 @@
 
     // Styles for image within .main_info
     img {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       background-color: $lightgray-color;
       border-radius: 50%;
-      box-shadow: 0 8px 10px #33333384;
+      box-shadow: 0 10px 20px rgba($blue-shadow-light, 80%);
       object-fit: cover;
     }
   }
 
   // Styles for .secondary_info
   .secondary_info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+    @include flexbox(
+      $alignItems: stretch,
+      $justifyContent: space-between,
+      $wrap: wrap
+    );
     gap: 10px;
     margin-top: 30px;
-
     // Styles for .block within .secondary_info
     .block {
       width: 46%;
@@ -323,43 +311,52 @@
         border: 1.5px solid lightgreen;
         color: $darkBlue-color;
         font-size: 17px;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: capitalize;
         background: linear-gradient(360deg, #51a7d3, $white-color);
       }
 
       p {
-        padding: 40px 45px;
-        margin: 0;
+        padding: 40px;
         font-size: 16px;
         font-weight: 500;
         letter-spacing: 0.9px;
         text-transform: none;
-        background-color: #0b137e11;
+        background: rgba(202, 215, 236, 0.25);
         color: #000;
         border-radius: 10px;
-        position: relative;
+        @include rel();
         overflow: hidden;
         z-index: 1;
       }
-    }
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-
-      &:last-child {
-        border: none;
+      @media (max-width: 1024px) {
+        width: 100%;
       }
 
-      .block {
-        width: 100%;
-        h3 {
-          text-align: center;
-          margin: 16px auto;
+      @media (max-width: 767px) {
+        & {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          h3 {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 0;
+          }
+          p {
+            padding: 20px;
+            margin: 0 auto;
+          }
         }
-        p {
-          padding: 20px;
-        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      row-gap: 20px;
+      &:last-child {
+        border: none;
       }
     }
   }
@@ -372,13 +369,13 @@
 
 @media (max-width: 767px) {
   // Responsive styles for .teacher_profile .main_info
-  .teacher_profile .main_info {
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
+  .teacher_profile {
+    padding: 30px 0 50px 0;
+    .main_info {
+      width: 100%;
+      @include flexbox($direction: column-reverse);
+    }
   }
-
-  // Responsive styles for .secondary_info p
   .secondary_info p {
     width: 100%;
     padding: 0;
