@@ -1,5 +1,5 @@
-import { React, useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import 'swiper/css';
@@ -13,43 +13,41 @@ import { useAuth } from '../../../contexts/AuthContext';
 import i18next from 'i18next';
 
 const TeachersOverview = ({ t }) => {
-  const { teachers, setTeachers, getTeachers } = useContext(AppContext)
+  const { teachers, setTeachers, getTeachers } = useContext(AppContext);
   const [editingTeacher, setEditingTeacher] = useState(null);
   const { isAuth, userData } = useAuth();
 
   useEffect(() => {
-    getTeachers()
-  }, []);
+    getTeachers();
+  }, [getTeachers]);
 
   const handleEditTeacher = (teacher) => {
     if (editingTeacher && editingTeacher._id === teacher._id) {
-      // If the same teacher is being edited again, close the edit form
       setEditingTeacher(null);
     } else {
-      // Otherwise, open the edit form for the selected teacher
       setEditingTeacher(teacher);
     }
   };
+
   const handleUpdateTeacher = (updatedTeacher) => {
     const updatedTeachers = teachers.map((teacher) =>
       teacher._id === updatedTeacher._id ? updatedTeacher : teacher
     );
     setTeachers(updatedTeachers);
-    getTeachers()
-    // Clear the editingTeacher state to exit edit mode
+    getTeachers();
     setEditingTeacher(null);
-  }
+  };
 
   const handleDeleteTeacher = async (teacherId) => {
     try {
-      const res = await deleteTeacher(teacherId)
-      console.log(res)
-      res.success ? notifySuccess("successfuly deleted teacher") : notifyError("Faild deleted teacher")
-      getTeachers()
+      const res = await deleteTeacher(teacherId);
+      res.success ? notifySuccess("Successfully deleted teacher") : notifyError("Failed to delete teacher");
+      getTeachers();
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
+
   return (
     <Swiper
       slidesPerView={3}
@@ -83,7 +81,7 @@ const TeachersOverview = ({ t }) => {
               {!editingTeacher || editingTeacher._id !== teacher._id ?
                 <>
                   <div className='imageContainer'>
-                    <img width="500px" height="500px" className='teacher_image' src={teacher.image ? `${teacher.image}` : "/images/fallBackUser.png"} alt='teacher_image'
+                    <img width="250px" height="250px" className='teacher_image' src={teacher.image ? `${teacher.image}` : "/images/fallBackUser.png"} alt='teacher_image'
                       onError={(e) => {
                         e.target.src = "/images/fallBackUser.png";
                       }}
@@ -97,11 +95,11 @@ const TeachersOverview = ({ t }) => {
                 </>
                 : <EditTeacherForm teacher={editingTeacher} onUpdate={handleUpdateTeacher} />
               }
-              <Link className='teacher_link' to={`/${i18next.language}/pages/Teachers/${teacher.firstName}${teacher._id}`}>{t("sec6_link1")}</Link>
+              <Link className='teacher_link' to={`/${i18next.language}/pages/Teachers/${teacher.firstName}_${teacher._id}`}>{t("sec6_link1")}</Link>
               {isAuth && (userData.role === "admin") &&
                 <>
                   <button className='deleteBtn' onClick={() => handleDeleteTeacher(teacher._id)}>x</button>
-                  <button className='editBtn' onClick={(e) => handleEditTeacher(teacher)}>
+                  <button className='editBtn' onClick={() => handleEditTeacher(teacher)}>
                     <img height={"64px"} src='/images/icons/edit.png' alt='edit teacher card' />
                   </button>
                 </>
@@ -111,7 +109,7 @@ const TeachersOverview = ({ t }) => {
         </SwiperSlide>
       )) : <div className='no_teachers'>{t('sec7_noTeachers')}</div>}
     </Swiper>
-  )
-}
+  );
+};
 
-export default TeachersOverview
+export default TeachersOverview;
