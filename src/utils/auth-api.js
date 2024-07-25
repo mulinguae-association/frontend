@@ -2,9 +2,7 @@ import axios from 'axios';
 export async function submitRegister(RegisterData) {
   try {
     const response = await axios.post(`/api/auth/register`, RegisterData);
-    console.log(response)
     if (response.status === 200) {
-      console.log("Data Sent Successfuly");
       // Reset form fields
       return response.data;
     } else {
@@ -21,7 +19,6 @@ export async function submitLogin(LoginData) {
     const response = await axios.post(`/api/auth/login`, LoginData);
 
     if (response.status === 200) {
-      console.log("Data Sent Successfuly");
       // Reset form fields
       return response.data;
     } else {

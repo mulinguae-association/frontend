@@ -30,6 +30,8 @@ function Login() {
     });
   };
 
+  const checkUserEntity = !formData.email || !formData.password;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -38,17 +40,17 @@ function Login() {
       const res = await submitLogin(formData);
       if (res.error) {
         notifyError(res.error);
-      } else {
-        // Clear the form fields
-        setFormData({
-          email: '',
-          password: '',
-        });
-        notifySuccess("Login successful");
-        navigate(`/${i18next.language}/pages/Blogs`);
-        const response = await axios.get('/api/auth/profile');
-        setUserData(response.data);
+        return;
       }
+      // Clear the form fields
+      setFormData({
+        email: '',
+        password: '',
+      });
+      notifySuccess("Login successful");
+      const response = await axios.get('/api/auth/profile');
+      setUserData(response.data);
+      navigate(`/${i18next.language}/pages/Blogs`);
     } catch (error) {
       notifyError(error.message);
       console.log(error);
@@ -56,18 +58,19 @@ function Login() {
       setButtonLoading("loginBtn", false);
     }
   };
-
+  const isBtnDisabled = checkUserEntity || isBtnLoading['loginBtn'];
   return (
     <main className='auth_form'>
       <div className='container'>
         <div className='content'>
           <h1>{t("pageTitle")}</h1>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} autoComplete='off'>
             <div className='group'>
-              <label>{t("emailLabel")}</label>
+              <label htmlFor='email'>{t("emailLabel")}</label>
               <InputField
                 type="email"
                 name="email"
+                id="email"
                 placeholder={t("emailPlaceholder")}
                 value={formData.email}
                 onChange={handleInputChange}
@@ -75,18 +78,26 @@ function Login() {
               />
             </div>
             <div className='group'>
-              <label>{t("passwordLabel")}</label>
+              <label htmlFor='password'>{t("passwordLabel")}</label>
               <InputField
+                id="password"
                 type="password"
                 name="password"
                 placeholder={t("passwordPlaceholder")}
                 value={formData.password}
                 onChange={handleInputChange}
+                autoComplete="on"
                 required
               />
             </div>
             <Link to={`/${i18next.language}/forgot-password`}>{t("forgotPasswordLink")}</Link>
-            <button disabled={isBtnLoading['loginBtn']} type="submit"> {isBtnLoading['loginBtn'] ? t("loadingText") : t("loginButton")} </button>
+            <button
+              type="submit"
+              className={`btn ${isBtnDisabled ? 'disabled' : ''}`}
+              disabled={isBtnDisabled}
+            >
+              {isBtnLoading['loginBtn'] ? t("loadingText") : t("loginButton")}
+            </button>
             <span> {t("notMemberText")} <Link to={`/${i18next.language}/register`}>{t("registerLinkText")}</Link></span>
           </form>
           <span className='earth_icon'><FaGlobe /></span>
