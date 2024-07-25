@@ -16,6 +16,7 @@
     .content {
       @include rel();
       width: 600px;
+      max-width: 570px;
       margin: 0 auto;
       padding: 40px;
       background-color: rgba($white-color, 1);
@@ -45,9 +46,11 @@
       form {
         width: 100%;
         @include flexbox($justifyContent: center, $direction: column);
-        gap: 17px;
+        gap: 15px;
         text-align: left;
-
+        @media (max-width: 767px) {
+          gap: 12px;
+        }
         label {
           display: block;
           margin-bottom: 10px;
@@ -76,7 +79,7 @@
 
         a {
           text-decoration: none;
-          color: $medium-darkblue;
+          @include links($medium-darkblue, orangered);
           font-weight: 500;
           &:first-of-type {
             text-align: end;
@@ -87,18 +90,38 @@
           text-align: center;
         }
 
+        .group .error-msg {
+          color: red;
+          font-weight: bold;
+          margin: -8px 0;
+          text-align: start;
+          font-size: small;
+          -webkit-user-select: none;
+          user-select: none;
+        }
+
         button {
           background-color: $darkBlue-color;
           color: $white-color;
+          width: -moz-fit-content;
+          width: fit-content;
+          margin: 0 auto;
           border: none;
-          border-radius: 4px;
-          padding: 10px 20px;
+          border-radius: 30px;
+          padding: 10px 60px;
           font-size: 17px;
-          width: 100%;
           cursor: pointer;
           font-weight: bold;
           letter-spacing: 1.1px;
-
+          transition: 0.3s;
+          text-align: center;
+          &.disabled {
+            cursor: not-allowed;
+            -webkit-user-select: none;
+            user-select: none;
+            pointer-events: none;
+            background-color: rgba($medium-darkblue, 50%);
+          }
           &:hover {
             background-color: $medium-darkblue;
           }
@@ -122,15 +145,6 @@
             width: -moz-fit-content;
             width: fit-content;
           }
-          #password_error {
-            color: red;
-            font-weight: bold;
-            margin: 0;
-            text-align: start;
-            font-size: small;
-            -webkit-user-select: none;
-            user-select: none;
-          }
         }
       }
       .earth_icon {
@@ -151,19 +165,23 @@
   }
   @media (max-width: 768px) {
     & {
-      min-height: 100vh;
+      height: 100%;
+      padding: 80px 0;
+      justify-content: unset;
       .container {
         .content {
           width: 100%;
+          padding: 30px 20px;
         }
       }
     }
   }
+
   p {
     text-align: center;
     a {
       text-decoration: none;
-      color: $medium-darkblue;
+      @include links($medium-darkblue, orangered);
       font-weight: 500;
     }
   }
