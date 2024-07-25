@@ -242,6 +242,7 @@
         margin: 5px 0;
         width: -moz-fit-content;
         width: fit-content;
+        word-break: break-word;
 
         &:last-child {
           border: none;
