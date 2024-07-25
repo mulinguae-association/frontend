@@ -13,7 +13,6 @@
   "Text_and": "and ",
   "Text_Privacy_Policy": "privacy policy",
   "passwordLengthError": "Password must be at least 6 characters long.",
-  "passwordMatchError": "Passwords do not match. Please make sure the password and confirm password match.",
   "registerButton": "Register",
   "loadingText": "Loading...",
   "haveAccountText": "Already have an account?",
