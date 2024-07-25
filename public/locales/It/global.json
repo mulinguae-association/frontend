@@ -1,3 +1,18 @@
 {
-	"print": "Stampa"
+  "print": "Stampa",
+  "Error_Required_Name": "Nom obligatwar.",
+  "Error_Required_Email": "Email obligatwar.",
+  "Error_Required_Password": "Mot de pas obligatwar.",
+  "Error_Required_Confirm_Password": "Konfirmasyon mot de pas obligatwar.",
+  "Error_Strong_password": "Mot de pas pa ase for.",
+  "Error_Invalid_Email_Format": "Email pa valid.",
+  "Error_Required_Terms": "To bizin aksepte bann kondisyon.",
+  "passwordMatchError": "Mot de pas pa koresponn. Asire ki mot de pas ek konfirmasyon mot de pas koresponn.",
+  "strongPasswordRules": {
+    "uppercase": "Mot de pas bizin ena o-mwen enn let majiskil.",
+    "lowercase": "Mot de pas bizin ena o-mwen enn let miniskil.",
+    "digit": "Mot de pas bizin ena o-mwen enn sif.",
+    "specialCharacter": "Mot de pas bizin ena o-mwen enn karakter spesial.",
+    "length": "Mot de pas bizin ena o-mwen 8 karakter."
+  }
 }

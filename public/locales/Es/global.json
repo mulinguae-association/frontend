@@ -1,3 +1,18 @@
 {
-	"print": "Imprimir"
+  "print": "Imprimir",
+  "Error_Required_Name": "Se requiere el nombre.",
+  "Error_Required_Email": "Se requiere el correo electrónico.",
+  "Error_Required_Password": "Se requiere la contraseña.",
+  "Error_Required_Confirm_Password": "Se requiere confirmar la contraseña.",
+  "Error_Strong_password": "La contraseña no es fuerte.",
+  "Error_Invalid_Email_Format": "El correo electrónico no es válido.",
+  "Error_Required_Terms": "Debes aceptar los términos.",
+  "passwordMatchError": "Las contraseñas no coinciden. Por favor, asegúrate de que la contraseña y la confirmación de la contraseña coincidan.",
+  "strongPasswordRules": {
+    "uppercase": "La contraseña debe contener al menos una letra mayúscula.",
+    "lowercase": "La contraseña debe contener al menos una letra minúscula.",
+    "digit": "La contraseña debe contener al menos un dígito.",
+    "specialCharacter": "La contraseña debe contener al menos un carácter especial.",
+    "length": "La contraseña debe tener al menos 8 caracteres de longitud."
+  }
 }

@@ -1,3 +1,18 @@
 {
-	"print": "Imprimer"
+  "print": "Imprimer",
+  "Error_Required_Name": "Le nom est requis.",
+  "Error_Required_Email": "L'e-mail est requis.",
+  "Error_Required_Password": "Le mot de passe est requis.",
+  "Error_Required_Confirm_Password": "Le mot de passe de confirmation est requis.",
+  "Error_Strong_password": "Le mot de passe n'est pas assez fort.",
+  "Error_Invalid_Email_Format": "L'e-mail n'est pas valide.",
+  "Error_Required_Terms": "Vous devez accepter les conditions.",
+  "passwordMatchError": "Les mots de passe ne correspondent pas. Veuillez vous assurer que le mot de passe et sa confirmation sont identiques.",
+  "strongPasswordRules": {
+    "uppercase": "Le mot de passe doit contenir au moins une lettre majuscule.",
+    "lowercase": "Le mot de passe doit contenir au moins une lettre minuscule.",
+    "digit": "Le mot de passe doit contenir au moins un chiffre.",
+    "specialCharacter": "Le mot de passe doit contenir au moins un caractère spécial.",
+    "length": "Le mot de passe doit comporter au moins 8 caractères."
+  }
 }

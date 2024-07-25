@@ -9,7 +9,6 @@
   "passwordPlaceholder": "आपका पासवर्ड",
   "confirmPasswordPlaceholder": "पासवर्ड की पुष्टि करें",
   "passwordLengthError": "पासवर्ड कम से कम 6 वर्णों का होना चाहिए।",
-  "passwordMatchError": "पासवर्ड मेल नहीं खा रहे हैं। कृपया सुनिश्चित करें कि पासवर्ड और पासवर्ड की पुष्टि मेल खा रहे हैं।",
   "Label_Agree_To": "मैं सहमत हूँ ",
   "Text_The_Terms": "नियमों ",
   "Text_and": "और ",
@@ -17,19 +16,5 @@
   "registerButton": "रजिस्टर करें",
   "loadingText": "लोड हो रहा है...",
   "haveAccountText": "पहले से ही खाता है?",
-  "loginLinkText": "लॉग इन करें",
-  "Error_Required_Name": "नाम आवश्यक है।",
-  "Error_Required_Email": "ईमेल आवश्यक है।",
-  "Error_Required_Password": "पासवर्ड आवश्यक है।",
-  "Error_Required_Confirm_Password": "पासवर्ड की पुष्टि आवश्यक है।",
-  "Error_Strong_password": "पासवर्ड मजबूत नहीं है।",
-  "Error_Invalid_Email_Format": "ईमेल वैध नहीं है।",
-  "Error_Required_Terms": "आपको नियमों से सहमत होना होगा।",
-  "strongPasswordRules": {
-    "uppercase": "पासवर्ड में कम से कम एक बड़ा अक्षर होना चाहिए।",
-    "lowercase": "पासवर्ड में कम से कम एक छोटा अक्षर होना चाहिए।",
-    "digit": "पासवर्ड में कम से कम एक अंक होना चाहिए।",
-    "specialCharacter": "पासवर्ड में कम से कम एक विशेष वर्ण होना चाहिए।",
-    "length": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए।"
-  }
+  "loginLinkText": "लॉग इन करें"
 }

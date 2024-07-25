@@ -1,3 +1,18 @@
 {
-	"print": "طباعة"
+  "print": "طباعة",
+  "Error_Required_Name": "الاسم مطلوب.",
+  "Error_Required_Email": "البريد الإلكتروني مطلوب.",
+  "Error_Required_Password": "كلمة المرور مطلوبة.",
+  "Error_Required_Confirm_Password": "تأكيد كلمة المرور مطلوب.",
+  "Error_Strong_password": "كلمة المرور ضعيفة",
+  "Error_Invalid_Email_Format": "البريد الإلكتروني غير صالح",
+  "Error_Required_Terms": "يجب أن توافق على البنود.",
+  "passwordMatchError": "كلمات المرور غير متطابقة. يرجى التأكد من تطابق كلمة المرور وتأكيد كلمة المرور.",
+  "strongPasswordRules": {
+    "uppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.",
+    "lowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.",
+    "digit": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.",
+    "specialCharacter": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل.",
+    "length": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل."
+  }
 }

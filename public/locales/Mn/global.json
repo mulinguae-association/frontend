@@ -1,3 +1,18 @@
 {
-  "print": "打印"
+  "print": "打印",
+  "Error_Required_Name": "姓名为必填项。",
+  "Error_Required_Email": "邮箱为必填项。",
+  "Error_Required_Password": "密码为必填项。",
+  "Error_Required_Confirm_Password": "确认密码为必填项。",
+  "Error_Strong_password": "密码不够强。",
+  "Error_Invalid_Email_Format": "邮箱格式无效。",
+  "Error_Required_Terms": "您必须同意条款。",
+  "passwordMatchError": "密码不匹配。请确保密码和确认密码相符。",
+  "strongPasswordRules": {
+    "uppercase": "密码必须包含至少一个大写字母。",
+    "lowercase": "密码必须包含至少一个小写字母。",
+    "digit": "密码必须包含至少一个数字。",
+    "specialCharacter": "密码必须包含至少一个特殊字符。",
+    "length": "密码长度至少为8个字符。"
+  }
 }

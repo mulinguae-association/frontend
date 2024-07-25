@@ -8,7 +8,6 @@
   "emailPlaceholder": "بريدك الإلكتروني",
   "passwordPlaceholder": "كلمة المرور الخاصة بك",
   "confirmPasswordPlaceholder": "تأكيد كلمة المرور",
-  "passwordMatchError": "كلمات المرور غير متطابقة. يرجى التأكد من تطابق كلمة المرور وتأكيد كلمة المرور.",
   "Label_Agree_To": "أوافق على ",
   "Text_The_Terms": "البنود ",
   "Text_and": "و ",
@@ -16,19 +15,5 @@
   "registerButton": "تسجيل",
   "loadingText": "جار التحميل...",
   "haveAccountText": "هل لديك حساب بالفعل؟",
-  "loginLinkText": "تسجيل الدخول",
-  "Error_Required_Name": "الاسم مطلوب.",
-  "Error_Required_Email": "البريد الإلكتروني مطلوب.",
-  "Error_Required_Password": "كلمة المرور مطلوبة.",
-  "Error_Required_Confirm_Password": "تأكيد كلمة المرور مطلوب.",
-  "Error_Strong_password": "كلمة المرور ضعيفة",
-  "Error_Invalid_Email_Format": "البريد الإلكتروني غير صالح",
-  "Error_Required_Terms": "يجب أن توافق على البنود.",
-  "strongPasswordRules": {
-    "uppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.",
-    "lowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.",
-    "digit": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.",
-    "specialCharacter": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل.",
-    "length": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل."
-  }
+  "loginLinkText": "تسجيل الدخول"
 }

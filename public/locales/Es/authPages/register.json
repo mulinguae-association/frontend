@@ -9,7 +9,6 @@
   "passwordPlaceholder": "Tu contraseña",
   "confirmPasswordPlaceholder": "Confirmar contraseña",
   "passwordLengthError": "La contraseña debe tener al menos 6 caracteres.",
-  "passwordMatchError": "Las contraseñas no coinciden. Por favor, asegúrate de que la contraseña y la confirmación de contraseña sean iguales.",
   "registerButton": "Registro",
   "loadingText": "Cargando...",
   "haveAccountText": "¿Ya tienes una cuenta?",

@@ -9,7 +9,6 @@
   "passwordPlaceholder": "آپ کا پاس ورڈ",
   "confirmPasswordPlaceholder": "پاس ورڈ کی تصدیق کریں",
   "passwordLengthError": "پاس ورڈ کم از کم 6 حروف کا ہونا ضروری ہے۔",
-  "passwordMatchError": "پاس ورڈ میچ نہیں ہوتے۔ براہ کرم یقینی بنائیں کہ پاس ورڈ اور تصدیقی پاس ورڈ میچ ہوں۔",
   "Label_Agree_To": "میں متفق ہوں ",
   "Text_The_Terms": "شرائط ",
   "Text_and": "اور ",
@@ -17,19 +16,5 @@
   "registerButton": "رجسٹر کریں",
   "loadingText": "لوڈ ہو رہا ہے...",
   "haveAccountText": "پہلے ہی اکاونٹ ہے؟",
-  "loginLinkText": "لاگ ان",
-  "Error_Required_Name": "نام ضروری ہے۔",
-  "Error_Required_Email": "ای میل ضروری ہے۔",
-  "Error_Required_Password": "پاس ورڈ ضروری ہے۔",
-  "Error_Required_Confirm_Password": "پاس ورڈ کی تصدیق ضروری ہے۔",
-  "Error_Strong_password": "پاس ورڈ مضبوط نہیں ہے",
-  "Error_Invalid_Email_Format": "ای میل درست نہیں ہے",
-  "Error_Required_Terms": "آپ کو شرائط پر متفق ہونا لازمی ہے۔",
-  "strongPasswordRules": {
-    "uppercase": "پاس ورڈ میں کم از کم ایک بڑی حروف تہجی ہونی چاہئے۔",
-    "lowercase": "پاس ورڈ میں کم از کم ایک چھوٹی حروف تہجی ہونی چاہئے۔",
-    "digit": "پاس ورڈ میں کم از کم ایک ہندسہ ہونا چاہئے۔",
-    "specialCharacter": "پاس ورڈ میں کم از کم ایک خاص حرف ہونا چاہئے۔",
-    "length": "پاس ورڈ کم از کم 8 حروف کا ہونا چاہئے۔"
-  }
+  "loginLinkText": "لاگ ان"
 }
