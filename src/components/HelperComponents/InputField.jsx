@@ -8,14 +8,17 @@ const InputField = ({
   onChange,
   className,
   name,
+  id,
   onClick,
   required = false,
+  autoComplete = "on",
 }) => (
   <div className="input_field">
-    <label className="visually-hidden" aria-hidden="true">
+    <label htmlFor={name} className="visually-hidden" aria-hidden="true">
       {label}
     </label>
     <input
+      id={id}
       type={type}
       name={name}
       placeholder={placeholder}
@@ -24,6 +27,7 @@ const InputField = ({
       className={className}
       onClick={onClick}
       required={required}
+      autoComplete={autoComplete}
     />
   </div>
 );
