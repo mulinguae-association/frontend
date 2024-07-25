@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import "./AuthStyle.scss";
 import { submitRegister } from '../../utils/auth-api';
 import { notifyError, notifySuccess } from '../Notify';
 import { useNavigate } from 'react-router';
@@ -11,27 +12,64 @@ import { useTranslation } from "react-i18next";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { isVAlidEmail, isStrongPassword } from "../../utils/strongChecker";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useAuth } from '../../contexts/AuthContext';
 
 function Registration() {
   const { t } = useTranslation("authPages/register");
+  const { t: global } = useTranslation("global");
+  const { userData } = useAuth();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
     confirmPassword: '',
-    profileImage: '',
     terms: false,
   });
   const { isBtnLoading, setButtonLoading } = useGlobal();
+  const [errors, setErrors] = useState({
+    email: '',
+    password: '',
+  });
   const [visible, setVisible] = useState(false);
-  const [passwordError, setPassError] = useState('');
-  const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
-  const [load, setLoad] = useState(false);
   const recaptchaRef = useRef(null);
-  const DELAY = 1500;
 
   const isArabicDir = ["Ar", "Ur"].includes(i18next.language);
+
+  useEffect(() => {
+    if (userData) {
+      navigate(`/${i18next.language}/pages/Blogs`);
+    }
+  }, [userData, navigate]);
+
+  useEffect(() => {
+    return () => {
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+    };
+  }, []);
+
+  const validateEmail = (email) => {
+    if (!isVAlidEmail(email)) {
+      setErrors((prev) => ({ ...prev, email: global("Error_Invalid_Email_Format") }));
+      return false;
+    } else {
+      setErrors((prev) => ({ ...prev, email: '' }));
+      return true;
+    }
+  };
+
+  const validatePassword = (password) => {
+    const errMessage = isStrongPassword(password, global);
+    if (errMessage) {
+      setErrors((prev) => ({ ...prev, password: errMessage }));
+      return false;
+    } else {
+      setErrors((prev) => ({ ...prev, password: '' }));
+      return true;
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -39,75 +77,55 @@ function Registration() {
       ...formData,
       [name]: type === 'checkbox' ? checked : value,
     });
-    if (name === "password") {
-      if (value.length === 0 || isStrongPassword(value, t) === "") {
-        setPassError("");
-        return;
-      }
-    }
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoad(true);
-    }, DELAY);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const asyncScriptOnLoad = () => {
-    setRecaptchaLoaded(true);
+    if (name === "email") validateEmail(value);
+    if (name === "password") validatePassword(value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if any required field is empty
-    if (!formData.name) return notifyError(t("Error_Required_Name"));
-    if (!formData.email) return notifyError(t("Error_Required_Email"));
-    if (!isVAlidEmail(formData.email)) return notifyError(t("Error_Invalid_Email_Format"))
-    if (!formData.password) return notifyError(t("Error_Required_Password"));
-    if (!formData.confirmPassword) return notifyError(t("Error_Required_Confirm_Password"));
-    if (!formData.terms) return notifyError(t("Error_Required_Terms"));
-    if (formData.password !== formData.confirmPassword) {
-      notifyError(t("passwordMatchError"))
-      return;
-    }
+    if (!formData.name) return notifyError(global("Error_Required_Name"));
+    if (!formData.email) return notifyError(global("Error_Required_Email"));
+    if (!validateEmail(formData.email)) return;
+    if (!formData.password) return notifyError(global("Error_Required_Password"));
+    if (!formData.confirmPassword) return notifyError(global("Error_Required_Confirm_Password"));
+    if (!formData.terms) return notifyError(global("Error_Required_Terms"));
+    if (formData.password !== formData.confirmPassword) return notifyError(global("passwordMatchError"));
+    if (!validatePassword(formData.password)) return;
 
-    const errMessage = isStrongPassword(formData.password, t);
-    if (errMessage) {
-      setPassError(errMessage);
-      notifyError(t("Error_Strong_password"))
-      return;
-    }
-
-    const token = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
     try {
       setButtonLoading("registerBtn", true);
+      const token = await recaptchaRef.current.executeAsync();
       const res = await submitRegister({ ...formData, token });
       if (res.error) {
         notifyError(res.error);
-      } else {
-        setFormData({
-          name: '',
-          email: '',
-          password: '',
-          confirmPassword: '',
-          profileImage: '',
-          terms: false
-        });
-        notifySuccess(res.message + " " + formData.name);
-        navigate(`/${i18next.language}/login`);
+        return;
       }
+      console.log(res);
+      setFormData({
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+        terms: false
+      });
+      notifySuccess(res.message + " " + formData.name);
+      navigate(`/${i18next.language}/login`);
     } catch (error) {
       notifyError(error.message);
-      setButtonLoading("registerBtn", false);
-      console.log(error);
     } finally {
       setButtonLoading("registerBtn", false);
     }
   };
+
+  const isBtnDisabled = !formData.name
+    || !formData.email
+    || !formData.password
+    || !formData.confirmPassword
+    || !formData.terms
+    || errors.email
+    || errors.password
+    || isBtnLoading['registerBtn']
 
   return (
     <main className='auth_form'>
@@ -118,6 +136,7 @@ function Registration() {
             <div className='group'>
               <InputField
                 label={t("nameLabel")}
+                id="name"
                 type="text"
                 name="name"
                 value={formData.name}
@@ -129,18 +148,23 @@ function Registration() {
             <div className='group'>
               <InputField
                 label={t("emailLabel")}
+                id="email"
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder={t("emailPlaceholder")}
               />
+              {errors.email && (
+                <p className='error-msg'>{errors.email}</p>
+              )}
             </div>
 
             <div className='group'>
               <InputField
                 label={t("passwordLabel")}
                 type={visible ? "text" : "password"}
+                id="password"
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
@@ -152,21 +176,21 @@ function Registration() {
               <InputField
                 label={t("confirmPasswordLabel")}
                 type={visible ? "text" : "password"}
+                id="confirmPassword"
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleInputChange}
                 placeholder={t("confirmPasswordPlaceholder")}
               />
-              <div style={isArabicDir
-                ? { left: '15px', right: "unset" }
-                : { right: '15px', left: "unset" }}
+              <div
+                style={isArabicDir ? { left: '15px', right: "unset" } : { right: '15px', left: "unset" }}
                 id="password_eye"
-                onClick={() => setVisible((prev) => !prev)}>
-                {visible ? <IoEyeOutline /> :
-                  <IoEyeOffOutline />}
+                onClick={() => setVisible((prev) => !prev)}
+              >
+                {visible ? <IoEyeOutline /> : <IoEyeOffOutline />}
               </div>
-              {passwordError && passwordError.length > 0 && (
-                <p id="password_error">{passwordError}</p>
+              {errors.password && (
+                <p className='error-msg'>{errors.password}</p>
               )}
             </div>
 
@@ -185,23 +209,26 @@ function Registration() {
                 <Link to={`/${i18next.language}/privacy-policy`}>{t("Text_Privacy_Policy")}</Link>
               </label>
             </div>
-            {load && (
-              <ReCAPTCHA
-                sitekey={process.env.REACT_APP_PUBLIC_RECAPTCHA_SITE_KEY}
-                size="invisible"
-                asyncScriptOnLoad={asyncScriptOnLoad}
-                ref={recaptchaRef}
-              />)}
-            <button disabled={isBtnLoading['registerBtn'] || !recaptchaLoaded} type="submit">{isBtnLoading['registerBtn'] ? t("loadingText") : t("registerButton")}</button>
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_PUBLIC_RECAPTCHA_SITE_KEY}
+              size="invisible"
+              ref={recaptchaRef}
+            />
+            <button
+              className={`btn ${isBtnDisabled ? "disabled" : ""}`}
+              disabled={isBtnDisabled}
+              type="submit"
+            >
+              {isBtnLoading['registerBtn'] ? t("loadingText") : t("registerButton")}
+            </button>
             <span> {t("haveAccountText")} <Link to={`/${i18next.language}/login`}>{t("loginLinkText")}</Link></span>
-
           </form>
           <span className='earth_icon'><FaGlobe /></span>
           <div className='shape three'></div>
           <div className='shape four'></div>
         </div>
-      </div >
-    </main >
+      </div>
+    </main>
   );
 }
 
