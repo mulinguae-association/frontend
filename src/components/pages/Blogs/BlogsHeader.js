@@ -8,7 +8,7 @@ import UserMenu from './UserMenu';
 import i18next from 'i18next';
 
 const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) => {
-  const { userData, isAuth, setIsAuth } = useAuth();
+  const { userData, setUserData, isAuth, setIsAuth } = useAuth();
   const [showUserMenu, setShowMenuUser] = useState(false);
   const handleLogout = async () => {
     try {
@@ -16,6 +16,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
       notifySuccess(res.data);
       // Update the authentication status to reflect the logout.
       setIsAuth(false);
+      setUserData(null)
     } catch (err) {
       console.log(err)
     }
@@ -29,6 +30,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
           <input
             className="search bgSC"
             type="search"
+            id='search-input-lgS'
             placeholder="Search by title or user name"
             value={searchQuery}
             onChange={handleSearchChange}
@@ -37,7 +39,16 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
         </div>
         {isAuth ? (
           <div className='user_info'>
-            <img src={userData.profileImage ? userData.profileImage : '/images/fallBackUser.png'} alt='user_image' onError={(e) => e.target.src = "/images/fallBackUser.png"} />
+            <div className="img_container">
+              <img
+                width="150px"
+                height="150px"
+                src={userData.profileImage ? userData.profileImage : '/images/fallBackUser.png'}
+                alt='user_image' onError={(e) => e.target.src = "/images/fallBackUser.png"}
+                loading='lazy'
+              />
+
+            </div>
             <div onClick={() => (setShowMenuUser((prev) => !prev))} className='text_info'>
               <h2>{userData.name}</h2>
               <span><IoMdArrowDropdown size={20} /></span>
@@ -55,6 +66,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
         <input
           className="search smSC"
           type="search"
+          id='search-input-smS'
           placeholder="Search by title or user name"
           value={searchQuery}
           onChange={handleSearchChange}
