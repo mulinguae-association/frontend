@@ -1,34 +1,33 @@
 @import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/about";
 .section {
   .page_title {
-    font-size: -webkit-calc(1.325rem + 0.9vw);
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     color: $darkBlue-color;
   }
   padding: 50px 0;
   .head {
-    font-size: -webkit-calc(1.325rem + 0.9vw);
-    font-size: calc(1.225rem + 0.9vw);
+    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     color: $primaryDark-color;
-    max-width: 90%;
+    max-width: 80%;
+    margin-left: 4rem;
+    @media (max-width: 991px) {
+      margin-left: 0;
+    }
     @media (max-width: 768px) {
       max-width: 100%;
     }
   }
   .about {
-    font-size: 17px;
-    color: $darkgray-color;
-    font-weight: 500;
-    letter-spacing: 0.9px;
-    text-transform: none;
-    line-height: 1.7;
-    word-break: break-word;
-    margin-top: 0;
+    @include about(null, 30px);
+    border: 1px solid rgba($primaryDark-color, 0.2);
   }
   span,
   p {
     .link {
-      color: $third-color;
+      color: $primaryDark-color;
       word-wrap: break-word;
       font-weight: 500;
       display: inline;
@@ -43,11 +42,15 @@
   }
   .warning {
     text-align: center;
-    margin-top: 4rem;
-    padding: 5px;
-    color: #ff9b75;
-    background-color: $darkBlue-color;
-    box-shadow: 0 0 10px #000;
+    margin: 4rem auto 0;
+    padding: 10px;
+    color: white;
+    background-color: #0b127e;
+    border-radius: 12px;
+    max-width: 750px;
+    text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 15px rgba(11, 18, 126, 0.3);
+    border-top: 1px solid orangered;
   }
   .text-bold {
     font-weight: bold;
