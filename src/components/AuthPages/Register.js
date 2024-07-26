@@ -42,14 +42,6 @@ function Registration() {
     }
   }, [userData, navigate]);
 
-  useEffect(() => {
-    return () => {
-      if (recaptchaRef.current) {
-        recaptchaRef.current.reset();
-      }
-    };
-  }, []);
-
   const validateEmail = (email) => {
     if (!isVAlidEmail(email)) {
       setErrors((prev) => ({ ...prev, email: global("Error_Invalid_Email_Format") }));
@@ -95,22 +87,28 @@ function Registration() {
 
     try {
       setButtonLoading("registerBtn", true);
+      recaptchaRef.current.reset();
       const token = await recaptchaRef.current.executeAsync();
-      const res = await submitRegister({ ...formData, token });
-      if (res.error) {
-        notifyError(res.error);
-        return;
+
+      if (token) {
+        const res = await submitRegister({ ...formData, token });
+        if (res.error) {
+          notifyError(res.error);
+          return;
+        }
+        console.log(res);
+        setFormData({
+          name: '',
+          email: '',
+          password: '',
+          confirmPassword: '',
+          terms: false
+        });
+        notifySuccess(res.message + " " + formData.name);
+        navigate(`/${i18next.language}/login`);
+      } else {
+        notifyError(global("Error_Recaptcha"));
       }
-      console.log(res);
-      setFormData({
-        name: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        terms: false
-      });
-      notifySuccess(res.message + " " + formData.name);
-      navigate(`/${i18next.language}/login`);
     } catch (error) {
       notifyError(error.message);
     } finally {
