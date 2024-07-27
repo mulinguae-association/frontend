@@ -56,6 +56,7 @@ const CommentForm = ({ blogId, setComments }) => {
     <>
       <form onSubmit={handleCommentSubmit} className='comment-form'>
         <textarea
+          id="comment-input"
           placeholder='Write your comment'
           value={comment}
           rows='4'
