@@ -41,6 +41,8 @@ const Comment = ({
       ) : (
         <div className="parent_comment">
           <img
+            width="40px"
+            height="40px"
             src={
               comment.postedBy?.profileImage
                 ? comment.postedBy?.profileImage
@@ -50,6 +52,7 @@ const Comment = ({
             onError={(e) => {
               e.target.src = '/images/fallBackUser.png';
             }}
+            loading='lazy'
           />
           <p className='comment_content'>{comment?.content}</p>
           <InteractionComponent modelType='comment' reply={comment} updateLike={updateLike} />

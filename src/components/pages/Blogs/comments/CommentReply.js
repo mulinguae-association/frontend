@@ -18,13 +18,18 @@ const CommentReply = ({
   const { userData, isAuth } = useAuth();
   return (
     <div className='nested_comments_container'>
-      <img
-        src={comment.postedBy?.profileImage || "/images/fallBackUser.png"}
-        alt='personal avatar'
-        onError={(e) => {
-          e.target.src = "/images/fallBackUser.png";
-        }}
-      />
+      <div className='img_container'>
+        <img
+          width="35px"
+          height="35px"
+          src={comment.postedBy?.profileImage || "/images/fallBackUser.png"}
+          alt='personal avatar'
+          onError={(e) => {
+            e.target.src = "/images/fallBackUser.png";
+          }}
+          loading='lazy'
+        />
+      </div>
       <div
         style={
           isEditComment && editCommentId._id === comment._id
