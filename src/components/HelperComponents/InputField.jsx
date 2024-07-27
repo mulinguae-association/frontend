@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../Dashboard/Dashboard.scss";
 const InputField = ({
   label,
@@ -12,6 +12,7 @@ const InputField = ({
   onClick,
   required = false,
   autoComplete = "on",
+  searchQuery,
   ...props
 }) => (
   <div className="input_field">
@@ -29,8 +30,10 @@ const InputField = ({
       onClick={onClick}
       required={required}
       autoComplete={autoComplete}
+      ref={searchQuery}
       {...props}
     />
   </div>
 );
+
 export default InputField;

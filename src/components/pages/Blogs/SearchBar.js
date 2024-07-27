@@ -11,7 +11,7 @@ const SearchBar = (props) => {
       type="search"
       placeholder="Search by title or user name & click Enter"
       onChange={props.handleSearchChange}
-      ref={props.searchQuery}
+      searchQuery={props.searchQuery}
       onKeyDown={props.onKeyDown}
     />
   );
