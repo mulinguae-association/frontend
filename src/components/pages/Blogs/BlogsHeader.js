@@ -6,6 +6,7 @@ import { notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
 import UserMenu from './UserMenu';
 import i18next from 'i18next';
+import SearchBar from './SearchBar';
 
 const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) => {
   const { userData, setUserData, isAuth, setIsAuth } = useAuth();
@@ -27,14 +28,12 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
       <div className="links button-font">
         <Link to={`/${i18next.language}/pages/Blogs/Create-new-blog`}>+ Create A Blog</Link>
         <div>
-          <input
-            className="search bgSC"
-            type="search"
-            id='search-input-lgS'
-            placeholder="Search by title or user name & Enter"
-            value={searchQuery}
-            onChange={handleSearchChange}
-            onKeyPress={handleSearchKeyPress}
+          <SearchBar
+            className={"bgSC"}
+            id="search-input-bigSC"
+            searchQuery={searchQuery}
+            handleSearchChange={handleSearchChange}
+            onKeyDown={handleSearchKeyPress}
           />
         </div>
         {isAuth ? (
@@ -63,14 +62,12 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
         }
       </div>
       <div>
-        <input
-          className="search smSC"
-          type="search"
-          id='search-input-smS'
-          placeholder="Search by title or user name & Enter"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          onKeyPress={handleSearchKeyPress}
+        <SearchBar
+          className={"smSC"}
+          id="search-input-smallSC"
+          searchQuery={searchQuery}
+          handleSearchChange={handleSearchChange}
+          onKeyDown={handleSearchKeyPress}
         />
       </div>
     </>
