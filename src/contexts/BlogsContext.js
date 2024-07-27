@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { fetchAcceptedPosts } from '../utils/blog-api';
 
 const BlogPostsContext = createContext();
@@ -9,7 +9,7 @@ export const BlogPostsProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [allPostsLoaded, setAllPostsLoaded] = useState(false);
   const [errorDisplayPosts, setErrorDisplayPosts] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const searchQuery = useRef("");
   const [postsToDisplay, setPostsToDisplay] = useState(1);
 
   const fetchAcceptedData = async (postsToDisplay) => {
@@ -35,9 +35,9 @@ export const BlogPostsProvider = ({ children }) => {
     acceptedPosts,
     loading,
     allPostsLoaded,
+    setAllPostsLoaded,
     errorDisplayPosts,
     searchQuery,
-    setSearchQuery,
     postsToDisplay,
     setPostsToDisplay,
     setLoading,
@@ -45,7 +45,6 @@ export const BlogPostsProvider = ({ children }) => {
     fetchAcceptedData
   }
 
-  // console.log(acceptedPosts)
   useEffect(() => {
     fetchAcceptedData(postsToDisplay);
   }, [postsToDisplay]);
