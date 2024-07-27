@@ -9,7 +9,6 @@ const UserMenu = ({ handleLogout, setShowMenuUser }) => {
   const userMenu = useClickOutside(() => {
     setShowMenuUser(null)
   })
-  console.log(userData)
   return (
     <div ref={userMenu} className='user_menu'>
       {(isAuth && userData.role === "admin") &&

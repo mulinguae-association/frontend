@@ -1,15 +1,18 @@
 import React from 'react';
 import InputField from '../../HelperComponents/InputField'; // Import your InputField component
 
-const SearchBar = ({ searchQuery, handleSearchChange }) => {
+const SearchBar = (props) => {
   return (
     <InputField
-      // className="search smSC"
+      className={`search ${props.className}`}
       label="Search by title or user name"
-      type="text"
-      placeholder="Search by title or user name"
-      value={searchQuery}
-      onChange={handleSearchChange}
+      id={props.id}
+      name={props.id}
+      type="search"
+      placeholder="Search by title or user name & click Enter"
+      onChange={props.handleSearchChange}
+      ref={props.searchQuery}
+      onKeyDown={props.onKeyDown}
     />
   );
 };
