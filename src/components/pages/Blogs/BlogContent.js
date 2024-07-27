@@ -5,13 +5,18 @@ const BlogContent = ({ blog, setShowFullContent }) => {
   return (
     <section className="blog_content">
       <div className="blog_user">
-        <img
-          src={blog.postedBy?.profileImage ? blog.postedBy?.profileImage : "/images/fallBackUser.png"}
-          alt="user"
-          onError={(e) => {
-            e.target.src = '/images/fallBackUser.png';
-          }}
-        />
+        <div className='img_container'>
+          <img
+            width="100px"
+            height="100px"
+            src={blog.postedBy?.profileImage ? blog.postedBy?.profileImage : "/images/fallBackUser.png"}
+            alt="user"
+            onError={(e) => {
+              e.target.src = '/images/fallBackUser.png';
+            }}
+            loading='lazy'
+          />
+        </div>
         <span className='author_name'>{blog.postedBy?.name}</span>
       </div>
       <p>

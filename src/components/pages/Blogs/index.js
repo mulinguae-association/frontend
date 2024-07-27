@@ -28,7 +28,6 @@ const Blogs = () => {
     try {
       setLoading(true);
       searchBlogPosts(query).then((response) => {
-        console.log(response);
         if (response.status === 200) {
           setAcceptedPosts(response.data);
           setAllPostsLoaded(true)
