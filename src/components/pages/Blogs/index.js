@@ -16,21 +16,22 @@ const Blogs = () => {
     setLoading,
     setAcceptedPosts,
     allPostsLoaded,
+    setAllPostsLoaded,
     errorDisplayPosts,
     searchQuery,
-    setSearchQuery,
     setPostsToDisplay,
   } = useBlogPosts(); // Use the context hook
 
   const footerRef = useRef();
 
-  const debouncedSearch = debounce(async (query) => {
+  const debouncedSearch = async (query) => {
     try {
       setLoading(true);
       searchBlogPosts(query).then((response) => {
         console.log(response);
         if (response.status === 200) {
           setAcceptedPosts(response.data);
+          setAllPostsLoaded(true)
         } else {
           console.error("Error searching blog posts");
         }
@@ -40,16 +41,16 @@ const Blogs = () => {
     } finally {
       setLoading(false);
     }
-  }, 200);
+  };
 
   const handleSearchChange = (event) => {
     const query = event.target.value;
-    setSearchQuery(query);
+    searchQuery.current = query;
   };
 
   const handleSearchKeyPress = (event) => {
     if (event.key === "Enter") {
-      debouncedSearch(searchQuery);
+      debouncedSearch(searchQuery.current);
     }
   };
 
