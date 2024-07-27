@@ -1,4 +1,5 @@
 // EllipsisMenu.scss
+@import "../../../globalStyles/colors";
 @import "../../../globalStyles/mixins/mixins.scss";
 .menu-container {
   @include rel();
@@ -15,12 +16,14 @@
     font-size: 18px; // Adjust the size as needed
     line-height: 1;
     font-weight: 500;
+    color: $white-color;
   }
 
   .menu-options {
     @include abs(20px 0 0 0);
     width: 150px;
-    background-color: #bae6ff;
+    background-color: $primaryDark-color;
+    color: $white-color;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     list-style: none;
     border-radius: 8px;
@@ -33,13 +36,15 @@
       border-radius: 10px;
 
       &:hover {
-        background-color: #f0f0f0af;
+        background-color: rgba($white-color, 0.2);
+        border-radius: 8px 8px 0 0;
       }
     }
     &::after {
       @include pseudo(block, absolute, "", 0, 0, -20px 8px 0 0);
       border-width: 10px 1px 31px 30px;
-      border-color: transparent transparent #bae6ff transparent;
+      border-color: transparent transparent $primaryDark-color;
+      color: transparent;
       border-style: solid;
       z-index: -1;
     }
