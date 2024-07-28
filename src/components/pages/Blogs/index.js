@@ -1,11 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { searchBlogPosts } from "../../../utils/blog-api";
 import debounce from "lodash/debounce";
 import BlogsHeader from "./BlogsHeader";
 import BlogList from "./BlogList";
 import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
 import "./Blogs.scss";
-import { useRef } from "react";
 import Footer from "../../FooterPages";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
 
@@ -20,21 +19,37 @@ const Blogs = () => {
     errorDisplayPosts,
     searchQuery,
     setPostsToDisplay,
+    fetchAcceptedData
   } = useBlogPosts(); // Use the context hook
+  const [fetchedFirstBlog, setFetchedFirstBlog] = useState(false);
+  const [previousQuery, setPreviousQuery] = useState('');
 
   const footerRef = useRef();
-
   const debouncedSearch = async (query) => {
     try {
-      setLoading(true);
-      searchBlogPosts(query).then((response) => {
+      // Check if the current search query is the same as the previous one
+      if (query === previousQuery) {
+        return;
+      } else if (query?.value === "" || query.trim() === "") {
+        if (!fetchedFirstBlog) {
+          fetchAcceptedData(1);
+          setFetchedFirstBlog(true)
+          setPreviousQuery(query);
+          return;
+        }
+        return;
+      }
+      searchBlogPosts(query.trim()).then((response) => {
         if (response.status === 200) {
           setAcceptedPosts(response.data);
           setAllPostsLoaded(true)
+          setPreviousQuery(query);
+          setFetchedFirstBlog(false);
         } else {
           console.error("Error searching blog posts");
         }
       });
+
     } catch (error) {
       console.error("Error searching blog posts:", error);
     } finally {
@@ -43,12 +58,12 @@ const Blogs = () => {
   };
 
   const handleSearchChange = (event) => {
-    const query = event.target.value;
+    const query = event.target.value.trim();
     searchQuery.current = query;
   };
 
   const handleSearchKeyPress = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && searchQuery.current.length !== "") {
       debouncedSearch(searchQuery.current);
     }
   };
@@ -65,7 +80,7 @@ const Blogs = () => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4, // specify position of the element
+      threshold: 0.4 // specify position of the element
     };
 
     const observer = new IntersectionObserver(handleScrollToFooter, options);
