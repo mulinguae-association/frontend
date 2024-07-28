@@ -14,7 +14,7 @@ const Comment = ({
   updateCommentLocally,
   updateLike,
   isEditComment,
-  setIsEditComment,
+  setIsEditComment
 }) => {
   const { userData, isAuth } = useAuth();
   const [isExpanded, setIsExpanded] = useState(false);
