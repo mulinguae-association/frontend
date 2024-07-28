@@ -57,6 +57,7 @@
       @include rel();
       cursor: pointer;
       padding: 4px 0px;
+      margin: 10px;
       &::after {
         @include pseudo(block, absolute, "", 50%, 1px, 0 0 0px 0px);
         border-bottom: 2px solid $medium-darkblue;
