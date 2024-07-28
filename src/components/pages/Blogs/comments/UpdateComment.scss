@@ -21,7 +21,6 @@
     outline: none;
     padding: 10px 0;
     line-height: 1.5;
-    // overflow: auto; /* Hide the scroll bar */
     resize: none; /* Disable user resizing */
     background: none;
     height: 100%;
@@ -38,7 +37,10 @@
     button {
       background: none;
       border: none;
-      color: $third-color;
+      color: $white-color;
+      &:hover {
+        color: $secondary-color;
+      }
       cursor: pointer;
     }
   }
