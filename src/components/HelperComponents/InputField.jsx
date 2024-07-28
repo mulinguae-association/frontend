@@ -1,5 +1,4 @@
-import React, { forwardRef } from "react";
-import "../Dashboard/Dashboard.scss";
+import React from "react";
 const InputField = ({
   label,
   type,
