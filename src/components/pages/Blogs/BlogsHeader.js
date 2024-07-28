@@ -27,7 +27,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
     <>
       <div className="links button-font">
         <Link to={`/${i18next.language}/pages/Blogs/Create-new-blog`}>+ Create A Blog</Link>
-        <div>
+        <div className='search_bar_container'>
           <SearchBar
             className={"bgSC"}
             id="search-input-bigSC"
@@ -61,7 +61,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
           </div>
         }
       </div>
-      <div>
+      <div className='search_bar_container'>
         <SearchBar
           className={"smSC"}
           id="search-input-smallSC"
