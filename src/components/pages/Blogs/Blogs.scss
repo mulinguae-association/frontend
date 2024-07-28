@@ -32,7 +32,6 @@
 
   .links {
     @include flexbox($alignItems: center, $justifyContent: space-between);
-    width: 100%;
 
     a {
       all: unset;
@@ -316,7 +315,6 @@
       color: $primaryDark-color;
     }
     .input_field {
-      width: 50%;
       input {
         width: 100%;
         border: 1px solid #ccc;

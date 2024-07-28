@@ -2,8 +2,13 @@
 @import "../../../../globalStyles/colors";
 @import "../../../../globalStyles/mixins/mixins.scss";
 .comment {
-  background-color: rgba($darkBlue-color, 0.1);
-  border-radius: 4px;
+  background-color: rgba($darkBlue-color, 1);
+  background: linear-gradient(
+    180deg,
+    $primaryDark-color,
+    rgba($darkBlue-color, 100%)
+  );
+  border-radius: 6px;
   padding: 10px 12px;
   padding-bottom: 0;
   margin: 20px 0;
@@ -16,16 +21,23 @@
   }
   .comment_head {
     @include flexbox($alignItems: center, $justifyContent: space-between);
-    color: darkblue;
+    gap: 2px;
+    color: $white-color;
     margin-bottom: 0;
-    // color: $white-color;
+    .comment_author_container {
+      @include flexbox($alignItems: center);
+      gap: 2px;
+      img {
+        border-radius: 50%;
+      }
+    }
     .comment_date {
       font-size: 12px;
       color: #000;
       letter-spacing: 2px;
       font-weight: bold;
       margin-top: 0;
-      color: darkgreen;
+      color: $secondary-color;
     }
   }
   .parent_comment {
@@ -42,7 +54,10 @@
       width: 100%;
     }
   }
-  .comment_content {
+  .comment_content_container {
+    @include flexbox($alignItems: center);
+    gap: 10px;
+    padding-bottom: 50px;
     border-left: 2px solid orangered;
     padding: 10px;
     border-radius: 4px;
@@ -54,31 +69,70 @@
     background-color: $white-color;
     filter: blur(0);
   }
+  .comment_content {
+    margin-top: 0;
+    word-break: break-word;
+    &.truncated {
+      display: -webkit-box;
+      -webkit-line-clamp: 4; /* Limit to 3 lines */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.expanded {
+      display: block; /* Show full content */
+    }
+  }
+
+  .read-more-button {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-decoration: underline;
+  }
   .nested_comments_container {
     @include flexbox();
     gap: 10px;
     padding-top: 0;
     margin-bottom: 8px;
-    padding: 10px 0 10px 20px;
-    .img_container {
-      width: 35px;
-      height: 35px;
-      img {
-        height: 100%;
-        border-radius: 50%;
+    padding: 10px 0 20px 20px;
+    @media (max-width: 480px) {
+      & {
+        padding: 10px 0 10px 8px;
+      }
+    }
+    .comment_author_container {
+      @include flexbox($alignItems: center);
+      .img_container {
+        width: 30px;
+        height: 30px;
+        background: $white-color;
+        border-radius: 30px;
+        flex-shrink: 0;
+        img {
+          height: 100%;
+          border-radius: 50%;
+        }
       }
     }
     .nested_comments {
       width: -moz-fit-content;
       width: fit-content;
       border-radius: 0 15px;
-      border-left: 2px solid $primaryDark-color;
-      margin: 8px 0;
-      padding: 10px 15px;
+      border-left: 3px solid $primary-color;
+      padding: 10px;
       background: $white-color;
       @include rel();
       min-width: 155px;
       line-height: 1.5;
+      .menu-container .menu-icon {
+        color: #000;
+      }
       span {
         font-size: 10px;
         font-weight: bold;
@@ -87,9 +141,9 @@
       & > span {
         color: darkgreen;
       }
-      @media (max-width: 360px) {
+      @media (max-width: 480px) {
         & {
-          min-width: 0;
+          // min-width: 0;
           width: 100%;
         }
       }
@@ -99,6 +153,7 @@
   .replies {
     margin: 20px 0 25px 10px;
     @include flexbox($direction: column);
+    gap: 8px;
   }
   .comment_author {
     font-size: 12px;
@@ -110,37 +165,56 @@
   .reply_form {
     @include flexbox();
     @include rel();
-    margin-top: 30px;
+    margin-top: 40px;
     right: 12px;
     textarea {
       border-right: 0px;
       width: 300px;
       height: 40px;
+      min-height: 40px;
+      min-width: 250px;
+      max-height: 300px;
       padding: 8px;
-      border-radius: 4px 0 0 4px;
       border: none;
+      @media (max-width: 480px) {
+        min-width: 200px;
+      }
       &:focus {
         outline: none;
-        border: 2px solid orangered;
+        border: 2px solid $secondary-color;
         border-right: 0;
         border-left: 0;
         border-bottom: 0;
         filter: none;
+        + button {
+          border-color: $secondary-color;
+        }
       }
     }
     button {
       border: none;
-      background: darkblue;
+      background-color: darkblue;
       color: $white-color;
+      border: solid white;
+      border-width: 2px 2px 0 0;
+      border-radius: 0 10px 0 0;
       font-weight: bold;
       cursor: pointer;
       padding: 10px 15px;
       letter-spacing: 0.5px;
+      &:hover {
+        background-color: rgba($primaryDark-color, 0.8);
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    & {
+      margin: 0;
     }
   }
   @media (max-width: 360px) {
     & {
-      padding: 10px 8px;
+      padding: 10px 8px 0;
     }
   }
 }
