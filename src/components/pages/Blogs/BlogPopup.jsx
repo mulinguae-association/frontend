@@ -32,8 +32,10 @@ const BlogPopup = ({
       {showAllComments && (
         <div className="popup_content">
           <div className="comments_header">
-            <span className="special">{blog?.title}</span>
-            <h1 className="comment_title">Comments</h1>
+            <h1 className="comment_title">
+              <span className="special">{blog?.title} </span>
+              Comments
+            </h1>
           </div>
           {comments.map((comment) =>
             comment?.status === "accepted" ? (
