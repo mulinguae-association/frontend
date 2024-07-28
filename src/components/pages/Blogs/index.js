@@ -30,7 +30,7 @@ const Blogs = () => {
       // Check if the current search query is the same as the previous one
       if (query === previousQuery) {
         return;
-      } else if (query?.value === "" || query.trim() === "") {
+      } else if (query?.value === "" || query === "") {
         if (!fetchedFirstBlog) {
           fetchAcceptedData(1);
           setFetchedFirstBlog(true)
@@ -39,7 +39,7 @@ const Blogs = () => {
         }
         return;
       }
-      searchBlogPosts(query.trim()).then((response) => {
+      searchBlogPosts(query).then((response) => {
         if (response.status === 200) {
           setAcceptedPosts(response.data);
           setAllPostsLoaded(true)
@@ -63,7 +63,7 @@ const Blogs = () => {
   };
 
   const handleSearchKeyPress = (event) => {
-    if (event.key === "Enter" && searchQuery.current.length !== "") {
+    if (event.key === "Enter") {
       debouncedSearch(searchQuery.current);
     }
   };
