@@ -23,6 +23,10 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
 
   const handleUpdateComment = async (e) => {
     e.preventDefault()
+    if (value === initialValue) {
+      notifyError("No changes were made!")
+      return;
+    }
     const requestedBody = {
       content: value
     }
@@ -37,7 +41,7 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
           : setNotificationPopup({
             message: "Your comment has been submitted for review.",
             duration: 3000, // Duration in milliseconds
-            icon: <IoMdCheckmarkCircle />, // Icon to display
+            icon: <IoMdCheckmarkCircle /> // Icon to display
           });
         updateCommentLocally(editCommentId, value, isAdmin ? "accepted" : "pending");
         setIsEditComment(false)
@@ -63,7 +67,7 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
         className='custom_textarea'
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyPress}
         required
       />
       <div className='update_btns'>
