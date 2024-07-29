@@ -13,6 +13,7 @@ import BlogContent from "./BlogContent";
 import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext";
 import InteractionComponent from "./interaction/InteractionComments";
+import ConfirmationModal from "../../ConfirmationModal";
 
 
 const BlogPost = ({ blog, setAcceptedPosts }) => {
@@ -22,6 +23,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const { notificationPopup, setNotificationPopup } = useContext(AppContext);
   const { userData, isAuth } = useAuth();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (showAllComments || showFullContent) {
@@ -198,14 +200,13 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
       {
         (isAuth && (blog.authorId === userData?.userId || userData?.role === "admin")) &&
         <button
-          onClick={() => handleRemoveBlogPost(blog._id)}
+          onClick={() => setShowModal(true)}
           className="remove-button"
           disabled={isBtnLoading['RemoveBlogPost']}
         >
-          {isBtnLoading['RemoveBlogPost'] ? "Deleting..." : "x"}
+          x
         </button>
       }
-
 
       {/* Comment Form */}
       <CommentForm blogId={blog._id} setComments={setComments} />
@@ -227,7 +228,8 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
       }
 
       {/* Blog Popup */}
-      {showFullContent &&
+      {
+        showFullContent &&
         <BlogPopup show={setShowFullContent}
           showFullContent={showFullContent}
           blog={blog}
@@ -246,6 +248,15 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
             updateLike={updateLike}
           />
         )
+      }
+      {
+        showModal &&
+        <ConfirmationModal
+          message={`Are you sure you want to delete this Post?`}
+          onConfirm={() => handleRemoveBlogPost(blog._id)}
+          onCancel={() => setShowModal(false)}
+          isLoading={isBtnLoading['RemoveBlogPost']}
+        />
       }
     </article >
   );
