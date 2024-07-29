@@ -177,6 +177,21 @@
           }
         }
       }
+      .blog_content {
+        margin-top: 0;
+        word-break: break-word;
+        &.truncated {
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* Limit to 3 lines */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &.expanded {
+          display: block; /* Show full content */
+        }
+      }
       .title_and_date {
         @include flexbox($alignItems: center);
         gap: 10px;
@@ -194,11 +209,7 @@
           letter-spacing: 2px;
         }
       }
-      .blog_content {
-        p:last-child {
-          display: inline;
-        }
-      }
+
       .sub_title {
         display: block;
         font-style: italic;
@@ -279,7 +290,7 @@
     .search {
       &.smSC {
         display: block;
-        margin: 50px auto;
+        margin: 40px auto;
       }
     }
     .auth_Links {
