@@ -11,7 +11,6 @@
       background: url("../../../../../public/images/heart.png") no-repeat;
       background-position: left;
       background-size: 2900%;
-      z-index: 99;
       &.heart-active {
         background-position: right;
         animation: animate 0.8s steps(28) 1;
@@ -47,7 +46,6 @@
       .love {
         color: $white-color;
         font-size: 16px;
-        z-index: 99;
         &.interaction_active {
           color: $secondary-color;
         }
