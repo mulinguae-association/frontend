@@ -25,6 +25,9 @@
   }
   @media (max-width: 768px) {
     font-size: 15px;
+    border-bottom: 2px solid #0b127e;
+    box-shadow: 0 10px 10px rgb(11 18 126 / 18%);
+    border-radius: 0;
     padding: if($padding, calc($padding - 15px), 0px);
   }
 }
