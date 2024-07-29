@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Blogs.scss";
 import CommentForm from "./comments/CommentForm";
 import BlogPopup from "./BlogPopup";
@@ -13,7 +13,7 @@ import BlogContent from "./BlogContent";
 import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext";
 import InteractionComponent from "./interaction/InteractionComments";
-import { useEffect } from "react";
+
 
 const BlogPost = ({ blog, setAcceptedPosts }) => {
   const [showFullContent, setShowFullContent] = useState(false);
@@ -24,7 +24,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
   const { userData, isAuth } = useAuth();
 
   useEffect(() => {
-    if (showAllComments) {
+    if (showAllComments || showFullContent) {
       document.body.style.overflow = "hidden"; // Disable scrolling on the body
     } else {
       document.body.style.overflow = "auto"; // Re-enable scrolling on the body
@@ -32,7 +32,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [showAllComments]);
+  }, [showAllComments, showFullContent]);
   // Functions
   const updateCommentLocally = (commentId, value, updatedContent) => {
     setComments((prevComments) => {
@@ -47,9 +47,9 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
             return reply;
           });
           return { ...comment, replies: updatedReplies };
-        } else {
-          return comment;
         }
+        return comment;
+
       });
     });
   };
@@ -81,7 +81,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
             ...prevBlog,
             likes: likes,
             loves: loves,
-            unlikes: unlikes,
+            unlikes: unlikes
           };
         }
         return prevBlog;
@@ -154,7 +154,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
           userData.role !== "admin" &&
             setNotificationPopup({
               message: "Your comment has been submitted for review.",
-              icon: <IoMdCheckmarkCircle />,
+              icon: <IoMdCheckmarkCircle />
             });
         }
         if (res && res.status === 401) {
@@ -227,7 +227,12 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
       }
 
       {/* Blog Popup */}
-      {showFullContent && <BlogPopup show={setShowFullContent} showFullContent={showFullContent} blog={blog} />}
+      {showFullContent &&
+        <BlogPopup show={setShowFullContent}
+          showFullContent={showFullContent}
+          blog={blog}
+        />
+      }
       {
         showAllComments && (
           <BlogPopup
