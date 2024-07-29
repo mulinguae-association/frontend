@@ -1,9 +1,22 @@
 @import "../../../globalStyles/colors";
 @import "../../../globalStyles/mixins/mixins.scss";
+
+.blog_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($blue-shadow-light, 0.7);
+  z-index: 9998; // Behind the popup
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .blog_popup {
   @include fix(50% 0 0 50%);
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   transform: translate(-50%, -50%);
   background-color: $white-color;
   box-shadow: 0 0 20px $blue-shadow-light;
@@ -16,6 +29,9 @@
   .blog_title {
     text-align: center;
     text-transform: capitalize;
+  }
+  .blog_content {
+    margin: 0 10px;
   }
   .comment_title {
     .speical {
