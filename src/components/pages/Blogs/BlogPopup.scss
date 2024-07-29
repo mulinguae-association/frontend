@@ -15,7 +15,7 @@
 }
 .blog_popup {
   @include fix(50% 0 0 50%);
-  width: 90%;
+  width: 80%;
   height: 90%;
   transform: translate(-50%, -50%);
   background-color: $white-color;
