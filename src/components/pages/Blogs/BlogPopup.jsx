@@ -5,6 +5,7 @@ import { useAuth } from "../../../contexts/AuthContext";
 import ReplyForm from "./comments/ReplyForm";
 import Comment from "./comments/Comment";
 import CommentReply from "./comments/CommentReply";
+import sanitizeHtml from "../../../utils/sanitizeHtml";
 
 const BlogPopup = ({
   blog,
@@ -20,7 +21,6 @@ const BlogPopup = ({
   const { userData } = useAuth();
   const { isEditComment, handleEdit, setIsEditComment, editCommentId } =
     useCommentEditState();
-
   return (
     <div className="blog_overlay">
       <div className="blog_popup">
@@ -29,7 +29,7 @@ const BlogPopup = ({
             <h1 className="blog_title">{blog.title}</h1>
             <div
               className="blog_content"
-              dangerouslySetInnerHTML={{ __html: blog.content }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(blog.content) }}
             />
           </>
         )}

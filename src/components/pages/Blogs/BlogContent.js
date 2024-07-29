@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { isTextTruncated } from '../../../utils/isTextTruncated';
+import sanitizeHtml from '../../../utils/sanitizeHtml';
 
 const BlogContent = ({ blog, setShowFullContent }) => {
   const [isExpanded, _] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
+
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -37,7 +39,7 @@ const BlogContent = ({ blog, setShowFullContent }) => {
       <div
         ref={contentRef}
         className={`blog_content ${isExpanded ? 'expanded' : 'truncated'}`}
-        dangerouslySetInnerHTML={{ __html: blog.content }}>
+        dangerouslySetInnerHTML={{ __html: sanitizeHtml(blog.content) }}>
       </div>
       {
         isTruncated && (

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import TextEditor from "../../../TextEditor";
 import "./Blogs.scss";
 import { submitBlogPost } from "../../../utils/blog-api";
 import { notifyError } from "../../Notify";
 import { AppContext } from "../../../contexts/AppContext";
-import { useContext } from "react";
 import NotificationPopup from "../../HelperComponents/NotificationPopup";
 import { useAuth } from "../../../contexts/AuthContext";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
 import InputField from "../../HelperComponents/InputField";
+import sanitizeHtml from "../../../utils/sanitizeHtml";
 
 const CreateBlog = () => {
   // State variables
@@ -21,7 +21,6 @@ const CreateBlog = () => {
   const { acceptedPosts, setAcceptedPosts } = useBlogPosts()
   const { userData } = useAuth()
   const avatar = userData.profileImage;
-
   // Function to toggle between preview and edit mode
   const togglePreview = () => {
     if (title !== "" && content !== "") {
@@ -40,12 +39,12 @@ const CreateBlog = () => {
         <>
           <h1>{title}</h1>
           <h2>{subtitle}</h2> {/* Display subtitle */}
-          <div className="preview-content" dangerouslySetInnerHTML={{ __html: content }}></div>
+          <div className="preview-content" dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }}></div>
         </>
       );
-    } else {
-      return <TextEditor content={content} setContent={setContent} />;
     }
+    return <TextEditor content={content} setContent={setContent} />;
+
   };
 
   // Function to render the preview/edit button
