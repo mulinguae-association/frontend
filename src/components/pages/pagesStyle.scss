@@ -3,13 +3,13 @@
 .section {
   .page_title {
     font-size: 2.2rem;
-    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
     color: $darkBlue-color;
   }
   padding: 50px 0;
   .head {
     font-size: 2.2rem;
-    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
     color: $primaryDark-color;
     max-width: 80%;
     margin-left: 4rem;
