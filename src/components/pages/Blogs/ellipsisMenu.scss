@@ -33,7 +33,9 @@
     li {
       padding: 8px 16px;
       cursor: pointer;
-      border-radius: 10px;
+      &:not(:last-child) {
+        border-bottom: 1px solid $blue-shadow-light;
+      }
 
       &:hover {
         background-color: rgba($white-color, 0.2);
