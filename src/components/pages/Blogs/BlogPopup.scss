@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .blog_popup {
   @include fix(50% 0 0 50%);
   width: 80%;
@@ -26,38 +27,6 @@
   overflow-y: auto;
   overflow-x: hidden;
 
-  .blog_title {
-    text-align: center;
-    text-transform: capitalize;
-  }
-  .blog_content {
-    margin: 0 10px;
-  }
-  .comment_title {
-    .speical {
-      color: darkblue;
-    }
-  }
-  .comments_header {
-    @include flexbox($alignItems: center, $justifyContent: center);
-    gap: 8px;
-    .special {
-      font-size: 27px;
-      color: $darkBlue-color;
-      font-weight: 700;
-    }
-    h1 {
-      text-align: center;
-    }
-  }
-  &::-webkit-scrollbar {
-    width: 8px;
-    background-color: $lightgray-color;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #4576ae;
-    border-radius: 10px;
-  }
   @media (max-width: 991px) {
     & {
       padding: 25px 0px;
@@ -66,7 +35,37 @@
       height: 100%;
     }
   }
+
+  .blog_title {
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .blog_content {
+    margin: 0 10px;
+  }
+  .comments {
+    .comment_title {
+      .speical {
+        color: darkblue;
+      }
+    }
+    .comments_content {
+      @include rel();
+    }
+  }
   .popup_content {
+    .comments_header {
+      @include flexbox($alignItems: center, $justifyContent: center);
+      gap: 8px;
+      .special {
+        font-size: 27px;
+        color: $darkBlue-color;
+        font-weight: 700;
+      }
+      h1 {
+        text-align: center;
+      }
+    }
     .popup_close {
       all: unset;
       color: $medium-darkblue;
@@ -86,48 +85,59 @@
       }
     }
   }
-}
-.blog_close {
-  @include abs(10px 10px 0 0);
-  width: 37px;
-  height: 37px;
-  color: red;
-  @include flexbox($alignItems: center, $justifyContent: center);
-  border: none;
-  border: 1px solid $blue-shadow-light;
-  font-size: 23px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 1px 0;
-  cursor: pointer;
-  &:hover {
-    border-color: red;
-  }
-}
-.comments_content {
-  @include rel();
-}
-.comment {
-  .nested_comments {
-    background: $white-color;
-    border-left: 2px solid $primaryDark-color;
-    @include rel();
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .replies {
-    margin-top: 0;
-
-    .interaction_comments {
-      @include abs();
-      @include flexbox($alignItems: center);
-      gap: 15px;
-    }
-  }
-
-  @media (max-width: 768px) {
+  // Styles for .comment
+  .comment {
     .nested_comments {
-      min-width: 100%;
+      background: $white-color;
+      border-left: 2px solid $primaryDark-color;
+      @include rel();
+      width: -moz-fit-content;
+      width: fit-content;
     }
+    .replies {
+      margin-top: 0;
+
+      .interaction_comments {
+        @include abs();
+        @include flexbox($alignItems: center);
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      & {
+        border-radius: 0;
+      }
+      .nested_comments {
+        min-width: 100%;
+      }
+    }
+  }
+
+  .blog_close {
+    @include abs(10px 10px 0 0);
+    width: 37px;
+    height: 37px;
+    color: red;
+    @include flexbox($alignItems: center, $justifyContent: center);
+    border: none;
+    border: 1px solid $blue-shadow-light;
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 1px 0;
+    cursor: pointer;
+    &:hover {
+      border-color: red;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $lightgray-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #4576ae;
+    border-radius: 10px;
   }
 }
