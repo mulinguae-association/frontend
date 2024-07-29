@@ -8,6 +8,11 @@
         padding: 20px;
       }
     }
+    border: 1px solid $blue-shadow-light;
+    border-top: none;
+    @media (max-width: 768px) {
+      border-radius: 10px 10px 0 0;
+    }
   }
   .students_img {
     width: 100%;
