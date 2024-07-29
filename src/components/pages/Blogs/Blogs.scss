@@ -165,8 +165,13 @@
       }
       @media (max-width: 767px) {
         & {
+          box-shadow: none;
+          margin: 0;
+          border: none;
+        }
+        &:not(:last-child) {
+          border-bottom: 10px solid #aab8c2;
           border-radius: 0;
-          margin: 0 0 50px 0;
         }
       }
       .blog_user {
@@ -444,6 +449,11 @@
         .comment_content {
           max-width: 100%;
         }
+      }
+    }
+    @media (max-width: 768px) {
+      & {
+        border-radius: 6px;
       }
     }
   }
