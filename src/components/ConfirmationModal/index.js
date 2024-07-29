@@ -20,7 +20,6 @@ ConfirmationModal.propTypes = {
   message: PropTypes.string.isRequired,
   onConfirm: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
-  isLoading: PropTypes.func.isRequired,
 };
 
 export default ConfirmationModal;
