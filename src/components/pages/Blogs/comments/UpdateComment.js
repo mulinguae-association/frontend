@@ -23,7 +23,7 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
 
   const handleUpdateComment = async (e) => {
     e.preventDefault()
-    if (value === initialValue) {
+    if (value.trim() === initialValue.trim()) {
       notifyError("No changes were made!")
       return;
     }
