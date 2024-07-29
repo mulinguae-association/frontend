@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { isTextTruncated } from '../../../utils/isTextTruncated';
 
 const BlogContent = ({ blog, setShowFullContent }) => {
+  const [isExpanded, _] = useState(false);
+  const [isTruncated, setIsTruncated] = useState(false);
+  const contentRef = useRef(null);
+  useEffect(() => {
+    const checkTruncation = () => {
+      if (contentRef.current) {
+        setIsTruncated(isTextTruncated(contentRef.current));
+      }
+    };
+
+    checkTruncation();
+    window.addEventListener('resize', checkTruncation);
+    return () => window.removeEventListener('resize', checkTruncation);
+  }, [blog.content]);
 
   return (
     <section className="blog_content">
@@ -19,12 +34,18 @@ const BlogContent = ({ blog, setShowFullContent }) => {
         </div>
         <span className='author_name'>{blog.postedBy?.name}</span>
       </div>
-      <p>
-        <span dangerouslySetInnerHTML={{ __html: blog.content.slice(0, 300) }} />
-        <span onClick={() => setShowFullContent(prev => !prev)} className="read_more">
-          ...Read More
-        </span>
-      </p>
+      <div
+        ref={contentRef}
+        className={`blog_content ${isExpanded ? 'expanded' : 'truncated'}`}
+        dangerouslySetInnerHTML={{ __html: blog.content }}>
+      </div>
+      {
+        isTruncated && (
+          <span onClick={() => setShowFullContent(prev => !prev)} className="read_more">
+            Read More
+          </span>
+        )
+      }
     </section>
   );
 };
