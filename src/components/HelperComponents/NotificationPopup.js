@@ -4,7 +4,6 @@ import { IoMdCheckmarkCircle, IoMdCloseCircle } from "react-icons/io";
 import { useClickOutside } from "../../utils/ClickOutside";
 
 const NotificationPopup = ({ message, setNotification }) => {
-  console.log(message)
   const notifcationPopup = useClickOutside(() => { setNotification(null) })
 
   const handleClose = () => {

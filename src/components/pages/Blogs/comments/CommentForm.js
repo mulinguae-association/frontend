@@ -5,6 +5,7 @@ import NotificationPopup from "../../../HelperComponents/NotificationPopup";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 import { AppContext, useGlobal } from "../../../../contexts/AppContext";
 import { useAuth } from "../../../../contexts/AuthContext";
+import logError from "../../../../utils/logError";
 const CommentForm = ({ blogId, setComments }) => {
   const [comment, setComment] = useState("");
   const [notification, setNotification] = useState(null); // State for the notification
@@ -28,7 +29,7 @@ const CommentForm = ({ blogId, setComments }) => {
           setNotificationPopup({
             message: "Your comment has been submitted for review.",
             duration: 3000, // Duration in milliseconds
-            icon: <IoMdCheckmarkCircle />,
+            icon: <IoMdCheckmarkCircle />
           });
       }
 
@@ -38,9 +39,9 @@ const CommentForm = ({ blogId, setComments }) => {
     } catch (err) {
       setButtonLoading(buttonKey, false)
       if (err.response && err.response.status === 401) {
-        console.log(err)
+        logError(err)
       } else {
-        console.log(err)
+        logError(err)
       }
     } finally {
       setButtonLoading(buttonKey, false)

@@ -7,6 +7,7 @@ import { useAuth } from '../../../../contexts/AuthContext';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { useContext } from 'react';
 import { AppContext } from '../../../../contexts/AppContext';
+import logError from '../../../../utils/logError';
 
 const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setIsEditComment, setComments }) => {
   const { userData } = useAuth()
@@ -34,7 +35,6 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
 
     try {
       const res = await updatedComment(editCommentId, requestedBody)
-      console.log(res)
       if (res.status === 201) {
         isAdmin ?
           notifySuccess("Successfully updated comment")
@@ -49,8 +49,8 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
         notifyError("Failed updating comment") // Corrected typo
       }
     } catch (err) {
-      console.log(err)
-      notifyError("Failed updating comment")
+      logError(err);
+      notifyError("Failed updating comment");
     }
   }
   const handleKeyPress = (e) => {

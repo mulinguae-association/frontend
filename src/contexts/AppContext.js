@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useState } from 'react';
 import { fetchTeachers } from '../utils/apiUtility';
 import { useContext } from 'react';
+import logError from '../utils/logError';
 
 export const AppContext = createContext();
 
@@ -13,7 +14,7 @@ export const AppProvider = ({ children }) => {
   const setButtonLoading = (buttonKey, isLoading) => {
     setIsBtnLoading((prevState) => ({
       ...prevState,
-      [buttonKey]: isLoading,
+      [buttonKey]: isLoading
     }));
   };
   const getTeachers = useCallback(async () => {
@@ -21,7 +22,7 @@ export const AppProvider = ({ children }) => {
       const fetchedTeachers = await fetchTeachers();
       setTeachers(fetchedTeachers);
     } catch (err) {
-      console.log(err);
+      logError(err);
     }
   }, []);
   // Create an object containing the values to be exposed in the context

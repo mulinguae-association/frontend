@@ -1,22 +1,23 @@
 import axios from 'axios';
+import logError from './logError';
 export async function submitInfo(formData, userType) {
   try {
     const response = await axios.post(`/api/submit-info/${userType}`, formData, {
       headers: {
-        'Content-Type': 'multipart/form-data',
+        'Content-Type': 'multipart/form-data'
       }
-    })
+    });
 
     if (response.status === 200) {
-      console.log('Data Sent Successfully');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Data Sent Successfully');
+      }
       return response.data.message;
-    } else {
-      console.error('Error: Response status is not 200');
-      console.error(response);
-      return response.data.message
     }
+    logError('Error: Response status is not 200', response);
+    return response.data.message;
   } catch (error) {
-    console.error('Error sending Register data:', error);
-    throw new Error('Error sending Register data: ' + error.response.data.message);
+    logError('Error sending Register data:', error);
+    throw new Error(`Error sending Register data: ${error.response?.data?.message || error.message}`);
   }
 }

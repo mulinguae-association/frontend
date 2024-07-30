@@ -24,12 +24,12 @@ function Registration() {
     email: '',
     password: '',
     confirmPassword: '',
-    terms: false,
+    terms: false
   });
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const [errors, setErrors] = useState({
     email: '',
-    password: '',
+    password: ''
   });
   const [visible, setVisible] = useState(false);
   const recaptchaRef = useRef(null);
@@ -46,10 +46,10 @@ function Registration() {
     if (!isVAlidEmail(email)) {
       setErrors((prev) => ({ ...prev, email: global("Error_Invalid_Email_Format") }));
       return false;
-    } else {
-      setErrors((prev) => ({ ...prev, email: '' }));
-      return true;
     }
+    setErrors((prev) => ({ ...prev, email: '' }));
+    return true;
+
   };
 
   const validatePassword = (password) => {
@@ -57,17 +57,16 @@ function Registration() {
     if (errMessage) {
       setErrors((prev) => ({ ...prev, password: errMessage }));
       return false;
-    } else {
-      setErrors((prev) => ({ ...prev, password: '' }));
-      return true;
     }
+    setErrors((prev) => ({ ...prev, password: '' }));
+    return true;
   };
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === 'checkbox' ? checked : value
     });
     if (name === "email") validateEmail(value);
     if (name === "password") validatePassword(value);
@@ -96,7 +95,6 @@ function Registration() {
           notifyError(res.error);
           return;
         }
-        console.log(res);
         setFormData({
           name: '',
           email: '',
@@ -104,7 +102,7 @@ function Registration() {
           confirmPassword: '',
           terms: false
         });
-        notifySuccess(res.message + " " + formData.name);
+        notifySuccess(`${res.message} ${formData.name}`);
         navigate(`/${i18next.language}/login`);
       } else {
         notifyError(global("Error_Recaptcha"));

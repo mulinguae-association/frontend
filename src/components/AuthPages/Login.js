@@ -11,6 +11,7 @@ import { useGlobal } from '../../contexts/AppContext';
 import InputField from '../HelperComponents/InputField'
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
+import logError from '../../utils/logError';
 
 function Login() {
   const { t } = useTranslation("authPages/login")
@@ -45,7 +46,7 @@ function Login() {
       // Clear the form fields
       setFormData({
         email: '',
-        password: '',
+        password: ''
       });
       notifySuccess("Login successful");
       const response = await axios.get('/api/auth/profile');
@@ -53,7 +54,7 @@ function Login() {
       navigate(`/${i18next.language}/pages/Blogs`);
     } catch (error) {
       notifyError(error.message);
-      console.log(error);
+      logError(error.message);
     } finally {
       setButtonLoading("loginBtn", false);
     }

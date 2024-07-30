@@ -7,6 +7,7 @@ import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
 import "./Blogs.scss";
 import Footer from "../../FooterPages";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
+import logError from "../../../utils/logError";
 
 const Blogs = () => {
   const {
@@ -46,12 +47,12 @@ const Blogs = () => {
           setPreviousQuery(query);
           setFetchedFirstBlog(false);
         } else {
-          console.error("Error searching blog posts");
+          logError("Error searching blog posts");
         }
       });
 
     } catch (error) {
-      console.error("Error searching blog posts:", error);
+      logError("Error searching blog posts:", error);
     } finally {
       setLoading(false);
     }

@@ -1,18 +1,21 @@
 import axios from 'axios';
+import logError from './logError';
+
 export async function submitRegister(RegisterData) {
   try {
     const response = await axios.post(`/api/auth/register`, RegisterData);
     if (response.status === 200) {
       // Reset form fields
       return response.data;
-    } else {
-      throw new Error("Error sending Register data");
     }
+    throw new Error("Error sending Register data");
+
   } catch (error) {
-    console.log(error.response.data.error)
-    return { error: error.response.data.error }
+    logError("Error registering:", error);
+    return { error: error.response?.data?.error || "An error occurred" };
   }
 }
+
 // Login
 export async function submitLogin(LoginData) {
   try {
@@ -21,24 +24,27 @@ export async function submitLogin(LoginData) {
     if (response.status === 200) {
       // Reset form fields
       return response.data;
-    } else {
-      throw new Error("Error sending Login data");
     }
+    throw new Error("Error sending Login data");
+
   } catch (error) {
-    throw new Error("Error sending Login data: " + error.message);
+    logError("Error logging in:", error);
+    return { error: error.response?.data?.error || "An error occurred" };
   }
 }
-// Login
+
+// Logout
 export async function submitLogout() {
   try {
     const response = await axios.get(`/api/auth/logout`);
 
     if (response.status === 200) {
-      return response
-    } else {
-      throw new Error("Error Logging out");
+      return response;
     }
+    throw new Error("Error Logging out");
+
   } catch (error) {
-    throw new Error("Error Logging out : " + error.message);
+    logError("Error logging out:", error);
+    return { error: error.message || "An error occurred" };
   }
 }

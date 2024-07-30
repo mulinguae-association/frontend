@@ -5,6 +5,7 @@ import Like from './Like';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { interactWithComment } from '../../../../utils/blog-api';
 import { notifyError } from '../../../Notify';
+import logError from '../../../../utils/logError';
 
 const InteractionComponent = ({
   reply,
@@ -31,7 +32,7 @@ const InteractionComponent = ({
       if (err.response && err.response.status === 401) {
         notifyError(err)
       } else {
-        console.log(err)
+        logError(err)
       }
     }
   };

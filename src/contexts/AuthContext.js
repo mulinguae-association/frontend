@@ -2,6 +2,7 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 import { notifyError } from "../components/Notify";
+import logError from "../utils/logError";
 
 const AuthContext = createContext();
 
@@ -25,7 +26,7 @@ export const AuthProvider = ({ children }) => {
         setIsAuth(!!userData);
       }
       catch (err) {
-        console.log(err)
+        logError(err);
         if (err.response?.status === 401) {
           notifyError(err.response.data.message)
           setIsAuth(false)

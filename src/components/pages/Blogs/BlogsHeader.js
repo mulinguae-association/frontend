@@ -7,6 +7,7 @@ import { useAuth } from '../../../contexts/AuthContext';
 import UserMenu from './UserMenu';
 import i18next from 'i18next';
 import SearchBar from './SearchBar';
+import logError from '../../../utils/logError';
 
 const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) => {
   const { userData, setUserData, isAuth, setIsAuth } = useAuth();
@@ -19,7 +20,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
       setIsAuth(false);
       setUserData(null)
     } catch (err) {
-      console.log(err)
+      logError(err);
     }
   };
 

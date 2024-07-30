@@ -11,6 +11,7 @@ import EditTeacherForm from '../../Dashboard/EditTeacherForm';
 import { notifyError, notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
 import i18next from 'i18next';
+import logError from '../../../utils/logError';
 
 const TeachersOverview = ({ t }) => {
   const { teachers, setTeachers, getTeachers } = useContext(AppContext);
@@ -31,7 +32,7 @@ const TeachersOverview = ({ t }) => {
 
   const handleUpdateTeacher = (updatedTeacher) => {
     const updatedTeachers = teachers.map((teacher) =>
-      teacher._id === updatedTeacher._id ? updatedTeacher : teacher
+      (teacher._id === updatedTeacher._id ? updatedTeacher : teacher)
     );
     setTeachers(updatedTeachers);
     getTeachers();
@@ -44,7 +45,7 @@ const TeachersOverview = ({ t }) => {
       res.success ? notifySuccess("Successfully deleted teacher") : notifyError("Failed to delete teacher");
       getTeachers();
     } catch (err) {
-      console.log(err);
+      logError(err);
     }
   };
 
@@ -58,20 +59,20 @@ const TeachersOverview = ({ t }) => {
       breakpoints={{
         0: {
           slidesPerView: 1,
-          spaceBetween: 20,
+          spaceBetween: 20
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 30,
+          spaceBetween: 30
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 30,
-        },
+          spaceBetween: 30
+        }
       }}
       autoplay={{
         delay: 3000,
-        disableOnInteraction: true,
+        disableOnInteraction: true
       }}
     >
       {teachers.length > 0 ? teachers.map(teacher => (

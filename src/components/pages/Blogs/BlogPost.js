@@ -14,6 +14,7 @@ import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext";
 import InteractionComponent from "./interaction/InteractionComments";
 import ConfirmationModal from "../../ConfirmationModal";
+import logError from "../../../utils/logError";
 
 
 const BlogPost = ({ blog, setAcceptedPosts }) => {
@@ -103,11 +104,11 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
             return updatedComments;
           });
         } else {
-          console.log("error refusing comment");
+          logError("error refusing comment");
         }
       });
     } catch (error) {
-      console.error(error.message);
+      logError(error.message);
     }
   };
 
@@ -126,7 +127,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
     } catch (err) {
       notifyError("Failed deleting blog post");
       setButtonLoading("RemoveBlogPost", false);
-      console.log(err.message);
+      logError(err.message);
     } finally {
       setButtonLoading("RemoveBlogPost", false);
     }
@@ -170,7 +171,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
         if (error.response && error.response.status === 401) {
           notifyError(error.message)
         } else {
-          console.log(error)
+          logError(error);
         }
       } finally {
         setButtonLoading(buttonKey, false)

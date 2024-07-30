@@ -8,6 +8,7 @@ import "./index.scss"
 import { notifyError, notifySuccess } from '../../Notify';
 import { useGlobal } from '../../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
+import logError from '../../../utils/logError';
 
 const FAQs = () => {
   const { t } = useTranslation("pages/FAQs")
@@ -67,11 +68,11 @@ const FAQs = () => {
           operatingSystem: '',
           operatingSystemOther: '',
           screenshot: null,
-          url: '',
+          url: ''
         });
       }
     } catch (err) {
-      console.log(err)
+      logError(err)
     } finally {
       setButtonLoading("FAQs_button", false)
     }

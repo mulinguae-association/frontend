@@ -2,6 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
+import logError from "../utils/logError";
 
 const customBackend = {
 	loadPath: function (lng, ns) {
@@ -48,7 +49,7 @@ i18n
 			try {
 				return JSON.parse(data);
 			} catch (error) {
-				console.error("Error parsing translation file:", error);
+				logError("Error parsing translation file:", error);
 				return {}; // Return an empty object as a fallback
 			}
 		},

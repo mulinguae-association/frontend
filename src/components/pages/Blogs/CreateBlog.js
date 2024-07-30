@@ -9,6 +9,7 @@ import { useAuth } from "../../../contexts/AuthContext";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
 import InputField from "../../HelperComponents/InputField";
 import sanitizeHtml from "../../../utils/sanitizeHtml";
+import logError from "../../../utils/logError";
 
 const CreateBlog = () => {
   // State variables
@@ -78,7 +79,7 @@ const CreateBlog = () => {
 
     } catch (error) {
       notifyError(error.message)
-      console.error("Error submitting blog post:", error);
+      logError("Error submitting blog post:", error);
     } finally {
       setIsSubmitting(false)
     }

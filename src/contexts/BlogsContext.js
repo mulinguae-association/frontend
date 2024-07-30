@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { fetchAcceptedPosts } from '../utils/blog-api';
+import logError from '../utils/logError';
 
 const BlogPostsContext = createContext();
 
@@ -26,7 +27,7 @@ export const BlogPostsProvider = ({ children }) => {
       }
     } catch (error) {
       setErrorDisplayPosts(true);
-      console.log(error.message);
+      logError(error.message);
     } finally {
       setLoading(false);
     }
