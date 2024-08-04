@@ -1,5 +1,5 @@
 import axios from 'axios';
-import logError from './logError';
+import logError from '../utils/logError';
 export async function submitInfo(formData, userType) {
   try {
     const response = await axios.post(`/api/submit-info/${userType}`, formData, {

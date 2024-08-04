@@ -1,5 +1,5 @@
 import axios from "axios";
-import logError from "./logError";
+import logError from "../utils/logError";
 
 const createTeacher = async (formData) => {
   try {
