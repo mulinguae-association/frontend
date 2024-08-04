@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import { submitLogout } from '../../../utils/auth-api';
+import { submitLogout } from '../../../apis/auth-api';
 import { notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
 import UserMenu from './UserMenu';

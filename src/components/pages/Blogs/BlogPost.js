@@ -1,31 +1,24 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Blogs.scss";
 import CommentForm from "./comments/CommentForm";
 import BlogPopup from "./BlogPopup";
-import { notifyError, notifySuccess } from "../../Notify";
-import { handleReplySubmit, refuseComment, removeBlogPost } from "../../../utils/blog-api";
 import "./comments/comment.scss"
-import { IoMdCheckmarkCircle } from "react-icons/io";
-import NotificationPopup from "../../HelperComponents/NotificationPopup";
-import { AppContext, useGlobal } from "../../../contexts/AppContext";
+import { useGlobal } from "../../../contexts/AppContext";
 import BlogHeader from "./BlogHeader";
 import BlogContent from "./BlogContent";
 import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext";
 import InteractionComponent from "./interaction/InteractionComments";
 import ConfirmationModal from "../../ConfirmationModal";
-import logError from "../../../utils/logError";
+import { useRemoveBlogMutation } from "../../../apis/mutations/blogs-mutations";
 
-
-const BlogPost = ({ blog, setAcceptedPosts }) => {
+const BlogPost = ({ blog }) => {
   const [showFullContent, setShowFullContent] = useState(false);
-  const [comments, setComments] = useState(blog.comments);
   const [showAllComments, setShowAllComments] = useState(false);
-  const { isBtnLoading, setButtonLoading } = useGlobal();
-  const { notificationPopup, setNotificationPopup } = useContext(AppContext);
+  const { isBtnLoading } = useGlobal();
   const { userData, isAuth } = useAuth();
   const [showModal, setShowModal] = useState(false);
-
+  const { comments } = blog;
   useEffect(() => {
     if (showAllComments || showFullContent) {
       document.body.style.overflow = "hidden"; // Disable scrolling on the body
@@ -36,147 +29,10 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
       document.body.style.overflow = "auto";
     };
   }, [showAllComments, showFullContent]);
-  // Functions
-  const updateCommentLocally = (commentId, value, updatedContent) => {
-    setComments((prevComments) => {
-      return prevComments.map((comment) => {
-        if (comment._id === commentId) {
-          return { ...comment, status: updatedContent, content: value };
-        } else if (comment.replies && comment.replies?.length > 0) {
-          const updatedReplies = comment.replies.map((reply) => {
-            if (reply._id === commentId) {
-              return { ...reply, status: updatedContent, content: value };
-            }
-            return reply;
-          });
-          return { ...comment, replies: updatedReplies };
-        }
-        return comment;
 
-      });
-    });
-  };
-
-  const updateLike = (id, { likes, loves, unlikes }) => {
-    // Update likes, loves, and unlikes for both comments and blog post
-    setComments((prevComments) => {
-      return prevComments.map((comment) => {
-        if (comment._id === id) {
-          return { ...comment, likes, loves, unlikes };
-        }
-        if (comment.replies && comment.replies.length > 0) {
-          comment.replies = comment.replies.map((reply) => {
-            if (reply._id === id) {
-              return { ...reply, likes, loves, unlikes };
-            }
-            return reply;
-          });
-        }
-        return comment;
-      });
-    });
-
-    // Update likes, loves, and unlikes for the blog post
-    setAcceptedPosts((prevBlogs) => {
-      return prevBlogs.map((prevBlog) => {
-        if (prevBlog._id === id) {
-          return {
-            ...prevBlog,
-            likes: likes,
-            loves: loves,
-            unlikes: unlikes
-          };
-        }
-        return prevBlog;
-      });
-    });
-  };
-
-  const handleRemoveComment = async (commentId) => {
-    try {
-      await refuseComment(commentId).then((res) => {
-        if (res.status === 200) {
-          setComments((prev) => {
-            const updatedComments = prev.filter((comment) => comment._id !== commentId);
-            updatedComments.forEach((comment) => {
-              comment.replies = comment.replies.filter((reply) => reply._id !== commentId);
-            });
-            return updatedComments;
-          });
-        } else {
-          logError("error refusing comment");
-        }
-      });
-    } catch (error) {
-      logError(error.message);
-    }
-  };
-
+  const { mutate: refuseBlog } = useRemoveBlogMutation(setShowModal);
   const handleRemoveBlogPost = async (blogId) => {
-    try {
-      setButtonLoading("RemoveBlogPost", true);
-      const res = await removeBlogPost(blogId)
-      if (res && res.message) {
-        notifySuccess(res.message)
-        setAcceptedPosts((prevBlogs) =>
-          prevBlogs.filter((blog) => blog._id !== blogId)
-        );
-      } else {
-        notifyError(res.error)
-      }
-    } catch (err) {
-      notifyError("Failed deleting blog post");
-      setButtonLoading("RemoveBlogPost", false);
-      logError(err.message);
-    } finally {
-      setButtonLoading("RemoveBlogPost", false);
-    }
-  };
-
-  const handleSubmit = async (parentCommentId, replyContent, setReplyContent) => {
-    const buttonKey = `replyCommentBtn_${parentCommentId}`
-    if (replyContent.trim() !== "") {
-      try {
-        setButtonLoading(buttonKey, true)
-        const res = await handleReplySubmit(
-          replyContent,
-          blog._id,
-          parentCommentId)
-        const newComment = res.data?.comment
-        if (res && res.status === 201) {
-          setReplyContent("");
-          const udpatedComments = comments.map((comment) => {
-            if (comment._id === parentCommentId) {
-              return {
-                ...comment, replies: [newComment, ...comment.replies]
-              }
-            }
-            return comment
-          })
-          setComments(udpatedComments)
-          userData.role !== "admin" &&
-            setNotificationPopup({
-              message: "Your comment has been submitted for review.",
-              icon: <IoMdCheckmarkCircle />
-            });
-        }
-        if (res && res.status === 401) {
-          notifyError(res.message)
-        } else {
-          notifyError(res.error)
-        }
-      }
-      catch (error) {
-        setButtonLoading(buttonKey, false)
-        if (error.response && error.response.status === 401) {
-          notifyError(error.message)
-        } else {
-          logError(error);
-        }
-      } finally {
-        setButtonLoading(buttonKey, false)
-      }
-    }
+    refuseBlog(blogId)
   };
 
   const checkStatus = comments[0]?.status === "accepted";
@@ -187,14 +43,11 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
       <BlogContent blog={blog} setShowFullContent={setShowFullContent} />
       <CommentsSection
         comments={comments}
-        setComments={setComments}
         showAllComments={showAllComments}
         setShowAllComments={setShowAllComments}
         checkStatus={checkStatus}
-        handleRemoveComment={handleRemoveComment}
-        updateCommentLocally={updateCommentLocally}
-        handleSubmit={handleSubmit}
-        updateLike={updateLike}
+
+        blogId={blog._id}
       />
       {showAllComments && <div className="overlay"></div>}
       {/* Delete Blog Post Button */}
@@ -210,25 +63,13 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
       }
 
       {/* Comment Form */}
-      <CommentForm blogId={blog._id} setComments={setComments} />
+      <CommentForm blogId={blog._id} />
       <div className="blogs_interaction">
         <InteractionComponent
           modelType="blog"
           reply={blog}
-          updateLike={updateLike}
         />
       </div>
-      {/* Notification Popup */}
-      {
-        notificationPopup && (
-          <NotificationPopup
-            message={notificationPopup?.message}
-            setNotification={setNotificationPopup}
-          />
-        )
-      }
-
-      {/* Blog Popup */}
       {
         showFullContent &&
         <BlogPopup show={setShowFullContent}
@@ -243,10 +84,7 @@ const BlogPost = ({ blog, setAcceptedPosts }) => {
             showAllComments={showAllComments}
             blog={blog}
             comments={comments}
-            handleSubmit={handleSubmit}
-            handleRemoveComment={handleRemoveComment}
-            updateCommentLocally={updateCommentLocally}
-            updateLike={updateLike}
+
           />
         )
       }

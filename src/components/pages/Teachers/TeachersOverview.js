@@ -5,7 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { deleteTeacher } from '../../../utils/apiUtility';
+import { deleteTeacher } from '../../../apis/apiUtility';
 import { AppContext } from '../../../contexts/AppContext';
 import EditTeacherForm from '../../Dashboard/EditTeacherForm';
 import { notifyError, notifySuccess } from '../../Notify';

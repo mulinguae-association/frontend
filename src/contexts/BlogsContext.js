@@ -1,55 +1,48 @@
-import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
-import { fetchAcceptedPosts } from '../utils/blog-api';
+import React, { createContext, useContext, useState, useRef } from 'react';
+import { fetchAcceptedPosts } from '../apis/blog-api';
 import logError from '../utils/logError';
+import { useQuery, useQueryClient } from 'react-query';
 
 const BlogPostsContext = createContext();
 
 
 export const BlogPostsProvider = ({ children }) => {
-  const [acceptedPosts, setAcceptedPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [allPostsLoaded, setAllPostsLoaded] = useState(false);
-  const [errorDisplayPosts, setErrorDisplayPosts] = useState(false);
   const searchQuery = useRef("");
   const [postsToDisplay, setPostsToDisplay] = useState(1);
-
-  const fetchAcceptedData = async (postsToDisplay) => {
-    try {
-      setLoading(true);
-      const data = await fetchAcceptedPosts(postsToDisplay);
-      if (data) {
-        setAcceptedPosts(data);
-        setErrorDisplayPosts(searchQuery && data.length === 0);
-        setAllPostsLoaded(data.length < postsToDisplay);
-
-      } else {
-        setErrorDisplayPosts(true);
+  const [isSearch, setIsSearch] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
+  const queryClient = useQueryClient();
+  const { data, isFetching, isError } =
+    useQuery(['acceptedPosts', postsToDisplay], () => fetchAcceptedPosts(postsToDisplay), {
+      keepPreviousData: true,
+      onSuccess: (data) => {
+        queryClient.setQueryData(['acceptedPosts', postsToDisplay], data);
+        isSearch ?
+          setAllPostsLoaded(true)
+          :
+          setAllPostsLoaded(data?.length < postsToDisplay)
+      },
+      onError: (error) => {
+        setAllPostsLoaded(true);
+        logError(error);
       }
-    } catch (error) {
-      setErrorDisplayPosts(true);
-      logError(error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
+    });
+
   const contextValue = {
-    acceptedPosts,
-    loading,
+    acceptedPosts: data,
+    loading: isFetching,
     allPostsLoaded,
     setAllPostsLoaded,
-    errorDisplayPosts,
+    errorDisplayPosts: isError,
     searchQuery,
     postsToDisplay,
     setPostsToDisplay,
-    setLoading,
-    setAcceptedPosts,
-    fetchAcceptedData
+    fetchAcceptedPosts,
+    setIsSearch,
+    setIsSearching,
+    isSearching
   }
-
-  useEffect(() => {
-    fetchAcceptedData(postsToDisplay);
-  }, [postsToDisplay]);
-
 
   return (
     <BlogPostsContext.Provider value={{ contextValue }}>

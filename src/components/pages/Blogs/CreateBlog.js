@@ -1,15 +1,18 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import TextEditor from "../../../TextEditor";
 import "./Blogs.scss";
-import { submitBlogPost } from "../../../utils/blog-api";
-import { notifyError } from "../../Notify";
-import { AppContext } from "../../../contexts/AppContext";
+import { submitBlogPost } from "../../../apis/blog-api";
+import { notifyError, notifySuccess } from "../../Notify";
 import NotificationPopup from "../../HelperComponents/NotificationPopup";
 import { useAuth } from "../../../contexts/AuthContext";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
 import InputField from "../../HelperComponents/InputField";
 import sanitizeHtml from "../../../utils/sanitizeHtml";
 import logError from "../../../utils/logError";
+import { useMutation, useQueryClient } from "react-query";
+import i18n from "../../../i18n";
+import { useNavigate } from "react-router";
+import handleError from "../../../utils/handleError";
 
 const CreateBlog = () => {
   // State variables
@@ -18,19 +21,24 @@ const CreateBlog = () => {
   const [content, setContent] = useState("");
   const [preview, setPreview] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { notificationPopup, setNotificationPopup } = useContext(AppContext);
-  const { acceptedPosts, setAcceptedPosts } = useBlogPosts()
-  const { userData } = useAuth()
-  const avatar = userData.profileImage;
+  const [notification, setNotification] = useState(false);
+  const { acceptedPosts, postsToDisplay } = useBlogPosts();
+  const { userData } = useAuth();
+  const navigate = useNavigate();
+  const avatar = userData?.profileImage;
+
+  useEffect(() => {
+    if (!userData) navigate(`/${i18n.language}/login`);
+  }, [userData, navigate])
   // Function to toggle between preview and edit mode
   const togglePreview = () => {
     if (title !== "" && content !== "") {
       setPreview(!preview);
     } else if (content === "") {
       alert("Please write blog content.");
-    } else {
-      alert("Please write the title of the blog.");
     }
+    alert("Please write the title of the blog.");
+
   };
 
   // Function to render content based on preview state
@@ -63,25 +71,35 @@ const CreateBlog = () => {
   };
 
   // Function to handle form submission
+  const AddBlogMutation = useMutation((newPost) => submitBlogPost(newPost),
+    {
+      onSuccess: (data) => {
+        if (userData.role === "admin") {
+          queryClient.setQueryData(['acceptedPosts', postsToDisplay], [data.blogPost, ...acceptedPosts]);
+          notifySuccess("Successfully submitted blog post");
+        } else {
+          setNotification(true);
+        }
+      },
+      onError(err) {
+        handleError(err)
+      }
+    }
+  )
+  const queryClient = useQueryClient();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setIsSubmitting(true)
-      const res = await submitBlogPost(title, subtitle, content, avatar);
-      setAcceptedPosts([res.blogPost, ...acceptedPosts])
-      userData.role !== "admin" ?
-        setNotificationPopup({ message: "Your Blog has been submitted for review." })
-        : setNotificationPopup({ message: "Your Blog has been submitted." })
-      // Reset form fields
-      setTitle("");
-      setSubtitle("");
-      setContent("");
-
+      setIsSubmitting(true);
+      AddBlogMutation.mutate({ title, subtitle, content, avatar });
     } catch (error) {
       notifyError(error.message)
       logError("Error submitting blog post:", error);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
+      setContent("");
+      setTitle("");
+      setSubtitle("");
     }
 
     if (!preview) {
@@ -129,10 +147,10 @@ const CreateBlog = () => {
             {renderPreviewButton()}
           </div>
         </form>
-        {notificationPopup && (
+        {notification && (
           <NotificationPopup
-            message={notificationPopup.message}
-            setNotification={setNotificationPopup}
+            message={"Your Blog has been submitted for review."}
+            setNotification={setNotification}
           />
         )}
       </div>

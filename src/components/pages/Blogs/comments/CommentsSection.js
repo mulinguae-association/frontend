@@ -9,11 +9,7 @@ const CommentsSection = ({
   showAllComments,
   setShowAllComments,
   checkStatus,
-  handleRemoveComment,
-  setComments,
-  updateCommentLocally,
-  handleSubmit,
-  updateLike
+  blogId
 }) => {
   const {
     isEditComment,
@@ -48,11 +44,7 @@ const CommentsSection = ({
               <Comment
                 comment={comments[0]} // Pass the first comment as a prop
                 editCommentId={editCommentId}
-                handleRemoveComment={handleRemoveComment}
                 handleEdit={handleEdit}
-                updateCommentLocally={updateCommentLocally}
-                updateLike={updateLike}
-                handleSubmit={handleSubmit}
                 setIsEditComment={setIsEditComment}
                 isEditComment={isEditComment}
               />
@@ -65,21 +57,16 @@ const CommentsSection = ({
                 <CommentReply
                   comment={comments[0].replies[0]} // Pass the first comment as a prop
                   editCommentId={editCommentId}
-                  handleRemoveComment={handleRemoveComment}
                   handleEdit={handleEdit}
-                  updateCommentLocally={updateCommentLocally}
-                  updateLike={updateLike}
                   isEditComment={isEditComment}
                   setIsEditComment={setIsEditComment}
-                  handleSubmit={handleSubmit}
-                  setComments={setComments}
                 />
               )}
 
             {/* Reply form */}
             <ReplyForm commentsId={comments[0]._id}
-              handleSubmit={handleSubmit}
-              setComments={setComments} />
+              blogId={blogId}
+            />
           </article>
         )}
       </div>

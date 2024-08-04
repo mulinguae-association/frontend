@@ -12,11 +12,7 @@ const BlogPopup = ({
   show,
   showFullContent,
   showAllComments,
-  handleSubmit,
   comments,
-  updateLike,
-  handleRemoveComment,
-  updateCommentLocally,
 }) => {
   const { userData } = useAuth();
   const { isEditComment, handleEdit, setIsEditComment, editCommentId } =
@@ -54,11 +50,7 @@ const BlogPopup = ({
                         isEditComment={isEditComment}
                         setIsEditComment={setIsEditComment}
                         editCommentId={editCommentId}
-                        handleRemoveComment={handleRemoveComment}
                         handleEdit={handleEdit}
-                        updateCommentLocally={updateCommentLocally}
-                        updateLike={updateLike}
-                        handleSubmit={handleSubmit}
                       />
                     </div>
                     <div className="replies">
@@ -71,21 +63,14 @@ const BlogPopup = ({
                               isEditComment={isEditComment}
                               setIsEditComment={setIsEditComment}
                               editCommentId={editCommentId}
-                              handleRemoveComment={handleRemoveComment}
                               handleEdit={handleEdit}
-                              updateCommentLocally={updateCommentLocally}
-                              updateLike={updateLike}
-                              handleSubmit={handleSubmit}
                             />
                           ) : (
                             ""
                           )
                         )}
                     </div>
-                    <ReplyForm
-                      commentsId={comment?._id}
-                      handleSubmit={handleSubmit}
-                    />
+                    <ReplyForm commentsId={comment?._id} blogId={blog._id} />
                   </div>
                 </div>
               ) : (

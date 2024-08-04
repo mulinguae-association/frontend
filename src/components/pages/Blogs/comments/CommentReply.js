@@ -5,14 +5,12 @@ import InteractionComponent from '../interaction/InteractionComments';
 import { formatRelativeTime } from '../../../HelperComponents/RelativeDate';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { isTextTruncated } from '../../../../utils/isTextTruncated';
+import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs-mutations';
 
 const CommentReply = ({
   comment,
   editCommentId,
-  handleRemoveComment,
   handleEdit,
-  updateCommentLocally,
-  updateLike,
   isEditComment,
   setIsEditComment,
 }) => {
@@ -20,7 +18,7 @@ const CommentReply = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
-
+  const { mutate: handleRemoveComment } = useRemoveCommentMutation();
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -59,7 +57,6 @@ const CommentReply = ({
             comments={comment}
             setIsEditComment={setIsEditComment}
             initialValue={comment?.content}
-            updateCommentLocally={updateCommentLocally}
           />
         ) : (
           <>
@@ -79,7 +76,16 @@ const CommentReply = ({
               <div className='comment_author'>@{comment.postedBy?.name}</div>
             </div>
             <div className=''>
-              <p style={!isTruncated ? { margin: 0 } : { marginTop: 0 }} ref={contentRef} className={`comment_content ${isExpanded ? 'expanded' : 'truncated'}`}>{comment?.content}</p>
+              <p
+                style={
+                  !isTruncated
+                    ? { margin: 0 }
+                    : { marginTop: 0 }
+                }
+                ref={contentRef}
+                className={`comment_content ${isExpanded ? 'expanded' : 'truncated'}`}>
+                {comment?.content}
+              </p>
               {isTruncated && (
                 <button className='read-more-button' onClick={toggleReadMore}>
                   {isExpanded ? "Show less" : "Read more"}
@@ -87,7 +93,7 @@ const CommentReply = ({
               )}
             </div>
             <span>{formatRelativeTime(comment.createdAt)}</span>
-            <InteractionComponent modelType='comment' reply={comment} updateLike={updateLike} />
+            <InteractionComponent modelType='comment' reply={comment} />
           </>
         )}
       </div>

@@ -5,14 +5,12 @@ import UpdateComment from './UpdateComment';
 import InteractionComponent from '../interaction/InteractionComments';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { isTextTruncated } from '../../../../utils/isTextTruncated';
+import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs-mutations';
 
 const Comment = ({
   comment,
   editCommentId,
-  handleRemoveComment,
   handleEdit,
-  updateCommentLocally,
-  updateLike,
   isEditComment,
   setIsEditComment
 }) => {
@@ -20,7 +18,7 @@ const Comment = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
-
+  const { mutate: handleRemoveComment } = useRemoveCommentMutation();
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -39,7 +37,7 @@ const Comment = ({
 
   return (
     <div className='comment_info'>
-      {isAuth && (comment.replies?.postedBy?._id === userData?.userId || userData?.role === "admin") && (
+      {isAuth && (comment?.postedBy?._id === userData?.userId || userData?.role === "admin") && (
         <EllipsisMenu
           handleDelete={() => handleRemoveComment(comment?._id)}
           handleEdit={(state) => handleEdit(comment, state)}
@@ -73,7 +71,6 @@ const Comment = ({
             initialValue={comment?.content}
             setIsEditComment={setIsEditComment}
             isEditComment={isEditComment}
-            updateCommentLocally={updateCommentLocally}
           />
         ) : (
           <div className="parent_comment">
@@ -85,7 +82,7 @@ const Comment = ({
                 </button>
               )}
             </div>
-            <InteractionComponent modelType='comment' reply={comment} updateLike={updateLike} />
+            <InteractionComponent modelType='comment' reply={comment} />
           </div>
         )
       }

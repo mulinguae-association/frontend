@@ -1,16 +1,29 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react'
 import { useGlobal } from '../../../../contexts/AppContext';
-
-const ReplyForm = ({ commentsId, handleSubmit }) => {
+import { notifyError } from '../../../Notify';
+import { useAddReplyMutation } from '../../../../apis/mutations/blogs-mutations';
+const ReplyForm = ({ commentsId: parentCommentId, blogId }) => {
   const [replyConetnt, setReplyContent] = useState("");
-  const { isBtnLoading } = useGlobal()
-  const btnKey = `replyCommentBtn_${commentsId}`
+  const { isBtnLoading } = useGlobal();
+  const btnKey = `replyCommentBtn_${parentCommentId}`;
+  const { mutate: handleAddReply } = useAddReplyMutation(setReplyContent);
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      handleSubmit(commentsId, replyConetnt, setReplyContent);
+      if (replyConetnt == "") {
+        notifyError("Comment cannot be empty");
+        return;
+      }
+      handleAddReply({ parentCommentId, blogId, replyConetnt });
     }
+  };
+  const handleMouseDown = (e) => {
+    if (replyConetnt == "") {
+      notifyError("Comment cannot be empty");
+      return;
+    }
+    handleAddReply({ parentCommentId, blogId, replyConetnt });
+
   };
   return (
     <div className="reply_form">
@@ -22,7 +35,7 @@ const ReplyForm = ({ commentsId, handleSubmit }) => {
         required
         onKeyDown={handleKeyPress}
       />
-      <button className='button-font' disabled={isBtnLoading[btnKey]} onClick={() => handleSubmit(commentsId, replyConetnt, setReplyContent)}>
+      <button className='button-font' disabled={isBtnLoading[btnKey]} onClick={handleMouseDown}>
         {isBtnLoading[btnKey] ? "Loading..." : "Reply"}
       </button>
     </div>

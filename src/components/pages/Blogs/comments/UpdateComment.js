@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react'; // Import useRef
-import { updatedComment } from '../../../../utils/blog-api';
+import { updatedComment } from '../../../../apis/blog-api';
 import { notifyError, notifySuccess } from '../../../Notify';
 import "./UpdateComment.scss";
 import { BiSend } from 'react-icons/bi';
 import { useAuth } from '../../../../contexts/AuthContext';
-import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { useContext } from 'react';
 import { AppContext } from '../../../../contexts/AppContext';
 import logError from '../../../../utils/logError';
+import { useUpdateCommentLocally } from '../../../../apis/mutations/blogs-mutations';
 
-const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setIsEditComment, setComments }) => {
+const UpdateComment = ({ editCommentId, initialValue, setIsEditComment }) => {
   const { userData } = useAuth()
   const [value, setValue] = useState(initialValue);
   const { setNotificationPopup } = useContext(AppContext)
-
+  const updateCommentLocally = useUpdateCommentLocally();
   const textareaRef = useRef(null);
 
   useEffect(() => {
@@ -27,21 +27,21 @@ const UpdateComment = ({ editCommentId, initialValue, updateCommentLocally, setI
     if (value.trim() === initialValue.trim()) {
       notifyError("No changes were made!")
       return;
+    } else if (value.trim() === "") {
+      notifyError("Comment cannot be empty!");
+      return;
     }
     const requestedBody = {
       content: value
     }
     const isAdmin = userData.role === "admin";
-
     try {
-      const res = await updatedComment(editCommentId, requestedBody)
+      const res = await updatedComment(editCommentId, requestedBody);
       if (res.status === 201) {
         isAdmin ?
           notifySuccess("Successfully updated comment")
           : setNotificationPopup({
-            message: "Your comment has been submitted for review.",
-            duration: 3000, // Duration in milliseconds
-            icon: <IoMdCheckmarkCircle /> // Icon to display
+            message: "Your comment has been submitted for review."
           });
         updateCommentLocally(editCommentId, value, isAdmin ? "accepted" : "pending");
         setIsEditComment(false)

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { searchBlogPosts } from "../../../utils/blog-api";
 import debounce from "lodash/debounce";
 import BlogsHeader from "./BlogsHeader";
 import BlogList from "./BlogList";
@@ -7,56 +6,27 @@ import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
 import "./Blogs.scss";
 import Footer from "../../FooterPages";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
-import logError from "../../../utils/logError";
+import { useSearchMutation } from "../../../apis/mutations/blogs-mutations";
 
 const Blogs = () => {
   const {
     acceptedPosts,
     loading,
-    setLoading,
-    setAcceptedPosts,
     allPostsLoaded,
-    setAllPostsLoaded,
     errorDisplayPosts,
     searchQuery,
-    setPostsToDisplay,
-    fetchAcceptedData
+    setPostsToDisplay
   } = useBlogPosts(); // Use the context hook
-  const [fetchedFirstBlog, setFetchedFirstBlog] = useState(false);
-  const [previousQuery, setPreviousQuery] = useState('');
-
+  const [previousQuery, setPreviousQuery] = useState("");
   const footerRef = useRef();
-  const debouncedSearch = async (query) => {
-    try {
-      // Check if the current search query is the same as the previous one
-      if (query === previousQuery) {
-        return;
-      } else if (query?.value === "" || query === "") {
-        if (!fetchedFirstBlog) {
-          fetchAcceptedData(1);
-          setFetchedFirstBlog(true)
-          setPreviousQuery(query);
-          return;
-        }
-        return;
-      }
-      searchBlogPosts(query).then((response) => {
-        if (response.status === 200) {
-          setAcceptedPosts(response.data);
-          setAllPostsLoaded(true)
-          setPreviousQuery(query);
-          setFetchedFirstBlog(false);
-        } else {
-          logError("Error searching blog posts");
-        }
-      });
-
-    } catch (error) {
-      logError("Error searching blog posts:", error);
-    } finally {
-      setLoading(false);
+  const searchMutation = useSearchMutation(searchQuery);
+  const counterRef = useRef(0);
+  const debouncedSearch = debounce((query) => {
+    if (query !== previousQuery) {
+      searchMutation.mutate(query);
+      setPreviousQuery(query);
     }
-  };
+  }, 500);
 
   const handleSearchChange = (event) => {
     const query = event.target.value.trim();
@@ -68,35 +38,31 @@ const Blogs = () => {
       debouncedSearch(searchQuery.current);
     }
   };
-
   useEffect(() => {
     const handleScrollToFooter = debounce((entries) => {
       const footerEntry = entries[0];
-      if (footerEntry.isIntersecting && !allPostsLoaded) {
-        // Reached the footer, fetch and display 2 more posts
-        setPostsToDisplay((prevPostsToDisplay) => prevPostsToDisplay + 2);
+      if (footerEntry.isIntersecting && !allPostsLoaded && acceptedPosts?.length > 0) {
+        counterRef.current += 1;
+        setPostsToDisplay((prevPostsToDisplay) =>
+          (counterRef.current <= 2 ? prevPostsToDisplay + 3 : prevPostsToDisplay + 4));
       }
     }, 200);
-
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4 // specify position of the element
+      threshold: 0.3
     };
 
     const observer = new IntersectionObserver(handleScrollToFooter, options);
 
-    // Attach the observer to the footer element
     if (footerRef.current) {
       observer.observe(footerRef.current);
     }
 
     return () => {
-      // Disconnect the observer when the component unmounts
       observer.disconnect();
     };
-  }, [allPostsLoaded]);
-
+  }, [allPostsLoaded, acceptedPosts, setPostsToDisplay]);
   return (
     <main className="Blogs">
       <div className="container">
@@ -105,19 +71,16 @@ const Blogs = () => {
           handleSearchKeyPress={handleSearchKeyPress}
           handleSearchChange={handleSearchChange}
         />
-        <BlogList
-          acceptedPosts={acceptedPosts}
-          setAcceptedPosts={(newPosts) => setAcceptedPosts(newPosts)}
-        />
+        <BlogList acceptedPosts={acceptedPosts} />
         {errorDisplayPosts ? (
           <p className="finished-message">
             {"An error occurred while fetching blog posts."}
           </p>
-        ) : acceptedPosts?.length <= 0 ? (
+        ) : acceptedPosts && acceptedPosts?.length <= 0 ? (
           <p className="finished-message">No results found!</p>
-        ) : allPostsLoaded && acceptedPosts?.length > 0 ? (
+        ) : allPostsLoaded ? (
           <p className="finished-message">All blog posts have been loaded.</p>
-        ) : loading ? (
+        ) : loading ? ( // Check for both loading and isSearching
           <p className="finished-message">Loading....</p>
         ) : (
           <ScrollDownArrow />
