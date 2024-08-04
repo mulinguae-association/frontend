@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import "./AuthStyle.scss";
-import { submitRegister } from '../../utils/auth-api';
+import { submitRegister } from '../../apis/auth-api';
 import { notifyError, notifySuccess } from '../Notify';
 import { useNavigate } from 'react-router';
 import { FaGlobe } from 'react-icons/fa';

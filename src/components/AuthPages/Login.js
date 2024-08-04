@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./AuthStyle.scss";
-import { submitLogin } from '../../utils/auth-api'; // Replace with your login API function
-import { notifyError, notifySuccess } from '../Notify'; // Replace with your notification component
+import { submitLogin } from '../../apis/auth-api';
+import { notifyError, notifySuccess } from '../Notify';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { useAuth } from '../../contexts/AuthContext';
@@ -17,11 +17,15 @@ function Login() {
   const { t } = useTranslation("authPages/login")
   const [formData, setFormData] = useState({
     email: '',
-    password: '',
+    password: ''
   });
-  const { setUserData } = useAuth();
+  const { userData, setUserData } = useAuth();
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (userData) navigate(`/${i18next.language}/pages/Blogs`);
+  }, [userData, navigate])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
