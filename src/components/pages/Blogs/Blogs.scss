@@ -1,6 +1,7 @@
 /* Import global colors */
 @import "../../../globalStyles/colors";
 @import "../../../globalStyles/mixins/mixins.scss";
+@import "../../../globalStyles/animations/index.scss";
 
 /* Styles for the Blogs component */
 .Blogs {
@@ -11,19 +12,31 @@
     cursor: pointer;
   }
   .search {
-    width: 50rem;
-    width: clamp(98%, 45vw, 50rem);
-    height: 50px;
-    border-radius: 30px;
-    padding: 0 10px;
-    border: none;
-    outline: 2px solid $white-color;
-    font-size: 15px;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 10px $blue-shadow-light;
-    background: none;
-    &:focus {
-      outline-color: orangered;
+    position: relative;
+    .loader-icon {
+      display: inline-block;
+      animation: spin 1s linear infinite;
+      font-size: large;
+      position: absolute;
+      color: $darkBlue-color;
+      top: -26px;
+      transform-origin: center 44%;
+    }
+    .input-search {
+      width: 50rem;
+      width: clamp(98%, 45vw, 50rem);
+      height: 50px;
+      border-radius: 30px;
+      padding: 0 10px;
+      border: none;
+      outline: 2px solid $white-color;
+      font-size: 15px;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 10px $blue-shadow-light;
+      background: none;
+      &:focus {
+        outline-color: orangered;
+      }
     }
     &.smSC {
       display: none;
