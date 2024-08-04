@@ -1,20 +1,17 @@
 import React from "react";
 import "./NotificationPopup.scss";
 import { IoMdCheckmarkCircle, IoMdCloseCircle } from "react-icons/io";
-import { useClickOutside } from "../../utils/ClickOutside";
 
 const NotificationPopup = ({ message, setNotification }) => {
-  const notifcationPopup = useClickOutside(() => { setNotification(null) })
-
   const handleClose = () => {
-    setNotification(null);
+    setNotification({});
   };
   if (!message) {
     return null; // Don't render anything if there's no message
   }
   return (
     <div className={`notification_popup`}>
-      <div ref={notifcationPopup} className="popup_content">
+      <div className="popup_content">
         <div className="icon">
           <IoMdCheckmarkCircle />
         </div>

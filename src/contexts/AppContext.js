@@ -1,7 +1,7 @@
-import React, { createContext, useCallback, useState } from 'react';
-import { fetchTeachers } from '../utils/apiUtility';
-import { useContext } from 'react';
+import React, { createContext, useCallback, useState, useContext } from 'react';
+import { fetchTeachers } from '../apis/apiUtility';
 import logError from '../utils/logError';
+import NotificationPopup from '../components/HelperComponents/NotificationPopup';
 
 export const AppContext = createContext();
 
@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isBtnLoading, setIsBtnLoading] = useState({});
   const [teachers, setTeachers] = useState([]);
-  const [notificationPopup, setNotificationPopup] = useState(null);
+  const [notificationPopup, setNotificationPopup] = useState({ message: '' });
   // Function to set loading state for a specific button
   const setButtonLoading = (buttonKey, isLoading) => {
     setIsBtnLoading((prevState) => ({
@@ -41,6 +41,12 @@ export const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider value={contextValues}>
       {children}
+      {notificationPopup && (
+        <NotificationPopup
+          message={notificationPopup.message}
+          setNotification={setNotificationPopup}
+        />
+      )}
     </AppContext.Provider>
   );
 };

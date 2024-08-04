@@ -33,6 +33,9 @@
       @include abs(15px 15px 0 0);
       font-size: 25px;
       cursor: pointer;
+      &:hover {
+        color: orangered;
+      }
     }
   }
 }
