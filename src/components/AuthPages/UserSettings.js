@@ -7,17 +7,18 @@ import { useTranslation } from 'react-i18next';
 import Tooltip from '../HelperComponents/toolTip';
 import { notifyError, notifySuccess } from '../Notify';
 import "./UserSettings.scss";
+import { useQueryClient } from 'react-query';
 
 function UserSettings() {
   const { t } = useTranslation("authPages/userProfile");
   const { userData, setUserData } = useAuth();
-  const { fetchAcceptedData } = useBlogPosts();
+  const { postsToDisplay, setPostsToDisplay } = useBlogPosts();
   const { isBtnLoading, setButtonLoading } = useGlobal();
+  const queryClient = useQueryClient();
 
   const [name, setName] = useState(userData?.name || '');
   const [email, setEmail] = useState(userData?.email || '');
   const [profileImage, setProfileImage] = useState(null);
-
   const handleNameChange = (e) => setName(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
 
@@ -48,18 +49,15 @@ function UserSettings() {
 
     try {
       setButtonLoading("userSettingsBtn", true);
-      const res = await axios.put('/api/auth/user/update', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
+      const { data } = await axios.put('/api/auth/user/update', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
       });
-
-      if (res.status === 200) {
-        notifySuccess(res.data.message);
-        setUserData(res.data.data);
-        fetchAcceptedData();
-        setProfileImage(null);
-      } else {
-        notifyError(res.data.error);
-      }
+      notifySuccess(data.message);
+      setProfileImage(null);
+      setUserData(data.data);
+      postsToDisplay > 1
+        ? setPostsToDisplay(1)
+        : queryClient.invalidateQueries(["acceptedPosts", postsToDisplay])
     } catch (error) {
       notifyError(error.response?.data?.error || error.message);
     } finally {
