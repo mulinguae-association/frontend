@@ -11,22 +11,35 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { AuthProvider } from "./contexts/AuthContext";
 import { BlogPostsProvider } from "./contexts/BlogsContext";
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 // Call the registerServiceWorker function to register the service worker
 registerServiceWorker();
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			refetchOnWindowFocus: false,
+			retry: 1
+		}
+	}
+});
+
 root.render(
 	<React.StrictMode>
-		<AppProvider>
-			<BlogPostsProvider>
-				<AuthProvider>
-					<I18nextProvider i18n={i18n}>
-						<BrowserRouter>
-							<App />
-							<ToastContainer />
-						</BrowserRouter>
-					</I18nextProvider>
-				</AuthProvider>
-			</BlogPostsProvider>
-		</AppProvider>
+		<QueryClientProvider client={queryClient}>
+			<AppProvider>
+				<BlogPostsProvider>
+					<AuthProvider>
+						<I18nextProvider i18n={i18n}>
+							<BrowserRouter>
+								<App />
+								<ToastContainer />
+							</BrowserRouter>
+						</I18nextProvider>
+					</AuthProvider>
+				</BlogPostsProvider>
+			</AppProvider>
+		</QueryClientProvider>
 	</React.StrictMode>
 );
