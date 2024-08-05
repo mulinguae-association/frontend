@@ -1,6 +1,7 @@
 // Import global styles
 @import "../../../globalStyles/colors";
 @import "../../../globalStyles/mixins/mixins.scss";
+@import "../../Dashboard/Dashboard.scss";
 
 .teachers_head {
   color: $darkBlue-color;
@@ -16,14 +17,14 @@
   border-radius: 10px;
 
   .swiper {
-    width: 90%;
+    width: 95%;
   }
   // Styles for .teacher_card
   .teacher_card {
     background-color: $white-color;
     box-shadow: 0 10px 10px $blue-shadow-light;
     @include rel();
-    width: 90%;
+    width: 100%;
     min-height: 350px;
     height: 100%;
     margin: 0 auto;
@@ -51,6 +52,7 @@
         margin: 0 auto;
         border-radius: 50%;
         background-color: #f3f3f3;
+        outline: 2px solid slategray;
         @include flexbox($alignItems: center, $justifyContent: center);
         overflow: hidden;
         @include rel();
@@ -60,6 +62,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: top;
         }
       }
 
@@ -161,7 +164,7 @@
         font-size: 20px;
         font-weight: bold;
         border-color: green;
-        @include abs(0 26px);
+        @include abs(0);
         @include flexbox($alignItems: center, $justifyContent: center);
         cursor: pointer;
         border: 1px solid;
@@ -273,8 +276,10 @@
       height: 150px;
       background-color: $lightgray-color;
       border-radius: 50%;
+      outline: 2px solid slategray;
       box-shadow: 0 10px 20px rgba($blue-shadow-light, 80%);
       object-fit: cover;
+      object-position: top;
     }
   }
 
