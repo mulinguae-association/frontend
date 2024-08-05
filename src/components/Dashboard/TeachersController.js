@@ -3,8 +3,10 @@ import InputField from "../HelperComponents/InputField";
 import Tooltip from '../HelperComponents/toolTip';
 import { useState } from 'react';
 import { useRef } from 'react';
+import { useGlobal } from '../../contexts/AppContext';
 
-const TeachersController = ({ handleFormSubmit, isLoading }) => {
+const TeachersController = ({ handleFormSubmit }) => {
+  const { isBtnLoading } = useGlobal();
   const fileInputRef = useRef(null);
   const [formState, setFormState] = useState({
     firstName: '',
@@ -21,7 +23,7 @@ const TeachersController = ({ handleFormSubmit, isLoading }) => {
     classroom_management: '',
     behavior_management: '',
     additional_info: '',
-    selectedImage: null,
+    image: null,
   });
 
   const handleImageChange = (e) => {
@@ -29,15 +31,16 @@ const TeachersController = ({ handleFormSubmit, isLoading }) => {
     const maxImageSize = 1024 * 1024; // 1 MB
 
     if (file && file.size <= maxImageSize) {
-      setFormState({ ...formState, selectedImage: file });
+      setFormState({ ...formState, image: file });
     } else {
       alert('Image size exceeds the maximum allowed limit.');
-      setFormState({ ...formState, selectedImage: null });
+      setFormState({ ...formState, image: null });
       if (fileInputRef.current) {
         fileInputRef.current.value = '';
       }
     }
   };
+
   return (
     <section className='teacher_form' >
       <h1>Add Teacher Information</h1>
@@ -99,7 +102,7 @@ const TeachersController = ({ handleFormSubmit, isLoading }) => {
           />
         </div>
         <label className="upload_image" htmlFor="image">
-          {!formState.selectedImage ? 'Upload Image' : formState.selectedImage.name}
+          {!formState.image ? 'Upload Image' : formState.image.name}
           <Tooltip text="choose image less than 1MB" />
         </label>
         <input
@@ -107,11 +110,11 @@ const TeachersController = ({ handleFormSubmit, isLoading }) => {
           ref={fileInputRef}
           type="file"
           accept="image/*"
+          name='image'
           onChange={handleImageChange}
-          required
         />
         <button type="submit">
-          {isLoading ? 'Adding Teacher...' : 'Add Teacher'}
+          {isBtnLoading['createTeacherBtn'] ? 'Adding Teacher...' : 'Add Teacher'}
         </button>
       </form>
     </section>

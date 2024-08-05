@@ -3,7 +3,7 @@ import logError from '../../utils/logError';
 import handleError from '../../utils/handleError';
 import { createComment, fetchAcceptedPosts, handleReplySubmit, interactWithComment, refuseComment, removeBlogPost, searchBlogPosts } from '../blog-api';
 import { useBlogPosts } from '../../contexts/BlogsContext';
-import { notifySuccess } from '../../components/Notify';
+import { notifyError, notifySuccess } from '../../components/Notify';
 import { useGlobal } from '../../contexts/AppContext';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -24,7 +24,7 @@ export const useRemoveBlogMutation = (setShowModal) => {
       notifySuccess(res.message)
     },
     onError: (err, _, context) => {
-      handleError(err);
+      notifyError(handleError(err));
       logError(err.message);
       queryClient.setQueryData(['acceptedPosts', postsToDisplay], context.previousPost);
     },
@@ -63,7 +63,7 @@ export const useRemoveCommentMutation = () => {
       onError: (error, varia, context) => {
         queryClient.setQueryData(['acceptedPosts', postsToDisplay], context.previousPosts);
         logError('Error removing comment:', error);
-        handleError(error)
+        notifyError(handleError(error))
       }
     }
   );
@@ -110,7 +110,7 @@ export const useCreateCommentMutation = () => {
       onError: (err, { blogId }, context) => {
         queryClient.setQueryData(["acceptedPosts", postsToDisplay], context.previousPosts);
         logError(err);
-        handleError(err);
+        notifyError(handleError(err));
       },
       onSettled: (data, variab, { blogId }) => {
         setButtonLoading(`postComment_${blogId}`, false)
@@ -177,7 +177,7 @@ export const useAddReplyMutation = (setReplyContent) => {
       },
       onError: (error) => {
         logError('Error removing comment:', error);
-        handleError(error)
+        notifyError(handleError(error))
       },
       onSettled: (res, err, { parentCommentId }) => {
         const buttonKey = `replyCommentBtn_${parentCommentId}`
@@ -244,7 +244,7 @@ export const useUpdateInteractionMutation = () => {
       onError: (err, { id }, context) => {
         queryClient.setQueryData(["acceptedPosts", postsToDisplay], context.previousPosts);
         logError(err);
-        handleError(err);
+        notifyError(handleError(err));
       }
     });
 }

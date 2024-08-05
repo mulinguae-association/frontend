@@ -82,7 +82,7 @@ const CreateBlog = () => {
         }
       },
       onError(err) {
-        handleError(err)
+        notifyError(handleError(err))
       }
     }
   )

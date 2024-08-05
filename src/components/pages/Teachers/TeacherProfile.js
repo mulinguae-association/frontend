@@ -5,25 +5,22 @@ import "./Teachers.scss";
 import { useTranslation } from 'react-i18next';
 
 const TeacherProfile = () => {
-  const { teachers, getTeachers } = useContext(AppContext);
+  const { teachers } = useContext(AppContext);
   const { t } = useTranslation('pages/teachers');
   const { teacherId } = useParams();
 
   useEffect(() => {
-    getTeachers();
-  }, [getTeachers]);
-
-  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   // Find the teacher with matching teacherId
-  const teacher = teachers.find(teacher => teacher.firstName + "_" + teacher._id === teacherId);
+  const teacher = teachers?.find(teacher => `${teacher.firstName}_${teacher._id}` === teacherId);
 
   if (!teacher) {
     return <div className='not-found'>Teacher not found</div>;
   }
-
+  const teacherImg = typeof teacher?.image === "object"
+    ? URL.createObjectURL(teacher?.image)
+    : teacher?.image;
   return (
     <main className='page_content teacher_profile'>
       <div className='container'>
@@ -38,11 +35,11 @@ const TeacherProfile = () => {
             <img
               width="300px"
               height="300px"
-              src={teacher?.image}
+              src={teacherImg}
               onError={(e) => {
                 e.target.src = "/images/fallBackUser.png";
               }}
-              alt={teacher?.firstName + ' image'}
+              alt={`${teacher?.firstName} image`}
             />
           </header>
           <article className='secondary_info'>

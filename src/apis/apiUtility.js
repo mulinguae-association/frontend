@@ -15,7 +15,7 @@ const createTeacher = async (formData) => {
 
   } catch (error) {
     logError('Error adding teacher:', error);
-    return error.response?.data?.error;
+    throw error;
   }
 }
 
@@ -43,7 +43,7 @@ const updateTeacher = async (teacherId, updatedTeacher) => {
 
   } catch (error) {
     logError('Error updating teacher:', error);
-    return { success: false, error: error.message };
+    throw error;
   }
 };
 
@@ -67,7 +67,7 @@ const deleteTeacher = async (teacherId) => {
 
   } catch (error) {
     logError('Error deleting teacher:', error);
-    return { success: false, error: error.message };
+    throw error;
   }
 };
 

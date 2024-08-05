@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 import "./Teachers.scss";
 import "../pagesStyle.scss";
 import { useTranslation } from 'react-i18next';
@@ -106,7 +106,9 @@ const Teachers = () => {
               </h2>
             </header>
             <div id="meetOurTeachers" className='teachers_overview'>
-              <TeachersOverview t={t} />
+              <Suspense fallback="Loading....">
+                <TeachersOverview t={t} />
+              </Suspense>
             </div>
           </section>
           <footer>
