@@ -11,7 +11,7 @@ import { useQueryClient } from 'react-query';
 
 function UserSettings() {
   const { t } = useTranslation("authPages/userProfile");
-  const { userData, setUserData } = useAuth();
+  const { userData } = useAuth();
   const { postsToDisplay, setPostsToDisplay } = useBlogPosts();
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const queryClient = useQueryClient();
@@ -54,7 +54,7 @@ function UserSettings() {
       });
       notifySuccess(data.message);
       setProfileImage(null);
-      setUserData(data.data);
+      queryClient.setQueryData("userProfile", data.data);
       postsToDisplay > 1
         ? setPostsToDisplay(1)
         : queryClient.invalidateQueries(["acceptedPosts", postsToDisplay])

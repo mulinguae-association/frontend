@@ -1,6 +1,17 @@
 import axios from 'axios';
 import logError from '../utils/logError';
 
+export const fetchUserProfile = async () => {
+  try {
+    const res = await axios.get('/api/auth/profile');
+    return res.data;
+  } catch (err) {
+    logError(err);
+    throw err;
+  }
+};
+
+
 export async function submitRegister(RegisterData) {
   try {
     const response = await axios.post(`/api/auth/register`, RegisterData);
@@ -45,6 +56,6 @@ export async function submitLogout() {
 
   } catch (error) {
     logError("Error logging out:", error);
-    return { error: error.message || "An error occurred" };
+    throw error;
   }
 }

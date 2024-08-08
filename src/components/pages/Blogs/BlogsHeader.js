@@ -2,25 +2,30 @@ import React, { useState } from 'react';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import { submitLogout } from '../../../apis/auth-api';
-import { notifySuccess } from '../../Notify';
+import { notifyError, notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
 import UserMenu from './UserMenu';
 import i18next from 'i18next';
 import SearchBar from './SearchBar';
 import logError from '../../../utils/logError';
+import { useQueryClient } from 'react-query';
+import handleError from '../../../utils/handleError';
 
 const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) => {
-  const { userData, setUserData, isAuth, setIsAuth } = useAuth();
+  const { userData, isAuth, setIsAuth } = useAuth();
   const [showUserMenu, setShowMenuUser] = useState(false);
+  const queryClient = useQueryClient();
   const handleLogout = async () => {
     try {
       const res = await submitLogout();
       notifySuccess(res.data);
       // Update the authentication status to reflect the logout.
       setIsAuth(false);
-      setUserData(null)
+      await queryClient.resetQueries("userProfile")
+      setShowMenuUser(false);
     } catch (err) {
       logError(err);
+      notifyError(handleError(err));
     }
   };
 
@@ -43,14 +48,14 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
               <img
                 width="150px"
                 height="150px"
-                src={userData.profileImage ? userData.profileImage : '/images/fallBackUser.png'}
+                src={userData?.profileImage ? userData.profileImage : '/images/fallBackUser.png'}
                 alt='user_image' onError={(e) => e.target.src = "/images/fallBackUser.png"}
                 loading='lazy'
               />
 
             </div>
             <div onClick={() => (setShowMenuUser((prev) => !prev))} className='text_info'>
-              <h2>{userData.name}</h2>
+              <h2>{userData?.name}</h2>
               <span><IoMdArrowDropdown size={20} /></span>
             </div>
             {showUserMenu && <UserMenu handleLogout={handleLogout} setShowMenuUser={setShowMenuUser} />}

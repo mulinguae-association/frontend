@@ -3,7 +3,6 @@ import "./AuthStyle.scss";
 import { submitLogin } from '../../apis/auth-api';
 import { notifyError, notifySuccess } from '../Notify';
 import { useNavigate } from 'react-router';
-import axios from 'axios';
 import { useAuth } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import { FaGlobe } from 'react-icons/fa';
@@ -12,6 +11,7 @@ import InputField from '../HelperComponents/InputField'
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import logError from '../../utils/logError';
+import { useQueryClient } from 'react-query';
 
 function Login() {
   const { t } = useTranslation("authPages/login")
@@ -19,8 +19,9 @@ function Login() {
     email: '',
     password: ''
   });
-  const { userData, setUserData } = useAuth();
+  const { userData } = useAuth();
   const { isBtnLoading, setButtonLoading } = useGlobal();
+  const queryClient = useQueryClient();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +32,7 @@ function Login() {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: value
     });
   };
 
@@ -53,8 +54,7 @@ function Login() {
         password: ''
       });
       notifySuccess("Login successful");
-      const response = await axios.get('/api/auth/profile');
-      setUserData(response.data);
+      queryClient.setQueryData("userProfile", res);
       navigate(`/${i18next.language}/pages/Blogs`);
     } catch (error) {
       notifyError(error.message);

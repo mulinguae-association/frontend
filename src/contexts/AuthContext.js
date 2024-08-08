@@ -1,41 +1,42 @@
-// AuthContext.js
-import axios from "axios";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import { useQuery } from "react-query";
 import { notifyError } from "../components/Notify";
-import logError from "../utils/logError";
+import handleError from "../utils/handleError";
+import { fetchUserProfile } from "../apis/auth-api";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [userData, setUserData] = useState(null);
   const [isAuth, setIsAuth] = useState(false);
+  const { data: userData } = useQuery("userProfile", fetchUserProfile, {
+    retry: false, // Don't retry on failure
+    onError: (err) => {
+      setIsAuth(false);
+      if (err.response?.status === 401) {
+        if (err.response.data.message === "Token Expired") {
+          // Only show error if the user is already authenticated
+          notifyError('Your session has expired. Please log in again.');
+        }
+        setIsAuth(false);
+
+      } else {
+        notifyError(handleError(err));
+      }
+    },
+    onSuccess: (data) => {
+      setIsAuth(true);
+    },
+    onSettled: () => {
+      console.log('Query has settled');
+    }
+  });
 
   useEffect(() => {
-    (async () => {
-      try {
-        if (!userData) {
-          const res = await axios.get('/api/auth/profile')
-          if (res.status === 200) {
-            setUserData(res.data);
-          }
-          if (res.status === 401) {
-            setUserData(null)
-            setIsAuth(false)
-          }
-        }
-        setIsAuth(!!userData);
-      }
-      catch (err) {
-        logError(err);
-        if (err.response?.status === 401) {
-          notifyError(err.response.data.message)
-          setIsAuth(false)
-        }
-      }
-    })()
+    setIsAuth(!!userData)
   }, [userData]);
+
   return (
-    <AuthContext.Provider value={{ userData, setUserData, isAuth, setIsAuth }}>
+    <AuthContext.Provider value={{ userData, isAuth, setIsAuth }}>
       {children}
     </AuthContext.Provider>
   );
