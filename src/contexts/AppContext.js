@@ -16,7 +16,9 @@ export const AppProvider = ({ children }) => {
       [buttonKey]: isLoading
     }));
   };
-  const { data, isLoading, isError, error } = useQuery(["getTeachers"], () => fetchTeachers());
+  const { data, isLoading, isError, error } = useQuery(["getTeachers"], () => fetchTeachers(), {
+    cacheTime: Infinity
+  });
   // Create an object containing the values to be exposed in the context
   const contextValues = {
     isAppLoading,
