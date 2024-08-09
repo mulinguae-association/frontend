@@ -52,7 +52,8 @@
         margin: 0 auto;
         border-radius: 50%;
         background-color: #f3f3f3;
-        outline: 2px solid slategray;
+        outline: 2px solid rgba($darkBlue-color, 18%);
+        padding: 2px;
         @include flexbox($alignItems: center, $justifyContent: center);
         overflow: hidden;
         @include rel();
@@ -63,6 +64,7 @@
           height: 100%;
           object-fit: cover;
           object-position: top;
+          border-radius: 50%;
         }
       }
 
@@ -192,6 +194,12 @@
   @media (max-width: 767px) {
     .swiper {
       width: 100%;
+      .swiper-pagination-fraction,
+      .swiper-pagination-custom,
+      .swiper-horizontal > .swiper-pagination-bullets,
+      .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0;
+      }
     }
   }
 }
@@ -276,7 +284,8 @@
       height: 150px;
       background-color: $lightgray-color;
       border-radius: 50%;
-      outline: 2px solid slategray;
+      outline: 2px solid rgba($darkBlue-color, 18%);
+      padding: 2px;
       box-shadow: 0 10px 20px rgba($blue-shadow-light, 80%);
       object-fit: cover;
       object-position: top;

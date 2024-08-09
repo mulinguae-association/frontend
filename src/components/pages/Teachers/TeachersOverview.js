@@ -69,7 +69,7 @@ const TeachersOverview = ({ t }) => {
             slidesPerView: 1,
             spaceBetween: 20
           },
-          768: {
+          640: {
             slidesPerView: 2,
             spaceBetween: 30
           },
@@ -111,7 +111,7 @@ const TeachersOverview = ({ t }) => {
                   </>
                   : <EditTeacherForm teacher={editingTeacher} onEdit={setEditingTeacher} />
                 }
-                {isAuth && (userData.role === "admin") &&
+                {isAuth && (userData?.role === "admin") &&
                   <>
                     <button className='deleteBtn' onClick={() => handleDeleteClick(teacher._id)}>x</button>
                     <button style={arLang ? { left: "20px" } : null} className='editBtn' onClick={() => handleEditTeacher(teacher)}>
