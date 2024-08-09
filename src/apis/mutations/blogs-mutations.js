@@ -1,12 +1,43 @@
 import { useMutation, useQueryClient } from 'react-query';
 import logError from '../../utils/logError';
 import handleError from '../../utils/handleError';
-import { createComment, fetchAcceptedPosts, handleReplySubmit, interactWithComment, refuseComment, removeBlogPost, searchBlogPosts } from '../blog-api';
+import {
+  createComment, fetchAcceptedPosts, handleReplySubmit,
+  interactWithComment, refuseComment, removeBlogPost,
+  searchBlogPosts, submitBlogPost
+} from '../blog-api';
 import { useBlogPosts } from '../../contexts/BlogsContext';
 import { notifyError, notifySuccess } from '../../components/Notify';
 import { useGlobal } from '../../contexts/AppContext';
 import { useAuth } from '../../contexts/AuthContext';
 
+export const useAddBlogMutation = () => {
+  const { acceptedPosts, postsToDisplay } = useBlogPosts();
+  const { setNotificationPopup, setButtonLoading } = useGlobal();
+  const { userData } = useAuth();
+  const queryClient = useQueryClient();
+  return useMutation((newPost) => submitBlogPost(newPost),
+    {
+      onMutate: () => {
+        setButtonLoading("addBlogBtn", true)
+      },
+      onSuccess: (data) => {
+        if (userData.role === "admin") {
+          queryClient.setQueryData(['acceptedPosts', postsToDisplay], [data.blogPost, ...acceptedPosts]);
+          notifySuccess("Successfully submitted blog post");
+        } else {
+          setNotificationPopup({ message: "Your Blog has been submitted for review." });
+        }
+      },
+      onError(err) {
+        notifyError(handleError(err))
+      },
+      onSettled: () => {
+        setButtonLoading("addBlogBtn", false);
+      }
+    }
+  )
+}
 export const useRemoveBlogMutation = (setShowModal) => {
   const queryClient = useQueryClient();
   const { postsToDisplay } = useBlogPosts();
@@ -17,7 +48,8 @@ export const useRemoveBlogMutation = (setShowModal) => {
       setButtonLoading("RemoveBlogPost", true);
       await queryClient.cancelQueries(['acceptedPosts', postsToDisplay]);
       const previousPost = queryClient.getQueryData(['acceptedPosts', postsToDisplay]);
-      queryClient.setQueryData(['acceptedPosts', postsToDisplay], (oldPosts) => oldPosts.filter(post => post._id !== blogId));
+      queryClient.setQueryData(['acceptedPosts', postsToDisplay], (oldPosts) =>
+        oldPosts.filter(post => post._id !== blogId));
       return { previousPost };
     },
     onSuccess: (res) => {
@@ -41,19 +73,21 @@ export const useRemoveCommentMutation = () => {
     (commentId) => refuseComment(commentId),
     {
       onMutate: async (commentId) => {
-        const previousPosts = queryClient.getQueryData(['acceptedPosts', postsToDisplay]);
         await queryClient.cancelQueries(['acceptedPosts', postsToDisplay]);
+        const previousPosts = queryClient.getQueryData(['acceptedPosts', postsToDisplay]);
         queryClient.setQueryData(['acceptedPosts', postsToDisplay], (old) => {
           return old.map((post) => ({
             ...post,
-            comments: post.comments.filter((comment) => {
-              if (comment._id === commentId) {
-                return false;
+            comments: post.comments.map((comment) => {
+              if (String(comment._id) === String(commentId)) {
+                return null;
               }
-              comment.replies = comment.replies.filter((reply) => reply._id !== commentId);
-              return true;
-            })
-          }));
+              return {
+                ...comment,
+                replies: comment.replies.filter((reply) => String(reply._id) !== String(commentId))
+              };
+            }).filter(comment => comment !== null)
+          }))
         });
         return { previousPosts }
       },
@@ -94,18 +128,25 @@ export const useCreateCommentMutation = () => {
           )
         return { previousPosts };
       },
-      onSuccess: (res, { blogId }) => {
-        userData?.role === "admin" ?
-          queryClient.setQueryData(["acceptedPosts", postsToDisplay], (oldPosts) =>
+      onSuccess: ({ data }, { blogId, commentData }) => {
+        if (userData?.role === "admin") {
+          notifySuccess("Your Comment Successfully created");
+          return queryClient.setQueryData(["acceptedPosts", postsToDisplay], (oldPosts) =>
             oldPosts.map((post) =>
             (post._id === blogId
               ? {
-                ...post, comments: [res.data.comment, ...post.comments]
+                ...post, comments: post.comments.map((comment) => {
+                  if (comment._id === commentData._id) {
+                    return data.comment
+                  }
+                  return comment;
+                })
               }
               : post)
             )
           )
-          : setNotificationPopup({ message: "Your Comment has been submitted for review" });
+        }
+        setNotificationPopup({ message: "Your Comment has been submitted for review" });
       },
       onError: (err, { blogId }, context) => {
         queryClient.setQueryData(["acceptedPosts", postsToDisplay], context.previousPosts);
@@ -124,6 +165,7 @@ export const useAddReplyMutation = (setReplyContent) => {
   const { postsToDisplay } = useBlogPosts();
   const queryClient = useQueryClient();
   const newComment = {
+    _id: crypto.randomUUID().toString(),
     likes: [],
     loves: [],
     unlikes: [],
@@ -138,7 +180,7 @@ export const useAddReplyMutation = (setReplyContent) => {
       onMutate: async ({ parentCommentId, blogId, replyConetnt }) => {
         await queryClient.cancelQueries(["acceptedPosts", postsToDisplay]);
         const previousPosts = queryClient.getQueryData(["acceptedPosts", postsToDisplay]);
-        const buttonKey = `replyCommentBtn_${parentCommentId}`
+        const buttonKey = `replyCommentBtn_${parentCommentId}`;
         setButtonLoading(buttonKey, true)
         userData?.role === "admin" &&
           queryClient.setQueryData(["acceptedPosts", postsToDisplay], (old) => {
@@ -147,7 +189,11 @@ export const useAddReplyMutation = (setReplyContent) => {
               comments: post.comments.map((comment) => {
                 if (comment._id === parentCommentId) {
                   return {
-                    ...comment, replies: [{ ...newComment, blogId, content: replyConetnt, parentComment: parentCommentId }, ...comment.replies]
+                    ...comment,
+                    replies: [
+                      { ...newComment, blogId, content: replyConetnt, parentComment: parentCommentId },
+                      ...comment.replies
+                    ]
                   }
                 }
                 return comment
@@ -157,8 +203,7 @@ export const useAddReplyMutation = (setReplyContent) => {
         return { previousPosts }
       },
       onSuccess: (res, { parentCommentId }) => {
-        const newComment = res.data?.comment
-        // const acceptedComments = queryClient.getQueryData(["acceptedComments"]);
+        const newCommentRes = res.data?.comment;
         userData?.role === "admin" ?
           queryClient.setQueryData(["acceptedPosts", postsToDisplay], (old) => {
             return old.map((post) => ({
@@ -166,7 +211,12 @@ export const useAddReplyMutation = (setReplyContent) => {
               comments: post.comments.map((comment) => {
                 if (comment._id === parentCommentId) {
                   return {
-                    ...comment, replies: [newComment, ...comment.replies]
+                    ...comment, replies: comment.replies.map((reply) => {
+                      if (reply._id === newComment._id) {
+                        return newCommentRes;
+                      }
+                      return reply;
+                    })
                   }
                 }
                 return comment

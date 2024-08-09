@@ -3,10 +3,10 @@ import 'quill/dist/quill.snow.css'
 import ReactQuill from 'react-quill'
 import { useTranslation } from "react-i18next";
 
-const TextEditor = ({ content, setContent }) => {
+const TextEditor = ({ content, setFormState }) => {
   const { i18n } = useTranslation()
 
-  var modules = {
+  const modules = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
       ['blockquote', 'code-block'],
@@ -22,19 +22,19 @@ const TextEditor = ({ content, setContent }) => {
       [{ 'font': [] }],
       [{ 'align': [] }],
 
-      ['clean'],
+      ['clean']
     ]
   };
 
-  var formats = [
+  const formats = [
     "header", "height", "bold", "italic",
     "underline", "strike", "blockquote",
     "list", "color", 'background', 'font', 'script', 'code-block', "bullet", "indent",
-    "link", "image", "align", "size",
+    "link", "image", "align", "size"
   ];
 
   const handleProcedureContentChange = (content) => {
-    setContent(content);
+    setFormState((prev) => ({ ...prev, content: content }))
   };
 
   return (

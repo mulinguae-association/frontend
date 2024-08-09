@@ -14,6 +14,7 @@ const CommentForm = ({ blogId }) => {
     const commentData = {
       content: comment,
       id: blogId,
+      _id: crypto.randomUUID().toString(),
       parentComment: null,
       replies: [],
       status: "accepted",
