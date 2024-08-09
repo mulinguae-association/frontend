@@ -10,6 +10,8 @@ export const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const { data: userData } = useQuery("userProfile", fetchUserProfile, {
     retry: false, // Don't retry on failure
+    staleTime: 10 * 60 * 1000, // 10 minutes
+    cacheTime: 15 * 60 * 1000, // 15 minutes
     onError: (err) => {
       setIsAuth(false);
       if (err.response?.status === 401) {
