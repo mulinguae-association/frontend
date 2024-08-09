@@ -16,6 +16,7 @@ export const BlogPostsProvider = ({ children }) => {
   const { data, isFetching, isError } =
     useQuery(['acceptedPosts', postsToDisplay], () => fetchAcceptedPosts(postsToDisplay), {
       keepPreviousData: true,
+      cacheTime: Infinity,
       onSuccess: (data) => {
         queryClient.setQueryData(['acceptedPosts', postsToDisplay], data);
         isSearch ?
