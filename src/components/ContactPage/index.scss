@@ -1,24 +1,21 @@
 @import "../../globalStyles/colors";
-@import "../../globalStyles/sharedStyle";
+@import "../../globalStyles/sharedStyles";
+@import "../../globalStyles/mixins/mixins.scss";
 
 .contact {
   text-align: center;
-  background-color: #f2f5f7;
-  position: relative;
+  @include rel();
   padding: 50px 0;
   color: $medium-darkblue;
   z-index: 1;
 
   .contact_info {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox($justifyContent: space-between);
     min-height: 170px;
     margin-top: 2rem;
 
     .col {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexbox($justifyContent: center, $alignItems: center);
       a {
         color: white;
         text-decoration: none;
@@ -34,8 +31,7 @@
     .col:nth-child(2) {
       width: 100%;
       background-color: rgba($primaryDark-color, 0.9);
-      display: flex;
-      flex-direction: column;
+      @include flexbox($direction: column);
       gap: 0;
       max-height: 100%;
     }
@@ -49,7 +45,6 @@
 
     @media (max-width: 768px) {
       flex-direction: column;
-
       .col:nth-child(2),
       .col:first-child,
       .col:last-child {
@@ -60,21 +55,21 @@
 
   .contact_content {
     background: white;
-    position: relative;
-    padding: 50px 10px 70px 10px;
-    border-radius: 10px;
+    @include rel();
+    padding: 50px 10px;
+    border-radius: 20px;
     max-width: 80%;
     margin: 50px auto;
     box-shadow: 0 0 40px $blue-shadow-light;
-    transition: 1s ease;
+    border: 1px solid $blue-shadow-light;
+    transition: 0.5s ease;
 
     @media (max-width: 768px) {
       max-width: 100%;
     }
 
     .user-type-buttons {
-      display: flex;
-      justify-content: center;
+      @include flexbox($justifyContent: center);
 
       .vertical-line {
         height: 100%;
@@ -87,15 +82,13 @@
         width: auto;
         padding: 10px 20px;
         cursor: pointer;
-        position: relative;
+        background-color: #f2f5f7;
+        overflow: hidden;
+        border-radius: 10px 0 10px 0;
+        @include rel();
 
         &:after {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 2px;
-          left: 0;
-          top: 0;
+          @include pseudo(block, absolute, "", 0, 2px, 0px 0 0 0px);
           transition: 0.5s ease;
         }
 
@@ -124,34 +117,35 @@
         width: fit-content;
         margin: 30px auto;
         padding: 6px 0;
-        position: relative;
+        @include rel();
 
         &::after {
-          content: "";
-          position: absolute;
-          bottom: -7.5px;
-          left: 50%;
-          width: 8px;
-          height: 8px;
+          @include pseudo(block, absolute, "", 8px, 8px, 0 0 -7.5px 50%);
           background-color: $medium-darkblue;
           transform: rotate(45deg) translateX(-50%);
+        }
+      }
+      @media (max-width: 468px) {
+        h2 {
+          margin: 20px auto 25px auto;
         }
       }
 
       form {
         .content {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 15px;
+          @include flexbox($wrap: wrap);
+          gap: 18px;
           width: 80%;
           margin: 0 auto;
           padding: 0 10px;
+          @media (max-width: 1024px) {
+            width: 100%;
+            margin: 0 auto;
+          }
         }
 
         div {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          @include flexbox($alignItems: center);
           width: 48%;
 
           label {
@@ -190,6 +184,9 @@
         }
 
         .uploadCv {
+          input {
+            display: none;
+          }
           label {
             background: $medium-darkblue;
             padding: 10px 18px;
@@ -212,7 +209,7 @@
           border-radius: 30px;
           font-weight: bold;
           letter-spacing: 0.5px;
-          margin-top: 1rem;
+          margin-top: 2rem;
           color: white;
           transition: 0.5s ease;
 
@@ -224,17 +221,14 @@
 
         fieldset {
           border: none;
-          display: flex;
-          align-items: center;
+          @include flexbox($alignItems: center, $justifyContent: center);
           width: 250px;
-          justify-content: center;
           text-align: center;
           gap: 15px;
         }
 
         @media (max-width: 767px) {
           width: 100%;
-
           .content {
             width: 100%;
           }
@@ -248,15 +242,21 @@
               min-width: unset;
             }
 
-            @media (max-width: 280px) {
+            @media (max-width: 991px) {
+              width: 85%;
+              margin: 0 auto;
+            }
+
+            @media (max-width: 468px) {
               width: 100%;
+              margin: 0 auto;
             }
           }
         }
       }
     }
 
-    position: relative;
+    @include rel();
   }
 
   h1 {
