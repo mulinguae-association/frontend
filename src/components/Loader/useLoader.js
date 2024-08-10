@@ -1,26 +1,34 @@
-import { useContext } from "react";
-import { useEffect } from "react";
+import { useContext, useEffect, useCallback, useMemo } from "react";
 import { AppContext } from "../../contexts/AppContext";
 
 const useLoader = () => {
-	const { isLoading, setIsLoading } = useContext(AppContext);
+  const { isLoading, setIsLoading } = useContext(AppContext);
 
-	useEffect(() => {
-		const handleLoad = () => {
-			setTimeout(() => {
-				setIsLoading(false);
-			}, 1000);
-		};
-		if (document.readyState === "complete") {
-			handleLoad();
-		} else {
-			document.addEventListener("readystatechange", handleLoad);
-		}
+  // Define handleLoad as a memoized callback
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
+  }, [setIsLoading]);
 
-		return () => {
-			document.removeEventListener("readystatechange", handleLoad);
-		};
-	}, []);
-	return isLoading;
+  useEffect(() => {
+    const onLoad = () => {
+      handleLoad();
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      document.addEventListener("readystatechange", onLoad);
+    }
+
+    return () => {
+      document.removeEventListener("readystatechange", onLoad);
+    };
+  }, [handleLoad]);
+
+  // Memoize isLoading value
+  const memoizedIsLoading = useMemo(() => isLoading, [isLoading]);
+
+  return memoizedIsLoading;
 };
+
 export default useLoader;
