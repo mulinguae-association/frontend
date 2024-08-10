@@ -15,7 +15,7 @@ const InputField = ({
   ...props
 }) => (
   <div className="input_field">
-    <label htmlFor={name} className="visually-hidden" aria-hidden="true">
+    <label htmlFor={id} className="visually-hidden" aria-hidden="true">
       {label}
     </label>
     <input
