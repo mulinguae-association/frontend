@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useGlobal } from '../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
 import InputField from '../HelperComponents/InputField';
+import { BiLoaderAlt } from 'react-icons/bi';
 
 const StudentForm = ({ handleSubmit }) => {
   const { t } = useTranslation("contact");
@@ -33,6 +34,7 @@ const StudentForm = ({ handleSubmit }) => {
             placeholder={t("studentForm.fullNamePlaceholder")}
             value={formData.fullName}
             onChange={handleChange}
+            id="fullName"
             name="fullName"
             required
           />
@@ -43,6 +45,7 @@ const StudentForm = ({ handleSubmit }) => {
             placeholder={t("studentForm.emailPlaceholder")}
             value={formData.email}
             onChange={handleChange}
+            id="email"
             name="email"
             required
           />
@@ -53,6 +56,7 @@ const StudentForm = ({ handleSubmit }) => {
             placeholder={t("studentForm.phoneNumberPlaceholder")}
             value={formData.phoneNumber}
             onChange={handleChange}
+            id="phoneNumber"
             name="phoneNumber"
           />
 
@@ -62,6 +66,7 @@ const StudentForm = ({ handleSubmit }) => {
             placeholder={t("studentForm.countryPlaceholder")}
             value={formData.country}
             onChange={handleChange}
+            id="country"
             name="country"
             required
           />
@@ -72,6 +77,7 @@ const StudentForm = ({ handleSubmit }) => {
             placeholder={t("studentForm.agePlaceholder")}
             value={formData.age}
             onChange={handleChange}
+            id="age"
             name="age"
             required
           />
@@ -83,11 +89,14 @@ const StudentForm = ({ handleSubmit }) => {
             title={t("studentForm.languagesSpokenTitle")}
             value={formData.languagesSpoken}
             onChange={handleChange}
+            id="languagesSpoken"
             name="languagesSpoken"
             required
           />
         </div>
-        <button disabled={isBtnLoading["student"]} type="submit">{isBtnLoading["student"] ? "loading..." : t("studentForm.submitButton")}</button>
+        <button className={isBtnLoading["student"] ? "disabled" : ""} disabled={isBtnLoading["student"]} type="submit">
+          {isBtnLoading["student"] ? <BiLoaderAlt fontSize={20} className='spin-loader' /> : t("studentForm.submitButton")}
+        </button>
       </form>
     </div>
   );

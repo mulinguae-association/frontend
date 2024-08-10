@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useGlobal } from '../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
 import InputField from '../HelperComponents/InputField';
+import { BiLoaderAlt } from 'react-icons/bi';
 
 const TeacherForm = ({ handleSubmit }) => {
   const { t } = useTranslation("contact");
@@ -14,7 +15,7 @@ const TeacherForm = ({ handleSubmit }) => {
     country: '',
     languagesSpoken: '',
     subjectsTaught: '',
-    address: '',
+    address: ''
   });
   const { isBtnLoading } = useGlobal();
 
@@ -24,7 +25,7 @@ const TeacherForm = ({ handleSubmit }) => {
     if (name === 'address') {
       const textarea = e.target;
       textarea.style.height = 'auto';
-      textarea.style.height = textarea.scrollHeight + 'px';
+      textarea.style.height = textarea.scrollHeight + 'px'
     }
     setFormData((prevData) => {
       if (type === 'file') {
@@ -42,6 +43,7 @@ const TeacherForm = ({ handleSubmit }) => {
         <div className='content'>
           <InputField
             label={t("teacherForm.fullNameLabel")}
+            id="fullName"
             type="text"
             placeholder={t("teacherForm.fullNamePlaceholder")}
             value={formData.fullName}
@@ -51,6 +53,7 @@ const TeacherForm = ({ handleSubmit }) => {
           />
           <InputField
             label={t("teacherForm.emailLabel")}
+            id="email"
             type="email"
             placeholder={t("teacherForm.emailPlaceholder")}
             value={formData.email}
@@ -59,6 +62,7 @@ const TeacherForm = ({ handleSubmit }) => {
             required
           />
           <InputField
+            id="phoneNumber"
             label={t("teacherForm.phoneNumberLabel")}
             type="tel"
             placeholder={t("teacherForm.phoneNumberPlaceholder")}
@@ -67,6 +71,7 @@ const TeacherForm = ({ handleSubmit }) => {
             name="phoneNumber"
           />
           <InputField
+            id="country"
             label={t("teacherForm.countryLabel")}
             type="text"
             placeholder={t("teacherForm.countryPlaceholder")}
@@ -76,6 +81,7 @@ const TeacherForm = ({ handleSubmit }) => {
             required
           />
           <InputField
+            id="languagesSpoken"
             label={t("teacherForm.languagesSpokenLabel")}
             type="text"
             placeholder={t("teacherForm.languagesSpokenPlaceholder")}
@@ -86,6 +92,7 @@ const TeacherForm = ({ handleSubmit }) => {
             required
           />
           <InputField
+            id="subjectsTaught"
             label={t("teacherForm.subjectsTaughtLabel")}
             type="text"
             placeholder={t("teacherForm.subjectsTaughtPlaceholder")}
@@ -98,6 +105,7 @@ const TeacherForm = ({ handleSubmit }) => {
             <textarea
               id="address"
               name="address"
+              autoComplete='off'
               placeholder={t("teacherForm.addressLabel")}
               value={formData.address}
               onChange={handleChange}
@@ -115,8 +123,8 @@ const TeacherForm = ({ handleSubmit }) => {
             />
           </div>
         </div>
-        <button disabled={isBtnLoading["teacher"]} type="submit">
-          {isBtnLoading["teacher"] ? t("buttons.loadingText") : t("teacherForm.cvUploadButtonText")}
+        <button className={`${isBtnLoading["teacher"] ? "disabled" : ""}`} disabled={isBtnLoading["teacher"]} type="submit">
+          {isBtnLoading["teacher"] ? <BiLoaderAlt fontSize={20} className='spin-loader' /> : t("teacherForm.cvUploadButtonText")}
         </button>
       </form>
     </div>
