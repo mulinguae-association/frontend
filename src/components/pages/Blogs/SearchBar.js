@@ -2,9 +2,11 @@ import React from 'react';
 import InputField from '../../HelperComponents/InputField'; // Import your InputField component
 import { useBlogPosts } from '../../../contexts/BlogsContext';
 import { BiLoaderAlt } from 'react-icons/bi';
+import { useTranslation } from 'react-i18next';
 
 const SearchBar = (props) => {
   const { isSearching } = useBlogPosts();
+  const { t } = useTranslation("pages/blogs")
   return (
     <div className={`search ${props.className}`}>
       {isSearching ?
@@ -20,7 +22,7 @@ const SearchBar = (props) => {
         id={props.id}
         name={props.id}
         type="search"
-        placeholder="Search by title or user name & click Enter"
+        placeholder={t("searchPlaceholder")}
         onChange={props.handleSearchChange}
         searchQuery={props.searchQuery}
         onKeyDown={props.onKeyDown}

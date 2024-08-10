@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "Cerca per titolo o nome utente e premi Invio",
+  "createABlog": {
+    "name": "Crea un",
+    "special": "Blog"
+  },
+  "Auth": {
+    "login": "Accedi",
+    "register": "Registrati"
+  },
+  "dashBtn": "Cruscotto",
+  "settingsBtn": "Impostazioni",
+  "logoutBtn": "Disconnettersi",
+  "readMore": "Leggi di più",
+  "commentsTitle": "Commenti",
+  "showAllComments": "Mostra tutti i commenti",
+  "showLessComments": "Mostra meno commenti",
+  "parentCommentPlaceholder": "Scrivi il tuo commento",
+  "replyCommentPlaceholder": "Scrivi la tua risposta",
+  "replyBtn": "Rispondere",
+  "postParentComment": "Pubblica",
+  "titlePlaceholder": "Scrivi il titolo del tuo blog",
+  "subTitlePlaceholder": "Scrivi il sottotitolo del tuo blog",
+  "submitBtn": "Invia",
+  "editBtn": "Modifica",
+  "deleteBtn": "Elimina",
+  "cancelBtn": "Annulla",
+  "previewBtn": "Anteprima"
+}

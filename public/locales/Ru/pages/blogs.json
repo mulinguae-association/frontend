@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "Ищите по названию или имени пользователя и нажмите Enter",
+  "createABlog": {
+    "name": "Создать",
+    "special": "Блог"
+  },
+  "Auth": {
+    "login": "Войти",
+    "register": "Регистрация"
+  },
+  "dashBtn": "Панель управления",
+  "settingsBtn": "Настройки",
+  "logoutBtn": "Выйти",
+  "readMore": "Читать далее",
+  "commentsTitle": "Комментарии",
+  "showAllComments": "Показать все комментарии",
+  "showLessComments": "Показать меньше комментариев",
+  "parentCommentPlaceholder": "Напишите ваш комментарий",
+  "replyCommentPlaceholder": "Напишите ваш ответ",
+  "replyBtn": "Ответить",
+  "postParentComment": "Отправить",
+  "titlePlaceholder": "Введите заголовок вашего блога",
+  "subTitlePlaceholder": "Введите подзаголовок вашего блога",
+  "submitBtn": "Отправить",
+  "editBtn": "Редактировать",
+  "deleteBtn": "Удалить",
+  "cancelBtn": "Отменить",
+  "previewBtn": "Предпросмотр"
+}

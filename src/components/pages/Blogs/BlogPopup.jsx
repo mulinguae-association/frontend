@@ -6,6 +6,7 @@ import ReplyForm from "./comments/ReplyForm";
 import Comment from "./comments/Comment";
 import CommentReply from "./comments/CommentReply";
 import sanitizeHtml from "../../../utils/sanitizeHtml";
+import { useTranslation } from "react-i18next";
 
 const BlogPopup = ({
   blog,
@@ -15,6 +16,7 @@ const BlogPopup = ({
   comments,
 }) => {
   const { userData } = useAuth();
+  const { t } = useTranslation("pages/blogs");
   const { isEditComment, handleEdit, setIsEditComment, editCommentId } =
     useCommentEditState();
   return (
@@ -78,7 +80,7 @@ const BlogPopup = ({
               )
             )}
             <button className="popup_close" onClick={() => show(false)}>
-              show less comments
+              {t("showLessComments")}
             </button>
           </div>
         )}

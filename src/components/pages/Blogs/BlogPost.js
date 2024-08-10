@@ -11,6 +11,7 @@ import { useAuth } from "../../../contexts/AuthContext";
 import InteractionComponent from "./interaction/InteractionComments";
 import ConfirmationModal from "../../ConfirmationModal";
 import { useRemoveBlogMutation } from "../../../apis/mutations/blogs-mutations";
+import { detectLanguage } from "../../../utils/detectLanguage";
 
 const BlogPost = ({ blog }) => {
   const [showFullContent, setShowFullContent] = useState(false);
@@ -37,16 +38,19 @@ const BlogPost = ({ blog }) => {
 
   const checkStatus = comments[0]?.status === "accepted";
 
+  // check language to change style and direction
+  const lang = detectLanguage(blog.content.slice(0, 25) || blog.title[0] || blog.subTitle[0] || '')
+  const ArUR = ["Ar", "Ur"].includes(lang);
+
   return (
-    <article className="blog-post">
+    <article style={ArUR ? { direction: "rtl" } : { direction: "ltr" }} className="blog-post">
       <BlogHeader blog={blog} />
-      <BlogContent blog={blog} setShowFullContent={setShowFullContent} />
+      <BlogContent blog={blog} ArUR={ArUR} setShowFullContent={setShowFullContent} />
       <CommentsSection
         comments={comments}
         showAllComments={showAllComments}
         setShowAllComments={setShowAllComments}
         checkStatus={checkStatus}
-
         blogId={blog._id}
       />
       {showAllComments && <div className="overlay"></div>}
@@ -54,6 +58,7 @@ const BlogPost = ({ blog }) => {
       {
         (isAuth && (blog.authorId === userData?.userId || userData?.role === "admin")) &&
         <button
+          style={ArUR ? { left: "15px", right: "unset" } : { left: "unset", right: "15px" }}
           onClick={() => setShowModal(true)}
           className="remove-button"
           disabled={isBtnLoading['RemoveBlogPost']}

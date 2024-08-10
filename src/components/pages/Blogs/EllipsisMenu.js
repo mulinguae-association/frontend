@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import "./ellipsisMenu.scss";
 import { useClickOutside } from '../../../utils/ClickOutside';
+import i18n from '../../../i18n';
+import { useTranslation } from 'react-i18next';
 function EllipsisMenu(props) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language);
+  const { t } = useTranslation("pages/blogs");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -32,9 +36,9 @@ function EllipsisMenu(props) {
         <div className="menu-icon">...</div>
       </div>
       {menuOpen && (
-        <ul className="menu-options">
-          <li onClick={handleEdit}>Edit</li>
-          <li onClick={handleDelete}>Delete</li>
+        <ul className={`menu-options ${isAr_Ur ? "ar" : "en"}`}>
+          <li onClick={handleEdit}>{t("editBtn")}</li>
+          <li onClick={handleDelete}>{t("deleteBtn")}</li>
         </ul>
       )}
     </div>

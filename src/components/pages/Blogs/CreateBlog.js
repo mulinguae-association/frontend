@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TextEditor from "../../../TextEditor";
 import "./Blogs.scss";
 import { notifyError } from "../../Notify";
@@ -10,7 +10,7 @@ import i18n from "../../../i18n";
 import { useNavigate } from "react-router";
 import { useAddBlogMutation } from "../../../apis/mutations/blogs-mutations";
 import { useGlobal } from "../../../contexts/AppContext";
-
+import { useTranslation } from "react-i18next";
 const CreateBlog = () => {
   // State variables
   const [formState, setFormState] = useState({
@@ -19,57 +19,52 @@ const CreateBlog = () => {
     content: "",
     preview: false
   });
+
   const { isBtnLoading } = useGlobal();
-  const { userData } = useAuth();
+  const { userData, isAuth } = useAuth();
+  const editorRef = useRef(null)
   const navigate = useNavigate();
   const avatar = userData?.profileImage;
+  const { t } = useTranslation("pages/blogs");
+  const isRtl = ["Ar", "Ur"].includes(i18n.language)
 
   useEffect(() => {
-    if (!userData) navigate(`/${i18n.language}/login`);
-  }, [userData, navigate])
-  // Function to toggle between preview and edit mode
-  const togglePreview = () => {
-    if (formState.title !== "" && formState.content !== "") {
-      setFormState({ ...formState, preview: !formState.preview });
-    } else if (formState.content === "") {
-      notifyError("Please write blog content.");
+    if (isAuth === undefined || userData === undefined) {
+      // Wait until the authentication status is determined
       return;
     }
-    notifyError("Please write the title of the blog.");
+    if (!isAuth) {
+      navigate(`/${i18n.language}/login`);
+    }
+  }, [userData, isAuth, navigate]);
 
+  // Function to toggle between preview and edit mode
+  const togglePreview = () => {
+    if (formState.title === "" || formState.content === "") {
+      notifyError("Please fill in both the title and content fields.");
+      return;
+    }
+    setFormState(prevState => ({ ...prevState, preview: !prevState.preview }));
   };
-
   // Function to render content based on preview state
   const renderContent = () => {
-    if (formState.preview && formState.content.length > 1) {
+    if (formState.preview) {
       return (
         <>
           <h1>{formState.title}</h1>
-          <h2>{formState.subtitle}</h2> {/* Display subtitle */}
+          {formState.subtitle && <h2>{formState.subtitle}</h2>}
           <div className="preview-content" dangerouslySetInnerHTML={{ __html: sanitizeHtml(formState.content) }}></div>
         </>
       );
     }
-    return <TextEditor content={formState.content} setFormState={setFormState} />;
-
-  };
-
-  // Function to render the preview/edit button
-  const renderPreviewButton = () => {
-    return (
-      <button
-        style={{ zIndex: 99 }}
-        className="preview-button"
-        type="button"
-        onClick={togglePreview}
-      >
-        {formState.preview ? "Edit" : "Preview"}
-      </button>
-    );
+    return <TextEditor
+      setFormState={setFormState}
+      editorRef={editorRef}
+      value={formState.content} />;
   };
 
   // Function to handle form submission
-  const { mutate: AddBlogMutation } = useAddBlogMutation();
+  const { mutate: addBlogMutation } = useAddBlogMutation();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formState.preview) {
@@ -80,17 +75,17 @@ const CreateBlog = () => {
     }
 
     try {
-      AddBlogMutation({
+      await addBlogMutation({
         title: formState.title,
         subtitle: formState.subtitle,
         content: formState.content,
         avatar
       });
-    } catch (error) {
-      notifyError(error.message)
-      logError("Error submitting blog post:", error);
-    } finally {
       setFormState({ title: "", subtitle: "", content: "", preview: false });
+      editorRef.current.commands.clearContent()
+    } catch (error) {
+      notifyError(error.message);
+      logError("Error submitting blog post:", error);
     }
   };
 
@@ -98,36 +93,43 @@ const CreateBlog = () => {
     <main className="create_blogs">
       <div className="container">
         <form className="form-container" onSubmit={handleSubmit}>
-          <h1>Create A <span className="special">Blog</span></h1>
+          <h1>{t("createABlog.name")} <span className="special">{t("createABlog.special")}</span></h1>
           {!formState.preview && (
             <div className="titles">
               <InputField
+                style={isRtl ? { paddingRight: "15px" } : { paddingLeft: "15px" }}
                 className="input-field"
                 label="Blog Title"
                 type="text"
-                placeholder="Write your blog title"
+                placeholder={t("titlePlaceholder")}
                 value={formState.title}
-                onChange={(e) => setFormState({ ...formState, title: e.target.value })
-                }
+                onChange={(e) => setFormState(prev => ({ ...prev, title: e.target.value }))}
                 required
               />
               <InputField
+                style={isRtl ? { paddingRight: "15px" } : { paddingLeft: "15px" }}
                 className="input-field"
                 label="Blog Subtitle"
                 type="text"
-                placeholder="Write your blog subtitle"
+                placeholder={t("subTitlePlaceholder")}
                 value={formState.subtitle}
-                onChange={(e) => setFormState({ ...formState, subtitle: e.target.value })
-                }
+                onChange={(e) => setFormState(prev => ({ ...prev, subtitle: e.target.value }))}
               />
             </div>
           )}
           {renderContent()}
           <div className="form_btns">
             <button className="submit-button" type="submit">
-              {isBtnLoading["addBlogBtn"] ? 'Submitting...' : 'Submit'}
+              {isBtnLoading["addBlogBtn"] ? 'Submitting...' : t("submitBtn")}
             </button>
-            {renderPreviewButton()}
+            <button
+              style={{ zIndex: 99 }}
+              className="preview-button"
+              type="button"
+              onClick={togglePreview}
+            >
+              {formState.preview ? t("editBtn") : t("previewBtn")}
+            </button>
           </div>
         </form>
       </div>

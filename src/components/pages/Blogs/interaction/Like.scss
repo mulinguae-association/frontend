@@ -37,6 +37,7 @@
   @include abs(0 -8px -22px 0);
   @include flexbox($alignItems: center);
   gap: 15px;
+  direction: ltr;
   .interaction_btn {
     .content {
       @include rel();

@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { isTextTruncated } from '../../../utils/isTextTruncated';
 import sanitizeHtml from '../../../utils/sanitizeHtml';
+import { useTranslation } from 'react-i18next';
 
-const BlogContent = ({ blog, setShowFullContent }) => {
+const BlogContent = ({ blog, ArUr, setShowFullContent }) => {
   const [isExpanded, _] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
+  const { t } = useTranslation("pages/blogs");
 
   useEffect(() => {
     const checkTruncation = () => {
@@ -44,7 +46,7 @@ const BlogContent = ({ blog, setShowFullContent }) => {
       {
         isTruncated && (
           <span onClick={() => setShowFullContent(prev => !prev)} className="read_more">
-            Read More
+            {t("readMore")}
           </span>
         )
       }

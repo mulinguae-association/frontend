@@ -3,6 +3,8 @@ import ReplyForm from './ReplyForm';
 import Comment from './Comment';
 import CommentReply from './CommentReply';
 import { useCommentEditState } from '../../../HelperComponents/useCommentEditState';
+import i18n from '../../../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const CommentsSection = ({
   comments,
@@ -15,12 +17,14 @@ const CommentsSection = ({
     isEditComment,
     handleEdit,
     setIsEditComment,
-    editCommentId,
+    editCommentId
   } = useCommentEditState();
+  const { t } = useTranslation("pages/blogs");
+  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language)
   return (
-    <section className="comments">
+    <section style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }} className="comments">
       <h2 className="comment_title">
-        Comments
+        {t("commentsTitle")}
         <span className="comment_count">
           {comments.filter((comment) => comment?.status === "accepted").length}
         </span>
@@ -33,7 +37,7 @@ const CommentsSection = ({
             type="button"
             onClick={() => setShowAllComments((prev) => !prev)}
           >
-            Show All Comments
+            {t("showAllComments")}
           </button>
         )}
 

@@ -29,8 +29,9 @@
     border-radius: 8px;
     margin: 0;
     z-index: 999;
-
+    padding: 0 !important;
     li {
+      list-style: none;
       padding: 8px 16px;
       cursor: pointer;
       &:not(:last-child) {
@@ -42,10 +43,15 @@
         border-radius: 8px 8px 0 0;
       }
     }
+    &.ar::after {
+      border-width: 10px 50px 40px 3px;
+      left: 10px;
+      right: unset;
+    }
     &::after {
       @include pseudo(block, absolute, "", 0, 0, -20px 8px 0 0);
-      border-width: 10px 1px 31px 30px;
       border-color: transparent transparent $primaryDark-color;
+      border-width: 10px 1px 31px 30px;
       color: transparent;
       border-style: solid;
       z-index: -1;

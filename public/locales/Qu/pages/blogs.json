@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "Sutiyuqchaywan icha usuario sutinwan maskay & Enter tiyaqta asinchay",
+  "createABlog": {
+    "name": "Blog ruwachiy",
+    "special": "Mikuy"
+  },
+  "Auth": {
+    "login": "Yaykuy",
+    "register": "Ruwachiy"
+  },
+  "dashBtn": "Panel",
+  "settingsBtn": "Ajustes",
+  "logoutBtn": "Tikray",
+  "readMore": "Astawan yachay",
+  "commentsTitle": "Comentarios",
+  "showAllComments": "Llapan comentarios rikuchiy",
+  "showLessComments": "Pisi comentarios rikuchiy",
+  "parentCommentPlaceholder": "Kuyaykichis, rimaykimanta qillqay",
+  "replyCommentPlaceholder": "Kuyaykichis, kutichinaykimanta qillqay",
+  "replyBtn": "Kutichiy",
+  "postParentComment": "Pukllay",
+  "titlePlaceholder": "Blog sutiyta qillqay",
+  "subTitlePlaceholder": "Blog subtituyta qillqay",
+  "submitBtn": "Qhawaq",
+  "editBtn": "Hampiy",
+  "deleteBtn": "Chinkachiy",
+  "cancelBtn": "Pampachay",
+  "previewBtn": "Rikuy"
+}

@@ -1,55 +1,60 @@
-import React from "react";
-import 'quill/dist/quill.snow.css'
-import ReactQuill from 'react-quill'
-import { useTranslation } from "react-i18next";
+import React, { useCallback, useEffect } from "react";
+import { useEditor, EditorContent } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import Color from "@tiptap/extension-color";
+import TextStyle from "@tiptap/extension-text-style";
+import Underline from "@tiptap/extension-underline";
+import Link from "@tiptap/extension-link";
+import Image from "@tiptap/extension-image";
+import ListItem from "@tiptap/extension-list-item";
+import EditorButtons from "./components/pages/Blogs/EditorButtons";
 
-const TextEditor = ({ content, setFormState }) => {
-  const { i18n } = useTranslation()
-
-  const modules = {
-    toolbar: [
-      ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-      ['blockquote', 'code-block'],
-      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-      [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-      [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-      [{ 'direction': 'rtl' }],                         // text direction
-
-      [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-      [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-      [{ 'font': [] }],
-      [{ 'align': [] }],
-
-      ['clean']
+const TextEditor = ({ value, setFormState, editorRef }) => {
+  const editor = useEditor({
+    content: value,
+    extensions: [
+      StarterKit,
+      Underline,
+      Color.configure({ types: [TextStyle.name, ListItem.name] }),
+      TextStyle.configure({ types: [ListItem.name] }),
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: 'https'
+      }),
+      Image
     ]
-  };
+  });
 
-  const formats = [
-    "header", "height", "bold", "italic",
-    "underline", "strike", "blockquote",
-    "list", "color", 'background', 'font', 'script', 'code-block', "bullet", "indent",
-    "link", "image", "align", "size"
-  ];
+  const handleContentChange = useCallback(() => {
+    if (editor) {
+      const content = editor.getHTML();
+      setFormState(prev => ({ ...prev, content }));
+    }
+  }, [editor, setFormState]);
 
-  const handleProcedureContentChange = (content) => {
-    setFormState((prev) => ({ ...prev, content: content }))
-  };
+  useEffect(() => {
+    if (editor) {
+      editor.on('update', handleContentChange);
+      if (editorRef && !editor.isDestroyed) {
+        editorRef.current = editor
+      }
+      return () => {
+        editor.off('update', handleContentChange);
+      };
+    }
+  }, [editor, handleContentChange]);
+
+  if (!editor) {
+    return null;
+  }
 
   return (
     <div className="text-area">
-      <ReactQuill
-        key={i18n.language}
-        modules={modules}
-        formats={formats}
-        placeholder="write your content ...."
-        onChange={handleProcedureContentChange}
-        value={content}
-      />
+      <EditorButtons editor={editor} />
+      <EditorContent editor={editor} />
     </div>
   );
-
-}
+};
 
 export default TextEditor;

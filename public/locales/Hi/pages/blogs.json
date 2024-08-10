@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "शीर्षक या उपयोगकर्ता नाम से खोजें और Enter दबाएँ",
+  "createABlog": {
+    "name": "एक",
+    "special": "ब्लॉग बनाएँ"
+  },
+  "Auth": {
+    "login": "लॉग इन करें",
+    "register": "रजिस्टर करें"
+  },
+  "dashBtn": "डैशबोर्ड",
+  "settingsBtn": "सेटिंग्स",
+  "logoutBtn": "लॉग आउट करें",
+  "readMore": "अधिक पढ़ें",
+  "commentsTitle": "टिप्पणियाँ",
+  "showAllComments": "सभी टिप्पणियाँ दिखाएँ",
+  "showLessComments": "कम टिप्पणियाँ दिखाएँ",
+  "parentCommentPlaceholder": "अपनी टिप्पणी लिखें",
+  "replyCommentPlaceholder": "अपना उत्तर लिखें",
+  "replyBtn": "उत्तर दें",
+  "postParentComment": "पोस्ट करें",
+  "titlePlaceholder": "अपने ब्लॉग का शीर्षक लिखें",
+  "subTitlePlaceholder": "अपने ब्लॉग का उपशीर्षक लिखें",
+  "submitBtn": "सबमिट करें",
+  "editBtn": "संपादित करें",
+  "deleteBtn": "हटाएं",
+  "cancelBtn": "रद्द करें",
+  "previewBtn": "पूर्वावलोकन"
+}

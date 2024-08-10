@@ -96,8 +96,8 @@
     }
     .replies {
       margin-top: 0;
-
       .interaction_comments {
+        direction: ltr;
         @include abs();
         @include flexbox($alignItems: center);
         gap: 15px;

@@ -6,6 +6,7 @@ import InteractionComponent from '../interaction/InteractionComments';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { isTextTruncated } from '../../../../utils/isTextTruncated';
 import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs-mutations';
+import i18n from '../../../../i18n';
 
 const Comment = ({
   comment,
@@ -19,6 +20,7 @@ const Comment = ({
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
   const { mutate: handleRemoveComment } = useRemoveCommentMutation();
+  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language)
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -36,7 +38,7 @@ const Comment = ({
   };
 
   return (
-    <div className='comment_info'>
+    <div style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }} className='comment_info'>
       {isAuth && (comment?.postedBy?._id === userData?.userId || userData?.role === "admin") && (
         <EllipsisMenu
           handleDelete={() => handleRemoveComment(comment?._id)}

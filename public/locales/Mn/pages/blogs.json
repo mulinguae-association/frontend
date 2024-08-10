@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "按标题或用户名搜索并按回车",
+  "createABlog": {
+    "name": "创建",
+    "special": "博客"
+  },
+  "Auth": {
+    "login": "登录",
+    "register": "注册"
+  },
+  "dashBtn": "仪表板",
+  "settingsBtn": "设置",
+  "logoutBtn": "登出",
+  "readMore": "阅读更多",
+  "commentsTitle": "评论",
+  "showAllComments": "显示所有评论",
+  "showLessComments": "显示更少评论",
+  "parentCommentPlaceholder": "写下你的评论",
+  "replyCommentPlaceholder": "写下你的回复",
+  "replyBtn": "回复",
+  "postParentComment": "发布",
+  "titlePlaceholder": "写下你的博客标题",
+  "subTitlePlaceholder": "写下你的博客副标题",
+  "submitBtn": "提交",
+  "editBtn": "编辑",
+  "deleteBtn": "删除",
+  "cancelBtn": "取消",
+  "previewBtn": "预览"
+}

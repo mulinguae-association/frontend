@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "ابحث عن طريق العنوان أو اسم المستخدم واضغط Enter",
+  "createABlog": {
+    "name": "إنشاء",
+    "special": "مدونة"
+  },
+  "Auth": {
+    "login": "تسجيل الدخول",
+    "register": "التسجيل"
+  },
+  "dashBtn": "لوحة التحكم",
+  "settingsBtn": "الإعدادات",
+  "logoutBtn": "تسجيل الخروج",
+  "readMore": "اقرأ المزيد",
+  "commentsTitle": "التعليقات",
+  "showAllComments": "عرض جميع التعليقات",
+  "showLessComments": "عرض تعليقات أقل",
+  "parentCommentPlaceholder": "اكتب تعليقك",
+  "replyCommentPlaceholder": "اكتب ردك",
+  "replyBtn": "رد",
+  "postParentComment": "نشر",
+  "titlePlaceholder": "اكتب عنوان المدونة",
+  "subTitlePlaceholder": "اكتب عنوان المدونة الفرعي",
+  "submitBtn": "إرسال",
+  "editBtn": "تعديل",
+  "deleteBtn": "حذف",
+  "cancelBtn": "إلغاء",
+  "previewBtn": "معاينة"
+}

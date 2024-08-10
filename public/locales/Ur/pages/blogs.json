@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "عنوان یا صارف کے نام سے تلاش کریں اور Enter دبائیں",
+  "createABlog": {
+    "name": "ایک",
+    "special": "بلاگ بنائیں"
+  },
+  "Auth": {
+    "login": "لاگ ان کریں",
+    "register": "رجسٹر کریں"
+  },
+  "dashBtn": "ڈیش بورڈ",
+  "settingsBtn": "ترتیبات",
+  "logoutBtn": "لاگ آؤٹ",
+  "readMore": "مزید پڑھیں",
+  "commentsTitle": "تبصرے",
+  "showAllComments": "تمام تبصرے دکھائیں",
+  "showLessComments": "کم تبصرے دکھائیں",
+  "parentCommentPlaceholder": "اپنا تبصرہ لکھیں",
+  "replyCommentPlaceholder": "اپنا جواب لکھیں",
+  "replyBtn": "جواب دیں",
+  "postParentComment": "شائع کریں",
+  "titlePlaceholder": "اپنی بلاگ کا عنوان لکھیں",
+  "subTitlePlaceholder": "اپنی بلاگ کا ذیلی عنوان لکھیں",
+  "submitBtn": "جمع کروائیں",
+  "editBtn": "ترمیم کریں",
+  "deleteBtn": "حذف کریں",
+  "cancelBtn": "منسوخ کریں",
+  "previewBtn": "پیش نظارہ"
+}

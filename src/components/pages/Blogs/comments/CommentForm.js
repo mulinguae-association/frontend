@@ -3,12 +3,16 @@ import { notifyError } from "../../../Notify";
 import { useGlobal } from "../../../../contexts/AppContext";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { useCreateCommentMutation } from "../../../../apis/mutations/blogs-mutations";
+import i18n from "../../../../i18n";
+import { useTranslation } from "react-i18next";
 const CommentForm = ({ blogId }) => {
   const [comment, setComment] = useState("");
   const { isBtnLoading } = useGlobal();
   const { userData } = useAuth();
   const { mutate: createCommentMutation } = useCreateCommentMutation();
   const buttonKey = `postComment_${blogId}`
+  const { t } = useTranslation("pages/blogs");
+  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language)
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     const commentData = {
@@ -38,18 +42,18 @@ const CommentForm = ({ blogId }) => {
   };
   return (
     <>
-      <form onSubmit={handleCommentSubmit} className='comment-form'>
+      <form style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }} onSubmit={handleCommentSubmit} className='comment-form'>
         <textarea
           id="comment-input"
-          placeholder='Write your comment'
+          placeholder={t("parentCommentPlaceholder")}
           value={comment}
           rows='4'
           onChange={(e) => setComment(e.target.value)}
           className='textarea textArea-font'
           onKeyDown={handleKeyPress}
         ></textarea>
-        <button disabled={isBtnLoading[buttonKey]} type='submit' className='submit-button button-font'>
-          {isBtnLoading[buttonKey] ? "Post..." : "Post"}
+        <button style={isAr_Ur ? { borderRadius: "10px 0 0 0" } : { borderRadius: "0 10px 0 0" }} disabled={isBtnLoading[buttonKey]} type='submit' className='submit-button button-font'>
+          {isBtnLoading[buttonKey] ? `${t("postParentComment")}...` : t("postParentComment")}
         </button>
       </form>
     </>

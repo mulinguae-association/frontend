@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'; // Import useRef
+import React, { useState, useEffect, useRef, useTransition } from 'react'; // Import useRef
 import { updatedComment } from '../../../../apis/blog-api';
 import { notifyError, notifySuccess } from '../../../Notify';
 import "./UpdateComment.scss";
@@ -8,12 +8,16 @@ import { useContext } from 'react';
 import { AppContext } from '../../../../contexts/AppContext';
 import logError from '../../../../utils/logError';
 import { useUpdateCommentLocally } from '../../../../apis/mutations/blogs-mutations';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../../i18n';
 
 const UpdateComment = ({ editCommentId, initialValue, setIsEditComment }) => {
-  const { userData } = useAuth()
+  const { userData } = useAuth();
   const [value, setValue] = useState(initialValue);
-  const { setNotificationPopup } = useContext(AppContext)
+  const { setNotificationPopup } = useContext(AppContext);
+  const { t } = useTranslation("pages/blogs");
   const updateCommentLocally = useUpdateCommentLocally();
+  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language);
   const textareaRef = useRef(null);
 
   useEffect(() => {
@@ -71,8 +75,8 @@ const UpdateComment = ({ editCommentId, initialValue, setIsEditComment }) => {
         required
       />
       <div className='update_btns'>
-        <button onClick={() => setIsEditComment(false)}>cancel</button>
-        <button type='submit'>
+        <button onClick={() => setIsEditComment(false)}>{t("cancelBtn")}</button>
+        <button style={isAr_Ur ? { rotate: "180deg" } : { rotate: "0" }} type='submit'>
           <BiSend size={20} />
         </button>
       </div>

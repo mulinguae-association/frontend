@@ -5,16 +5,18 @@ import { submitLogout } from '../../../apis/auth-api';
 import { notifyError, notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
 import UserMenu from './UserMenu';
-import i18next from 'i18next';
+import i18next, { t } from 'i18next';
 import SearchBar from './SearchBar';
 import logError from '../../../utils/logError';
 import { useQueryClient } from 'react-query';
 import handleError from '../../../utils/handleError';
+import { useTranslation } from 'react-i18next';
 
 const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) => {
   const { userData, isAuth, setIsAuth } = useAuth();
   const [showUserMenu, setShowMenuUser] = useState(false);
   const queryClient = useQueryClient();
+  const { t } = useTranslation("pages/blogs");
   const handleLogout = async () => {
     try {
       const res = await submitLogout();
@@ -32,7 +34,7 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
   return (
     <div className='blogs_header'>
       <div className="links button-font">
-        <Link to={`/${i18next.language}/pages/Blogs/Create-new-blog`}>+ Create A Blog</Link>
+        <Link to={`/${i18next.language}/pages/Blogs/Create-new-blog`}>{`+ ${t("createABlog.name")} ${t("createABlog.special")}`}</Link>
         <div className='search_bar_container'>
           <SearchBar
             className={"bgSC"}
@@ -62,8 +64,8 @@ const BlogsHeader = ({ searchQuery, handleSearchChange, handleSearchKeyPress }) 
           </div>
         ) :
           <div className="auth_Links">
-            <Link to={`/${i18next.language}/login`}>Login</Link>
-            <Link to={`/${i18next.language}/Register`}>Register</Link>
+            <Link to={`/${i18next.language}/login`}>{t("Auth.login")}</Link>
+            <Link to={`/${i18next.language}/Register`}>{t("Auth.register")}</Link>
           </div>
         }
       </div>

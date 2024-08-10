@@ -1,0 +1,29 @@
+{
+  "searchPlaceholder": "Rod par tit ou non itilizater & klik Enter",
+  "createABlog": {
+    "name": "Kre enn",
+    "special": "Blog"
+  },
+  "Auth": {
+    "login": "Konekte",
+    "register": "Enskri"
+  },
+  "dashBtn": "Dashboard",
+  "settingsBtn": "Paramet",
+  "logoutBtn": "Dekonekte",
+  "readMore": "Lir Plis",
+  "commentsTitle": "Komant",
+  "showAllComments": "Montre Tou Komant",
+  "showLessComments": "Montre Mwin Komant",
+  "parentCommentPlaceholder": "Ekrir ou komant",
+  "replyCommentPlaceholder": "Ekrir ou repons",
+  "replyBtn": "Reponn",
+  "postParentComment": "Post",
+  "titlePlaceholder": "Ekrir tit ou blog",
+  "subTitlePlaceholder": "Ekrir sou-tit ou blog",
+  "submitBtn": "Soumet",
+  "editBtn": "Edite",
+  "deleteBtn": "Efase",
+  "cancelBtn": "Anile",
+  "previewBtn": "Preview"
+}
