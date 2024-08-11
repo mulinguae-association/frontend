@@ -1,17 +1,16 @@
 @import "../../globalStyles/colors";
-footer {
+@import "../../globalStyles/mixins/mixins.scss";
+.footer {
   .top_footer {
-    position: relative;
+    @include rel();
     background: linear-gradient(0deg, $primary-color -50%, $darkBlue-color 70%);
     padding: 0 0 3rem;
     z-index: 10;
     .footer_list {
-      display: flex;
-      align-items: center;
+      @include flexbox($alignItems: center);
       .footer_links {
-        display: flex;
+        @include flexbox($wrap: wrap);
         column-gap: 10rem;
-        flex-wrap: wrap;
 
         @media (max-width: 767px) {
           column-gap: 3.5rem;
@@ -36,36 +35,37 @@ footer {
               text-decoration: none;
               font-size: 13.2px;
               font-weight: 400;
-              color: $white-color;
+              @include links(
+                $white-color,
+                orangered,
+                $primary-color,
+                $white-color
+              );
               letter-spacing: 0.7px;
-              &:hover {
-                color: $white-color;
-              }
             }
           }
         }
       }
     }
     &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      @include pseudo(block, absolute, "", 0, 0, 0 0px 0px 0);
       border-style: solid;
-      border-color: transparent $secondary-color $secondary-color transparent;
+      border-color: transparent $blue-shadow-light $blue-shadow-light
+        transparent;
       border-width: 100px 100px 104px 100px;
       z-index: -1;
     }
     &.rtl::after {
       left: 0;
       right: unset;
-      border-color: transparent transparent $secondary-color $secondary-color;
+      border-color: transparent transparent $blue-shadow-light
+        $blue-shadow-light;
     }
   }
   .bottom_footer {
     min-height: 150px;
     .content {
-      display: flex;
+      @include flexbox();
       .info {
         width: 48%;
         p:first-child {
@@ -75,9 +75,13 @@ footer {
               font-weight: 700;
               font-size: 13.2px;
               letter-spacing: 0.8px;
-              &:hover {
-                color: $darkgray-color;
-              }
+              @include links(
+                $darkBlue-color,
+                orangered,
+                $secondary-color,
+                $darkBlue-color
+              );
+              transition: 0.2s;
               @media (max-width: 767px) {
                 font-size: 12.5px;
               }
@@ -87,21 +91,21 @@ footer {
         p {
           font-size: 13px;
           font-weight: 400;
-          display: flex;
+          @include flexbox();
           gap: 0.5rem;
         }
       }
       .social_links {
-        display: flex;
+        @include flexbox($alignItems: flex-start, $justifyContent: flex-end);
         width: 50%;
-        justify-content: flex-end;
-        align-items: flex-start;
         margin-top: 1rem;
         gap: 0.5rem;
-        .icon {
+        picture {
           cursor: pointer;
           &:last-child {
-            padding: 4px;
+            .icon {
+              padding: 4px;
+            }
           }
         }
       }
@@ -124,6 +128,9 @@ footer {
   }
   @media (max-width: 767px) {
     min-height: 400px;
-    padding: 0 0 60px;
+    padding: 0 0 40px;
+    .top_footer::after {
+      border-width: 85px;
+    }
   }
 }
