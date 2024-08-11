@@ -29,7 +29,7 @@ const NotFound = React.lazy(() => import("./components/NotFound"));
 axios.defaults.baseURL = 'http://localhost:5000';
 axios.defaults.withCredentials = true
 function App() {
-	const { isLoading, setIsLoading } = useContext(AppContext);
+	const { isAppLoading, setIsAppLoading } = useContext(AppContext);
 
 	const [imgAnimation, setImgAnimation] = useState(false);
 	const [, setCookie] = useCookies(['selectedLanguage'])
@@ -38,10 +38,10 @@ function App() {
 	const lang = location.pathname.split("/")[1];
 
 	useEffect(() => {
-		setIsLoading(true);
-		i18n.changeLanguage(lang, () => setIsLoading(false));
+		setIsAppLoading(true);
+		i18n.changeLanguage(lang, () => setIsAppLoading(false));
 		setCookie('selectedLanguage', lang);
-	}, [lang, setCookie, setIsLoading]);
+	}, [lang, setCookie, setIsAppLoading]);
 
 	useEffect(() => {
 		setImgAnimation(true);
@@ -50,7 +50,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar />
-			{isLoading ? (
+			{isAppLoading ? (
 				<Loader />
 			) : (
 				<React.Suspense fallback={<Loader />}>
@@ -67,11 +67,7 @@ function App() {
 						<Route path=':lang/Login' element={<Login />} />
 						<Route path=':lang/pages/:pageId' element={<PagesDetails />} />
 						<Route path=':lang/pages/teachers/:teacherId' element={<TeacherProfile />} />
-						<Route path=':lang/pages/Blogs/create-new-blog' element={
-							<ProtectedRoute >
-								<CreateBlog />
-							</ProtectedRoute>
-						} />
+						<Route path=':lang/pages/Blogs/create-new-blog' element={<CreateBlog />} />
 						<Route path=':lang/dashboard' element={
 							<ProtectedRoute isAdmin={true}>
 								<Dashboard />
