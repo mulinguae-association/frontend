@@ -26,14 +26,9 @@ const CreateBlog = () => {
   const navigate = useNavigate();
   const avatar = userData?.profileImage;
   const { t } = useTranslation("pages/blogs");
-  const isRtl = ["Ar", "Ur"].includes(i18n.language)
-
+  const isRtl = ["Ar", "Ur"].includes(i18n.language);
   useEffect(() => {
-    if (isAuth === undefined || userData === undefined) {
-      // Wait until the authentication status is determined
-      return;
-    }
-    if (!isAuth) {
+    if (!isAuth || !userData) {
       navigate(`/${i18n.language}/login`);
     }
   }, [userData, isAuth, navigate]);
