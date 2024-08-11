@@ -1,0 +1,40 @@
+@import "./globalStyles/colors";
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $main-bg;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $darkBlue-color;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    $darkBlue-color 0%,
+    $blue-shadow-light 60%,
+    $blue-shadow-light 100%
+  );
+  border-radius: 30px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: $blue-shadow-light $darkBlue-color;
+  }
+}
