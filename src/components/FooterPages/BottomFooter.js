@@ -27,34 +27,50 @@ const BottomFooter = () => {
             <p>{t("copyRight2")}</p>
           </div>
           <div className='social_links'>
-            <img
-              className='icon'
-              src={"/images/icons/facebook.png"}
-              width='40'
-              height='40'
-              alt='facebook'
-            />
-            <img
-              className='icon'
-              src={"/images/icons/twitter.png"}
-              width='40'
-              height='40'
-              alt='twitter'
-            />
-            <img
-              className='icon'
-              src={"/images/icons/linkedIn.png"}
-              width='40'
-              height='40'
-              alt='linkedIn'
-            />
-            <img
-              className='icon'
-              src={"/images/icons/instagram.png"}
-              width='40'
-              height='40'
-              alt=' instgram'
-            />
+            <picture>
+              <source srcSet='/images/icons/facebook.avif' type='image/avif' />
+              <source srcSet='/images/icons/facebook.webp' type='image/webp' />
+              <img
+                className='icon'
+                src='/images/icons/facebook.png'
+                width='40'
+                height='40'
+                alt='facebook'
+              />
+            </picture>
+            <picture>
+              <source srcSet='/images/icons/twitter.avif' type='image/avif' />
+              <source srcSet='/images/icons/twitter.webp' type='image/webp' />
+              <img
+                className='icon'
+                src='/images/icons/twitter.png'
+                width='40'
+                height='40'
+                alt='twitter'
+              />
+            </picture>
+            <picture>
+              <source srcSet='/images/icons/linkedIn.avif' type='image/avif' />
+              <source srcSet='/images/icons/linkedIn.webp' type='image/webp' />
+              <img
+                className='icon'
+                src='/images/icons/linkedIn.png'
+                width='40'
+                height='40'
+                alt='linkedIn'
+              />
+            </picture>
+            <picture>
+              <source srcSet='/images/icons/instagram.avif' type='image/avif' />
+              <source srcSet='/images/icons/instagram.webp' type='image/webp' />
+              <img
+                className='icon'
+                src='/public/images/icons/images/instagram.png'
+                width='40'
+                height='40'
+                alt='instagram'
+              />
+            </picture>
           </div>
         </div>
       </div>
