@@ -1,7 +1,7 @@
 import React from 'react'
 import BlogPost from './BlogPost'
 
-const BlogList = ({ acceptedPosts, setAcceptedPosts }) => {
+const BlogList = ({ acceptedPosts }) => {
 
   return (
     <div className="blogs_content">
@@ -10,7 +10,6 @@ const BlogList = ({ acceptedPosts, setAcceptedPosts }) => {
           <BlogPost
             key={blog._id}
             blog={blog}
-            setAcceptedPosts={setAcceptedPosts}
           />
         ))
       )}
