@@ -21,13 +21,13 @@ i18n
 		fallbackLng: "en",
 		debug: false,
 		interpolation: {
-			escapeValue: false,
+			escapeValue: false
 		},
 		detection: {
-			order: ["cookie", "navigator"],
+			order: ["localstorage", "navigator"],
 			lookupFromPathIndex: 0,
 			checkWhitelist: true,
-			caches: ["cookie"]
+			caches: ["localstorage"]
 		},
 		suspense: false,
 		backend: customBackend,
@@ -42,7 +42,7 @@ i18n
 			"notFound",
 			"header",
 			"footer",
-			"global",
+			"global"
 		], // Specify the namespaces
 		defaultNS: "home", // Set the default namespace
 		parse: function (data) {

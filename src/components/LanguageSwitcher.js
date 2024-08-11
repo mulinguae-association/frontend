@@ -1,13 +1,11 @@
 import React, { useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomDropdown from './Navbar/customDropdown/CustomDropDown';
-import { useCookies } from 'react-cookie';
 import useDirectionChange from "../utils/useDirectionChange";
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function LanguageSwitcher({ className }) {
   const { i18n } = useTranslation();
-  const [cookies, setCookie] = useCookies(['selectedLanguage']);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,15 +20,15 @@ function LanguageSwitcher({ className }) {
     { label: 'Quechua', value: 'Qu' },
     { label: 'Russian', value: 'Ru' },
     { label: 'Spanish', value: 'Es' },
-    { label: 'Urdu', value: 'Ur' },
+    { label: 'Urdu', value: 'Ur' }
   ], []);
 
   const handleSelect = useCallback((option) => {
-    setCookie('selectedLanguage', option.value, { path: '/' });
+    localStorage.setItem("selectedLanguage", option.value);
     const currPath = location.pathname.split("/").slice(2).join("/");
     navigate(`/${option.value}/${currPath}`);
     i18n.changeLanguage(option.value);
-  }, [i18n, navigate, setCookie, location.pathname]);
+  }, [i18n, navigate, location.pathname]);
 
   const mapUrlLanguageToOptionValue = useCallback((urlLanguage) => {
     return options.find((option) => option.value.toLowerCase() === urlLanguage.toLowerCase());
@@ -50,7 +48,6 @@ function LanguageSwitcher({ className }) {
     <>
       <CustomDropdown
         className={className}
-        cookies={cookies}
         options={options}
         onSelect={handleSelect}
       />

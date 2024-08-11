@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./CustomDropdown.scss";
 
-const CustomDropdown = ({ options, onSelect, className, cookies }) => {
+const CustomDropdown = ({ options, onSelect, className }) => {
 	const [selectedOption, setSelectedOption] = useState(options[1]);
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef(null);
@@ -25,11 +25,11 @@ const CustomDropdown = ({ options, onSelect, className, cookies }) => {
 	}, []);
 	// change direction if the language was arabic
 	useEffect(() => {
-		if (cookies.selectedLanguage) {
-			const option = options.find((o) => o.value === cookies.selectedLanguage);
-			setSelectedOption(option);
-		}
-	}, [cookies, options]);
+		const selectedLanguage = localStorage.getItem("selectedLanguage");
+		const option = options.find((o) => o.value === selectedLanguage);
+		setSelectedOption(option);
+
+	}, [options, localStorage]);
 
 	return (
 		<div className={className} ref={dropdownRef}>
