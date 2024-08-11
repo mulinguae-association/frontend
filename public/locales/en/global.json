@@ -14,5 +14,16 @@
     "digit": "Password must contain at least one digit.",
     "specialCharacter": "Password must contain at least one special character.",
     "length": "Password must be at least 8 characters long."
+  },
+  "errorMessages": {
+    "default": "An error occurred. Please try again later.",
+    "400": "Bad request. Please check your input and try again.",
+    "401": "Unauthorized. Please log in and try again.",
+    "403": "Forbidden. You don't have permission to access this resource.",
+    "404": "Resource not found. It may have been moved, deleted, or does not exist.",
+    "500": "Server error. Please try again later.",
+    "502": "Bad gateway. The server received an invalid response.",
+    "503": "Service unavailable. Please try again later.",
+    "504": "Gateway timeout. Please try again later."
   }
 }

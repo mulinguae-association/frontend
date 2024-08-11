@@ -14,5 +14,16 @@
     "digit": "La contraseña debe contener al menos un dígito.",
     "specialCharacter": "La contraseña debe contener al menos un carácter especial.",
     "length": "La contraseña debe tener al menos 8 caracteres de longitud."
+  },
+  "errorMessages": {
+    "default": "Ocurrió un error. Por favor, inténtelo de nuevo más tarde.",
+    "400": "Solicitud incorrecta. Verifique su entrada e intente nuevamente.",
+    "401": "No autorizado. Inicie sesión e intente nuevamente.",
+    "403": "Prohibido. No tienes permiso para acceder a este recurso.",
+    "404": "Recurso no encontrado. Puede haber sido movido, eliminado o no existe.",
+    "500": "Error del servidor. Por favor, inténtelo de nuevo más tarde.",
+    "502": "Puerta de enlace incorrecta. El servidor recibió una respuesta inválida.",
+    "503": "Servicio no disponible. Por favor, inténtelo de nuevo más tarde.",
+    "504": "Tiempo de espera de la puerta de enlace."
   }
 }

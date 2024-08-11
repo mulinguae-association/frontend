@@ -14,5 +14,16 @@
     "digit": "Parey bizin ena omwen enn chif.",
     "specialCharacter": "Parey bizin ena omwen enn karakter espesyal.",
     "length": "Parey bizin avek omwen 8 karakter."
+  },
+  "errorMessages": {
+    "default": "Huk wakcha wañuy. Tinkuykuy hukñichiy.",
+    "400": "Sumaq manchakuy. Rikuqkuyki tukuykuy.",
+    "401": "Ñakuyta manan. Ñawi yachaykuykita tukuykuy.",
+    "403": "Ñakuy. Manan kay rikhuyta ruranakuy.",
+    "404": "Suma rikhuy. Huchuy, hap’iykuy, manan chay.",
+    "500": "Yachay kawsay. Tinkuykuy hukñichiy.",
+    "502": "Wakcha mach’ay. Ñawi chinkayta rikuy.",
+    "503": "Suma yachay. Tinkuykuy hukñichiy.",
+    "504": "Mach’ay ñakuy. Tinkuykuy hukñichiy."
   }
 }

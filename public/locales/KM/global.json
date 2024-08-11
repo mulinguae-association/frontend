@@ -14,5 +14,16 @@
     "digit": "A senha deve conter pelo menos um dígito.",
     "specialCharacter": "A senha deve conter pelo menos um caractere especial.",
     "length": "A senha deve ter pelo menos 8 caracteres."
+  },
+  "errorMessages": {
+    "default": "Enn erer finn arive. Silvouple, esey ankor plis tar.",
+    "400": "Demann mal. Silvouple verifie ou antre e esey ankor.",
+    "401": "Pa otorize. Silvouple konekte e esey ankor.",
+    "403": "Entedi. Ou pa ena dwa pou akse sa resours la.",
+    "404": "Resours pa trouv. Li kapab finn deplase, efase ou pa egziste.",
+    "500": "Erer serveur. Silvouple esey ankor plis tar.",
+    "502": "Mauvais passerelle. Server finn resev enn repons pa valab.",
+    "503": "Servi pa disponib. Silvouple esey ankor plis tar.",
+    "504": "Tan limit passerelle. Silvouple esey ankor plis tar."
   }
 }

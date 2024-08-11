@@ -14,5 +14,16 @@
     "digit": "Mot de pas bizin ena o-mwen enn sif.",
     "specialCharacter": "Mot de pas bizin ena o-mwen enn karakter spesial.",
     "length": "Mot de pas bizin ena o-mwen 8 karakter."
+  },
+  "errorMessages": {
+    "default": "Si è verificato un errore. Per favore, riprova più tardi.",
+    "400": "Richiesta non valida. Controlla il tuo input e riprova.",
+    "401": "Non autorizzato. Accedi e riprova.",
+    "403": "Vietato. Non hai il permesso di accedere a questa risorsa.",
+    "404": "Risorsa non trovata. Potrebbe essere stata spostata, eliminata o non esiste.",
+    "500": "Errore del server. Per favore, riprova più tardi.",
+    "502": "Gateway non valido. Il server ha ricevuto una risposta non valida.",
+    "503": "Servizio non disponibile. Per favore, riprova più tardi.",
+    "504": "Timeout del gateway. Per favore, riprova più tardi."
   }
 }
