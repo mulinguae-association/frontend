@@ -4,7 +4,6 @@ import Love from './Love';
 import Like from './Like';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { useUpdateInteractionMutation } from '../../../../apis/mutations/blogs-mutations';
-import i18n from '../../../../i18n';
 
 const InteractionComponent = ({
   reply,
@@ -12,7 +11,6 @@ const InteractionComponent = ({
 }) => {
   const { userData } = useAuth();
   const { mutate: interactWithComment } = useUpdateInteractionMutation();
-  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language)
   const handleClick = async (id, action) => {
     interactWithComment({ modelType, id, action });
   };

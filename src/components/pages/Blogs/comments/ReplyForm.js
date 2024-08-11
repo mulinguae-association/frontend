@@ -14,7 +14,7 @@ const ReplyForm = ({ commentsId: parentCommentId, blogId }) => {
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      if (replyConetnt == "") {
+      if (replyConetnt === "") {
         notifyError("Comment cannot be empty");
         return;
       }
@@ -22,7 +22,7 @@ const ReplyForm = ({ commentsId: parentCommentId, blogId }) => {
     }
   };
   const handleMouseDown = (e) => {
-    if (replyConetnt == "") {
+    if (replyConetnt === "") {
       notifyError("Comment cannot be empty");
       return;
     }

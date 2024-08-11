@@ -3,8 +3,8 @@ import { isTextTruncated } from '../../../utils/isTextTruncated';
 import sanitizeHtml from '../../../utils/sanitizeHtml';
 import { useTranslation } from 'react-i18next';
 
-const BlogContent = ({ blog, ArUr, setShowFullContent }) => {
-  const [isExpanded, _] = useState(false);
+const BlogContent = ({ blog, setShowFullContent }) => {
+  const [isExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
   const { t } = useTranslation("pages/blogs");

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useTransition } from 'react'; // Import useRef
+import React, { useState, useEffect, useRef } from 'react'; // Import useRef
 import { updatedComment } from '../../../../apis/blog-api';
 import { notifyError, notifySuccess } from '../../../Notify';
 import "./UpdateComment.scss";

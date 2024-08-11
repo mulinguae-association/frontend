@@ -29,7 +29,7 @@ const CustomDropdown = ({ options, onSelect, className }) => {
 		const option = options.find((o) => o.value === selectedLanguage);
 		setSelectedOption(option);
 
-	}, [options, localStorage]);
+	}, [options]);
 
 	return (
 		<div className={className} ref={dropdownRef}>

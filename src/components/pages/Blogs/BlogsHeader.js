@@ -5,7 +5,7 @@ import { submitLogout } from '../../../apis/auth-api';
 import { notifyError, notifySuccess } from '../../Notify';
 import { useAuth } from '../../../contexts/AuthContext';
 import UserMenu from './UserMenu';
-import i18next, { t } from 'i18next';
+import i18next from 'i18next';
 import SearchBar from './SearchBar';
 import logError from '../../../utils/logError';
 import { useQueryClient } from 'react-query';

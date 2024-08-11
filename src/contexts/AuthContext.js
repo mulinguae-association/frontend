@@ -27,9 +27,6 @@ export const AuthProvider = ({ children }) => {
     },
     onSuccess: (data) => {
       setIsAuth(true);
-    },
-    onSettled: () => {
-      console.log('Query has settled');
     }
   });
 

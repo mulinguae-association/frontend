@@ -43,7 +43,7 @@ const TextEditor = ({ value, setFormState, editorRef }) => {
         editor.off('update', handleContentChange);
       };
     }
-  }, [editor, handleContentChange]);
+  }, [editor, editorRef, handleContentChange]);
 
   if (!editor) {
     return null;

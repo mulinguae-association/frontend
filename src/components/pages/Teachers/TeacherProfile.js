@@ -39,7 +39,7 @@ const TeacherProfile = () => {
               onError={(e) => {
                 e.target.src = "/images/fallBackUser.png";
               }}
-              alt={`${teacher?.firstName} image`}
+              alt={`${teacher?.firstName}_image`}
             />
           </header>
           <article className='secondary_info'>
