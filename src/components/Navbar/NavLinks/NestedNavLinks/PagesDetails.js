@@ -2,6 +2,10 @@ import React from "react"
 import Header from '../../../HeaderPages'
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Donation from "../../../pages/Donations";
+import AllStudetns from "../../../pages/AllStudents";
+import EducationForAll from "../../../pages/EducationForAll";
+import FeedBack from "../../../pages/FeedBack";
 const Teachers = React.lazy(() =>
   import("../../../pages/Teachers")
 );
@@ -15,7 +19,7 @@ const HundredPhrases = React.lazy(() =>
   import("../../../pages/hundredPhrases")
 );
 const FAQs = React.lazy(() =>
-  import("../../../pages/FAQs")
+  import("../../../pages/FeedBack")
 );
 const Linguicide = React.lazy(() =>
   import("../../../pages/Linguicide")
@@ -59,8 +63,17 @@ const PagesDetails = () => {
     case '100-basic-phrases':
       pageContent = <HundredPhrases />;
       break;
-    case 'FAQs':
-      pageContent = <FAQs />;
+    case 'donations':
+      pageContent = <Donation />;
+      break;
+    case 'feedback':
+      pageContent = <FeedBack />;
+      break;
+    case 'education-for-all':
+      pageContent = <EducationForAll />;
+      break;
+    case 'students-of-all-ages':
+      pageContent = <AllStudetns />;
       break;
     default:
       pageContent = <NotFound />;

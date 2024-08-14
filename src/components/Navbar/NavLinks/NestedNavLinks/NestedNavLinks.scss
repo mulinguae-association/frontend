@@ -2,7 +2,7 @@
 .nestedNavLinks {
   @include abs(245% 0 0 50%); // position: absolute;
   z-index: 99;
-  background-color: hsla(222, 100%, 8%, 0.7);
+  background-color: hsla(222, 100%, 8%, 0.8);
   width: 510px;
   height: auto;
   min-height: 100px;
@@ -20,6 +20,20 @@
   }
   li {
     padding: 10px !important;
+    &.donation_link {
+      background: darkgreen;
+      border-radius: 6px;
+      height: 25px;
+      margin: 10px;
+      display: flex;
+      text-transform: capitalize;
+      color: orange;
+      font-weight: 500;
+      font-style: italic;
+      &.donation_link > a {
+        @include links(orange, yellow, orange, orange);
+      }
+    }
   }
   .book_list {
     width: 13%;

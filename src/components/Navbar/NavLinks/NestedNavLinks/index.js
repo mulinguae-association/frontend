@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import "./NestedNavLinks.scss"
 import { useTranslation } from 'react-i18next'
+import { BsCurrencyExchange } from "react-icons/bs";
+
 // import i18next from 'i18next';
 const NestedNavLinks = (props) => {
   const { t, i18n: { language: lang } } = useTranslation("pages/pagesLinks")
@@ -79,6 +81,14 @@ const NestedNavLinks = (props) => {
             activeclassname="active"
           >
             {t("100 basic phrases")}
+          </NavLink>
+        </li>
+        <li className='donation_link'>
+          <NavLink
+            to={`/${lang}/pages/donations`}
+            activeclassname="active"
+          >
+            <BsCurrencyExchange /> {t("donate")}
           </NavLink>
         </li>
       </ul >
