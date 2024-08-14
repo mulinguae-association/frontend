@@ -10,7 +10,7 @@ import { useGlobal } from '../../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
 import logError from '../../../utils/logError';
 
-const FAQs = () => {
+const FeedBack = () => {
   const { t } = useTranslation("pages/FAQs")
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const [formData, setFormData] = useState({
@@ -183,4 +183,4 @@ const FAQs = () => {
     </main>
   );
 };
-export default FAQs
+export default FeedBack;

@@ -26,7 +26,7 @@ const TopFooter = () => {
                   </Link>
                 </li>
                 <li className='item'>
-                  <Link className='link_item' to={`/${i18next.language}/pages/FAQs`}>
+                  <Link className='link_item' to={`/${i18next.language}/pages/feedback`}>
                     {t("link2")}
                   </Link>
                 </li>
@@ -46,12 +46,12 @@ const TopFooter = () => {
               <h3 className='footer_head'>{t("ProudlyS_title")}</h3>
               <ul className='list_item'>
                 <li className='item'>
-                  <Link className='link_item' to={`/${i18next.language}/`}>
+                  <Link className='link_item' to={`/${i18next.language}/pages/education-for-all`}>
                     {t("link5")}
                   </Link>
                 </li>
                 <li className='item'>
-                  <Link className='link_item' to={`/${i18next.language}/`}>
+                  <Link className='link_item' to={`/${i18next.language}/pages/students-of-all-ages`}>
                     {t("link6")}
                   </Link>
                 </li>
