@@ -15,7 +15,7 @@ function ResetPassword() {
   const { id, token } = useParams();
   const navigate = useNavigate();
   const { isBtnLoading, setButtonLoading } = useGlobal();
-  const isArabicDir = ["Ar", "Ur"].includes(i18next.language);
+  const isArabicDir = ["ar", "ur"].includes(i18next.language);
 
   const [formState, setFormState] = useState({
     password: '',

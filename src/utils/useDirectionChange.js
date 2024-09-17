@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const useDirectionChange = (language) => {
   useEffect(() => {
     const htmlElement = document.getElementsByTagName('html')[0];
-    if (["Ar", "Ur"].includes(language)) {
+    if (["ar", "ur"].includes(language)) {
       htmlElement.setAttribute('lang', 'ar');
       htmlElement.setAttribute('dir', 'rtl');
     } else {

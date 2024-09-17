@@ -34,7 +34,7 @@ function Registration() {
   const [visible, setVisible] = useState(false);
   const recaptchaRef = useRef(null);
 
-  const isArabicDir = ["Ar", "Ur"].includes(i18next.language);
+  const isArabicDir = ["ar", "ur"].includes(i18next.language);
 
   useEffect(() => {
     if (userData) {

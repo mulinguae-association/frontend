@@ -5,7 +5,7 @@ import i18n from '../../../i18n';
 import { useTranslation } from 'react-i18next';
 function EllipsisMenu(props) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language);
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   const { t } = useTranslation("pages/blogs");
 
   const toggleMenu = () => {
