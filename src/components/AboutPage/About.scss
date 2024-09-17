@@ -4,22 +4,22 @@
 .about_us_info {
   padding: 50px 0;
   text-transform: capitalize;
-  .header {
+  & .header {
     font-size: clamp(1.5rem, 4vw, 2rem);
     color: $primaryDark-color;
   }
 
   .group {
-    @include about();
     border: 1px solid rgba($primaryDark-color, 0.2);
     border-top: 0;
-    div {
+    @include about();
+    & div {
       padding: 30px;
       @media (max-width: 768px) {
         padding: 15px;
       }
     }
-    .about_img {
+    & .about_img {
       width: 100%;
       height: auto;
       object-fit: contain;
@@ -29,22 +29,26 @@
   }
 
   article {
-    > .title {
+    & .title {
       @include flexbox(
         $alignItems: center,
         $direction: row-reverse,
         $justifyContent: start
       );
+      margin-inline-start: 3rem;
       gap: 0.5rem;
       img {
         width: 50px;
         height: 50px;
       }
+      @media (max-width: 991px) {
+        margin-inline-start: 0;
+      }
     }
 
-    > .about {
-      @include about(null, 30px);
+    & .about {
       border: 1px solid rgba($primaryDark-color, 0.2);
+      @include about(null, 30px);
     }
   }
 }
