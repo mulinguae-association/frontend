@@ -1,46 +1,34 @@
-import React, { useEffect, useCallback, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomDropdown from './Navbar/customDropdown/CustomDropDown';
 import useDirectionChange from "../utils/useDirectionChange";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 
 function LanguageSwitcher({ className }) {
   const { i18n } = useTranslation();
+  const { lng } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
 
   const options = useMemo(() => [
-    { label: 'English', value: 'En' },
-    { label: 'Arabic', value: 'Ar' },
-    { label: 'French', value: 'Fr' },
-    { label: 'Hindi', value: 'Hi' },
-    { label: 'Kreol Morisyen', value: 'KM' },
-    { label: 'Mandarin', value: 'Mn' },
-    { label: 'Portuguese', value: 'Pt' },
-    { label: 'Quechua', value: 'Qu' },
-    { label: 'Russian', value: 'Ru' },
-    { label: 'Spanish', value: 'Es' },
-    { label: 'Urdu', value: 'Ur' }
+    { label: 'English', value: 'en' },
+    { label: 'Arabic', value: 'ar' },
+    { label: 'French', value: 'fr' },
+    { label: 'Hindi', value: 'hi' },
+    { label: 'Kreol Morisyen', value: 'km' },
+    { label: 'Mandarin', value: 'mn' },
+    { label: 'Portuguese', value: 'pt' },
+    { label: 'Quechua', value: 'qu' },
+    { label: 'Russian', value: 'ru' },
+    { label: 'Spanish', value: 'es' },
+    { label: 'Urdu', value: 'ur' }
   ], []);
 
-  const handleSelect = useCallback((option) => {
-    localStorage.setItem("selectedLanguage", option.value);
-    const currPath = location.pathname.split("/").slice(2).join("/");
-    navigate(`/${option.value}/${currPath}`);
+  const handleSelect = (option) => {
+    const newPathname = location.pathname.replace(`/${lng}`, `/${option.value}`)
+    navigate(newPathname, { replace: true });
     i18n.changeLanguage(option.value);
-  }, [i18n, navigate, location.pathname]);
-
-  const mapUrlLanguageToOptionValue = useCallback((urlLanguage) => {
-    return options.find((option) => option.value.toLowerCase() === urlLanguage.toLowerCase());
-  }, [options]);
-
-  useEffect(() => {
-    const urlLanguage = location.pathname.split("/")[1];
-    const selectedOption = mapUrlLanguageToOptionValue(urlLanguage);
-    if (selectedOption && selectedOption.value !== i18n.language) {
-      handleSelect(selectedOption);
-    }
-  }, [location.pathname, handleSelect, mapUrlLanguageToOptionValue, i18n.language]);
+  };
 
   useDirectionChange(i18n.language);
 
