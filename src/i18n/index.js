@@ -1,58 +1,58 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import Backend from "i18next-http-backend";
+import HttpBackend from "i18next-http-backend";
+import ChainedBackend from "i18next-chained-backend";
+import LocalStorageBackend from "i18next-localstorage-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import logError from "../utils/logError";
 
-const customBackend = {
-	loadPath: function (lng, ns) {
-		const pagesPrefix = "pages/";
-		const pagesFolder = ns.indexOf(pagesPrefix) === 0 ? "pages/" : "";
-
-		return `/locales/${lng}/${pagesFolder}${ns}.json`;
-	},
-};
-
 i18n
-	.use(Backend)
+	.use(ChainedBackend) // Use ChainedBackend for multiple backends
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
 		fallbackLng: "en",
 		debug: false,
+		supportedLngs: ["ar", "en", "es", "fr", "hi", "pt", "qu", "ru", "ur", "kh", "mn", "it", "km", "ay", "ca"],
+		nonExplicitSupportedLngs: false,
 		interpolation: {
 			escapeValue: false
 		},
-		detection: {
-			order: ["localstorage", "navigator"],
-			lookupFromPathIndex: 0,
-			checkWhitelist: true,
-			caches: ["localstorage"]
-		},
-		suspense: false,
-		backend: customBackend,
 		ns: [
-			"home",
-			"about",
-			"pages/multilingualism",
-			"pages/linguicide",
-			"pages/pagesLinks",
-			"pages/teachers",
-			"pages/students",
-			"notFound",
-			"header",
-			"footer",
 			"global"
-		], // Specify the namespaces
-		defaultNS: "home", // Set the default namespace
-		parse: function (data) {
-			try {
-				return JSON.parse(data);
-			} catch (error) {
-				logError("Error parsing translation file:", error);
-				return {}; // Return an empty object as a fallback
+		],
+		detection: {
+			order: ["path", "navigator", "localStorage", "htmlTag"],
+			lookupLocalStorage: 'i18nextLng',
+			lookupFromPathIndex: 0,
+			lookupFromSubdomainIndex: 0,
+			checkWhitelist: true,
+			caches: ["localStorage"],
+			convertDetectedLanguage: (lng) => lng.toLowerCase()
+		},
+		backend: {
+			backends: [
+				LocalStorageBackend,
+				HttpBackend
+			],
+			backendOptions: [{
+				expirationTime: 24 * 7 * 60 * 60 * 1000
+			}, {
+				loadPath: `/locales/{{lng}}/{{ns}}.json`
+			}],
+			defaultNS: "home", // Set the default namespace if needed
+			parse: function (data) {
+				try {
+					return JSON.parse(data);
+				} catch (error) {
+					logError("Error parsing translation file:", error);
+					return {}; // Return an empty object as a fallback
+				}
 			}
 		},
-	});
+		react: {
+			useSuspense: true
+		}
+	})
 
 export default i18n;

@@ -29,6 +29,7 @@
     }
     .theLang {
       @include abs(-10px -10px 0 0);
+      text-transform: capitalize;
       background-color: #0044ff;
       padding: 0 8px;
       border-radius: 25px;

@@ -2,11 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import "./CustomDropdown.scss";
 
 const CustomDropdown = ({ options, onSelect, className }) => {
-	const [selectedOption, setSelectedOption] = useState(options[1]);
+	const [selectedLang, setSelectedLang] = useState(
+		localStorage.getItem("i18nextLng") || options[0]
+	);
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef(null);
 	const handleOptionClick = (option) => {
-		setSelectedOption(option);
+		setSelectedLang(option.value);
 		onSelect(option);
 		setIsOpen(false);
 	};
@@ -23,19 +25,12 @@ const CustomDropdown = ({ options, onSelect, className }) => {
 			document.removeEventListener("click", handleClickOutside);
 		};
 	}, []);
-	// change direction if the language was arabic
-	useEffect(() => {
-		const selectedLanguage = localStorage.getItem("selectedLanguage");
-		const option = options.find((o) => o.value === selectedLanguage);
-		setSelectedOption(option);
-
-	}, [options]);
 
 	return (
 		<div className={className} ref={dropdownRef}>
 			<div className='selected-option' onClick={() => setIsOpen(!isOpen)}>
-				{selectedOption ?
-					<span className="theLang">{selectedOption?.value}</span> :
+				{selectedLang ?
+					<span className="theLang">{selectedLang}</span> :
 					<span className="theLang">En</span>
 				}
 				<div>
@@ -49,18 +44,17 @@ const CustomDropdown = ({ options, onSelect, className }) => {
 			</div>
 			{isOpen && (
 				<ul
-					style={["Ar", "Ur"].includes(selectedOption?.value) ? { left: 0, right: "auto" } : {}}
+					style={["ar", "ur"].includes(selectedLang) ? { left: 0, right: "auto" } : {}}
 					className='options thin-scroll'
 				>
 					{options.map((option) => (
 						<li
 							key={option.value}
 							onClick={() => handleOptionClick(option)}
-							className={option === selectedOption ? "selected" : ""}>
+							className={option.value === selectedLang.toLowerCase() ? "selected" : ""}>
 							<span className='option'>
 								{option.label}
-
-								{selectedOption?.value === option?.value && (
+								{selectedLang.toLowerCase() === option?.value && (
 									<img src={"/images/icons/right-icon.png"} alt='right-icon' />
 								)}
 							</span>
