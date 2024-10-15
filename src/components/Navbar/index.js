@@ -5,8 +5,8 @@ import "./Navbar.scss";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Sidebar from "./Sidebar";
 import NavLinks from "./NavLinks";
+const Sidebar = React.lazy(() => import("./Sidebar"));
 
 const Navbar = () => {
 	const { i18n: { language: lang }, i18n } = useTranslation("home", { ns: "home" });
@@ -83,7 +83,9 @@ const Navbar = () => {
 						<span></span>
 						<span></span>
 					</div>
-					<Sidebar setMenuOpen={setMenuOpen} t={t} menuOpen={menuOpen} />
+					<React.Suspense>
+						<Sidebar setMenuOpen={setMenuOpen} t={t} menuOpen={menuOpen} />
+					</React.Suspense>
 				</div>
 			</div>
 		</nav>

@@ -1,6 +1,6 @@
 @import "../../../../globalStyles/mixins/mixins.scss";
 .nestedNavLinks {
-  @include abs(245% 0 0 50%); // position: absolute;
+  @include abs(236% 0 0 50%); // position: absolute;
   z-index: 99;
   background-color: hsla(222, 100%, 8%, 0.8);
   width: 510px;

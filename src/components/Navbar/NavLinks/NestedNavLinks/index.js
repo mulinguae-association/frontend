@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import "./NestedNavLinks.scss"
 import { useTranslation } from 'react-i18next'
 import { BsCurrencyExchange } from "react-icons/bs";
-
-// import i18next from 'i18next';
 const NestedNavLinks = (props) => {
-  const { t, i18n: { language: lang } } = useTranslation("pages/pagesLinks")
+  const { t } = useTranslation("pages/pagesLinks")
   const NestedLinksRef = useRef(null)
+  const location = useLocation();
   const handleClickOutside = (event) => {
     if (NestedLinksRef.current &&
       !NestedLinksRef.current.contains(event.target) &&
@@ -29,64 +28,66 @@ const NestedNavLinks = (props) => {
       <ul className='nestedNavContainer'>
         <li>
           <NavLink
-            to={`/${lang}/pages/Multilingualism`}
-            activeclassname="active"
+            to={`pages/multilingualism`}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {t('Multilingualism')}
           </NavLink>
         </li>
         <li>
           <NavLink
-            to={`/${lang}/pages/Linguicide`}
-            activeclassname="active"
+            to={`pages/linguicide`}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {t('Linguicide')}
           </NavLink>
         </li>
         <li>
           <NavLink
-            to={`/${lang}/pages/Teachers`}
-            activeclassname="active"
+            to={`pages/teachers`}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {t('Teachers')}
           </NavLink>
         </li>
         <li>
-          <Link
-            to={`/${lang}/pages/Teachers#meetOurTeachers`}
-            activeclassname="active"
-          >
+          <NavLink
+            to={`pages/teachers#meetOurTeachers`}
+            relative='path'
+            className={() =>
+              (location.hash === "#meetOurTeachers" ? "active" : "")
+            }>
             {t("Meet our teachers")}
-          </Link>
+          </NavLink>
         </li>
         <li>
           <NavLink
-            to={`/${lang}/pages/Students`}
-            activeclassname="active"
+            to={`pages/students`}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {t('Students')}
           </NavLink>
         </li>
         <li>
           <NavLink
-            to={`/${lang}/pages/Blogs`}
-            activeclassname="active"
+            to={`pages/blogs`}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {t('Blogs')}
           </NavLink>
         </li>
         <li>
           <NavLink
-            to={`/${lang}/pages/100-basic-phrases/`}
-            activeclassname="active"
+            to={`pages/100-basic-phrases/`}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             {t("100 basic phrases")}
           </NavLink>
         </li>
         <li className='donation_link'>
           <NavLink
-            to={`/${lang}/pages/donations`}
-            activeclassname="active"
+            to={`pages/donations`}
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             <BsCurrencyExchange /> {t("donate")}
           </NavLink>

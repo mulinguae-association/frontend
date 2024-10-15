@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BiLoaderAlt } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
-import NestedNavLinks from './NestedNavLinks';
+const NestedNavLinks = React.lazy(() => import('./NestedNavLinks'));
 
 const NavLinks = ({ className }) => {
-  const { t, i18n: { language: lang } } = useTranslation('home', { ns: 'home' });
+  const { t } = useTranslation('home', { ns: 'home' });
   const [isCurrElement, setIsCurrElement] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
     setIsCurrElement(prev => !prev);
   };
 
-
   return (
     <ul className={className}>
       <li>
         <NavLink
           exact="true"
-          to={`/${lang}/`}
+          to={`.`}
+          end
           activeclassname="active"
         >
           {t('homeLink')}
@@ -25,7 +26,7 @@ const NavLinks = ({ className }) => {
       </li>
       <li>
         <NavLink
-          to={`/${lang}/about`}
+          to={`about`}
           activeclassname="active"
         >
           {t('aboutLink')}
@@ -33,7 +34,7 @@ const NavLinks = ({ className }) => {
       </li>
       <li>
         <NavLink
-          to={`/${lang}/pages`}
+          to={`pages`}
           activeclassname="active"
           onClick={handleClick}
         >
@@ -41,12 +42,14 @@ const NavLinks = ({ className }) => {
           <span className={`arrow_down ${isCurrElement ? 'rotate' : ''}`}></span>
         </NavLink>
         {isCurrElement &&
-          <NestedNavLinks setIsCurrElement={setIsCurrElement} t={t} />
+          <Suspense fallback={<div className="spin-loader"><BiLoaderAlt color='#fff' /></div>}>
+            <NestedNavLinks setIsCurrElement={setIsCurrElement} t={t} />
+          </Suspense>
         }
       </li>
       <li>
         <NavLink
-          to={`/${lang}/courses`}
+          to={`courses`}
           activeclassname='active'
         >
           {t('coursesLink')}
@@ -54,7 +57,7 @@ const NavLinks = ({ className }) => {
       </li>
       <li>
         <NavLink
-          to={`/${lang}/contact`}
+          to={`contact`}
           activeclassname='active'
         >
           {t('contactLink')}
