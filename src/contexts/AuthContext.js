@@ -2,12 +2,15 @@ import { createContext, useContext, useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import { notifyError } from "../components/Notify";
 import handleError from "../utils/handleError";
-import { fetchUserProfile } from "../apis/auth-api";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
+  const fetchUserProfile = async () => {
+    const { fetchUserProfile } = await import('../apis/auth-api');
+    return fetchUserProfile();
+  };
   const { data: userData } = useQuery("userProfile", fetchUserProfile, {
     retry: false, // Don't retry on failure
     staleTime: 10 * 60 * 1000, // 10 minutes
