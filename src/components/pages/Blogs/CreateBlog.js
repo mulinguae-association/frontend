@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import TextEditor from "../../../TextEditor";
 import "./Blogs.scss";
 import { notifyError } from "../../Notify";
@@ -7,8 +7,7 @@ import InputField from "../../HelperComponents/InputField";
 import sanitizeHtml from "../../../utils/sanitizeHtml";
 import logError from "../../../utils/logError";
 import i18n from "../../../i18n";
-import { useNavigate } from "react-router";
-import { useAddBlogMutation } from "../../../apis/mutations/blogs-mutations";
+import { useAddBlogMutation } from "../../../apis/mutations/blogs/createBlog";
 import { useGlobal } from "../../../contexts/AppContext";
 import { useTranslation } from "react-i18next";
 const CreateBlog = () => {
@@ -21,18 +20,11 @@ const CreateBlog = () => {
   });
 
   const { isBtnLoading } = useGlobal();
-  const { userData, isAuth } = useAuth();
+  const { userData } = useAuth();
   const editorRef = useRef(null)
-  const navigate = useNavigate();
   const avatar = userData?.profileImage;
   const { t } = useTranslation("pages/blogs");
-  const isRtl = ["Ar", "Ur"].includes(i18n.language);
-  useEffect(() => {
-    if (!isAuth || !userData) {
-      navigate(`/${i18n.language}/login`);
-    }
-  }, [userData, isAuth, navigate]);
-
+  const isRtl = ["ar", "ur"].includes(i18n.language);
   // Function to toggle between preview and edit mode
   const togglePreview = () => {
     if (formState.title === "" || formState.content === "") {

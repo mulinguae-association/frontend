@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { useGlobal } from '../../../../contexts/AppContext';
 import { notifyError } from '../../../Notify';
-import { useAddReplyMutation } from '../../../../apis/mutations/blogs-mutations';
+import { useAddReplyMutation } from '../../../../apis/mutations/blogs/addReply';
 import i18n from '../../../../i18n';
 import { useTranslation } from 'react-i18next';
 const ReplyForm = ({ commentsId: parentCommentId, blogId }) => {
   const [replyConetnt, setReplyContent] = useState("");
   const { isBtnLoading } = useGlobal();
   const btnKey = `replyCommentBtn_${parentCommentId}`;
-  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language);
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   const { t } = useTranslation("pages/blogs");
   const { mutate: handleAddReply } = useAddReplyMutation(setReplyContent);
   const handleKeyPress = (e) => {

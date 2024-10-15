@@ -4,9 +4,8 @@ import BlogsHeader from "./BlogsHeader";
 import BlogList from "./BlogList";
 import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
 import "./Blogs.scss";
-import Footer from "../../FooterPages";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
-import { useSearchMutation } from "../../../apis/mutations/blogs-mutations";
+import { useSearchMutation } from "../../../apis/mutations/blogs/searchBlog";
 
 const Blogs = () => {
   const {
@@ -18,7 +17,6 @@ const Blogs = () => {
     setPostsToDisplay
   } = useBlogPosts(); // Use the context hook
   const [previousQuery, setPreviousQuery] = useState("");
-  const footerRef = useRef();
   const searchMutation = useSearchMutation(searchQuery);
   const counterRef = useRef(0);
   const debouncedSearch = debounce((query) => {
@@ -54,9 +52,9 @@ const Blogs = () => {
     };
 
     const observer = new IntersectionObserver(handleScrollToFooter, options);
-
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
+    const footerElement = document.querySelector("footer");
+    if (footerElement) {
+      observer.observe(footerElement);
     }
 
     return () => {
@@ -86,7 +84,6 @@ const Blogs = () => {
           <ScrollDownArrow />
         )}
       </div>
-      <Footer footerRef={footerRef} />
     </main>
   );
 };

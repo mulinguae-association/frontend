@@ -1,7 +1,7 @@
 import axios from "axios";
 import logError from "../utils/logError";
 
-const createTeacher = async (formData) => {
+export const createTeacher = async (formData) => {
   try {
     const res = await axios.post(`/api/teachersCard`, formData, {
       headers: {
@@ -19,7 +19,7 @@ const createTeacher = async (formData) => {
   }
 }
 
-const updateTeacher = async (teacherId, updatedTeacher) => {
+export const updateTeacher = async (teacherId, updatedTeacher) => {
   try {
     // Create a FormData object to send the data as multipart/form-data
     const formData = new FormData();
@@ -47,7 +47,7 @@ const updateTeacher = async (teacherId, updatedTeacher) => {
   }
 };
 
-const fetchTeachers = async () => {
+export const fetchTeachers = async () => {
   try {
     const response = await axios.get('/api/teachers');
     return response.data;
@@ -57,7 +57,17 @@ const fetchTeachers = async () => {
   }
 }
 
-const deleteTeacher = async (teacherId) => {
+export const fetchTeacherById = async (id) => {
+  try {
+    const response = await axios.get(`/api/teachers/${id}`);
+    return response.data;
+  } catch (error) {
+    logError('Error fetching teachers:', error);
+    throw error;
+  }
+}
+
+export const deleteTeacher = async (teacherId) => {
   try {
     const res = await axios.delete(`/api/deleteTeacherCard/${teacherId}`);
     if (res.status === 200) {
@@ -70,5 +80,3 @@ const deleteTeacher = async (teacherId) => {
     throw error;
   }
 };
-
-export { createTeacher, updateTeacher, fetchTeachers, deleteTeacher };

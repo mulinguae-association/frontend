@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-import EllipsisMenu from '../EllipsisMenu';
 import { formatRelativeTime } from '../../../HelperComponents/RelativeDate';
-import UpdateComment from './UpdateComment';
 import InteractionComponent from '../interaction/InteractionComments';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { isTextTruncated } from '../../../../utils/isTextTruncated';
-import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs-mutations';
+import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs/removeComment';
 import i18n from '../../../../i18n';
+import { BiLoaderAlt } from 'react-icons/bi';
+const UpdateComment = React.lazy(() => import('./UpdateComment'));
+const EllipsisMenu = React.lazy(() => import("../EllipsisMenu"));
 
 const Comment = ({
   comment,
@@ -20,7 +21,7 @@ const Comment = ({
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
   const { mutate: handleRemoveComment } = useRemoveCommentMutation();
-  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language)
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language)
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -40,10 +41,12 @@ const Comment = ({
   return (
     <div style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }} className='comment_info'>
       {isAuth && (comment?.postedBy?._id === userData?.userId || userData?.role === "admin") && (
-        <EllipsisMenu
-          handleDelete={() => handleRemoveComment(comment?._id)}
-          handleEdit={(state) => handleEdit(comment, state)}
-        />
+        <React.Suspense fallback={<BiLoaderAlt color='#fff' className='spin-loader' />}>
+          <EllipsisMenu
+            handleDelete={() => handleRemoveComment(comment?._id)}
+            handleEdit={(state) => handleEdit(comment, state)}
+          />
+        </React.Suspense>
       )}
       <div className='comment_head'>
         <div className='comment_author_container'>
@@ -67,13 +70,15 @@ const Comment = ({
       </div>
       {
         isEditComment && (editCommentId.postedBy._id === comment.postedBy._id && editCommentId._id === comment._id) ? (
-          <UpdateComment
-            editCommentId={comment._id}
-            comments={comment}
-            initialValue={comment?.content}
-            setIsEditComment={setIsEditComment}
-            isEditComment={isEditComment}
-          />
+          <React.Suspense fallback={<BiLoaderAlt />}>
+            <UpdateComment
+              editCommentId={comment._id}
+              comments={comment}
+              initialValue={comment?.content}
+              setIsEditComment={setIsEditComment}
+              isEditComment={isEditComment}
+            />
+          </React.Suspense>
         ) : (
           <div className="parent_comment">
             <div className={`comment_content_container`}>

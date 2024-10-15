@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Blogs.scss";
 import CommentForm from "./comments/CommentForm";
-import BlogPopup from "./BlogPopup";
 import "./comments/comment.scss"
 import { useGlobal } from "../../../contexts/AppContext";
 import BlogHeader from "./BlogHeader";
@@ -9,9 +8,11 @@ import BlogContent from "./BlogContent";
 import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext";
 import InteractionComponent from "./interaction/InteractionComments";
-import ConfirmationModal from "../../ConfirmationModal";
-import { useRemoveBlogMutation } from "../../../apis/mutations/blogs-mutations";
+import { useRemoveBlogMutation } from "../../../apis/mutations/blogs/removeBlog";
 import { detectLanguage } from "../../../utils/detectLanguage";
+import { BiLoaderAlt } from "react-icons/bi";
+const BlogPopup = React.lazy(() => import("./BlogPopup"));
+const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
 
 const BlogPost = ({ blog }) => {
   const [showFullContent, setShowFullContent] = useState(false);
@@ -24,10 +25,10 @@ const BlogPost = ({ blog }) => {
     if (showAllComments || showFullContent) {
       document.body.style.overflow = "hidden"; // Disable scrolling on the body
     } else {
-      document.body.style.overflow = "auto"; // Re-enable scrolling on the body
+      document.body.style.removeProperty("overflow");
     }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.removeProperty("overflow");
     };
   }, [showAllComments, showFullContent]);
 
@@ -40,7 +41,7 @@ const BlogPost = ({ blog }) => {
 
   // check language to change style and direction
   const lang = detectLanguage(blog.content.slice(0, 25) || blog.title[0] || blog.subTitle[0] || '')
-  const ArUR = ["Ar", "Ur"].includes(lang);
+  const ArUR = ["ar", "ur"].includes(lang);
 
   return (
     <article style={ArUR ? { direction: "rtl" } : { direction: "ltr" }} className="blog-post">
@@ -77,30 +78,40 @@ const BlogPost = ({ blog }) => {
       </div>
       {
         showFullContent &&
-        <BlogPopup show={setShowFullContent}
-          showFullContent={showFullContent}
-          blog={blog}
-        />
+        <React.Suspense fallback={<BiLoaderAlt className="spin-loader" color="#fff" />}>
+          <BlogPopup show={setShowFullContent}
+            showFullContent={showFullContent}
+            blog={blog}
+          />
+        </React.Suspense>
       }
       {
         showAllComments && (
-          <BlogPopup
-            show={setShowAllComments}
-            showAllComments={showAllComments}
-            blog={blog}
-            comments={comments}
-
-          />
+          <React.Suspense fallback={
+            <div className="blog_overlay">
+              <div className="blog_popup">
+                <BiLoaderAlt color="green" className="spin-loader" size="50px" />
+              </div>
+            </div>}>
+            <BlogPopup
+              show={setShowAllComments}
+              showAllComments={showAllComments}
+              blog={blog}
+              comments={comments}
+            />
+          </React.Suspense>
         )
       }
       {
         showModal &&
-        <ConfirmationModal
-          message={`Are you sure you want to delete this Post?`}
-          onConfirm={() => handleRemoveBlogPost(blog._id)}
-          onCancel={() => setShowModal(false)}
-          isLoading={isBtnLoading['RemoveBlogPost']}
-        />
+        <React.Suspense fallback={<BiLoaderAlt className="spin-loader" color="#fff" />}>
+          <ConfirmationModal
+            message={`Are you sure you want to delete this Post?`}
+            onConfirm={() => handleRemoveBlogPost(blog._id)}
+            onCancel={() => setShowModal(false)}
+            isLoading={isBtnLoading['RemoveBlogPost']}
+          />
+        </React.Suspense>
       }
     </article >
   );

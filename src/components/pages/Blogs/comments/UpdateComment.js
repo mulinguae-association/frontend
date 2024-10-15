@@ -7,7 +7,7 @@ import { useAuth } from '../../../../contexts/AuthContext';
 import { useContext } from 'react';
 import { AppContext } from '../../../../contexts/AppContext';
 import logError from '../../../../utils/logError';
-import { useUpdateCommentLocally } from '../../../../apis/mutations/blogs-mutations';
+import { useUpdateCommentLocally } from '../../../../apis/mutations/blogs/updateComment';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../i18n';
 
@@ -17,7 +17,7 @@ const UpdateComment = ({ editCommentId, initialValue, setIsEditComment }) => {
   const { setNotificationPopup } = useContext(AppContext);
   const { t } = useTranslation("pages/blogs");
   const updateCommentLocally = useUpdateCommentLocally();
-  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language);
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   const textareaRef = useRef(null);
 
   useEffect(() => {

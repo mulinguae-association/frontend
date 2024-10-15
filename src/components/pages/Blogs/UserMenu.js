@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 const UserMenu = ({ handleLogout, setShowMenuUser }) => {
   const { isAuth, userData } = useAuth();
   const { t } = useTranslation("pages/blogs");
-  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language);
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   const userMenu = useClickOutside(() => {
     setShowMenuUser(null)
   })
@@ -23,7 +23,7 @@ const UserMenu = ({ handleLogout, setShowMenuUser }) => {
           {t("dashBtn")}
         </Link>
       }
-      <Link to={`/${i18next.language}/user/settings`} className='user-link'>
+      <Link to={`/${i18next.language}/user-settings`} className='user-link'>
         {t("settingsBtn")}
       </Link>
       <button onClick={handleLogout} className='logout-button'>

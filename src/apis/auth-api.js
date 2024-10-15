@@ -1,7 +1,7 @@
 import axios from 'axios';
 import logError from '../utils/logError';
 
-export const fetchUserProfile = async () => {
+const fetchUserProfile = async () => {
   try {
     const res = await axios.get('/api/auth/profile');
     return res.data;
@@ -11,8 +11,7 @@ export const fetchUserProfile = async () => {
   }
 };
 
-
-export async function submitRegister(RegisterData) {
+async function submitRegister(RegisterData) {
   try {
     const response = await axios.post(`/api/auth/register`, RegisterData);
     if (response.status === 200) {
@@ -28,7 +27,7 @@ export async function submitRegister(RegisterData) {
 }
 
 // Login
-export async function submitLogin(LoginData) {
+async function submitLogin(LoginData) {
   try {
     const response = await axios.post(`/api/auth/login`, LoginData);
 
@@ -45,7 +44,7 @@ export async function submitLogin(LoginData) {
 }
 
 // Logout
-export async function submitLogout() {
+async function submitLogout() {
   try {
     const response = await axios.get(`/api/auth/logout`);
 
@@ -59,3 +58,5 @@ export async function submitLogout() {
     throw error;
   }
 }
+
+export { fetchUserProfile, submitLogin, submitRegister, submitLogout }

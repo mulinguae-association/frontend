@@ -2,7 +2,7 @@ import { useState } from "react";
 import { notifyError } from "../../../Notify";
 import { useGlobal } from "../../../../contexts/AppContext";
 import { useAuth } from "../../../../contexts/AuthContext";
-import { useCreateCommentMutation } from "../../../../apis/mutations/blogs-mutations";
+import { useCreateCommentMutation } from "../../../../apis/mutations/blogs/createComment";
 import i18n from "../../../../i18n";
 import { useTranslation } from "react-i18next";
 const CommentForm = ({ blogId }) => {
@@ -12,7 +12,7 @@ const CommentForm = ({ blogId }) => {
   const { mutate: createCommentMutation } = useCreateCommentMutation();
   const buttonKey = `postComment_${blogId}`
   const { t } = useTranslation("pages/blogs");
-  const isAr_Ur = ["Ar", "Ur"].includes(i18n.language)
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language)
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     const commentData = {

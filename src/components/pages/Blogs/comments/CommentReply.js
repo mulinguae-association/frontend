@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
-import EllipsisMenu from '../EllipsisMenu';
 import UpdateComment from './UpdateComment';
 import InteractionComponent from '../interaction/InteractionComments';
 import { formatRelativeTime } from '../../../HelperComponents/RelativeDate';
 import { useAuth } from '../../../../contexts/AuthContext';
 import { isTextTruncated } from '../../../../utils/isTextTruncated';
-import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs-mutations';
+import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs/removeComment';
+const EllipsisMenu = React.lazy(() => import("../EllipsisMenu"));
 
 const CommentReply = ({
   comment,
@@ -46,10 +46,12 @@ const CommentReply = ({
         className='nested_comments'
       >
         {isAuth && (comment.postedBy._id === userData?.userId || userData?.role === "admin") && (
-          <EllipsisMenu
-            handleDelete={() => handleRemoveComment(comment._id)}
-            handleEdit={(state) => handleEdit(comment, state)}
-          />
+          <React.Suspense className="Loading...">
+            <EllipsisMenu
+              handleDelete={() => handleRemoveComment(comment._id)}
+              handleEdit={(state) => handleEdit(comment, state)}
+            />
+          </React.Suspense>
         )}
         {isEditComment && editCommentId._id === comment._id ? (
           <UpdateComment

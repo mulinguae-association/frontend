@@ -3,7 +3,7 @@ import Unlikes from './Unlike';
 import Love from './Love';
 import Like from './Like';
 import { useAuth } from '../../../../contexts/AuthContext';
-import { useUpdateInteractionMutation } from '../../../../apis/mutations/blogs-mutations';
+import { useUpdateInteractionMutation } from '../../../../apis/mutations/blogs/updateInteraction';
 
 const InteractionComponent = ({
   reply,
