@@ -1,28 +1,31 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { AppContext } from '../../../contexts/AppContext';
 import EditTeacherForm from '../../Dashboard/EditTeacherForm';
 import { useAuth } from '../../../contexts/AuthContext';
-import i18next from 'i18next';
 import handleError from '../../../utils/handleError';
 import { BiLoaderCircle } from 'react-icons/bi';
-import { useDeleteTeacherMutation } from '../../../apis/mutations/teachers-mutations';
 import i18n from '../../../i18n';
-import ConfirmationModal from '../../ConfirmationModal';
+import { useDeleteTeacherMutation } from '../../../apis/mutations/teachers/deleteTeacher';
+import { useQuery } from 'react-query';
+import { fetchTeachers } from '../../../apis/apiUtility';
+const ConfirmationModal = React.lazy(() => import('../../ConfirmationModal'));
 
 const TeachersOverview = ({ t }) => {
-  const { teachers, isLoading, error, isError } = useContext(AppContext);
   const [showModal, setShowModal] = useState(false);
   const [teacherToDelete, setTeacherToDelete] = useState(null);
   const [editingTeacher, setEditingTeacher] = useState(null);
   const { isAuth, userData } = useAuth();
+  const arLang = i18n.language === "ar";
   const { mutate: handleDeleteTeacher } = useDeleteTeacherMutation();
-  const arLang = i18n.language === "Ar";
+
+  const { data: teachers, isLoading, isError, error } = useQuery(["getTeachers"], fetchTeachers, {
+    cacheTime: Infinity
+  });
 
   // Function to sort teachers by their first name alphabetically
   const sortedTeachers = teachers
@@ -107,7 +110,7 @@ const TeachersOverview = ({ t }) => {
                       <span className='teacher_job'>{teacher?.jobBrief}</span>
                     </div>
                     <p className='teacher_brief scroll'>{teacher?.aboutTeacher}</p>
-                    <Link className='teacher_link' to={`/${i18next.language}/pages/Teachers/${teacher?.firstName}_${teacher?._id}`}>{t("sec6_link1")}</Link>
+                    <Link state={{ teacherData: teacher }} className='teacher_link' to={`${teacher?.firstName}_${teacher?._id}`}>{t("sec6_link1")}</Link>
                   </>
                   : <EditTeacherForm teacher={editingTeacher} onEdit={setEditingTeacher} />
                 }
@@ -126,12 +129,14 @@ const TeachersOverview = ({ t }) => {
       </Swiper>
       {
         showModal &&
-        <ConfirmationModal
-          message={`Are you sure you want to delete this teacher?`}
-          onConfirm={() => confirmDeleteTeacher(teacherToDelete)}
-          onCancel={() => setShowModal(false)}
-          isLoading={false}
-        />
+        <React.Suspense fallback="Loading...">
+          <ConfirmationModal
+            message={`Are you sure you want to delete this teacher?`}
+            onConfirm={() => confirmDeleteTeacher(teacherToDelete)}
+            onCancel={() => setShowModal(false)}
+            isLoading={false}
+          />
+        </React.Suspense>
       }
     </>
   );
