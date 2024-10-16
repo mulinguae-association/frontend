@@ -1,23 +1,26 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import { AppContext } from '../../../contexts/AppContext';
 import "./Teachers.scss";
 import { useTranslation } from 'react-i18next';
+import { fetchTeacherById } from '../../../apis/apiUtility';
+import { useQuery } from 'react-query';
+import { BiLoaderAlt } from 'react-icons/bi';
 
 const TeacherProfile = () => {
-  const { teachers } = useContext(AppContext);
   const { t } = useTranslation('pages/teachers');
   const { teacherId } = useParams();
+  const { data: teacher, isLoading, isError } = useQuery(["getTeacherById"], () => fetchTeacherById(teacherId.split("_")[1]), {
+    cacheTime: Infinity
+  });
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  // Find the teacher with matching teacherId
-  const teacher = teachers?.find(teacher => `${teacher.firstName}_${teacher._id}` === teacherId);
+  if (isLoading) {
+    return <div className='not-found'><BiLoaderAlt className='spin-loader' color='darkblue' size={50} /></div>;
+  }
 
-  if (!teacher) {
+  if (isError) {
     return <div className='not-found'>Teacher not found</div>;
   }
+
   const teacherImg = typeof teacher?.image === "object"
     ? URL.createObjectURL(teacher?.image)
     : teacher?.image;
@@ -33,8 +36,8 @@ const TeacherProfile = () => {
               <h3>{t('sec7_phone')}: <span>{teacher?.telephone}</span></h3>
             </div>
             <img
-              width="300px"
-              height="300px"
+              width="250px"
+              height="250px"
               src={teacherImg}
               onError={(e) => {
                 e.target.src = "/images/fallBackUser.png";
