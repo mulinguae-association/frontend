@@ -1,11 +1,16 @@
 import React, { useCallback } from "react";
 import { BiImageAdd, BiLink } from "react-icons/bi";
+import { notifyError } from "../../Notify";
+import { validateImageUrl } from "../../../utils/validateImages";
+import { validateUrl } from "../../../utils/validateUrl";
 
 const EditorButtons = ({ editor }) => {
-  const setLink = useCallback(() => {
+  const setLink = useCallback(async () => {
     const previousUrl = editor.getAttributes("link").href;
     const url = window.prompt("URL", previousUrl);
-    console.log(url);
+    if (!validateUrl(url)) {
+      return notifyError("invalid Url ");
+    }
     // cancelled
     if (url === null) {
       return;
@@ -17,14 +22,18 @@ const EditorButtons = ({ editor }) => {
 
       return;
     }
-
     // update link
     editor.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
   }, [editor]);
 
-  const addImage = () => {
+  const addImage = async () => {
     const url = window.prompt("URL");
 
+    const isValidImage = await validateImageUrl(url); // validate image URL
+    if (!isValidImage) {
+      notifyError("Invalid image URL. Please provide a valid image.");
+      return;
+    }
     if (url) {
       editor.chain().focus().setImage({ src: url }).run();
     }

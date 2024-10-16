@@ -22,7 +22,9 @@ const TextEditor = ({ value, setFormState, editorRef }) => {
         autolink: true,
         defaultProtocol: 'https'
       }),
-      Image
+      Image.configure({
+        defaultProtocol: "https"
+      })
     ]
   });
 
