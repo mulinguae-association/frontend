@@ -56,8 +56,6 @@
     }
   }
   .comment_content_container {
-    @include flexbox($alignItems: center);
-    gap: 10px;
     padding-bottom: 50px;
     border-left: 2px solid orangered;
     padding: 10px;
@@ -87,6 +85,7 @@
   }
 
   .read-more-button {
+    min-height: 17px;
     background: none;
     border: none;
     color: blue;
