@@ -54,6 +54,7 @@
     }
   }
   .popup_content {
+    width: 100%;
     .comments_header {
       @include flexbox($alignItems: center, $justifyContent: center);
       gap: 8px;
