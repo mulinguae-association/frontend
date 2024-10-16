@@ -10,9 +10,10 @@ import logError from '../../../../utils/logError';
 import { useUpdateCommentLocally } from '../../../../apis/mutations/blogs/updateComment';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../i18n';
-
+import { useCache } from '../../../../contexts/BlogsCache';
 const UpdateComment = ({ editCommentId, initialValue, setIsEditComment }) => {
   const { userData } = useAuth();
+  const { clearCache } = useCache();
   const [value, setValue] = useState(initialValue);
   const { setNotificationPopup } = useContext(AppContext);
   const { t } = useTranslation("pages/blogs");
@@ -41,6 +42,7 @@ const UpdateComment = ({ editCommentId, initialValue, setIsEditComment }) => {
     const isAdmin = userData.role === "admin";
     try {
       const res = await updatedComment(editCommentId, requestedBody);
+      clearCache();
       if (res.status === 201) {
         isAdmin ?
           notifySuccess("Successfully updated comment")

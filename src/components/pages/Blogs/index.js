@@ -6,6 +6,7 @@ import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
 import "./Blogs.scss";
 import { useBlogPosts } from "../../../contexts/BlogsContext";
 import { useSearchMutation } from "../../../apis/mutations/blogs/searchBlog";
+import { CacheProvider } from "../../../contexts/BlogsCache";
 
 const Blogs = () => {
   const {
@@ -69,7 +70,9 @@ const Blogs = () => {
           handleSearchKeyPress={handleSearchKeyPress}
           handleSearchChange={handleSearchChange}
         />
-        <BlogList acceptedPosts={acceptedPosts} />
+        <CacheProvider>
+          <BlogList acceptedPosts={acceptedPosts} />
+        </CacheProvider>
         {errorDisplayPosts ? (
           <p className="finished-message">
             {"An error occurred while fetching blog posts."}

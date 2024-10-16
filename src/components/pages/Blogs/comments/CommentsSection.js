@@ -11,7 +11,8 @@ const CommentsSection = ({
   showAllComments,
   setShowAllComments,
   checkStatus,
-  blogId
+  blogId,
+  list
 }) => {
   const {
     isEditComment,
@@ -20,7 +21,7 @@ const CommentsSection = ({
     editCommentId
   } = useCommentEditState();
   const { t } = useTranslation("pages/blogs");
-  const isAr_Ur = ["ar", "ur"].includes(i18n.language)
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   return (
     <section style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }} className="comments">
       <h2 className="comment_title">
@@ -51,6 +52,7 @@ const CommentsSection = ({
                 handleEdit={handleEdit}
                 setIsEditComment={setIsEditComment}
                 isEditComment={isEditComment}
+                list={list}
               />
             )}
 

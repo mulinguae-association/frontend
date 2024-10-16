@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { formatRelativeTime } from '../../../HelperComponents/RelativeDate';
 import InteractionComponent from '../interaction/InteractionComments';
 import { useAuth } from '../../../../contexts/AuthContext';
@@ -6,6 +6,7 @@ import { isTextTruncated } from '../../../../utils/isTextTruncated';
 import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs/removeComment';
 import i18n from '../../../../i18n';
 import { BiLoaderAlt } from 'react-icons/bi';
+import { useCache } from '../../../../contexts/BlogsCache';
 const UpdateComment = React.lazy(() => import('./UpdateComment'));
 const EllipsisMenu = React.lazy(() => import("../EllipsisMenu"));
 
@@ -14,7 +15,8 @@ const Comment = ({
   editCommentId,
   handleEdit,
   isEditComment,
-  setIsEditComment
+  setIsEditComment,
+  list
 }) => {
   const { userData, isAuth } = useAuth();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -22,6 +24,7 @@ const Comment = ({
   const contentRef = useRef(null);
   const { mutate: handleRemoveComment } = useRemoveCommentMutation();
   const isAr_Ur = ["ar", "ur"].includes(i18n.language)
+  const { clearCache } = useCache();
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -34,9 +37,15 @@ const Comment = ({
     return () => window.removeEventListener('resize', checkTruncation);
   }, [comment.content]);
 
-  const toggleReadMore = () => {
-    setIsExpanded(!isExpanded);
-  };
+  const toggleReadMore = useCallback(() => {
+    setIsExpanded((prev) => !prev);
+    clearCache()
+    setTimeout(() => {
+      if (list) {
+        list();
+      }
+    }, 0)
+  }, [list, clearCache, isExpanded]);
 
   return (
     <div style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }} className='comment_info'>
@@ -83,11 +92,11 @@ const Comment = ({
           <div className="parent_comment">
             <div className={`comment_content_container`}>
               <p ref={contentRef} className={`comment_content ${isExpanded ? 'expanded' : 'truncated'}`}>{comment?.content}</p>
-              {isTruncated && (
-                <button className='read-more-button' onClick={toggleReadMore}>
-                  {isExpanded ? "Show less" : "Read more"}
-                </button>
-              )}
+              <button className='read-more-button' onClick={toggleReadMore}>
+                {isTruncated && (
+                  isExpanded ? "Show less" : "Read more"
+                )}
+              </button>
             </div>
             <InteractionComponent modelType='comment' reply={comment} />
           </div>

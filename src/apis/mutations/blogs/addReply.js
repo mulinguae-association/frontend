@@ -6,12 +6,14 @@ import { useBlogPosts } from '../../../contexts/BlogsContext';
 import { notifyError } from '../../../components/Notify';
 import { useGlobal } from '../../../contexts/AppContext';
 import { useAuth } from '../../../contexts/AuthContext';
+import { useCache } from '../../../contexts/BlogsCache';
 
 
 export const useAddReplyMutation = (setReplyContent) => {
   const { userData } = useAuth();
   const { setButtonLoading, setNotificationPopup } = useGlobal();
   const { postsToDisplay } = useBlogPosts();
+  const { clearCache } = useCache();
   const queryClient = useQueryClient();
   const newComment = {
     _id: crypto.randomUUID().toString(),
@@ -49,6 +51,7 @@ export const useAddReplyMutation = (setReplyContent) => {
               })
             }))
           })
+        clearCache();
         return { previousPosts }
       },
       onSuccess: (res, { parentCommentId }) => {

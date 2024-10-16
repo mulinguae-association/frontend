@@ -6,12 +6,14 @@ import { useBlogPosts } from '../../../contexts/BlogsContext';
 import { notifyError, notifySuccess } from '../../../components/Notify';
 import { useGlobal } from '../../../contexts/AppContext';
 import { useAuth } from '../../../contexts/AuthContext';
+import { useCache } from '../../../contexts/BlogsCache';
 
 export const useCreateCommentMutation = () => {
   const queryClient = useQueryClient();
   const { postsToDisplay } = useBlogPosts();
   const { userData } = useAuth();
   const { setNotificationPopup, setButtonLoading } = useGlobal()
+  const { clearCache } = useCache()
 
   return useMutation(
     ({ blogId, commentData }) => createComment(blogId, commentData),
@@ -31,6 +33,7 @@ export const useCreateCommentMutation = () => {
               : post)
             )
           )
+        clearCache();
         return { previousPosts };
       },
       onSuccess: ({ data }, { blogId, commentData }) => {

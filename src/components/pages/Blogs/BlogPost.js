@@ -11,10 +11,12 @@ import InteractionComponent from "./interaction/InteractionComments";
 import { useRemoveBlogMutation } from "../../../apis/mutations/blogs/removeBlog";
 import { detectLanguage } from "../../../utils/detectLanguage";
 import { BiLoaderAlt } from "react-icons/bi";
+import { useCache } from "../../../contexts/BlogsCache";
 const BlogPopup = React.lazy(() => import("./BlogPopup"));
 const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
 
-const BlogPost = ({ blog }) => {
+const BlogPost = ({ blog, list }) => {
+  const { clearCache } = useCache()
   const [showFullContent, setShowFullContent] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
   const { isBtnLoading } = useGlobal();
@@ -35,6 +37,7 @@ const BlogPost = ({ blog }) => {
   const { mutate: refuseBlog } = useRemoveBlogMutation(setShowModal);
   const handleRemoveBlogPost = async (blogId) => {
     refuseBlog(blogId)
+    clearCache()
   };
 
   const checkStatus = comments[0]?.status === "accepted";
@@ -53,6 +56,7 @@ const BlogPost = ({ blog }) => {
         setShowAllComments={setShowAllComments}
         checkStatus={checkStatus}
         blogId={blog._id}
+        list={list}
       />
       {showAllComments && <div className="overlay"></div>}
       {/* Delete Blog Post Button */}

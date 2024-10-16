@@ -4,10 +4,12 @@ import handleError from '../../../utils/handleError';
 import { useBlogPosts } from '../../../contexts/BlogsContext';
 import { notifyError, notifySuccess } from '../../../components/Notify';
 import { refuseComment } from '../../blog-api';
+import { useCache } from '../../../contexts/BlogsCache';
 
 export const useRemoveCommentMutation = () => {
   const queryClient = useQueryClient();
-  const { postsToDisplay } = useBlogPosts()
+  const { postsToDisplay } = useBlogPosts();
+  const { clearCache } = useCache();
   return useMutation(
     (commentId) => refuseComment(commentId),
     {
@@ -28,10 +30,11 @@ export const useRemoveCommentMutation = () => {
             }).filter(comment => comment !== null)
           }))
         });
+        clearCache();
         return { previousPosts }
       },
       onSuccess: (res) => {
-        notifySuccess(res.data.message)
+        notifySuccess(res.data.message);
       },
       onError: (error, varia, context) => {
         queryClient.setQueryData(['acceptedPosts', postsToDisplay], context.previousPosts);
