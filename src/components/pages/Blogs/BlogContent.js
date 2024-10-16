@@ -2,24 +2,16 @@ import React, { useEffect, useRef, useState } from 'react'
 import { isTextTruncated } from '../../../utils/isTextTruncated';
 import sanitizeHtml from '../../../utils/sanitizeHtml';
 import { useTranslation } from 'react-i18next';
-
 const BlogContent = ({ blog, setShowFullContent }) => {
   const [isExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
   const { t } = useTranslation("pages/blogs");
 
-  useEffect(() => {
-    const checkTruncation = () => {
-      if (contentRef.current) {
-        setIsTruncated(isTextTruncated(contentRef.current));
-      }
-    };
 
-    checkTruncation();
-    window.addEventListener('resize', checkTruncation);
-    return () => window.removeEventListener('resize', checkTruncation);
-  }, [blog.content]);
+  useEffect(() => {
+    contentRef.current && setIsTruncated(isTextTruncated(contentRef.current));
+  }, [contentRef]);
 
   return (
     <section className="blog_content">
@@ -44,11 +36,14 @@ const BlogContent = ({ blog, setShowFullContent }) => {
         dangerouslySetInnerHTML={{ __html: sanitizeHtml(blog.content) }}>
       </div>
       {
-        isTruncated && (
-          <span onClick={() => setShowFullContent(prev => !prev)} className="read_more">
-            {t("readMore")}
-          </span>
-        )
+        <button onClick={() => setShowFullContent(prev => !prev)} className='read_more_btn'>
+          {isTruncated ? (
+            <span className="read_more">
+              {t("readMore")}
+            </span>
+          ) : ""
+          }
+        </button>
       }
     </section>
   );
