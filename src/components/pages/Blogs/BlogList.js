@@ -40,7 +40,7 @@ const BlogList = ({ acceptedPosts }) => {
             padding: padding,
             borderBottom: '1px solid #eaeaea',
             minHeight: minHeight
-          }}>
+          }} onLoad={measure}>
             <BlogPost blog={blog} list={measure} />
           </div>
         )}

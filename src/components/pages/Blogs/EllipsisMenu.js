@@ -3,8 +3,10 @@ import "./ellipsisMenu.scss";
 import { useClickOutside } from '../../../utils/ClickOutside';
 import i18n from '../../../i18n';
 import { useTranslation } from 'react-i18next';
+
 function EllipsisMenu(props) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isEditing, setIsEditing] = useState(false); // Add a state to track if in edit mode
   const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   const { t } = useTranslation("pages/blogs");
 
@@ -14,15 +16,16 @@ function EllipsisMenu(props) {
 
   const menuRef = useClickOutside(() => {
     setMenuOpen(false);
-  })
+  });
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
   const handleEdit = () => {
+    setIsEditing(!isEditing); // Toggle the editing state
     closeMenu();
-    props.handleEdit(true);
+    props.handleEdit(!isEditing); // Pass the editing state to the parent component
   };
 
   const handleDelete = () => {
@@ -37,7 +40,9 @@ function EllipsisMenu(props) {
       </div>
       {menuOpen && (
         <ul className={`menu-options ${isAr_Ur ? "ar" : "en"}`}>
-          <li onClick={handleEdit}>{t("editBtn")}</li>
+          <li onClick={handleEdit}>
+            {isEditing ? t("closeBtn") : t("editBtn")} {/* Dynamic button text */}
+          </li>
           <li onClick={handleDelete}>{t("deleteBtn")}</li>
         </ul>
       )}

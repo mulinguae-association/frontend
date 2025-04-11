@@ -22,7 +22,7 @@ const Comment = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
-  const { mutate: handleRemoveComment } = useRemoveCommentMutation();
+  const { mutate: handleRemoveComment } = useRemoveCommentMutation(comment.blogId, comment.parentComment);
   const isAr_Ur = ["ar", "ur"].includes(i18n.language)
   const { clearCache } = useCache();
   useEffect(() => {
@@ -52,7 +52,7 @@ const Comment = ({
       {isAuth && (comment?.postedBy?._id === userData?.userId || userData?.role === "admin") && (
         <React.Suspense fallback={<BiLoaderAlt color='#fff' className='spin-loader' />}>
           <EllipsisMenu
-            handleDelete={() => handleRemoveComment(comment?._id)}
+            handleDelete={() => handleRemoveComment({ commentId: comment?._id, blogId: comment.blogId })}
             handleEdit={(state) => handleEdit(comment, state)}
           />
         </React.Suspense>
@@ -81,7 +81,7 @@ const Comment = ({
         isEditComment && (editCommentId.postedBy._id === comment.postedBy._id && editCommentId._id === comment._id) ? (
           <React.Suspense fallback={<BiLoaderAlt />}>
             <UpdateComment
-              editCommentId={comment._id}
+              editComment={comment}
               comments={comment}
               initialValue={comment?.content}
               setIsEditComment={setIsEditComment}

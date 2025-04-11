@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useCallback, useState } from "react";
 import "./BlogPopup.scss";
 import { useCommentEditState } from "../../HelperComponents/useCommentEditState";
 import { useAuth } from "../../../contexts/AuthContext";
@@ -7,6 +7,8 @@ import Comment from "./comments/Comment";
 import CommentReply from "./comments/CommentReply";
 import sanitizeHtml from "../../../utils/sanitizeHtml";
 import { useTranslation } from "react-i18next";
+import SkeletonComment from "../../Skeletons/SkeletonComment";
+import ShowMoreRepliesBtn from "./comments/ShowMoreRepliesBtn";
 
 const BlogPopup = ({
   blog,
@@ -14,11 +16,31 @@ const BlogPopup = ({
   showFullContent,
   showAllComments,
   comments,
+  fetchNextPage,
+  isFetching,
+  hasNextPage,
 }) => {
   const { userData } = useAuth();
   const { t } = useTranslation("pages/blogs");
   const { isEditComment, handleEdit, setIsEditComment, editCommentId } =
     useCommentEditState();
+  const [loading, setLoading] = useState(false);
+  const observer = useRef();
+
+  const lastCommentRef = useCallback(
+    (node) => {
+      if (observer.current) observer.current.disconnect();
+      observer.current = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && hasNextPage) {
+          setLoading(true); // Set loading to true before fetching
+          !isFetching && fetchNextPage().finally(() => setLoading(false)); // Set loading to false after fetching
+        }
+      });
+      if (node) observer.current.observe(node);
+    },
+    [hasNextPage, fetchNextPage]
+  );
+
   return (
     <div className="blog_overlay">
       <div className="blog_popup">
@@ -39,12 +61,12 @@ const BlogPopup = ({
                 Comments
               </h1>
             </div>
-            {comments.map((comment) =>
+            {comments.map((comment, index) =>
               comment?.status === "accepted" ? (
                 <div key={comment._id} className="comments_content">
                   <div className="comment">
                     <div className="comments_content">
-                      {/* Map and display all comments */}
+                      {/* Display the comment */}
                       <Comment
                         key={comment._id}
                         comment={comment}
@@ -56,21 +78,14 @@ const BlogPopup = ({
                       />
                     </div>
                     <div className="replies">
-                      {comment &&
-                        comment?.replies.map((reply) =>
-                          reply.status === "accepted" ? (
-                            <CommentReply
-                              key={reply._id}
-                              comment={reply}
-                              isEditComment={isEditComment}
-                              setIsEditComment={setIsEditComment}
-                              editCommentId={editCommentId}
-                              handleEdit={handleEdit}
-                            />
-                          ) : (
-                            ""
-                          )
-                        )}
+                      <ShowMoreRepliesBtn
+                        comments={comments}
+                        isEditComment={isEditComment}
+                        setIsEditComment={setIsEditComment}
+                        editCommentId={editCommentId}
+                        handleEdit={handleEdit}
+                        commentId={comment._id}
+                      />
                     </div>
                     <ReplyForm commentsId={comment?._id} blogId={blog._id} />
                   </div>
@@ -79,6 +94,25 @@ const BlogPopup = ({
                 ""
               )
             )}
+
+            {loading && (
+              <>
+                <SkeletonComment />
+                <SkeletonComment />
+                <SkeletonComment />
+              </>
+            )}
+
+            {/* Add a ref to the last comment to trigger infinite scroll */}
+            <div ref={lastCommentRef}>
+              {!hasNextPage && (
+                <div className="last_comment">
+                  <span className="point"></span>
+                  <span>All Comments Loaded</span>
+                </div>
+              )}
+            </div>
+
             <button className="popup_close" onClick={() => show(false)}>
               {t("showLessComments")}
             </button>

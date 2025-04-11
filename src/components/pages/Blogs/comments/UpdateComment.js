@@ -11,15 +11,17 @@ import { useUpdateCommentLocally } from '../../../../apis/mutations/blogs/update
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../i18n';
 import { useCache } from '../../../../contexts/BlogsCache';
-const UpdateComment = ({ editCommentId, initialValue, setIsEditComment }) => {
+const UpdateComment = ({ editComment, initialValue, setIsEditComment }) => {
   const { userData } = useAuth();
   const { clearCache } = useCache();
   const [value, setValue] = useState(initialValue);
   const { setNotificationPopup } = useContext(AppContext);
   const { t } = useTranslation("pages/blogs");
-  const updateCommentLocally = useUpdateCommentLocally();
+  const parentComment = editComment.parentComment
+  const updateCommentLocally = useUpdateCommentLocally(editComment.blogId, parentComment);
   const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   const textareaRef = useRef(null);
+  const editCommentId = editComment._id
 
   useEffect(() => {
     if (textareaRef.current) {

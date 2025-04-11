@@ -5,7 +5,6 @@ import { useQuery, useQueryClient } from 'react-query';
 
 const BlogPostsContext = createContext();
 
-
 export const BlogPostsProvider = ({ children }) => {
   const [allPostsLoaded, setAllPostsLoaded] = useState(false);
   const searchQuery = useRef("");

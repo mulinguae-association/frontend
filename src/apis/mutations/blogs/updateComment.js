@@ -1,29 +1,33 @@
 import { useQueryClient } from 'react-query';
-import { useBlogPosts } from '../../../contexts/BlogsContext';
 
-export const useUpdateCommentLocally = () => {
+export const useUpdateCommentLocally = (blogId, parentComment) => {
   const queryClient = useQueryClient();
-  const { postsToDisplay } = useBlogPosts();
   const updateCommentLocally = (commentId, value, updatedContent) => {
-    queryClient.setQueryData(['acceptedPosts', postsToDisplay], (old) => {
-      return old.map((post) => ({
-        ...post,
-        comments: post.comments.map((comment) => {
-          if (comment._id === commentId) {
-            return { ...comment, status: updatedContent, content: value };
-          } else if (comment.replies && comment.replies?.length > 0) {
-            const updatedReplies = comment.replies.map((reply) => {
-              if (reply._id === commentId) {
-                return { ...reply, status: updatedContent, content: value };
-              }
-              return reply;
-            });
-            return { ...comment, replies: updatedReplies };
-          }
-          return comment
-        })
+    if (parentComment == null) {
+      queryClient.setQueryData(["comments", blogId], (prevComments) => ({
+        ...prevComments,
+        pages: prevComments.pages.map((page) => ({
+          ...page,
+          acceptedComments: page.acceptedComments.map((comment) => {
+            if (comment._id === commentId) {
+              return { ...comment, status: updatedContent, content: value };
+            }
+            return comment
+          })
+        }))
       }))
-    })
+    } else {
+      queryClient.setQueriesData(["remaining-replies", parentComment], (prevComments) => ({
+        ...prevComments,
+        pages: prevComments.pages.map((page) => ({
+          ...page,
+          remainingReplies: page.remainingReplies.map((reply) =>
+            reply._id === commentId ?
+              { ...reply, status: updatedContent, content: value } : reply
+          )
+        }))
+      }))
+    }
   };
   return updateCommentLocally;
 }

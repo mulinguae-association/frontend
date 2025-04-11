@@ -20,6 +20,7 @@ const Blogs = () => {
   const [previousQuery, setPreviousQuery] = useState("");
   const searchMutation = useSearchMutation(searchQuery);
   const counterRef = useRef(0);
+
   const debouncedSearch = debounce((query) => {
     if (query !== previousQuery) {
       searchMutation.mutate(query);

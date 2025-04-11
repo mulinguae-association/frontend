@@ -10,7 +10,7 @@ const InteractionComponent = ({
   modelType
 }) => {
   const { userData } = useAuth();
-  const { mutate: interactWithComment } = useUpdateInteractionMutation();
+  const { mutate: interactWithComment } = useUpdateInteractionMutation({ blogId: reply.blogId, parentCommentId: reply.parentComment });
   const handleClick = async (id, action) => {
     interactWithComment({ modelType, id, action });
   };

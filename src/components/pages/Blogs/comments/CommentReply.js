@@ -18,7 +18,7 @@ const CommentReply = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
-  const { mutate: handleRemoveComment } = useRemoveCommentMutation();
+  const { mutate: handleRemoveComment } = useRemoveCommentMutation(comment.blogId, comment.parentComment);
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -29,7 +29,7 @@ const CommentReply = ({
     checkTruncation();
     window.addEventListener('resize', checkTruncation);
     return () => window.removeEventListener('resize', checkTruncation);
-  }, [comment.content]);
+  }, [comment?.content]);
 
   const toggleReadMore = () => {
     setIsExpanded(!isExpanded);
@@ -45,17 +45,17 @@ const CommentReply = ({
         key={comment._id}
         className='nested_comments'
       >
-        {isAuth && (comment.postedBy._id === userData?.userId || userData?.role === "admin") && (
+        {isAuth && (comment?.postedBy._id === userData?.userId || userData?.role === "admin") && (
           <React.Suspense className="Loading...">
             <EllipsisMenu
-              handleDelete={() => handleRemoveComment(comment._id)}
+              handleDelete={() => handleRemoveComment({ commentId: comment._id, blogId: comment.blogId })}
               handleEdit={(state) => handleEdit(comment, state)}
             />
           </React.Suspense>
         )}
         {isEditComment && editCommentId._id === comment._id ? (
           <UpdateComment
-            editCommentId={comment._id}
+            editComment={comment}
             comments={comment}
             setIsEditComment={setIsEditComment}
             initialValue={comment?.content}
@@ -67,7 +67,7 @@ const CommentReply = ({
                 <img
                   width="30px"
                   height="30px"
-                  src={comment.postedBy?.profileImage || "/images/fallBackUser.png"}
+                  src={comment?.postedBy?.profileImage || "/images/fallBackUser.png"}
                   alt='personal avatar'
                   onError={(e) => {
                     e.target.src = "/images/fallBackUser.png";
@@ -75,7 +75,7 @@ const CommentReply = ({
                   loading='lazy'
                 />
               </div>
-              <div className='comment_author'>@{comment.postedBy?.name}</div>
+              <div className='comment_author'>@{comment?.postedBy?.name}</div>
             </div>
             <div className=''>
               <p

@@ -2,90 +2,97 @@ import { useMutation, useQueryClient } from 'react-query';
 import logError from '../../../utils/logError';
 import handleError from '../../../utils/handleError';
 import { handleReplySubmit } from '../../blog-api';
-import { useBlogPosts } from '../../../contexts/BlogsContext';
 import { notifyError } from '../../../components/Notify';
 import { useGlobal } from '../../../contexts/AppContext';
 import { useAuth } from '../../../contexts/AuthContext';
 import { useCache } from '../../../contexts/BlogsCache';
 
-
 export const useAddReplyMutation = (setReplyContent) => {
   const { userData } = useAuth();
   const { setButtonLoading, setNotificationPopup } = useGlobal();
-  const { postsToDisplay } = useBlogPosts();
   const { clearCache } = useCache();
   const queryClient = useQueryClient();
-  const newComment = {
+  const isAdmin = userData?.role === "admin";
+  const newReply = {
     _id: crypto.randomUUID().toString(),
     likes: [],
     loves: [],
     unlikes: [],
     postedBy: userData,
     replies: [],
-    status: "accepted"
-  }
+    status: isAdmin ? "accepted" : "pending"
+  };
+
   return useMutation(
-    async ({ replyConetnt, blogId, parentCommentId }) =>
+    async ({ parentCommentId, blogId, replyConetnt }) =>
       await handleReplySubmit(replyConetnt, blogId, parentCommentId),
     {
       onMutate: async ({ parentCommentId, blogId, replyConetnt }) => {
-        await queryClient.cancelQueries(["acceptedPosts", postsToDisplay]);
-        const previousPosts = queryClient.getQueryData(["acceptedPosts", postsToDisplay]);
+        await queryClient.cancelQueries(["remaining-replies", parentCommentId]);
+        const previousPosts = queryClient.getQueryData(["remaining-replies", parentCommentId]);
         const buttonKey = `replyCommentBtn_${parentCommentId}`;
-        setButtonLoading(buttonKey, true)
-        userData?.role === "admin" &&
-          queryClient.setQueryData(["acceptedPosts", postsToDisplay], (old) => {
-            return old.map((post) => ({
-              ...post,
-              comments: post.comments.map((comment) => {
-                if (comment._id === parentCommentId) {
-                  return {
-                    ...comment,
-                    replies: [
-                      { ...newComment, blogId, content: replyConetnt, parentComment: parentCommentId },
-                      ...comment.replies
-                    ]
-                  }
-                }
-                return comment
-              })
+        setButtonLoading(buttonKey, true);
+        // Handle admin case
+        if (isAdmin) {
+          queryClient.setQueriesData(["comments", blogId], (prevComments) => ({
+            ...prevComments,
+            pages: prevComments.pages.map((page) => ({
+              ...page,
+              totalComments: page.totalComments + 1,
             }))
-          })
+          }));
+
+          if (parentCommentId !== null) {
+            queryClient.setQueryData(["remaining-replies", parentCommentId], (prevComments) => ({
+              ...prevComments,
+              pages: prevComments.pages.map((page) => ({
+                ...page,
+                remainingReplies: [{
+                  ...newReply,
+                  blogId,
+                  content: replyConetnt,
+                  parentComment: parentCommentId
+                },
+                ...page.remainingReplies
+                ]
+              }))
+            }));
+          }
+        }
         clearCache();
-        return { previousPosts }
+        return { previousPosts, tempReplyId: newReply._id };
       },
-      onSuccess: (res, { parentCommentId }) => {
-        const newCommentRes = res.data?.comment;
-        userData?.role === "admin" ?
-          queryClient.setQueryData(["acceptedPosts", postsToDisplay], (old) => {
-            return old.map((post) => ({
-              ...post,
-              comments: post.comments.map((comment) => {
-                if (comment._id === parentCommentId) {
-                  return {
-                    ...comment, replies: comment.replies.map((reply) => {
-                      if (reply._id === newComment._id) {
-                        return newCommentRes;
-                      }
-                      return reply;
-                    })
-                  }
-                }
-                return comment
-              })
+      onSuccess: (res, { parentCommentId }, context) => {
+        const { tempReplyId } = context;
+        const newReplyRes = res.data?.comment;
+
+        if (isAdmin) {
+          queryClient.setQueryData(["remaining-replies", parentCommentId], (prevComments) => ({
+            ...prevComments,
+            pages: prevComments.pages.map((page) => ({
+              ...page,
+              remainingReplies: page.remainingReplies.map((reply) =>
+                reply._id === tempReplyId ?
+                  newReplyRes
+                  : reply
+              )
             }))
-          })
-          : setNotificationPopup({ message: "Your reply Comment has been submitted for review" });
+          }));
+        } else {
+          setNotificationPopup({
+            message: "Your reply comment has been submitted for review"
+          });
+        }
       },
       onError: (error) => {
-        logError('Error removing comment:', error);
-        notifyError(handleError(error))
+        logError("Error adding reply comment:", error);
+        notifyError(handleError(error));
       },
       onSettled: (res, err, { parentCommentId }) => {
-        const buttonKey = `replyCommentBtn_${parentCommentId}`
+        const buttonKey = `replyCommentBtn_${parentCommentId}`;
         setReplyContent("");
-        setButtonLoading(buttonKey, false)
+        setButtonLoading(buttonKey, false);
       }
     }
   );
-}
+};
