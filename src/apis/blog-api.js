@@ -134,15 +134,18 @@ export async function acceptComment(commentId) {
   }
 }
 
-export async function refuseComment(commentId) {
+export async function refuseComment(commentId, blogId) {
+  console.log('API call to refuse comment:', commentId, 'from blog:', blogId);
   try {
-    const response = await axios.delete(`/api/comments/${commentId}`);
+    const response = await axios.delete(`/api/comments/${commentId}/${blogId}`);
+    console.log('Refuse comment response:', response);
     if (response.status === 200) {
       return { status: response.status, data: response.data };
     }
     logError("Error refusing comment:", response.status);
     return { status: response.status, error: "Error refusing comment" };
   } catch (error) {
+    console.error('Error in refuseComment API call:', error);
     logError("Error refusing comment:", error.message);
     throw error;
   }
@@ -151,7 +154,7 @@ export async function refuseComment(commentId) {
 export async function handleReplySubmit(content, blogId, parentCommentId) {
   try {
     const requestBody = { content, blogId, parentCommentId };
-    const response = await axios.post(`/api/comments/reply/${blogId}`, requestBody);
+    const response = await axios.post(`/api/comments/reply/${parentCommentId}`, requestBody);
     if (response.status === 201) {
       return { status: 201, data: response.data };
     }
@@ -196,9 +199,24 @@ export async function interactWithComment(modelType, id, action) {
   }
 }
 
-export const getAcceptedComments = async () => {
+export const getAcceptedComments = async ({ blogId, pageParam }) => {
+  console.log(pageParam)
   try {
-    const response = await axios.get('/api/comments/accepted');
+    const response = await axios.get(`/api/comments/${blogId}/accepted`, {
+      params: { pageParam, limit: 10 }
+    });
+    return response.data;
+  } catch (error) {
+    logError('Error retrieving accepted comments:', error);
+    throw error;
+  }
+};
+export const getRemainingAcceptedReplies = async ({ parentCommentIds, pageParam, limit = 3 }) => {
+  console.log(pageParam)
+  try {
+    const response = await axios.get(`/api/comments/remaining-replies`, {
+      params: { parentCommentIds, pageParam, limit: limit }
+    });
     return response.data;
   } catch (error) {
     logError('Error retrieving accepted comments:', error);

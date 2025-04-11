@@ -1,46 +1,98 @@
 import { useMutation, useQueryClient } from 'react-query';
 import logError from '../../../utils/logError';
 import handleError from '../../../utils/handleError';
-import { useBlogPosts } from '../../../contexts/BlogsContext';
+// Removed unused import: useBlogPosts
 import { notifyError, notifySuccess } from '../../../components/Notify';
 import { refuseComment } from '../../blog-api';
 import { useCache } from '../../../contexts/BlogsCache';
 
-export const useRemoveCommentMutation = () => {
+export const useRemoveCommentMutation = (blogId, parentComment) => {
   const queryClient = useQueryClient();
-  const { postsToDisplay } = useBlogPosts();
+  // We don't need postsToDisplay for this mutation
   const { clearCache } = useCache();
+
   return useMutation(
-    (commentId) => refuseComment(commentId),
+    ({ commentId }) => {
+      console.log('Removing comment:', commentId, 'from blog:', blogId);
+      return refuseComment(commentId, blogId);
+    },
     {
-      onMutate: async (commentId) => {
-        await queryClient.cancelQueries(['acceptedPosts', postsToDisplay]);
-        const previousPosts = queryClient.getQueryData(['acceptedPosts', postsToDisplay]);
-        queryClient.setQueryData(['acceptedPosts', postsToDisplay], (old) => {
-          return old.map((post) => ({
-            ...post,
-            comments: post.comments.map((comment) => {
-              if (String(comment._id) === String(commentId)) {
-                return null;
-              }
-              return {
-                ...comment,
-                replies: comment.replies.filter((reply) => String(reply._id) !== String(commentId))
-              };
-            }).filter(comment => comment !== null)
-          }))
-        });
-        clearCache();
-        return { previousPosts }
+
+      onMutate: async ({ commentId }) => {
+        await queryClient.cancelQueries(['comments', blogId]);
+        await queryClient.cancelQueries(['remaining-replies', parentComment]);
+        // get return previous comments or replies on Error
+        const previousComments = await queryClient.cancelQueries(['comments', blogId]);
+        const previousReplies = await queryClient.cancelQueries(['remaining-replies', parentComment]);
+        // Optimistically update the comments
+        queryClient.setQueryData(['comments', blogId], (oldData) => updateComments(oldData, commentId));
+        if (parentComment !== null) {
+          queryClient.setQueryData(["remaining-replies", parentComment], (oldData) => updateReplies(oldData, commentId));
+        }
+
+        return { previousComments, previousReplies };
       },
-      onSuccess: (res) => {
-        notifySuccess(res.data.message);
-      },
-      onError: (error, varia, context) => {
-        queryClient.setQueryData(['acceptedPosts', postsToDisplay], context.previousPosts);
-        logError('Error removing comment:', error);
-        notifyError(handleError(error))
-      }
+      onSuccess: (res) => handleSuccess(res, blogId, queryClient, clearCache),
+      onError: (error, _, context) => handleErrorCase(error, context, blogId, parentComment, queryClient)
     }
   );
+};
+
+// Update comments and calculate removed counts
+const updateComments = (oldData, commentId) => {
+  if (!oldData) return oldData;
+  const newPages = oldData.pages.map(page => {
+    let removedCount = 0; // Keep track of how many comments are removed (parent + replies)
+
+    const updatedComments = page.acceptedComments.filter(comment => comment._id !== commentId);
+    return {
+      ...page,
+      acceptedComments: updatedComments,
+      totalComments: page.totalComments - removedCount // Adjust total comments based on the number removed
+    };
+  });
+
+  return {
+    ...oldData,
+    pages: newPages
+  };
+};
+const updateReplies = (oldData, commentId) => {
+  if (!oldData) return oldData;
+  const newPages = oldData.pages.map((page) => {
+    const updateComments = {
+      ...page,
+      remainingReplies: page.remainingReplies.filter(reply => reply._id !== commentId)
+    }
+    return updateComments;
+  })
+  return {
+    ...oldData,
+    pages: newPages
+  }
+};
+
+// Handle successful deletion of a comment
+const handleSuccess = (res, blogId, queryClient, clearCache) => {
+  console.log('Success handler called with response:', res);
+  if (res && res.data && res.data.message) {
+    notifySuccess(res.data.message);
+    queryClient.invalidateQueries(["comments", blogId]);
+    clearCache();
+  } else {
+    console.error('Invalid response in handleSuccess:', res);
+  }
+};
+
+// Handle errors in removing a comment
+const handleErrorCase = (error, context, blogId, parentComment, queryClient) => {
+  console.log('Error handler called with error:', error);
+  if (context?.previousComments) {
+    queryClient.setQueryData(['comments', blogId], context.previousComments);
+  }
+  if (context?.previousReplies) {
+    queryClient.setQueryData(['remaining-replies', parentComment], context.previousReplies);
+  }
+  logError('Error removing comment:', error);
+  notifyError(handleError(error));
 };
