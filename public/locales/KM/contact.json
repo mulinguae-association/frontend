@@ -1,6 +1,6 @@
 {
   "titles": {
-    "mainTitle": "Kontakte Nou",
+    "mainTitle": "Kontakte Avek Nou",
     "teacherFormTitle": "Bienveni Profesè",
     "studentFormTitle": "Bienveni Élev"
   },
@@ -60,6 +60,8 @@
     "phoneNumberPlaceholder": "Dilo nimero telefon ou",
     "countryPlaceholder": "Dilo pey ou",
     "languagesSpokenPlaceholder": "(par exemple, Anglè, Arab,...)",
+    "messageLabel": "សារ",
+    "messagePlaceholder": "សរសេរសាររបស់អ្នកនៅទីនេះ...",
     "subjectsTaughtPlaceholder": "par exemple, Matematik, Syans, etc.",
     "addressPlaceholder": "Dilo adrès ou"
   }

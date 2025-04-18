@@ -1,6 +1,6 @@
 {
   "titles": {
-    "mainTitle": "ञुका कंमी",
+    "mainTitle": "संपर्क करें",
     "teacherFormTitle": "शिक्षक फॉर्म",
     "studentFormTitle": "छात्र फॉर्म"
   },
@@ -14,10 +14,16 @@
       "title": "कार्यालय का समय",
       "value": {
         "mondayToFriday": "सोमवार से शुक्रवार: सुबह 7 बजे से रात 11 बजे तक",
-        "saturdayAndSunday": "शनिवार और रविवार: सुबह 8 बजे से शाम 5 बजे तक"
+        "saturdayAndSunday": "शनिवार और रविवार: सुबह 8 बजे से शाम 5 बजे तक",
+        "mondayToFridayLabel": "सोमवार से शुक्रवार:",
+        "saturdayAndSundayLabel": "शनिवार और रविवार:"
       }
     },
-    "email": "acsmulingua@gmail.com"
+    "email": "acsmulingua@gmail.com",
+    "time": {
+      "am": "सुबह",
+      "pm": "शाम"
+    }
   },
   "buttons": {
     "teacherButton": "शिक्षक बनें?",
@@ -43,7 +49,7 @@
     "countryPlaceholder": "देश",
     "languagesSpokenPlaceholder": "(उदाहरण के लिए, अंग्रेजी, अरबी,...)",
     "subjectsTaughtPlaceholder": "उदाहरण के लिए, गणित, विज्ञान, आदि।",
-    "addressPlaceholder": "पता"
+    "addressPlaceholder": "आपका पता"
   },
   "studentForm": {
     "nameLabel": "नाम",
@@ -59,6 +65,8 @@
     "countryPlaceholder": "देश",
     "agePlaceholder": "आपकी आयु",
     "languagesSpokenPlaceholder": "भाषाएं (उदाहरण के लिए, अंग्रेजी, अरबी,...)",
+    "messageLabel": "संदेश",
+    "messagePlaceholder": "अपना संदेश यहां लिखें...",
     "cvUploadButtonText": "लोड हो रहा है..."
   }
 }

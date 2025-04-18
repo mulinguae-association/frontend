@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { useGlobal } from '../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
 import InputField from '../HelperComponents/InputField';
+import TextArea from '../HelperComponents/TextArea';
 import { BiLoaderAlt } from 'react-icons/bi';
 
 const StudentForm = ({ handleSubmit }) => {
   const { t } = useTranslation("contact");
+  const { t: tCommon } = useTranslation("common");
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -14,6 +16,7 @@ const StudentForm = ({ handleSubmit }) => {
     country: '',
     age: '',
     languagesSpoken: '',
+    message: '',
   });
 
   const handleChange = (e) => {
@@ -26,7 +29,7 @@ const StudentForm = ({ handleSubmit }) => {
   return (
     <div className='form_container'>
       <h2>{t("titles.studentFormTitle")}</h2>
-      <form method="post" encType="multipart/form-data" onSubmit={(e) => handleSubmit(e, formData, "student", setFormData)}>
+      <form encType="multipart/form-data" onSubmit={(e) => handleSubmit(e, formData, "student", setFormData)}>
         <div className='content'>
           <InputField
             label={t("studentForm.nameLabel")}
@@ -92,6 +95,17 @@ const StudentForm = ({ handleSubmit }) => {
             id="languagesSpoken"
             name="languagesSpoken"
             required
+          />
+
+          <TextArea
+            label={t("studentForm.messageLabel")}
+            id="message"
+            name="message"
+            placeholder={`${t("studentForm.messagePlaceholder")}${tCommon("optional")}`}
+            value={formData.message}
+            onChange={handleChange}
+            className="message-field"
+            hideLabel={true}
           />
         </div>
         <button className={isBtnLoading["student"] ? "disabled" : ""} disabled={isBtnLoading["student"]} type="submit">

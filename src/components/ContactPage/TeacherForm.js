@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useGlobal } from '../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
 import InputField from '../HelperComponents/InputField';
+import TextArea from '../HelperComponents/TextArea';
 import { BiLoaderAlt } from 'react-icons/bi';
 
 const TeacherForm = ({ handleSubmit }) => {
   const { t } = useTranslation("contact");
+  const { t: tCommon } = useTranslation("common");
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -19,14 +21,11 @@ const TeacherForm = ({ handleSubmit }) => {
   });
   const { isBtnLoading } = useGlobal();
 
+  const addressRef = useRef(null);
+
   const handleChange = (e) => {
     const { name, value, type } = e.target;
 
-    if (name === 'address') {
-      const textarea = e.target;
-      textarea.style.height = 'auto';
-      textarea.style.height = textarea.scrollHeight + 'px'
-    }
     setFormData((prevData) => {
       if (type === 'file') {
         return { ...prevData, [name]: e.target.files[0] };
@@ -36,10 +35,17 @@ const TeacherForm = ({ handleSubmit }) => {
     });
   };
 
+  useEffect(() => {
+    if (addressRef.current) {
+      addressRef.current.style.height = 'auto';
+      addressRef.current.style.height = `${addressRef.current.scrollHeight}px`;
+    }
+  }, [formData.address]);
+
   return (
     <div className='form_container'>
       <h2>{t("titles.teacherFormTitle")}</h2>
-      <form method="post" action='/submit-info' encType="multipart/form-data" onSubmit={(e) => handleSubmit(e, formData, "teacher", setFormData)}>
+      <form encType="multipart/form-data" onSubmit={(e) => handleSubmit(e, formData, "teacher", setFormData)}>
         <div className='content'>
           <InputField
             label={t("teacherForm.fullNameLabel")}
@@ -101,19 +107,23 @@ const TeacherForm = ({ handleSubmit }) => {
             name="subjectsTaught"
             required
           />
-          <div>
-            <textarea
-              id="address"
-              name="address"
-              autoComplete='off'
-              placeholder={t("teacherForm.addressLabel")}
-              value={formData.address}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <TextArea
+            label={t("teacherForm.addressLabel")}
+            id="address"
+            name="address"
+            placeholder={t("teacherForm.addressPlaceholder")}
+            value={formData.address}
+            onChange={handleChange}
+            className="address-field"
+            required
+            hideLabel={true}
+            ref={addressRef}
+          />
           <div className='group uploadCv'>
-            <label htmlFor="cv">{formData.cv ? formData.cv.name : t("teacherForm.uploadCvLabel")}</label>
+            <div className="cv-label-container">
+              <label htmlFor="cv">{formData.cv ? formData.cv.name : t("teacherForm.uploadCvLabel")}</label>
+              <span className="optional-text">{tCommon("optional")}</span>
+            </div>
             <input
               type="file"
               id="cv"

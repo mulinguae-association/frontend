@@ -1,6 +1,6 @@
 {
   "titles": {
-    "mainTitle": "努卡·坎米",
+    "mainTitle": "联系我们",
     "teacherFormTitle": "教师表格",
     "studentFormTitle": "学生表格"
   },
@@ -59,6 +59,8 @@
     "countryPlaceholder": "请输入您的国家",
     "agePlaceholder": "请输入您的年龄",
     "languagesSpokenPlaceholder": "掌握的语言（例如，英语，阿拉伯语，...）",
+    "messageLabel": "消息",
+    "messagePlaceholder": "在这里写下您的消息...",
     "cvUploadButtonText": "上传中..."
   }
 }

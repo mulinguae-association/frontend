@@ -1,0 +1,69 @@
+@import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/mixins.scss";
+
+.card-header {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-header {
+  width: 100%;
+
+  .tabs-container {
+    width: 100%;
+
+    .tabs-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      height: 40px;
+      border-bottom: 1px solid rgba($blue-shadow-light, 0.2);
+      background-color: #f2f5f7;
+      border-radius: 8px;
+      padding: 4px;
+      gap: 4px;
+
+      .tab-trigger {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: $medium-darkblue;
+        opacity: 0.8;
+        background-color: transparent;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        &.active {
+          background-color: white;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          font-weight: bold;
+          opacity: 1;
+
+          &:hover::after {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .tabs-list {
+      .tab-trigger {
+        font-size: 14px;
+        height: 36px;
+      }
+    }
+  }
+}

@@ -1,8 +1,29 @@
 {
   "titles": {
-    "mainTitle": "Contact Us",
+    "mainTitle": "Mettiti in Contatto",
     "teacherFormTitle": "Welcome Teacher",
     "studentFormTitle": "Welcome Student"
+  },
+  "contactInfo": {
+    "phone": "+51 (939) 499-087",
+    "tutoringHours": {
+      "title": "Orari di Tutoraggio",
+      "value": "Offriamo tutoraggio 24/7."
+    },
+    "officeHours": {
+      "title": "Orari d'Ufficio",
+      "value": {
+        "mondayToFriday": "Lunedì a Venerdì: 7 - 23",
+        "saturdayAndSunday": "Sabato e Domenica: 8 - 17",
+        "mondayToFridayLabel": "Lunedì a Venerdì:",
+        "saturdayAndSundayLabel": "Sabato e Domenica:"
+      }
+    },
+    "email": "acsmulingua@gmail.com",
+    "time": {
+      "am": "del mattino",
+      "pm": "della sera"
+    }
   },
   "buttons": {
     "teacherButton": "Are you A Teacher?",
@@ -26,7 +47,8 @@
     "phoneNumberPlaceholder": "Your phone number",
     "countryPlaceholder": "Your country",
     "languagesSpokenPlaceholder": "(e.g., English, Arabic,...)",
-    "subjectsTaughtPlaceholder": "e.g., Math, science, etc."
+    "subjectsTaughtPlaceholder": "e.g., Math, science, etc.",
+    "addressPlaceholder": "Il tuo indirizzo"
   },
   "studentForm": {
     "nameLabel": "Name",
@@ -41,6 +63,8 @@
     "phoneNumberPlaceholder": "Your phone number",
     "countryPlaceholder": "Your country",
     "agePlaceholder": "Your age",
-    "languagesSpokenPlaceholder": "Enter langs (e.g., English, Arabic,...)"
+    "languagesSpokenPlaceholder": "Enter langs (e.g., English, Arabic,...)",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Scrivi il tuo messaggio qui..."
   }
 }

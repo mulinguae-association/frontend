@@ -1,0 +1,62 @@
+@media (prefers-contrast: more) {
+  .input_field {
+    input {
+      border: 2px solid #000 !important;
+
+      &::placeholder {
+        color: #000 !important;
+        opacity: 1 !important;
+        font-weight: 600 !important;
+      }
+
+      &:focus {
+        outline: 3px solid #000 !important;
+        outline-offset: 2px !important;
+      }
+    }
+  }
+}
+
+.input_field {
+  position: relative;
+  width: 100%;
+
+  input {
+    &::placeholder {
+      opacity: 0.9;
+      color: #555;
+      font-weight: 500;
+    }
+
+    &:focus {
+      &::placeholder {
+        opacity: 0.7;
+        color: #777;
+      }
+      outline: 2px solid #4d90fe;
+      outline-offset: 1px;
+    }
+  }
+
+  // For RTL languages, ensure placeholder follows language direction
+  &.rtl-placeholder {
+    input {
+      // This ensures the placeholder text follows RTL direction
+      &::placeholder {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+  }
+
+  // For LTR languages, ensure placeholder follows language direction
+  &.ltr-placeholder {
+    input {
+      // This ensures the placeholder text follows LTR direction
+      &::placeholder {
+        direction: ltr;
+        text-align: left;
+      }
+    }
+  }
+}

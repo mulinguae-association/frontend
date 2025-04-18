@@ -1,6 +1,6 @@
 {
   "titles": {
-    "mainTitle": "اتصل بنا",
+    "mainTitle": "تواصل معنا",
     "teacherFormTitle": "مرحبًا بالمعلم",
     "studentFormTitle": "مرحبًا بالطالب"
   },
@@ -14,10 +14,16 @@
       "title": "ساعات العمل",
       "value": {
         "mondayToFriday": "الاثنين إلى الجمعة: ٧ صباحًا - ١١ مساءً",
-        "saturdayAndSunday": "السبت والأحد: ٨ صباحًا - ٥ مساءً"
+        "saturdayAndSunday": "السبت والأحد: ٨ صباحًا - ٥ مساءً",
+        "mondayToFridayLabel": "الاثنين إلى الجمعة:",
+        "saturdayAndSundayLabel": "السبت والأحد:"
       }
     },
-    "email": "acsmulingua@gmail.com"
+    "email": "acsmulingua@gmail.com",
+    "time": {
+      "am": "صباحاً",
+      "pm": "مساءً"
+    }
   },
   "buttons": {
     "teacherButton": "هل أنت معلم؟",
@@ -43,7 +49,7 @@
     "countryPlaceholder": "بلدك",
     "languagesSpokenPlaceholder": "(مثل: الإنجليزية، العربية، ...)",
     "subjectsTaughtPlaceholder": "مثل: الرياضيات، العلوم، إلخ",
-    "AddressPlaceholder": "عنوانك"
+    "addressPlaceholder": "عنوانك"
   },
   "studentForm": {
     "nameLabel": "الاسم",
@@ -58,6 +64,8 @@
     "phoneNumberPlaceholder": "رقم هاتفك",
     "countryPlaceholder": "بلدك",
     "agePlaceholder": "عمرك",
-    "languagesSpokenPlaceholder": "أدخل اللغات (مثل: الإنجليزية، العربية، ...)"
+    "languagesSpokenPlaceholder": "أدخل اللغات (مثل: الإنجليزية، العربية، ...)",
+    "messageLabel": "الرسالة",
+    "messagePlaceholder": "اكتب رسالتك هنا..."
   }
 }

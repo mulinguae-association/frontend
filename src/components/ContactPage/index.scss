@@ -68,48 +68,6 @@
       max-width: 100%;
     }
 
-    .user-type-buttons {
-      @include flexbox($justifyContent: center);
-
-      .vertical-line {
-        height: 100%;
-        width: 2px;
-        background-color: $lightgray-color;
-      }
-
-      button {
-        border: none;
-        width: auto;
-        padding: 10px 20px;
-        cursor: pointer;
-        background-color: #f2f5f7;
-        overflow: hidden;
-        border-radius: 10px 0 10px 0;
-        @include rel();
-
-        &:after {
-          @include pseudo(block, absolute, "", 0, 2px, 0px 0 0 0px);
-          transition: 0.5s ease;
-        }
-
-        &:first-child:after {
-          background-color: $primary-color;
-        }
-
-        &:last-child:after {
-          background-color: $secondary-color;
-        }
-
-        &.active:after {
-          width: 50%;
-        }
-
-        &:hover:after {
-          width: 100%;
-        }
-      }
-    }
-
     .form_container {
       h2 {
         border-bottom: 1px solid;
@@ -135,7 +93,7 @@
         .content {
           @include flexbox($wrap: wrap);
           gap: 18px;
-          width: 80%;
+          width: 85%;
           margin: 0 auto;
           padding: 0 10px;
           @media (max-width: 1024px) {
@@ -181,21 +139,80 @@
             padding: 10px;
             overflow-y: auto;
           }
+
+          .textarea-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            text-align: left;
+
+            .optional-text {
+              font-weight: normal;
+              font-style: italic;
+              color: #666;
+              font-size: 0.9em;
+            }
+          }
+
+          .address-field {
+            width: 48% !important;
+
+            @media (max-width: 768px) {
+              width: 98% !important;
+            }
+
+            textarea {
+              min-height: 100px;
+            }
+          }
+
+          .message-field {
+            width: 98% !important;
+
+            textarea {
+              min-height: 100px;
+              background-color: #f8f9fa;
+              border-left: 3px solid $secondary-color;
+            }
+
+            .textarea-label {
+              margin-bottom: 8px;
+              font-weight: 600;
+              color: $medium-darkblue;
+            }
+          }
         }
 
         .uploadCv {
           input {
             display: none;
           }
-          label {
-            background: $medium-darkblue;
-            padding: 10px 18px;
-            font-size: 14px;
-            border-radius: 25px;
+
+          .cv-label-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             width: 100%;
-            text-align: center;
-            cursor: pointer;
-            color: white;
+
+            label {
+              background: $medium-darkblue;
+              padding: 10px 18px;
+              font-size: 14px;
+              border-radius: 10px;
+              flex: 1;
+              text-align: center;
+              cursor: pointer;
+              color: white;
+            }
+
+            .optional-text {
+              font-weight: normal;
+              font-style: italic;
+              color: #666;
+              font-size: 0.9em;
+              white-space: nowrap;
+            }
           }
         }
 
@@ -205,6 +222,7 @@
           border: 2px solid #fff;
           width: -moz-fit-content;
           width: fit-content;
+          min-height: 48px;
           padding: 10px 3rem;
           border-radius: 30px;
           font-weight: bold;
@@ -212,10 +230,11 @@
           margin-top: 2rem;
           color: white;
           transition: 0.5s ease;
+          font-weight: 700;
+          font-size: calc(0.9rem + 0.3vw);
 
           &:hover {
-            box-shadow: 0 0 10px $darkBlue-color;
-            border: 2px solid #fff;
+            box-shadow: 0 5px 10px (rgba($darkBlue-color, 0.4));
           }
         }
 
@@ -242,8 +261,29 @@
               min-width: unset;
             }
 
-            @media (max-width: 991px) {
+            &.message-field,
+            &.uploadCv {
+              width: 100%;
+
+              .cv-label-container {
+                @media (max-width: 576px) {
+                  flex-direction: column;
+
+                  .optional-text {
+                    margin-top: -5px;
+                    margin-bottom: 5px;
+                  }
+                }
+              }
+            }
+
+            @media (max-width: 991px) and (min-width: 769px) {
               width: 85%;
+              margin: 0 auto;
+            }
+
+            @media (max-width: 768px) and (min-width: 469px) {
+              width: 98%;
               margin: 0 auto;
             }
 

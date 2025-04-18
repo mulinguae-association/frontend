@@ -6,12 +6,12 @@ import { submitInfo } from '../../apis/contact-api';
 import { useGlobal } from '../../contexts/AppContext';
 import { notifyError } from '../Notify';
 import { useTranslation } from 'react-i18next';
-import Footer from '../FooterPages';
 import ContactInfo from './ContactInfo';
+import TabHeader from './TabHeader';
 
 const Contact = () => {
   const { t } = useTranslation("contact");
-  const [isTeacher, setIsTeacher] = useState(true);
+  const [activeTab, setActiveTab] = useState('teacher');
   const { setButtonLoading, setNotificationPopup } = useGlobal();
   const handleSubmit = async (e, formData, userType, setFormData) => {
     e.preventDefault();
@@ -28,7 +28,8 @@ const Contact = () => {
           languagesSpoken: '',
           age: '',
           subjectsTaught: '',
-          address: ''
+          address: '',
+          message: ''
         });
         setNotificationPopup({ message: t("messages.submissionMessage") });
       }
@@ -39,7 +40,6 @@ const Contact = () => {
       setButtonLoading(userType, false);
     }
   };
-
   return (
     <>
       <main className='contact'>
@@ -47,16 +47,8 @@ const Contact = () => {
         <ContactInfo />
         <div className='container'>
           <div className='contact_content'>
-            <div className="user-type-buttons">
-              <button className={isTeacher ? "active" : ""} onClick={() => setIsTeacher(true)}>
-                {t("buttons.teacherButton")}
-              </button>
-              <div className="vertical-line"></div>
-              <button className={isTeacher ? "" : "active"} onClick={() => setIsTeacher(false)}>
-                {t("buttons.studentButton")}
-              </button>
-            </div>
-            {isTeacher
+            <TabHeader activeTab={activeTab} setActiveTab={setActiveTab} />
+            {activeTab === 'teacher'
               ? <TeacherForm handleSubmit={handleSubmit} />
               : <StudentForm handleSubmit={handleSubmit} />}
             <div className='shape three'></div>
@@ -64,7 +56,6 @@ const Contact = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 };

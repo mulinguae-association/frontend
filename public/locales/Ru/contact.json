@@ -1,6 +1,6 @@
 {
   "titles": {
-    "mainTitle": "Нука Канми",
+    "mainTitle": "Свяжитесь с Нами",
     "teacherFormTitle": "Форма Преподавателя",
     "studentFormTitle": "Форма Студента"
   },
@@ -17,7 +17,11 @@
         "saturdayAndSunday": "Суббота и Воскресенье: 8 утра - 5 вечера"
       }
     },
-    "email": "acsmulingua@gmail.com"
+    "email": "acsmulingua@gmail.com",
+    "time": {
+      "am": "утра",
+      "pm": "вечера"
+    }
   },
   "buttons": {
     "teacherButton": "Стать Преподавателем?",

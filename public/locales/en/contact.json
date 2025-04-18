@@ -1,6 +1,6 @@
 {
   "titles": {
-    "mainTitle": "Contact Us",
+    "mainTitle": "Get in Touch",
     "teacherFormTitle": "Welcome Teacher",
     "studentFormTitle": "Welcome Student"
   },
@@ -14,10 +14,16 @@
       "title": "Office Hours",
       "value": {
         "mondayToFriday": "Monday to Friday: 7am - 11pm",
-        "saturdayAndSunday": "Saturday and Sunday: 8am - 5pm"
+        "saturdayAndSunday": "Saturday and Sunday: 8am - 5pm",
+        "mondayToFridayLabel": "Monday to Friday:",
+        "saturdayAndSundayLabel": "Saturday and Sunday:"
       }
     },
-    "email": "acsmulingua@gmail.com"
+    "email": "acsmulingua@gmail.com",
+    "time": {
+      "am": "am",
+      "pm": "pm"
+    }
   },
   "buttons": {
     "teacherButton": "Are you A Teacher?",
@@ -52,12 +58,15 @@
     "countryLabel": "Country",
     "ageLabel": "Age",
     "languagesSpokenLabel": "Language/s spoken",
+    "languagesSpokenTitle": "Please enter the languages you speak",
+    "messageLabel": "Message",
     "submitButton": "Submit",
     "fullNamePlaceholder": "Your full name",
     "emailPlaceholder": "Your email",
     "phoneNumberPlaceholder": "Your phone number",
     "countryPlaceholder": "Your country",
     "agePlaceholder": "Your age",
-    "languagesSpokenPlaceholder": "Enter langs (e.g., English, Arabic,...)"
+    "languagesSpokenPlaceholder": "Enter langs (e.g., English, Arabic,...)",
+    "messagePlaceholder": "Write your message here..."
   }
 }

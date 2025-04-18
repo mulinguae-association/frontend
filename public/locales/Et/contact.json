@@ -1,6 +1,6 @@
 {
   "titles": {
-    "mainTitle": "Contact Us",
+    "mainTitle": "Get in Touch",
     "teacherFormTitle": "Welcome Teacher",
     "studentFormTitle": "Welcome Student"
   },
@@ -27,7 +27,7 @@
     "countryPlaceholder": "Your country",
     "languagesSpokenPlaceholder": "(e.g., English, Arabic,...)",
     "subjectsTaughtPlaceholder": "e.g., Math, science, etc.",
-    "addressPlaceholder": "Su dirección"
+    "addressPlaceholder": "Teie aadress"
   },
   "studentForm": {
     "nameLabel": "Name",
@@ -42,6 +42,8 @@
     "phoneNumberPlaceholder": "Your phone number",
     "countryPlaceholder": "Your country",
     "agePlaceholder": "Your age",
-    "languagesSpokenPlaceholder": "Enter langs (e.g., English, Arabic,...)"
+    "languagesSpokenPlaceholder": "Enter langs (e.g., English, Arabic,...)",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Kirjutage oma sõnum siia..."
   }
 }
