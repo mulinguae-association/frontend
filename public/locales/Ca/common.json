@@ -1,0 +1,27 @@
+{
+  "optional": "(Opcional)",
+  "required": "Obligatori",
+  "loading": "Carregant...",
+  "submit": "Enviar",
+  "cancel": "Cancel·lar",
+  "save": "Desar",
+  "edit": "Editar",
+  "delete": "Eliminar",
+  "close": "Tancar",
+  "back": "Enrere",
+  "next": "Següent",
+  "yes": "Sí",
+  "no": "No",
+  "error": {
+    "general": "S'ha produït un error",
+    "required": "Aquest camp és obligatori",
+    "email": "Si us plau, introduïu una adreça de correu electrònic vàlida",
+    "phone": "Si us plau, introduïu un número de telèfon vàlid"
+  },
+  "success": {
+    "general": "Èxit!",
+    "saved": "Desat correctament",
+    "updated": "Actualitzat correctament",
+    "deleted": "Eliminat correctament"
+  }
+}

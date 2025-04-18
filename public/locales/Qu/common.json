@@ -1,0 +1,27 @@
+{
+  "optional": "(Munasqalla)",
+  "required": "Necesario",
+  "loading": "Cargachkan...",
+  "submit": "Apachiy",
+  "cancel": "Cancelay",
+  "save": "Waqaychay",
+  "edit": "Allichay",
+  "delete": "Chinkachiy",
+  "close": "Wichqay",
+  "back": "Kutiy",
+  "next": "Qatiq",
+  "yes": "Arí",
+  "no": "Mana",
+  "error": {
+    "general": "Pantay tukurqan",
+    "required": "Kay k'itiqa necesariom",
+    "email": "Allin correo electrónico yaykuchiy",
+    "phone": "Allin teléfono número yaykuchiy"
+  },
+  "success": {
+    "general": "Allinmi!",
+    "saved": "Allinta waqaychasqa",
+    "updated": "Allinta musuqchasqa",
+    "deleted": "Allinta chinkachisqa"
+  }
+}

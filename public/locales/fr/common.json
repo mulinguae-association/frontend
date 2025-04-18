@@ -1,0 +1,27 @@
+{
+  "optional": "(Facultatif)",
+  "required": "Obligatoire",
+  "loading": "Chargement...",
+  "submit": "Soumettre",
+  "cancel": "Annuler",
+  "save": "Enregistrer",
+  "edit": "Modifier",
+  "delete": "Supprimer",
+  "close": "Fermer",
+  "back": "Retour",
+  "next": "Suivant",
+  "yes": "Oui",
+  "no": "Non",
+  "error": {
+    "general": "Une erreur s'est produite",
+    "required": "Ce champ est obligatoire",
+    "email": "Veuillez entrer une adresse e-mail valide",
+    "phone": "Veuillez entrer un numéro de téléphone valide"
+  },
+  "success": {
+    "general": "Succès !",
+    "saved": "Enregistré avec succès",
+    "updated": "Mis à jour avec succès",
+    "deleted": "Supprimé avec succès"
+  }
+}

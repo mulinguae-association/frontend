@@ -1,0 +1,27 @@
+{
+  "optional": "(Opcional)",
+  "required": "Obrigatório",
+  "loading": "Carregando...",
+  "submit": "Enviar",
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "edit": "Editar",
+  "delete": "Excluir",
+  "close": "Fechar",
+  "back": "Voltar",
+  "next": "Próximo",
+  "yes": "Sim",
+  "no": "Não",
+  "error": {
+    "general": "Ocorreu um erro",
+    "required": "Este campo é obrigatório",
+    "email": "Por favor, insira um endereço de e-mail válido",
+    "phone": "Por favor, insira um número de telefone válido"
+  },
+  "success": {
+    "general": "Sucesso!",
+    "saved": "Salvo com sucesso",
+    "updated": "Atualizado com sucesso",
+    "deleted": "Excluído com sucesso"
+  }
+}

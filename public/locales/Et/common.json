@@ -1,0 +1,27 @@
+{
+  "optional": "(Valikuline)",
+  "required": "Kohustuslik",
+  "loading": "Laadimine...",
+  "submit": "Saada",
+  "cancel": "Tühista",
+  "save": "Salvesta",
+  "edit": "Muuda",
+  "delete": "Kustuta",
+  "close": "Sulge",
+  "back": "Tagasi",
+  "next": "Järgmine",
+  "yes": "Jah",
+  "no": "Ei",
+  "error": {
+    "general": "Tekkis viga",
+    "required": "See väli on kohustuslik",
+    "email": "Palun sisestage kehtiv e-posti aadress",
+    "phone": "Palun sisestage kehtiv telefoninumber"
+  },
+  "success": {
+    "general": "Õnnestus!",
+    "saved": "Edukalt salvestatud",
+    "updated": "Edukalt uuendatud",
+    "deleted": "Edukalt kustutatud"
+  }
+}
