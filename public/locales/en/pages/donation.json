@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Support Our Mission",
+    "description": "Your generosity helps us to continue our work. Consider making a donation via <l>PayPal</l> or <l2>credit card</l2>. All payment methods are secure and easy to use."
+  },
+  "contributions": {
+    "title": "Your Contribution Will Help Us:",
+    "description1": "Donations help us maintain our information service and implement other intercultural communication projects in the different countries where we are present.",
+    "description2": "Each contribution contributes to our daily work of training, support, and communication in the thematic lines that we prioritize, such as:",
+    "items": [
+      "Protection and development of endangered languages.",
+      "Promotion of multiligualism as a concept to develop interculturalism and world peace.",
+      "Combating inequality and discrimination in education due to language restrictions.",
+      "Promotion of mother tongues in line with Sustainable Development Goal 4 of UNESCO (SDG4) among others."
+    ],
+    "description3": "Donations are recorded and their execution is broken down in our annual report that you will receive in your email, along with the exclusive newsletter for donors that includes the most relevant news about the activities that are funded with your contributions."
+  },
+  "otherWays": {
+    "title": "Other Ways to Get Involved",
+    "description": "If a financial contribution isn’t possible, you can still make a difference by volunteering your time. Help us with testing, translation, or simply by using ACS Mulingua and providing <l>feedback</l>. Your support, in any form, is invaluable.",
+    "thank_you_note": "Thank you for being part of the ACS Mulingua community!"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Apoie Nossa Missão",
+    "description": "Sua generosidade nos ajuda a continuar nosso trabalho. Considere fazer uma doação via <l>PayPal</l> ou <l2>cartão de crédito</l2>. Todos os métodos de pagamento são seguros e fáceis de usar."
+  },
+  "contributions": {
+    "title": "Sua Contribuição Nos Ajudará:",
+    "description1": "As doações nos ajudam a manter nosso serviço de informação e a implementar outros projetos de comunicação intercultural nos diferentes países onde estamos presentes.",
+    "description2": "Cada contribuição contribui para o nosso trabalho diário de formação, apoio e comunicação nas linhas temáticas que priorizamos, como:",
+    "items": [
+      "Proteção e desenvolvimento de línguas ameaçadas de extinção.",
+      "Promoção do multilinguismo como conceito para desenvolver interculturalidade e paz mundial.",
+      "Combate à desigualdade e discriminação na educação devido a restrições linguísticas.",
+      "Promoção das línguas maternas em linha com o Objetivo de Desenvolvimento Sustentável 4 da UNESCO (ODS4), entre outros."
+    ],
+    "description3": "As doações são registradas e sua execução é detalhada em nosso relatório anual que você receberá por e-mail, junto com o boletim informativo exclusivo para doadores que inclui as notícias mais relevantes sobre as atividades financiadas com suas contribuições."
+  },
+  "otherWays": {
+    "title": "Outras Formas de Se Envolver",
+    "description": "Se uma contribuição financeira não for possível, você ainda pode fazer a diferença doando seu tempo. Ajude-nos com testes, tradução ou simplesmente usando ACS Mulingua e fornecendo <l>feedback</l>. Seu apoio, de qualquer forma, é inestimável.",
+    "thank_you_note": "Obrigado por fazer parte da comunidade ACS Mulingua!"
+  }
+}
