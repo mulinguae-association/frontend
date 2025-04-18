@@ -1,10 +1,26 @@
 @import "./globalStyles/colors";
 @import "./globalStyles/mixins/mixins.scss";
 @import "./globalStyles/animations/index.scss";
+
 // change direction of the elements
 [dir="rtl"] {
   // prevent rtl from making any spaces
   overflow-x: hidden;
+
+  // Apply Cairo font to all elements in RTL mode
+  * {
+    font-family: "Cairo", sans-serif !important;
+  }
+
+  // Adjust line height for better Arabic readability
+  p,
+  li,
+  div {
+    line-height: 1.8;
+  }
+}
+.main {
+  position: relative;
 }
 .ltr {
   flex-direction: row;
@@ -39,9 +55,14 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
+
+// Headings in RTL already covered by the global selector
 p {
   line-height: 1.7;
+  font-size: clamp(1rem, 4vw, 1.0625rem);
 }
+
+// Paragraphs in RTL already covered by the global selector
 
 // style images
 img {
@@ -66,6 +87,8 @@ img {
   @media (max-width: 767px) {
     padding: 0 0.7rem;
   }
+
+  /* Form elements in RTL already covered by the global selector */
 
   /* Additional responsive styles for different screen sizes */
   @media (max-width: 480px) {
