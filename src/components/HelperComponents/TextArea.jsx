@@ -20,10 +20,14 @@ const TextArea = forwardRef(
     ref,
   ) => {
     const { i18n } = useTranslation();
-    const isAr = i18n.language === "ar";
+    const isRTL = ["ar", "ur"].includes(i18n.language);
 
     return (
-      <div className={`input_field ${className || ""}`}>
+      <div
+        className={`input_field ${
+          isRTL ? "rtl-placeholder" : "ltr-placeholder"
+        } ${className || ""}`}
+      >
         <label
           htmlFor={id}
           className={hideLabel && "visually-hidden"}
@@ -41,7 +45,7 @@ const TextArea = forwardRef(
           rows={rows}
           required={required}
           ref={ref}
-          dir={isAr ? "rtl" : "ltr"}
+          dir={isRTL ? "rtl" : "ltr"}
           {...props}
         />
       </div>

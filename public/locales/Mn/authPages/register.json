@@ -16,5 +16,13 @@
   "registerButton": "注册",
   "loadingText": "加载中...",
   "haveAccountText": "已经有账号？",
-  "loginLinkText": "登录"
+  "loginLinkText": "登录",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "非常弱",
+    "weak": "弱",
+    "medium": "中等",
+    "strong": "强",
+    "veryStrong": "非常强"
+  }
 }

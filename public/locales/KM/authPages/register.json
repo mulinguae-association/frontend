@@ -16,5 +16,13 @@
   "registerButton": "Register",
   "loadingText": "Loading...",
   "haveAccountText": "Ou enkor pa enn manm?",
-  "loginLinkText": "Login"
+  "loginLinkText": "Login",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "ខ្សោយណាស់",
+    "weak": "ខ្សោយ",
+    "medium": "មធ្យម",
+    "strong": "ខ្លាំង",
+    "veryStrong": "ខ្លាំងណាស់"
+  }
 }

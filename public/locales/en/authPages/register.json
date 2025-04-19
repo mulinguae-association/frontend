@@ -1,20 +1,29 @@
 {
-  "registerTitle": "Register",
+  "registerTitle": "Create an Account",
   "nameLabel": "Name:",
   "emailLabel": "Email:",
   "passwordLabel": "Password:",
   "confirmPasswordLabel": "Confirm Password:",
-  "namePlaceholder": "Your Name",
-  "emailPlaceholder": "Your Email",
-  "passwordPlaceholder": "Your Password",
-  "confirmPasswordPlaceholder": "Confirm Password",
+  "namePlaceholder": "Enter your full name",
+  "emailPlaceholder": "Enter your email",
+  "passwordPlaceholder": "Create a strong password",
+  "confirmPasswordPlaceholder": "Confirm your password",
   "Label_Agree_To": "I agree to ",
   "Text_The_Terms": "the terms ",
   "Text_and": "and ",
   "Text_Privacy_Policy": "privacy policy",
-  "passwordLengthError": "Password must be at least 6 characters long.",
-  "registerButton": "Register",
-  "loadingText": "Loading...",
+  "passwordLengthError": "Password must be at least 8 characters long.",
+  "registerButton": "Create Account",
+  "loadingText": "Creating account...",
   "haveAccountText": "Already have an account?",
-  "loginLinkText": "Login"
+  "loginLinkText": "Sign in",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Very Weak",
+    "weak": "Weak",
+    "medium": "Medium",
+    "strong": "Strong",
+    "veryStrong": "Very Strong"
+  },
+  "registrationSuccessful": "Registration successful! Please check your email to verify your account."
 }

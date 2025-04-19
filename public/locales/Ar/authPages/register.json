@@ -15,5 +15,13 @@
   "registerButton": "تسجيل",
   "loadingText": "جار التحميل...",
   "haveAccountText": "هل لديك حساب بالفعل؟",
-  "loginLinkText": "تسجيل الدخول"
+  "loginLinkText": "تسجيل الدخول",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "ضعيفة جدًا",
+    "weak": "ضعيفة",
+    "medium": "متوسطة",
+    "strong": "قوية",
+    "veryStrong": "قوية جدًا"
+  }
 }

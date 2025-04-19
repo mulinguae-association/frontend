@@ -1,58 +1,49 @@
 import axios from 'axios';
 import logError from '../utils/logError';
 
+
 const fetchUserProfile = async () => {
   try {
     const res = await axios.get('/api/auth/profile');
     return res.data;
   } catch (err) {
-    logError(err);
+    logError('Error fetching user profile:', err);
     throw err;
   }
 };
 
-async function submitRegister(RegisterData) {
+async function submitRegister(registerData) {
   try {
-    const response = await axios.post(`/api/auth/register`, RegisterData);
+    const response = await axios.post(`/api/auth/register`, registerData);
     if (response.status === 200) {
-      // Reset form fields
       return response.data;
     }
-    throw new Error("Error sending Register data");
-
+    throw new Error("Error sending registration data");
   } catch (error) {
     logError("Error registering:", error);
     return { error: error.response?.data?.error || "An error occurred" };
   }
 }
 
-// Login
-async function submitLogin(LoginData) {
+async function submitLogin(loginData) {
   try {
-    const response = await axios.post(`/api/auth/login`, LoginData);
-
+    const response = await axios.post(`/api/auth/login`, loginData);
     if (response.status === 200) {
-      // Reset form fields
       return response.data;
     }
-    throw new Error("Error sending Login data");
-
+    throw new Error("Error sending login data");
   } catch (error) {
     logError("Error logging in:", error);
     return { error: error.response?.data?.error || "An error occurred" };
   }
 }
-
-// Logout
 async function submitLogout() {
   try {
     const response = await axios.get(`/api/auth/logout`);
-
     if (response.status === 200) {
       return response;
     }
-    throw new Error("Error Logging out");
-
+    throw new Error("Error logging out");
   } catch (error) {
     logError("Error logging out:", error);
     throw error;

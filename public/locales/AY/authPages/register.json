@@ -1,0 +1,28 @@
+{
+  "registerTitle": "Qillqantasiña",
+  "nameLabel": "Suti:",
+  "emailLabel": "Correo electrónico:",
+  "passwordLabel": "Imt'aña:",
+  "confirmPasswordLabel": "Imt'aña uñakipaña:",
+  "namePlaceholder": "Sutima",
+  "emailPlaceholder": "Correo electrónicoma",
+  "passwordPlaceholder": "Imt'añama",
+  "confirmPasswordPlaceholder": "Imt'aña uñakipaña",
+  "passwordLengthError": "Imt'añaxa 6 qillqanakampi juk'ampi.",
+  "Label_Agree_To": "Nayaxa ",
+  "Text_The_Terms": "amtanaka ",
+  "Text_and": "ukata ",
+  "Text_Privacy_Policy": "privacidad amta",
+  "registerButton": "Qillqantasiña",
+  "loadingText": "Uskuña...",
+  "haveAccountText": "¿Nayra cuenta utjiti?",
+  "loginLinkText": "Mantaña",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Sinti Jisk'a",
+    "weak": "Jisk'a",
+    "medium": "Taypi",
+    "strong": "Ch'ama",
+    "veryStrong": "Sinti Ch'ama"
+  }
+}

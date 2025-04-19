@@ -16,5 +16,13 @@
   "registerButton": "Registrar",
   "loadingText": "Carregando...",
   "haveAccountText": "Já tem uma conta?",
-  "loginLinkText": "Login"
+  "loginLinkText": "Login",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Muito Fraca",
+    "weak": "Fraca",
+    "medium": "Média",
+    "strong": "Forte",
+    "veryStrong": "Muito Forte"
+  }
 }

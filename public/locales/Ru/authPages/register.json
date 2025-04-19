@@ -16,5 +16,13 @@
   "registerButton": "Регистрация",
   "loadingText": "Загрузка...",
   "haveAccountText": "Уже есть аккаунт?",
-  "loginLinkText": "Войти"
+  "loginLinkText": "Войти",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Очень Слабый",
+    "weak": "Слабый",
+    "medium": "Средний",
+    "strong": "Сильный",
+    "veryStrong": "Очень Сильный"
+  }
 }

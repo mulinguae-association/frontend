@@ -1,0 +1,28 @@
+{
+  "registerTitle": "Registrati",
+  "nameLabel": "Nome:",
+  "emailLabel": "Email:",
+  "passwordLabel": "Password:",
+  "confirmPasswordLabel": "Conferma Password:",
+  "namePlaceholder": "Il tuo nome",
+  "emailPlaceholder": "La tua email",
+  "passwordPlaceholder": "La tua password",
+  "confirmPasswordPlaceholder": "Conferma password",
+  "passwordLengthError": "La password deve contenere almeno 6 caratteri.",
+  "Label_Agree_To": "Accetto ",
+  "Text_The_Terms": "i termini ",
+  "Text_and": "e ",
+  "Text_Privacy_Policy": "la privacy policy",
+  "registerButton": "Registrati",
+  "loadingText": "Caricamento...",
+  "haveAccountText": "Hai già un account?",
+  "loginLinkText": "Accedi",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Molto Debole",
+    "weak": "Debole",
+    "medium": "Media",
+    "strong": "Forte",
+    "veryStrong": "Molto Forte"
+  }
+}

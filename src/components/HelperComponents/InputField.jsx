@@ -18,10 +18,12 @@ const InputField = ({
   ...props
 }) => {
   const { i18n } = useTranslation();
-  const isAr = i18n.language === "ar";
+  const isRTL = ["ar", "ur"].includes(i18n.language);
 
   return (
-    <div className="input_field">
+    <div
+      className={`input_field ${isRTL ? "rtl-placeholder" : "ltr-placeholder"}`}
+    >
       <label htmlFor={id} className="visually-hidden" aria-hidden="true">
         {label}
       </label>
@@ -37,7 +39,7 @@ const InputField = ({
         required={required}
         autoComplete={autoComplete}
         ref={searchQuery}
-        dir={isAr ? "rtl" : "ltr"}
+        dir={isRTL ? "rtl" : "ltr"}
         {...props}
       />
     </div>

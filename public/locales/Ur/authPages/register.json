@@ -16,5 +16,13 @@
   "registerButton": "رجسٹر کریں",
   "loadingText": "لوڈ ہو رہا ہے...",
   "haveAccountText": "پہلے ہی اکاونٹ ہے؟",
-  "loginLinkText": "لاگ ان"
+  "loginLinkText": "لاگ ان",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "بہت کمزور",
+    "weak": "کمزور",
+    "medium": "درمیانہ",
+    "strong": "مضبوط",
+    "veryStrong": "بہت مضبوط"
+  }
 }

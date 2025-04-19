@@ -16,5 +16,13 @@
   "registerButton": "रजिस्टर करें",
   "loadingText": "लोड हो रहा है...",
   "haveAccountText": "पहले से ही खाता है?",
-  "loginLinkText": "लॉग इन करें"
+  "loginLinkText": "लॉग इन करें",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "बहुत कमजोर",
+    "weak": "कमजोर",
+    "medium": "मध्यम",
+    "strong": "मजबूत",
+    "veryStrong": "बहुत मजबूत"
+  }
 }

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { notifyError, notifySuccess } from '../Notify';
+import { notifyError, notifySuccess } from '../../Notify';
 import { Link } from 'react-router-dom';
 import { FaGlobe } from "react-icons/fa";
-import { useGlobal } from '../../contexts/AppContext';
-import InputField from '../HelperComponents/InputField'; // Import your InputField component
-import "./AuthStyle.scss";
+import { useGlobal } from '../../../contexts/AppContext';
+import InputField from '../../HelperComponents/InputField'; // Import your InputField component
+import "../styles/AuthStyle.scss";
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
-import { isVAlidEmail } from '../../utils/strongChecker';
+import { isVAlidEmail } from '../../../utils/strongChecker';
 
 function ForgotPassword() {
   const { t } = useTranslation("authPages/forgotPass");

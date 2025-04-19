@@ -1,17 +1,21 @@
 /* AuthStyle.scss */
-@import "../../globalStyles/colors";
-@import "../../globalStyles/sharedStyles";
-@import "../../globalStyles/mixins/mixins.scss";
+@import "../../../globalStyles/colors";
+@import "../../../globalStyles/sharedStyles";
+@import "../../../globalStyles/mixins/mixins.scss";
 
 .auth_form {
-  margin: 0 auto;
+  margin: 100px auto;
+  @media (max-width: 768px) {
+    margin: 10px auto;
+  }
   text-align: center;
   @include flexbox(
     $alignItems: center,
     $justifyContent: center,
     $direction: column
   );
-  height: calc(100vh - 90px);
+  min-height: calc(100vh - 180px);
+  max-width: 100%;
   .container {
     .content {
       @include rel();
@@ -79,6 +83,8 @@
 
         a {
           text-decoration: none;
+          width: fit-content;
+          margin-inline-start: auto;
           @include links($medium-darkblue, orangered);
           font-weight: 500;
           &:first-of-type {
@@ -91,13 +97,51 @@
         }
 
         .group .error-msg {
-          color: red;
-          font-weight: bold;
-          margin: -8px 0;
+          color: $error-color;
+          font-weight: 500;
+          margin: 4px 0;
           text-align: start;
-          font-size: small;
+          font-size: 12px;
           -webkit-user-select: none;
           user-select: none;
+          animation: errorFadeIn 0.3s ease-in-out;
+          padding-left: 4px;
+          border-left: 2px solid $error-color;
+          background-color: $error-light-bg;
+          padding: 4px 8px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: "⚠️";
+            margin-right: 6px;
+            font-size: 14px;
+          }
+
+          [dir="rtl"] & {
+            text-align: right;
+            border-left: none;
+            border-right: 2px solid $error-color;
+            padding-left: 8px;
+            padding-right: 4px;
+
+            &::before {
+              margin-right: 0;
+              margin-left: 6px;
+            }
+          }
+        }
+
+        @keyframes errorFadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-5px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         button {
@@ -146,6 +190,23 @@
             width: fit-content;
           }
         }
+
+        .password-validation-container {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin-top: 4px;
+          position: relative;
+
+          .password-info-tooltip {
+            margin-left: 10px;
+
+            [dir="rtl"] & {
+              margin-left: 0;
+              margin-right: 10px;
+            }
+          }
+        }
       }
       .earth_icon {
         @include abs(-30px 0 0 50%);
@@ -154,9 +215,12 @@
         color: $medium-darkblue;
         background: linear-gradient(178deg, $pale-gray, $white-color);
         overflow: hidden;
-        height: 53px;
         border-radius: 50%;
         height: 55px;
+        width: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
     & {

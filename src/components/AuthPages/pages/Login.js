@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import "./AuthStyle.scss";
-import { submitLogin } from '../../apis/auth-api';
-import { notifyError, notifySuccess } from '../Notify';
+import React, { useState } from 'react';
+import "../styles/AuthStyle.scss";
+import { notifyError, notifySuccess } from '../../Notify';
 import { useNavigate } from 'react-router';
-import { useAuth } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import { FaGlobe } from 'react-icons/fa';
-import { useGlobal } from '../../contexts/AppContext';
-import InputField from '../HelperComponents/InputField'
+import { useGlobal } from '../../../contexts/AppContext';
+import InputField from '../../HelperComponents/InputField'
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
-import logError from '../../utils/logError';
+import logError from '../../../utils/logError';
 import { useQueryClient } from 'react-query';
 
 function Login() {
@@ -19,14 +17,10 @@ function Login() {
     email: '',
     password: ''
   });
-  const { userData } = useAuth();
+
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (userData) navigate(`/${i18next.language}/pages/Blogs`);
-  }, [userData, navigate])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -41,24 +35,34 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validate inputs before submission
+    if (!formData.email || !formData.password) {
+      return;
+    }
+
     try {
+      // Dynamically import the API function to reduce initial bundle size
+      const { submitLogin } = await import('../../../apis/auth-api');
       setButtonLoading("loginBtn", true);
+
       const res = await submitLogin(formData);
       if (res.error) {
         notifyError(res.error);
         return;
       }
+
       // Clear the form fields
       setFormData({
         email: '',
         password: ''
       });
+
       notifySuccess("Login successful");
       queryClient.setQueryData("userProfile", res);
       navigate(`/${i18next.language}/pages/Blogs`);
     } catch (error) {
       notifyError(error.message);
-      logError(error.message);
+      logError("Login error:", error);
     } finally {
       setButtonLoading("loginBtn", false);
     }

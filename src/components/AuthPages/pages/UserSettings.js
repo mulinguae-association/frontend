@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth } from '../../contexts/AuthContext';
-import { useBlogPosts } from '../../contexts/BlogsContext';
-import { useGlobal } from '../../contexts/AppContext';
+import { useAuth } from '../../../contexts/AuthContext';
+import { useBlogPosts } from '../../../contexts/BlogsContext';
+import { useGlobal } from '../../../contexts/AppContext';
 import { useTranslation } from 'react-i18next';
-import Tooltip from '../HelperComponents/toolTip';
-import { notifyError, notifySuccess } from '../Notify';
-import "./UserSettings.scss";
+import Tooltip from '../../HelperComponents/toolTip';
+import { notifyError, notifySuccess } from '../../Notify';
+import "../styles/UserSettings.scss";
 import { useQueryClient } from 'react-query';
 
 function UserSettings() {

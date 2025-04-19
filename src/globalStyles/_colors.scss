@@ -1,19 +1,43 @@
+// Primary Colors
 $primary-color: #00a2ff; // Primary color
 $primaryDark-color: #0556b3; // Primary dark color
 
+// Secondary Colors
 $secondary-color: lightgreen; // Secondary color
 $green-color: #008000; // Green color
 $third-color: blue; // Tertiary color
 
+// Blue Variations
 $darkBlue-color: #0b127e; // Dark blue
 $medium-darkblue: #0056b3; // Medium dark blue
 
+// Gray Variations
 $darkgray-color: #444; // Medium dark gray
-
+$mediumgray-color: #757575; // Medium gray
 $lightgray-color: #eee; // Light gray
 $lighter-gray: #ddd; // Lighter gray
 $pale-gray: #f0f0f0; // Pale gray
+$ultra-lightgray: #f5f5f5; // Ultra light gray
+$light-border: #e0e0e0; // Light border color
+$darkGrayishBlue: #636e72; // Dark grayish blue: #71717a; // dark grayish blue
 
-$blue-shadow-light: #cad7ec; // light blue
+// Feedback Colors
+$error-color: #d32f2f; // Error red
+$error-light-bg: rgba(211, 47, 47, 0.05); // Light error background
+$success-dark: #2e7d32; // Dark success green
+$success-light: #e8f5e9; // Light success background
+$success-medium: #c8e6c9; // Medium success background
+$warning-color: #ffc107; // Warning yellow
+$orange-color: #ff5722; // Orange
+
+// Misc Colors
+$blue-shadow-light: #cad7ec; // Light blue shadow
 $white-color: #fff; // White color
-$main-bg: #f2f5f7;
+$main-bg: #f2f5f7; // Main background
+
+// Password Strength Colors
+$strength-very-weak: #f00; // Very weak password
+$strength-weak: #ff5722; // Weak password
+$strength-medium: #ffc107; // Medium password
+$strength-strong: #4caf50; // Strong password
+$strength-very-strong: #2e7d32; // Very strong password

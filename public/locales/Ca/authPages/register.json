@@ -1,0 +1,28 @@
+{
+  "registerTitle": "註冊",
+  "nameLabel": "姓名：",
+  "emailLabel": "電郵：",
+  "passwordLabel": "密碼：",
+  "confirmPasswordLabel": "確認密碼：",
+  "namePlaceholder": "你嘅姓名",
+  "emailPlaceholder": "你嘅電郵",
+  "passwordPlaceholder": "你嘅密碼",
+  "confirmPasswordPlaceholder": "確認密碼",
+  "passwordLengthError": "密碼必須至少有6個字符。",
+  "Label_Agree_To": "我同意 ",
+  "Text_The_Terms": "條款 ",
+  "Text_and": "同 ",
+  "Text_Privacy_Policy": "私隱政策",
+  "registerButton": "註冊",
+  "loadingText": "加載中...",
+  "haveAccountText": "已經有賬戶？",
+  "loginLinkText": "登入",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "非常弱",
+    "weak": "弱",
+    "medium": "中等",
+    "strong": "強",
+    "veryStrong": "非常強"
+  }
+}

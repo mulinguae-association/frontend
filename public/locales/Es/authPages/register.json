@@ -12,5 +12,13 @@
   "registerButton": "Registro",
   "loadingText": "Cargando...",
   "haveAccountText": "¿Ya tienes una cuenta?",
-  "loginLinkText": "Iniciar sesión"
+  "loginLinkText": "Iniciar sesión",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Muy Débil",
+    "weak": "Débil",
+    "medium": "Media",
+    "strong": "Fuerte",
+    "veryStrong": "Muy Fuerte"
+  }
 }

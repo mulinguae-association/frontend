@@ -16,5 +16,13 @@
   "registerButton": "Rikuchiy",
   "loadingText": "Yanapan...",
   "haveAccountText": "Ama llank'aynin?",
-  "loginLinkText": "Yachachiqkuna"
+  "loginLinkText": "Yachachiqkuna",
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Ancha Pisilla",
+    "weak": "Pisilla",
+    "medium": "Chawpi",
+    "strong": "Kallpasapa",
+    "veryStrong": "Ancha Kallpasapa"
+  }
 }

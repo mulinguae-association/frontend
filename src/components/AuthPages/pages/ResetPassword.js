@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FaGlobe } from 'react-icons/fa';
-import { notifyError, notifySuccess } from '../Notify';
+import { notifyError, notifySuccess } from '../../Notify';
 import i18next from 'i18next';
-import "./AuthStyle.scss";
+import "../styles/AuthStyle.scss";
 import { useTranslation } from 'react-i18next';
-import { useGlobal } from '../../contexts/AppContext';
-import { isStrongPassword } from '../../utils/strongChecker';
+import { useGlobal } from '../../../contexts/AppContext';
+import { isStrongPassword } from '../../../utils/strongChecker';
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
 
 function ResetPassword() {

@@ -1,18 +1,21 @@
 import React, { useState, useRef, useEffect } from 'react';
-import "./AuthStyle.scss";
-import { submitRegister } from '../../apis/auth-api';
-import { notifyError, notifySuccess } from '../Notify';
+import "../styles/AuthStyle.scss";
+import { submitRegister } from '../../../apis/auth-api';
+import { notifyError, notifySuccess } from '../../Notify';
 import { useNavigate } from 'react-router';
-import { FaGlobe } from 'react-icons/fa';
-import { useGlobal } from "../../contexts/AppContext";
-import InputField from '../HelperComponents/InputField';
+import { FaGlobe, FaSpinner } from 'react-icons/fa';
+import { useGlobal } from "../../../contexts/AppContext";
+import InputField from '../../HelperComponents/InputField';
 import i18next from "i18next";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
-import { isVAlidEmail, isStrongPassword } from "../../utils/strongChecker";
+import { isVAlidEmail, isStrongPassword } from "../../../utils/strongChecker";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../../contexts/AuthContext';
+import PasswordStrengthMeter from '../components/PasswordStrengthMeter';
+import PasswordRequirements from '../components/PasswordRequirements';
+import Tooltip from '../../UI/Tooltip/Tooltip';
 
 function Registration() {
   const { t } = useTranslation("authPages/register");
@@ -29,7 +32,8 @@ function Registration() {
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const [errors, setErrors] = useState({
     email: '',
-    password: ''
+    password: '',
+    passwordMatch: ''
   });
   const [visible, setVisible] = useState(false);
   const recaptchaRef = useRef(null);
@@ -53,23 +57,45 @@ function Registration() {
   };
 
   const validatePassword = (password) => {
-    const errMessage = isStrongPassword(password, global);
-    if (errMessage) {
+    // Check if password meets all requirements using the utility function
+    const isValid = password && isStrongPassword(password, null, true);
+
+    if (!isValid) {
+      // Get the specific error message for the failed requirement
+      const errMessage = isStrongPassword(password, global);
       setErrors((prev) => ({ ...prev, password: errMessage }));
       return false;
     }
+
     setErrors((prev) => ({ ...prev, password: '' }));
+    return true;
+  };
+
+  const validatePasswordMatch = (password, confirmPassword) => {
+    if (password && confirmPassword && password !== confirmPassword) {
+      setErrors(prev => ({ ...prev, passwordMatch: global("passwordMatchError") }));
+      return false;
+    }
+    setErrors(prev => ({ ...prev, passwordMatch: '' }));
     return true;
   };
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
+    const updatedFormData = {
       ...formData,
       [name]: type === 'checkbox' ? checked : value
-    });
+    };
+    setFormData(updatedFormData);
+
     if (name === "email") validateEmail(value);
-    if (name === "password") validatePassword(value);
+    if (name === "password") {
+      validatePassword(value);
+      validatePasswordMatch(value, updatedFormData.confirmPassword);
+    }
+    if (name === "confirmPassword") {
+      validatePasswordMatch(updatedFormData.password, value);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -81,7 +107,7 @@ function Registration() {
     if (!formData.password) return notifyError(global("Error_Required_Password"));
     if (!formData.confirmPassword) return notifyError(global("Error_Required_Confirm_Password"));
     if (!formData.terms) return notifyError(global("Error_Required_Terms"));
-    if (formData.password !== formData.confirmPassword) return notifyError(global("passwordMatchError"));
+    if (!validatePasswordMatch(formData.password, formData.confirmPassword)) return;
     if (!validatePassword(formData.password)) return;
 
     try {
@@ -121,6 +147,7 @@ function Registration() {
     || !formData.terms
     || errors.email
     || errors.password
+    || errors.passwordMatch
     || isBtnLoading['registerBtn']
 
   return (
@@ -166,6 +193,14 @@ function Registration() {
                 onChange={handleInputChange}
                 placeholder={t("passwordPlaceholder")}
               />
+              <div className="password-validation-container">
+                <PasswordStrengthMeter password={formData.password} />
+                <div className="password-info-tooltip">
+                  <Tooltip>
+                    <PasswordRequirements password={formData.password} />
+                  </Tooltip>
+                </div>
+              </div>
             </div>
 
             <div className='group password'>
@@ -185,6 +220,9 @@ function Registration() {
               >
                 {visible ? <IoEyeOutline /> : <IoEyeOffOutline />}
               </div>
+              {errors.passwordMatch && (
+                <p className='error-msg'>{errors.passwordMatch}</p>
+              )}
               {errors.password && (
                 <p className='error-msg'>{errors.password}</p>
               )}
@@ -215,11 +253,21 @@ function Registration() {
               disabled={isBtnDisabled}
               type="submit"
             >
-              {isBtnLoading['registerBtn'] ? t("loadingText") : t("registerButton")}
+              {isBtnLoading['registerBtn'] ? (
+                <>
+                  <FaSpinner className="spin-loader" />
+                  <span>{t("loadingText")}</span>
+                </>
+              ) : t("registerButton")}
             </button>
-            <span> {t("haveAccountText")} <Link to={`/${i18next.language}/login`}>{t("loginLinkText")}</Link></span>
+
+            <div className="login-link">
+              <span>{t("haveAccountText")} <Link to={`/${i18next.language}/login`}>{t("loginLinkText")}</Link></span>
+            </div>
           </form>
-          <span className='earth_icon'><FaGlobe /></span>
+          <div className='earth_icon'>
+            <FaGlobe />
+          </div>
           <div className='shape three'></div>
           <div className='shape four'></div>
         </div>
