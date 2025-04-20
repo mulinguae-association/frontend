@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "El correo electrónico no es válido.",
   "Error_Required_Terms": "Debes aceptar los términos.",
   "passwordMatchError": "Las contraseñas no coinciden. Por favor, asegúrate de que la contraseña y la confirmación de la contraseña coincidan.",
+  "passwordRequirementsTitle": "Requisitos de Contraseña",
   "strongPasswordRules": {
     "uppercase": "La contraseña debe contener al menos una letra mayúscula.",
     "lowercase": "La contraseña debe contener al menos una letra minúscula.",

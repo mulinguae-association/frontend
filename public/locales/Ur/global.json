@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "ای میل درست نہیں ہے",
   "Error_Required_Terms": "آپ کو شرائط پر متفق ہونا لازمی ہے۔",
   "passwordMatchError": "پاس ورڈ میچ نہیں ہوتے۔ براہ کرم یقینی بنائیں کہ پاس ورڈ اور تصدیقی پاس ورڈ میچ ہوں۔",
+  "passwordRequirementsTitle": "پاس ورڈ کی ضروریات",
   "strongPasswordRules": {
     "uppercase": "پاس ورڈ میں کم از کم ایک بڑی حروف تہجی ہونی چاہئے۔",
     "lowercase": "پاس ورڈ میں کم از کم ایک چھوٹی حروف تہجی ہونی چاہئے۔",

@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "Email pa valid.",
   "Error_Required_Terms": "To bizin aksepte bann kondisyon.",
   "passwordMatchError": "Mot de pas pa koresponn. Asire ki mot de pas ek konfirmasyon mot de pas koresponn.",
+  "passwordRequirementsTitle": "Requisiti della Password",
   "strongPasswordRules": {
     "uppercase": "Mot de pas bizin ena o-mwen enn let majiskil.",
     "lowercase": "Mot de pas bizin ena o-mwen enn let miniskil.",

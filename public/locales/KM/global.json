@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "E-mail não é válido",
   "Error_Required_Terms": "Você deve concordar com os termos.",
   "passwordMatchError": "Modpas pa koresponn. Verifie ki modpas-la ek konfirmasyon modpas-la koresponn.",
+  "passwordRequirementsTitle": "លកខខណ្ឌតម្រូវពាក្យសម្ងាត់",
   "strongPasswordRules": {
     "uppercase": "A senha deve conter pelo menos uma letra maiúscula.",
     "lowercase": "A senha deve conter pelo menos uma letra minúscula.",

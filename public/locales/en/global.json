@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "Email is not valid",
   "Error_Required_Terms": "You must agree to the terms.",
   "passwordMatchError": "Passwords do not match. Please make sure the password and confirm password match.",
+  "passwordRequirementsTitle": "Password Requirements",
   "strongPasswordRules": {
     "uppercase": "Password must contain at least one uppercase letter.",
     "lowercase": "Password must contain at least one lowercase letter.",

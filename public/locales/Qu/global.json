@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "Imel pa valab.",
   "Error_Required_Terms": "Ou bizin aksepte dispozisyon.",
   "passwordMatchError": "Ñanpasqa huch'uykunata rikuchiy. Ñanpasqa ñanpasmi konfirmachiyta huch'uyta kachun.",
+  "passwordRequirementsTitle": "Ñanpasqa Requisitokuna",
   "strongPasswordRules": {
     "uppercase": "Parey bizin ena omwen enn let an kapital.",
     "lowercase": "Parey bizin ena omwen enn let an minuskil.",

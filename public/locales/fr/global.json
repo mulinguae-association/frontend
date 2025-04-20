@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "L'e-mail n'est pas valide.",
   "Error_Required_Terms": "Vous devez accepter les conditions.",
   "passwordMatchError": "Les mots de passe ne correspondent pas. Veuillez vous assurer que le mot de passe et sa confirmation sont identiques.",
+  "passwordRequirementsTitle": "Exigences de Mot de Passe",
   "strongPasswordRules": {
     "uppercase": "Le mot de passe doit contenir au moins une lettre majuscule.",
     "lowercase": "Le mot de passe doit contenir au moins une lettre minuscule.",

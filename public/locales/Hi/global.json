@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "ईमेल वैध नहीं है।",
   "Error_Required_Terms": "आपको नियमों से सहमत होना होगा।",
   "passwordMatchError": "पासवर्ड मेल नहीं खा रहे हैं। कृपया सुनिश्चित करें कि पासवर्ड और पासवर्ड की पुष्टि मेल खा रहे हैं।",
+  "passwordRequirementsTitle": "पासवर्ड आवश्यकताएँ",
   "strongPasswordRules": {
     "uppercase": "पासवर्ड में कम से कम एक बड़ा अक्षर होना चाहिए।",
     "lowercase": "पासवर्ड में कम से कम एक छोटा अक्षर होना चाहिए।",

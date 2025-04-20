@@ -8,6 +8,7 @@
   "Error_Invalid_Email_Format": "邮箱格式无效。",
   "Error_Required_Terms": "您必须同意条款。",
   "passwordMatchError": "密码不匹配。请确保密码和确认密码相符。",
+  "passwordRequirementsTitle": "密码要求",
   "strongPasswordRules": {
     "uppercase": "密码必须包含至少一个大写字母。",
     "lowercase": "密码必须包含至少一个小写字母。",
