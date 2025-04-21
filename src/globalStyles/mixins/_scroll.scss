@@ -1,0 +1,25 @@
+/* Dynamic scroll mixin in _scroll.scss */
+
+@mixin dynamic-scroll(
+  $width: 8px,
+  $track-color: rgba(0, 0, 0, 0.1),
+  $thumb-color: #888,
+  $thumb-hover-color: #555
+) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $thumb-hover-color;
+  }
+}
