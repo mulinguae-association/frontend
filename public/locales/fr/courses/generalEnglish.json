@@ -41,7 +41,6 @@
     "englishCoursesTitle": {
       "Level": "Niveau :",
       "Duration": "Durée :",
-      "RecommendedFeeForTeacher": "Frais recommandés pour l'enseignant :",
       "Description": "Description :",
       "LearningOutcomes": "Objectifs pédagogiques :"
     },
@@ -51,7 +50,6 @@
         "CourseName": "Anglais général pour les débutants absolus",
         "Level": "Niveau 1 ou A1 (Débutant)",
         "Duration": "50 heures",
-        "RecommendedFeeForTeacher": "10 à 25 $ US par heure (individuel)",
         "Description": "Les débutants absolus sont des apprenants qui n'ont eu aucune instruction ou très peu dans la langue cible. Cela se distingue des faux débutants qui sont des apprenants qui ont étudié la langue cible auparavant mais n'ont jamais acquis une véritable maîtrise de la langue.",
         "LearningOutcomes": [
           "Poser et répondre à des questions simples sur des sujets très familiers",
@@ -66,7 +64,6 @@
         "CourseName": "Anglais général",
         "Level": "Niveau 2 (A1+ ou Élémentaire)",
         "Duration": "50 heures",
-        "RecommendedFeeForTeacher": "10 à 30 $ US par heure (individuel)",
         "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 1 ou qui ont déjà des connaissances de base dans la langue cible. Il couvre des sujets tels que les articles définis et indéfinis, les félicitations, donner / justifier des opinions, les compétences en orthographe, les noms et les pronoms, les aspects positifs et négatifs.",
         "LearningOutcomes": [
           "Communiquer dans des tâches simples et routinières sur des sujets familiaux et des activités",
@@ -81,7 +78,6 @@
         "CourseName": "Anglais général",
         "Level": "Niveau 3 (A2 ou Pré-Intermédiaire)",
         "Duration": "50 heures",
-        "RecommendedFeeForTeacher": "10 à 40 $ US par heure (individuel)",
         "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 2 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant passera un test pour déterminer son niveau). Le cours couvre des sujets tels que l'utilisation des temps continus et parfaits, la voix passive, les adverbes et le vocabulaire lié aux présentations, aux restaurants et lieux de loisirs, aux plats communs, aux expériences personnelles, à la météo et au changement climatique.",
         "LearningOutcomes": [
           "Gérer la plupart des situations lorsqu'ils voyagent dans des endroits où les gens parlent anglais",
@@ -95,7 +91,6 @@
         "CourseName": "Anglais général",
         "Level": "Niveau 4 (B1 ou Intermédiaire)",
         "Duration": "50 heures",
-        "RecommendedFeeForTeacher": "15 à 40 $ US par heure (individuel)",
         "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 3 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant passera un test pour déterminer son niveau)",
         "LearningOutcomes": [
           "Parler régulièrement avec n'importe quel locuteur anglais",
@@ -110,7 +105,6 @@
         "CourseName": "Anglais général",
         "Level": "Niveau 5 (B2 ou Intermédiaire supérieur)",
         "Duration": "50 heures",
-        "RecommendedFeeForTeacher": "15 à 40 $ US par heure (individuel)",
         "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 4 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant devra passer un test pour déterminer son niveau)",
         "LearningOutcomes": [
           "Parler couramment sans chercher la langue",
@@ -130,7 +124,6 @@
         "CourseName": "Anglais général",
         "Level": "Niveau 6 (C1 ou Avancé)",
         "Duration": "50 heures",
-        "RecommendedFeeForTeacher": "15 à 40 $ US par heure (individuel)",
         "Description": "Ce cours s'adresse aux apprenants qui ont terminé le niveau 5 ou qui ont atteint ce niveau dans un autre cadre. (L'apprenant devra passer un test pour déterminer son niveau)",
         "LearningOutcomes": [
           "Participer de manière fluide et sans effort à n'importe quelle conversation et avoir une bonne connaissance des expressions idiomatiques et des locutions familières",

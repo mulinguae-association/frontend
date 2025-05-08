@@ -1,0 +1,447 @@
+.course-details,
+.courses #speceficPurposes-section .course-details,
+.courses #generalEnglish-section .content .course-details {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  width: 49%;
+  max-width: 85%;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0px 10px #cbe2ff;
+  transition: max-height 0.7s, box-shadow 0.7s;
+  max-height: 2000px;
+}
+@media (max-width: 1285px) {
+  .course-details,
+  .courses #speceficPurposes-section .course-details,
+  .courses #generalEnglish-section .content .course-details {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .course-details,
+  .courses #speceficPurposes-section .course-details,
+  .courses #generalEnglish-section .content .course-details {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.course-details h2,
+.courses #speceficPurposes-section .course-details h2,
+.courses #generalEnglish-section .content .course-details h2 {
+  text-transform: capitalize;
+  padding-right: 50px;
+}
+@media (max-width: 376px) {
+  .course-details h2,
+  .courses #speceficPurposes-section .course-details h2,
+  .courses #generalEnglish-section .content .course-details h2 {
+    font-size: 18px;
+  }
+}
+.course-details h3,
+.courses #speceficPurposes-section .course-details h3,
+.courses #generalEnglish-section .content .course-details h3,
+.course-details strong,
+.courses #speceficPurposes-section .course-details strong,
+.courses #generalEnglish-section .content .course-details strong {
+  color: #0b127e;
+}
+.course-details p,
+.courses #speceficPurposes-section .course-details p,
+.courses #generalEnglish-section .content .course-details p {
+  font-size: 17px;
+  white-space: pre-line;
+}
+
+.collapseBtn,
+.courses #speceficPurposes-section .collapseBtn,
+.courses #generalEnglish-section .content .course-details .collapseBtn {
+  position: absolute;
+  top: 25px;
+  right: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 128, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: background-color 0.7s;
+  transform-origin: center left;
+}
+.collapseBtn:hover,
+.courses #speceficPurposes-section .collapseBtn:hover,
+.courses #generalEnglish-section .content .course-details .collapseBtn:hover {
+  background-color: rgba(0, 86, 179, 0.8);
+  color: #fff;
+  transition: background-color 0.7s ease-in-out;
+}
+
+.courses {
+  min-height: 100vh;
+  padding: 50px 0;
+}
+.courses h1 {
+  text-align: center;
+  color: #0b127e;
+  border-bottom: 2px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 20px 10px;
+  position: relative;
+}
+.courses h1::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -5.2px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background-color: #0b127e;
+}
+.courses a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+.courses a:hover {
+  color: #0056b3;
+  text-shadow: 0 0 10px white;
+}
+.courses .course-list {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  row-gap: 20px;
+}
+.courses #languages {
+  margin-bottom: 30px;
+}
+.courses #languages .langauges-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 480px) {
+  .courses #languages .langauges-list {
+    row-gap: 40px;
+  }
+}
+.courses #languages .langauges-list li {
+  text-transform: capitalize;
+}
+.courses #languages .langauges-list li a {
+  position: relative;
+  padding: 0px 0 12px;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.courses #languages .langauges-list li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  max-width: 70px;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  border-bottom: 2px solid #cad7ec;
+}
+.courses #languages .langauges-list li a:hover::after {
+  border-color: #00a2ff;
+}
+.courses .parent .intro {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(0, 86, 179, 0.5) 80%,
+      #0056b3 100%
+    ),
+    url("https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto/v1708485446/courses_a1jphp.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.courses #generalEnglish-section .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+.courses #generalEnglish-section .content .course-details .collapseBtn:hover {
+  background-color: rgba(0, 100, 0, 0.8);
+  color: #fff;
+  transition: background-color 0.7s ease-in-out;
+}
+.courses #generalEnglish-section .content .course-details .outcome-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+.courses #generalEnglish-section .content .course-details .outcome-list li {
+  position: relative;
+  right: 10px;
+  left: 10px;
+  gap: 15px;
+  word-break: break-word;
+}
+.courses #generalEnglish-section .content .course-details::after,
+.courses #generalEnglish-section .content .course-details::before {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  background-color: rgba(34, 139, 34, 0.1);
+  background-color: rgba(11, 18, 126, 0.1);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.courses #generalEnglish-section .content .course-details::after {
+  background-color: rgba(180, 204, 185, 0.2);
+  background-color: rgba(0, 86, 179, 0.1);
+  z-index: -1;
+  left: 20%;
+  top: 40%;
+}
+.courses #generalEnglish-section .content .course-details::before {
+  left: 40%;
+}
+.courses #generalEnglish-section .content .course-details::before(2) {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(11, 18, 126, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  filter: blur(100px);
+  z-index: -1;
+}
+.courses #generalEnglish-section .content .course-details:hover {
+  box-shadow: 0 0 15px rgba(144, 238, 144, 0.5);
+  z-index: 99;
+}
+.courses #generalEnglish-section .content .course-details.collapse {
+  max-height: 80px;
+  transition: max-height 0.5s ease;
+}
+.courses #speceficPurposes-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.courses #speceficPurposes-section h2 {
+  width: 100%;
+}
+.courses #speceficPurposes-section .collapseBtn,
+.courses #speceficPurposes-section .collapseBtn,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details
+  .collapseBtn,
+.courses
+  #generalEnglish-section
+  .content
+  .course-details
+  #speceficPurposes-section
+  .collapseBtn {
+  border-color: rgba(177, 28, 28, 0.4);
+}
+.courses #speceficPurposes-section .course-details::after,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details::after,
+.courses
+  #generalEnglish-section
+  .content
+  #speceficPurposes-section
+  .course-details::after,
+.courses #speceficPurposes-section .course-details::after,
+.courses #speceficPurposes-section .course-details::before,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details::before,
+.courses
+  #generalEnglish-section
+  .content
+  #speceficPurposes-section
+  .course-details::before,
+.courses #speceficPurposes-section .course-details::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: -200px;
+  right: 0px;
+  background-color: rgba(177, 28, 28, 0.2);
+  border-radius: 20px;
+  border: 3px solid rgba(0, 86, 179, 0.1);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.courses #speceficPurposes-section .course-details::after,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details::after,
+.courses
+  #generalEnglish-section
+  .content
+  #speceficPurposes-section
+  .course-details::after,
+.courses #speceficPurposes-section .course-details::after {
+  right: 0;
+  top: -200px;
+  background-color: rgba(204, 204, 204, 0.3);
+  transform: rotate(45deg);
+}
+.courses #speceficPurposes-section .course-details::before,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details::before,
+.courses
+  #generalEnglish-section
+  .content
+  #speceficPurposes-section
+  .course-details::before,
+.courses #speceficPurposes-section .course-details::before {
+  left: 50%;
+  top: 30%;
+  background-color: rgba(33, 150, 243, 0.32);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+@media (max-width: 480px) {
+  .courses #speceficPurposes-section .course-details::before,
+  .courses
+    #speceficPurposes-section
+    #generalEnglish-section
+    .content
+    .course-details::before,
+  .courses
+    #generalEnglish-section
+    .content
+    #speceficPurposes-section
+    .course-details::before,
+  .courses #speceficPurposes-section .course-details::before {
+    left: 10%;
+    top: 25%;
+  }
+}
+.courses #speceficPurposes-section .course-details ul,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details
+  ul,
+.courses
+  #generalEnglish-section
+  .content
+  #speceficPurposes-section
+  .course-details
+  ul,
+.courses #speceficPurposes-section .course-details ul {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  list-style-type: none;
+}
+.courses #speceficPurposes-section .course-details ul li,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details
+  ul
+  li,
+.courses
+  #generalEnglish-section
+  .content
+  #speceficPurposes-section
+  .course-details
+  ul
+  li,
+.courses #speceficPurposes-section .course-details ul li {
+  position: relative;
+}
+.courses #speceficPurposes-section .course-details ul li::before,
+.courses
+  #speceficPurposes-section
+  #generalEnglish-section
+  .content
+  .course-details
+  ul
+  li::before,
+.courses
+  #generalEnglish-section
+  .content
+  #speceficPurposes-section
+  .course-details
+  ul
+  li::before,
+.courses #speceficPurposes-section .course-details ul li::before {
+  content: counter(list-item);
+  display: "block";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -30px;
+  color: #0056b3;
+  font-weight: 500;
+  font-size: 15px;
+  border: 2px solid rgba(0, 86, 179, 0.2);
+  border-radius: 4px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.courses #speceficPurposes-section .course-details ul li.right::before {
+  right: -30px;
+  left: initial;
+}
+.courses #speceficPurposes-section .course-details:hover {
+  box-shadow: 0 0 12px rgba(0, 162, 255, 0.5);
+  z-index: 99;
+}
+.courses #speceficPurposes-section .course-details.collapse {
+  max-height: 80px;
+  transition: max-height 0.5s ease;
+} /*# sourceMappingURL=index.css.map */

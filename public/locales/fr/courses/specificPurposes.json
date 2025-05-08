@@ -1,7 +1,6 @@
 {
   "specificPurposesTitle": {
     "duration": "Durée :",
-    "recommendedFeeForTeacher": "Frais recommandés pour l'enseignant :",
     "targetAudience": "Public cible :",
     "description": "Description :",
     "goals": "Objectifs :",
@@ -14,7 +13,6 @@
       "id": "anglais-pour-les-études-de-développement",
       "name": "Anglais pour les études du développement",
       "duration": "50 heures",
-      "recommendedFeeRange": "20 à 40 $ US par heure",
       "targetAudience": "Professionnels et étudiants en études du développement non natifs en anglais.",
       "description": "Ce cours couvre un programme multidisciplinaire incluant l'anthropologie, la sociologie, la géographie mondiale, la science politique, les relations internationales et les études de genre, mettant l'accent sur les fondamentaux du développement.",
       "goals": [
@@ -31,7 +29,6 @@
       "id": "anglais-pour-la-comptabilité",
       "name": "Anglais pour la comptabilité",
       "duration": "50 heures",
-      "recommendedFeeRange": "20 à 40 $ US par heure",
       "targetAudience": "Comptables, auditeurs, banquiers, professionnels du secteur financier et étudiants dans ces domaines non natifs en anglais.",
       "description": "Ce cours met l'accent sur les fondamentaux de la comptabilité.",
       "goals": [
@@ -48,7 +45,6 @@
       "id": "anglais-juridique",
       "name": "Anglais juridique",
       "duration": "50 heures",
-      "recommendedFeeRange": "20 à 40 $ US par heure",
       "targetAudience": "Avocats, étudiants en droit et professionnels non natifs en anglais, axés sur les fondamentaux de l'anglais juridique international des juridictions anglo-saxonnes et anglo-américaines en pratique.",
       "description": "Ce cours vise à élargir la gamme de vocabulaire en anglais juridique des apprenants et à améliorer leur compréhension des textes juridiques dans divers domaines du droit avec une approche pratique.",
       "goals": [
@@ -65,7 +61,6 @@
       "id": "anglais-pour-les-études-syndicales",
       "name": "Anglais pour les études syndicales",
       "duration": "50 heures",
-      "recommendedFeeRange": "10 à 40 $ US par heure",
       "targetAudience": "Syndicalistes et étudiants en études syndicales non natifs en anglais.",
       "description": "Ce cours s'adresse aux syndicalistes et aux étudiants en études syndicales non natifs en anglais. Il couvre un programme multidisciplinaire incluant les politiques du travail, les stratégies de développement, la réponse du travail aux défis de la mondialisation, les conventions de l'OIT, les droits des travailleurs et des syndicats, la justice sociale et les entreprises ouvrières. Le cours met l'accent sur l'histoire du mouvement ouvrier dans le monde et l'utilisation de l'anglais comme lingua franca dans la construction de la solidarité internationale des travailleurs.",
       "goals": [
@@ -82,7 +77,6 @@
       "id": "anglais-pour-les-voyages-et-le-tourisme",
       "name": "Anglais pour le voyage et le tourisme",
       "duration": "50 heures",
-      "recommendedFeeRange": "20 à 40 $ US par heure",
       "targetAudience": "Professionnels et étudiants de l'industrie du voyage et du tourisme non natifs en anglais.",
       "description": "Ce cours couvre un programme multidisciplinaire incluant la géographie, la psychologie, la cuisine, la restauration, les loisirs et disciplines connexes. Le cours met l'accent sur les fondamentaux du voyage et du tourisme.",
       "goals": [
@@ -99,7 +93,6 @@
       "id": "anglais-pour-les-études-féminines",
       "name": "Anglais pour les études des femmes et du genre",
       "duration": "50 heures",
-      "recommendedFeeRange": "10 à 40 $ US par heure",
       "targetAudience": "Professionnels et étudiants de tous les domaines d'études non natifs en anglais.",
       "description": "Ce cours couvre un programme interdisciplinaire incluant une introduction au genre, à la sexualité et aux études sur les femmes. Le cours met l'accent sur le concept d'égalité des sexes, les luttes internationales des femmes dans le monde et l'utilisation de l'anglais comme lingua franca dans la construction de la solidarité internationale des femmes.",
       "goals": [
@@ -116,7 +109,6 @@
       "id": "anglais-des-affaires",
       "name": "Anglais des affaires",
       "duration": "50 heures",
-      "recommendedFeeRange": "20 à 40 $ US par heure",
       "targetAudience": "Professionnels opérant dans tous les secteurs d'activité et étudiants en études commerciales non natifs en anglais.",
       "description": "Ce cours vise à développer les compétences en communication du participant dans un environnement commercial.",
       "goals": [
@@ -133,7 +125,6 @@
       "id": "anglais-pour-les-études-internationales",
       "name": "Anglais pour les études internationales",
       "duration": "50 heures par niveau",
-      "recommendedFeeRange": "20 à 40 $ US par heure",
       "targetAudience": "Professionnels non natifs en anglais travaillant sur des questions de relations internationales et des défis mondiaux tels que l'inégalité et la pauvreté, le changement climatique, la migration, les guerres, la diplomatie, l'informatique, l'intelligence artificielle et les secteurs connexes. Cela inclut les journalistes, les professionnels poursuivant une carrière diplomatique, les fonctionnaires ou directeurs d'organisations internationales, d'ONG, de syndicats et de fonctionnaires publics.",
       "description": "Ce cours vise à développer les compétences en communication du participant sur les questions mondiales.",
       "goals": [
@@ -150,7 +141,6 @@
       "id": "anglais-pour-l'anthropologie",
       "name": "Anglais pour l'anthropologie",
       "duration": "50 heures par niveau",
-      "recommendedFeeRange": "20 à 40 $ US par heure",
       "targetAudience": "Professionnels et étudiants non natifs en anglais travaillant sur la recherche anthropologique et les études telles que la diversité de l'humanité à travers le monde, les organisations sociales, le local et le global, la valeur de la vie humaine depuis la base, le changement social et la diversité culturelle. Cela inclut les journalistes, les professionnels poursuivant une carrière diplomatique, les fonctionnaires ou directeurs d'organisations locales ou internationales et d'ONG.",
       "description": "Ce cours vise à développer les compétences en communication du participant sur les questions locales et mondiales.",
       "goals": [
@@ -167,7 +157,6 @@
       "id": "anglais-pour-l-agriculture",
       "name": "Anglais pour l'Agriculture",
       "duration": "50 heures",
-      "recommendedFeeRange": "US$ 10 à US$ 30 par heure",
       "targetAudience": "Professionnels de l'agriculture et de l'agro-industrie, agriculteurs, jardiniers et étudiants dans ces domaines qui ne sont pas des locuteurs natifs de l'anglais.",
       "description": "Ce cours se concentre sur les fondamentaux de l'agriculture et de l'agro-industrie. L'anglais pour l'agriculture aborde des sujets tels que la préparation du sol, les méthodes de semis, l'équipement agricole, l'élevage et l'agriculture biologique.",
       "goals": [

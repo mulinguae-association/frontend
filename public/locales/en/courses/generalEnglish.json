@@ -5,10 +5,19 @@
     "sectionTitles": {
       "esl": "1. English as a Second Language (ESL) - General English (six levels)",
       "efp": "2. English for Specific Purposes (EFP)",
-      "languages": "As a promoter of languages, ACS Mulingua is very keen to look for teachers of any language that you want to learn. Just drop some words in the Contact Box"
+      "languages": "As a promoter of languages, ACS Mulingua is very keen to look for teachers of any language that you want to learn. Just drop some words in the Contact Box",
+      "courseCategories": "Our Language Programs"
+    },
+    "intro": {
+      "description": "Discover language learning experiences tailored to your goals and interests.",
+      "eslDescription": "Comprehensive English language courses for all proficiency levels.",
+      "efpDescription": "Specialized English courses tailored for specific professional fields.",
+      "phrasesDescription": "Essential phrases in multiple languages to help you communicate effectively.",
+      "otherLanguagesDescription": "Interested in other languages? Contact us to learn about our additional language offerings."
     },
     "common": {
-      "contactUsLink": "Contact us"
+      "contactUsLink": "Contact us",
+      "exploreButton": "Explore Courses"
     },
     "specificPurposeCourses": [
       "English for Accounting",
@@ -42,7 +51,6 @@
     "englishCoursesTitle": {
       "Level": "Level:",
       "Duration": "Duration:",
-      "RecommendedFeeForTeacher": "Recommended Fee for Teacher:",
       "Description": "Description:",
       "LearningOutcomes": "Learning Outcomes:"
     },
@@ -52,7 +60,6 @@
         "CourseName": "General English for Absolute Beginners",
         "Level": "Level 1 or A1 (Beginner)",
         "Duration": "50 hours",
-        "RecommendedFeeForTeacher": "US $10 to US $25 per hr (one-to-one)",
         "Description": "Absolute Beginners are learners who have had no or very little instruction in the target language. It is distinguished from false beginners who are learners who have studied the target language before but never acquire a real grasp of the language.",
         "LearningOutcomes": [
           "Ask and answer simple questions on very familiar topics",
@@ -67,7 +74,6 @@
         "CourseName": "General English",
         "Level": "Level 2 (A1+ or Elementary)",
         "Duration": "50 hours",
-        "RecommendedFeeForTeacher": "US $10 to US $30 per hr (one-to-one)",
         "Description": "This course is for learners who have completed level 1 or have already a basic knowledge of the target language. It covers subjects such as definite and indefinite articles, congratulating, giving / justifying opinions, spelling skills, nouns and pronouns, positive and negative.",
         "LearningOutcomes": [
           "Communicate in simple and routine tasks on family topics and activities",
@@ -82,7 +88,6 @@
         "CourseName": "General English",
         "Level": "Level 3 (A2 or Pre-Intermediate)",
         "Duration": "50 hours",
-        "RecommendedFeeForTeacher": "US $10 to US $40 per hr (one-to-one)",
         "Description": "This course is for learners who have completed level 2 or have reached this level in another set-up. (The learner will sit a test to determine his or her level). The course covers subjects such as the use of the continuous and perfect tenses, passive voice, adverbs and vocabulary surrounding presentation, restaurant and leisure venues, common dishes, personal experiences, weather and climate change.",
         "LearningOutcomes": [
           "Deal with most situations when they travel in places where people speak English",
@@ -96,7 +101,6 @@
         "CourseName": "General English",
         "Level": "Level 4 (B1 or Intermediate)",
         "Duration": "50 hours",
-        "RecommendedFeeForTeacher": "US $15 to US $40 per hr (one-to-one)",
         "Description": "This course is for learners who have completed level 3 or have reached this level in another set-up. (The learner will sit a test to determine his or her level)",
         "LearningOutcomes": [
           "Speak regularly with any English speakers",
@@ -111,7 +115,6 @@
         "CourseName": "General English",
         "Level": "Level 5 (B2 or Upper Intermediate)",
         "Duration": "50 hours",
-        "RecommendedFeeForTeacher": "US $15 to US $40 per hr (one-to-one)",
         "Description": "This course is for learners who have completed level 4 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
         "LearningOutcomes": [
           "Speak fluently without searching for language",
@@ -131,7 +134,6 @@
         "CourseName": "General English",
         "Level": "Level 6 (C1 or Advanced)",
         "Duration": "50 hours",
-        "RecommendedFeeForTeacher": "US $15 to US $40 per hr (one-to-one)",
         "Description": "This course is for learners who have completed level 5 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
         "LearningOutcomes": [
           "Take part fluently and effortlessly in any conversation and have a good familiarity with idiomatic expressions and colloquialisms",

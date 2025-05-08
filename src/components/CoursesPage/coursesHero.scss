@@ -1,0 +1,241 @@
+@import "../../globalStyles/colors";
+@import "../../globalStyles/mixins/mixins.scss";
+
+.courses-hero {
+  margin-bottom: 3rem;
+
+  .hero-content {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    .hero-subtitle {
+      color: $darkBlue-color;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, $primary-color, $orange-color);
+        border-radius: 3px;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: rgba($darkBlue-color, 0.8);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+
+    .category-card {
+      background-color: $white-color;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba($darkBlue-color, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba($darkBlue-color, 0.15);
+      }
+
+      .card-icon {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+
+        svg {
+          width: 60px;
+          height: 60px;
+          stroke-width: 1.5;
+        }
+      }
+
+      .card-content {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        .card-title {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          color: $darkBlue-color;
+
+          a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+
+        .card-description {
+          color: rgba($darkBlue-color, 0.8);
+          margin-bottom: 1.5rem;
+          line-height: 1.5;
+          flex-grow: 1;
+        }
+
+        .card-action {
+          margin-top: auto;
+
+          .action-link {
+            display: inline-flex;
+            align-items: center;
+            color: $primary-color;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease;
+
+            .arrow-icon {
+              margin-left: 8px;
+              transition: transform 0.2s ease;
+            }
+
+            &:hover {
+              color: $darkBlue-color;
+
+              .arrow-icon {
+                transform: translateX(5px);
+              }
+            }
+
+            &.contact-action {
+              color: $orange-dark;
+
+              &:hover {
+                color: darken($orange-dark, 10%);
+              }
+            }
+          }
+        }
+
+        .course-tags,
+        .language-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: auto;
+
+          .course-tag,
+          .language-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: rgba($medium-darkblue, 0.1);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: $darkBlue-color;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+              background-color: $primary-color;
+              color: $white-color;
+            }
+          }
+        }
+      }
+
+      &.esl-card .card-icon {
+        background-color: rgba($primary-color, 0.1);
+
+        svg {
+          stroke: rgba($primary-color, 1);
+        }
+      }
+
+      &.efp-card .card-icon {
+        background-color: rgba($emerald-green, 0.1);
+
+        svg {
+          stroke: $emerald-green;
+        }
+      }
+
+      &.phrases-card .card-icon {
+        background-color: rgba($purple, 0.1);
+
+        svg {
+          stroke: $purple;
+        }
+      }
+
+      &.other-card .card-icon {
+        background-color: rgba($orange-dark, 0.1);
+
+        svg {
+          stroke: $orange-dark;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      margin-bottom: 2rem;
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+      }
+    }
+
+    .category-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .category-card {
+        .card-icon {
+          height: 100px;
+
+          svg {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .card-content {
+          padding: 1.2rem;
+
+          .card-title {
+            font-size: 1.3rem;
+          }
+
+          .card-description {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}

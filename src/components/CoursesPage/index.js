@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom"
-import "./index.scss"
-import React, { useState } from 'react'
-import { FaArrowDown, FaArrowUp, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "./index.scss";
+import React, { Suspense, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
-import Footer from "../FooterPages";
+import LazyCourseCard from "./LazyCourseCard";
+import SpecificPurposes from "./SpecificPurposes";
 
 const Courses = () => {
   const { t } = useTranslation("courses/generalEnglish");
@@ -15,15 +15,55 @@ const Courses = () => {
   const languages = t("courses.languagesList", { returnObjects: true });
   const englishCourses = t("courses.englishCourses", { returnObjects: true });
   const specificPurposes = S("specificPurposes", { returnObjects: true });
-  const isEnglish = i18next.language !== "Ar"
+  const isEnglish = i18next.language !== "ar";
 
-  const [collapse, setCollapse] = useState({});
+  const [collapse, setCollapse] = useState(true)
+
+  const findPairedCardId = (sectionId) => {
+    if (window.innerWidth < 1285) {
+      return null;
+    }
+
+    // For English courses
+    const englishIndex = englishCourses.findIndex(course => course.Level === sectionId);
+    if (englishIndex !== -1) {
+      // If it's an even index, pair with the next card; if odd, pair with the previous card
+      const pairedIndex = englishIndex % 2 === 0 ? englishIndex + 1 : englishIndex - 1;
+      // Make sure the paired index is valid
+      if (pairedIndex >= 0 && pairedIndex < englishCourses.length) {
+        return englishCourses[pairedIndex].Level;
+      }
+    }
+
+    // For specific purpose courses
+    const specificIndex = specificPurposes.findIndex(course => course.id === sectionId);
+    if (specificIndex !== -1) {
+      // If it's an even index, pair with the next card; if odd, pair with the previous card
+      const pairedIndex = specificIndex % 2 === 0 ? specificIndex + 1 : specificIndex - 1;
+      // Make sure the paired index is valid
+      if (pairedIndex >= 0 && pairedIndex < specificPurposes.length) {
+        return specificPurposes[pairedIndex].id;
+      }
+    }
+
+    // If no pair is found, return null
+    return null;
+  };
 
   const toggleCollapse = (sectionId) => {
-    setCollapse((prevCollapsedSections) => ({
-      ...prevCollapsedSections,
-      [sectionId]: !prevCollapsedSections[sectionId]
-    }))
+    setCollapse((prevCollapsedSections) => {
+      const newState = { ...prevCollapsedSections };
+      // Toggle the clicked card
+      newState[sectionId] = !prevCollapsedSections[sectionId];
+
+      // Find and toggle the paired card if it exists
+      const pairedId = findPairedCardId(sectionId);
+      if (pairedId) {
+        newState[pairedId] = newState[sectionId];
+      }
+
+      return newState;
+    });
   }
 
 
@@ -55,113 +95,127 @@ const Courses = () => {
       <main className="courses">
         <div className="container">
           <div className="content">
-            <h1>{t('courses.heading')}</h1>
-            <h2>{t('courses.subHeading')}</h2>
-            <div className="parent">
-              <div >
-                <section id="esl">
-                  <h3>
-                    <Link to="#general-english"
-                      onClick={() => scrollToSection("generalEnglish-section", 700)}>
-                      {t('courses.sectionTitles.esl')}
-                    </Link>
-                  </h3>
-                </section>
-                <section id="efp">
-                  <h3>{t('courses.sectionTitles.efp')}</h3>
-                  <ul className="course-list">
-                    {specificPurposeCourses.map((course, index) => (
-                      <li key={index}>
-                        <Link to={`#${course.toLowerCase().replace(/\s/g, '-')}`}
-                          onClick={() => scrollToSection(`${course.toLowerCase().replace(/\s/g, '-')}`, 1000, 20)}>
-                          {course}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-                <section id="languages">
-                  {<h3>{H("headerTitle")}</h3>}
-                  <ul className="langauges-list">
-                    {languages.map((language) => (
-                      <li className={`lang-${language.label}`} key={language.value}>
-                        <Link to={`/${language.value}/pages/100-basic-phrases/`}>{language.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-                <h3>{t('courses.sectionTitles.languages',)}
-                  <Link to={`/${i18next.language}/contact`}> ({t("courses.common.contactUsLink")})</Link>
-                </h3>
+            <div className="courses-hero">
+              <div className="hero-content">
+                <h1 className="hero-subtitle">{t('courses.sectionTitles.courseCategories')}</h1>
+                <p className="hero-description">{t('courses.intro.description')}</p>
               </div>
-              <img
-                src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto/v1706727876/courses_okcsgp.jpg"
-                sizes="(min-width: 750px) 30vw, 100vw"
-                loading="lazy"
-                width="450"
-                height="286"
-                alt="coursesImage"
-              />
+
+              <div className="category-grid">
+                {/* ESL Card */}
+                <div className="category-card esl-card">
+                  <div className="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3 className="card-title">
+                      <Link to="#general-english" onClick={() => scrollToSection("generalEnglish-section", 700)}>
+                        {t('courses.sectionTitles.esl')}
+                      </Link>
+                    </h3>
+                    <p className="card-description">{t('courses.intro.eslDescription')}</p>
+                    <div className="card-action">
+                      <Link to="#general-english" className="action-link" onClick={() => scrollToSection("generalEnglish-section", 700)}>
+                        {t('courses.common.exploreButton')}
+                        <span className="arrow-icon">→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* EFP Card */}
+                <div className="category-card efp-card">
+                  <div className="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3 className="card-title">
+                      <Link to="#specificPurposes-section" onClick={() => scrollToSection("specificPurposes-section", 700)}>
+                        {t('courses.sectionTitles.efp')}
+                      </Link>
+                    </h3>
+                    <p className="card-description">{t('courses.intro.efpDescription')}</p>
+                    <div className="course-tags">
+                      {specificPurposeCourses.map((course, index) => (
+                        <span key={index} className="course-tag" onClick={() => scrollToSection('specificPurposes-section', 1000, 20)}>
+                          {course}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Phrases Card */}
+                <div className="category-card phrases-card">
+                  <div className="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3 className="card-title">{H("headerTitle")}</h3>
+                    <p className="card-description">{t('courses.intro.phrasesDescription')}</p>
+                    <div className="language-tags">
+                      {languages.map((language) => (
+                        <Link key={language.value} to={`/${language.value}/pages/100-basic-phrases/`} className="language-tag">
+                          {language.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Other Languages Card */}
+                <div className="category-card other-card">
+                  <div className="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 20h9"></path>
+                      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                  </div>
+                  <div className="card-content">
+                    <h3 className="card-title">{t('courses.sectionTitles.languages')}</h3>
+                    <p className="card-description">{t('courses.intro.otherLanguagesDescription')}</p>
+                    <div className="card-action">
+                      <Link to={`/${i18next.language}/contact`} className="action-link contact-action">
+                        {t("courses.common.contactUsLink")}
+                        <span className="arrow-icon">→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <section id="generalEnglish-section" className="course-section">
             <h2>{t('courses.sectionTitles.esl').slice(2)}</h2>
             <div className="content">
               {englishCourses.map((course) => (
-                <div className={`course-details ${collapse[course.Level] ? "collapse" : ""}`} key={course.id}>
-                  <h2 style={collapse[course.Level] ? { height: "30px", display: "flex", alignItems: "center" } : {}}>{course.CourseName} {
-                    `${collapse[course.Level]
-                      && +course.id !== 1
-                      && isEnglish ? (course.Level.slice(0, 8))
-                      : collapse[course.Level] && +course.id !== 1 ?
-                        course.Level.slice(0, 10) : ''}`}
-                  </h2>
-                  <span className="collapseBtn" onClick={() => toggleCollapse(course.Level)}>
-                    {collapse[course.Level] ? <FaArrowDown /> : <FaArrowUp />}
-                  </span>
-                  <p><strong>{t("courses.englishCoursesTitle.Level")}</strong> {course.Level}</p>
-                  <p><strong>{t("courses.englishCoursesTitle.Duration")}</strong> {course.Duration}</p>
-                  <p><strong>{t("courses.englishCoursesTitle.RecommendedFeeForTeacher")}</strong> {course.RecommendedFeeForTeacher}</p>
-                  <p><strong>{t("courses.englishCoursesTitle.Description")}</strong> {course.Description}</p>
-                  <h3>{t("courses.englishCoursesTitle.LearningOutcomes")}</h3>
-                  <ul className="outcome-list">
-                    {course.LearningOutcomes.map((outcome, outcomeIndex) => (
-                      <li key={outcomeIndex}><FaStar size={15} color="darkgreen" /> {outcome}</li>
-                    ))}
-                  </ul>
-                </div>
+                <Suspense key={course.id} fallback={<div>Loading...</div>}>
+                  <LazyCourseCard t={t} course={course} collapse={collapse} toggleCollapse={toggleCollapse} isEnglish={isEnglish} />
+                </Suspense>
               ))}
             </div>
           </section>
-          <section id="speceficPurposes-section" className="course-section">
+          <section id="specificPurposes-section" className="course-section">
             <h2>{t('courses.sectionTitles.efp').slice(2)}</h2>
             {
-              specificPurposes.map((course, index) => (
-                <div id={course.id} className={`course-details ${collapse[course.id] ? "collapse" : ""}`} key={index}>
-                  <h2 style={collapse[course.id] ? { height: "30px", display: "flex", alignItems: "center" } : {}}>{course.name}</h2>
-                  <span className="collapseBtn" onClick={() => toggleCollapse(course.id)}>
-                    {collapse[course.id] ? <FaArrowDown /> : <FaArrowUp />}
-                  </span>
-                  <p><strong>{S("specificPurposesTitle.duration")}</strong> {course.duration}</p>
-                  <p><strong>{S("specificPurposesTitle.recommendedFeeForTeacher")}</strong> {course.recommendedFeeRange}</p>
-                  <p><strong>{S("specificPurposesTitle.targetAudience")}</strong> {course.targetAudience}</p>
-                  <p><strong>{S("specificPurposesTitle.description")}</strong> {course.description}</p>
-                  <p><strong>{S("specificPurposesTitle.goals")}</strong></p>
-                  <ul style={isEnglish ? { marginRight: 0 } : { marginRight: "40px" }}>
-                    {course.goals.map((goal, goalIndex) => (
-                      <li className={isEnglish ? "" : "right"} key={goalIndex}>{goal}</li>
-                    ))}
-                  </ul>
-                  <p><strong>{S("specificPurposesTitle.methodology")}</strong> {course.methodology}</p>
-                  <p><strong>{S("specificPurposesTitle.areasCovered")}</strong> {course.areasCovered}</p>
-                  <p><strong>{S("specificPurposesTitle.requiredLevel")}</strong> {course.requiredLevel}</p>
-                </div>
+              specificPurposes.map((course) => (
+                <Suspense key={course.id} fallback={<div>loading...</div>}>
+                  <SpecificPurposes S={S} course={course} collapse={collapse} toggleCollapse={toggleCollapse} isEnglish={isEnglish} />
+                </Suspense>
               ))
             }
           </section>
         </div>
       </main >
-      <Footer />
     </>
   )
 }

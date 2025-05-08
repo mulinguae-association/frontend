@@ -41,7 +41,6 @@
     "englishCoursesTitle": {
       "Level": "Nivel:",
       "Duration": "Duración:",
-      "RecommendedFeeForTeacher": "Tarifa recomendada para el profesor:",
       "Description": "Descripción:",
       "LearningOutcomes": "Resultados de aprendizaje:"
     },
@@ -51,7 +50,6 @@
         "CourseName": "Inglés General para Principiantes Absolutos",
         "Level": "Nivel 1 o A1 (Principiante)",
         "Duration": "50 horas",
-        "RecommendedFeeForTeacher": "$10 a $25 por hora (individual)",
         "Description": "Los Principiantes Absolutos son aprendices que no han tenido ninguna o muy poca instrucción en el idioma objetivo. Se distingue de los falsos principiantes, que son aprendices que han estudiado el idioma objetivo antes pero nunca adquieren un verdadero dominio del idioma.",
         "LearningOutcomes": [
           "Hacer y responder preguntas simples sobre temas muy familiares",
@@ -66,7 +64,6 @@
         "CourseName": "Inglés General",
         "Level": "Nivel 2 (A1+ o Elemental)",
         "Duration": "50 horas",
-        "RecommendedFeeForTeacher": "$10 a $30 por hora (individual)",
         "Description": "Este curso es para aprendices que han completado el nivel 1 o ya tienen un conocimiento básico del idioma objetivo. Cubre temas como artículos definidos e indefinidos, felicitaciones, dar/justificar opiniones, habilidades de ortografía, sustantivos y pronombres, positivos y negativos.",
         "LearningOutcomes": [
           "Comunicarse en tareas simples y rutinarias sobre temas familiares y actividades",
@@ -81,7 +78,6 @@
         "CourseName": "Inglés General",
         "Level": "Nivel 3 (A2 o Preintermedio)",
         "Duration": "50 horas",
-        "RecommendedFeeForTeacher": "$10 a $40 por hora (individual)",
         "Description": "Este curso es para aprendices que han completado el nivel 2 o han alcanzado este nivel en otro entorno. (El aprendiz presentará un examen para determinar su nivel). El curso cubre temas como el uso de los tiempos continuos y perfectos, la voz pasiva, adverbios y vocabulario relacionado con presentaciones, restaurantes y lugares de ocio, platos comunes, experiencias personales, clima y cambio climático.",
         "LearningOutcomes": [
           "Manejar la mayoría de las situaciones cuando viajan a lugares donde las personas hablan inglés",
@@ -95,7 +91,6 @@
         "CourseName": "Inglés General",
         "Level": "Nivel 4 (B1 o Intermedio)",
         "Duration": "50 horas",
-        "RecommendedFeeForTeacher": "$15 a $40 por hora (individual)",
         "Description": "Este curso es para aprendices que han completado el nivel 3 o han alcanzado este nivel en otro entorno. (El aprendiz presentará un examen para determinar su nivel)",
         "LearningOutcomes": [
           "Hablar regularmente con cualquier hablante de inglés",
@@ -110,7 +105,6 @@
         "CourseName": "Inglés General",
         "Level": "Nivel 5 (B2 o Intermedio superior)",
         "Duration": "50 horas",
-        "RecommendedFeeForTeacher": "$15 a $40 por hora (individual)",
         "Description": "Este curso es para aprendices que han completado el nivel 4 o han alcanzado este nivel en otro entorno. (El aprendiz deberá presentar un examen para determinar su nivel)",
         "LearningOutcomes": [
           "Hablar con fluidez sin buscar el lenguaje",
@@ -130,7 +124,6 @@
         "CourseName": "Inglés General",
         "Level": "Nivel 6 (C1 o Avanzado)",
         "Duration": "50 horas",
-        "RecommendedFeeForTeacher": "$15 a $40 por hora (individual)",
         "Description": "Este curso es para aprendices que han completado el nivel 5 o han alcanzado este nivel en otro entorno. (El aprendiz deberá presentar un examen para determinar su nivel)",
         "LearningOutcomes": [
           "Participar con fluidez y sin esfuerzo en cualquier conversación y tener un buen conocimiento de expresiones idiomáticas y giros coloquiales",

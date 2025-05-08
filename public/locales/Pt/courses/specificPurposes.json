@@ -1,7 +1,6 @@
 {
   "specificPurposesTitle": {
     "duration": "Duração:",
-    "recommendedFeeForTeacher": "Taxa recomendada para o professor:",
     "targetAudience": "Público-alvo:",
     "description": "Descrição:",
     "goals": "Objetivos:",
@@ -14,7 +13,6 @@
       "id": "inglês-para-estudos-de-desenvolvimento",
       "name": "Inglês para Estudos de Desenvolvimento",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
       "targetAudience": "Profissionais e estudantes em Estudos de Desenvolvimento que não são falantes nativos de inglês.",
       "description": "Este curso abrange um programa multidisciplinar que inclui antropologia, sociologia, geografia mundial, ciência política, relações internacionais e estudos de gênero, com foco nos fundamentos do desenvolvimento.",
       "goals": [
@@ -31,7 +29,6 @@
       "id": "inglês-para-contabilidade",
       "name": "Inglês para Contabilidade",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
       "targetAudience": "Contadores, auditores, banqueiros, profissionais do setor financeiro e estudantes dessas áreas que não são falantes nativos de inglês.",
       "description": "Este curso se concentra nos fundamentos da contabilidade.",
       "goals": [
@@ -48,7 +45,6 @@
       "id": "inglês-jurídico",
       "name": "Inglês Jurídico",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
       "targetAudience": "Advogados, estudantes de direito e profissionais que não são falantes nativos de inglês, com foco nos fundamentos do inglês jurídico internacional das jurisdições anglo-saxã e anglo-americana na prática.",
       "description": "Este curso visa aumentar o vocabulário do aluno em inglês jurídico e a compreensão de textos jurídicos em várias áreas do direito com uma abordagem prática.",
       "goals": [
@@ -65,7 +61,6 @@
       "id": "inglês-para-estudos-sindicais",
       "name": "Inglês para Estudos Sindicais",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 10 a US$ 40 por hora",
       "targetAudience": "Sindicalistas e estudantes em estudos sindicais e trabalhistas que não são falantes nativos de inglês.",
       "description": "Este curso é destinado a sindicalistas e estudantes em estudos sindicais e trabalhistas que não são falantes nativos de inglês. Ele abrange um programa multidisciplinar que inclui políticas trabalhistas, estratégias de desenvolvimento, resposta trabalhista aos desafios da globalização, convenções da OIT, direitos dos trabalhadores e sindicatos, justiça social e empresas de trabalhadores. \n O curso se concentra na história do movimento trabalhista em todo o mundo e no uso do inglês como língua franca na construção da solidariedade internacional dos trabalhadores.",
       "goals": [
@@ -82,7 +77,6 @@
       "id": "inglês-para-viagens-e-turismo",
       "name": "Inglês para Viagens e Turismo",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
       "targetAudience": "Profissionais e estudantes da indústria de viagens e turismo que não são falantes nativos de inglês.",
       "description": "Este curso abrange um programa multidisciplinar que inclui geografia, psicologia, culinária, catering, lazer e disciplinas relacionadas. O curso se concentra nos fundamentos de viagens e turismo.",
       "goals": [
@@ -99,7 +93,6 @@
       "id": "inglês-para-estudos-de-mulheres",
       "name": "Inglês para Estudos de Mulheres e Gênero",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 10 a US$ 40 por hora",
       "targetAudience": "Profissionais e estudantes em todas as áreas de estudo que não são falantes nativos de inglês.",
       "description": "Este curso abrange um programa interdisciplinar que inclui uma introdução aos estudos de gênero, sexualidade e mulheres. O curso se concentra no conceito de igualdade de gênero, lutas internacionais das mulheres ao redor do mundo e o uso do inglês como língua franca na construção da solidariedade internacional das mulheres.",
       "goals": [
@@ -116,7 +109,6 @@
       "id": "inglês-empresarial",
       "name": "Inglês Empresarial",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
       "targetAudience": "Profissionais que atuam em qualquer setor de negócios e estudantes de ciências empresariais que não são falantes nativos de inglês.",
       "description": "Este curso foca no desenvolvimento das habilidades de comunicação do aluno em um ambiente de negócios.",
       "goals": [
@@ -133,7 +125,6 @@
       "id": "inglês-para-estudos-internacionais",
       "name": "Inglês para Estudos Internacionais",
       "duration": "50 horas por nível",
-      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
       "targetAudience": "Profissionais não falantes nativos de inglês que trabalham em questões de relações internacionais e desafios globais, como desigualdade e pobreza, mudanças climáticas, migração, guerras, diplomacia, TI, inteligência artificial e setores relacionados. Isso inclui jornalistas, profissionais que buscam uma carreira diplomática, oficiais ou diretores em organizações internacionais, ONGs, sindicatos e funcionários públicos.",
       "description": "Este curso se concentra no desenvolvimento das habilidades de comunicação do aluno em questões globais.",
       "goals": [
@@ -150,7 +141,6 @@
       "id": "inglês-para-antropologia",
       "name": "Inglês para Antropologia",
       "duration": "50 horas por nível",
-      "recommendedFeeRange": "US$ 20 a US$ 40 por hora",
       "targetAudience": "Profissionais e estudantes não falantes nativos de inglês que trabalham em pesquisas e estudos antropológicos, como a diversidade da humanidade ao redor do mundo, organizações sociais, o local e o global, o valor da vida humana a partir da base, mudança social e diversidade cultural. Isso inclui jornalistas, profissionais que buscam uma carreira diplomática, oficiais ou diretores em organizações locais ou internacionais e ONGs.",
       "description": "Este curso se concentra no desenvolvimento das habilidades de comunicação do aluno em questões locais e globais.",
       "goals": [
@@ -167,7 +157,6 @@
       "id": "ingles-para-agricultura",
       "name": "Inglês para Agricultura",
       "duration": "50 horas",
-      "recommendedFeeRange": "US$ 10 a US$ 30 por hora",
       "targetAudience": "Profissionais da agricultura e agroindústria, agricultores, jardineiros e estudantes nesses campos que não são falantes nativos de inglês.",
       "description": "Este curso foca nos fundamentos da agricultura e agroindústria. Inglês para Agricultura aborda tópicos como preparo do solo, métodos de semeadura, equipamentos agrícolas, criação de animais e agricultura orgânica.",
       "goals": [
