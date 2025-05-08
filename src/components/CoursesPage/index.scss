@@ -7,8 +7,8 @@
   background-color: $white-color;
   padding: 15px;
   border-radius: 15px;
-  width: 49%;
-  max-width: 85%;
+  width: 100%;
+  max-width: 100%;
   margin: 10px auto;
   @include rel();
   overflow: hidden;
@@ -16,6 +16,14 @@
   box-shadow: 0 4px 12px rgba($blue-shadow-light, 0.5);
   transition: max-height 0.7s, box-shadow 0.5s, transform 0.5s;
   max-height: 2000px;
+
+  // Optimize rendering performance
+  will-change: transform, max-height;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  // Optimize text rendering
+  text-rendering: optimizeSpeed;
 
   @media (max-width: 1285px) {
     width: 100%;
@@ -106,6 +114,14 @@
 .courses {
   min-height: 100vh;
   padding: 50px 0;
+
+  // Optimize scrolling
+  overflow-anchor: auto;
+  scroll-behavior: smooth;
+
+  // Apply hardware acceleration
+  transform: translateZ(0);
+
   h1 {
     text-align: center;
     color: $darkBlue-color;
@@ -129,6 +145,87 @@
     @include flexbox($wrap: wrap);
     gap: 25px;
     row-gap: 20px;
+  }
+
+  // Optimized list styles
+  .optimized-list {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    // Apply hardware acceleration
+    transform: translateZ(0);
+    will-change: transform;
+
+    // Optimize scrolling
+    overflow-anchor: auto;
+
+    // Add custom scrollbar styling
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($lighter-gray, 0.5);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($primary-color, 0.5);
+      border-radius: 10px;
+
+      &:hover {
+        background: rgba($primary-color, 0.7);
+      }
+    }
+  }
+
+  .optimized-item {
+    padding: 5px;
+    width: 49%;
+
+    @media (max-width: 1285px) {
+      width: 100%;
+    }
+
+    // Optimize rendering
+    contain: content;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+
+    // Optimize text rendering
+    text-rendering: optimizeSpeed;
+  }
+
+  .card-loader {
+    height: 80px;
+    background: linear-gradient(
+      90deg,
+      rgba($lighter-gray, 0.2) 0%,
+      rgba($lighter-gray, 0.3) 50%,
+      rgba($lighter-gray, 0.2) 100%
+    );
+    background-size: 200% 100%;
+    animation: loading-pulse 1.5s ease-in-out infinite;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $darkBlue-color;
+    font-weight: 500;
+  }
+
+  @keyframes loading-pulse {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
   }
   #languages {
     margin-bottom: 30px;
@@ -161,11 +258,26 @@
   }
   /* Parent/intro styles moved to coursesHero.scss */
 
+  .course-section {
+    // Optimize rendering
+    contain: content;
+    will-change: transform;
+    transform: translateZ(0);
+
+    // Add intersection observer optimization class
+    &.visible {
+      will-change: transform;
+    }
+  }
+
   #generalEnglish-section {
     .content {
       @include flexbox($wrap: wrap);
       gap: 20px;
       @include rel();
+
+      // Optimize rendering
+      contain: layout;
       .course-details {
         @extend .course-details;
 
