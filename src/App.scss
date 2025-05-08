@@ -62,8 +62,6 @@ p {
   font-size: clamp(1rem, 4vw, 1.0625rem);
 }
 
-// Paragraphs in RTL already covered by the global selector
-
 // style images
 img {
   max-width: 100%;
@@ -82,22 +80,15 @@ img {
 .container {
   max-width: 1480px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 
   @media (max-width: 767px) {
     padding: 0 0.7rem;
   }
 
-  /* Form elements in RTL already covered by the global selector */
-
-  /* Additional responsive styles for different screen sizes */
   @media (max-width: 480px) {
     padding: 0 0.7rem;
     font-size: 15px;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 0 1rem;
   }
 }
 
