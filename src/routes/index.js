@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import React from "react";
 import ProtectedRoute from "./ProtectedRoute";
+import UnityAndSolidarity from "../components/pages/unity&solidarity";
 
 const Teachers = React.lazy(() => import("../components/pages/Teachers"));
 const Students = React.lazy(() => import("../components/pages/Students"));
@@ -17,11 +18,12 @@ const Home = React.lazy(() => import("../components/HomePage"));
 const LazyAbout = React.lazy(() => import("../components/AboutPage"));
 const TeacherProfile = React.lazy(() => import("../components/pages/Teachers/TeacherProfile"));
 const CreateBlog = React.lazy(() => import("../components/pages/Blogs/CreateBlog"));
-const Register = React.lazy(() => import("../components/AuthPages/Register"));
-const Login = React.lazy(() => import("../components/AuthPages/Login"));
-const ForgotPassword = React.lazy(() => import("../components/AuthPages/ForgotPassword"));
-const ResetPassword = React.lazy(() => import("../components/AuthPages/ResetPassword"));
-const UserSettings = React.lazy(() => import("../components/AuthPages/UserSettings"));
+// Correctly import auth pages using React.lazy
+const Register = React.lazy(() => import("../components/AuthPages/pages/Register"));
+const Login = React.lazy(() => import("../components/AuthPages/pages/Login"));
+const ForgotPassword = React.lazy(() => import("../components/AuthPages/pages/ForgotPassword"));
+const ResetPassword = React.lazy(() => import("../components/AuthPages/pages/ResetPassword"));
+const UserSettings = React.lazy(() => import("../components/AuthPages/pages/UserSettings"));
 const Dashboard = React.lazy(() => import("../components/Dashboard"));
 const PagesLayout = React.lazy(() => import("../components/pages/PagesLayout"));
 const Courses = React.lazy(() => import("../components/CoursesPage"));
@@ -91,6 +93,10 @@ const router = createBrowserRouter([
           {
             path: "students-of-all-ages",
             element: <AllStudetns />
+          },
+          {
+            path: "unity-solidarity",
+            element: <UnityAndSolidarity />
           }
         ]
       },
