@@ -1,0 +1,54 @@
+@import "../../../globalStyles/mixins/scroll";
+@import "../../../globalStyles/colors";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+  background-color: rgba($pale-gray, 0.5);
+  border-radius: 0.5rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0 -0.5rem;
+    padding: 0.5rem;
+  }
+
+  .unity {
+    max-height: 250px;
+    overflow: hidden;
+  }
+}
+.card__body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 300px;
+  position: relative;
+
+  &:hover {
+    overflow: auto;
+    @include dynamic-scroll(
+      $width: 6px,
+      $track-color: rgba($blue-shadow-light, 0.1),
+      $thumb-color: rgba($green-color, 0.5)
+    );
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+// Custom header styles
+.solidarity-header {
+  background: linear-gradient(90deg, $green-color, $white-color);
+}

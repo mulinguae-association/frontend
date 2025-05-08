@@ -1,0 +1,83 @@
+@import "../../../globalStyles/colors";
+
+.educationProjectGoal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0.5rem;
+  background-color: rgba($ultra-lightgray, 0.3);
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba($white-color, 0.8);
+      box-shadow: 0 2px 8px rgba($darkgray-color, 0.1);
+    }
+  }
+}
+.card {
+  margin-top: 2rem;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &_no_padding {
+    padding: 0;
+  }
+}
+
+.card_header {
+  background: linear-gradient(135deg, $success-dark, $green-color);
+  color: $white-color;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, rgba($white-color, 0.1));
+    pointer-events: none;
+  }
+}
+
+// Quote styling for blockquote sections
+.quote {
+  padding: 1.25rem;
+  font-style: italic;
+  background-color: rgba($pale-gray, 0.5);
+  border: 1px solid $lighter-gray;
+  border-left: 4px solid $success-dark;
+  color: $darkGrayishBlue;
+  border-radius: 0 6px 6px 0;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba($blue-shadow-light, 0.3);
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 3rem;
+    color: rgba($success-dark, 0.2);
+    font-family: serif;
+    line-height: 1;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}

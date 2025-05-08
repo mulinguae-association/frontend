@@ -1,0 +1,84 @@
+@import "../../../globalStyles/colors";
+
+.accordion {
+  .accordion_item {
+    margin-bottom: 1.25rem;
+    border-radius: 6px;
+    background-color: rgba($white-color, 0.7);
+    box-shadow: 0 2px 6px rgba($darkgray-color, 0.05);
+    overflow: hidden;
+
+    .accordion_trigger {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      text-align: left;
+      background: linear-gradient(
+        to right,
+        rgba($success-dark, 0.05),
+        transparent
+      );
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      border-left: 3px solid $success-dark;
+      color: $medium-darkblue;
+
+      span {
+        flex: 1;
+      }
+
+      svg {
+        transition: transform 0.3s ease;
+        color: $success-dark;
+      }
+
+      &.active {
+        background: linear-gradient(
+          to right,
+          rgba($success-dark, 0.1),
+          transparent
+        );
+        color: $darkBlue-color;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:hover {
+        background-color: rgba($pale-gray, 0.5);
+      }
+
+      &:focus-visible {
+        outline: 2px solid $primary-color;
+        outline-offset: 2px;
+      }
+    }
+
+    .accordion_content {
+      margin: 0;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0 1.5rem;
+      background-color: rgba($white-color, 0.9);
+      transition: all 0.6s ease;
+      color: $darkgray-color;
+      line-height: 1.6;
+
+      @media (max-width: 768px) {
+        padding: 0 1rem;
+      }
+
+      &.open {
+        max-height: 300px;
+        padding-top: 0.5rem;
+        padding-bottom: 1.25rem;
+        border-top: 1px dashed rgba($blue-shadow-light, 0.5);
+      }
+    }
+  }
+}

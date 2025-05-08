@@ -1,0 +1,69 @@
+{
+  "header": {
+    "title": "Equality, Unity and Solidarity"
+  },
+  "tabs": {
+    "overview": "Overview",
+    "principles": "Principles",
+    "education": "Education"
+  },
+  "overview": {
+    "title": "Our Guiding Principles",
+    "subtitle": "The foundation of our project",
+    "equality": {
+      "title": "Equality",
+      "description": "The highest values of equality between all human beings guide our project. Equality opposes discrimination and exclusion in any form"
+    }
+  },
+  "principles": {
+    "unity": {
+      "title": "Unity",
+      "subtitle": "The power of togetherness",
+      "description": [
+        "Unity is being together or united with someone or something. It is the opposite of being divided. Human beings have always used this concept to survive on this planet.",
+        "In a class society where a small group of people control the common resources, unity is a powerful tool for the majority to defend their interests."
+      ]
+    },
+    "solidarity": {
+      "title": "Solidarity",
+      "subtitle": "Standing together for change",
+      "description": [
+        "Solidarity or solidarism is the awareness of shared interests, goals, standards, and sympathies that creates a psychological sense of group or class unity. Solidarity is very important when workers and other discriminated groups in society have no voice.",
+        "Etymologically, solidarity comes from the Latin word solidus, a unit of account in ancient Rome. Solidarity describes the bonds between individuals that allow them to form a cohesive social unit. Émile Durkheim, a French sociologist, philosopher, and educator, argued that solidarity is the normal condition of society, and that society could not exist without it."
+      ]
+    }
+  },
+  "education": {
+    "project": {
+      "title": "Our Educational Project",
+      "subtitle": "Promoting equality through education",
+      "goals": {
+        "title": "Project Goals",
+        "description": "Our educational project is open to all organizations and individuals whose goal is to combat discrimination and promote equality as a fundamental human right and a fundamental principle of social justice."
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "It shares the fundamental assumptions of the philosophy of human rights: for example, that, as a human right, equality is a right and not a benefit, and must be legally enforceable, like any other human right."
+      }
+    },
+    "declaration": {
+      "title": "Universal Declaration of Human Rights",
+      "subtitle": "Article 26 - Right to Education",
+      "quote": "Everyone has the right to education. Education shall be free, at least in elementary and fundamental education. Primary education shall be compulsory. Technical and vocational education shall be universal and access to higher education shall be equal for all, on the basis of merit."
+    },
+    "equity": {
+      "title": "Educational Equity",
+      "subtitle": "Ensuring fair access to quality education",
+      "accordion": {
+        "item1": {
+          "title": "Why is educational equity important?",
+          "content": "Educational equity is crucial because it impacts a person's future employment opportunities and overall quality of life. It ensures that all individuals, regardless of their background, have access to quality education."
+        },
+        "item2": {
+          "title": "How do we achieve educational equity?",
+          "content": "In an egalitarian society, quality education would not be reserved for people with high incomes. Paying for college wouldn't mean a student would have to pay for years of high-interest loans. Educational equity is especially important because of its impact on a person's future employment opportunities."
+        }
+      }
+    }
+  }
+}
