@@ -1,12 +1,13 @@
 @import "../../globalStyles/colors";
 @import "../../globalStyles/mixins/mixins.scss";
+@import "../../globalStyles/variables";
 .not-found {
   @include flexbox(
     $alignItems: center,
     $justifyContent: center,
     $direction: column
   );
-  height: calc(100vh - 88px);
+  height: calc(100vh - $navbar-h);
   width: 100%;
   text-align: center;
   background: radial-gradient(ellipse at top, $primary-color, $darkBlue-color),
@@ -36,7 +37,7 @@
         background-color: #155d97;
       }
       &::after {
-        @include pseudo(block, absolute, "", 4px, 4px, 1.6rem -4rem 0 0);
+        @include pseudo(block, absolute, "", 4px, 4px, 1.6rem -0.1rem 0 0);
         border-radius: 50%;
         background-color: #000000;
       }
@@ -67,4 +68,8 @@
       letter-spacing: 0.7rem;
     }
   }
+}
+
+.not-found + .footer {
+  display: none;
 }
