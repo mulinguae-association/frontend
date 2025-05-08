@@ -2,7 +2,6 @@ import React from "react";
 import TocItems from "./TocItems";
 import MainContent from "./MainContent";
 import "./index.scss";
-import Footer from "../FooterPages";
 import ScrollToTop from "../../utils/ScrollToTop";
 const PrivacyPolicy = () => {
   ScrollToTop();
@@ -16,7 +15,6 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 };

@@ -9,12 +9,6 @@ const PrivacyCover = () => {
       <div className='policyPoints'>
         {t("Policy Coverage.policyPoints", { returnObjects: true }).map((ele, index) => <p key={index}>{ele}</p>)}
       </div>
-      <div className='policyPoints'>
-        {t("Policy Coverage.policyPoints", { returnObjects: true }).map((ele, index) => <p key={index}>{ele}</p>)}
-      </div>
-      <div className='policyPoints'>
-        {t("Policy Coverage.policyPoints", { returnObjects: true }).map((ele, index) => <p key={index}>{ele}</p>)}
-      </div>
     </section>
   )
 }
