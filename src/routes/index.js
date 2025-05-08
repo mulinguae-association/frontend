@@ -2,7 +2,6 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import React from "react";
 import ProtectedRoute from "./ProtectedRoute";
-import UnityAndSolidarity from "../components/pages/unity&solidarity";
 
 const Teachers = React.lazy(() => import("../components/pages/Teachers"));
 const Students = React.lazy(() => import("../components/pages/Students"));
@@ -29,6 +28,7 @@ const PagesLayout = React.lazy(() => import("../components/pages/PagesLayout"));
 const Courses = React.lazy(() => import("../components/CoursesPage"));
 const Contact = React.lazy(() => import("../components/ContactPage"));
 const PrivacyPolicy = React.lazy(() => import("../components/Privacy&terms/PrivacyPolicy"));
+const UnityAndSolidarity = React.lazy(() => import("../components/pages/unity&solidarity"));
 const NotFound = React.lazy(() => import("../components/NotFound"));
 
 const router = createBrowserRouter([
