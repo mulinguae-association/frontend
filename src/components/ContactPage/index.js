@@ -43,7 +43,10 @@ const Contact = () => {
   return (
     <>
       <main className='contact'>
-        <h1>{t("titles.mainTitle")}</h1>
+        <div className='hero-content'>
+          <h1 className='hero-subtitle'>{t("titles.mainTitle")}</h1>
+          <p className='hero-description'>{t("titles.subHeading") || "We'd love to hear from you. Send us a message and we'll respond as soon as possible."}</p>
+        </div>
         <ContactInfo />
         <div className='container'>
           <div className='contact_content'>

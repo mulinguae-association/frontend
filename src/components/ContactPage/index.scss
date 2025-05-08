@@ -9,6 +9,55 @@
   color: $medium-darkblue;
   z-index: 1;
 
+  .hero-content {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    .hero-subtitle {
+      font-weight: 700;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      color: $darkBlue-color;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, $primary-color, $orange-color);
+        border-radius: 3px;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: rgba($darkBlue-color, 0.8);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      margin-bottom: 2rem;
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+
   .contact_info {
     @include flexbox($justifyContent: space-between);
     min-height: 170px;
@@ -113,19 +162,27 @@
 
           input:not(input[type="radio"], input[type="checkbox"]),
           textarea {
-            border: none;
-            height: 40px;
+            border: 1px solid rgba($blue-shadow-light, 0.2);
+            height: 42px;
             width: 100%;
             max-width: 100%;
             max-height: 100px;
             border-radius: 10px;
-            padding: 0 10px;
-            background-color: #f2f5f7;
+            padding: 0 12px;
+            background-color: #f8fafc;
             resize: none;
+            font-family: "Inter", "Roboto", sans-serif;
+            transition: all 0.2s ease;
 
             &:focus {
               outline: none;
-              border-top: 2px solid $secondary-color;
+              border-color: $primary-color;
+              box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+              background-color: white;
+            }
+
+            &:hover {
+              border-color: rgba($primary-color, 0.5);
             }
           }
 
