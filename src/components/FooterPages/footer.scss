@@ -6,47 +6,57 @@
     background: linear-gradient(0deg, $primary-color -50%, $darkBlue-color 70%);
     padding: 0 0 3rem;
     z-index: 10;
+
     .footer_list {
-      @include flexbox($alignItems: center);
+      @include flexbox($alignItems: flex-start);
+
       .footer_links {
         @include flexbox($wrap: wrap);
-        column-gap: 10rem;
+        column-gap: 8rem;
+        row-gap: 2rem;
 
         @media (max-width: 767px) {
-          column-gap: 3.5rem;
+          column-gap: 3rem;
         }
-        @media (max-width: 280px) {
-          column-gap: 2.5rem;
-        }
+
         .col {
           .footer_head {
-            margin-bottom: 0.5rem;
             color: $secondary-color;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            font-weight: 600;
           }
+
           .list_item {
             margin: 0;
           }
+
           .item {
-            padding: 6px 0;
-            &:active {
-              scale: 0.99;
+            padding: 8px 0;
+            transition: transform 0.2s ease;
+
+            &:hover {
+              transform: translateX(5px);
             }
+
             .link_item {
               text-decoration: none;
-              font-size: 13.2px;
+              font-size: 14px;
               font-weight: 400;
               @include links(
                 $white-color,
-                orangered,
+                $secondary-color,
                 $primary-color,
                 $white-color
               );
-              letter-spacing: 0.7px;
+              letter-spacing: 0.5px;
+              transition: all 0.2s ease;
             }
           }
         }
       }
     }
+
     &::after {
       @include pseudo(block, absolute, "", 0, 0, 0 0px 0px 0);
       border-style: solid;
@@ -62,39 +72,43 @@
         $blue-shadow-light;
     }
   }
+
   .bottom_footer {
     min-height: 150px;
     .content {
       @include flexbox();
       .info {
         width: 48%;
+
         p:first-child {
+          margin-bottom: 0.8rem;
+
           span {
             a {
               text-decoration: none;
-              font-weight: 700;
-              font-size: 13.2px;
-              letter-spacing: 0.8px;
-              @include links(
-                $darkBlue-color,
-                orangered,
-                $secondary-color,
-                $darkBlue-color
-              );
+              font-weight: 500;
+              font-size: 14px;
+              letter-spacing: 0.5px;
+              @include links($darkBlue-color, $primary-color, $darkBlue-color);
               transition: 0.2s;
-              @media (max-width: 767px) {
-                font-size: 12.5px;
+
+              &:first-child {
+                margin-left: 0;
               }
             }
           }
         }
+
         p {
           font-size: 13px;
           font-weight: 400;
+          color: #555;
           @include flexbox();
-          gap: 0.5rem;
+          gap: 10px;
+          margin: 0.5rem 0;
         }
       }
+
       .social_links {
         @include flexbox($alignItems: flex-start, $justifyContent: flex-end);
         width: 50%;
