@@ -1,3 +1,7 @@
+@use "sass:list";
+@use "sass:meta";
+@use "sass:string";
+
 @mixin flexbox(
   $display: flex,
   $direction: row,
@@ -49,12 +53,12 @@
 @mixin pos($type, $args: 0 0 0 0) {
   position: $type;
   $offsets: top right bottom left;
-  @if length($args) == 2 or length($args) == 4 {
-    @if length($args) == 2 {
-      $args: join($args, $args);
+  @if list.length($args) == 2 or list.length($args) == 4 {
+    @if list.length($args) == 2 {
+      $args: list.join($args, $args);
     }
     @each $offset in $offsets {
-      $offsetVal: nth($args, index($offsets, $offset));
+      $offsetVal: list.nth($args, list.index($offsets, $offset));
       #{$offset}: validOffset($offsetVal);
     }
   } @else {
@@ -63,15 +67,15 @@
 }
 
 @function validOffset($value) {
-  @if type-of($value) == number {
+  @if meta.type-of($value) == number {
     @if ($value != 0) {
       @return $value;
     } @else {
       @return null;
     }
-  } @else if str-slice($value, 1, 1) == "f" {
-    @return str-slice($value, 2);
-  } @else if index(auto initial inherit, $value) {
+  } @else if string.slice($value, 1, 1) == "f" {
+    @return string.slice($value, 2);
+  } @else if list.index(auto initial inherit, $value) {
     @return $value;
   } @else {
     @warn "Invalid offset value.";
