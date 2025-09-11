@@ -1,5 +1,5 @@
-@import "../../../../globalStyles/colors";
-@import "../../../../globalStyles/mixins/mixins.scss";
+@use "../../../../globalStyles/colors" as *;
+@use "../../../../globalStyles/mixins/mixins.scss" as *;
 // UpdateComment.scss
 .update_parent {
   background-color: #f0f0f0 !important;
