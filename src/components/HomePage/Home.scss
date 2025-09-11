@@ -1,5 +1,6 @@
 @import "../../globalStyles/colors";
 @import "../../globalStyles/mixins/mixins.scss";
+@import "../../globalStyles/variables";
 .hero_section {
   background: linear-gradient(
     to bottom,
@@ -7,9 +8,8 @@
     rgba($medium-darkblue, 92%) 50%,
     rgba(67, 171, 67, 0.92) 100%
   );
-  // no-repeat center/cover;
   width: 100%;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - $navbar-h);
   @include flexbox($alignItems: center, $justifyContent: center);
   @include rel();
   .hero_image_wrapper {
@@ -37,15 +37,50 @@
       gap: 1.5rem;
       white-space: pre-line;
       .hero_title {
-        font-size: calc(0.5rem + 3vw);
+        font-size: calc(0.7rem + 3.2vw);
+        font-weight: 700;
         background: linear-gradient(to right, $primary-color, $secondary-color);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        background-clip: text;
         margin: 0;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        position: relative;
+        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          width: 60px;
+          height: 4px;
+          background: linear-gradient(
+            to right,
+            $primary-color,
+            $secondary-color
+          );
+          border-radius: 2px;
+          [dir="rtl"] & {
+            left: auto;
+            right: 0;
+            background: linear-gradient(
+              to left,
+              $primary-color,
+              $secondary-color
+            );
+          }
+        }
         @media (max-width: 1024px) {
           font-size: calc(0.8rem + 3vw);
           margin: 0 auto;
           text-align: center;
+
+          &::after {
+            display: none;
+          }
         }
         @media (max-width: 767px) {
           font-size: calc(1.1rem + 2vw);
@@ -84,7 +119,11 @@
       }
       .hero_description {
         color: $white-color;
-        line-height: 1.7;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        max-width: 700px;
+        margin-top: 1rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         @media (min-width: 1024px) {
           text-align: justify;
         }
@@ -102,17 +141,47 @@
           font-weight: bold;
           font-size: 17px;
           text-decoration: none;
+          position: relative;
+          padding-bottom: 2px;
+          transition: color 0.3s ease;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(
+              to right,
+              $primary-color,
+              $secondary-color
+            );
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            color: $secondary-color;
+
+            &::after {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
         }
       }
       .hero_btn {
         text-decoration: none;
         letter-spacing: 1px;
-        font-size: 15px;
+        font-size: 16px;
         color: $primaryDark-color;
         @include rel();
         z-index: 1;
-        transition: 0.5s ease;
+        transition: 0.4s ease;
         border-radius: 30px;
+        margin-top: 0.5rem;
         .btn_container {
           font-weight: bold;
           background-color: $white-color;
