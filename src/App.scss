@@ -1,6 +1,6 @@
-@import "./globalStyles/colors";
-@import "./globalStyles/mixins/mixins.scss";
-@import "./globalStyles/animations/index.scss";
+@use "./globalStyles/colors" as *;
+@use "./globalStyles/mixins/mixins.scss" as *;
+@use "./globalStyles/animations/index.scss" as *;
 
 // change direction of the elements
 [dir="rtl"] {
