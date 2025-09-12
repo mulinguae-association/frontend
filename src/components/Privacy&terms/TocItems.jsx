@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { scrollToSection } from "../../utils/ScrollToSections";
@@ -21,41 +21,6 @@ const TocItems = () => {
   const { t } = useTranslation("privacy&terms/tocItems");
   const tocItems = t("tocItems", { returnObjects: true });
   const [activeSection, setActiveSection] = useState("");
-
-  // Memoize the scroll handler with useCallback
-  const handleScroll = useCallback(
-    throttle(() => {
-      const scrollPosition = window.scrollY;
-
-      // Use IntersectionObserver API if available
-      if ("IntersectionObserver" in window) {
-        return; // The observer will handle this
-      }
-
-      // Fallback for browsers without IntersectionObserver
-      const sections = document.querySelectorAll("section");
-      let currentSection = "";
-
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 200;
-        const sectionHeight = section.clientHeight;
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        ) {
-          currentSection = section.id;
-        }
-      });
-
-      if (currentSection !== activeSection) {
-        setActiveSection(currentSection);
-        if (currentSection) {
-          window.history.replaceState(null, null, `#${currentSection}`);
-        }
-      }
-    }, 100),
-    [activeSection],
-  );
 
   useEffect(() => {
     // Use IntersectionObserver if available for better performance
@@ -98,7 +63,7 @@ const TocItems = () => {
               window.history.replaceState(
                 null,
                 null,
-                `#${highestVisibleSection}`,
+                `#${highestVisibleSection}`
               );
             });
           }
@@ -106,7 +71,7 @@ const TocItems = () => {
         {
           rootMargin: "-100px 0px -100px 0px",
           threshold: [0.1, 0.5], // Multiple thresholds for better accuracy
-        },
+        }
       );
 
       document.querySelectorAll("section").forEach((section) => {
@@ -120,14 +85,45 @@ const TocItems = () => {
       };
     } else {
       // Fallback to scroll event for older browsers
-      window.addEventListener("scroll", handleScroll);
-      handleScroll();
+      const throttled = throttle(() => {
+        const scrollPosition = window.scrollY;
+
+        // Use IntersectionObserver API if available
+        if ("IntersectionObserver" in window) {
+          return; // The observer will handle this
+        }
+
+        // Fallback for browsers without IntersectionObserver
+        const sections = document.querySelectorAll("section");
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 200;
+          const sectionHeight = section.clientHeight;
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            currentSection = section.id;
+          }
+        });
+
+        if (currentSection !== activeSection) {
+          setActiveSection(currentSection);
+          if (currentSection) {
+            window.history.replaceState(null, null, `#${currentSection}`);
+          }
+        }
+      }, 100);
+
+      window.addEventListener("scroll", throttled);
+      throttled();
 
       return () => {
-        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("scroll", throttled);
       };
     }
-  }, [handleScroll, activeSection]);
+  }, [activeSection]);
 
   return (
     <div className="toc_items">
