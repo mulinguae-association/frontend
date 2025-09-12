@@ -1,18 +1,33 @@
-import React from 'react'
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '../HeaderPages';
 import "./About.scss"
-import Footer from '../FooterPages';
 import PrintBtn from '../PrintButton';
 import { useRef } from 'react';
+import PreloadImages from '../../utils/PreloadImages';
+import { HelmetProvider } from 'react-helmet-async';
 
 const About = () => {
   const { t } = useTranslation("about", { ns: "about" });
   const { t: global } = useTranslation("global", { ns: "global" });
   const componentRef = useRef();
 
+  const criticalImages = [
+    'https://res.cloudinary.com/dfnwjr7vo/image/upload/w_256/v1707342711/education_mission_iupsiq.webp 256w',
+    'https://res.cloudinary.com/dfnwjr7vo/image/upload/w_480/v1707342711/education_mission_iupsiq.webp 480w',
+    'https://res.cloudinary.com/dfnwjr7vo/image/upload/w_768/v1707342711/education_mission_iupsiq.webp 768w',
+    'https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1024/v1707342711/education_mission_iupsiq.webp 1024w',
+    'https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711/education_mission_iupsiq.webp 1280w'
+  ]
+  const imagesizes = "(max-width:256px) 256px,(max-width:480px) 480px,(max-width:768px) 768px,(max-width:1024px) 1024px,(max-width:1280px) 1280px"
+
+  const imgSrc = "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711/education_mission_iupsiq.webp"
+
   return (
     <main className='about_us' >
+      <HelmetProvider>
+        <PreloadImages imgSrc={imgSrc} imageSources={criticalImages} imageSizes={imagesizes} priority />
+      </HelmetProvider>
       <Header pageName={t("currLink")} />
       <section className='about_us_info' ref={componentRef}>
         <div className='container'>
@@ -41,7 +56,7 @@ const About = () => {
                   media='(max-width:1280px)' srcSet='https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711/education_mission_iupsiq.webp 1280w'
                 />
                 <img fetchpriority="high" className={`about_img`}
-                  src="https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711//education_mission_iupsiq.webp"
+                  src="https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711/education_mission_iupsiq.webp"
                   width="1100px"
                   height="450px"
                   loading='eager'
@@ -90,7 +105,6 @@ const About = () => {
           </article>
         </div>
       </section>
-      <Footer />
     </main >
   )
 }
