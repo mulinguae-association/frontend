@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import "./Tooltip.scss";
 import { FaInfoCircle } from "react-icons/fa";
 import i18next from "i18next";
@@ -20,7 +20,7 @@ const Tooltip = ({
   const isRTL = ["ar", "ur"].includes(i18next.language);
 
   // Calculate the best position for the tooltip based on available space
-  const calculatePosition = () => {
+  const calculatePosition = useCallback(() => {
     if (!triggerRef.current || !tooltipRef.current || !isVisible) return;
 
     const triggerRect = triggerRef.current.getBoundingClientRect();
@@ -93,7 +93,7 @@ const Tooltip = ({
     }
 
     setTooltipPosition(bestPosition);
-  };
+  }, [isVisible, position, isRTL]);
 
   // Recalculate position when tooltip becomes visible or window is resized
   useEffect(() => {
@@ -113,7 +113,7 @@ const Tooltip = ({
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleResize);
     };
-  }, [isVisible]);
+  }, [isVisible, calculatePosition]);
 
   const handleMouseEnter = () => setIsVisible(true);
   const handleMouseLeave = () => setIsVisible(false);
