@@ -1,5 +1,6 @@
 import React from 'react'
 import { formatRelativeTime } from '../HelperComponents/RelativeDate'
+import sanitizeHtml from '../../utils/sanitizeHtml'
 
 const BlogsController = ({
   pendingComments,
@@ -19,7 +20,7 @@ const BlogsController = ({
               <h3 className='title'>{blog.title}</h3>
               <span className='subTitle'>{blog.subTitle}</span>
               <span className='date'>{formatRelativeTime(blog.createdAt)}</span>
-              <p dangerouslySetInnerHTML={{ __html: blog.content }} />
+              <p dangerouslySetInnerHTML={{ __html: sanitizeHtml(blog.content) }} />
               <div className='btns'>
                 <button className='accept' onClick={() => handleAccept(blog._id)}>Accept</button>
                 <button className='refuse' onClick={() => handleRefuse(blog._id)}>Refuse</button>

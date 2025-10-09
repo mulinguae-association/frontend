@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { updateTeacher } from '../../utils/apiUtility';
-import { notifyError, notifySuccess } from '../Notify';
+import { notifyError } from '../Notify';
 import InputField from '../HelperComponents/InputField';
 import Tooltip from '../HelperComponents/toolTip';
+import { useUpdateTeacherMutation } from '../../apis/mutations/teachers/updateTeacher';
 
-const EditTeacherForm = ({ teacher, onUpdate }) => {
+const EditTeacherForm = ({ teacher, onEdit }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -12,7 +12,7 @@ const EditTeacherForm = ({ teacher, onUpdate }) => {
     aboutTeacher: '',
     email: '',
     telephone: '',
-    image: null,
+    image: null
   });
 
   useEffect(() => {
@@ -24,15 +24,13 @@ const EditTeacherForm = ({ teacher, onUpdate }) => {
         aboutTeacher: teacher.aboutTeacher || '',
         email: teacher.email || '',
         telephone: teacher.telephone || '',
-        image: teacher.image || '',
+        image: teacher.image || ''
       });
     }
   }, [teacher]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    console.log('Event:', e); // Log the entire event object
-    console.log('Name:', name); // Log the name separately
     setFormData({ ...formData, [name]: value });
   };
 
@@ -43,28 +41,33 @@ const EditTeacherForm = ({ teacher, onUpdate }) => {
     if (file && file.size <= maxImageSize) {
       setFormData({ ...formData, image: file });
     } else {
-      alert('Image size exceeds the maximum allowed limit.');
+      alert('Image size exceeds the maximum allowed limit.')
     }
   };
 
+  const { mutate: updateTeacherMutation } = useUpdateTeacherMutation(onEdit);
+  const isFormDataChanged = () => {
+    if (formData.firstName !== teacher.firstName) return true;
+    if (formData.lastName !== teacher.lastName) return true;
+    if (formData.jobBrief !== teacher.jobBrief) return true;
+    if (formData.aboutTeacher !== teacher.aboutTeacher) return true;
+    if (formData.email !== teacher.email) return true;
+    if (formData.telephone !== teacher.telephone) return true;
+    if (formData.image && formData.image.name !== (teacher.image && teacher.image.name)) return true;
+    return false;
+  };
   const handleUpdate = async (e) => {
     e.preventDefault();
-
     const updatedTeacher = {
       ...teacher,
-      ...formData,
+      ...formData
     };
-
-    try {
-      const res = await updateTeacher(teacher._id, updatedTeacher);
-      res.success
-        ? notifySuccess('Successfully updated teacher')
-        : notifyError('Failed to update teacher');
-      onUpdate(updatedTeacher);
-    } catch (error) {
-      console.error('Error updating teacher:', error);
+    if (!isFormDataChanged()) {
+      notifyError("No changes were made.");
+      return;
     }
-  };
+    updateTeacherMutation({ teacherId: teacher._id, updatedTeacher });
+  }
 
   return (
     <form className="edit_form" onSubmit={handleUpdate}>
@@ -77,6 +80,7 @@ const EditTeacherForm = ({ teacher, onUpdate }) => {
         className="input_image"
         type="file"
         accept="image/*"
+        name='image'
         onChange={handleImageChange}
       />
       <div className="teacher_name block">
