@@ -6,6 +6,8 @@ import LanguageSwitcher from "../LanguageSwitcher";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import NavLinks from "./NavLinks";
+import IntroVideoModal from "../IntroVideoModal";
+import { getIntroVideo } from "../../config";
 const Sidebar = React.lazy(() => import("./Sidebar"));
 
 const Navbar = () => {
@@ -16,9 +18,15 @@ const Navbar = () => {
   const t = useMemo(() => i18n.getFixedT(lang, "home"), [lang, i18n]);
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showIntro, setShowIntro] = useState(false);
   const navRef = useRef();
   const contentRef = useRef();
   const logoRef = useRef();
+  let VIDEO_LINK = "";
+  // normalize language to two-letter code (handles en-US, fr-FR, etc.)
+  const shortLang = (lang || "").split("-")[0];
+  // Prefer the JSON config (editable) but fall back to env vars
+  VIDEO_LINK = getIntroVideo(shortLang) || "";
 
   const handleBurgerMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -33,6 +41,16 @@ const Navbar = () => {
   }, [menuOpen]);
 
   useEffect(() => {
+    // Show intro only on first visit
+    try {
+      const seen = localStorage.getItem("mulingua_seen_intro");
+      if (!seen) {
+        setShowIntro(true);
+        localStorage.setItem("mulingua_seen_intro", "1");
+      }
+    } catch (e) {
+      // ignore storage errors
+    }
     const handleWindowResize = () => {
       if (window.innerWidth <= 991) {
         contentRef.current.classList.add("rtl");
@@ -84,6 +102,12 @@ const Navbar = () => {
             >
               {t("joinBtn")}
             </Link>
+            <button
+              className="cta-outline watch-intro"
+              onClick={() => setShowIntro(true)}
+            >
+              {t("watchIntro") || "Watch Intro"}
+            </button>
             <LanguageSwitcher className="custom-dropdown" />
           </div>
           <div
@@ -98,6 +122,18 @@ const Navbar = () => {
           <React.Suspense>
             <Sidebar setMenuOpen={setMenuOpen} t={t} menuOpen={menuOpen} />
           </React.Suspense>
+          <IntroVideoModal
+            show={showIntro}
+            onClose={() => setShowIntro(false)}
+            videoUrl={VIDEO_LINK}
+            captionTracks={
+              {
+                // fr: "https://res.cloudinary.com/dfnwjr7vo/raw/upload/v1758699557/munlinguae_fr_xwfe16.vtt",
+                // es: "https://res.cloudinary.com/dfnwjr7vo/raw/upload/v1758699556/mulinguae_es_lm4yf1.vtt",
+              }
+            }
+            // captions={{ es: "es", fr: "fr" }}
+          />
         </div>
       </div>
     </nav>
