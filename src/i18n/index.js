@@ -34,7 +34,7 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    ns: ["global", "contact", "common"],
+    ns: ["global", "contact", "common", "home"],
     defaultNS: "global",
     fallbackNS: "global",
     detection: {
@@ -70,7 +70,7 @@ i18n
       },
     },
     react: {
-      useSuspense: true,
+      useSuspense: false,
     },
   });
 
