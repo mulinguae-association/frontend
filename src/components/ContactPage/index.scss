@@ -1,6 +1,6 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/sharedStyles";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_sharedStyles.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
+@use "../../globalStyles/colors" as *;
 
 .contact {
   text-align: center;

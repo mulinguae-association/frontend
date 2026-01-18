@@ -1,4 +1,4 @@
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/mixins/mixins.scss" as *;
 .notification_popup {
   @include fix(0px 0px 0px 0px);
   background-color: rgb(11 18 126 / 20%);

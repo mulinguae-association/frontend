@@ -1,6 +1,6 @@
 // EllipsisMenu.scss
-@import "../../../globalStyles/colors";
-@import "../../../globalStyles/mixins/mixins.scss";
+@use "../../../globalStyles/_colors.scss" as *;
+@use "../../../globalStyles/mixins/mixins.scss" as *;
 .menu-container {
   @include rel();
   display: inline-block;

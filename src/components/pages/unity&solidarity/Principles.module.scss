@@ -1,5 +1,5 @@
-@import "../../../globalStyles/mixins/scroll";
-@import "../../../globalStyles/colors";
+@use "../../../globalStyles/mixins/scroll" as *;
+@use "../../../globalStyles/_colors.scss" as *;
 
 .grid {
   display: grid;

@@ -1,5 +1,5 @@
-﻿@import "../../../globalStyles/colors";
-@import "../../../globalStyles/mixins/mixins.scss";
+﻿@use "../../../globalStyles/_colors.scss" as *;
+@use "../../../globalStyles/mixins/mixins.scss" as *;
 .FAQs {
   padding: 50px 0;
   overflow: hidden;
@@ -163,7 +163,9 @@
       &.three,
       &.four {
         background: $secondary-color;
-        box-shadow: 0 0 10px $secondary-color inset, 0 0 20px $secondary-color;
+        box-shadow:
+          0 0 10px $secondary-color inset,
+          0 0 20px $secondary-color;
         filter: blur(0px);
         animation: 4s linear infinite;
       }

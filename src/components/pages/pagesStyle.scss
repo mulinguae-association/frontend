@@ -1,5 +1,5 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/about";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/about" as *;
 .section {
   .page_title {
     font-size: 2.2rem;

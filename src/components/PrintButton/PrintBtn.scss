@@ -1,5 +1,5 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
 .print_container {
   width: 100%;
   @include flexbox(
@@ -21,7 +21,10 @@
     text-transform: capitalize;
     @include flexbox($alignItems: center, $justifyContent: space-between);
     cursor: pointer;
-    transition: box-shadow, color, 0.4s ease;
+    transition:
+      box-shadow,
+      color,
+      0.4s ease;
     &:hover {
       color: $white-color;
       box-shadow: 0 0 10px $medium-darkblue;

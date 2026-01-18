@@ -1,5 +1,5 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
 .privacy {
   // Apply hardware acceleration to the entire privacy page
   transform: translateZ(0);

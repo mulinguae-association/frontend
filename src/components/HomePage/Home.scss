@@ -1,6 +1,6 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
-@import "../../globalStyles/variables";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
+@use "../../globalStyles/variables" as *;
 .hero_section {
   background: linear-gradient(
     to bottom,

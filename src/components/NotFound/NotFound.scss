@@ -1,6 +1,6 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
-@import "../../globalStyles/variables";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
+@use "../../globalStyles/variables" as *;
 .not-found {
   @include flexbox(
     $alignItems: center,
@@ -10,7 +10,8 @@
   height: calc(100vh - $navbar-h);
   width: 100%;
   text-align: center;
-  background: radial-gradient(ellipse at top, $primary-color, $darkBlue-color),
+  background:
+    radial-gradient(ellipse at top, $primary-color, $darkBlue-color),
     radial-gradient(ellipse at bottom, $secondary-color, #000);
   z-index: 1;
   .content {
@@ -47,8 +48,11 @@
   .text-styled {
     font-size: 100px;
     margin: 0px;
-    text-shadow: 4px 4px 0 $primary-color, -4px -4px 0 $secondary-color,
-      -4px 4px 0 $primary-color, 4px -4px 0 #ffff38;
+    text-shadow:
+      4px 4px 0 $primary-color,
+      -4px -4px 0 $secondary-color,
+      -4px 4px 0 $primary-color,
+      4px -4px 0 #ffff38;
     letter-spacing: 1rem;
   }
 

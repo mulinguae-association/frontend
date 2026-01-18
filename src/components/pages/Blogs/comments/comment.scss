@@ -1,6 +1,6 @@
 /* Shared styles for .comment */
-@import "../../../../globalStyles/colors";
-@import "../../../../globalStyles/mixins/mixins.scss";
+@use "../../../../globalStyles/_colors.scss" as *;
+@use "../../../../globalStyles/mixins/mixins.scss" as *;
 .comment {
   background-color: rgba($darkBlue-color, 1);
   background: linear-gradient(

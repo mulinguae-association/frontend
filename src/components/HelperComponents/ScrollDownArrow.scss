@@ -1,5 +1,5 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
 .arrows {
   width: 60px;
   height: 72px;

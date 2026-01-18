@@ -1,6 +1,6 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/about";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/about" as *;
+@use "../../globalStyles/mixins/mixins" as *;
 .about_us_info {
   padding: 50px 0;
   text-transform: capitalize;

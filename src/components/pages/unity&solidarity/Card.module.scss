@@ -1,4 +1,4 @@
-@import "../../../globalStyles/colors";
+@use "../../../globalStyles/_colors.scss" as *;
 
 .card {
   background-color: $white-color;
@@ -6,7 +6,9 @@
   border: 1px solid rgba($blue-shadow-light, 0.7);
   margin-top: 0.5rem;
   border-radius: 0.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
