@@ -8,7 +8,8 @@ const Multilingualism = () => {
   const { t } = useTranslation("pages/multilingualism", {
     ns: "pages/multilingualism",
   });
-  const langFactsArr = t("about_langFacts", { returnObjects: true });
+  const langFactsRaw = t("about_langFacts", { returnObjects: true });
+  const langFactsArr = Array.isArray(langFactsRaw) ? langFactsRaw : [];
   const { t: global } = useTranslation("global", { ns: "global" });
   const componentRef = useRef();
 
