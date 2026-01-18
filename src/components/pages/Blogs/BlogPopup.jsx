@@ -1,10 +1,9 @@
 import React, { useRef, useCallback, useState } from "react";
 import "./BlogPopup.scss";
 import { useCommentEditState } from "../../HelperComponents/useCommentEditState";
-import { useAuth } from "../../../contexts/AuthContext";
+import { useAuth } from "../../../contexts/AuthContext.jsx";
 import ReplyForm from "./comments/ReplyForm";
 import Comment from "./comments/Comment";
-import CommentReply from "./comments/CommentReply";
 import sanitizeHtml from "../../../utils/sanitizeHtml";
 import { useTranslation } from "react-i18next";
 import SkeletonComment from "../../Skeletons/SkeletonComment";
@@ -38,7 +37,7 @@ const BlogPopup = ({
       });
       if (node) observer.current.observe(node);
     },
-    [hasNextPage, fetchNextPage]
+    [hasNextPage, fetchNextPage, isFetching]
   );
 
   return (

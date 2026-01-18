@@ -1,5 +1,5 @@
 function logError(message, error) {
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env && import.meta.env.DEV) {
     console.error(message, error);
   }
 }

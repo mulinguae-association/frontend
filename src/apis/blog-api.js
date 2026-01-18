@@ -1,5 +1,5 @@
-import axios from 'axios';
-import logError from '../utils/logError';
+import axios from "axios";
+import logError from "../utils/logError";
 
 export async function submitBlogPost(newpost) {
   try {
@@ -39,7 +39,7 @@ export async function fetchAcceptedPosts(limit) {
     throw new Error("Error fetching accepted blog posts");
   } catch (error) {
     logError("Error fetching accepted blog posts:", error);
-    throw error
+    throw error;
   }
 }
 
@@ -56,7 +56,10 @@ export async function acceptBlogPost(blogId) {
       return { status: 401, message };
     }
     logError("Error accepting blog post:", error.message);
-    return { status: 500, error: `Error accepting blog post: ${error.message}` };
+    return {
+      status: 500,
+      error: `Error accepting blog post: ${error.message}`,
+    };
   }
 }
 
@@ -70,7 +73,7 @@ export async function removeBlogPost(blogId) {
     return response.data;
   } catch (error) {
     logError("Error removing blog post:", error);
-    throw error
+    throw error;
   }
 }
 
@@ -94,11 +97,12 @@ export async function createComment(blogId, commentData) {
     if (response.status === 201) {
       return { status: 201, data: response.data };
     }
+    console.log(response);
     logError("Error creating comment:", response.status);
     return { status: response.status, error: "Error creating comment" };
   } catch (error) {
     logError("Error creating comment:", error);
-    throw error
+    throw error;
   }
 }
 
@@ -135,17 +139,14 @@ export async function acceptComment(commentId) {
 }
 
 export async function refuseComment(commentId, blogId) {
-  console.log('API call to refuse comment:', commentId, 'from blog:', blogId);
   try {
     const response = await axios.delete(`/api/comments/${commentId}/${blogId}`);
-    console.log('Refuse comment response:', response);
     if (response.status === 200) {
       return { status: response.status, data: response.data };
     }
     logError("Error refusing comment:", response.status);
     return { status: response.status, error: "Error refusing comment" };
   } catch (error) {
-    console.error('Error in refuseComment API call:', error);
     logError("Error refusing comment:", error.message);
     throw error;
   }
@@ -154,7 +155,10 @@ export async function refuseComment(commentId, blogId) {
 export async function handleReplySubmit(content, blogId, parentCommentId) {
   try {
     const requestBody = { content, blogId, parentCommentId };
-    const response = await axios.post(`/api/comments/reply/${parentCommentId}`, requestBody);
+    const response = await axios.post(
+      `/api/comments/reply/${parentCommentId}`,
+      requestBody
+    );
     if (response.status === 201) {
       return { status: 201, data: response.data };
     }
@@ -168,7 +172,10 @@ export async function handleReplySubmit(content, blogId, parentCommentId) {
 
 export async function updatedComment(commentId, requestedBody) {
   try {
-    const response = await axios.patch(`/api/comments/update/${commentId}`, requestedBody);
+    const response = await axios.patch(
+      `/api/comments/update/${commentId}`,
+      requestedBody
+    );
     if (response.status === 201) {
       return { status: 201, data: response.data };
     }
@@ -186,13 +193,18 @@ export async function updatedComment(commentId, requestedBody) {
 
 export async function interactWithComment(modelType, id, action) {
   try {
-    const response = await axios.post(`/api/comments/${modelType}/${id}/${action}`);
+    const response = await axios.post(
+      `/api/comments/${modelType}/${id}/${action}`
+    );
 
     if (response.status === 200) {
       return { status: 200, data: response.data };
     }
     logError(`Error updating comment (Status ${response.status})`);
-    return { status: response.status, error: `Error updating comment (Status ${response.status})` };
+    return {
+      status: response.status,
+      error: `Error updating comment (Status ${response.status})`,
+    };
   } catch (error) {
     logError(`Error updating comment (${action})`, error);
     throw error;
@@ -200,26 +212,28 @@ export async function interactWithComment(modelType, id, action) {
 }
 
 export const getAcceptedComments = async ({ blogId, pageParam }) => {
-  console.log(pageParam)
   try {
     const response = await axios.get(`/api/comments/${blogId}/accepted`, {
-      params: { pageParam, limit: 10 }
+      params: { pageParam, limit: 10 },
     });
     return response.data;
   } catch (error) {
-    logError('Error retrieving accepted comments:', error);
+    logError("Error retrieving accepted comments:", error);
     throw error;
   }
 };
-export const getRemainingAcceptedReplies = async ({ parentCommentIds, pageParam, limit = 3 }) => {
-  console.log(pageParam)
+export const getRemainingAcceptedReplies = async ({
+  parentCommentIds,
+  pageParam,
+  limit = 3,
+}) => {
   try {
     const response = await axios.get(`/api/comments/remaining-replies`, {
-      params: { parentCommentIds, pageParam, limit: limit }
+      params: { parentCommentIds, pageParam, limit: limit },
     });
     return response.data;
   } catch (error) {
-    logError('Error retrieving accepted comments:', error);
+    logError("Error retrieving accepted comments:", error);
     throw error;
   }
 };

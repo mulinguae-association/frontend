@@ -12,10 +12,7 @@ export const useRemoveCommentMutation = (blogId, parentComment) => {
   const { clearCache } = useCache();
 
   return useMutation(
-    ({ commentId }) => {
-      console.log('Removing comment:', commentId, 'from blog:', blogId);
-      return refuseComment(commentId, blogId);
-    },
+    ({ commentId }) => refuseComment(commentId, blogId),
     {
 
       onMutate: async ({ commentId }) => {
@@ -74,19 +71,15 @@ const updateReplies = (oldData, commentId) => {
 
 // Handle successful deletion of a comment
 const handleSuccess = (res, blogId, queryClient, clearCache) => {
-  console.log('Success handler called with response:', res);
   if (res && res.data && res.data.message) {
     notifySuccess(res.data.message);
     queryClient.invalidateQueries(["comments", blogId]);
     clearCache();
-  } else {
-    console.error('Invalid response in handleSuccess:', res);
   }
 };
 
 // Handle errors in removing a comment
 const handleErrorCase = (error, context, blogId, parentComment, queryClient) => {
-  console.log('Error handler called with error:', error);
   if (context?.previousComments) {
     queryClient.setQueryData(['comments', blogId], context.previousComments);
   }

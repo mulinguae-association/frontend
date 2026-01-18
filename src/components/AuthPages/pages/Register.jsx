@@ -1,0 +1,299 @@
+import React, { useState, useRef, useEffect } from "react";
+import "../styles/AuthStyle.scss";
+import { submitRegister } from "../../../apis/auth-api";
+import { notifyError, notifySuccess } from "../../Notify";
+import { useNavigate } from "react-router";
+import { FaGlobe, FaSpinner } from "react-icons/fa";
+import { useGlobal } from "../../../contexts/AppContext.jsx";
+import InputField from "../../HelperComponents/InputField";
+import i18next from "i18next";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import { isVAlidEmail, isStrongPassword } from "../../../utils/strongChecker";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useAuth } from "../../../contexts/AuthContext.jsx";
+import PasswordStrengthMeter from "../components/PasswordStrengthMeter";
+import PasswordRequirements from "../components/PasswordRequirements";
+import Tooltip from "../../UI/Tooltip/Tooltip";
+
+function Registration() {
+  const { t } = useTranslation("authPages/register");
+  const { t: global } = useTranslation("global");
+  const { userData } = useAuth();
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    terms: false,
+  });
+  const { isBtnLoading, setButtonLoading } = useGlobal();
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+    passwordMatch: "",
+  });
+  const [visible, setVisible] = useState(false);
+  const recaptchaRef = useRef(null);
+
+  const isArabicDir = ["ar", "ur"].includes(i18next.language);
+
+  useEffect(() => {
+    if (userData) {
+      navigate(`/${i18next.language}/pages/Blogs`);
+    }
+  }, [userData, navigate]);
+
+  const validateEmail = (email) => {
+    if (!isVAlidEmail(email)) {
+      setErrors((prev) => ({
+        ...prev,
+        email: global("Error_Invalid_Email_Format"),
+      }));
+      return false;
+    }
+    setErrors((prev) => ({ ...prev, email: "" }));
+    return true;
+  };
+
+  const validatePassword = (password) => {
+    // Check if password meets all requirements using the utility function
+    const isValid = password && isStrongPassword(password, null, true);
+
+    if (!isValid) {
+      // Get the specific error message for the failed requirement
+      const errMessage = isStrongPassword(password, global);
+      setErrors((prev) => ({ ...prev, password: errMessage }));
+      return false;
+    }
+
+    setErrors((prev) => ({ ...prev, password: "" }));
+    return true;
+  };
+
+  const validatePasswordMatch = (password, confirmPassword) => {
+    if (password && confirmPassword && password !== confirmPassword) {
+      setErrors((prev) => ({
+        ...prev,
+        passwordMatch: global("passwordMatchError"),
+      }));
+      return false;
+    }
+    setErrors((prev) => ({ ...prev, passwordMatch: "" }));
+    return true;
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const updatedFormData = {
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    };
+    setFormData(updatedFormData);
+
+    if (name === "email") validateEmail(value);
+    if (name === "password") {
+      validatePassword(value);
+      validatePasswordMatch(value, updatedFormData.confirmPassword);
+    }
+    if (name === "confirmPassword") {
+      validatePasswordMatch(updatedFormData.password, value);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.name) return notifyError(global("Error_Required_Name"));
+    if (!formData.email) return notifyError(global("Error_Required_Email"));
+    if (!validateEmail(formData.email)) return;
+    if (!formData.password)
+      return notifyError(global("Error_Required_Password"));
+    if (!formData.confirmPassword)
+      return notifyError(global("Error_Required_Confirm_Password"));
+    if (!formData.terms) return notifyError(global("Error_Required_Terms"));
+    if (!validatePasswordMatch(formData.password, formData.confirmPassword))
+      return;
+    if (!validatePassword(formData.password)) return;
+
+    try {
+      setButtonLoading("registerBtn", true);
+      recaptchaRef.current.reset();
+      const token = await recaptchaRef.current.executeAsync();
+
+      if (token) {
+        const res = await submitRegister({ ...formData, token });
+        if (res.error) {
+          notifyError(res.error);
+          return;
+        }
+        setFormData({
+          name: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+          terms: false,
+        });
+        notifySuccess(`${res.message} ${formData.name}`);
+        navigate(`/${i18next.language}/login`);
+      } else {
+        notifyError(global("Error_Recaptcha"));
+      }
+    } catch (error) {
+      notifyError(error.message);
+    } finally {
+      setButtonLoading("registerBtn", false);
+    }
+  };
+
+  const isBtnDisabled =
+    !formData.name ||
+    !formData.email ||
+    !formData.password ||
+    !formData.confirmPassword ||
+    !formData.terms ||
+    errors.email ||
+    errors.password ||
+    errors.passwordMatch ||
+    isBtnLoading["registerBtn"];
+
+  return (
+    <main className="auth_form">
+      <div className="container">
+        <div className="content">
+          <h1>{t("registerTitle")}</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="group">
+              <InputField
+                label={t("nameLabel")}
+                id="name"
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder={t("namePlaceholder")}
+              />
+            </div>
+
+            <div className="group">
+              <InputField
+                label={t("emailLabel")}
+                id="email"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder={t("emailPlaceholder")}
+              />
+              {errors.email && <p className="error-msg">{errors.email}</p>}
+            </div>
+
+            <div className="group">
+              <InputField
+                label={t("passwordLabel")}
+                type={visible ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                placeholder={t("passwordPlaceholder")}
+              />
+              <div className="password-validation-container">
+                <PasswordStrengthMeter password={formData.password} />
+                <div className="password-info-tooltip">
+                  <Tooltip>
+                    <PasswordRequirements password={formData.password} />
+                  </Tooltip>
+                </div>
+              </div>
+            </div>
+
+            <div className="group password">
+              <InputField
+                label={t("confirmPasswordLabel")}
+                type={visible ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleInputChange}
+                placeholder={t("confirmPasswordPlaceholder")}
+              />
+              <div
+                style={
+                  isArabicDir
+                    ? { left: "15px", right: "unset" }
+                    : { right: "15px", left: "unset" }
+                }
+                id="password_eye"
+                onClick={() => setVisible((prev) => !prev)}
+              >
+                {visible ? <IoEyeOutline /> : <IoEyeOffOutline />}
+              </div>
+              {errors.passwordMatch && (
+                <p className="error-msg">{errors.passwordMatch}</p>
+              )}
+              {errors.password && (
+                <p className="error-msg">{errors.password}</p>
+              )}
+            </div>
+
+            <div className="group termsAgreement">
+              <input
+                type="checkbox"
+                id="termsAgreement"
+                name="terms"
+                checked={formData.terms}
+                onChange={handleInputChange}
+              />
+              <label htmlFor="termsAgreement">
+                {t("Label_Agree_To")}
+                <Link to={`/${i18next.language}/`}>{t("Text_The_Terms")}</Link>
+                {t("Text_and")}
+                <Link to={`/${i18next.language}/privacy-policy`}>
+                  {t("Text_Privacy_Policy")}
+                </Link>
+              </label>
+            </div>
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_PUBLIC_RECAPTCHA_SITE_KEY}
+              size="invisible"
+              ref={recaptchaRef}
+            />
+            <button
+              className={`btn ${isBtnDisabled ? "disabled" : ""}`}
+              disabled={isBtnDisabled}
+              type="submit"
+            >
+              {isBtnLoading["registerBtn"] ? (
+                <>
+                  <FaSpinner className="spin-loader" />
+                  <span>{t("loadingText")}</span>
+                </>
+              ) : (
+                t("registerButton")
+              )}
+            </button>
+
+            <div className="login-link">
+              <span>
+                {t("haveAccountText")}{" "}
+                <Link to={`/${i18next.language}/login`}>
+                  {t("loginLinkText")}
+                </Link>
+              </span>
+            </div>
+          </form>
+          <div className="earth_icon">
+            <FaGlobe />
+          </div>
+          <div className="shape three"></div>
+          <div className="shape four"></div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+export default Registration;

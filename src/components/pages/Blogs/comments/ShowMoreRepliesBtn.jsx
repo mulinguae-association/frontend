@@ -27,8 +27,19 @@ const ShowMoreRepliesBtn = ({
             ? allPages.length + 1
             : undefined; // Proceed to fetch the next page
         },
-      },
+      }
     );
+
+  // Compute how many replies are already shown from the paginated data
+  const shownReplies =
+    data?.pages?.flatMap((p) => p.remainingReplies).length || 0;
+  // Find the parent comment object to read its repliesCount
+  const parentComment = comments?.find((c) => c._id === commentId);
+
+  const apiTotal = data?.pages?.[0]?.totalAcceptedReplies;
+  const repliesCount =
+    typeof apiTotal === "number" ? apiTotal : parentComment?.repliesCount || 0;
+  const remaining = Math.max(0, repliesCount - shownReplies);
 
   return (
     <div>
@@ -44,28 +55,33 @@ const ShowMoreRepliesBtn = ({
                 editCommentId={editCommentId}
                 handleEdit={handleEdit}
               />
-            ) : null,
+            ) : null
           )}
         </Fragment>
       ))}
+      {remaining > 0 && (
+        <div className="fetch_more_replies">
+          {hasNextPage ? (
+            isFetchingNextPage ? (
+              <BiLoaderCircle color="#fff" className="spin-loader" />
+            ) : (
+              <>
+                <button
+                  className="fetch_more_btn"
+                  onClick={() => !isFetching && fetchNextPage()}
+                  disabled={isFetchingNextPage || !hasNextPage}
+                >
+                  Show more replies
+                </button>
 
-      <div className="fetch_more_replies">
-        {hasNextPage ? (
-          isFetchingNextPage ? (
-            <BiLoaderCircle color="#fff" className="spin-loader" />
+                <p className="reply-counter">{`${remaining} from ${repliesCount}`}</p>
+              </>
+            )
           ) : (
-            <button
-              className="fetch_more_btn"
-              onClick={() => !isFetching && fetchNextPage()}
-              disabled={isFetchingNextPage || !hasNextPage}
-            >
-              Show more replies
-            </button>
-          )
-        ) : (
-          <span className="replies_loaded">All replies have loaded</span>
-        )}
-      </div>
+            <span className="replies_loaded">All replies have loaded</span>
+          )}
+        </div>
+      )}
     </div>
   );
 };
