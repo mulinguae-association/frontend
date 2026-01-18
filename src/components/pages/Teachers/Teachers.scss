@@ -1,7 +1,7 @@
 // Import global styles
-@import "../../../globalStyles/colors";
-@import "../../../globalStyles/mixins/mixins.scss";
-@import "../../Dashboard/Dashboard.scss";
+@use "../../../globalStyles/_colors.scss" as *;
+@use "../../../globalStyles/mixins/mixins.scss" as *;
+@use "../../Dashboard/Dashboard.scss" as *;
 
 .teachers_head {
   color: $darkBlue-color;
@@ -166,7 +166,7 @@
         font-size: 20px;
         font-weight: bold;
         border-color: green;
-        @include abs(0);
+        @include abs(0 0 0 0);
         @include flexbox($alignItems: center, $justifyContent: center);
         cursor: pointer;
         border: 1px solid;

@@ -1,4 +1,4 @@
-@import "../../../../globalStyles/mixins/mixins.scss";
+@use "../../../../globalStyles/mixins/mixins.scss" as *;
 .nestedNavLinks {
   @include abs(236% 0 0 50%); // position: absolute;
   z-index: 99;

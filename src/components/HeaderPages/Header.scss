@@ -1,5 +1,5 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
 .header_pages {
   width: 100%;
   background: radial-gradient(

@@ -1,5 +1,5 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
 .teacher_form {
   @include flexbox($direction: column);
   gap: 25px;
@@ -62,7 +62,7 @@ input[type="file"] {
 // --------------dashboard page---------------
 .dashboard {
   min-height: calc(100vh - 90px);
-  background: url("../../../public/images/circle-blues.webp") center;
+  background: url("/images/circle-blues.webp") center;
   @include rel();
   z-index: 2;
   &:after {

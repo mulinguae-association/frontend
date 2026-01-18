@@ -1,4 +1,4 @@
-@import "../../../globalStyles/colors";
+@use "../../../globalStyles/_colors.scss" as *;
 
 .studentsAllAges {
   max-width: 1000px;
@@ -225,7 +225,9 @@
     padding: 8px 15px;
     font-weight: 600;
     box-shadow: 0 2px 5px rgba($darkgray-color, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
     display: flex;
     align-items: center;
 

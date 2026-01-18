@@ -1,6 +1,7 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
-@import "./coursesHero.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
+@use "./coursesHero.scss" as *;
+@use "sass:color";
 
 // common style
 .course-details {
@@ -14,7 +15,10 @@
   overflow: hidden;
   z-index: 1;
   box-shadow: 0 4px 12px rgba($blue-shadow-light, 0.5);
-  transition: max-height 0.7s, box-shadow 0.5s, transform 0.5s;
+  transition:
+    max-height 0.7s,
+    box-shadow 0.5s,
+    transform 0.5s;
   max-height: 2000px;
 
   // Optimize rendering performance
@@ -342,12 +346,14 @@
               margin-top: 3px;
               flex-shrink: 0;
               color: $primary-color;
-              transition: transform 0.2s ease, color 0.2s ease;
+              transition:
+                transform 0.2s ease,
+                color 0.2s ease;
             }
 
             &:hover svg {
               transform: scale(1.1);
-              color: darken($primary-color, 10%);
+              color: color.adjust($primary-color, $lightness: 10%);
             }
           }
         }
@@ -391,14 +397,17 @@
           opacity: 0.7;
         }
         &:hover {
-          box-shadow: 0 8px 20px rgba($primary-color, 0.3),
+          box-shadow:
+            0 8px 20px rgba($primary-color, 0.3),
             0 4px 8px rgba($primaryDark-color, 0.2);
           transform: translateY(-3px);
           z-index: 99;
         }
         &.collapse {
           max-height: 80px;
-          transition: max-height 0.5s ease, transform 0.3s ease,
+          transition:
+            max-height 0.5s ease,
+            transform 0.3s ease,
             box-shadow 0.3s ease;
           overflow: hidden;
           cursor: pointer;
@@ -406,7 +415,8 @@
 
           &:hover {
             background-color: rgba($primary-color, 0.05);
-            box-shadow: 0 5px 15px rgba($primary-color, 0.2),
+            box-shadow:
+              0 5px 15px rgba($primary-color, 0.2),
               0 3px 6px rgba($primaryDark-color, 0.15);
           }
 
@@ -542,7 +552,9 @@
             font-size: 14px;
             border-radius: 50%;
             box-shadow: 0 2px 4px rgba(#9c27b0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition:
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
             @include flexbox($alignItems: center, $justifyContent: center);
           }
 
@@ -558,13 +570,17 @@
         }
       }
       &:hover {
-        box-shadow: 0 8px 20px rgba(#9c27b0, 0.3), 0 4px 8px rgba(#673ab7, 0.2);
+        box-shadow:
+          0 8px 20px rgba(#9c27b0, 0.3),
+          0 4px 8px rgba(#673ab7, 0.2);
         transform: translateY(-3px);
         z-index: 99;
       }
       &.collapse {
         max-height: 80px;
-        transition: max-height 0.5s ease, transform 0.3s ease,
+        transition:
+          max-height 0.5s ease,
+          transform 0.3s ease,
           box-shadow 0.3s ease;
         overflow: hidden;
         cursor: pointer;
@@ -572,7 +588,8 @@
 
         &:hover {
           background-color: rgba(#9c27b0, 0.05);
-          box-shadow: 0 5px 15px rgba(#9c27b0, 0.2),
+          box-shadow:
+            0 5px 15px rgba(#9c27b0, 0.2),
             0 3px 6px rgba(#673ab7, 0.15);
         }
 

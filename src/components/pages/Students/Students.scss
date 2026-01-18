@@ -1,4 +1,5 @@
-@import "../../../globalStyles/mixins/about";
+@use "../../../globalStyles/mixins/about" as *;
+@use "../../../globalStyles/colors.scss" as *;
 .students {
   .group {
     @include about();

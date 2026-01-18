@@ -1,5 +1,6 @@
-@import "../../globalStyles/colors";
-@import "../../globalStyles/mixins/mixins.scss";
+@use "../../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/mixins/mixins.scss" as *;
+@use "sass:color";
 
 .courses-hero {
   margin-bottom: 3rem;
@@ -46,7 +47,9 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba($darkBlue-color, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -129,7 +132,7 @@
               color: $orange-dark;
 
               &:hover {
-                color: darken($orange-dark, 10%);
+                color: color.adjust($orange-dark, $lightness: -10%);
               }
             }
           }
@@ -150,7 +153,9 @@
             border-radius: 20px;
             font-size: 0.9rem;
             color: $darkBlue-color;
-            transition: background-color 0.2s ease, color 0.2s ease;
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease;
             cursor: pointer;
             text-decoration: none;
 

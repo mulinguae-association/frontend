@@ -1,4 +1,4 @@
-@import "../../../globalStyles/colors";
+@use "../../../globalStyles/_colors.scss" as *;
 
 .main_content {
   max-width: 1100px;

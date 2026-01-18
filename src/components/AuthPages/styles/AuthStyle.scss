@@ -1,7 +1,7 @@
 /* AuthStyle.scss */
-@import "../../../globalStyles/colors";
-@import "../../../globalStyles/sharedStyles";
-@import "../../../globalStyles/mixins/mixins.scss";
+@use "../../../globalStyles/_colors.scss" as *;
+@use "../../../globalStyles/sharedStyles" as *;
+@use "../../../globalStyles/mixins/mixins.scss" as *;
 
 .auth_form {
   margin: 100px auto;

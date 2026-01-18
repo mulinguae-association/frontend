@@ -1,4 +1,5 @@
-@import "../colors";
+@use "../colors" as *;
+@use "sass:meta";
 
 @mixin about(
   $background: null,
@@ -12,12 +13,14 @@
   letter-spacing: 0.9px;
   text-transform: none;
   margin-top: 0;
-  background: if($background, $background, rgba(#fff, 0.9));
+  background: if(sass($background): $background; else: rgba(#fff, 0.9));
   border-radius: 20px;
   padding: $padding;
   font-family: "Lato", sans-serif;
-  box-shadow: if($box-shadow, $box-shadow, 0 0 20px $blue-shadow-light);
-  width: if($width, $width, 85%);
+  box-shadow: if(
+    sass($box-shadow): $box-shadow; else: 0 0 20px $blue-shadow-light
+  );
+  width: if(sass($width): $width; else: 85%);
   margin: 0 auto 10px auto;
 
   @media (max-width: 991px) {
@@ -28,6 +31,6 @@
     border-bottom: 2px solid #0b127e;
     box-shadow: 0 10px 10px rgb(11 18 126 / 18%);
     border-radius: 0;
-    padding: if($padding, calc($padding - 15px), 0px);
+    padding: if(sass($padding): calc($padding - 15px) ; else: 0px;);
   }
 }

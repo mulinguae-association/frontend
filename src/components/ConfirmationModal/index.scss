@@ -1,4 +1,4 @@
-@import "../../globalStyles/colors";
+@use "../../globalStyles/_colors.scss" as *;
 .modal_overlay {
   position: fixed;
   top: 0;
