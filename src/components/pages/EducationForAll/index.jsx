@@ -81,13 +81,15 @@ const EducationForAll = () => {
               return <p className="article-paragraph">{safeArr[0]}</p>;
             })()}
             <blockquote className="article-quote">
-              {t("article26.paragraphs", { returnObjects: true })
-                .slice(1)
-                .map((para, index) => (
+              {(() => {
+                const arr = t("article26.paragraphs", { returnObjects: true });
+                const safeArr = Array.isArray(arr) ? arr : [];
+                return safeArr.slice(1).map((para, index) => (
                   <p key={index} className="article-paragraph">
                     {para}
                   </p>
-                ))}
+                ));
+              })()}
             </blockquote>
           </div>
         </section>
@@ -102,13 +104,17 @@ const EducationForAll = () => {
               {t("worldConference.description")}
             </p>
             <ul className="conference-list">
-              {t("worldConference.paragraphs", { returnObjects: true }).map(
-                (para, index) => (
+              {(() => {
+                const arr = t("worldConference.paragraphs", {
+                  returnObjects: true,
+                });
+                const safeArr = Array.isArray(arr) ? arr : [];
+                return safeArr.map((para, index) => (
                   <li key={index} className="conference-item">
                     {para}
                   </li>
-                ),
-              )}
+                ));
+              })()}
             </ul>
           </div>
         </section>
