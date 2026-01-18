@@ -34,7 +34,15 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    ns: ["global", "contact", "common"],
+    ns: [
+      "global",
+      "contact",
+      "common",
+      "home",
+      "courses/generalEnglish",
+      "courses/specificPurposes",
+      "pages/hundredPhrases",
+    ],
     defaultNS: "global",
     fallbackNS: "global",
     detection: {

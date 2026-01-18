@@ -157,9 +157,11 @@
     .fetch_more_replies {
       margin-top: 15px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
+      font-size: small;
       width: 100%;
+      color: $blue-shadow-light;
       .fetch_more_btn {
         border: none;
         background: none;
@@ -167,6 +169,9 @@
         color: $blue-shadow-light;
         cursor: pointer;
         font-size: 17px;
+      }
+      .reply-counter {
+        font-size: 16px;
       }
       .replies_loaded {
         color: $blue-shadow-light;

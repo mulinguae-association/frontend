@@ -1,12 +1,11 @@
-import { useMutation, useQueryClient } from 'react-query';
-import { createComment } from '../../blog-api';
-import { useBlogPosts } from '../../../contexts/BlogsContext';
-import { useGlobal } from '../../../contexts/AppContext';
-import { useAuth } from '../../../contexts/AuthContext';
-import { useCache } from '../../../contexts/BlogsCache';
-import logError from '../../../utils/logError';
-import handleError from '../../../utils/handleError';
-import { notifyError, notifySuccess } from '../../../components/Notify';
+import { useMutation, useQueryClient } from "react-query";
+import { createComment } from "../../blog-api";
+import { useGlobal } from "../../../contexts/AppContext.jsx";
+import { useAuth } from "../../../contexts/AuthContext.jsx";
+import { useCache } from "../../../contexts/BlogsCache";
+import logError from "../../../utils/logError";
+import handleError from "../../../utils/handleError";
+import { notifyError } from "../../../components/Notify";
 
 export const useCreateCommentMutation = () => {
   const queryClient = useQueryClient();
@@ -15,8 +14,8 @@ export const useCreateCommentMutation = () => {
   const { clearCache } = useCache();
 
   // Assuming userData contains user roles or privileges
-  const isAdmin = userData?.role === 'admin'; // Or any other logic to determine admin role
-  const commentStatus = isAdmin ? 'accepted' : 'pending';
+  const isAdmin = userData?.role === "admin"; // Or any other logic to determine admin role
+  const commentStatus = isAdmin ? "accepted" : "pending";
 
   const updateCommentsData = (blogId, commentData) => {
     queryClient.setQueryData(["comments", blogId], (prevComments) => ({
@@ -33,6 +32,11 @@ export const useCreateCommentMutation = () => {
     ({ blogId, commentData }) => createComment(blogId, commentData),
     {
       onMutate: async ({ blogId, commentData }) => {
+        console.log(
+          "🚀 ~ useCreateCommentMutation ~ commentData:",
+          commentData
+        );
+        console.log("🚀 ~ useCreateCommentMutation ~ commentData:", blogId);
         await queryClient.cancelQueries(["comments", blogId]);
         const previousComments = queryClient.getQueryData(["comments", blogId]);
         setButtonLoading(`postComment_${blogId}`, true);
@@ -52,7 +56,9 @@ export const useCreateCommentMutation = () => {
 
         return { previousComments, tempCommentId: tempComment._id };
       },
-      onSuccess: ({ data }, { blogId, commentData }, context) => {
+      onSuccess: ({ status, data }, { blogId, commentData }, context) => {
+        console.log(status, data);
+
         const { tempCommentId } = context;
         if (isAdmin) {
           queryClient.setQueryData(["comments", blogId], (prevComments) => ({
@@ -65,11 +71,16 @@ export const useCreateCommentMutation = () => {
             })),
           }));
         } else {
-          setNotificationPopup({ message: "Your comment has been submitted for review" });
+          setNotificationPopup({
+            message: "Your comment has been submitted for review",
+          });
         }
       },
       onError: (err, { blogId }, context) => {
-        queryClient.setQueryData(["comments", blogId], context.previousComments);
+        queryClient.setQueryData(
+          ["comments", blogId],
+          context.previousComments
+        );
         logError(err);
         notifyError(handleError(err));
       },
