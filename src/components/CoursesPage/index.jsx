@@ -17,13 +17,21 @@ const Courses = () => {
   const specificPurposeCoursesRaw = t("courses.specificPurposeCourses", {
     returnObjects: true,
   });
-  const specificPurposeCourses = Array.isArray(specificPurposeCoursesRaw) ? specificPurposeCoursesRaw : [];
+  const specificPurposeCourses = Array.isArray(specificPurposeCoursesRaw)
+    ? specificPurposeCoursesRaw
+    : [];
   const languagesRaw = t("courses.languagesList", { returnObjects: true });
   const languages = Array.isArray(languagesRaw) ? languagesRaw : [];
-  const englishCoursesRaw = t("courses.englishCourses", { returnObjects: true });
-  const englishCourses = Array.isArray(englishCoursesRaw) ? englishCoursesRaw : [];
+  const englishCoursesRaw = t("courses.englishCourses", {
+    returnObjects: true,
+  });
+  const englishCourses = Array.isArray(englishCoursesRaw)
+    ? englishCoursesRaw
+    : [];
   const specificPurposesRaw = S("specificPurposes", { returnObjects: true });
-  const specificPurposes = Array.isArray(specificPurposesRaw) ? specificPurposesRaw : [];
+  const specificPurposes = Array.isArray(specificPurposesRaw)
+    ? specificPurposesRaw
+    : [];
   const isEnglish = i18next.language !== "ar";
 
   // Create a mapping between course names in specificPurposeCourses and their IDs in specificPurposes
@@ -42,7 +50,7 @@ const Courses = () => {
 
     // For English courses
     const englishIndex = englishCourses.findIndex(
-      (course) => course.Level === sectionId
+      (course) => course.Level === sectionId,
     );
     if (englishIndex !== -1) {
       // If it's an even index, pair with the next card; if odd, pair with the previous card
@@ -56,7 +64,7 @@ const Courses = () => {
 
     // For specific purpose courses
     const specificIndex = specificPurposes.findIndex(
-      (course) => course.id === sectionId
+      (course) => course.id === sectionId,
     );
     if (specificIndex !== -1) {
       // If it's an even index, pair with the next card; if odd, pair with the previous card
@@ -110,7 +118,7 @@ const Courses = () => {
         {
           rootMargin: "100px 0px",
           threshold: 0.1,
-        }
+        },
       );
 
       sections.forEach((section) => {

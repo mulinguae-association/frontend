@@ -1,11 +1,11 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 const DataProtection = () => {
-  const { t } = useTranslation("privacy&terms/privacy")
+  const { t } = useTranslation("privacy&terms/privacy");
 
   return (
-    <section id='data-protection'>
+    <section id="data-protection">
       <h2>{t("dataSafety.title")}</h2>
       <ul>
         {(() => {
@@ -14,7 +14,7 @@ const DataProtection = () => {
           return safeArr.map((point, index) => <li key={index}>{point}</li>);
         })()}
       </ul>
-      <div className='more_details'>
+      <div className="more_details">
         <ul>
           {(() => {
             const arr = t("dataSafety.moreDetails", { returnObjects: true });
@@ -24,7 +24,7 @@ const DataProtection = () => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default DataProtection
+export default DataProtection;

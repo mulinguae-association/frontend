@@ -19,7 +19,9 @@ export default function Principles() {
         <CardBody className={styles.card__body}>
           <div className={styles.scroll_indicator}></div>
           {(() => {
-            const arr = t("principles.unity.description", { returnObjects: true });
+            const arr = t("principles.unity.description", {
+              returnObjects: true,
+            });
             const safeArr = Array.isArray(arr) ? arr : [];
             return safeArr.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
@@ -37,7 +39,9 @@ export default function Principles() {
         />
         <CardBody className={styles.card__body}>
           {(() => {
-            const arr = t("principles.solidarity.description", { returnObjects: true });
+            const arr = t("principles.solidarity.description", {
+              returnObjects: true,
+            });
             const safeArr = Array.isArray(arr) ? arr : [];
             return safeArr.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>

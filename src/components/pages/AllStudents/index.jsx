@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 import "./index.scss";
-import { useTranslation } from 'react-i18next';
-import { FaGraduationCap, FaBookReader, FaHandsHelping } from 'react-icons/fa';
-import { MdAttachMoney, MdEqualizer } from 'react-icons/md';
+import { useTranslation } from "react-i18next";
+import { FaGraduationCap, FaBookReader, FaHandsHelping } from "react-icons/fa";
+import { MdAttachMoney, MdEqualizer } from "react-icons/md";
 const AllStudents = () => {
-  const { t } = useTranslation("pages/studentsOfAllAges")
+  const { t } = useTranslation("pages/studentsOfAllAges");
   const categoriesRaw = t("categories", { returnObjects: true });
   const categories = Array.isArray(categoriesRaw) ? categoriesRaw : [];
   return (
-    <div className='studentsAllAges'>
-      <div className='container'>
+    <div className="studentsAllAges">
+      <div className="container">
         <header>
           <h1>{t("title")}</h1>
         </header>
@@ -24,14 +24,12 @@ const AllStudents = () => {
             {t("categoriesTitle")}
           </h2>
           <ul className="categories">
-            {
-              categories.map((category, index) =>
-                <li key={category}>
-                  <span className="category-number">{index + 1}</span>
-                  {category}
-                </li>
-              )
-            }
+            {categories.map((category, index) => (
+              <li key={category}>
+                <span className="category-number">{index + 1}</span>
+                {category}
+              </li>
+            ))}
           </ul>
         </section>
 
@@ -68,7 +66,7 @@ const AllStudents = () => {
         </section>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AllStudents
+export default AllStudents;
