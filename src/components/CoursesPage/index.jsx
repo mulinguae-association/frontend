@@ -14,12 +14,16 @@ const Courses = () => {
   const { t: S } = useTranslation("courses/specificPurposes");
   const { t: H } = useTranslation("pages/hundredPhrases");
 
-  const specificPurposeCourses = t("courses.specificPurposeCourses", {
+  const specificPurposeCoursesRaw = t("courses.specificPurposeCourses", {
     returnObjects: true,
   });
-  const languages = t("courses.languagesList", { returnObjects: true });
-  const englishCourses = t("courses.englishCourses", { returnObjects: true });
-  const specificPurposes = S("specificPurposes", { returnObjects: true });
+  const specificPurposeCourses = Array.isArray(specificPurposeCoursesRaw) ? specificPurposeCoursesRaw : [];
+  const languagesRaw = t("courses.languagesList", { returnObjects: true });
+  const languages = Array.isArray(languagesRaw) ? languagesRaw : [];
+  const englishCoursesRaw = t("courses.englishCourses", { returnObjects: true });
+  const englishCourses = Array.isArray(englishCoursesRaw) ? englishCoursesRaw : [];
+  const specificPurposesRaw = S("specificPurposes", { returnObjects: true });
+  const specificPurposes = Array.isArray(specificPurposesRaw) ? specificPurposesRaw : [];
   const isEnglish = i18next.language !== "ar";
 
   // Create a mapping between course names in specificPurposeCourses and their IDs in specificPurposes

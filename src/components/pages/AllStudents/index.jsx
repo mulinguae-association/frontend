@@ -5,7 +5,8 @@ import { FaGraduationCap, FaBookReader, FaHandsHelping } from 'react-icons/fa';
 import { MdAttachMoney, MdEqualizer } from 'react-icons/md';
 const AllStudents = () => {
   const { t } = useTranslation("pages/studentsOfAllAges")
-  const categories = t("categories", { returnObjects: true })
+  const categoriesRaw = t("categories", { returnObjects: true });
+  const categories = Array.isArray(categoriesRaw) ? categoriesRaw : [];
   return (
     <div className='studentsAllAges'>
       <div className='container'>

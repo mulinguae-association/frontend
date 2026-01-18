@@ -36,12 +36,16 @@ const DataControl = () => {
             <h3>{t("dataControl.moreDetails.communicationPreferences.title")}</h3>
             <p> {t("dataControl.moreDetails.communicationPreferences.description")}</p>
           </div>
-          {t("dataControl.moreDetails.communicationPreferences.options", { returnObjects: true }).map((point) =>
-            <div key={point.title} className='data_communication'>
-              <h3>{point.title}</h3>
-              <p>{point.description}</p>
-            </div>
-          )}
+          {(() => {
+            const arr = t("dataControl.moreDetails.communicationPreferences.options", { returnObjects: true });
+            const safeArr = Array.isArray(arr) ? arr : [];
+            return safeArr.map((point) => (
+              <div key={point.title} className='data_communication'>
+                <h3>{point.title}</h3>
+                <p>{point.description}</p>
+              </div>
+            ));
+          })()}
         </div>
       </div>
     </section>

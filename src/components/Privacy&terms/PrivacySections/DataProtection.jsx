@@ -8,11 +8,19 @@ const DataProtection = () => {
     <section id='data-protection'>
       <h2>{t("dataSafety.title")}</h2>
       <ul>
-        {t("dataSafety.description", { returnObjects: true }).map((point, index) => <li key={index}>{point}</li>)}
+        {(() => {
+          const arr = t("dataSafety.description", { returnObjects: true });
+          const safeArr = Array.isArray(arr) ? arr : [];
+          return safeArr.map((point, index) => <li key={index}>{point}</li>);
+        })()}
       </ul>
       <div className='more_details'>
         <ul>
-          {t("dataSafety.moreDetails", { returnObjects: true }).map((point, index) => <li key={index}>{point}</li>)}
+          {(() => {
+            const arr = t("dataSafety.moreDetails", { returnObjects: true });
+            const safeArr = Array.isArray(arr) ? arr : [];
+            return safeArr.map((point, index) => <li key={index}>{point}</li>);
+          })()}
         </ul>
       </div>
     </section>

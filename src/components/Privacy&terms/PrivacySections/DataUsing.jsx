@@ -20,18 +20,22 @@ const DataUsing = () => {
           <h3>{t("dataCollection.howDoWeUseData.improvingAndPromotingServices.title")}</h3>
           <p>{t("dataCollection.howDoWeUseData.improvingAndPromotingServices.description")}</p>
           <ul>
-            {t("dataCollection.howDoWeUseData.improvingAndPromotingServices.objectives", { returnObjects: true }).map((objective, index) =>
-              <li key={index}>{objective}</li>
-            )}
+            {(() => {
+              const arr = t("dataCollection.howDoWeUseData.improvingAndPromotingServices.objectives", { returnObjects: true });
+              const safeArr = Array.isArray(arr) ? arr : [];
+              return safeArr.map((objective, index) => <li key={index}>{objective}</li>);
+            })()}
           </ul>
         </div>
         <div className='operatingBusiness'>
           <h3>{t("dataCollection.howDoWeUseData.operatingBusiness.title")}</h3>
           <p>{t("dataCollection.howDoWeUseData.operatingBusiness.description")}</p>
           <ul>
-            {t("dataCollection.howDoWeUseData.operatingBusiness.operationalReasons", { returnObjects: true }).map((reason, index) =>
-              <li key={index}>{reason}</li>
-            )}
+            {(() => {
+              const arr = t("dataCollection.howDoWeUseData.operatingBusiness.operationalReasons", { returnObjects: true });
+              const safeArr = Array.isArray(arr) ? arr : [];
+              return safeArr.map((reason, index) => <li key={index}>{reason}</li>);
+            })()}
           </ul>
         </div>
       </div>

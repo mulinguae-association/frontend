@@ -7,7 +7,8 @@ import i18next from 'i18next';
 
 const Donation = () => {
   const { t } = useTranslation("pages/donation");
-  const contributionsList = t("contributions.items", { returnObjects: true });
+  const contributionsRaw = t("contributions.items", { returnObjects: true });
+  const contributionsList = Array.isArray(contributionsRaw) ? contributionsRaw : [];
   return (
     <div className='donation'>
       <div className='container'>

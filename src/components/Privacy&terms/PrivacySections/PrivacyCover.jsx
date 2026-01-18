@@ -7,7 +7,11 @@ const PrivacyCover = () => {
     <section id='policy-cover'>
       <h2>{t("Policy Coverage.title")}</h2>
       <div className='policyPoints'>
-        {t("Policy Coverage.policyPoints", { returnObjects: true }).map((ele, index) => <p key={index}>{ele}</p>)}
+        {(() => {
+          const arr = t("Policy Coverage.policyPoints", { returnObjects: true });
+          const safeArr = Array.isArray(arr) ? arr : [];
+          return safeArr.map((ele, index) => <p key={index}>{ele}</p>);
+        })()}
       </div>
     </section>
   )

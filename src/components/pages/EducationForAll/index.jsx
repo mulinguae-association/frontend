@@ -36,7 +36,11 @@ const EducationForAll = () => {
             {t("article26.title")}
           </h2>
           <div className="content-wrapper">
-            <p className="article-paragraph">{t("article26.paragraphs", { returnObjects: true })[0]}</p>
+            {(() => {
+              const arr = t("article26.paragraphs", { returnObjects: true });
+              const safeArr = Array.isArray(arr) ? arr : [];
+              return <p className="article-paragraph">{safeArr[0]}</p>;
+            })()}
             <blockquote className="article-quote">
               {t("article26.paragraphs", { returnObjects: true }).slice(1).map((para, index) =>
                 <p key={index} className="article-paragraph">{para}</p>
@@ -69,9 +73,11 @@ const EducationForAll = () => {
           </h2>
           <div className="content-wrapper">
             <ul className="facts-list">
-              {t("keyFacts.paragraphs", { returnObjects: true }).map((fact, index) =>
-                <li key={index} className="fact-item">{fact}</li>
-              )}
+              {(() => {
+                const arr = t("keyFacts.paragraphs", { returnObjects: true });
+                const safeArr = Array.isArray(arr) ? arr : [];
+                return safeArr.map((fact, index) => <li key={index} className="fact-item">{fact}</li>);
+              })()}
             </ul>
           </div>
         </section>
