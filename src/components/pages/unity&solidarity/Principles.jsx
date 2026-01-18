@@ -18,11 +18,15 @@ export default function Principles() {
         />
         <CardBody className={styles.card__body}>
           <div className={styles.scroll_indicator}></div>
-          {t("principles.unity.description", { returnObjects: true }).map(
-            (paragraph, index) => (
+          {(() => {
+            const arr = t("principles.unity.description", {
+              returnObjects: true,
+            });
+            const safeArr = Array.isArray(arr) ? arr : [];
+            return safeArr.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
-            ),
-          )}
+            ));
+          })()}
         </CardBody>
       </Card>
 
@@ -34,11 +38,15 @@ export default function Principles() {
           className={styles["solidarity-header"]}
         />
         <CardBody className={styles.card__body}>
-          {t("principles.solidarity.description", { returnObjects: true }).map(
-            (paragraph, index) => (
+          {(() => {
+            const arr = t("principles.solidarity.description", {
+              returnObjects: true,
+            });
+            const safeArr = Array.isArray(arr) ? arr : [];
+            return safeArr.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
-            ),
-          )}
+            ));
+          })()}
         </CardBody>
       </Card>
     </div>
