@@ -34,15 +34,7 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    ns: [
-      "global",
-      "contact",
-      "common",
-      "home",
-      "courses/generalEnglish",
-      "courses/specificPurposes",
-      "pages/hundredPhrases",
-    ],
+    ns: ["global", "contact", "common"],
     defaultNS: "global",
     fallbackNS: "global",
     detection: {
@@ -78,7 +70,7 @@ i18n
       },
     },
     react: {
-      useSuspense: true,
+      useSuspense: false,
     },
   });
 
