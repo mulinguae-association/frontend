@@ -25,12 +25,10 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <AppProvider>
-        <BlogPostsProvider>
-          <AuthProvider>
-            <App />
-          </AuthProvider>
-        </BlogPostsProvider>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
       </AppProvider>
     </QueryClientProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
