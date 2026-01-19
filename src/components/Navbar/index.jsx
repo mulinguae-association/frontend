@@ -87,7 +87,7 @@ const Navbar = () => {
                 height="100%"
                 src={"/images/acs-logo.png"}
                 sizes="(max-width:768px) 50px, 55px"
-                alt="logo"
+                alt="Mulinguae Logo"
               />
             </picture>
             <span className="logo_title">Mulinguae</span>
@@ -98,7 +98,7 @@ const Navbar = () => {
               to={`/${i18n.language}/contact`}
               name="join us"
               className="cta-button"
-              aria-label="join us"
+              aria-label=" Join Mulinguae"
             >
               {t("joinBtn")}
             </Link>
@@ -111,6 +111,9 @@ const Navbar = () => {
             <LanguageSwitcher className="custom-dropdown" />
           </div>
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="Toggle menu button to change language"
             id="burger_menu"
             className={menuOpen ? "open" : ""}
             onClick={handleBurgerMenu}
@@ -119,9 +122,11 @@ const Navbar = () => {
             <span></span>
             <span></span>
           </div>
-          <React.Suspense>
-            <Sidebar setMenuOpen={setMenuOpen} t={t} menuOpen={menuOpen} />
-          </React.Suspense>
+          {typeof window !== "undefined" && window.innerWidth <= 991 && (
+            <React.Suspense>
+              <Sidebar setMenuOpen={setMenuOpen} t={t} menuOpen={menuOpen} />
+            </React.Suspense>
+          )}
           <IntroVideoModal
             show={showIntro}
             onClose={() => setShowIntro(false)}
