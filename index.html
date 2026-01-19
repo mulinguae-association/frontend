@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -15,20 +15,36 @@
       name="google-site-verification"
       content="Wbn2ectwmEAdge3ufi7T7M7JDJz5tuRqBAN_DUwqCJ4"
     />
-    <link rel="manifest" href="/manifest.json" />
+    <!-- Preconnect to external domains -->
+
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      as="image"
+      href="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_1200/v1726238642/amazon_people.webp"
+      fetchpriority="high"
     />
+
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Optimized font loading -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Cairo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <title>ACS Maulingua</title>
   </head>

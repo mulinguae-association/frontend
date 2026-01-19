@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
-import UpdateComment from './UpdateComment';
-import InteractionComponent from '../interaction/InteractionComments';
-import { formatRelativeTime } from '../../../HelperComponents/RelativeDate';
-import { useAuth } from '../../../../contexts/AuthContext';
-import { isTextTruncated } from '../../../../utils/isTextTruncated';
-import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs/removeComment';
+import React, { useEffect, useRef, useState } from "react";
+import InteractionComponent from "../interaction/InteractionComments";
+import { formatRelativeTime } from "../../../HelperComponents/RelativeDate";
+import { useAuth } from "../../../../contexts/AuthContext";
+import { isTextTruncated } from "../../../../utils/isTextTruncated";
+import { useRemoveCommentMutation } from "../../../../apis/mutations/blogs/removeComment";
 const EllipsisMenu = React.lazy(() => import("../EllipsisMenu"));
+const UpdateComment = React.lazy(() => import("./UpdateComment"));
 
 const CommentReply = ({
   comment,
@@ -18,7 +18,10 @@ const CommentReply = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
-  const { mutate: handleRemoveComment } = useRemoveCommentMutation(comment.blogId, comment.parentComment);
+  const { mutate: handleRemoveComment } = useRemoveCommentMutation(
+    comment.blogId,
+    comment.parentComment,
+  );
   useEffect(() => {
     const checkTruncation = () => {
       if (contentRef.current) {
@@ -27,15 +30,15 @@ const CommentReply = ({
     };
 
     checkTruncation();
-    window.addEventListener('resize', checkTruncation);
-    return () => window.removeEventListener('resize', checkTruncation);
+    window.addEventListener("resize", checkTruncation);
+    return () => window.removeEventListener("resize", checkTruncation);
   }, [comment?.content]);
 
   const toggleReadMore = () => {
     setIsExpanded(!isExpanded);
   };
   return (
-    <div className='nested_comments_container'>
+    <div className="nested_comments_container">
       <div
         style={
           isEditComment && editCommentId._id === comment._id
@@ -43,16 +46,23 @@ const CommentReply = ({
             : { width: "fit-content" }
         }
         key={comment._id}
-        className='nested_comments'
+        className="nested_comments"
       >
-        {isAuth && (comment?.postedBy._id === userData?.userId || userData?.role === "admin") && (
-          <React.Suspense className="Loading...">
-            <EllipsisMenu
-              handleDelete={() => handleRemoveComment({ commentId: comment._id, blogId: comment.blogId })}
-              handleEdit={(state) => handleEdit(comment, state)}
-            />
-          </React.Suspense>
-        )}
+        {isAuth &&
+          (comment?.postedBy._id === userData?.userId ||
+            userData?.role === "admin") && (
+            <React.Suspense className="Loading...">
+              <EllipsisMenu
+                handleDelete={() =>
+                  handleRemoveComment({
+                    commentId: comment._id,
+                    blogId: comment.blogId,
+                  })
+                }
+                handleEdit={(state) => handleEdit(comment, state)}
+              />
+            </React.Suspense>
+          )}
         {isEditComment && editCommentId._id === comment._id ? (
           <UpdateComment
             editComment={comment}
@@ -62,45 +72,45 @@ const CommentReply = ({
           />
         ) : (
           <>
-            <div className='comment_author_container'>
-              <div className='img_container'>
+            <div className="comment_author_container">
+              <div className="img_container">
                 <img
                   width="30px"
                   height="30px"
-                  src={comment?.postedBy?.profileImage || "/images/fallBackUser.png"}
-                  alt='personal avatar'
+                  src={
+                    comment?.postedBy?.profileImage ||
+                    "/images/fallBackUser.png"
+                  }
+                  alt="personal avatar"
                   onError={(e) => {
                     e.target.src = "/images/fallBackUser.png";
                   }}
-                  loading='lazy'
+                  loading="lazy"
                 />
               </div>
-              <div className='comment_author'>@{comment?.postedBy?.name}</div>
+              <div className="comment_author">@{comment?.postedBy?.name}</div>
             </div>
-            <div className=''>
+            <div className="">
               <p
-                style={
-                  !isTruncated
-                    ? { margin: 0 }
-                    : { marginTop: 0 }
-                }
+                style={!isTruncated ? { margin: 0 } : { marginTop: 0 }}
                 ref={contentRef}
-                className={`comment_content ${isExpanded ? 'expanded' : 'truncated'}`}>
+                className={`comment_content ${isExpanded ? "expanded" : "truncated"}`}
+              >
                 {comment?.content}
               </p>
               {isTruncated && (
-                <button className='read-more-button' onClick={toggleReadMore}>
+                <button className="read-more-button" onClick={toggleReadMore}>
                   {isExpanded ? "Show less" : "Read more"}
                 </button>
               )}
             </div>
             <span>{formatRelativeTime(comment.createdAt)}</span>
-            <InteractionComponent modelType='comment' reply={comment} />
+            <InteractionComponent modelType="comment" reply={comment} />
           </>
         )}
       </div>
     </div>
   );
-}
+};
 
-export default CommentReply
+export default CommentReply;
