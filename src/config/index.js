@@ -1,10 +1,8 @@
-import introVideos from "./introVideos.json";
-
 export function getIntroVideo(lang = "en") {
   if (!lang) lang = "en";
   const short = (lang || "en").split("-")[0];
   // prefer config JSON
-  if (introVideos && introVideos[short]) return introVideos[short];
+  // if (introVideos && introVideos[short]) return introVideos[short];
 
   // fallback to environment variables for backwards compatibility (Vite)
   const env = import.meta.env || {};
