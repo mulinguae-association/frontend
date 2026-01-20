@@ -35,6 +35,7 @@
       min-width: 49%;
       text-align: start;
       font-size: 18px;
+      justify-content: center;
       @include flexbox($alignItems: flex-start, $direction: column);
       gap: 1.5rem;
       white-space: pre-line;
