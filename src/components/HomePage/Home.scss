@@ -8,8 +8,6 @@
     rgba($medium-darkblue, 92%) 50%,
     rgba(67, 171, 67, 0.92) 100%
   );
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.07);
   width: 100%;
   min-height: calc(100vh - $navbar-h);
   @include flexbox($alignItems: center, $justifyContent: center);
@@ -22,101 +20,109 @@
     overflow: hidden;
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
+      display: block;
     }
   }
 
   .hero_content {
-    @include flexbox($alignItems: center, $justifyContent: space-between);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
     .hero_info {
-      width: 49%;
-      min-width: 49%;
+      height: 100%;
       text-align: start;
       font-size: 18px;
       @include flexbox($alignItems: flex-start, $direction: column);
       gap: 1.5rem;
       white-space: pre-line;
-      .hero_title {
-        font-size: calc(0.7rem + 3.2vw);
-        font-weight: 700;
-        background: linear-gradient(to right, $primary-color, $secondary-color);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin: 0;
-        line-height: 1.2;
-        letter-spacing: -0.5px;
-        position: relative;
-        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          left: 0;
-          right: 0;
-          width: 60px;
-          height: 4px;
+      .hero_title_container {
+        width: auto;
+        height: auto;
+        @media (max-width: 1024px) {
+          text-align: center;
+          margin: 0 auto;
+        }
+        .hero_title {
+          margin: 0 auto;
+          width: 100%;
+          height: auto;
+          display: block;
+          font-size: calc(0.7rem + 3.2vw);
+          font-weight: 700;
           background: linear-gradient(
             to right,
             $primary-color,
             $secondary-color
           );
-          border-radius: 2px;
-          [dir="rtl"] & {
-            left: auto;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          margin: 0;
+          line-height: 1.2;
+          letter-spacing: -0.5px;
+          position: relative;
+          text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
             right: 0;
+            width: 60px;
+            height: 4px;
             background: linear-gradient(
-              to left,
+              to right,
               $primary-color,
               $secondary-color
             );
+            border-radius: 2px;
+            [dir="rtl"] & {
+              left: auto;
+              right: 0;
+              background: linear-gradient(
+                to left,
+                $primary-color,
+                $secondary-color
+              );
+            }
           }
-        }
-        @media (max-width: 1024px) {
-          font-size: calc(0.8rem + 3vw);
-          margin: 0 auto;
-          text-align: center;
+          @media (max-width: 1024px) {
+            font-size: calc(0.8rem + 3vw);
+            margin: 0 auto;
+            text-align: center;
 
-          &::after {
-            display: none;
+            &::after {
+              display: none;
+            }
           }
-        }
-        @media (max-width: 767px) {
-          font-size: calc(1.1rem + 2vw);
-          margin: 0 auto;
-        }
-        @media (max-width: 280px) {
-          width: 260px;
+          @media (max-width: 767px) {
+            font-size: calc(1.1rem + 2vw);
+            margin: 0 auto;
+          }
+          @media (max-width: 280px) {
+            width: 260px;
+          }
         }
       }
       .img_info_container {
         display: none;
-        text-align: center;
-        margin: 0 auto;
-        min-height: 350px;
+        @media (max-width: 1024px) {
+          display: block;
+          flex: none;
+          width: 100%;
+          max-width: 550px;
+          aspect-ratio: 700 / 467;
+          overflow: hidden;
+          left: 0;
+        }
         img {
-          width: 60%;
-          height: auto;
-        }
-        @media (max-width: 768px) {
-          & {
-            min-height: 250px;
-            max-height: 380px;
-            img {
-              width: 80%;
-            }
-          }
-        }
-        @media (max-width: 480px) {
-          & {
-            min-height: 200px;
-            img {
-              width: 85%;
-            }
-          }
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
       }
       .hero_description {
@@ -247,24 +253,34 @@
         }
       }
     }
-    .img_container {
-      @include flexbox($justifyContent: flex-end, $grow: 1);
-      height: auto;
+    .img_info_container {
+      text-align: center;
+      width: clamp(320px, 50vw, 700px);
+      align-self: center;
+      max-width: 700px;
+      aspect-ratio: 700 / 467;
+      display: block;
+      overflow: hidden;
+      margin: 0 auto;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
       img {
-        height: auto;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+        display: block;
       }
     }
   }
   @media (max-width: 1024px) {
     padding: 3rem 0;
     .hero_content {
+      grid-template-columns: 1fr;
       flex-direction: column-reverse;
       .hero_info {
         width: 100%;
-        .img_info_container {
-          display: block;
-        }
       }
       .img_container {
         @include flexbox($display: none);

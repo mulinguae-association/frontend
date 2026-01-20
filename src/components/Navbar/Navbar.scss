@@ -103,6 +103,8 @@
       width: -moz-fit-content;
       width: fit-content;
       padding: 0.7rem 1rem;
+      min-width: 120.35px;
+      text-align: center;
       font-size: 14px;
       border: 1px solid #0556b3;
       font-weight: bold;
@@ -127,6 +129,8 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: $white-color;
       padding: 0.6rem 0.9rem;
+      min-width: 103.21px;
+      text-align: center;
       border-radius: 30px;
       cursor: pointer;
       font-weight: 600;
@@ -177,5 +181,8 @@
     @media (max-width: 767px) {
       width: 26px;
     }
+  }
+  .custom-dropdown {
+    min-width: 67.8px;
   }
 }
