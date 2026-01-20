@@ -26,51 +26,46 @@ const Home = ({ imgAnimation }) => {
             "
             sizes="(max-width: 768px) 100vw, 1200px"
             alt="Diverse group of people representing multilingualism"
-            width="1200"
-            height="600"
+            width={1200}
+            height={600}
+            style={{ width: "100%", height: "100%", display: "block" }}
           />
         </div>
         <div className="container">
           <div className="hero_content">
             <div className="hero_info">
-              <h1
-                id="websiteName"
-                style={langQu ? { fontSize: "2.2rem" } : {}}
-                className="hero_title"
-              >
-                {t("hero_title").split("\\n").join("\n")}
-              </h1>
+              <div className="hero_title_container">
+                <h1
+                  id="websiteName"
+                  style={langQu ? { fontSize: "2.2rem" } : {}}
+                  className="hero_title"
+                >
+                  {t("hero_title").split("\\n").join("\n")}
+                </h1>
+              </div>
+              {/* Mobile/tablet: shows between title and description */}
               <div
                 className={`img_info_container ${
                   imgAnimation ? "reload-animation" : ""
-                } `}
+                }`}
               >
-                <picture>
-                  <source
-                    media="(max-width:256px)"
-                    srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_256/v1707246278/earth_fnjwsd.webp 256w"
-                  />
-                  <source
-                    media="(max-width:384px)"
-                    srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_384/v1707246278/earth_fnjwsd.webp 384w"
-                  />
-                  <source
-                    media="(max-width:1024px)"
-                    srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp 640w"
-                  />
-                  <source
-                    media="(max-width:640px)"
-                    srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp 640w"
-                  />
-                  <img
-                    src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp"
-                    alt="Earth illustration representing multilingualism"
-                    loading="lazy"
-                    decoding="async"
-                    width="100%"
-                    height="100%"
-                  />
-                </picture>
+                <img
+                  fetchPriority="high"
+                  src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp"
+                  srcSet="
+                    https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_256/v1707246278/earth_fnjwsd.webp 256w,
+                    https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_384/v1707246278/earth_fnjwsd.webp 384w,
+                    https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp 640w,
+                    https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_700/v1707246278/earth_fnjwsd.webp 700w
+                  "
+                  sizes="(max-width: 640px) 100vw, 640px"
+                  alt="Earth illustration representing multilingualism"
+                  loading="eager"
+                  decoding="async"
+                  width={700}
+                  height={467}
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
               </div>
               {ready && (
                 <p
@@ -119,31 +114,27 @@ const Home = ({ imgAnimation }) => {
                 </div>
               </Link>
             </div>
+            {/* Desktop: shows next to content */}
             <div
-              className={`img_container reload-animation  ${
+              className={`img_info_container reload-animation ${
                 imgAnimation ? "reload-animation" : ""
               }`}
             >
-              <picture>
-                <source
-                  media="(max-width:640px)"
-                  srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_640/v1707246278/earth_fnjwsd.webp 640w"
-                />
-                <source
-                  media="(max-width:700px)"
-                  srcSet="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_700/v1707246278/earth_fnjwsd.webp 700w"
-                />
-                <img
-                  src={
-                    "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto,w_auto,dpr_auto/v1707246278/earth_fnjwsd.webp"
-                  }
-                  alt="Earth illustration representing multilingualism"
-                  loading="lazy"
-                  width="700px"
-                  height="350px"
-                  decoding="async"
-                />
-              </picture>
+              <img
+                fetchPriority="high"
+                src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp"
+                srcSet="
+                  https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp 640w,
+                  https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_700/v1707246278/earth_fnjwsd.webp 700w
+                "
+                sizes="(max-width: 1024px) 100vw, 700px"
+                alt="Earth illustration representing multilingualism"
+                loading="eager"
+                decoding="async"
+                width={700}
+                height={350}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
             </div>
           </div>
         </div>
