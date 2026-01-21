@@ -38,9 +38,7 @@ async function submitLogin(loginData) {
 }
 async function submitLogout() {
   try {
-    const response = await axios.get(`/api/auth/logout`, {
-      withCredentials: true,
-    });
+    const response = await axios.post(`/api/auth/logout`);
     if (response.status === 200) {
       return response;
     }
