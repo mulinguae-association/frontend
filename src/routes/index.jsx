@@ -147,7 +147,9 @@ const router = createBrowserRouter([
         path: "pages/blogs/create-new-blog",
         element: (
           <ProtectedRoute>
-            <CreateBlog />
+            <BlogPostsProvider>
+              <CreateBlog />
+            </BlogPostsProvider>
           </ProtectedRoute>
         ),
       },
@@ -169,7 +171,11 @@ const router = createBrowserRouter([
       },
       {
         path: "user-settings",
-        element: <UserSettings />,
+        element: (
+          <BlogPostsProvider>
+            <UserSettings />
+          </BlogPostsProvider>
+        ),
       },
       {
         path: "dashboard",

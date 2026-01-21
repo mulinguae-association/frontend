@@ -28,7 +28,7 @@ export const BlogPostsProvider = ({ children }) => {
         setAllPostsLoaded(true);
         logError(error);
       },
-    }
+    },
   );
   console.log("🚀 ~ BlogPostsProvider ~ data:", data);
 
@@ -48,9 +48,10 @@ export const BlogPostsProvider = ({ children }) => {
   };
 
   return (
-    <BlogPostsContext.Provider value={{ contextValue }}>
+    <BlogPostsContext.Provider value={contextValue}>
       {children}
     </BlogPostsContext.Provider>
   );
 };
-export const useBlogPosts = () => useContext(BlogPostsContext).contextValue;
+
+export const useBlogPosts = () => useContext(BlogPostsContext);
