@@ -1,13 +1,12 @@
-import axios from 'axios';
-import logError from '../utils/logError';
-
+import axios from "axios";
+import logError from "../utils/logError";
 
 const fetchUserProfile = async () => {
   try {
-    const res = await axios.get('/api/auth/profile');
+    const res = await axios.get("/api/auth/profile");
     return res.data;
   } catch (err) {
-    logError('Error fetching user profile:', err);
+    logError("Error fetching user profile:", err);
     throw err;
   }
 };
@@ -39,7 +38,9 @@ async function submitLogin(loginData) {
 }
 async function submitLogout() {
   try {
-    const response = await axios.get(`/api/auth/logout`);
+    const response = await axios.get(`/api/auth/logout`, {
+      withCredentials: true,
+    });
     if (response.status === 200) {
       return response;
     }
@@ -50,4 +51,4 @@ async function submitLogout() {
   }
 }
 
-export { fetchUserProfile, submitLogin, submitRegister, submitLogout }
+export { fetchUserProfile, submitLogin, submitRegister, submitLogout };
