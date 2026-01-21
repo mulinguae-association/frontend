@@ -27,6 +27,7 @@ const CommentForm = ({ blogId }) => {
       loves: [],
       postedBy: userData,
     };
+
     if (comment === "") {
       notifyError("Comment cannot be empty.");
       return;
