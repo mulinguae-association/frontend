@@ -3,7 +3,7 @@
   "phrases": [
     {
       "title": "التحية (التحيات)",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_500,c_fill,f_auto/v1769164181/greetings_wog12h.webp",
       "alt": "صورة التحية",
       "phrases": [
         "مرحبًا! / مرحبًا.",
@@ -26,19 +26,19 @@
     },
     {
       "title": "الوداع",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255613/zkmdtuweqnxoqlffvbm7.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_500,c_fill,f_auto/v1769164181/goodBuy_hlr0do.webp",
       "alt": "صورة الوداع",
       "phrases": ["وداعًا.", "وداعًا.", "أراك لاحقًا.", "مساء الخير."]
     },
     {
       "title": "الاعتذار",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_500,f_auto,c_fill/v1769164179/Apologize_sdq6pq.webp",
       "alt": "صورة الاعتذار",
       "phrases": ["عفوًا.", "أنا آسف."]
     },
     {
       "title": "طلب المساعدة والإجابة",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_500,c_fill/v1769164296/Asking_for_help_qnkhsl.webp",
       "alt": "صورة طلب المساعدة",
       "phrases": [
         "أين تقع مكتب الهجرة / مركز الشرطة / وكالة السفر؟",
@@ -49,7 +49,7 @@
     },
     {
       "title": "السوق",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_500,c_fill,f_auto/v1769164184/478371Image1-1180x677_d_nnkhcx.webp",
       "alt": "صورة السوق",
       "phrases": [
         "ما هذه؟",
@@ -68,7 +68,7 @@
     },
     {
       "title": "عبارات يومية مهمة",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_450,c_fill,f_auto/v1769164289/daily_expressions_leoygn.webp",
       "alt": "صورة العبارات اليومية",
       "phrases": [
         "بالتأكيد.",
@@ -84,7 +84,7 @@
     },
     {
       "title": "التعريف والتعريف بالآخرين",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,f_auto,c_fill/v1707255158/introduce_others.jpg_yv2bln.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_450,c_fill,f_auto/v1769164179/b477b91e35edb2a27926eac9dcb302e2_usfuuj.webp",
       "alt": "صورة التعريف",
       "phrases": [
         "هذه السيدة أرليتا.",
@@ -100,7 +100,7 @@
     },
     {
       "title": "الحديث عن بلد الأصل",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_400,c_fill,f_auto,q_70/v1769164182/dreamstime_s_180994902_xcbpru.webp",
       "alt": "صورة الحديث عن البلد",
       "phrases": [
         "من أين أنت؟",
@@ -131,7 +131,8 @@
     },
     {
       "title": "الحديث عن العمل",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
+      "img": " https://res.cloudinary.com/di24dufhu/image/upload/w_450,c_fill,f_auto/v1769164271/talking_about_work_kkyhfw.webp",
+
       "alt": "صورة الحديث عن العمل",
       "phrases": [
         "ماذا تعمل؟",
@@ -146,7 +147,7 @@
     },
     {
       "title": "الحديث عن المدرسة",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_450,c_fill,f_auto/v1769164453/school_lwj8fm.webp",
       "alt": "صورة الحديث عن المدرسة",
       "phrases": [
         "هل أنت طالب؟",
@@ -161,7 +162,7 @@
     },
     {
       "title": "الحديث عن أنشطة الترفيه",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/upload/w_450,c_fill,f_auto/v1769164189/pexels-jill-wellington-40815_swyamr.webp",
       "alt": "صورة أنشطة الترفيه",
       "phrases": [
         "ماذا تفعل للمتعة؟",
@@ -179,7 +180,7 @@
     },
     {
       "title": "كسب الأصدقاء / الحديث الصغير",
-      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
+      "img": "https://res.cloudinary.com/di24dufhu/image/w_500,c_fill,f_auto/upload/v1769164184/makingFriends_svjyqu.webp",
       "alt": "صورة كسب الأصدقاء",
       "phrases": [
         "هل أنت عطشان؟",
