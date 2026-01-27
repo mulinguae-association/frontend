@@ -27,7 +27,7 @@ const ShowMoreRepliesBtn = ({
             ? allPages.length + 1
             : undefined; // Proceed to fetch the next page
         },
-      }
+      },
     );
 
   // Compute how many replies are already shown from the paginated data
@@ -45,18 +45,20 @@ const ShowMoreRepliesBtn = ({
     <div>
       {data?.pages.map((group, i) => (
         <Fragment key={i}>
-          {group.remainingReplies.map((reply) =>
-            reply?.status === "accepted" ? (
-              <CommentReply
-                key={reply._id}
-                comment={reply}
-                isEditComment={isEditComment}
-                setIsEditComment={setIsEditComment}
-                editCommentId={editCommentId}
-                handleEdit={handleEdit}
-              />
-            ) : null
-          )}
+          {group.remainingReplies
+            .slice()
+            .map((reply) =>
+              reply?.status === "accepted" ? (
+                <CommentReply
+                  key={reply._id}
+                  comment={reply}
+                  isEditComment={isEditComment}
+                  setIsEditComment={setIsEditComment}
+                  editCommentId={editCommentId}
+                  handleEdit={handleEdit}
+                />
+              ) : null,
+            )}
         </Fragment>
       ))}
       {remaining > 0 && (
