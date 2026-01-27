@@ -53,16 +53,22 @@ export const useAddReplyMutation = (setReplyContent) => {
                 pages: prevComments.pages.map((page) => ({
                   ...page,
                   remainingReplies: [
+                    ...page.remainingReplies,
                     {
                       ...newReply,
                       blogId,
                       content: replyConetnt,
                       parentComment: parentCommentId,
                     },
-                    ...page.remainingReplies,
                   ],
+                  lastAcceptedReply: {
+                    ...newReply,
+                    blogId,
+                    content: replyConetnt,
+                    parentComment: parentCommentId,
+                  },
                 })),
-              })
+              }),
             );
           }
         }
@@ -81,10 +87,10 @@ export const useAddReplyMutation = (setReplyContent) => {
               pages: prevComments.pages.map((page) => ({
                 ...page,
                 remainingReplies: page.remainingReplies.map((reply) =>
-                  reply._id === tempReplyId ? newReplyRes : reply
+                  reply._id === tempReplyId ? newReplyRes : reply,
                 ),
               })),
-            })
+            }),
           );
         } else {
           setNotificationPopup({
@@ -101,6 +107,6 @@ export const useAddReplyMutation = (setReplyContent) => {
         setReplyContent("");
         setButtonLoading(buttonKey, false);
       },
-    }
+    },
   );
 };

@@ -54,16 +54,26 @@ const CommentsSection = ({
               list={list}
             />
 
-            {lastReplyData && lastReplyData?.pages[0]?.remainingReplies[0] && (
-              <CommentReply
-                comment={lastReplyData?.pages[0]?.remainingReplies[0]}
-                blogId={blogId}
-                editCommentId={editCommentId}
-                handleEdit={handleEdit}
-                isEditComment={isEditComment}
-                setIsEditComment={setIsEditComment}
-              />
-            )}
+            {lastReplyData &&
+              (lastReplyData?.pages[0]?.lastAcceptedReply ? (
+                <CommentReply
+                  comment={lastReplyData.pages[0].lastAcceptedReply}
+                  blogId={blogId}
+                  editCommentId={editCommentId}
+                  handleEdit={handleEdit}
+                  isEditComment={isEditComment}
+                  setIsEditComment={setIsEditComment}
+                />
+              ) : lastReplyData?.pages[0]?.remainingReplies[0] ? (
+                <CommentReply
+                  comment={lastReplyData.pages[0].remainingReplies[0]}
+                  blogId={blogId}
+                  editCommentId={editCommentId}
+                  handleEdit={handleEdit}
+                  isEditComment={isEditComment}
+                  setIsEditComment={setIsEditComment}
+                />
+              ) : null)}
 
             <ReplyForm commentsId={comments[0]._id} blogId={blogId} />
           </article>
