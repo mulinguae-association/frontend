@@ -4,6 +4,9 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./Navbar.scss";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link, useNavigate } from "react-router-dom";
+import NotificationBell from "../NotificationBell";
+import { useContext } from "react";
+import { BlogPostsContext } from "../../contexts/BlogsContext";
 import { useTranslation } from "react-i18next";
 import NavLinks from "./NavLinks";
 import IntroVideoModal from "../IntroVideoModal";
@@ -11,12 +14,12 @@ import { getIntroVideo } from "../../config";
 const Sidebar = React.lazy(() => import("./Sidebar"));
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const {
     i18n: { language: lang },
     i18n,
   } = useTranslation("home", { ns: "home" });
   const t = useMemo(() => i18n.getFixedT(lang, "home"), [lang, i18n]);
-  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
   const navRef = useRef();
@@ -31,6 +34,7 @@ const Navbar = () => {
   const handleBurgerMenu = () => {
     setMenuOpen((prev) => !prev);
   };
+
   //remove scroll when sidebar apear
   useEffect(() => {
     if (menuOpen) {
@@ -39,6 +43,8 @@ const Navbar = () => {
       document.querySelector("html").style.overflow = "visible";
     }
   }, [menuOpen]);
+  const { notifications = [], setNotifications } =
+    useContext(BlogPostsContext) || {};
 
   useEffect(() => {
     // Show intro only on first visit
@@ -94,6 +100,10 @@ const Navbar = () => {
           </div>
           <NavLinks t={t} className={"nav-links"} />
           <div className="nav__buttons">
+            <NotificationBell
+              notifications={notifications}
+              setNotifications={setNotifications}
+            />
             <Link
               to={`/${i18n.language}/contact`}
               name="join us"

@@ -19,7 +19,7 @@ export const useAddBlogMutation = () => {
       if (userData.role === "admin") {
         queryClient.setQueryData(
           ["acceptedPosts", postsToDisplay],
-          [data.blogPost, ...acceptedPosts]
+          [data.blogPost, ...acceptedPosts],
         );
         notifySuccess("Successfully submitted blog post");
       } else {

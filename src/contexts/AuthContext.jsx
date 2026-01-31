@@ -1,7 +1,8 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { notifyError } from "../components/Notify";
 import handleError from "../utils/handleError";
+import socket from "../utils/socket";
 
 const AuthContext = createContext();
 
@@ -33,6 +34,19 @@ export const AuthProvider = ({ children }) => {
     },
   });
 
+  useEffect(() => {
+    if (isAuth && userData?.userId) {
+      const handleConnect = () => {
+        socket.emit("register", userData.userId);
+      };
+      socket.on("connect", handleConnect);
+      // If already connected, emit immediately
+      if (socket.connected) handleConnect();
+      return () => {
+        socket.off("connect", handleConnect);
+      };
+    }
+  }, [isAuth, userData?.userId]);
   return (
     <AuthContext.Provider value={{ userData, isAuth, setIsAuth, setUserData }}>
       {children}

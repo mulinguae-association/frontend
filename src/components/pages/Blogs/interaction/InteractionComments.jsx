@@ -1,48 +1,50 @@
-import React from 'react';
-import Unlikes from './Unlike';
-import Love from './Love';
-import Like from './Like';
-import { useAuth } from '../../../../contexts/AuthContext';
-import { useUpdateInteractionMutation } from '../../../../apis/mutations/blogs/updateInteraction';
+import Unlikes from "./Unlike";
+import Love from "./Love";
+import Like from "./Like";
+import { useAuth } from "../../../../contexts/AuthContext";
+import { useUpdateInteractionMutation } from "../../../../apis/mutations/blogs/updateInteraction";
 
-const InteractionComponent = ({
-  reply,
-  modelType
-}) => {
+const InteractionComponent = ({ reply, modelType, setBlog }) => {
   const { userData } = useAuth();
-  const { mutate: interactWithComment } = useUpdateInteractionMutation({ blogId: reply.blogId, parentCommentId: reply.parentComment });
+  const { mutate: interactWithComment } = useUpdateInteractionMutation({
+    blogId: reply.blogId,
+    parentCommentId: reply.parentComment,
+  });
+
   const handleClick = async (id, action) => {
-    interactWithComment({ modelType, id, action });
+    interactWithComment(
+      { modelType, id, action },
+      {
+        onSuccess: (res) => {
+          if (setBlog) {
+            setBlog((prev) => ({
+              ...prev,
+              likes: res.data.likes || [],
+              loves: res.data.loves || [],
+              unlikes: res.data.unlikes || [],
+            }));
+          }
+        },
+      },
+    );
   };
 
   return (
-    <div className='interaction_comments'>
+    <div className="interaction_comments">
       <Unlikes
-        isLiked={reply?.unlikes.includes(
-          userData?.userId
-        )}
-        likeCount={reply.unlikes.length || 0}
-        handleClick={() =>
-          handleClick(reply._id, "unlike")
-        }
+        isLiked={reply?.unlikes?.includes(userData?.userId)}
+        likeCount={reply.unlikes?.length || 0}
+        handleClick={() => handleClick(reply._id, "unlike")}
       />
       <Love
-        isLiked={reply?.loves.includes(
-          userData?.userId
-        )}
-        likeCount={reply.loves.length || 0}
-        handleClick={() =>
-          handleClick(reply._id, "love")
-        }
+        isLiked={reply?.loves?.includes(userData?.userId)}
+        likeCount={reply.loves?.length || 0}
+        handleClick={() => handleClick(reply._id, "love")}
       />
       <Like
-        isLiked={reply?.likes.includes(
-          userData?.userId
-        )}
-        likeCount={reply.likes.length || 0}
-        handleClick={() =>
-          handleClick(reply._id, "like")
-        }
+        isLiked={reply?.likes?.includes(userData?.userId)}
+        likeCount={reply.likes?.length || 0}
+        handleClick={() => handleClick(reply._id, "like")}
       />
     </div>
   );

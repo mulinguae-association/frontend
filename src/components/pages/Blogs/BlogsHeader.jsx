@@ -16,6 +16,9 @@ const BlogsHeader = ({
   searchQuery,
   handleSearchChange,
   handleSearchKeyPress,
+  hideSearch = false,
+  hideCreateBlog = false,
+  style = {},
 }) => {
   const { userData, isAuth, setIsAuth } = useAuth();
   const [showUserMenu, setShowMenuUser] = useState(false);
@@ -38,23 +41,34 @@ const BlogsHeader = ({
   };
 
   return (
-    <div className="blogs_header">
+    <div className="blogs_header" style={style}>
       <div className="links button-font">
-        <Link to={`create-new-blog`}>{`+ ${t("createABlog.name")} ${t(
-          "createABlog.special"
-        )}`}</Link>
-        <div className="search_bar_container">
-          <SearchBar
-            className={"bgSC"}
-            id="search-input-bigSC"
-            searchQuery={searchQuery}
-            handleSearchChange={handleSearchChange}
-            onKeyDown={handleSearchKeyPress}
-          />
-        </div>
+        {!hideCreateBlog && (
+          <Link to={`/${i18n.language}/pages/blogs/create-new-blog`}>
+            {`+ ${t("createABlog.name")} ${t("createABlog.special")}`}
+          </Link>
+        )}
+        {!hideSearch && (
+          <div className="search_bar_container">
+            <SearchBar
+              className={"bgSC"}
+              id="search-input-bigSC"
+              searchQuery={searchQuery}
+              handleSearchChange={handleSearchChange}
+              onKeyDown={handleSearchKeyPress}
+            />
+          </div>
+        )}
         {isAuth ? (
           <div className="user_info">
-            <div className="img_container">
+            <div
+              className="img_container"
+              style={{
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
               <img
                 width="150px"
                 height="150px"

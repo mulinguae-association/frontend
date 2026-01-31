@@ -1,9 +1,13 @@
 import axios from "axios";
 import logError from "../utils/logError";
-
+import socket from "../utils/socket";
 export async function submitBlogPost(newpost) {
+  const socketId = socket.id;
   try {
-    const response = await axios.post(`/api/blogPosts`, newpost);
+    const response = await axios.post(`/api/blogPosts`, {
+      ...newpost,
+      senderSocketId: socketId,
+    });
 
     if (response.status === 200) {
       return response.data;
@@ -42,7 +46,18 @@ export async function fetchAcceptedPosts(limit) {
     throw error;
   }
 }
-
+export async function fetchBlogPostById(blogId) {
+  try {
+    const response = await axios.get(`/api/blogPosts/accepted/${blogId}`);
+    if (response.status === 200) {
+      return response.data;
+    }
+    throw new Error("Error fetching accepted blog post");
+  } catch (error) {
+    logError("Error fetching accepted blog post:", error);
+    throw error;
+  }
+}
 export async function acceptBlogPost(blogId) {
   try {
     const response = await axios.patch(`/api/blogPosts/${blogId}/accept`);
@@ -157,7 +172,7 @@ export async function handleReplySubmit(content, blogId, parentCommentId) {
     const requestBody = { content, blogId, parentCommentId };
     const response = await axios.post(
       `/api/comments/reply/${parentCommentId}`,
-      requestBody
+      requestBody,
     );
     if (response.status === 201) {
       return { status: 201, data: response.data };
@@ -174,7 +189,7 @@ export async function updatedComment(commentId, requestedBody) {
   try {
     const response = await axios.patch(
       `/api/comments/update/${commentId}`,
-      requestedBody
+      requestedBody,
     );
     if (response.status === 201) {
       return { status: 201, data: response.data };
@@ -194,7 +209,7 @@ export async function updatedComment(commentId, requestedBody) {
 export async function interactWithComment(modelType, id, action) {
   try {
     const response = await axios.post(
-      `/api/comments/${modelType}/${id}/${action}`
+      `/api/comments/${modelType}/${id}/${action}`,
     );
 
     if (response.status === 200) {

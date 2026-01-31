@@ -20,8 +20,7 @@ import { useInfiniteQuery } from "react-query";
 const BlogPopup = React.lazy(() => import("./BlogPopup"));
 const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
 
-const BlogPost = ({ blog, list }) => {
-  console.log("🚀 ~ BlogPost ~ blog:", blog);
+const BlogPost = ({ blog, list, setBlog }) => {
   const { clearCache } = useCache();
   const [showFullContent, setShowFullContent] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
@@ -39,7 +38,7 @@ const BlogPost = ({ blog, list }) => {
           ? allPages.length + 1
           : undefined;
       },
-    }
+    },
   );
   const comments = data?.pages.flatMap((page) => page.acceptedComments);
   // Fetch the remaining replies of the last comment
@@ -60,7 +59,7 @@ const BlogPost = ({ blog, list }) => {
           : undefined;
       },
       enabled: !!lastCommentId, // Enable query only if there's a last comment
-    }
+    },
   );
 
   // Extract the last reply
@@ -108,9 +107,12 @@ const BlogPost = ({ blog, list }) => {
 
   // check language to change style and direction
   const lang = detectLanguage(
-    blog.content.slice(0, 25) || blog.title[0] || blog.subTitle[0] || ""
+    (blog?.content ? blog.content.slice(0, 25) : "") ||
+      (blog?.title ? blog.title[0] : "") ||
+      (blog?.subTitle ? blog.subTitle[0] : "") ||
+      "",
   );
-  const ArUR = ["ar", "ur"].includes(lang);
+  const ArUR = ["ar", "ur"]?.includes(lang) || false;
   return (
     <article
       style={ArUR ? { direction: "rtl" } : { direction: "ltr" }}
@@ -154,7 +156,7 @@ const BlogPost = ({ blog, list }) => {
       {/* Comment Form */}
       <CommentForm blogId={blog._id} />
       <div className="blogs_interaction">
-        <InteractionComponent modelType="blog" reply={blog} />
+        <InteractionComponent modelType="blog" reply={blog} setBlog={setBlog} />
       </div>
       {showFullContent && (
         <React.Suspense

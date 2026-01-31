@@ -1,17 +1,26 @@
-import React, { createContext, useContext, useState, useRef } from "react";
+import { createContext, useContext, useState, useRef, useEffect } from "react";
 import { fetchAcceptedPosts } from "../apis/blog-api";
 import logError from "../utils/logError";
 import { useQuery, useQueryClient } from "react-query";
+import { useAuth } from "./AuthContext.jsx";
+import socket from "../utils/socket.js";
+import useNotificationSound from "../hooks/userNotificationSound.js";
 
-const BlogPostsContext = createContext();
+export const BlogPostsContext = createContext();
 
 export const BlogPostsProvider = ({ children }) => {
+  const { userData, isAuth } = useAuth();
+  const notificationSound = useNotificationSound();
+
+  // --- Blog List State ---
   const [allPostsLoaded, setAllPostsLoaded] = useState(false);
   const searchQuery = useRef("");
   const [postsToDisplay, setPostsToDisplay] = useState(1);
   const [isSearch, setIsSearch] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const queryClient = useQueryClient();
+
+  // --- Blog List Query ---
   const { data, isFetching, isError } = useQuery(
     ["acceptedPosts", postsToDisplay],
     () => fetchAcceptedPosts(postsToDisplay),
@@ -30,8 +39,45 @@ export const BlogPostsProvider = ({ children }) => {
       },
     },
   );
-  console.log("🚀 ~ BlogPostsProvider ~ data:", data);
 
+  // --- Real-time Notification Handler ---
+  useEffect(() => {
+    if (!isAuth || !userData) return;
+    const handler = (notification) => {
+      const id = notification._id;
+      notificationSound.play(id);
+      queryClient.setQueryData(["notifications"], (oldData) => {
+        if (!oldData) {
+          return {
+            pages: [{ notifications: [notification], unread: 1 }],
+            pageParams: [],
+          };
+        }
+        const exists = oldData.pages.some((page) =>
+          page.notifications.some((n) => n._id === id),
+        );
+        if (exists) return oldData;
+        return {
+          ...oldData,
+          pages: [
+            {
+              ...oldData.pages[0],
+              notifications: [notification, ...oldData.pages[0].notifications],
+              unread: (oldData.pages[0].unread || 0) + 1,
+            },
+            ...oldData.pages.slice(1),
+          ],
+        };
+      });
+      setTimeout(() => {
+        queryClient.invalidateQueries(["acceptedPosts"]);
+      }, 1000);
+    };
+    socket.on("newBlogPost", handler);
+    return () => socket.off("newBlogPost", handler);
+  }, [queryClient, isAuth, userData, notificationSound]);
+
+  // --- Context Value ---
   const contextValue = {
     acceptedPosts: data,
     loading: isFetching,
@@ -45,6 +91,7 @@ export const BlogPostsProvider = ({ children }) => {
     setIsSearch,
     setIsSearching,
     isSearching,
+    socket,
   };
 
   return (

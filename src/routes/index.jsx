@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import React from "react";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { BlogPostsProvider } from "../contexts/BlogsContext.jsx";
+import NotificationPage from "../components/NotificationPage.jsx";
 
 const Teachers = React.lazy(() => import("../components/pages/Teachers"));
 const Students = React.lazy(
@@ -111,6 +112,29 @@ const router = createBrowserRouter([
               <BlogPostsProvider>
                 <Blogs />
               </BlogPostsProvider>
+            ),
+          },
+          {
+            path: "blogs/:blogId",
+            element: (
+              <BlogPostsProvider>
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  {React.createElement(
+                    React.lazy(
+                      () =>
+                        import("../components/pages/Blogs/BlogPostPage.jsx"),
+                    ),
+                  )}
+                </React.Suspense>
+              </BlogPostsProvider>
+            ),
+          },
+          {
+            path: "notifications",
+            element: (
+              <ProtectedRoute>
+                <NotificationPage />
+              </ProtectedRoute>
             ),
           },
           {

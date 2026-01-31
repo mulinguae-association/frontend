@@ -11,7 +11,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    debug: false,
+    debug: import.meta.env.DEV,
     supportedLngs: [
       "ar",
       "en",
@@ -33,7 +33,7 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    ns: ["global", "contact", "common"],
+    ns: ["global", "contact", "common", "notifications"],
     defaultNS: "global",
     fallbackNS: "global",
     detection: {
@@ -47,7 +47,7 @@ i18n
     },
     backend: {
       backends: [
-        // LocalStorageBackend,
+        //  LocalStorageBackend,
         HttpBackend,
       ],
       backendOptions: [

@@ -1,0 +1,7 @@
+{
+  "notifications": {
+    "blogAdded": "<author>@{{author}}</author> added a new blog post: {{blogTitle}}",
+    "blogAccepted": "Your blog post '{{blogTitle}}' has been accepted!"
+  },
+  "defaultMessage": "You have a new notification."
+}
