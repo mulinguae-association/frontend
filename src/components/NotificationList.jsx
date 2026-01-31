@@ -8,7 +8,7 @@ const NotificationList = ({
   lastElementRef,
 }) => {
   return (
-    <ul style={style}>
+    <ul className="notification-list" style={style}>
       {notifications.map((note, idx) => {
         const isLast = idx === notifications.length - 1;
         return (

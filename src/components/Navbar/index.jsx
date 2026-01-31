@@ -1,6 +1,7 @@
 // Navbar.js
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import useWindowResize from "../../hooks/useWindowResize";
 import "./Navbar.scss";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link, useNavigate } from "react-router-dom";
@@ -46,6 +47,7 @@ const Navbar = () => {
   const { notifications = [], setNotifications } =
     useContext(BlogPostsContext) || {};
 
+  const { width } = useWindowResize();
   useEffect(() => {
     // Show intro only on first visit
     try {
@@ -57,25 +59,15 @@ const Navbar = () => {
     } catch (e) {
       // ignore storage errors
     }
-    const handleWindowResize = () => {
-      if (window.innerWidth <= 991) {
-        contentRef.current.classList.add("rtl");
-        logoRef.current.classList.add("rtl");
-      } else {
-        contentRef.current.classList.remove("rtl");
-        logoRef.current.classList.remove("rtl");
-        setMenuOpen(false);
-      }
-    };
-
-    handleWindowResize(); // Check initial window width
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, [contentRef, logoRef, navRef]);
+    if (width <= 991) {
+      contentRef.current.classList.add("rtl");
+      logoRef.current.classList.add("rtl");
+    } else {
+      contentRef.current.classList.remove("rtl");
+      logoRef.current.classList.remove("rtl");
+      setMenuOpen(false);
+    }
+  }, [width, contentRef, logoRef, navRef]);
 
   return (
     <nav className={`navbar`}>
@@ -104,14 +96,14 @@ const Navbar = () => {
               notifications={notifications}
               setNotifications={setNotifications}
             />
-            <Link
+            {/* <Link
               to={`/${i18n.language}/contact`}
               name="join us"
               className="cta-button"
               aria-label=" Join Mulinguae"
             >
               {t("joinBtn")}
-            </Link>
+            </Link> */}
             <button
               className="cta-outline watch-intro"
               onClick={() => setShowIntro(true)}
@@ -120,19 +112,29 @@ const Navbar = () => {
             </button>
             <LanguageSwitcher className="custom-dropdown" />
           </div>
-          <div
-            role="button"
-            tabIndex={0}
-            aria-label="Toggle menu button to change language"
-            id="burger_menu"
-            className={menuOpen ? "open" : ""}
-            onClick={handleBurgerMenu}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          {typeof window !== "undefined" && window.innerWidth <= 991 && (
+          {/* Show NotificationBell next to burger menu on mobile */}
+          {width <= 991 && (
+            <div className="mobile-bell-burger">
+              <NotificationBell
+                notifications={notifications}
+                setNotifications={setNotifications}
+              />
+              <div
+                role="button"
+                tabIndex={0}
+                aria-label="Toggle menu button to change language"
+                id="burger_menu"
+                className={menuOpen ? "open" : ""}
+                onClick={handleBurgerMenu}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          )}
+          {/* Burger menu is now rendered with NotificationBell above for mobile */}
+          {width <= 991 && (
             <React.Suspense>
               <Sidebar setMenuOpen={setMenuOpen} t={t} menuOpen={menuOpen} />
             </React.Suspense>
