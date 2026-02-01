@@ -1,4 +1,5 @@
 import React, { useRef, useCallback, useState } from "react";
+import { FaTimes } from "react-icons/fa";
 import "./BlogPopup.scss";
 import { useCommentEditState } from "../../HelperComponents/useCommentEditState";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
@@ -8,6 +9,7 @@ import sanitizeHtml from "../../../utils/sanitizeHtml";
 import { useTranslation } from "react-i18next";
 import SkeletonComment from "../../Skeletons/SkeletonComment";
 import ShowMoreRepliesBtn from "./comments/ShowMoreRepliesBtn";
+import useLockBodyScroll from "../../useLockBodyScroll.js";
 
 const BlogPopup = ({
   blog,
@@ -19,6 +21,7 @@ const BlogPopup = ({
   isFetching,
   hasNextPage,
 }) => {
+  useLockBodyScroll(show);
   const { userData } = useAuth();
   const { t } = useTranslation("pages/blogs");
   const { isEditComment, handleEdit, setIsEditComment, editCommentId } =
@@ -37,7 +40,7 @@ const BlogPopup = ({
       });
       if (node) observer.current.observe(node);
     },
-    [hasNextPage, fetchNextPage, isFetching]
+    [hasNextPage, fetchNextPage, isFetching],
   );
 
   return (
@@ -91,7 +94,7 @@ const BlogPopup = ({
                 </div>
               ) : (
                 ""
-              )
+              ),
             )}
 
             {loading && (
@@ -112,13 +115,22 @@ const BlogPopup = ({
               )}
             </div>
 
-            <button className="popup_close" onClick={() => show(false)}>
+            <button
+              className="popup_close"
+              onClick={() => show(false)}
+              aria-label="Close"
+            >
+              <FaTimes size={18} style={{ verticalAlign: "middle" }} />{" "}
               {t("showLessComments")}
             </button>
           </div>
         )}
-        <button onClick={() => show(false)} className="blog_close">
-          x
+        <button
+          onClick={() => show(false)}
+          className="blog_close"
+          aria-label="Close"
+        >
+          <FaTimes size={22} />
         </button>
       </div>
     </div>

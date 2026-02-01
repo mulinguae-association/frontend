@@ -74,6 +74,10 @@
   font-size: 1.5rem;
   cursor: pointer;
   border-radius: 50%;
+  color: firebrick;
+  &:hover {
+    color: red;
+  }
 }
 
 .drawer-content {

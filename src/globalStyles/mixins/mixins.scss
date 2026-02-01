@@ -14,10 +14,12 @@
   $justifyContent: null,
   $alignItems: null,
   $justifyItems: null,
-  $alignSelf: null
+  $alignSelf: null,
+  $gap: null
 ) {
   display: $display;
   flex-direction: $direction;
+  gap: $gap;
 
   @if $placeContent == null {
     @if $alignContent {

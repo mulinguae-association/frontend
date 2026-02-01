@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState, useMemo } from "react";
+import { FaTimes } from "react-icons/fa";
 import "./IntroVideoModal.scss";
 import { useTranslation } from "react-i18next";
 import { resolveForDevice } from "../../utils/videoUtils";
 import IntroVideoPlayerVjs from "./IntroVideoPlayerVjs";
+import useLockBodyScroll from "../useLockBodyScroll";
 
 const IntroVideoModal = ({
   show,
@@ -20,7 +22,7 @@ const IntroVideoModal = ({
 
   const captionKey = useMemo(
     () => JSON.stringify(captionTracks || {}),
-    [captionTracks]
+    [captionTracks],
   );
 
   // Resolve device-appropriate URL
@@ -75,8 +77,8 @@ const IntroVideoModal = ({
       (playerRef.current.getPlayer
         ? playerRef.current.getPlayer()
         : playerRef.current.getInternalPlayer
-        ? playerRef.current.getInternalPlayer()
-        : playerRef.current);
+          ? playerRef.current.getInternalPlayer()
+          : playerRef.current);
     if (!internalPlayer) return;
     if (show) {
       try {
@@ -106,6 +108,7 @@ const IntroVideoModal = ({
     onClose && onClose();
   };
 
+  useLockBodyScroll(show);
   if (!show) return null;
 
   const tracksForPlayer =
@@ -134,7 +137,7 @@ const IntroVideoModal = ({
           onClick={handleClose}
           aria-label="Close intro"
         >
-          ×
+          <FaTimes size={28} />
         </button>
         <div className="intro-video-wrap">
           <div className="react-player-wrap">

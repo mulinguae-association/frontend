@@ -4,6 +4,7 @@ import CommentForm from "./comments/CommentForm";
 import "./comments/comment.scss";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import BlogHeader from "./BlogHeader";
+import ShareButton from "../../ShareButton";
 import BlogContent from "./BlogContent";
 import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
@@ -107,18 +108,27 @@ const BlogPost = ({ blog, list, setBlog }) => {
 
   // check language to change style and direction
   const lang = detectLanguage(
-    (blog?.content ? blog.content.slice(0, 25) : "") ||
-      (blog?.title ? blog.title[0] : "") ||
-      (blog?.subTitle ? blog.subTitle[0] : "") ||
-      "",
+    blog?.content.slice(0, 25) || blog.title[0] || blog.subTitle[0] || "",
   );
-  const ArUR = ["ar", "ur"]?.includes(lang) || false;
+  const ArUR = ["ar", "ur"]?.includes(lang);
+  const blogUrl = window.location.origin + `/${lang}/pages/blogs/` + blog._id;
+  // const blogImage = blog.image || blog.coverImage || blog.thumbnail || "";
+  const blogDescription = blog?.subTitle || blog?.content.slice(0, 100);
+
   return (
     <article
       style={ArUR ? { direction: "rtl" } : { direction: "ltr" }}
       className="blog-post"
     >
-      <BlogHeader blog={blog} />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <BlogHeader blog={blog} />
+      </div>
       <BlogContent
         blog={blog}
         ArUR={ArUR}
@@ -136,22 +146,31 @@ const BlogPost = ({ blog, list, setBlog }) => {
         list={list}
       />
       {showAllComments && <div className="overlay"></div>}
-      {/* Delete Blog Post Button */}
-      {isAuth &&
-        (blog.authorId === userData?.userId || userData?.role === "admin") && (
-          <button
-            style={
-              ArUR
-                ? { left: "15px", right: "unset" }
-                : { left: "unset", right: "15px" }
-            }
-            onClick={() => setShowModal(true)}
-            className="remove-button"
-            disabled={isBtnLoading["RemoveBlogPost"]}
-          >
-            x
-          </button>
-        )}
+      {/* action Blog Post Buttons */}
+      <div className="blog-action-btns">
+        <ShareButton
+          url={blogUrl}
+          title={blog.title}
+          description={blogDescription}
+          blogId={blog._id}
+        />
+        {isAuth &&
+          (blog.authorId === userData?.userId ||
+            userData?.role === "admin") && (
+            <button
+              style={
+                ArUR
+                  ? { left: "15px", right: "unset" }
+                  : { left: "unset", right: "15px" }
+              }
+              onClick={() => setShowModal(true)}
+              className="remove-button"
+              disabled={isBtnLoading["RemoveBlogPost"]}
+            >
+              x
+            </button>
+          )}
+      </div>
 
       {/* Comment Form */}
       <CommentForm blogId={blog._id} />
