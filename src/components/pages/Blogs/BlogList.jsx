@@ -1,4 +1,10 @@
-import React, { useRef, useCallback, useState, useMemo } from "react";
+import React, {
+  useRef,
+  useCallback,
+  useState,
+  useMemo,
+  useEffect,
+} from "react";
 import BlogPost from "./BlogPost";
 import {
   AutoSizer,
@@ -24,8 +30,14 @@ const BlogList = ({ acceptedPosts }) => {
       }
       setWindowWidth({ width });
     },
-    [windowWidth, clearCache]
+    [windowWidth, clearCache],
   );
+
+  // Only clear cache and re-measure when explicitly requested (e.g., after edit)
+  const handleBlogEdit = () => {
+    clearCache();
+    listRef.current?.recomputeRowHeights();
+  };
 
   const padding = useMemo(() => (isMobile ? `10px 0` : `30px 0`), [isMobile]);
 
@@ -53,13 +65,17 @@ const BlogList = ({ acceptedPosts }) => {
               }}
               onLoad={measure}
             >
-              <BlogPost blog={blog} list={measure} />
+              <BlogPost
+                blog={blog}
+                list={measure}
+                onBlogEdit={handleBlogEdit}
+              />
             </div>
           )}
         </CellMeasurer>
       );
     },
-    [acceptedPosts, padding, minHeight, cache]
+    [acceptedPosts, padding, minHeight, cache],
   );
 
   return (

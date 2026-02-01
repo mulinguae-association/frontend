@@ -11,23 +11,27 @@ import { useAuth } from "../../../contexts/AuthContext.jsx";
 import InteractionComponent from "./interaction/InteractionComments";
 import { useRemoveBlogMutation } from "../../../apis/mutations/blogs/removeBlog";
 import { detectLanguage } from "../../../utils/detectLanguage";
-import { BiLoaderAlt } from "react-icons/bi";
+import { BiLoaderAlt, BiPencil, BiTrash } from "react-icons/bi";
 import { useCache } from "../../../contexts/BlogsCache";
 import {
   getAcceptedComments,
   getRemainingAcceptedReplies,
 } from "../../../apis/blog-api";
 import { useInfiniteQuery } from "react-query";
+import { useNavigate } from "react-router";
+import { XIcon } from "react-share";
+import { FaTrash } from "react-icons/fa";
 const BlogPopup = React.lazy(() => import("./BlogPopup"));
 const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
 
-const BlogPost = ({ blog, list, setBlog }) => {
+const BlogPost = ({ blog, list, setBlog, onBlogEdit }) => {
   const { clearCache } = useCache();
   const [showFullContent, setShowFullContent] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
   const { isBtnLoading } = useGlobal();
   const { userData, isAuth } = useAuth();
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   // get accepted comments
   const { data, fetchNextPage, isFetching, hasNextPage } = useInfiniteQuery(
@@ -157,18 +161,30 @@ const BlogPost = ({ blog, list, setBlog }) => {
         {isAuth &&
           (blog.authorId === userData?.userId ||
             userData?.role === "admin") && (
-            <button
-              style={
-                ArUR
-                  ? { left: "15px", right: "unset" }
-                  : { left: "unset", right: "15px" }
-              }
-              onClick={() => setShowModal(true)}
-              className="remove-button"
-              disabled={isBtnLoading["RemoveBlogPost"]}
-            >
-              x
-            </button>
+            <>
+              <button
+                className="edit-button"
+                onClick={() =>
+                  navigate("/en/pages/blogs/create-new-blog", {
+                    state: { blog },
+                  })
+                }
+              >
+                <BiPencil size={20} />
+              </button>
+              <button
+                style={
+                  ArUR
+                    ? { left: "15px", right: "unset" }
+                    : { left: "unset", right: "15px" }
+                }
+                onClick={() => setShowModal(true)}
+                className="remove-button"
+                disabled={isBtnLoading["RemoveBlogPost"]}
+              >
+                <FaTrash size={15} />
+              </button>
+            </>
           )}
       </div>
 

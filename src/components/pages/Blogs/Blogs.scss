@@ -286,15 +286,14 @@
         @include abs(15px 15px 0 0);
         font-size: 15px;
         font-weight: bold;
-
         padding: 5px 10px;
         color: $white-color;
         cursor: pointer;
-        @include flexbox($alignItems: "center", $gap: 20px);
-        .remove-button {
+        @include flexbox($alignItems: "center", $gap: 15px);
+        .remove-button,
+        .edit-button {
           width: 32px;
           height: 32px;
-          background-color: #dc3545;
           color: $white-color;
           box-shadow:
             0 8px 15px $blue-shadow-light,
@@ -302,10 +301,17 @@
           border: none;
           cursor: pointer;
         }
+        .remove-button {
+          background-color: #dc3545;
+        }
+        .edit-button {
+          background-color: #ffc107;
+        }
         .share-icon-btn {
           color: #444;
         }
         .remove-button,
+        .edit-button,
         .share-icon-btn {
           border-radius: 10px;
         }
