@@ -225,13 +225,13 @@
     &.notification-read {
       background: $white-color;
     }
-
-    &.no-notifications {
-      color: $mediumgray-color;
-      text-align: center;
-      padding: 0.5rem 0;
-    }
   }
+}
+
+.no-notifications {
+  color: $mediumgray-color;
+  text-align: center;
+  padding: 0.5rem 0;
 }
 
 .notification-footer {
