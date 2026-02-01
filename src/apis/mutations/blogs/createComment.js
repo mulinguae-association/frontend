@@ -2,7 +2,6 @@ import { useMutation, useQueryClient } from "react-query";
 import { createComment } from "../../blog-api";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
-import { useCache } from "../../../contexts/BlogsCache";
 import logError from "../../../utils/logError";
 import handleError from "../../../utils/handleError";
 import { notifyError } from "../../../components/Notify";
@@ -11,7 +10,6 @@ export const useCreateCommentMutation = () => {
   const queryClient = useQueryClient();
   const { userData } = useAuth();
   const { setNotificationPopup, setButtonLoading } = useGlobal();
-  const { clearCache } = useCache();
 
   // Assuming userData contains user roles or privileges
   const isAdmin = userData?.role === "admin"; // Or any other logic to determine admin role
@@ -32,11 +30,6 @@ export const useCreateCommentMutation = () => {
     ({ blogId, commentData }) => createComment(blogId, commentData),
     {
       onMutate: async ({ blogId, commentData }) => {
-        console.log(
-          "🚀 ~ useCreateCommentMutation ~ commentData:",
-          commentData
-        );
-        console.log("🚀 ~ useCreateCommentMutation ~ commentData:", blogId);
         await queryClient.cancelQueries(["comments", blogId]);
         const previousComments = queryClient.getQueryData(["comments", blogId]);
         setButtonLoading(`postComment_${blogId}`, true);
@@ -52,13 +45,10 @@ export const useCreateCommentMutation = () => {
           updateCommentsData(blogId, tempComment);
         }
         // updateQueryData(blogId, tempComment); // update last comment in the blog post
-        clearCache();
 
         return { previousComments, tempCommentId: tempComment._id };
       },
       onSuccess: ({ status, data }, { blogId, commentData }, context) => {
-        console.log(status, data);
-
         const { tempCommentId } = context;
         if (isAdmin) {
           queryClient.setQueryData(["comments", blogId], (prevComments) => ({
@@ -66,7 +56,7 @@ export const useCreateCommentMutation = () => {
             pages: prevComments.pages.map((page) => ({
               ...page,
               acceptedComments: page.acceptedComments.map((comment) =>
-                comment._id === tempCommentId ? data.comment : comment
+                comment._id === tempCommentId ? data.comment : comment,
               ),
             })),
           }));
@@ -79,7 +69,7 @@ export const useCreateCommentMutation = () => {
       onError: (err, { blogId }, context) => {
         queryClient.setQueryData(
           ["comments", blogId],
-          context.previousComments
+          context.previousComments,
         );
         logError(err);
         notifyError(handleError(err));
@@ -87,6 +77,6 @@ export const useCreateCommentMutation = () => {
       onSettled: (data, error, { blogId }) => {
         setButtonLoading(`postComment_${blogId}`, false);
       },
-    }
+    },
   );
 };

@@ -11,32 +11,30 @@ import { useAuth } from "../../../contexts/AuthContext.jsx";
 import InteractionComponent from "./interaction/InteractionComments";
 import { useRemoveBlogMutation } from "../../../apis/mutations/blogs/removeBlog";
 import { detectLanguage } from "../../../utils/detectLanguage";
-import { BiLoaderAlt, BiPencil, BiTrash } from "react-icons/bi";
-import { useCache } from "../../../contexts/BlogsCache";
+import { BiLoaderAlt, BiPencil } from "react-icons/bi";
 import {
   getAcceptedComments,
   getRemainingAcceptedReplies,
 } from "../../../apis/blog-api";
 import { useInfiniteQuery } from "react-query";
 import { useNavigate } from "react-router";
-import { XIcon } from "react-share";
 import { FaTrash } from "react-icons/fa";
 const BlogPopup = React.lazy(() => import("./BlogPopup"));
 const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
 
-const BlogPost = ({ blog, list, setBlog, onBlogEdit }) => {
-  const { clearCache } = useCache();
+const BlogPost = ({ blog }) => {
   const [showFullContent, setShowFullContent] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
   const { isBtnLoading } = useGlobal();
   const { userData, isAuth } = useAuth();
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-
+  console.log("Rendering BlogPost:", blog?._id);
   // get accepted comments
   const { data, fetchNextPage, isFetching, hasNextPage } = useInfiniteQuery(
-    ["comments", blog._id],
-    ({ pageParam = 1 }) => getAcceptedComments({ blogId: blog._id, pageParam }),
+    ["comments", blog?._id],
+    ({ pageParam = 1 }) =>
+      getAcceptedComments({ blogId: blog?._id, pageParam }),
     {
       getNextPageParam: (lastPage, allPages) => {
         return lastPage.acceptedComments.length
@@ -72,47 +70,29 @@ const BlogPost = ({ blog, list, setBlog, onBlogEdit }) => {
 
   const totalComments = data?.pages[0].totalComments;
 
-  // Ensure the row is measured after initial mount so it gets a non-zero height
-  useEffect(() => {
-    if (typeof list === "function") {
-      try {
-        list();
-      } catch (_) {
-        /* noop */
-      }
-    }
-  }, [list]);
-
   useEffect(() => {
     if (showAllComments || showFullContent) {
       document.body.style.overflow = "hidden"; // Disable scrolling on the body
     } else {
       document.body.style.removeProperty("overflow");
     }
-    // Re-measure when expanded/collapsed content may change height
-    if (typeof list === "function") {
-      try {
-        list();
-      } catch (_) {
-        /* noop */
-      }
-    }
+
     return () => {
       document.body.style.removeProperty("overflow");
     };
-  }, [showAllComments, showFullContent, list]);
+  }, [showAllComments, showFullContent]);
 
   const { mutate: refuseBlog } = useRemoveBlogMutation(setShowModal);
   const handleRemoveBlogPost = async (blogId) => {
     refuseBlog(blogId);
-    clearCache();
+    // clearCache();
   };
   const checkStatus = comments && comments[0]?.status === "accepted";
   // const checkStatus = blog?.status === "accepted";
 
   // check language to change style and direction
   const lang = detectLanguage(
-    blog?.content.slice(0, 25) || blog.title[0] || blog.subTitle[0] || "",
+    blog?.content.slice(0, 25) || blog?.title[0] || blog?.subTitle[0] || "",
   );
   const ArUR = ["ar", "ur"]?.includes(lang);
   const blogUrl = window.location.origin + `/${lang}/pages/blogs/` + blog._id;
@@ -147,7 +127,7 @@ const BlogPost = ({ blog, list, setBlog, onBlogEdit }) => {
         totalComments={totalComments}
         checkStatus={checkStatus}
         blogId={blog._id}
-        list={list}
+        // list={list}
       />
       {showAllComments && <div className="overlay"></div>}
       {/* action Blog Post Buttons */}
@@ -191,7 +171,7 @@ const BlogPost = ({ blog, list, setBlog, onBlogEdit }) => {
       {/* Comment Form */}
       <CommentForm blogId={blog._id} />
       <div className="blogs_interaction">
-        <InteractionComponent modelType="blog" reply={blog} setBlog={setBlog} />
+        <InteractionComponent modelType="blog" reply={blog} />
       </div>
       {showFullContent && (
         <React.Suspense

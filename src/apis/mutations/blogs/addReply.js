@@ -5,12 +5,10 @@ import { handleReplySubmit } from "../../blog-api";
 import { notifyError } from "../../../components/Notify";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
-import { useCache } from "../../../contexts/BlogsCache";
 
 export const useAddReplyMutation = (setReplyContent) => {
   const { userData } = useAuth();
   const { setButtonLoading, setNotificationPopup } = useGlobal();
-  const { clearCache } = useCache();
   const queryClient = useQueryClient();
   const isAdmin = userData?.role === "admin";
   const newReply = {
@@ -72,7 +70,7 @@ export const useAddReplyMutation = (setReplyContent) => {
             );
           }
         }
-        clearCache();
+        // clearCache();
         return { previousPosts, tempReplyId: newReply._id };
       },
       onSuccess: (res, { parentCommentId }, context) => {

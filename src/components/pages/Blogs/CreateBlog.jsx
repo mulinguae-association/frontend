@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TextEditor from "../../../TextEditor";
 import "./Blogs.scss";
 import { notifyError } from "../../Notify";
@@ -123,7 +123,7 @@ const CreateBlog = () => {
       <div className="container">
         <form className="form-container" onSubmit={handleSubmit}>
           <h1>
-            {isEditMode ? t("editBlog.name") : t("createABlog.name")}
+            {isEditMode ? t("editABlog.name") : t("createABlog.name")}
             <span className="special">{t("createABlog.special")}</span>
           </h1>
           {!formState.preview && (

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import debounce from "lodash/debounce";
 import BlogsHeader from "./BlogsHeader";
 import BlogList from "./BlogList";
@@ -6,7 +6,6 @@ import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
 import "./Blogs.scss";
 import { useBlogPosts } from "../../../contexts/BlogsContext.jsx";
 import { useSearchMutation } from "../../../apis/mutations/blogs/searchBlog";
-import { CacheProvider } from "../../../contexts/BlogsCache";
 
 const Blogs = () => {
   const {
@@ -46,6 +45,22 @@ const Blogs = () => {
       debouncedSearch(searchQuery.current);
     }
   };
+
+  const loadMore = useCallback(() => {
+    return setTimeout(() => {
+      setPostsToDisplay((prevPostsToDisplay) =>
+        counterRef.current <= 2
+          ? prevPostsToDisplay + 3
+          : prevPostsToDisplay + 4,
+      );
+    }, 500);
+  }, [setPostsToDisplay]);
+
+  useEffect(() => {
+    const timeout = loadMore();
+    return () => clearTimeout(timeout);
+  }, []);
+
   useEffect(() => {
     const handleScrollToFooter = debounce((entries) => {
       const footerEntry = entries[0];
@@ -58,7 +73,7 @@ const Blogs = () => {
         setPostsToDisplay((prevPostsToDisplay) =>
           counterRef.current <= 2
             ? prevPostsToDisplay + 3
-            : prevPostsToDisplay + 4
+            : prevPostsToDisplay + 4,
         );
       }
     }, 200);
@@ -86,9 +101,9 @@ const Blogs = () => {
           handleSearchKeyPress={handleSearchKeyPress}
           handleSearchChange={handleSearchChange}
         />
-        <CacheProvider>
-          <BlogList acceptedPosts={acceptedPosts} />
-        </CacheProvider>
+
+        <BlogList acceptedPosts={acceptedPosts} loadMore={loadMore} />
+
         {errorDisplayPosts ? (
           <p className="finished-message">
             {"An error occurred while fetching blog posts."}

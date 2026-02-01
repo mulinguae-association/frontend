@@ -4,7 +4,6 @@ import { fetchBlogPostById } from "../../../apis/blog-api";
 import BlogPost from "./BlogPost";
 import "./Blogs.scss";
 import BlogsHeader from "./BlogsHeader";
-import { CacheProvider } from "../../../contexts/BlogsCache";
 import { BiLoaderCircle } from "react-icons/bi";
 
 const BlogPostPage = () => {
@@ -53,9 +52,7 @@ const BlogPostPage = () => {
     <main style={{ paddingBottom: "50px" }} className="Blogs">
       <BlogsHeader hideSearch style={{ padding: "10px" }} />
       <div className="blogs_content">
-        <CacheProvider>
-          <BlogPost blog={blog} setBlog={setBlog} />
-        </CacheProvider>
+        <BlogPost blog={blog} setBlog={setBlog} />
       </div>
     </main>
   );

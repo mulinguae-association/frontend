@@ -4,6 +4,10 @@
     "name": "Create A",
     "special": "Blog"
   },
+  "editABlog": {
+    "name": "Edit ",
+    "special": "Blog"
+  },
   "Auth": {
     "login": "Login",
     "register": "Register"

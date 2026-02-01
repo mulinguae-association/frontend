@@ -11,7 +11,6 @@ const CommentsSection = ({
   totalComments,
   setShowAllComments,
   blogId,
-  list,
   comments,
   lastReplyData,
 }) => {
@@ -51,7 +50,6 @@ const CommentsSection = ({
               handleEdit={handleEdit}
               setIsEditComment={setIsEditComment}
               isEditComment={isEditComment}
-              list={list}
             />
 
             {lastReplyData &&

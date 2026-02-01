@@ -182,11 +182,7 @@
   .blogs_content {
     margin: 50px 0 0 0;
     font-size: 16px;
-    @media (max-width: 767px) {
-      & {
-        margin: 0;
-      }
-    }
+
     .List {
       will-change: unset !important;
     }
@@ -199,12 +195,12 @@
       border: 2px solid #00a2ff42;
       box-shadow: 0 4px 15px $blue-shadow-light;
       width: 80%;
-      margin: 0px auto;
-      background: rgba(#fff, 0.8);
+      margin: 0px auto 20px auto;
+      background-color: $white-color;
+
       @media (max-width: 767px) {
         & {
           box-shadow: none;
-          margin: 0;
           width: 100%;
           padding: 12px 16px;
           border: none;
@@ -581,6 +577,7 @@
   border-top: 1px solid $blue-shadow-light;
   .interaction_comments {
     @include rel(0 0 0px auto);
+    min-height: 40px;
     transform: none;
     padding-top: 10px;
     direction: ltr;
