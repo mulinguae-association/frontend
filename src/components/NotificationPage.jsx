@@ -4,11 +4,15 @@ import { FaCheckDouble } from "react-icons/fa";
 import { useRef } from "react";
 import "./NotificationPage.scss";
 import { useAuth } from "../contexts/AuthContext";
+import Badge from "./Badge";
+import NotificationBell from "./NotificationBell";
+import { IoNotifications, IoNotificationsCircleOutline } from "react-icons/io5";
 
 const NotificationPage = () => {
   const { userData, isAuth } = useAuth();
   const {
     notifications,
+    unreadCount,
     hasNextPage,
     fetchNextPage,
     isFetchingNextPage,
@@ -35,50 +39,63 @@ const NotificationPage = () => {
 
   return (
     <div className="notification-page">
-      <h2 className="header" style={{ marginBottom: "1.5rem" }}>
-        All Notifications
-      </h2>
-      <div
-        className="notification-modal"
-        style={{
-          position: "static",
-          boxShadow: "none",
-          maxWidth: "100%",
-        }}
-      >
-        <div className="notification-modal-header">
-          <h4>Notifications</h4>
-          {notifications.some((n) => !n.isRead) && (
-            <button className="mark-all-read" onClick={handleMarkAllRead}>
-              <FaCheckDouble
-                style={{ marginRight: 4, verticalAlign: "middle" }}
+      <header>
+        <h1 className="title" style={{ marginBottom: "1.5rem" }}>
+          <IoNotifications color="white" /> <span>All Notifications</span>
+        </h1>
+      </header>
+      <div className="container">
+        <div
+          className="notification-modal"
+          style={{
+            position: "static",
+            boxShadow: "none",
+            maxWidth: "100%",
+          }}
+        >
+          <div className="notification-modal-header">
+            <div className="notification-header-title">
+              <h4>Notifications</h4>
+
+              {unreadCount > 0 && (
+                <Badge variant="secondary">
+                  {unreadCount} unread notification
+                  {unreadCount !== 1 ? "s" : ""}
+                </Badge>
+              )}
+            </div>
+            {notifications.some((n) => !n.isRead) && (
+              <button className="mark-all-read" onClick={handleMarkAllRead}>
+                <FaCheckDouble
+                  style={{ marginRight: 4, verticalAlign: "middle" }}
+                />
+                Mark all as read
+              </button>
+            )}
+          </div>
+          {notifications.length === 0 ? (
+            <div className="no-notifications">No notifications</div>
+          ) : (
+            <>
+              <NotificationList
+                notifications={notifications}
+                onClick={handleNotificationClick}
+                lastElementRef={lastElementRef}
               />
-              Mark all as read
-            </button>
+              {hasNextPage && (
+                <div className="notification-footer">
+                  <button
+                    className="notification-load-more"
+                    onClick={handleLoadMore}
+                    disabled={isFetchingNextPage}
+                  >
+                    {isFetchingNextPage ? "Loading..." : "Load more"}
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
-        {notifications.length === 0 ? (
-          <div className="no-notifications">No notifications</div>
-        ) : (
-          <>
-            <NotificationList
-              notifications={notifications}
-              onClick={handleNotificationClick}
-              lastElementRef={lastElementRef}
-            />
-            {hasNextPage && (
-              <div className="notification-footer">
-                <button
-                  className="notification-load-more"
-                  onClick={handleLoadMore}
-                  disabled={isFetchingNextPage}
-                >
-                  {isFetchingNextPage ? "Loading..." : "Load more"}
-                </button>
-              </div>
-            )}
-          </>
-        )}
       </div>
     </div>
   );

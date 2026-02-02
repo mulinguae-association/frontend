@@ -1,0 +1,39 @@
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  font-size: 0.95em;
+  font-weight: 600;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #2563eb;
+  line-height: 1.2;
+  vertical-align: middle;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  width: 100%;
+}
+.badge--primary {
+  background: #ffffff;
+  color: #2563eb;
+}
+.badge--secondary {
+  background: #e0e1e3;
+  color: #374151;
+}
+.badge--success {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.badge--danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.badge--warning {
+  background: #fef3c7;
+  color: #ca8a04;
+}
+.badge--info {
+  background: #cffafe;
+  color: #0891b2;
+}

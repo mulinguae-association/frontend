@@ -11,6 +11,21 @@
     font-size: clamp(1.5rem, 4vw, 2rem);
     color: $primaryDark-color;
   }
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    svg {
+      background-color: $darkBlue-color;
+      border-radius: 50%;
+      padding: 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  .notification-header-title {
+    flex-shrink: 0;
+  }
 
   ul {
     max-width: 100%;
@@ -20,6 +35,23 @@
     @media (max-width: 480px) {
       overflow: visible;
       max-height: 100%;
+    }
+    li {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #e5e7eb;
+      transition: all 0.2s;
+
+      &:hover {
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      &.unread {
+        border-color: #bfdbfe;
+        background-color: rgba(239, 246, 255, 0.3);
+      }
     }
   }
   .no-notifications {
