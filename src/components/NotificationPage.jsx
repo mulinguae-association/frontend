@@ -3,8 +3,10 @@ import { useNotifications } from "../hooks/useNotifications";
 import { FaCheckDouble } from "react-icons/fa";
 import { useRef } from "react";
 import "./NotificationPage.scss";
+import { useAuth } from "../contexts/AuthContext";
 
 const NotificationPage = () => {
+  const { userData, isAuth } = useAuth();
   const {
     notifications,
     hasNextPage,
@@ -12,7 +14,13 @@ const NotificationPage = () => {
     isFetchingNextPage,
     handleNotificationClick,
     handleMarkAllRead,
-  } = useNotifications({ type: "notifications", limit: 10 });
+  } = useNotifications({
+    type: "notifications",
+    keys: ["page"],
+    enabled: Boolean(isAuth && userData),
+    limit: 10,
+  });
+
   const lastElementRef = useRef(null);
 
   const handleLoadMore = async () => {

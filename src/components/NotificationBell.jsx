@@ -20,6 +20,7 @@ const NotificationBell = () => {
     handleMarkAllRead,
   } = useNotifications({
     type: "notifications",
+    keys: ["bell"],
     enabled: Boolean(isAuth && userData),
     limit: 10,
   });

@@ -26,6 +26,7 @@ const notificationConfig = {
 
 export function useNotifications({
   type = "notifications",
+  keys = [],
   enabled = false,
   limit = 10,
 } = {}) {
@@ -34,7 +35,7 @@ export function useNotifications({
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, refetch } =
     useInfiniteQuery(
-      type,
+      keys.length > 0 ? [type, ...keys] : type,
       ({ pageParam = 1 }) => config.apiFn({ pageParam, limit }),
       {
         getNextPageParam: config.getNextPageParam,
@@ -42,7 +43,6 @@ export function useNotifications({
         enabled,
       },
     );
-
   const notifications = data?.pages.flatMap((page) => page.notifications) || [];
   const unreadCount = data?.pages?.[0]?.unread || 0;
 
