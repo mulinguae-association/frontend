@@ -1,5 +1,5 @@
 import { format, formatDistanceToNow } from "date-fns";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 const NotificationList = ({
   notifications,
@@ -7,9 +7,15 @@ const NotificationList = ({
   style,
   lastElementRef,
 }) => {
+  const { t } = useTranslation("notifications");
   return (
     <ul className="notification-list" style={style}>
       {notifications.map((note, idx) => {
+        const rawString = t(note.messageKey, {
+          author: note.messageParams?.author,
+          blogTitle: note.messageParams?.blogTitle,
+        });
+        const stringForTitle = rawString.replace(/<\/?author>/g, "");
         const isLast = idx === notifications.length - 1;
         return (
           <li
@@ -21,6 +27,7 @@ const NotificationList = ({
           >
             <button
               className="notification-link"
+              title={stringForTitle}
               onClick={() => onClick && onClick(note)}
             >
               <div className="notification-container">

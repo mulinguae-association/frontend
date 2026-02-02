@@ -5,6 +5,9 @@
 .notification-bell-container {
   @include mixins.rel();
   display: inline-block;
+  & .popover-trigger.open {
+    max-width: 525px;
+  }
 
   .notification-bell {
     background: none;
