@@ -11,7 +11,7 @@ import { useAddBlogMutation } from "../../../apis/mutations/blogs/createBlog";
 import { useEditBlogMutation } from "../../../apis/mutations/blogs/editBlog";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router-dom";
 const CreateBlog = () => {
   const location = useLocation();
   const navigate = useNavigate();

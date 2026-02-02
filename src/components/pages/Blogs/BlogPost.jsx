@@ -29,7 +29,7 @@ const BlogPost = ({ blog }) => {
   const { userData, isAuth } = useAuth();
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-  console.log("Rendering BlogPost:", blog?._id);
+
   // get accepted comments
   const { data, fetchNextPage, isFetching, hasNextPage } = useInfiniteQuery(
     ["comments", blog?._id],
@@ -127,9 +127,10 @@ const BlogPost = ({ blog }) => {
         totalComments={totalComments}
         checkStatus={checkStatus}
         blogId={blog._id}
-        // list={list}
       />
       {showAllComments && <div className="overlay"></div>}
+      {console.log(blog)}
+      {console.log("BlogUserId", blog.userId, "UserDataId", userData?.userId)}
       {/* action Blog Post Buttons */}
       <div className="blog-action-btns">
         <ShareButton
@@ -139,7 +140,7 @@ const BlogPost = ({ blog }) => {
           blogId={blog._id}
         />
         {isAuth &&
-          (blog.authorId === userData?.userId ||
+          (blog.postedBy._id === userData?.userId ||
             userData?.role === "admin") && (
             <>
               <button

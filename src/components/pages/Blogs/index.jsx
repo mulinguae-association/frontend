@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import debounce from "lodash/debounce";
 import BlogsHeader from "./BlogsHeader";
 import BlogList from "./BlogList";
@@ -16,14 +16,7 @@ const Blogs = () => {
     searchQuery,
     setPostsToDisplay,
   } = useBlogPosts(); // Use the context hook
-  // Add these debug logs
-  console.log("BlogsPage Debug:", {
-    hasAcceptedPosts: Boolean(acceptedPosts),
-    postsLength: acceptedPosts?.length,
-    isLoading: loading,
-    hasError: errorDisplayPosts,
-    allLoaded: allPostsLoaded,
-  });
+
   const [previousQuery, setPreviousQuery] = useState("");
   const searchMutation = useSearchMutation(searchQuery);
   const counterRef = useRef(0);
@@ -45,21 +38,6 @@ const Blogs = () => {
       debouncedSearch(searchQuery.current);
     }
   };
-
-  const loadMore = useCallback(() => {
-    return setTimeout(() => {
-      setPostsToDisplay((prevPostsToDisplay) =>
-        counterRef.current <= 2
-          ? prevPostsToDisplay + 3
-          : prevPostsToDisplay + 4,
-      );
-    }, 500);
-  }, [setPostsToDisplay]);
-
-  useEffect(() => {
-    const timeout = loadMore();
-    return () => clearTimeout(timeout);
-  }, []);
 
   useEffect(() => {
     const handleScrollToFooter = debounce((entries) => {
@@ -102,7 +80,7 @@ const Blogs = () => {
           handleSearchChange={handleSearchChange}
         />
 
-        <BlogList acceptedPosts={acceptedPosts} loadMore={loadMore} />
+        <BlogList acceptedPosts={acceptedPosts} />
 
         {errorDisplayPosts ? (
           <p className="finished-message">
