@@ -50,9 +50,11 @@ const BlogPostPage = () => {
 
   return (
     <main style={{ paddingBottom: "50px" }} className="Blogs">
-      <BlogsHeader hideSearch style={{ padding: "10px" }} />
-      <div className="blogs_content">
-        <BlogPost blog={blog} setBlog={setBlog} />
+      <div className="container">
+        <BlogsHeader hideSearch style={{ padding: "10px" }} />
+        <div className="blogs_content">
+          <BlogPost blog={blog} setBlog={setBlog} />
+        </div>
       </div>
     </main>
   );

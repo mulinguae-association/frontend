@@ -1,6 +1,7 @@
 @use "../globalStyles/_colors.scss" as *;
 @use "../globalStyles/mixins/scroll" as *;
 @use "../globalStyles/mixins/mixins.scss" as mixins;
+@use "../globalStyles/animations/index.scss" as *;
 
 .notification-bell-container {
   @include mixins.rel();
@@ -258,14 +259,25 @@
   color: $medium-darkblue;
 
   .notification-view-all {
-    all: unset;
+    @extend .magical-button;
+    --magical-btn-main1: #{$darkBlue-color};
+    --magical-btn-main2: #{$darkBlue-color};
+    --magical-btn-accent1: #{$darkBlue-color};
+    --magical-btn-accent2: #{$medium-darkblue};
+    --magical-btn-text: #fff;
     display: block;
+    height: 40px;
     cursor: pointer;
     font-weight: 500;
     width: 50%;
     background: $darkBlue-color;
     color: $white-color;
     padding: 0.6rem;
-    border-radius: 8px;
+    font-size: 1rem;
+
+    &:hover {
+      background: $medium-darkblue;
+      border: none;
+    }
   }
 }

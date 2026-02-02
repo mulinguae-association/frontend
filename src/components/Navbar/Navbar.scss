@@ -1,6 +1,7 @@
 // Navbar.scss
 @use "../../globalStyles/_colors.scss" as *;
 @use "../../globalStyles/mixins/mixins.scss" as *;
+@use "../../globalStyles/animations/index.scss" as *;
 .navbar {
   background-color: $darkBlue-color;
   background: linear-gradient(2deg, $darkBlue-color 50%, $medium-darkblue);
@@ -125,8 +126,15 @@
       }
     }
     .cta-outline {
+      @extend .magical-button;
+      --magical-btn-main1: transparent;
+      --magical-btn-accent1: transparent;
+      --magical-btn-main2: #{$medium-darkblue};
+      --magical-btn-accent2: #{$medium-darkblue};
+      --magical-btn-text: #fff;
       background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: small;
+
       color: $white-color;
       padding: 0.6rem 0.9rem;
       min-width: 103.21px;

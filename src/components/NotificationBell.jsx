@@ -71,7 +71,7 @@ const NotificationBell = () => {
                   navigate(`/${lang}/pages/notifications`);
                 }}
               >
-                view all notifications
+                View All Notifications
               </button>
             </div>
           </>

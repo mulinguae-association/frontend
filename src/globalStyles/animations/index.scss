@@ -1,8 +1,122 @@
+@use "../../globalStyles/colors" as *;
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.magical-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0.85rem 2.5rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    120deg,
+    var(--magical-btn-main1, rgba($primaryDark-color, 0.92)) 0%,
+    var(--magical-btn-main2, rgba($medium-darkblue, 0.92)) 100%
+  );
+  color: var(--magical-btn-text, #fff);
+  box-shadow:
+    0 8px 32px rgba($primaryDark-color, 0.22),
+    0 1.5px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition:
+    background 0.4s,
+    box-shadow 0.3s,
+    border 0.3s,
+    transform 0.22s;
+  will-change: transform;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 999px;
+    padding: 2px;
+    background: linear-gradient(
+      270deg,
+      var(--magical-btn-main2, $medium-darkblue),
+      var(--magical-btn-accent1, $orange-color),
+      var(--magical-btn-accent2, $primary-color),
+      var(--magical-btn-main1, $primaryDark-color)
+    );
+    background-size: 400% 400%;
+    animation: magical-gradient 8s ease-in-out infinite;
+    z-index: -1;
+    filter: blur(2.5px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: rgba($white-color, 0.07);
+    z-index: 0;
+  }
+}
+.magical-button:hover {
+  background: linear-gradient(
+    120deg,
+    $medium-darkblue 0%,
+    $primaryDark-color 100%
+  );
+  box-shadow:
+    0 16px 40px rgba($primaryDark-color, 0.28),
+    0 2px 12px rgba(0, 0, 0, 0.12);
+  border: 2px solid $white-color;
+  transform: scale(1.01);
+}
+.magical-button:active {
+  transform: scale(0.98);
+}
+.magical-button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+.magical-button .loader {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  border: 2.5px solid $white-color;
+  border-top: 2.5px solid $orange-color;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  vertical-align: middle;
+  margin-right: 0.7em;
+  box-shadow:
+    0 0 8px $orange-color,
+    0 0 2px $primaryDark-color;
+}
+
+@keyframes magical-gradient {
+  0% {
+    background-position: 0% 50%;
+    background-size: 400% 400%;
+  }
+  25% {
+    background-position: 100% 0%;
+    background-size: 400% 400%;
+  }
+  50% {
+    background-position: 100% 100%;
+    background-size: 400% 400%;
+  }
+  75% {
+    background-position: 0% 100%;
+    background-size: 400% 400%;
+  }
+  100% {
+    background-position: 0% 50%;
+    background-size: 400% 400%;
   }
 }
