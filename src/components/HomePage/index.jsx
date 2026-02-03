@@ -3,6 +3,7 @@ import "./Home.scss";
 import { Link } from "react-router-dom";
 import i18n from "../../i18n";
 import { HelmetProvider } from "react-helmet-async";
+import CircleBackground from "../animations/CircleBackground";
 
 const Home = ({ imgAnimation }) => {
   const { t, ready } = useTranslation("home", { useSuspense: false });
@@ -32,6 +33,7 @@ const Home = ({ imgAnimation }) => {
           />
         </div>
         <div className="container">
+          <CircleBackground count={70} className="circle-background-home" />
           <div className="hero_content">
             <div className="hero_info">
               <div className="hero_title_container">

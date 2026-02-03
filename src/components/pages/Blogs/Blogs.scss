@@ -67,16 +67,24 @@
 
   .links {
     @include flexbox($alignItems: center, $justifyContent: space-between);
-
     a {
-      all: unset;
-      background-color: $darkBlue-color;
-      color: $white-color;
-      padding: 8px 20px;
-      cursor: pointer;
+      &.create-blog-link {
+        @extend .magical-button;
+        --magical-btn-main1: #{$medium-darkblue};
+        --magical-btn-accent1: #{$medium-darkblue};
+        --magical-btn-main2: #{$darkBlue-color};
+        --magical-btn-accent2: #{$darkBlue-color};
+        --magical-btn-text: #{$white-color};
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border: 1px solid $white-color;
+      }
+      display: block;
+      text-decoration: none;
       border-radius: 30px;
-      box-shadow: 0 6px 10px #0000003b;
       font-weight: bold;
+      box-shadow: 0 6px 10px #0000003b;
+      cursor: pointer;
       flex-shrink: 0;
     }
     & > a {

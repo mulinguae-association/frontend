@@ -1,6 +1,7 @@
 @use "../../globalStyles/_sharedStyles.scss" as *;
 @use "../../globalStyles/mixins/mixins.scss" as *;
 @use "../../globalStyles/colors" as *;
+@use "../../globalStyles/animations/index.scss" as *;
 
 .contact {
   text-align: center;
@@ -274,12 +275,17 @@
         }
 
         button[type="submit"] {
+          @extend .magical-button;
+          --magical-btn-main1: #{$darkBlue-color};
+          --magical-btn-main2: #{$darkBlue-color};
+          --magical-btn-accent1: #{$darkBlue-color};
+          --magical-btn-accent2: #{$primary-color};
+          --magical-btn-text: #fff;
           cursor: pointer;
-          background-color: $green-color;
           border: 2px solid #fff;
           width: -moz-fit-content;
           width: fit-content;
-          min-height: 48px;
+          margin: 0 auto;
           padding: 10px 3rem;
           border-radius: 30px;
           font-weight: bold;

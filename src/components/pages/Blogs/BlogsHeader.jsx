@@ -9,7 +9,7 @@ import logError from "../../../utils/logError";
 import { useQueryClient } from "react-query";
 import handleError from "../../../utils/handleError";
 import { useTranslation } from "react-i18next";
-import { BiLoaderCircle } from "react-icons/bi";
+import { BiLoaderCircle, BiPlusCircle } from "react-icons/bi";
 const UserMenu = React.lazy(() => import("./UserMenu"));
 
 const BlogsHeader = ({
@@ -44,8 +44,14 @@ const BlogsHeader = ({
     <div className="blogs_header" style={style}>
       <div className="links button-font">
         {!hideCreateBlog && (
-          <Link to={`/${i18n.language}/pages/blogs/create-new-blog`}>
-            {`+ ${t("createABlog.name")} ${t("createABlog.special")}`}
+          <Link
+            to={`/${i18n.language}/pages/blogs/create-new-blog`}
+            className="create-blog-link"
+          >
+            <BiPlusCircle
+              style={{ verticalAlign: "middle", marginRight: 6, fontSize: 22 }}
+            />
+            {t("createABlog.name")} {t("createABlog.special")}
           </Link>
         )}
         {!hideSearch && (

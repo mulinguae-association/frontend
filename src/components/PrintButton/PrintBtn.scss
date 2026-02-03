@@ -1,5 +1,6 @@
 @use "../../globalStyles/_colors.scss" as *;
 @use "../../globalStyles/mixins/mixins.scss" as *;
+@use "../../globalStyles/animations/index.scss" as *;
 .print_container {
   width: 100%;
   @include flexbox(
@@ -8,10 +9,15 @@
     $direction: column
   );
   .print_btn {
-    all: unset;
-    color: $secondary-color;
+    @extend .magical-button;
+    --magical-btn-main1: #{$darkBlue-color};
+    --magical-btn-main2: #{$darkBlue-color};
+    --magical-btn-accent1: #{$darkBlue-color};
+    --magical-btn-accent2: #{$primary-color};
+    --magical-btn-text: #fff;
+    // color: $secondary-color;
     background-color: $darkBlue-color;
-    min-width: 100px;
+    min-width: 150px;
     width: 80px;
     border-radius: 50px;
     padding: 8px 15px;

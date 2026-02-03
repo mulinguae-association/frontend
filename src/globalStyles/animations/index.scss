@@ -45,10 +45,10 @@
     padding: 2px;
     background: linear-gradient(
       270deg,
-      var(--magical-btn-main2, $medium-darkblue),
-      var(--magical-btn-accent1, $orange-color),
-      var(--magical-btn-accent2, $primary-color),
-      var(--magical-btn-main1, $primaryDark-color)
+      var(--magical-btn-main2, $darkBlue-color),
+      var(--magical-btn-accent1, $darkBlue-color),
+      var(--magical-btn-accent2, $darkBlue-color),
+      var(--magical-btn-main1, $primary-color)
     );
     background-size: 400% 400%;
     animation: magical-gradient 8s ease-in-out infinite;
