@@ -1,5 +1,6 @@
 @use "../globalStyles/_colors.scss" as *;
 @use "../globalStyles/animations/index.scss" as *;
+@use "../globalStyles/mixins/mixins.scss" as *;
 
 .notification-page {
   width: 80%;
@@ -10,10 +11,21 @@
     padding: 2rem 0rem;
   }
   .notification-header-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    @include flexbox(
+      flex,
+      row,
+      $justifyContent: space-between,
+      $alignItems: baseline
+    );
+    gap: 0.625rem;
     margin-bottom: 2rem;
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+    .mark-all-read {
+      justify-content: start;
+    }
   }
   .header {
     font-size: clamp(1.5rem, 4vw, 2rem);
@@ -96,5 +108,13 @@
     padding: 0.75rem 1.5rem;
     color: white;
     cursor: pointer;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .modal-container {
+    .modal-content {
+      padding: 0 1rem;
+    }
   }
 }

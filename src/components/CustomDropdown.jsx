@@ -10,7 +10,7 @@ const CustomDropdown = ({
   dropdownStyle = {},
   ...props
 }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const ref = useRef();
 
   useEffect(() => {
@@ -33,9 +33,12 @@ const CustomDropdown = ({
       {...props}
     >
       <div
-        className={`custom-dropdown-selected${open ? " open" : ""}`}
-        onClick={() => setOpen((o) => !o)}
+        className={`custom-dropdown-selected${open ? " open" : ""}${props.disabled ? " disabled" : ""}`}
+        onClick={() => {
+          if (!props.disabled) setOpen((o) => !o);
+        }}
         style={dropdownStyle}
+        aria-disabled={props.disabled}
       >
         {selected ? selected.label : "Select..."}
         <span className="custom-dropdown-arrow" />

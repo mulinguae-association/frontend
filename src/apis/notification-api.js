@@ -20,3 +20,7 @@ export const markNotificationRead = async (id) => {
 export const markAllNotificationsRead = async () => {
   return axios.patch("/api/notifications/read-all");
 };
+
+export const deleteNotifications = async (ids = []) => {
+  return axios.delete(`/api/notifications/bulk-delete`, { data: { ids } });
+};

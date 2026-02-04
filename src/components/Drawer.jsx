@@ -2,7 +2,7 @@ import { FaTimes } from "react-icons/fa";
 import "./Drawer.scss";
 import useLockBodyScroll from "./useLockBodyScroll";
 
-const Drawer = ({ isOpen, onClose, children, title }) => {
+const Drawer = ({ isOpen, onClose, children, title, ...props }) => {
   useLockBodyScroll(isOpen);
   return (
     <>
@@ -18,6 +18,22 @@ const Drawer = ({ isOpen, onClose, children, title }) => {
           </button>
         </div>
         <div className="drawer-content">{children}</div>
+
+        {props.isConfirm && (
+          <div className="drawer-footer">
+            <button
+              className="btn cancel"
+              onClick={() => props.setConfirmOpen(false)}
+            >
+              {props.btnTitle || "Cancel"}
+            </button>
+            <button className="btn confirm" onClick={props.handleConfirm}>
+              {props.isLoading
+                ? "Loading..."
+                : props.btnConfirmTitle || "Confirm"}
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

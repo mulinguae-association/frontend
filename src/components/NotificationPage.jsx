@@ -1,4 +1,4 @@
-import NotificationList from "./NotificationList";
+import SelectableList from "./SelectableList";
 import { useNotifications } from "../hooks/useNotifications";
 import { FaCheckDouble } from "react-icons/fa";
 import { useRef, useState, useEffect } from "react";
@@ -8,6 +8,10 @@ import { useAuth } from "../contexts/AuthContext";
 import Badge from "./Badge";
 import { IoNotifications } from "react-icons/io5";
 import CustomDropdown from "./CustomDropdown";
+import { deleteNotifications } from "../apis/notification-api";
+import NotificationList from "./NotificationList";
+import ResponsiveModal from "./ResponsiveModal";
+import { notifyError, notifySuccess } from "./Notify";
 
 const NotificationPage = () => {
   const { userData, isAuth } = useAuth();
@@ -38,6 +42,7 @@ const NotificationPage = () => {
     handleNotificationClick,
     handleMarkAllRead,
     isLoading,
+    refetch,
   } = useNotifications({
     type: "notifications",
     keys: ["page", filter],
@@ -47,6 +52,40 @@ const NotificationPage = () => {
   });
 
   const lastElementRef = useRef(null);
+
+  // controlled selection state for SelectableList
+  const [selected, setSelected] = useState([]);
+  const [isDeleting, setIsDeleting] = useState(false);
+  // Modal state
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [pendingAction, setPendingAction] = useState(null);
+
+  const openDeleteConfirm = () => {
+    if (selected.length === 0) return;
+    setPendingAction("delete");
+    setConfirmOpen(true);
+  };
+
+  const handleConfirm = async () => {
+    if (pendingAction === "delete") {
+      // call backend
+      try {
+        setIsDeleting(true);
+        await deleteNotifications(selected);
+        // refresh notifications and clear selection
+        await refetch();
+        notifySuccess("Notifications deleted successfully");
+        setSelected([]);
+      } catch (err) {
+        notifyError("Failed to delete notifications");
+        console.error(err);
+      } finally {
+        setIsDeleting(false);
+      }
+    }
+    setConfirmOpen(false);
+    setPendingAction(null);
+  };
 
   const handleLoadMore = async () => {
     await fetchNextPage();
@@ -60,12 +99,12 @@ const NotificationPage = () => {
 
   return (
     <div className="notification-page">
-      <header>
-        <h1 className="title" style={{ marginBottom: "1.5rem" }}>
-          <IoNotifications color="white" /> <span>All Notifications</span>
-        </h1>
-      </header>
       <div className="container">
+        <header>
+          <h1 className="title" style={{ marginBottom: "1.5rem" }}>
+            <IoNotifications color="white" /> <span>All Notifications</span>
+          </h1>
+        </header>
         <div
           className="notification-modal"
           style={{
@@ -103,32 +142,105 @@ const NotificationPage = () => {
               )}
             </div>
           </div>
-
           {isLoading ? (
             <div className="loading-notifications">
               Loading notifications...
             </div>
-          ) : notifications.length === 0 ? (
-            <div className="no-notifications">No notifications</div>
           ) : (
-            <>
+            notifications.length === 0 && (
+              <div className="no-notifications">No notifications</div>
+            )
+          )}
+
+          <SelectableList
+            items={notifications}
+            idKey="_id"
+            style={{ marginBottom: 12 }}
+            selected={selected}
+            onSelectionChange={setSelected}
+            renderActions={({
+              selected: sel,
+              allSelected,
+              handleSelectAll,
+            }) => (
+              <div
+                className="notification-bulk-bar"
+                style={{ display: "flex", alignItems: "center", gap: 12 }}
+              >
+                <button
+                  type="button"
+                  className="select-all-btn"
+                  style={{
+                    padding: "0.4em 1.1em",
+                    borderRadius: 6,
+                    border: allSelected
+                      ? "2px solid #2563eb"
+                      : "2px solid #cbd5e1",
+                    background: allSelected ? "#2563eb" : "#fff",
+                    color: allSelected ? "#fff" : "#1e293b",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    transition: "all 0.18s",
+                  }}
+                  onClick={() => handleSelectAll(!allSelected)}
+                  aria-pressed={allSelected}
+                >
+                  {allSelected ? "Unselect all" : "Select all"}
+                </button>
+                <CustomDropdown
+                  options={[
+                    { label: "Bulk actions", value: "" },
+                    {
+                      label: `Delete selected (${sel.length})`,
+                      value: "delete",
+                    },
+                  ]}
+                  value={""}
+                  onChange={(action) => {
+                    if (action === "delete" && sel.length > 0) {
+                      openDeleteConfirm();
+                    }
+                  }}
+                  style={{ minWidth: 160, margin: "0 0.5rem" }}
+                  disabled={sel.length === 0}
+                />
+              </div>
+            )}
+            renderRow={({ item, selected, onSelect }) => (
               <NotificationList
-                notifications={notifications}
+                notifications={[item]}
                 onClick={handleNotificationClick}
                 lastElementRef={lastElementRef}
+                selected={selected ? [item._id] : []}
+                onSelect={(id, checked) => onSelect(checked)}
               />
-              {hasNextPage && notifications.length > 0 && (
-                <div className="notification-footer">
-                  <button
-                    className="notification-load-more"
-                    onClick={handleLoadMore}
-                    disabled={isFetchingNextPage}
-                  >
-                    {isFetchingNextPage ? "Loading..." : "Load more"}
-                  </button>
-                </div>
-              )}
-            </>
+            )}
+          />
+          {confirmOpen && (
+            <ResponsiveModal
+              open={confirmOpen}
+              onClose={() => setConfirmOpen(false)}
+              title="Delete notifications"
+              isConfirm={true}
+              setConfirmOpen={setConfirmOpen}
+              handleConfirm={handleConfirm}
+              btnTitle="Cancel"
+              btnConfirmTitle="Delete"
+              isLoading={isDeleting}
+            >
+              <p>{`Are you sure you want to delete ${selected.length} notification${selected.length !== 1 ? "s" : ""}?`}</p>
+            </ResponsiveModal>
+          )}
+          {hasNextPage && notifications.length > 0 && (
+            <div className="notification-footer">
+              <button
+                className="notification-load-more"
+                onClick={handleLoadMore}
+                disabled={isFetchingNextPage}
+              >
+                {isFetchingNextPage ? "Loading..." : "Load more"}
+              </button>
+            </div>
           )}
         </div>
       </div>

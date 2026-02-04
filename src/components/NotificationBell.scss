@@ -41,7 +41,7 @@
     null,
     null,
     space-between,
-    center
+    baseline
   );
   padding-bottom: 1rem;
   border-bottom: 1px solid $lightgray-color;
@@ -95,7 +95,7 @@
       background: none;
       border: none;
       width: 100%;
-
+      overflow: auto;
       text-align: left;
       padding: 0.7rem;
       cursor: pointer;
@@ -266,13 +266,10 @@
     --magical-btn-accent2: #{$medium-darkblue};
     --magical-btn-text: #fff;
     display: block;
-    height: 40px;
     cursor: pointer;
     font-weight: 500;
-    width: 50%;
     background: $darkBlue-color;
     color: $white-color;
-    padding: 0.6rem;
     font-size: 1rem;
 
     &:hover {

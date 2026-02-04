@@ -81,6 +81,46 @@
 }
 
 .drawer-content {
-  padding: 20px;
+  padding: 1rem;
   overflow-y: auto; /* Allows content to scroll within the drawer */
+  p {
+    margin: 0;
+  }
+}
+
+.drawer-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 1rem;
+  .btn {
+    border: none;
+    border-radius: 9px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.cancel {
+      width: 50%;
+      border: 1px solid $lighter-gray;
+      background: $lighter-gray;
+      color: $darkGrayishBlue;
+      &:hover {
+        background: darken($lighter-gray, 5%);
+      }
+    }
+    &.confirm {
+      width: 50%;
+      color: $white-color;
+      background: $error-color;
+      &:hover {
+        background: darken($error-color, 5%);
+      }
+    }
+  }
 }

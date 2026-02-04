@@ -1,10 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { FaTimes } from "react-icons/fa";
 import "./Modal.scss";
 import useLockBodyScroll from "./useLockBodyScroll";
 
-const Modal = ({ open, onClose, title, children }) => {
+const Modal = ({ open, onClose, title, children, ...props }) => {
   useLockBodyScroll(open);
   if (!open) return null;
   return (
@@ -18,6 +17,21 @@ const Modal = ({ open, onClose, title, children }) => {
           </button>
         </div>
         <div className="modal-content">{children}</div>
+        {props.isConfirm && (
+          <div className="modal-footer">
+            <button
+              className="btn cancel"
+              onClick={() => props.setConfirmOpen(false)}
+            >
+              {props.btnTitle || "Cancel"}
+            </button>
+            <button className="btn confirm" onClick={props.handleConfirm}>
+              {props.isLoading
+                ? "Loading..."
+                : props.btnConfirmTitle || "Confirm"}
+            </button>
+          </div>
+        )}
       </div>
     </>
   );
@@ -28,6 +42,10 @@ Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
   children: PropTypes.node.isRequired,
+  isConfirm: PropTypes.bool,
+  setConfirmOpen: PropTypes.func,
+  handleConfirm: PropTypes.func,
+  isLoading: PropTypes.bool,
 };
 
 export default Modal;
