@@ -43,10 +43,10 @@ const Navbar = () => {
   useEffect(() => {
     // Show intro only on first visit
     try {
-      const seen = localStorage.getItem("mulingua_seen_intro");
+      const seen = localStorage.getItem("mulinguae_seen_intro");
       if (!seen) {
         setShowIntro(true);
-        localStorage.setItem("mulingua_seen_intro", "1");
+        localStorage.setItem("mulinguae_seen_intro", "1");
       }
     } catch (e) {
       // ignore storage errors

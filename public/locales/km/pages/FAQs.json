@@ -1,5 +1,5 @@
 {
-  "header": "Mersi pou vizit ACS Mulingua sitwèb la! Nou ena enportans bokou pou zot zwenn. Tanpri, donn detay lor nenport ki problem zot ti zwenn lor bann paj yo oubyen sipsyon zot kapav ena pou amelyore sitwèb la.",
+  "header": "Mersi pou vizit ACS Mulinguae sitwèb la! Nou ena enportans bokou pou zot zwenn. Tanpri, donn detay lor nenport ki problem zot ti zwenn lor bann paj yo oubyen sipsyon zot kapav ena pou amelyore sitwèb la.",
   "form": {
     "head": "FAQs",
     "emailLabel": "Imel:",
@@ -32,7 +32,7 @@
     "failMessage": "Ero voye Konesans"
   },
   "affiliationSelect": {
-    "label": "Ki afilyasyon ACS Mulingua zot?",
+    "label": "Ki afilyasyon ACS Mulinguae zot?",
     "selectPlaceholder": "Seleksyonnen Afilyasyon",
     "options": {
       "prospectiveStudent": "Elev prospektif oswa Profesè",
