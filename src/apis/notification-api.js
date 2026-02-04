@@ -1,9 +1,13 @@
 import axios from "axios";
 
 // src/apis/notification-api.js
-export const fetchNotifications = async ({ pageParam = 1, limit = 10 }) => {
+export const fetchNotifications = async ({
+  pageParam = 1,
+  limit = 10,
+  filter = "all",
+}) => {
   const res = await axios.get(
-    `/api/notifications?page=${pageParam}&limit=${limit}`,
+    `/api/notifications?page=${pageParam}&limit=${limit}&filter=${filter}`,
   );
   return res.data; // Should include { notifications, hasMore }
 };

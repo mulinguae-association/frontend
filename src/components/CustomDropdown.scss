@@ -1,0 +1,81 @@
+@use "../globalStyles/_colors.scss" as *;
+
+.custom-dropdown-wrapper {
+  display: inline-block;
+  position: relative;
+  min-width: 140px;
+  font-family: inherit;
+  .custom-dropdown-selected {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    border-radius: 30px;
+    border: 1.5px solid lightblue;
+    background: var(--select-bg, #fff);
+    color: var(--primaryDark-color, #1e293b);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      border 0.2s,
+      box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(30, 41, 59, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.open,
+    &:focus {
+      border-color: var(--primary-color, #2563eb);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+    }
+    .custom-dropdown-arrow {
+      display: inline-block;
+      margin-left: 0.7em;
+      width: 0.6em;
+      height: 0.6em;
+      border-right: 2px solid var(--primaryDark-color, #1e293b);
+      border-bottom: 2px solid var(--primaryDark-color, #1e293b);
+      transform: rotate(45deg);
+      transition: transform 0.2s;
+    }
+    &.open .custom-dropdown-arrow {
+      transform: rotate(-135deg);
+    }
+  }
+
+  .custom-dropdown-list {
+    position: absolute;
+    margin: 0;
+    top: 110%;
+    inset-inline-start: 0;
+    width: 150%;
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+    border: 1.5px solid lightgray;
+    background: var(--select-bg, #fff);
+    color: var(--primaryDark-color, #1e293b);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      border 0.2s,
+      box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(30, 41, 59, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .custom-dropdown-option {
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition:
+        background 0.2s,
+        color 0.2s;
+      &.selected,
+      &:hover {
+        background: var(--primary-color, $medium-darkblue);
+        color: #fff;
+      }
+    }
+  }
+}

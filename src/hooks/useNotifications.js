@@ -5,9 +5,9 @@ import i18n from "../i18n";
 // Default API and navigation config for notifications
 const notificationConfig = {
   notifications: {
-    apiFn: ({ pageParam = 1, limit = 10 }) =>
+    apiFn: ({ pageParam = 1, limit = 10, filter = "all" }) =>
       import("../apis/notification-api").then(({ fetchNotifications }) =>
-        fetchNotifications({ pageParam, limit }),
+        fetchNotifications({ pageParam, limit, filter }),
       ),
     getNextPageParam: (lastPage, allPages) =>
       lastPage.hasMore ? allPages.length + 1 : undefined,
@@ -29,20 +29,28 @@ export function useNotifications({
   keys = [],
   enabled = false,
   limit = 10,
+  filter = "all",
 } = {}) {
   const navigate = useNavigate();
   const config = notificationConfig[type];
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, refetch } =
-    useInfiniteQuery(
-      keys.length > 0 ? [type, ...keys] : type,
-      ({ pageParam = 1 }) => config.apiFn({ pageParam, limit }),
-      {
-        getNextPageParam: config.getNextPageParam,
-        refetchOnWindowFocus: false,
-        enabled,
-      },
-    );
+  const {
+    data,
+    isLoading,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    refetch,
+  } = useInfiniteQuery(
+    keys.length > 0 ? [type, ...keys] : type,
+    ({ pageParam = 1 }) => config.apiFn({ pageParam, limit, filter }),
+    {
+      getNextPageParam: config.getNextPageParam,
+      refetchOnWindowFocus: false,
+      enabled,
+    },
+  );
+
   const notifications = data?.pages.flatMap((page) => page.notifications) || [];
   const unreadCount = data?.pages?.[0]?.unread || 0;
 
@@ -70,5 +78,6 @@ export function useNotifications({
     refetch,
     handleNotificationClick,
     handleMarkAllRead,
+    isLoading,
   };
 }
