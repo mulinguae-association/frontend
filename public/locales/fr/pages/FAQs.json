@@ -1,5 +1,5 @@
 {
-  "header": "Merci de visiter le site web ACS Mulingua ! Vos retours sont précieux et très importants pour nous. Veuillez fournir des détails sur tout problème rencontré lors de l'exploration des pages ou des suggestions que vous pourriez avoir pour améliorer le site.",
+  "header": "Merci de visiter le site web ACS Mulinguae ! Vos retours sont précieux et très importants pour nous. Veuillez fournir des détails sur tout problème rencontré lors de l'exploration des pages ou des suggestions que vous pourriez avoir pour améliorer le site.",
   "form": {
     "head": "Vos commentaires",
     "emailLabel": "E-mail :",
@@ -32,7 +32,7 @@
     "failMessage": "Erreur lors de l'envoi du message"
   },
   "affiliationSelect": {
-    "label": "Quelle est votre affiliation à ACS Mulingua ?",
+    "label": "Quelle est votre affiliation à ACS Mulinguae ?",
     "selectPlaceholder": "Sélectionnez l'affiliation",
     "options": {
       "prospectiveStudent": "Étudiant ou Enseignant potentiel",

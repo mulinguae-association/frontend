@@ -1,5 +1,5 @@
 {
-  "header": "¡Gracias por visitar el sitio web de ACS Mulingua! Tu opinión es muy valiosa y esencial para nosotros. Por favor, proporciona detalles sobre cualquier problema que hayas encontrado al explorar las páginas o sugerencias que puedas tener para mejorar el sitio.",
+  "header": "¡Gracias por visitar el sitio web de ACS Mulinguae! Tu opinión es muy valiosa y esencial para nosotros. Por favor, proporciona detalles sobre cualquier problema que hayas encontrado al explorar las páginas o sugerencias que puedas tener para mejorar el sitio.",
   "form": {
     "head": "Tu Retroalimentación",
     "emailLabel": "Correo electrónico:",
@@ -32,7 +32,7 @@
     "failMessage": "Error al enviar los comentarios"
   },
   "affiliationSelect": {
-    "label": "¿Cuál es tu afiliación con ACS Mulingua?",
+    "label": "¿Cuál es tu afiliación con ACS Mulinguae?",
     "selectPlaceholder": "Selecciona la afiliación",
     "options": {
       "prospectiveStudent": "Estudiante o Profesor Prospectivo",

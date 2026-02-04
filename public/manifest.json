@@ -1,52 +1,52 @@
 {
-	"start_url": "/",
-	"short_name": "ACS",
-	"name": "ACS Mulingua",
-	"display": "fullscreen",
-	"prefer_related_applications": false,
-	"background_color": "darkblue",
-	"theme_color": "lightgreen",
-	"icons": [
-		{
-			"src": "images/cahuacLogo.png",
-			"sizes": "350x364",
-			"type": "image/png",
-			"purpose": "maskable any"
-		},
-		{
-			"src": "images/icons/BooksList.png",
-			"sizes": "256x256",
-			"type": "image/png"
-		},
-		{
-			"src": "images/icons/facebook.png",
-			"sizes": "94x94",
-			"type": "image/png"
-		},
-		{
-			"src": "images/icons/instagram.png",
-			"sizes": "40x40",
-			"type": "image/png"
-		},
-		{
-			"src": "images/icons/linkedIn.png",
-			"sizes": "94x94",
-			"type": "image/png"
-		},
-		{
-			"src": "images/icons/twitter.png",
-			"sizes": "94x94",
-			"type": "image/png"
-		},
-		{
-			"src": "images/icons/languages-icon.png",
-			"sizes": "66x66",
-			"type": "image/png"
-		},
-		{
-			"src": "images/icons/right-icon.png",
-			"sizes": "30x30",
-			"type": "image/png"
-		}
-	]
+  "start_url": "/",
+  "short_name": "ACS",
+  "name": "ACS Mulinguae",
+  "display": "fullscreen",
+  "prefer_related_applications": false,
+  "background_color": "darkblue",
+  "theme_color": "lightgreen",
+  "icons": [
+    {
+      "src": "images/cahuacLogo.png",
+      "sizes": "350x364",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icons/BooksList.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/facebook.png",
+      "sizes": "94x94",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/instagram.png",
+      "sizes": "40x40",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/linkedIn.png",
+      "sizes": "94x94",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/twitter.png",
+      "sizes": "94x94",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/languages-icon.png",
+      "sizes": "66x66",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/right-icon.png",
+      "sizes": "30x30",
+      "type": "image/png"
+    }
+  ]
 }

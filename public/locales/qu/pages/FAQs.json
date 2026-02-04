@@ -1,5 +1,5 @@
 {
-  "header": "ACS Mulingua wikitapasina munaykitaqmi! Aríkiqaqa uyarichiyki, kayninpi tukuyta munaniyki ACS Mulingua wikitapasinaqa tukuyta rimasqakuypi tukuyta munayta khuyaytanchu.",
+  "header": "ACS Mulinguae wikitapasina munaykitaqmi! Aríkiqaqa uyarichiyki, kayninpi tukuyta munaniyki ACS Mulinguae wikitapasinaqa tukuyta rimasqakuypi tukuyta munayta khuyaytanchu.",
   "form": {
     "head": "FAQ",
     "emailLabel": "Imel:",
@@ -32,7 +32,7 @@
     "failMessage": "Feedback yachaywanmi llaqtanchu"
   },
   "affiliationSelect": {
-    "label": "ACS Mulingua wikitapasinaqa añayninkichu?",
+    "label": "ACS Mulinguae wikitapasinaqa añayninkichu?",
     "selectPlaceholder": "Añayninkichu",
     "options": {
       "prospectiveStudent": "Añayninkichu ñuqaqa maestro ñanpi",
