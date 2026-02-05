@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App.jsx";
+import { HelmetProvider } from "react-helmet-async";
 import { AppProvider } from "./contexts/AppContext.jsx";
 import { registerServiceWorker } from "./registerServiceWorker";
 import { AuthProvider } from "./contexts/AuthContext.jsx";
@@ -23,12 +24,14 @@ const queryClient = new QueryClient({
 
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <AppProvider>
-        <AuthProvider>
-          <App />
-        </AuthProvider>
-      </AppProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <AppProvider>
+          <AuthProvider>
+            <App />
+          </AuthProvider>
+        </AppProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 );

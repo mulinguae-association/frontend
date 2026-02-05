@@ -1,3 +1,4 @@
+import { SEO } from "../SEO";
 import React, { useState } from "react";
 import "./index.scss";
 import StudentForm from "./StudentForm";
@@ -13,6 +14,7 @@ const Contact = () => {
   const { t } = useTranslation("contact");
   const [activeTab, setActiveTab] = useState("teacher");
   const { setButtonLoading, setNotificationPopup } = useGlobal();
+
   const handleSubmit = async (e, formData, userType, setFormData) => {
     e.preventDefault();
     try {
@@ -40,8 +42,16 @@ const Contact = () => {
       setButtonLoading(userType, false);
     }
   };
+
   return (
     <>
+      <SEO
+        title="Contact Mulinguae | Get in Touch with Our Multilingual Team"
+        description="Contact Mulinguae (Mulingua) for language learning, partnership, or support. Reach out to our multilingual team and join our global community."
+        keywords="contact mulinguae, contact mulingua, language support, multilingual, language exchange, global community"
+        path="/contact"
+      />
+
       <main className="contact">
         <div className="hero-content">
           <h1 className="hero-subtitle">{t("titles.mainTitle")}</h1>

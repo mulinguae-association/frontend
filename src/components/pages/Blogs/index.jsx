@@ -7,6 +7,7 @@ import "./Blogs.scss";
 import { useBlogPosts } from "../../../contexts/BlogsContext.jsx";
 import { useSearchMutation } from "../../../apis/mutations/blogs/searchBlog";
 import { CacheProvider } from "../../../contexts/BlogsCache";
+import { SEO } from "../../SEO.jsx";
 
 const Blogs = () => {
   const {
@@ -58,7 +59,7 @@ const Blogs = () => {
         setPostsToDisplay((prevPostsToDisplay) =>
           counterRef.current <= 2
             ? prevPostsToDisplay + 3
-            : prevPostsToDisplay + 4
+            : prevPostsToDisplay + 4,
         );
       }
     }, 200);
@@ -79,31 +80,47 @@ const Blogs = () => {
     };
   }, [allPostsLoaded, acceptedPosts, setPostsToDisplay]);
   return (
-    <main className="Blogs">
-      <div className="container">
-        <BlogsHeader
-          searchQuery={searchQuery}
-          handleSearchKeyPress={handleSearchKeyPress}
-          handleSearchChange={handleSearchChange}
-        />
-        <CacheProvider>
-          <BlogList acceptedPosts={acceptedPosts} />
-        </CacheProvider>
-        {errorDisplayPosts ? (
-          <p className="finished-message">
-            {"An error occurred while fetching blog posts."}
-          </p>
-        ) : acceptedPosts && acceptedPosts?.length <= 0 ? (
-          <p className="finished-message">No results found!</p>
-        ) : allPostsLoaded ? (
-          <p className="finished-message">All blog posts have been loaded.</p>
-        ) : loading ? ( // Check for both loading and isSearching
-          <p className="finished-message">Loading....</p>
-        ) : (
-          <ScrollDownArrow />
-        )}
-      </div>
-    </main>
+    <>
+      <SEO
+        title="Mulinguae Blog | Language Learning Stories & Community Insights"
+        description="Read the latest blog posts from Mulinguae's multilingual community. Discover language learning tips, cultural stories, and updates from Mulinguae (Mulingua)."
+        keywords="mulinguae blog, mulingua blog, language learning, multilingual, language exchange, community stories, mulingua, mulinguae"
+        path="/pages/blogs"
+        ldJson={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Mulinguae Blog",
+          url: undefined,
+          description:
+            "Read the latest blog posts from Mulinguae's multilingual community. Discover language learning tips, cultural stories, and updates from Mulinguae (Mulingua).",
+        }}
+      />
+      <main className="Blogs">
+        <div className="container">
+          <BlogsHeader
+            searchQuery={searchQuery}
+            handleSearchKeyPress={handleSearchKeyPress}
+            handleSearchChange={handleSearchChange}
+          />
+          <CacheProvider>
+            <BlogList acceptedPosts={acceptedPosts} />
+          </CacheProvider>
+          {errorDisplayPosts ? (
+            <p className="finished-message">
+              {"An error occurred while fetching blog posts."}
+            </p>
+          ) : acceptedPosts && acceptedPosts?.length <= 0 ? (
+            <p className="finished-message">No results found!</p>
+          ) : allPostsLoaded ? (
+            <p className="finished-message">All blog posts have been loaded.</p>
+          ) : loading ? ( // Check for both loading and isSearching
+            <p className="finished-message">Loading....</p>
+          ) : (
+            <ScrollDownArrow />
+          )}
+        </div>
+      </main>
+    </>
   );
 };
 
