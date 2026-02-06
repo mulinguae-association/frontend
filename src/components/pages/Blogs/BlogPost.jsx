@@ -4,7 +4,7 @@ import CommentForm from "./comments/CommentForm";
 import "./comments/comment.scss";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import BlogHeader from "./BlogHeader";
-import ShareButton from "../../ShareButton";
+import ShareButton from "../../UI/ShareButton/index.jsx";
 import BlogContent from "./BlogContent";
 import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext.jsx";

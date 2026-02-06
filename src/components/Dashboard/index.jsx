@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
-import Sidebar from "../Sidebar";
+import { useAuth } from "../../contexts/AuthContext";
+import Sidebar from "../UI/Sidebar";
 import "./Dashboard.scss";
 import {
   FaHome,

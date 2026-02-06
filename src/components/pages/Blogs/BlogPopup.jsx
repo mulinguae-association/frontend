@@ -7,9 +7,9 @@ import ReplyForm from "./comments/ReplyForm";
 import Comment from "./comments/Comment";
 import sanitizeHtml from "../../../utils/sanitizeHtml";
 import { useTranslation } from "react-i18next";
-import SkeletonComment from "../../Skeletons/SkeletonComment";
+import SkeletonComment from "../../UI/Skeletons/SkeletonComment.jsx";
 import ShowMoreRepliesBtn from "./comments/ShowMoreRepliesBtn";
-import useLockBodyScroll from "../../useLockBodyScroll.js";
+import useLockBodyScroll from "../../../hooks/useLockBodyScroll.js";
 
 const BlogPopup = ({
   blog,

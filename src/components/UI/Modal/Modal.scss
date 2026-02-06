@@ -1,0 +1,98 @@
+@use "../../../globalStyles/colors" as *;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1300;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+  z-index: 1400;
+  min-width: 500px;
+  max-width: 90vw;
+  min-height: 120px;
+  padding: 0;
+  overflow: hidden;
+  @media (max-width: 767px) {
+    min-width: 90vw;
+  }
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+
+    h4 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 2px;
+      letter-spacing: 0.5%;
+      font-weight: 600;
+      color: $darkgray-color;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: firebrick;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .modal-content {
+    padding: 1rem;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 1rem;
+    .btn {
+      width: 50%;
+      border: none;
+      border-radius: 9px;
+      height: 40px;
+      font-size: 1rem;
+      padding: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.cancel {
+        border: 1px solid $lighter-gray;
+        background: $lighter-gray;
+        color: $darkGrayishBlue;
+        &:hover {
+          background: darken($lighter-gray, 5%);
+        }
+      }
+      &.confirm {
+        color: $white-color;
+        background: $error-color;
+        &:hover {
+          background: darken($error-color, 5%);
+        }
+      }
+    }
+  }
+}

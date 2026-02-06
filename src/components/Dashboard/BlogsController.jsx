@@ -1,5 +1,5 @@
 import sanitizeHtml from "../../utils/sanitizeHtml";
-import Table from "../Table";
+import Table from "../UI/Table";
 import { formatDistanceToNow } from "date-fns";
 import { getDateFnsLocale } from "../../utils/languageUtils";
 import { useTranslation } from "react-i18next";

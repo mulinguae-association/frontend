@@ -1,0 +1,126 @@
+@use "../../../globalStyles/_colors.scss" as *;
+@use "../../../globalStyles/mixins/mixins.scss" as mixins;
+@use "../../../globalStyles/mixins/scroll" as *;
+
+/* Styling for the main drawer container */
+.drawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* Start position: completely off-screen below the viewport */
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  max-height: 90vh; /* Prevents drawer from covering the entire screen */
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px 12px 0 0;
+  overflow-y: auto;
+  @include dynamic-scroll(
+    $width: 2px,
+    $track-color: rgba($blue-shadow-light, 0.1),
+    $thumb-color: rgba($green-color, 0.5)
+  );
+}
+
+/* Class applied when the drawer is open */
+.drawer.open {
+  transform: translateY(0); /* End position: visible at bottom of screen */
+}
+
+/* Optional: Overlay background when drawer is open */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  cursor: pointer;
+}
+
+.drawer-header {
+  @include mixins.flexbox(
+    flex,
+    row,
+    null,
+    null,
+    nowrap,
+    null,
+    null,
+    null,
+    space-between,
+    center
+  );
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $lightgray-color;
+  padding: 1rem;
+  h3 {
+    display: block;
+    color: $darkgray-color;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  color: firebrick;
+  &:hover {
+    color: red;
+  }
+}
+
+.drawer-content {
+  padding: 1rem;
+  overflow-y: auto; /* Allows content to scroll within the drawer */
+  p {
+    margin: 0;
+  }
+}
+
+.drawer-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 1rem;
+  .btn {
+    border: none;
+    border-radius: 9px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.cancel {
+      width: 50%;
+      border: 1px solid $lighter-gray;
+      background: $lighter-gray;
+      color: $darkGrayishBlue;
+      &:hover {
+        background: darken($lighter-gray, 5%);
+      }
+    }
+    &.confirm {
+      width: 50%;
+      color: $white-color;
+      background: $error-color;
+      &:hover {
+        background: darken($error-color, 5%);
+      }
+    }
+  }
+}

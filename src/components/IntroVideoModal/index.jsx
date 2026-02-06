@@ -4,7 +4,7 @@ import "./IntroVideoModal.scss";
 import { useTranslation } from "react-i18next";
 import { resolveForDevice } from "../../utils/videoUtils";
 import IntroVideoPlayerVjs from "./IntroVideoPlayerVjs";
-import useLockBodyScroll from "../useLockBodyScroll";
+import useLockBodyScroll from "../../hooks/useLockBodyScroll";
 
 const IntroVideoModal = ({
   show,

@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./Multilingualism.scss";
 import "../pagesStyle.scss";
 import { useTranslation } from "react-i18next";
-import PrintBtn from "../../PrintButton";
+import PrintBtn from "../../UI/PrintButton";
 
 const Multilingualism = () => {
   const { t } = useTranslation("pages/multilingualism", {

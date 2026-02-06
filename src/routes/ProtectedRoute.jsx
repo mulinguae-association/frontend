@@ -2,7 +2,7 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext.jsx";
 import i18next from "i18next";
-import Loader from "../components/Loader/index.jsx";
+import Loader from "../components/UI/Loader/index.jsx";
 
 const ProtectedRoute = ({ children, isAdmin = false }) => {
   const { userData, isAuth, loading } = useAuth();

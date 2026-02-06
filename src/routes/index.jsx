@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import React from "react";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { BlogPostsProvider } from "../contexts/BlogsContext.jsx";
-import NotificationPage from "../components/NotificationPage.jsx";
 
 const Teachers = React.lazy(() => import("../components/pages/Teachers"));
 const Students = React.lazy(
@@ -70,6 +69,10 @@ const PrivacyPolicy = React.lazy(
 );
 const UnityAndSolidarity = React.lazy(
   () => import("../components/pages/unity&solidarity/index.jsx"),
+);
+
+const NotificationPage = React.lazy(
+  () => import("../components/NotificationPage/index.jsx"),
 );
 const NotFound = React.lazy(() => import("../components/NotFound/index.jsx"));
 

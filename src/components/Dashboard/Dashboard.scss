@@ -1,4 +1,4 @@
-@use "../globalStyles/_colors.scss" as *;
+@use "../../globalStyles/_colors.scss" as *;
 
 .dashboard {
   display: flex;
@@ -51,6 +51,9 @@
     font-size: 1.5rem;
     line-height: 1;
   }
+}
+h3 {
+  color: $blue-shadow-light;
 }
 
 .dashboard-page-title {

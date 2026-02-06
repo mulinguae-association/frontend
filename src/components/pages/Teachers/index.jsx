@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef } from "react";
 import "./Teachers.scss";
 import "../pagesStyle.scss";
 import { useTranslation } from "react-i18next";
-import PrintBtn from "../../PrintButton";
+import PrintBtn from "../../UI/PrintButton";
 import TeachersOverview from "./TeachersOverview";
 import { useLocation } from "react-router-dom";
 

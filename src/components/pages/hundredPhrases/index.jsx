@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./hundredPhrases.scss";
 import { useTranslation } from "react-i18next";
-import PrintBtn from "../../PrintButton";
+import PrintBtn from "../../UI/PrintButton";
 const HundredPhrases = () => {
   const { t } = useTranslation("pages/hundredPhrases");
   const { t: global } = useTranslation("global", { ns: "global" });

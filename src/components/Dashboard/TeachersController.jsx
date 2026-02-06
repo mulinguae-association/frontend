@@ -47,6 +47,7 @@ const TeachersController = ({ handleFormSubmit }) => {
         className="teacher_form"
         onSubmit={(e) => handleFormSubmit(e, formState, setFormState)}
       >
+        <h3 style={{ fontSize: "1.4rem", margin: 0 }}>Add New Teacher</h3>
         <div className="teacher_name block">
           <InputField
             label="First Name"

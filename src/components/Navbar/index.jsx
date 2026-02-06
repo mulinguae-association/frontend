@@ -5,7 +5,7 @@ import useWindowResize from "../../hooks/useWindowResize";
 import "./Navbar.scss";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link, useNavigate } from "react-router-dom";
-import NotificationBell from "../NotificationBell";
+import NotificationBell from "../NotificationPage/NotificationBell";
 import { useContext } from "react";
 import { BlogPostsContext } from "../../contexts/BlogsContext";
 import { useTranslation } from "react-i18next";

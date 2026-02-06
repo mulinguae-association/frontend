@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
-import Loader from "./Loader";
-import useLoader from "./Loader/useLoader";
+import Loader from "./UI/Loader";
+import useLoader from "./UI/Loader/useLoader";
 import { ToastContainer } from "react-toastify";
 const ScrollToTop = React.lazy(() => import("../utils/ScrollToTop"));
-const ToTopBtn = React.lazy(() => import("../components/ToTopBtn"));
+const ToTopBtn = React.lazy(() => import("./UI/ToTopBtn"));
 const Footer = React.lazy(() => import("./FooterPages/index"));
 
 const Layout = () => {
   const location = useLocation();
   const isAppLoading = useLoader();
   const [toastifyLoaded, setToastifyLoaded] = useState(false);
-
-  const pathname = location.pathname.replace(/^\/[^/]+/, "");
-
-  const excludePath = !(
-    pathname === "/home" ||
-    pathname === "/user-settings" ||
-    pathname.startsWith("/dashboard") ||
-    pathname.startsWith("/admin/dashboard")
+  const excludePath = !location.pathname.match(
+    new RegExp(
+      `^/(?:[^/]+/?)?(?:home|user-settings|dashboard(?:/.*)?|admin(?:/dashboard(?:/.*)?)?)?/?$`,
+    ),
   );
 
   useEffect(() => {
