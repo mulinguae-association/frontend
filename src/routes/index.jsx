@@ -39,6 +39,9 @@ const TeacherProfile = React.lazy(
 const CreateBlog = React.lazy(
   () => import("../components/pages/Blogs/CreateBlog.jsx"),
 );
+const ModerateBlogs = React.lazy(
+  () => import("../components/pages/Blogs/ModerateBlogs.jsx"),
+);
 // Correctly import auth pages using React.lazy
 const Register = React.lazy(
   () => import("../components/AuthPages/pages/Register.jsx"),
@@ -56,6 +59,7 @@ const UserSettings = React.lazy(
   () => import("../components/AuthPages/pages/UserSettings.jsx"),
 );
 const Dashboard = React.lazy(() => import("../components/Dashboard"));
+
 const PagesLayout = React.lazy(
   () => import("../components/pages/PagesLayout.jsx"),
 );
@@ -204,10 +208,46 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: (
-          <ProtectedRoute isAdmin={true}>
+          <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: "admin",
+        children: [
+          {
+            path: "dashboard",
+            element: (
+              <ProtectedRoute isAdmin={true}>
+                <Dashboard />
+              </ProtectedRoute>
+            ),
+            children: [
+              {
+                path: "teachers/new",
+                element: (
+                  <ProtectedRoute isAdmin={true}>
+                    {React.createElement(
+                      React.lazy(
+                        () =>
+                          import("../components/pages/Teachers/NewTeacher.jsx"),
+                      ),
+                    )}
+                  </ProtectedRoute>
+                ),
+              },
+              {
+                path: "blogs/moderation",
+                element: (
+                  <ProtectedRoute isAdmin={true}>
+                    <ModerateBlogs />
+                  </ProtectedRoute>
+                ),
+              },
+            ],
+          },
+        ],
       },
       {
         path: "courses",

@@ -1,0 +1,205 @@
+@import "../globalStyles/colors";
+.table-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #fafbfc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30, 42, 80, 0.08);
+  padding: 1.5rem 1rem;
+  overflow-x: auto;
+}
+
+.table-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.table-global-search {
+  flex: 1 1 200px;
+  min-width: 180px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s;
+  box-shadow: 0 1px 2px rgba(30, 42, 80, 0.04);
+  @media (max-width: 767px) {
+    flex: 1 1 100%;
+  }
+}
+.table-global-search:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.table-column-filters {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.table-column-filter input,
+.table-column-filter select {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  min-width: 120px;
+  font-size: 0.98rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.table-column-filter input:focus,
+.table-column-filter select:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.table-responsive {
+  width: 100%;
+  min-width: 500px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(30, 42, 80, 0.06);
+  overflow: hidden;
+
+  .blog-author,
+  .comment-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    .profile-image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+      padding: 0.4rem 1.1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition:
+        background 0.18s,
+        color 0.18s,
+        box-shadow 0.18s;
+      box-shadow: 0 1px 2px rgba(30, 42, 80, 0.04);
+      outline: none;
+    }
+    .accept {
+      background: $success-dark;
+      color: $white-color;
+      &:hover,
+      &:focus {
+        background: darken($success-dark, 8%);
+        color: $white-color;
+        box-shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
+      }
+    }
+    .refuse {
+      background: $error-color;
+      color: $white-color;
+      &:hover,
+      &:focus {
+        background: darken($error-color, 8%);
+        color: $white-color;
+        box-shadow: 0 2px 8px rgba(211, 47, 47, 0.1);
+      }
+    }
+  }
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 1rem 0.7rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.custom-table tbody tr:hover {
+  background: #f0f6ff;
+}
+
+.custom-table th {
+  background: linear-gradient(90deg, #f5f7fa 0%, #e9efff 100%);
+  font-weight: 700;
+  color: #2a3a5b;
+  border-bottom: 2px solid #d1d5db;
+  letter-spacing: 0.02em;
+}
+
+.table-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.table-pagination button {
+  padding: 0.45rem 1rem;
+  border: none;
+  background: #e9efff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2a3a5b;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  box-shadow: 0 1px 2px rgba(30, 42, 80, 0.04);
+}
+
+.table-pagination button.active,
+.table-pagination button:hover:not(:disabled) {
+  background: #1976d2;
+  color: #fff;
+}
+
+.table-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .table-wrapper {
+    padding: 0.7rem 0.2rem;
+  }
+  .table-filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .table-column-filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .custom-table th,
+  .custom-table td {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.3rem;
+  }
+  .table-pagination {
+    flex-wrap: wrap;
+    gap: 0.15rem;
+  }
+}

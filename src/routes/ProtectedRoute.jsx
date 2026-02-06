@@ -2,10 +2,13 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext.jsx";
 import i18next from "i18next";
+import Loader from "../components/Loader/index.jsx";
 
 const ProtectedRoute = ({ children, isAdmin = false }) => {
-  const { userData, isAuth } = useAuth();
-
+  const { userData, isAuth, loading } = useAuth();
+  if (loading) {
+    return <Loader />;
+  }
   if ((!userData && !isAuth) || (isAdmin && userData?.role !== "admin")) {
     return <Navigate to={`/${i18next.language}/login`} replace={true} />;
   }

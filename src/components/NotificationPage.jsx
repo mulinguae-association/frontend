@@ -18,6 +18,9 @@ const NotificationPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialFilter = searchParams.get("filter") || "all";
   const [filter, setFilter] = useState(initialFilter);
+  // controlled selection state for SelectableList
+  const [selected, setSelected] = useState([]);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   // Keep filter in sync with URL
   useEffect(() => {
@@ -28,6 +31,7 @@ const NotificationPage = () => {
       } else {
         params.set("filter", filter);
       }
+      setSelected([]);
       return params;
     });
     // eslint-disable-next-line
@@ -53,9 +57,6 @@ const NotificationPage = () => {
 
   const lastElementRef = useRef(null);
 
-  // controlled selection state for SelectableList
-  const [selected, setSelected] = useState([]);
-  const [isDeleting, setIsDeleting] = useState(false);
   // Modal state
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [pendingAction, setPendingAction] = useState(null);

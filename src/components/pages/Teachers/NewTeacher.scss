@@ -1,0 +1,213 @@
+@use "../../../globalStyles/_colors.scss" as *;
+@use "../../../globalStyles/mixins/mixins.scss" as *;
+@use "../../../globalStyles/animations/index.scss" as *;
+
+.teacher_form {
+  @include flexbox($direction: column);
+  gap: 28px;
+  width: 100%;
+  border-radius: 18px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 2px 0px rgba(255, 255, 255, 1.2);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8),
+      transparent,
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+
+  h1,
+  h2 {
+    font-size: 2.2rem;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .block {
+    @include flexbox($alignItems: flex-start, $justifyContent: space-between);
+    gap: 18px;
+    .input_field {
+      width: 100%;
+    }
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: $primaryDark-color;
+    letter-spacing: 0.01em;
+    font-size: 1rem;
+    display: block;
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    border-radius: 10px;
+    border: 2px solid $lightgray-color;
+    font-size: 1.08rem;
+    padding: 12px 14px;
+    width: 100%;
+    margin-bottom: 0.7rem;
+    background: #f9f9fb;
+    color: #222;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+    &:focus {
+      outline: 1px solid $primary-color;
+      border-color: $primary-color;
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.12);
+    }
+    &::placeholder {
+      color: #b0b0b0;
+      opacity: 1;
+    }
+  }
+
+  textarea {
+    min-height: 90px;
+    resize: vertical;
+    padding-top: 12px;
+    padding-left: 14px;
+  }
+
+  .input_image {
+    display: none;
+  }
+
+  .upload_image {
+    background-color: $lightgray-color;
+    cursor: pointer;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: $primaryDark-color;
+    margin-bottom: 0.7rem;
+    border: 2px dashed $primary-color;
+    transition:
+      background 0.18s,
+      border-color 0.18s;
+    @include flexbox($alignItems: center, $justifyContent: center);
+    gap: 10px;
+    &:hover,
+    &:focus {
+      background: #f0f6ff;
+      border-color: darken($primary-color, 10%);
+    }
+  }
+
+  .updateBtn {
+    padding: 12px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(
+      90deg,
+      $primary-color 60%,
+      $primaryDark-color 100%
+    );
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 8px rgba($primary-color, 0.08);
+    transition:
+      background 0.18s,
+      box-shadow 0.18s;
+    &:hover,
+    &:focus {
+      background: linear-gradient(
+        90deg,
+        $primaryDark-color 60%,
+        $primary-color 100%
+      );
+      box-shadow: 0 4px 16px rgba($primary-color, 0.13);
+      outline: 2px solid $primary-color;
+    }
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    @extend .magical-button;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba($primary-color, 0.08);
+    width: fit-content;
+    padding: 1rem 4rem;
+    margin: 0 auto;
+  }
+  // Accessibility: error state
+  .input_field[aria-invalid="true"],
+  input[aria-invalid="true"],
+  textarea[aria-invalid="true"] {
+    border-color: #e74c3c;
+    background: #fff6f6;
+  }
+
+  // for all input images
+  input[type="file"] {
+    display: none;
+  }
+  .upload_image {
+    background-color: $lightgray-color;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    @include flexbox($alignItems: center, $justifyContent: center);
+    gap: 10px;
+  }
+  // Responsive
+  @media (max-width: 600px) {
+    padding: 1.2rem 0.5rem;
+    width: 98vw;
+    .block {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}

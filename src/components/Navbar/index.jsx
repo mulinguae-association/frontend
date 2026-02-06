@@ -70,7 +70,7 @@ const Navbar = () => {
   }, [width, contentRef, logoRef, navRef]);
 
   return (
-    <nav className={`navbar`}>
+    <nav className={`navbar-sidebar`}>
       <div className="container">
         <div className="content" ref={contentRef}>
           <div

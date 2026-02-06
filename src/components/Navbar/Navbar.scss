@@ -2,7 +2,7 @@
 @use "../../globalStyles/_colors.scss" as *;
 @use "../../globalStyles/mixins/mixins.scss" as *;
 @use "../../globalStyles/animations/index.scss" as *;
-.navbar {
+.navbar-sidebar {
   background-color: $darkBlue-color;
   background: linear-gradient(2deg, $darkBlue-color 50%, $medium-darkblue);
   box-shadow: 0 1px 12px $darkBlue-color;

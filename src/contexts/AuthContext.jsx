@@ -9,6 +9,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const fetchUserProfile = async () => {
     const { fetchUserProfile } = await import("../apis/auth-api");
     return fetchUserProfile();
@@ -27,10 +28,12 @@ export const AuthProvider = ({ children }) => {
       } else {
         notifyError(handleError(err));
       }
+      setLoading(false);
     },
     onSuccess: (data) => {
       setIsAuth(true);
       setUserData(data);
+      setLoading(false);
     },
   });
 
@@ -48,7 +51,9 @@ export const AuthProvider = ({ children }) => {
     }
   }, [isAuth, userData?.userId]);
   return (
-    <AuthContext.Provider value={{ userData, isAuth, setIsAuth, setUserData }}>
+    <AuthContext.Provider
+      value={{ userData, isAuth, setIsAuth, setUserData, loading }}
+    >
       {children}
     </AuthContext.Provider>
   );

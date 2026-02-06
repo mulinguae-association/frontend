@@ -10,6 +10,13 @@ import Modal from "../../common/Modal";
 const PAYPAL_CLIENT_ID =
   import.meta.env.VITE_PAYPAL_CLIENT_ID || "YOUR_PAYPAL_CLIENT_ID";
 
+// const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
+
+// if (!PAYPAL_CLIENT_ID) {
+//   throw new Error(
+//     "VITE_PAYPAL_CLIENT_ID is not set. Please configure your PayPal client ID in the environment.",
+//   );
+// }
 const Donation = () => {
   const { t } = useTranslation("pages/donation");
   const [showModal, setShowModal] = useState(false);

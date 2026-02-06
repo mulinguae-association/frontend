@@ -42,8 +42,7 @@ const TeachersController = ({ handleFormSubmit }) => {
   };
 
   return (
-    <section className="teacher_form">
-      <h1>Add Teacher Information</h1>
+    <section className="new-teacher-section">
       <form
         className="teacher_form"
         onSubmit={(e) => handleFormSubmit(e, formState, setFormState)}

@@ -1,174 +1,68 @@
-@use "../../globalStyles/_colors.scss" as *;
-@use "../../globalStyles/mixins/mixins.scss" as *;
-.teacher_form {
-  @include flexbox($direction: column);
-  gap: 25px;
-  width: 500px;
-  h1 {
-    font-size: 35px;
-    color: $primary-color;
-  }
-  .block {
-    @include flexbox($alignItems: center, $justifyContent: space-between);
-    .input_field {
-      width: 48%;
-    }
-  }
-  input {
-    padding: 12px;
-    width: 100%;
-    &:focus {
-      outline: none;
-    }
-  }
-  textarea {
-    padding: 10px 0 0 15px;
-    outline: none;
-  }
-  input,
-  textarea,
-  button,
-  label {
-    border: none;
-    border-radius: 10px;
-    border: 2px solid $lightgray-color;
-    font-size: 16px;
-  }
-  button[type="submit"] {
-    padding: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    color: $primaryDark-color;
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-// for all input images
-input[type="file"] {
-  display: none;
-}
-.upload_image {
-  background-color: $lightgray-color;
-  cursor: pointer;
-  padding: 8px 15px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bold;
-  @include flexbox($alignItems: center, $justifyContent: center);
-  gap: 10px;
-}
+@use "../globalStyles/_colors.scss" as *;
 
-// --------------dashboard page---------------
 .dashboard {
-  min-height: calc(100vh - 90px);
+  display: flex;
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
   background: url("/images/circle-blues.webp") center;
-  @include rel();
-  z-index: 2;
-  &:after {
-    @include pseudo(block, absolute, "", 100%, 100%, 0px 0 0 0px);
-    background-color: rgb(238 238 238 / 6%);
-    z-index: -1;
+  .dashboard-page-title {
+    color: $white-color;
   }
 }
-// --------------end dashboard page---------------
-// edit form
-.edit_form {
-  @include flexbox($justifyContent: center, $direction: column);
-  width: 80%;
-  gap: 4px;
-  margin: 0 auto;
-  padding: 40px 0 0 0;
 
-  input,
-  textarea {
-    border-radius: 4px;
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  min-width: 0;
+  width: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  margin-bottom: 1.5rem;
+
+  .dashboard-sidebar-toggle {
+    display: none;
+    background: none;
     border: none;
-    border: 1.6px solid lightblue;
-    max-width: 100%;
-    width: 100%;
-    margin: 2px 0;
-    &:focus-visible {
-      outline: none;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .updateBtn {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: $white-color;
     cursor: pointer;
-    border: none;
-    background-color: $secondary-color; // Assuming you have a $secondary-color variable defined elsewhere in your SASS
-    color: $primaryDark-color; // Assuming you have a $primaryDark-color variable defined elsewhere in your SASS
-    padding: 4px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border: 1px dashed;
-    width: 100%;
+    align-items: center;
+    transition: color 0.2s;
+    outline: none;
+    &:hover {
+      color: $warning-color;
+    }
+    @media (max-width: 991px) {
+      position: sticky;
+      top: 1rem;
+      z-index: 99999;
+      display: flex;
+    }
+  }
+  .dashboard-sidebar-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 1;
   }
 }
 
-// End edit teacher form
-// start Blogs
-.dashboard .blogs {
-  padding: 60px 0;
-  color: $white-color;
-  .pendingPosts {
-    .content_container {
-      @include flexbox($alignItems: center, $wrap: wrap);
-      gap: 10px;
-      height: 600px;
-      overflow-y: auto;
-      .content {
-        @include rel();
-        background-color: #f0f0f0;
-        width: 400px;
-        height: 300px;
-        padding: 15px;
-        overflow-y: auto;
-        border-radius: 10px;
-        font-size: 15px;
-        h3 {
-          color: $darkBlue-color;
-          margin-bottom: 0;
-        }
-        p {
-          color: #333;
-        }
-        .subTitle {
-          font-size: 14px;
-          color: #333;
-          font-style: italic;
-          font-weight: 500;
-        }
-        .date {
-          @include abs(20px 15px 0 0);
-          color: #333;
-          font-weight: 500;
-          font-size: 14px;
-        }
-        .btns {
-          @include flexbox();
-          gap: 8px;
-          button {
-            all: unset;
-            background: $white-color;
-            border: 1px solid #bbb;
-            padding: 6px 18px;
-            font-size: 15px;
-            border-radius: 7px;
-            color: darkblue;
-            cursor: pointer;
-            font-weight: bold;
-          }
-          .refuse {
-            color: red;
-          }
-        }
-      }
-    }
+.dashboard-page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    padding: 1rem 0.5rem;
   }
 }
-// end Blogs
