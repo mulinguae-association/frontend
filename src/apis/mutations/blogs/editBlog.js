@@ -7,7 +7,7 @@ import { submitBlogPost } from "../../blog-api";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 
 export const useEditBlogMutation = () => {
-  const { acceptedPosts, postsToDisplay } = useBlogPosts();
+  const { postsToDisplay, queryKeyName } = useBlogPosts();
   const { setNotificationPopup, setButtonLoading } = useGlobal();
   const { userData } = useAuth();
   const queryClient = useQueryClient();
@@ -18,7 +18,7 @@ export const useEditBlogMutation = () => {
     onSuccess: (data) => {
       if (userData.role === "admin") {
         queryClient.setQueryData(
-          ["acceptedPosts", postsToDisplay],
+          [queryKeyName, postsToDisplay],
           (oldPosts = []) => {
             // Replace the updated post in the cache
             return [

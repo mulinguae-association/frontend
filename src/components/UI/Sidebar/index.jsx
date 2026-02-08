@@ -76,14 +76,14 @@ const Sidebar = ({
           <ul>
             {links.map(({ to, icon, label }) => (
               <li key={to} className="sidebar__item">
-                <a href={`/${i18n.language}/${to}`} className="sidebar__link">
+                <Link to={`/${i18n.language}${to}`} className="sidebar__link">
                   <span className="sidebar__icon">
                     {typeof icon === "string" ? iconMap[icon] : icon}
                   </span>
                   {!collapsed && (
                     <span className="sidebar__label">{label}</span>
                   )}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

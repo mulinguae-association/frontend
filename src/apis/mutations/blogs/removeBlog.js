@@ -8,18 +8,18 @@ import { useGlobal } from "../../../contexts/AppContext.jsx";
 
 export const useRemoveBlogMutation = (setShowModal) => {
   const queryClient = useQueryClient();
-  const { postsToDisplay } = useBlogPosts();
+  const { postsToDisplay, queryKeyName } = useBlogPosts();
   const { setButtonLoading } = useGlobal();
   return useMutation((blogId) => removeBlogPost(blogId), {
     onMutate: async (blogId) => {
       setButtonLoading("RemoveBlogPost", true);
-      await queryClient.cancelQueries(["acceptedPosts", postsToDisplay]);
+      await queryClient.cancelQueries([queryKeyName, postsToDisplay]);
       const previousPost = queryClient.getQueryData([
-        "acceptedPosts",
+        queryKeyName,
         postsToDisplay,
       ]);
-      queryClient.setQueryData(["acceptedPosts", postsToDisplay], (oldPosts) =>
-        oldPosts.filter((post) => post._id !== blogId)
+      queryClient.setQueryData([queryKeyName, postsToDisplay], (oldPosts) =>
+        oldPosts.filter((post) => post._id !== blogId),
       );
       return { previousPost };
     },
@@ -30,8 +30,8 @@ export const useRemoveBlogMutation = (setShowModal) => {
       notifyError(handleError(err));
       logError(err.message);
       queryClient.setQueryData(
-        ["acceptedPosts", postsToDisplay],
-        context.previousPost
+        [queryKeyName, postsToDisplay],
+        context.previousPost,
       );
     },
     onSettled() {

@@ -42,6 +42,7 @@ const adminSections = [
         label: "Moderate Blogs",
         icon: <FaShieldAlt />,
       },
+      { to: "/dashboard/my-posts", label: "My Posts", icon: <FaBook /> },
     ],
   },
 ];
@@ -105,8 +106,8 @@ const Dashboard = () => {
             </button>
             <h2 className="dashboard-page-title">{activeLabel}</h2>
           </header>
-          <Outlet />
         </div>
+        <Outlet />
       </main>
     </div>
   );

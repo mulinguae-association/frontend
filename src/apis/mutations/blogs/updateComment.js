@@ -1,4 +1,4 @@
-import { useQueryClient } from 'react-query';
+import { useQueryClient } from "react-query";
 
 export const useUpdateCommentLocally = (blogId, parentComment) => {
   const queryClient = useQueryClient();
@@ -12,22 +12,38 @@ export const useUpdateCommentLocally = (blogId, parentComment) => {
             if (comment._id === commentId) {
               return { ...comment, status: updatedContent, content: value };
             }
-            return comment
-          })
-        }))
-      }))
+            return comment;
+          }),
+        })),
+      }));
     } else {
-      queryClient.setQueriesData(["remaining-replies", parentComment], (prevComments) => ({
-        ...prevComments,
-        pages: prevComments.pages.map((page) => ({
-          ...page,
-          remainingReplies: page.remainingReplies.map((reply) =>
-            reply._id === commentId ?
-              { ...reply, status: updatedContent, content: value } : reply
-          )
-        }))
-      }))
+      queryClient.setQueriesData(
+        ["remaining-replies", parentComment],
+        (prevComments) => {
+          if (!prevComments) return prevComments;
+          return {
+            ...prevComments,
+            pages: prevComments.pages.map((page) => ({
+              ...page,
+              remainingReplies: page.remainingReplies.map((reply) =>
+                reply._id === commentId
+                  ? { ...reply, status: updatedContent, content: value }
+                  : reply,
+              ),
+              lastAcceptedReply:
+                page.lastAcceptedReply &&
+                page.lastAcceptedReply._id === commentId
+                  ? {
+                      ...page.lastAcceptedReply,
+                      status: updatedContent,
+                      content: value,
+                    }
+                  : page.lastAcceptedReply,
+            })),
+          };
+        },
+      );
     }
   };
   return updateCommentLocally;
-}
+};

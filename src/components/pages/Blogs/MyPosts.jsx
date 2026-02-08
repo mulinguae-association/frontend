@@ -1,22 +1,24 @@
+import "./Blogs.scss";
 import BlogsHeader from "./BlogsHeader";
 import BlogList from "./BlogList";
-import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
-import "./Blogs.scss";
 import { useBlogPosts } from "../../../contexts/BlogsContext.jsx";
+import "./myPosts.scss";
 import { useSearchMutation } from "../../../apis/mutations/blogs/searchBlog";
-import { useBlogSearchAndScroll } from "./hooks/useBlogSearchAndScroll.js";
+import { useBlogSearchAndScroll } from "./hooks/useBlogSearchAndScroll";
 import BlogStatusMessage from "./BlogStatusMsg.jsx";
 
-const Blogs = () => {
+const MyPosts = () => {
   const {
-    acceptedPosts,
-    loading,
-    allPostsLoaded,
-    errorDisplayPosts,
-    searchQuery,
+    loading: isLoading,
     setPostsToDisplay,
-  } = useBlogPosts(); // Use the context hook
+    errorDisplayPosts: isError,
+    allPostsLoaded,
+    acceptedPosts,
+    searchQuery,
+  } = useBlogPosts();
+
   const searchMutation = useSearchMutation(searchQuery);
+
   const { handleSearchChange, handleSearchKeyPress } = useBlogSearchAndScroll({
     acceptedPosts,
     allPostsLoaded,
@@ -33,18 +35,18 @@ const Blogs = () => {
           handleSearchKeyPress={handleSearchKeyPress}
           handleSearchChange={handleSearchChange}
         />
-
-        <BlogList acceptedPosts={acceptedPosts} />
+        <BlogList acceptedPosts={acceptedPosts || []} />
 
         <BlogStatusMessage
-          error={errorDisplayPosts}
+          error={isError}
           posts={acceptedPosts}
           allLoaded={allPostsLoaded}
-          loading={loading}
+          loading={isLoading}
         />
       </div>
+      <footer style={{ height: "100px" }} />
     </main>
   );
 };
 
-export default Blogs;
+export default MyPosts;

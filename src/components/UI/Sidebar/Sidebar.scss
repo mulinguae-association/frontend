@@ -5,24 +5,24 @@
   display: flex;
   flex-direction: column;
   background: $darkBlue-color;
-  color: #fff;
-  min-height: 100vh;
+  color: $white-color;
   transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.07);
-  position: sticky;
+  position: relative;
   z-index: 10;
   transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   .sidebar__toggle {
     background: none;
     border: none;
-    color: #fff;
+    color: $white-color;
     font-size: 1.2rem;
     padding: 1rem;
     cursor: pointer;
     align-self: flex-end;
     outline: none;
     transition: color 0.2s;
+    position: sticky;
+    top: 0;
     @media (max-width: 991px) {
       visibility: hidden;
       opacity: 0;
@@ -30,16 +30,17 @@
   }
 
   .sidebar__toggle:hover {
-    color: #ffd700;
+    color: $warning-color;
   }
 
   .sidebar__nav {
-    flex: 1;
-
+    position: sticky;
+    top: 2rem;
+    padding: 10px;
     .sidebar__section-title {
       font-size: 0.9rem;
       font-weight: 600;
-      color: #a0aec0;
+      color: rgba($blue-shadow-light, 0.7);
       text-transform: uppercase;
       margin-bottom: 1rem;
       padding: 0 1.2rem;
@@ -90,10 +91,12 @@
     &.collapsed {
       width: 0;
       min-width: 0;
+      translate: -20px;
       transition: all 0.3s ease;
     }
     &.open {
       width: 60px;
+      translate: initial;
       min-width: 60px;
     }
   }

@@ -1,0 +1,21 @@
+@use "../../../globalStyles/colors" as *;
+.dashboard-content {
+  .blogs_header {
+    input[type="search"] {
+      color: $white-color;
+      &::placeholder {
+        color: $lightgray-color !important;
+      }
+    }
+  }
+
+  .user_info {
+    color: white;
+    .user_menu {
+      z-index: 99999999 !important;
+    }
+  }
+  .Blogs .blogs_content .blog-post {
+    box-shadow: 0 0 10px;
+  }
+}

@@ -43,99 +43,101 @@ const TeachersController = ({ handleFormSubmit }) => {
 
   return (
     <section className="new-teacher-section">
-      <form
-        className="teacher_form"
-        onSubmit={(e) => handleFormSubmit(e, formState, setFormState)}
-      >
-        <h3 style={{ fontSize: "1.4rem", margin: 0 }}>Add New Teacher</h3>
-        <div className="teacher_name block">
-          <InputField
-            label="First Name"
-            type="text"
-            placeholder="Enter First Name"
-            value={formState.firstName}
-            onChange={(e) =>
-              setFormState({ ...formState, firstName: e.target.value })
-            }
-            required
-          />
-          <InputField
-            label="Last Name"
-            type="text"
-            placeholder="Enter Last Name"
-            value={formState.lastName}
-            onChange={(e) =>
-              setFormState({ ...formState, lastName: e.target.value })
-            }
-            required
-          />
-        </div>
-        <div className="block">
-          <InputField
-            label="Email"
-            type="email"
-            placeholder="Enter Email"
-            value={formState.email}
-            onChange={(e) =>
-              setFormState({ ...formState, email: e.target.value })
-            }
-            required
-          />
-          <InputField
-            label="Job Brief"
-            type="text"
-            placeholder="Enter Job Brief"
-            value={formState.jobBrief}
-            onChange={(e) =>
-              setFormState({ ...formState, jobBrief: e.target.value })
-            }
-            required
-          />
-        </div>
-        <div className="block">
-          <label className="visually-hidden" htmlFor="aboutTeacher">
-            About Teacher
+      <div class="container">
+        <form
+          className="teacher_form"
+          onSubmit={(e) => handleFormSubmit(e, formState, setFormState)}
+        >
+          <h3 style={{ fontSize: "1.4rem", margin: 0 }}>Add New Teacher</h3>
+          <div className="teacher_name block">
+            <InputField
+              label="First Name"
+              type="text"
+              placeholder="Enter First Name"
+              value={formState.firstName}
+              onChange={(e) =>
+                setFormState({ ...formState, firstName: e.target.value })
+              }
+              required
+            />
+            <InputField
+              label="Last Name"
+              type="text"
+              placeholder="Enter Last Name"
+              value={formState.lastName}
+              onChange={(e) =>
+                setFormState({ ...formState, lastName: e.target.value })
+              }
+              required
+            />
+          </div>
+          <div className="block">
+            <InputField
+              label="Email"
+              type="email"
+              placeholder="Enter Email"
+              value={formState.email}
+              onChange={(e) =>
+                setFormState({ ...formState, email: e.target.value })
+              }
+              required
+            />
+            <InputField
+              label="Job Brief"
+              type="text"
+              placeholder="Enter Job Brief"
+              value={formState.jobBrief}
+              onChange={(e) =>
+                setFormState({ ...formState, jobBrief: e.target.value })
+              }
+              required
+            />
+          </div>
+          <div className="block">
+            <label className="visually-hidden" htmlFor="aboutTeacher">
+              About Teacher
+            </label>
+            <textarea
+              id="aboutTeacher"
+              placeholder="Enter About Teacher"
+              value={formState.aboutTeacher}
+              onChange={(e) =>
+                setFormState({ ...formState, aboutTeacher: e.target.value })
+              }
+              rows={2}
+              cols={23}
+              required
+            />
+            <InputField
+              label="Telephone"
+              type="tel" // Use "tel" type for telephone input
+              placeholder="Enter Telephone / Cellphone"
+              value={formState.telephone}
+              onChange={(e) =>
+                setFormState({ ...formState, telephone: e.target.value })
+              }
+              required
+            />
+          </div>
+          <label className="upload_image" htmlFor="image">
+            {!formState.image ? "Upload Image" : formState.image.name}
+            <Tooltip text="choose image less than 1MB" />
           </label>
-          <textarea
-            id="aboutTeacher"
-            placeholder="Enter About Teacher"
-            value={formState.aboutTeacher}
-            onChange={(e) =>
-              setFormState({ ...formState, aboutTeacher: e.target.value })
-            }
-            rows={2}
-            cols={23}
-            required
+          <input
+            id="image"
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            name="image"
+            onChange={handleImageChange}
           />
-          <InputField
-            label="Telephone"
-            type="tel" // Use "tel" type for telephone input
-            placeholder="Enter Telephone / Cellphone"
-            value={formState.telephone}
-            onChange={(e) =>
-              setFormState({ ...formState, telephone: e.target.value })
-            }
-            required
-          />
-        </div>
-        <label className="upload_image" htmlFor="image">
-          {!formState.image ? "Upload Image" : formState.image.name}
-          <Tooltip text="choose image less than 1MB" />
-        </label>
-        <input
-          id="image"
-          ref={fileInputRef}
-          type="file"
-          accept="image/*"
-          name="image"
-          onChange={handleImageChange}
-        />
-        <button type="submit">
-          {isBtnLoading["createTeacherBtn"]
-            ? "Adding Teacher..."
-            : "Add Teacher"}
-        </button>
-      </form>
+          <button type="submit">
+            {isBtnLoading["createTeacherBtn"]
+              ? "Adding Teacher..."
+              : "Add Teacher"}
+          </button>
+        </form>
+      </div>
     </section>
   );
 };

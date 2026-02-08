@@ -7,7 +7,7 @@ import { submitBlogPost } from "../../blog-api";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 
 export const useAddBlogMutation = () => {
-  const { acceptedPosts, postsToDisplay } = useBlogPosts();
+  const { acceptedPosts, postsToDisplay, queryKeyName } = useBlogPosts();
   const { setNotificationPopup, setButtonLoading } = useGlobal();
   const { userData } = useAuth();
   const queryClient = useQueryClient();
@@ -18,7 +18,7 @@ export const useAddBlogMutation = () => {
     onSuccess: (data) => {
       if (userData.role === "admin") {
         queryClient.setQueryData(
-          ["acceptedPosts", postsToDisplay],
+          [queryKeyName, postsToDisplay],
           [data.blogPost, ...acceptedPosts],
         );
         notifySuccess("Successfully submitted blog post");
@@ -29,6 +29,7 @@ export const useAddBlogMutation = () => {
       }
     },
     onError(err) {
+      console.log(err);
       notifyError(handleError(err));
     },
     onSettled: () => {

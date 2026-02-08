@@ -4,8 +4,14 @@ import { fetchAcceptedPosts, searchBlogPosts } from "../../blog-api";
 import { useBlogPosts } from "../../../contexts/BlogsContext.jsx";
 
 export const useSearchMutation = () => {
-  const { setIsSearch, setIsSearching, setPostsToDisplay, postsToDisplay } =
-    useBlogPosts();
+  const {
+    setIsSearch,
+    setIsSearching,
+    setPostsToDisplay,
+    postsToDisplay,
+    queryKeyName,
+    fetchFn,
+  } = useBlogPosts();
   const queryClient = useQueryClient();
   return useMutation(
     async (searchQuery) => {
@@ -13,7 +19,7 @@ export const useSearchMutation = () => {
       if (searchQuery === "" || searchQuery.value === "") {
         setIsSearch(false);
         setPostsToDisplay(1);
-        return fetchAcceptedPosts(1);
+        return fetchFn(1);
       }
       setIsSearch(true);
       const response = await searchBlogPosts(searchQuery);
@@ -21,12 +27,12 @@ export const useSearchMutation = () => {
     },
     {
       onSuccess: (data) => {
-        queryClient.setQueryData(["acceptedPosts", postsToDisplay], data);
+        queryClient.setQueryData([queryKeyName, postsToDisplay], data);
       },
       onError: (error) => logError("Error searching blog posts:", error),
       onSettled: () => {
         setIsSearching(false); // Set isSearching to false when mutation ends
       },
-    }
+    },
   );
 };

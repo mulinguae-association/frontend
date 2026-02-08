@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import BlogsController from "../../Dashboard/BlogsController";
 import "./ModerateBlogs.scss";
 import { useQueryClient } from "react-query";
+import logError from "../../../utils/logError.js";
+import { notifyError, notifySuccess } from "../../Notify.jsx";
 
 const ModerateBlogs = () => {
   const queryClient = useQueryClient();
@@ -31,15 +33,12 @@ const ModerateBlogs = () => {
         prevPosts.filter((blog) => blog._id !== blogId),
       );
 
-      // Invalidate all accepted posts queries to force a refetch
-      // This will make the approved blog appear in the blog list immediately
-      queryClient.invalidateQueries({ queryKey: ["acceptedPosts"] });
-
       // Show success notification
       notifySuccess(
         "Blog post approved and will appear in the blog posts list",
       );
     } catch (error) {
+      notifyError(error.message);
       logError(error.message);
     }
   };
@@ -107,7 +106,7 @@ const ModerateBlogs = () => {
     }
   };
   return (
-    <div>
+    <div className="container">
       <BlogsController
         pendingPosts={pendingPosts}
         pendingComments={pendingComments}

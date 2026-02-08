@@ -75,6 +75,7 @@
         --magical-btn-main2: #{$darkBlue-color};
         --magical-btn-accent2: #{$darkBlue-color};
         --magical-btn-text: #{$white-color};
+        min-width: fit-content;
         padding: 0.6rem 1.2rem;
         font-size: 1rem;
         border: 1px solid $white-color;
@@ -304,6 +305,7 @@
             0 -8px 15px #82010142 inset;
           border: none;
           cursor: pointer;
+          z-index: 20;
         }
         .remove-button {
           background-color: #dc3545;
@@ -358,6 +360,56 @@
       }
       @include list-item-paragraph();
     }
+  }
+
+  .blog-post.pending {
+    border-color: $warning-color;
+    background-color: $white-color;
+    box-shadow: 0 4px 12px rgba(255, 167, 38, 0.08);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+    .blog_title {
+      color: #7a4b00;
+    }
+    .share-icon-btn,
+    .comment-form,
+    .blogs_interaction {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+
+  .pending-badge {
+    @include abs(
+      auto 15px 15px 0
+    ); // if you use the mixin; otherwise use normal positioning
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: #ff9800;
+    color: $white-color;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    z-index: 20;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  /* optional subtle overlay for stronger visual hint */
+  .blog-post.pending::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 248, 232, 0.6),
+      rgba(255, 248, 232, 0.3)
+    );
+    pointer-events: none;
+    border-radius: 20px;
   }
 
   /* Media Query for Small Screens */
@@ -452,12 +504,12 @@
         cursor: pointer;
         &:hover {
           background-color: $blue-shadow-light;
-          border-color: #fff;
+          border-color: $white-color;
         }
       }
     }
     .tiptap {
-      background-color: #fff;
+      background-color: $white-color;
       padding: 10px;
       border: 1px solid $blue-shadow-light;
       border-top: none;

@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import React from "react";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { BlogPostsProvider } from "../contexts/BlogsContext.jsx";
+import { fetchMyPosts } from "../apis/blog-api";
 
 const Teachers = React.lazy(() => import("../components/pages/Teachers"));
 const Students = React.lazy(
@@ -15,6 +16,9 @@ const Linguicide = React.lazy(
   () => import("../components/pages/Linguicide/index.jsx"),
 );
 const Blogs = React.lazy(() => import("../components/pages/Blogs/index.jsx"));
+const BlogPostPage = React.lazy(
+  () => import("../components/pages/Blogs/BlogPostPage.jsx"),
+);
 const HundredPhrases = React.lazy(
   () => import("../components/pages/hundredPhrases/index.jsx"),
 );
@@ -40,6 +44,13 @@ const CreateBlog = React.lazy(
 );
 const ModerateBlogs = React.lazy(
   () => import("../components/pages/Blogs/ModerateBlogs.jsx"),
+);
+const MyPosts = React.lazy(
+  () => import("../components/pages/Blogs/MyPosts.jsx"),
+);
+
+const NewTeacher = React.lazy(
+  () => import("../components/pages/Teachers/NewTeacher.jsx"),
 );
 // Correctly import auth pages using React.lazy
 const Register = React.lazy(
@@ -117,7 +128,7 @@ const router = createBrowserRouter([
             path: "blogs",
             element: (
               <BlogPostsProvider>
-                <Blogs />
+                <Blogs />,
               </BlogPostsProvider>
             ),
           },
@@ -125,14 +136,7 @@ const router = createBrowserRouter([
             path: "blogs/:blogId",
             element: (
               <BlogPostsProvider>
-                <React.Suspense fallback={<div>Loading...</div>}>
-                  {React.createElement(
-                    React.lazy(
-                      () =>
-                        import("../components/pages/Blogs/BlogPostPage.jsx"),
-                    ),
-                  )}
-                </React.Suspense>
+                <BlogPostPage />
               </BlogPostsProvider>
             ),
           },
@@ -215,6 +219,21 @@ const router = createBrowserRouter([
             <Dashboard />
           </ProtectedRoute>
         ),
+        children: [
+          {
+            path: "my-posts",
+            element: (
+              <ProtectedRoute>
+                <BlogPostsProvider
+                  queryKeyName="myPosts"
+                  fetchFn={fetchMyPosts}
+                >
+                  <MyPosts />
+                </BlogPostsProvider>
+              </ProtectedRoute>
+            ),
+          },
+        ],
       },
       {
         path: "admin",
@@ -231,12 +250,7 @@ const router = createBrowserRouter([
                 path: "teachers/new",
                 element: (
                   <ProtectedRoute isAdmin={true}>
-                    {React.createElement(
-                      React.lazy(
-                        () =>
-                          import("../components/pages/Teachers/NewTeacher.jsx"),
-                      ),
-                    )}
+                    <NewTeacher />
                   </ProtectedRoute>
                 ),
               },

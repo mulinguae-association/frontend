@@ -102,7 +102,7 @@ const BlogPost = ({ blog }) => {
   return (
     <article
       style={ArUR ? { direction: "rtl" } : { direction: "ltr" }}
-      className="blog-post"
+      className={`blog-post ${blog?.status !== "accepted" ? "pending" : ""}`}
     >
       <div
         style={{
@@ -129,8 +129,7 @@ const BlogPost = ({ blog }) => {
         blogId={blog._id}
       />
       {showAllComments && <div className="overlay"></div>}
-      {console.log(blog)}
-      {console.log("BlogUserId", blog.userId, "UserDataId", userData?.userId)}
+
       {/* action Blog Post Buttons */}
       <div className="blog-action-btns">
         <ShareButton

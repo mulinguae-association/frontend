@@ -9,6 +9,7 @@ import { useAuth } from "../../../contexts/AuthContext.jsx";
 export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
   const queryClient = useQueryClient();
   const { postsToDisplay } = useBlogPosts();
+  const { queryKeyName } = useBlogPosts();
   const { userData } = useAuth();
 
   return useMutation(
@@ -16,10 +17,10 @@ export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
     {
       onMutate: async ({ id, action, modelType }) => {
         await queryClient.cancelQueries(["comments", blogId]);
-        await queryClient.cancelQueries(["acceptedPosts", postsToDisplay]);
+        await queryClient.cancelQueries([queryKeyName, postsToDisplay]);
         await queryClient.cancelQueries(["remaining-replies", parentCommentId]);
         const previousPosts = queryClient.getQueryData([
-          "acceptedPosts",
+          queryKeyName,
           postsToDisplay,
         ]);
         const previousComments = queryClient.getQueryData(["comments", blogId]);
@@ -29,12 +30,14 @@ export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
           queryClient,
           postsToDisplay,
           modelType,
-          blogId
+          blogId,
+          queryKeyName,
+          parentCommentId,
         );
         const updatedValues = getUpdatedValues(
           action,
           currentState,
-          userData?.userId
+          userData?.userId,
         );
 
         updateInteraction(
@@ -44,7 +47,8 @@ export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
           postsToDisplay,
           modelType,
           blogId,
-          parentCommentId
+          parentCommentId,
+          queryKeyName,
         );
 
         return { previousPosts, previousComments };
@@ -62,22 +66,23 @@ export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
           postsToDisplay,
           modelType,
           blogId,
-          parentCommentId
+          parentCommentId,
+          queryKeyName,
         );
       },
       onError: (err, _, context) => {
         queryClient.setQueryData(
-          ["acceptedPosts", postsToDisplay],
-          context.previousPosts
+          [queryKeyName, postsToDisplay],
+          context.previousPosts,
         );
         queryClient.setQueryData(
           ["comments", blogId],
-          context.previousComments
+          context.previousComments,
         );
         logError(err);
         notifyError(handleError(err));
       },
-    }
+    },
   );
 };
 
@@ -86,12 +91,14 @@ const getCurrentState = (
   queryClient,
   postsToDisplay,
   modelType,
-  blogId
+  blogId,
+  queryKeyName,
+  parentCommentId,
 ) => {
   if (modelType === "comment") {
     const comments = queryClient.getQueryData(["comments", blogId]);
     for (const page of comments?.pages || []) {
-      for (const comment of page.acceptedComments) {
+      for (const comment of page.acceptedComments || []) {
         if (comment._id === id) return getInteractionState(comment);
         if (comment.replies) {
           for (const reply of comment.replies) {
@@ -100,9 +107,25 @@ const getCurrentState = (
         }
       }
     }
+
+    // If not found in acceptedComments, check remaining-replies (used for last reply)
+    if (parentCommentId) {
+      const remaining = queryClient.getQueryData([
+        "remaining-replies",
+        parentCommentId,
+      ]);
+      for (const page of remaining?.pages || []) {
+        if (page.lastAcceptedReply && page.lastAcceptedReply._id === id) {
+          return getInteractionState(page.lastAcceptedReply);
+        }
+        for (const reply of page.remainingReplies || []) {
+          if (reply._id === id) return getInteractionState(reply);
+        }
+      }
+    }
   } else {
-    const blogs = queryClient.getQueryData(["acceptedPosts", postsToDisplay]);
-    const blog = blogs?.find((blog) => blog._id === id);
+    const blogs = queryClient.getQueryData([queryKeyName, postsToDisplay]);
+    const blog = blogs?.find((b) => b._id === id);
     if (blog) return getInteractionState(blog);
   }
   return { likes: [], loves: [], unlikes: [] };
@@ -149,7 +172,8 @@ const updateInteraction = (
   postsToDisplay,
   modelType,
   blogId,
-  parentCommentId
+  parentCommentId,
+  queryKeyName,
 ) => {
   const { likes, loves, unlikes } = updatedValues;
 
@@ -162,7 +186,7 @@ const updateInteraction = (
           acceptedComments: updateComments(
             page.acceptedComments,
             id,
-            updatedValues
+            updatedValues,
           ),
         })) || [],
     }));
@@ -170,35 +194,53 @@ const updateInteraction = (
   if (parentCommentId) {
     queryClient.setQueryData(
       ["remaining-replies", parentCommentId],
-      (prevReplies) => ({
-        ...prevReplies,
-        pages: prevReplies?.pages.map((page) => ({
-          ...page,
-          remainingReplies: updateReplies(
-            page.remainingReplies,
-            id,
-            updatedValues
-          ), // Update the replies interaction
-        })),
-      })
+      (prevReplies) => {
+        if (!prevReplies) return prevReplies;
+        return {
+          ...prevReplies,
+          pages:
+            prevReplies.pages?.map((page) => ({
+              ...page,
+              remainingReplies: updateReplies(
+                page.remainingReplies,
+                id,
+                updatedValues,
+              ),
+              lastAcceptedReply:
+                page.lastAcceptedReply && page.lastAcceptedReply._id === id
+                  ? { ...page.lastAcceptedReply, ...updatedValues }
+                  : page.lastAcceptedReply,
+            })) || [],
+        };
+      },
     );
   }
-  queryClient.setQueryData(["acceptedPosts", postsToDisplay], (prevBlogs) =>
-    prevBlogs?.map((blog) =>
-      blog._id === id ? { ...blog, likes, loves, unlikes } : blog
-    )
-  );
+  if (modelType === "blog") {
+    queryClient.setQueryData([queryKeyName, postsToDisplay], (prevBlogs) =>
+      prevBlogs?.map((blog) =>
+        blog._id === id ? { ...blog, likes, loves, unlikes } : blog,
+      ),
+    );
+  }
 };
 
-const updateComments = (comments, id, updatedValues) =>
+// Replace updateComments to also update nested replies
+const updateComments = (comments = [], id, updatedValues) =>
   comments.map((comment) => {
     if (comment._id === id) return { ...comment, ...updatedValues };
+    if (Array.isArray(comment.replies) && comment.replies.length > 0) {
+      return {
+        ...comment,
+        replies: comment.replies.map((reply) =>
+          reply._id === id ? { ...reply, ...updatedValues } : reply,
+        ),
+      };
+    }
     return comment;
   });
 
-// Helper function to update replies
-const updateReplies = (replies, id, updatedValues) =>
-  replies.map((reply) => {
-    if (reply._id === id) return { ...reply, ...updatedValues };
-    return reply;
-  });
+// updateReplies is okay, but keep the default param guard
+const updateReplies = (replies = [], id, updatedValues) =>
+  replies.map((reply) =>
+    reply._id === id ? { ...reply, ...updatedValues } : reply,
+  );

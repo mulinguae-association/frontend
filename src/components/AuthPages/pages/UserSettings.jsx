@@ -12,7 +12,7 @@ import { useQueryClient } from "react-query";
 function UserSettings() {
   const { t } = useTranslation("authPages/userProfile");
   const { userData } = useAuth();
-  const { postsToDisplay, setPostsToDisplay } = useBlogPosts();
+  const { postsToDisplay, setPostsToDisplay, queryKeyName } = useBlogPosts();
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const queryClient = useQueryClient();
 
@@ -57,7 +57,9 @@ function UserSettings() {
       queryClient.setQueryData("userProfile", data.data);
       postsToDisplay > 1
         ? setPostsToDisplay(1)
-        : queryClient.invalidateQueries(["acceptedPosts", postsToDisplay]);
+        : queryClient.invalidateQueries({
+            queryKey: [queryKeyName, postsToDisplay],
+          });
     } catch (error) {
       notifyError(error.response?.data?.error || error.message);
     } finally {

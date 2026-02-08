@@ -8,7 +8,11 @@ import useNotificationSound from "../hooks/userNotificationSound.js";
 
 export const BlogPostsContext = createContext();
 
-export const BlogPostsProvider = ({ children }) => {
+export const BlogPostsProvider = ({
+  children,
+  queryKeyName = "acceptedPosts",
+  fetchFn = fetchAcceptedPosts,
+}) => {
   const { userData, isAuth } = useAuth();
   const notificationSound = useNotificationSound();
 
@@ -22,13 +26,13 @@ export const BlogPostsProvider = ({ children }) => {
 
   // --- Blog List Query ---
   const { data, isFetching, isError } = useQuery(
-    ["acceptedPosts", postsToDisplay],
-    () => fetchAcceptedPosts(postsToDisplay),
+    [queryKeyName, postsToDisplay],
+    () => fetchFn(postsToDisplay),
     {
       keepPreviousData: true,
       cacheTime: Infinity,
       onSuccess: (data) => {
-        queryClient.setQueryData(["acceptedPosts", postsToDisplay], data);
+        queryClient.setQueryData([queryKeyName, postsToDisplay], data);
         isSearch
           ? setAllPostsLoaded(true)
           : setAllPostsLoaded(data?.length < postsToDisplay);
@@ -70,7 +74,7 @@ export const BlogPostsProvider = ({ children }) => {
         };
       });
       setTimeout(() => {
-        queryClient.invalidateQueries(["acceptedPosts"]);
+        queryClient.invalidateQueries({ queryKey: [queryKeyName] });
       }, 1000);
     };
     socket.on("newBlogPost", handler);
@@ -87,8 +91,10 @@ export const BlogPostsProvider = ({ children }) => {
     searchQuery,
     postsToDisplay,
     setPostsToDisplay,
-    fetchAcceptedPosts,
+    fetchAcceptedPosts: fetchFn,
+    queryKeyName,
     setIsSearch,
+    fetchFn,
     setIsSearching,
     isSearching,
     socket,

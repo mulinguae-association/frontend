@@ -9,7 +9,7 @@ export async function submitBlogPost(newpost) {
       senderSocketId: socketId,
     });
 
-    if (response.status === 200) {
+    if (response.status === 200 || response.status === 201) {
       return response.data;
     }
     throw new Error("Error submitting blog post");
@@ -58,23 +58,32 @@ export async function fetchBlogPostById(blogId) {
     throw error;
   }
 }
+export async function fetchMyPosts(limit) {
+  try {
+    const response = await axios.get(`/api/blogPosts/my-posts?limit=${limit}`);
+    if (response.status === 200) {
+      return response.data;
+    }
+    throw new Error("Error fetching user's blog posts");
+  } catch (error) {
+    logError("Error fetching user's blog posts:", error);
+    throw error;
+  }
+}
 export async function acceptBlogPost(blogId) {
   try {
     const response = await axios.patch(`/api/blogPosts/${blogId}/accept`);
     if (response.status === 200) {
       return { status: 200, data: response.data };
     }
-    return { status: response.status, error: "Error accepting blog post" };
+    throw new Error("Error accepting blog post");
   } catch (error) {
-    if (error.response && error.response.status === 401) {
-      const message = error.response.data.error;
-      return { status: 401, message };
+    // If backend sends error details, throw them
+    if (error.response && error.response.data && error.response.data.error) {
+      throw new Error(error.response.data.error);
     }
     logError("Error accepting blog post:", error.message);
-    return {
-      status: 500,
-      error: `Error accepting blog post: ${error.message}`,
-    };
+    throw new Error(`Error accepting blog post: ${error.message}`);
   }
 }
 
