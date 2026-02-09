@@ -21,7 +21,7 @@ const CommentForm = ({ blogId }) => {
       _id: crypto.randomUUID().toString(),
       parentComment: null,
       replies: [],
-      status: userData?.role === "admin" ? "accepted" : "pending",
+      status: ["admin", "superadmin"].includes(userData?.role) ? "accepted" : "pending",
       likes: [],
       unlikes: [],
       loves: [],

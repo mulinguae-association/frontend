@@ -140,7 +140,7 @@ const TeachersOverview = ({ t }) => {
                       onEdit={setEditingTeacher}
                     />
                   )}
-                  {isAuth && userData?.role === "admin" && (
+                  {isAuth && ["admin", "superadmin"].includes(userData?.role) && (
                     <>
                       <button
                         className="deleteBtn"

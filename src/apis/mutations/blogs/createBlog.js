@@ -16,7 +16,7 @@ export const useAddBlogMutation = () => {
       setButtonLoading("addBlogBtn", true);
     },
     onSuccess: (data) => {
-      if (userData.role === "admin") {
+      if (["admin", "superadmin"].includes(userData.role)) {
         queryClient.setQueryData(
           [queryKeyName, postsToDisplay],
           [data.blogPost, ...acceptedPosts],

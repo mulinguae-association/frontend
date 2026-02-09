@@ -50,7 +50,7 @@ const CommentReply = ({
       >
         {isAuth &&
           (comment?.postedBy._id === userData?.userId ||
-            userData?.role === "admin") && (
+            ["admin", "superadmin"].includes(userData?.role)) && (
             <React.Suspense className="Loading...">
               <EllipsisMenu
                 handleDelete={() =>

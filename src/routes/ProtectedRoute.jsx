@@ -9,7 +9,10 @@ const ProtectedRoute = ({ children, isAdmin = false }) => {
   if (loading) {
     return <Loader />;
   }
-  if ((!userData && !isAuth) || (isAdmin && userData?.role !== "admin")) {
+  if (
+    (!userData && !isAuth) ||
+    (isAdmin && !["admin", "superadmin"].includes(userData?.role))
+  ) {
     return <Navigate to={`/${i18next.language}/login`} replace={true} />;
   }
   return children;

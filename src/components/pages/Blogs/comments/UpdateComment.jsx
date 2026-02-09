@@ -44,7 +44,7 @@ const UpdateComment = ({ editComment, initialValue, setIsEditComment }) => {
     const requestedBody = {
       content: value,
     };
-    const isAdmin = userData.role === "admin";
+    const isAdmin = ["admin", "superadmin"].includes(userData.role);
     try {
       const res = await updatedComment(editCommentId, requestedBody);
 

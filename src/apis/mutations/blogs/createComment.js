@@ -12,7 +12,7 @@ export const useCreateCommentMutation = () => {
   const { setNotificationPopup, setButtonLoading } = useGlobal();
 
   // Assuming userData contains user roles or privileges
-  const isAdmin = userData?.role === "admin"; // Or any other logic to determine admin role
+  const isAdmin = ["admin", "superadmin"].includes(userData?.role); // Or any other logic to determine admin role
   const commentStatus = isAdmin ? "accepted" : "pending";
 
   const updateCommentsData = (blogId, commentData) => {

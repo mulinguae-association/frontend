@@ -56,7 +56,7 @@ const userLinks = [
 
 const Dashboard = () => {
   const { userData } = useAuth();
-  const isAdmin = userData?.role === "admin";
+  const isAdmin = ["admin", "superadmin"].includes(userData?.role);
   const location = useLocation();
 
   // Helper to flatten all links for easy matching

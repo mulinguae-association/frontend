@@ -16,7 +16,7 @@ export const useEditBlogMutation = () => {
       setButtonLoading("editBlogBtn", true);
     },
     onSuccess: (data) => {
-      if (userData.role === "admin") {
+      if (["admin", "superadmin"].includes(userData.role)) {
         queryClient.setQueryData(
           [queryKeyName, postsToDisplay],
           (oldPosts = []) => {

@@ -51,7 +51,7 @@ const Comment = ({
     >
       {isAuth &&
         (comment?.postedBy?._id === userData?.userId ||
-          userData?.role === "admin") && (
+          ["admin", "superadmin"].includes(userData?.role)) && (
           <React.Suspense
             fallback={<BiLoaderAlt color="#fff" className="spin-loader" />}
           >

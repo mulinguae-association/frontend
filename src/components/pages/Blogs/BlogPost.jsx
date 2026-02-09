@@ -140,7 +140,7 @@ const BlogPost = ({ blog }) => {
         />
         {isAuth &&
           (blog.postedBy._id === userData?.userId ||
-            userData?.role === "admin") && (
+            ["admin", "superadmin"].includes(userData?.role)) && (
             <>
               <button
                 className="edit-button"

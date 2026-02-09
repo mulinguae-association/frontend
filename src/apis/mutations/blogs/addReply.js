@@ -10,7 +10,7 @@ export const useAddReplyMutation = (setReplyContent) => {
   const { userData } = useAuth();
   const { setButtonLoading, setNotificationPopup } = useGlobal();
   const queryClient = useQueryClient();
-  const isAdmin = userData?.role === "admin";
+  const isAdmin = ["admin", "superadmin"].includes(userData?.role);
   const newReply = {
     _id: crypto.randomUUID().toString(),
     likes: [],
