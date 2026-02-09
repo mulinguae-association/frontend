@@ -7,16 +7,12 @@ const EditUserModal = ({ open, onClose, user, onSave, isLoading }) => {
   const [name, setName] = useState(user?.name || "");
   const [email, setEmail] = useState(user?.email || "");
   const [role, setRole] = useState(user?.role || "user");
-  const [status, setStatus] = useState(
-    user?.role === "deactivated" ? "deactivated" : "user",
-  );
 
   useEffect(() => {
     if (user) {
       setName(user.name || "");
       setEmail(user.email || "");
       setRole(user.role || "user");
-      setStatus(user.role === "deactivated" ? "deactivated" : "user");
     }
   }, [user]);
 
@@ -25,15 +21,8 @@ const EditUserModal = ({ open, onClose, user, onSave, isLoading }) => {
     // Only send fields that changed or are not empty
     const updated = { ...user };
     if (name && name !== user?.name) updated.name = name;
-    if (email && email !== user?.email) updated.email = "";
+    if (email && email !== user?.email) updated.email = email;
     if (role && role !== user?.role) updated.role = role;
-    if (
-      status &&
-      (user?.role === "deactivated"
-        ? status !== "deactivated"
-        : status !== "user")
-    )
-      updated.status = status;
     onSave(updated);
   };
 
@@ -80,17 +69,6 @@ const EditUserModal = ({ open, onClose, user, onSave, isLoading }) => {
               ]}
               value={role}
               onChange={setRole}
-            />
-          </div>
-          <div className="edit-user-role">
-            <label>Status</label>
-            <CustomDropdown
-              options={[
-                { value: "user", label: "Active" },
-                { value: "deactivated", label: "Suspended" },
-              ]}
-              value={status}
-              onChange={setStatus}
             />
           </div>
         </div>

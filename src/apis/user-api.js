@@ -8,3 +8,5 @@ export const deleteUser = (id) => axios.delete(`/api/users/${id}`);
 export const createUser = (data) => axios.post("/api/users", data);
 export const resetUserPassword = (id, data) =>
   axios.post(`/api/users/${id}/reset-password`, data);
+
+export const restoreUser = (id) => axios.post(`/api/users/${id}/restore`);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
-import { fetchUsers, updateUser, deleteUser } from "../../../apis/user-api";
+import { fetchUsers, updateUser, deleteUser, restoreUser } from "../../../apis/user-api";
 import UserTable from "./UserTable";
 import EditUserModal from "./EditUserModal";
 import ConfirmDeleteModal from "./ConfirmDeleteModal";
@@ -28,8 +28,20 @@ const UserManagement = () => {
   const handleEdit = (user) => {
     setEditUser(user);
   };
+
   const handleDelete = (user) => {
     setDeleteUserObj(user);
+  };
+
+  const handleRestore = async (user) => {
+    setIsEditLoading(true);
+    try {
+      await restoreUser(user._id);
+      refetch();
+    } catch (e) {
+      // handle error
+    }
+    setIsEditLoading(false);
   };
 
   const handleEditSave = async (updated) => {
@@ -73,6 +85,7 @@ const UserManagement = () => {
           onView={handleView}
           onEdit={handleEdit}
           onDelete={handleDelete}
+          onRestore={handleRestore}
         />
         <EditUserModal
           open={!!editUser}

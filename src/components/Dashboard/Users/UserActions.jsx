@@ -1,7 +1,7 @@
 import React from "react";
-import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
+import { FaEye, FaEdit, FaTrash, FaUndo } from "react-icons/fa";
 
-const UserActions = ({ user, onView, onEdit, onDelete }) => (
+const UserActions = ({ user, onEdit, onDelete, onRestore }) => (
   <div className="user-actions">
     <button
       onClick={() => onEdit(user)}
@@ -10,13 +10,23 @@ const UserActions = ({ user, onView, onEdit, onDelete }) => (
     >
       <FaEdit />
     </button>
-    <button
-      onClick={() => onDelete(user)}
-      title="Delete/Deactivate"
-      className="btn action-btn delete"
-    >
-      <FaTrash />
-    </button>
+    {user.status === "deactivated" ? (
+      <button
+        onClick={() => onRestore(user)}
+        title="Restore User"
+        className="btn action-btn restore"
+      >
+        <FaUndo />
+      </button>
+    ) : (
+      <button
+        onClick={() => onDelete(user)}
+        title="Deactivate"
+        className="btn action-btn delete"
+      >
+        <FaTrash />
+      </button>
+    )}
   </div>
 );
 
