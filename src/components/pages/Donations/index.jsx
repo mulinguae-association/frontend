@@ -5,8 +5,7 @@ import { BiHeart } from "react-icons/bi";
 import { Trans, useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import Modal from "../../common/Modal";
-
+import ResponsiveModal from "../../UI/Modal/index.jsx";
 const PAYPAL_CLIENT_ID =
   import.meta.env.VITE_PAYPAL_CLIENT_ID || "YOUR_PAYPAL_CLIENT_ID";
 
@@ -89,7 +88,7 @@ const Donation = () => {
         </div>
       </div>
       {/* Modal for PayPal donation */}
-      <Modal
+      <ResponsiveModal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
         className="paypal-modal"
@@ -129,7 +128,7 @@ const Donation = () => {
             }}
           />
         </PayPalScriptProvider>
-      </Modal>
+      </ResponsiveModal>
     </>
   );
 };
