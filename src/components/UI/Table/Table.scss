@@ -24,7 +24,7 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 1rem;
-  background: #fff;
+  background: $white-color;
   transition: border-color 0.2s;
   box-shadow: 0 1px 2px rgba(30, 42, 80, 0.04);
   @media (max-width: 767px) {
@@ -49,7 +49,7 @@
   border-radius: 6px;
   min-width: 120px;
   font-size: 0.98rem;
-  background: #fff;
+  background: $white-color;
   transition: border-color 0.2s;
 }
 .table-column-filter input:focus,
@@ -66,7 +66,7 @@
 .custom-table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
+  background: $white-color;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(30, 42, 80, 0.06);
   overflow: hidden;
@@ -84,7 +84,8 @@
     }
   }
 
-  .actions {
+  .actions,
+  .user-actions {
     display: flex;
     gap: 0.5rem;
     align-items: center;
@@ -104,6 +105,17 @@
       box-shadow: 0 1px 2px rgba(30, 42, 80, 0.04);
       outline: none;
     }
+    .edit {
+      background: $primary-color;
+      color: $white-color;
+      &:hover,
+      &:focus {
+        background: darken($primary-color, 8%);
+        color: $white-color;
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+      }
+    }
+
     .accept {
       background: $success-dark;
       color: $white-color;
@@ -114,7 +126,8 @@
         box-shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
       }
     }
-    .refuse {
+    .refuse,
+    .delete {
       background: $error-color;
       color: $white-color;
       &:hover,
@@ -173,7 +186,7 @@
 .table-pagination button.active,
 .table-pagination button:hover:not(:disabled) {
   background: #1976d2;
-  color: #fff;
+  color: $white-color;
 }
 
 .table-pagination button:disabled {

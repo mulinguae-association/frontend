@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./Table.scss";
 
 const Table = ({ columns, data, pageSize = 10 }) => {
@@ -83,23 +84,73 @@ const Table = ({ columns, data, pageSize = 10 }) => {
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
+          className="pagination-arrow"
         >
-          &lt;
+          <FaChevronLeft />
         </button>
-        {[...Array(totalPages)].map((_, i) => (
-          <button
-            key={i + 1}
-            className={currentPage === i + 1 ? "active" : ""}
-            onClick={() => handlePageChange(i + 1)}
-          >
-            {i + 1}
-          </button>
-        ))}
+        {(() => {
+          const pages = [];
+          const maxVisible = 2; // pages before/after current
+          let start = Math.max(2, currentPage - maxVisible);
+          let end = Math.min(totalPages - 1, currentPage + maxVisible);
+          // Always show first page
+          pages.push(
+            <button
+              key={1}
+              className={currentPage === 1 ? "active" : ""}
+              onClick={() => handlePageChange(1)}
+            >
+              1
+            </button>,
+          );
+          // Ellipsis before
+          if (start > 2) {
+            pages.push(
+              <span key="start-ellipsis" className="pagination-ellipsis">
+                ...
+              </span>,
+            );
+          }
+          // Middle pages
+          for (let i = start; i <= end; i++) {
+            pages.push(
+              <button
+                key={i}
+                className={currentPage === i ? "active" : ""}
+                onClick={() => handlePageChange(i)}
+              >
+                {i}
+              </button>,
+            );
+          }
+          // Ellipsis after
+          if (end < totalPages - 1) {
+            pages.push(
+              <span key="end-ellipsis" className="pagination-ellipsis">
+                ...
+              </span>,
+            );
+          }
+          // Always show last page
+          if (totalPages > 1) {
+            pages.push(
+              <button
+                key={totalPages}
+                className={currentPage === totalPages ? "active" : ""}
+                onClick={() => handlePageChange(totalPages)}
+              >
+                {totalPages}
+              </button>,
+            );
+          }
+          return pages;
+        })()}
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
+          className="pagination-arrow"
         >
-          &gt;
+          <FaChevronRight />
         </button>
       </div>
     </div>

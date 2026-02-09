@@ -1,0 +1,22 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.input-group label {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #333;
+  font-weight: 500;
+}
+.input-group input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}

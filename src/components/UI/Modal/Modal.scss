@@ -22,8 +22,9 @@
   min-width: 500px;
   max-width: 90vw;
   min-height: 120px;
+  min-height: 250px;
   padding: 0;
-  overflow: hidden;
+
   @media (max-width: 767px) {
     min-width: 90vw;
   }

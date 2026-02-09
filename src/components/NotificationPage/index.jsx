@@ -6,7 +6,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import { useNotifications } from "../../hooks/useNotifications";
 import Badge from "../UI/Badge";
 import { IoNotifications } from "react-icons/io5";
-import CustomDropdown from "../CustomDropdown";
+import CustomDropdown from "../UI/CustomDropdown";
 import { deleteNotifications } from "../../apis/notification-api";
 import NotificationList from "./NotificationList";
 import SelectableList from "../UI/SelectableList";

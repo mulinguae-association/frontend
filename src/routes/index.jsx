@@ -85,6 +85,11 @@ const UnityAndSolidarity = React.lazy(
 const NotificationPage = React.lazy(
   () => import("../components/NotificationPage/index.jsx"),
 );
+
+const UserManagement = React.lazy(
+  () => import("../components/Dashboard/Users/UserManagement.jsx"),
+);
+
 const NotFound = React.lazy(() => import("../components/NotFound/index.jsx"));
 
 const router = createBrowserRouter([
@@ -259,6 +264,27 @@ const router = createBrowserRouter([
                 element: (
                   <ProtectedRoute isAdmin={true}>
                     <ModerateBlogs />
+                  </ProtectedRoute>
+                ),
+              },
+              {
+                path: "posts",
+                element: (
+                  <ProtectedRoute isAdmin={true}>
+                    <BlogPostsProvider
+                      queryKeyName="myPosts"
+                      fetchFn={fetchMyPosts}
+                    >
+                      <MyPosts />
+                    </BlogPostsProvider>
+                  </ProtectedRoute>
+                ),
+              },
+              {
+                path: "users",
+                element: (
+                  <ProtectedRoute isAdmin={true}>
+                    <UserManagement />
                   </ProtectedRoute>
                 ),
               },

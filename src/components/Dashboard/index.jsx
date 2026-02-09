@@ -13,13 +13,13 @@ import {
 } from "react-icons/fa";
 
 const adminLinks = [
-  { to: "admin/dashboard", label: "Admin Home", icon: <FaHome /> },
+  { to: "/admin/dashboard", label: "Admin Home", icon: <FaHome /> },
   {
-    to: "admin/dashboard/users",
+    to: "/admin/dashboard/users",
     label: "Manage Users",
     icon: <FaUserFriends />,
   },
-  { to: "admin/dashboard/posts", label: "Manage Posts", icon: <FaBook /> },
+  { to: "/admin/dashboard/posts", label: "Manage Posts", icon: <FaBook /> },
   // Add more admin links here
 ];
 

@@ -1,0 +1,16 @@
+@use "../../../globalStyles/mixins/mixins.scss" as *;
+.user-management {
+  .edit-user-dropdowns {
+    display: flex;
+    gap: 16px;
+    .edit-user-role {
+      flex: 1;
+      @include flexbox(
+        $alignItems: center,
+        $justifyContent: flex-start,
+        $gap: 8px
+      );
+      gap: 1rem;
+    }
+  }
+}
