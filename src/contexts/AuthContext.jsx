@@ -38,9 +38,9 @@ export const AuthProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    if (isAuth && userData?.userId) {
+    if (isAuth && userData?._id) {
       const handleConnect = () => {
-        socket.emit("register", userData.userId);
+        socket.emit("register", userData._id);
       };
       socket.on("connect", handleConnect);
       // If already connected, emit immediately
@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
         socket.off("connect", handleConnect);
       };
     }
-  }, [isAuth, userData?.userId]);
+  }, [isAuth, userData?._id]);
   return (
     <AuthContext.Provider
       value={{ userData, isAuth, setIsAuth, setUserData, loading }}

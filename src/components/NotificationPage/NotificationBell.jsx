@@ -23,6 +23,7 @@ const NotificationBell = () => {
     keys: ["bell"],
     enabled: Boolean(isAuth && userData),
     limit: 10,
+    event: "newBlogPost", // Listen for blog post notifications in real time
   });
   const navigate = useNavigate();
 
