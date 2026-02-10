@@ -65,8 +65,8 @@ const ForgotPassword = React.lazy(
 const ResetPassword = React.lazy(
   () => import("../components/AuthPages/pages/ResetPassword.jsx"),
 );
-const UserSettings = React.lazy(
-  () => import("../components/AuthPages/pages/UserSettings.jsx"),
+const Settings = React.lazy(
+  () => import("../components/Dashboard/Settings/Settings.jsx"),
 );
 const Dashboard = React.lazy(() => import("../components/Dashboard"));
 
@@ -210,14 +210,6 @@ const router = createBrowserRouter([
         element: <ResetPassword />,
       },
       {
-        path: "user-settings",
-        element: (
-          <BlogPostsProvider>
-            <UserSettings />
-          </BlogPostsProvider>
-        ),
-      },
-      {
         path: "dashboard",
         element: (
           <ProtectedRoute>
@@ -236,6 +228,14 @@ const router = createBrowserRouter([
                   <MyPosts />
                 </BlogPostsProvider>
               </ProtectedRoute>
+            ),
+          },
+          {
+            path: "settings",
+            element: (
+              <BlogPostsProvider>
+                <Settings />,
+              </BlogPostsProvider>
             ),
           },
         ],
@@ -276,6 +276,16 @@ const router = createBrowserRouter([
                       fetchFn={fetchMyPosts}
                     >
                       <MyPosts />
+                    </BlogPostsProvider>
+                  </ProtectedRoute>
+                ),
+              },
+              {
+                path: "settings",
+                element: (
+                  <ProtectedRoute isAdmin={true}>
+                    <BlogPostsProvider>
+                      <Settings />
                     </BlogPostsProvider>
                   </ProtectedRoute>
                 ),

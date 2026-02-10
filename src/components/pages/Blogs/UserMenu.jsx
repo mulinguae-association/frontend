@@ -22,9 +22,6 @@ const UserMenu = ({ handleLogout, setShowMenuUser }) => {
       <Link to={`/${i18next.language}/dashboard`} className="user-link">
         {t("dashBtn")}
       </Link>
-      <Link to={`/${i18next.language}/user-settings`} className="user-link">
-        {t("settingsBtn")}
-      </Link>
       <button onClick={handleLogout} className="logout-button">
         {t("logoutBtn")}
       </button>

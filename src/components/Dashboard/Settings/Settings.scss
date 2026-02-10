@@ -1,16 +1,18 @@
+@use "../../../globalStyles/mixins/mixins.scss" as *;
+@use "../../../globalStyles/colors" as *;
+
 @use "../../../globalStyles/_colors.scss" as *;
 @use "../../../globalStyles/mixins/mixins.scss" as *;
 @use "../../../globalStyles/animations/index.scss" as *;
 
-.teacher_form {
+.settings_page.dashboard-form-wrapper {
   @include flexbox($direction: column);
   gap: 28px;
-  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   border-radius: 18px;
   padding: 2.5rem 2rem 2rem 2rem;
   background: rgba(255, 255, 255, 0.05);
-  max-width: 900px;
-  margin: 0 auto;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow:
@@ -54,29 +56,59 @@
   h1,
   h2 {
     font-size: 2.2rem;
-    color: $primary-color;
+    color: $white-color;
     margin-bottom: 0.5rem;
     text-align: center;
   }
 
-  .block {
-    @include flexbox($alignItems: flex-start, $justifyContent: space-between);
-    gap: 18px;
-    .input_field {
-      width: 100%;
+  .dashboard-form-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+  }
+  .dashboard-form-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .dashboard-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+  .dashboard-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    &:last-of-type {
+      flex-direction: row;
+      align-items: center;
+      label {
+        flex: 1;
+      }
     }
   }
-
+  .img_container {
+    margin-bottom: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
   label {
     font-weight: 600;
     margin-bottom: 0.3rem;
-    color: $primaryDark-color;
+    color: $white-color;
     letter-spacing: 0.01em;
     font-size: 1rem;
     display: block;
     cursor: pointer;
   }
-
   input,
   textarea {
     border-radius: 10px;
@@ -101,18 +133,15 @@
       opacity: 1;
     }
   }
-
   textarea {
     min-height: 90px;
     resize: vertical;
     padding-top: 12px;
     padding-left: 14px;
   }
-
   .input_image {
     display: none;
   }
-
   .upload_image {
     background-color: $lightgray-color;
     cursor: pointer;
@@ -135,50 +164,31 @@
       border-color: darken($primary-color, 10%);
     }
   }
-
-  .updateBtn {
-    padding: 12px 0;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    color: #fff;
-    background: linear-gradient(
-      90deg,
-      $primary-color 60%,
-      $primaryDark-color 100%
-    );
-    border: none;
-    border-radius: 10px;
-    width: 100%;
-    margin-top: 1.2rem;
-    box-shadow: 0 2px 8px rgba($primary-color, 0.08);
-    transition:
-      background 0.18s,
-      box-shadow 0.18s;
-    &:hover,
-    &:focus {
-      background: linear-gradient(
-        90deg,
-        $primaryDark-color 60%,
-        $primary-color 100%
-      );
-      box-shadow: 0 4px 16px rgba($primary-color, 0.13);
-      outline: 2px solid $primary-color;
-    }
-  }
-
   button[type="submit"] {
     width: 100%;
     cursor: pointer;
-    color: #fff;
     @extend .magical-button;
+    color: #fff;
     border: none;
     border-radius: 30px;
     font-size: 1rem;
     box-shadow: 0 2px 8px rgba($primary-color, 0.08);
     width: fit-content;
-    padding: 1rem 4rem;
+    padding: 0.9rem 4rem;
     margin: 0 auto;
+    background: linear-gradient(
+      90deg,
+      $primary-color 60%,
+      $primaryDark-color 100%
+    );
+    font-weight: bold;
+    transition:
+      background 0.18s,
+      box-shadow 0.18s;
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 16px rgba($primary-color, 0.13);
+    }
   }
   // Accessibility: error state
   .input_field[aria-invalid="true"],
@@ -187,7 +197,6 @@
     border-color: #e74c3c;
     background: #fff6f6;
   }
-
   // for all input images
   input[type="file"] {
     display: none;
@@ -211,4 +220,10 @@
       gap: 0.5rem;
     }
   }
+}
+
+.img_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

@@ -45,13 +45,27 @@ const adminSections = [
       { to: "/dashboard/my-posts", label: "My Posts", icon: <FaBook /> },
     ],
   },
+  {
+    title: "General",
+    links: [
+      { to: "/admin/dashboard/settings", label: "General", icon: <FaCog /> },
+    ],
+  },
 ];
 
 const userLinks = [
   { to: "/dashboard", label: "Dashboard Home", icon: <FaHome /> },
-  { to: "/dashboard/my-posts", label: "My Posts", icon: <FaBook /> },
-  { to: "/dashboard/settings", label: "Settings", icon: <FaCog /> },
-  // Add more user links here
+];
+
+const userSections = [
+  {
+    title: "Blogs",
+    links: [{ to: "/dashboard/my-posts", label: "My Posts", icon: <FaBook /> }],
+  },
+  {
+    title: "General",
+    links: [{ to: "/dashboard/settings", label: "General", icon: <FaCog /> }],
+  },
 ];
 
 const Dashboard = () => {
@@ -90,7 +104,11 @@ const Dashboard = () => {
           className={sidebarOpen ? "open" : ""}
         />
       ) : (
-        <Sidebar links={userLinks} className={sidebarOpen ? "open" : ""} />
+        <Sidebar
+          links={userLinks}
+          sections={userSections}
+          className={sidebarOpen ? "open" : ""}
+        />
       )}
       <main className="dashboard-content">
         <div className="container">

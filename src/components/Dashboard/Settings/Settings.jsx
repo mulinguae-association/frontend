@@ -6,10 +6,10 @@ import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useTranslation } from "react-i18next";
 import Tooltip from "../../HelperComponents/toolTip";
 import { notifyError, notifySuccess } from "../../Notify";
-import "../styles/UserSettings.scss";
 import { useQueryClient } from "react-query";
+import "./Settings.scss";
 
-function UserSettings() {
+function Settings() {
   const { t } = useTranslation("authPages/userProfile");
   const { userData } = useAuth();
   const { postsToDisplay, setPostsToDisplay, queryKeyName } = useBlogPosts();
@@ -68,54 +68,55 @@ function UserSettings() {
   };
 
   return (
-    <main className="settings_page">
-      <div className="container">
-        <h1>{t("pageTitle")}</h1>
-        <span>{t("pageDescription")}</span>
-        <form onSubmit={handleSubmit}>
-          <div className="input_container">
-            <label>{t("nameLabel")}</label>
-            <input type="text" value={name} onChange={handleNameChange} />
-          </div>
-          <div className="input_container">
-            <label>{t("emailLabel")}</label>
-            <input type="email" value={email} onChange={handleEmailChange} />
-          </div>
-          <div className="input_container">
-            <div className="img_container">
-              <img
-                src={
-                  profileImage
-                    ? URL.createObjectURL(profileImage)
-                    : userData?.profileImage || "/images/fallBackUser.png"
-                }
-                width="100px"
-                height="100px"
-                alt="personal profile"
-                onError={(e) => (e.target.src = "/images/fallBackUser.png")}
+    <div className="container">
+      <main className="settings_page dashboard-form-wrapper">
+        <div className="dashboard-form-content">
+          <form onSubmit={handleSubmit} className="dashboard-form">
+            <div className="input_container">
+              <label>{t("nameLabel")}</label>
+              <input type="text" value={name} onChange={handleNameChange} />
+            </div>
+            <div className="input_container">
+              <label>{t("emailLabel")}</label>
+              <input type="email" value={email} onChange={handleEmailChange} />
+            </div>
+            <div className="input_container">
+              <div className="img_container">
+                <img
+                  src={
+                    profileImage
+                      ? URL.createObjectURL(profileImage)
+                      : userData?.profileImage || "/images/fallBackUser.png"
+                  }
+                  width="100px"
+                  height="100px"
+                  alt="personal profile"
+                  onError={(e) => (e.target.src = "/images/fallBackUser.png")}
+                />
+              </div>
+
+              <label className="upload_image" htmlFor="image">
+                {t("changeImageText")}
+                <Tooltip text={t("chooseImageTooltip")} />
+              </label>
+              <input
+                id="image"
+                className="input_image"
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
               />
             </div>
-            <label className="upload_image" htmlFor="image">
-              {t("changeImageText")}
-              <Tooltip text={t("chooseImageTooltip")} />
-            </label>
-            <input
-              id="image"
-              className="input_image"
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-            />
-          </div>
-          <button disabled={isBtnLoading["userSettingsBtn"]} type="submit">
-            {isBtnLoading["userSettingsBtn"]
-              ? t("savingText")
-              : t("saveChangesButton")}
-          </button>
-        </form>
-      </div>
-    </main>
+            <button disabled={isBtnLoading["userSettingsBtn"]} type="submit">
+              {isBtnLoading["userSettingsBtn"]
+                ? t("savingText")
+                : t("saveChangesButton")}
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
   );
 }
 
-export default UserSettings;
+export default Settings;
