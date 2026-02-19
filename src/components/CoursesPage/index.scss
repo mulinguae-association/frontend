@@ -42,7 +42,7 @@
     padding-right: 50px;
     color: $darkBlue-color;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin: 1rem 0;
     position: relative;
     display: inline-block;
 
@@ -69,8 +69,7 @@
   }
   h3 {
     color: $darkBlue-color;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 1rem 0;
     font-size: 1.2rem;
     padding-bottom: 8px;
     position: relative;
@@ -95,7 +94,7 @@
     font-size: 17px;
     white-space: pre-line;
     line-height: 1.6;
-    margin-bottom: 8px;
+    margin: 1rem 0;
   }
 }
 .collapseBtn {
@@ -272,6 +271,9 @@
     &.visible {
       will-change: transform;
     }
+  }
+  h2 {
+    margin: 1rem 0;
   }
 
   #generalEnglish-section {

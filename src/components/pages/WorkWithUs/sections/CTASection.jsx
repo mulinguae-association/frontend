@@ -1,8 +1,11 @@
 import styles from "./CTASection.module.scss";
 import { Heart, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function CTASection() {
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language;
   return (
     <section className={styles.ctaSection}>
       <div className={styles.ctaBadge}>
@@ -15,13 +18,13 @@ export default function CTASection() {
         protection of languages worldwide.
       </p>
       <div className={styles.ctaActions}>
-        <Link to="/register" className={styles.ctaJoinBtn}>
+        <Link to={`/${locale}/contact`} className={styles.ctaJoinBtn}>
           Join Our Community
           <ArrowRight className={styles.ctaJoinBtnIcon} />
         </Link>
-        <a href="#" className={styles.ctaLearnBtn}>
+        <Link to={`/${locale}/about`} className={styles.ctaLearnBtn}>
           Learn More
-        </a>
+        </Link>
       </div>
     </section>
   );
