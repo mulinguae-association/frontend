@@ -15,6 +15,9 @@ const Linguicide = React.lazy(
   () => import("../components/pages/Linguicide/index.jsx"),
 );
 const Blogs = React.lazy(() => import("../components/pages/Blogs/index.jsx"));
+const Libraries = React.lazy(
+  () => import("../components/pages/Libraries/index.jsx"),
+);
 const HundredPhrases = React.lazy(
   () => import("../components/pages/hundredPhrases/index.jsx"),
 );
@@ -112,6 +115,10 @@ const router = createBrowserRouter([
                 <Blogs />
               </BlogPostsProvider>
             ),
+          },
+          {
+            path: "libraries",
+            element: <Libraries />,
           },
           {
             path: "100-basic-phrases",
