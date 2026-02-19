@@ -1,0 +1,185 @@
+@use "../../../../globalStyles/_colors.scss" as *;
+
+.valuesGrid {
+  padding: 4rem 1rem;
+  background: $main-bg;
+
+  @media (min-width: 640px) {
+    padding: 6rem 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 7rem 2rem;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media (min-width: 640px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .valuesHeader {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      .valuesTitle {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: $darkBlue-color;
+        margin-bottom: 0.75rem;
+
+        @media (min-width: 640px) {
+          font-size: 2.25rem;
+        }
+
+        @media (min-width: 1024px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .valuesSubtitle {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: $darkgray-color;
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .valuesGridList {
+      display: grid;
+      gap: 1.5rem;
+
+      @media (min-width: 640px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .valueCard {
+        background: $white-color;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        border: 2px solid $light-border;
+        transition: all 0.25s ease;
+
+        &:hover {
+          border-color: $primary-color;
+          box-shadow:
+            0 10px 25px -5px rgba(0, 0, 0, 0.08),
+            0 5px 10px -5px rgba(0, 0, 0, 0.04);
+          transform: translateY(-3px);
+        }
+
+        .valueIcon {
+          width: 56px;
+          height: 56px;
+          border-radius: 0.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+          svg {
+            width: 28px;
+            height: 28px;
+            color: $white-color;
+          }
+        }
+
+        .valueTitle {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: $darkBlue-color;
+          margin-bottom: 0.5rem;
+        }
+
+        .valueText {
+          font-size: 0.95rem;
+          color: $darkgray-color;
+          line-height: 1.55;
+        }
+
+        // Theme variations
+        &:nth-child(1) {
+          border-color: $blue-shadow-light;
+
+          .valueIcon {
+            background: linear-gradient(
+              to bottom right,
+              $primary-color,
+              $primaryDark-color
+            );
+          }
+
+          &:hover {
+            border-color: $primary-color;
+          }
+        }
+
+        &:nth-child(2) {
+          border-color: rgba($purple, 0.15);
+
+          .valueIcon {
+            background: linear-gradient(
+              to bottom right,
+              $purple,
+              $primaryDark-color
+            );
+          }
+
+          &:hover {
+            border-color: $purple;
+          }
+        }
+
+        &:nth-child(3) {
+          border-color: rgba($emerald-green, 0.15);
+
+          .valueIcon {
+            background: linear-gradient(
+              to bottom right,
+              $emerald-green,
+              $success-dark
+            );
+          }
+
+          &:hover {
+            border-color: $emerald-green;
+          }
+        }
+
+        &:nth-child(4) {
+          border-color: rgba($orange-color, 0.15);
+
+          .valueIcon {
+            background: linear-gradient(
+              to bottom right,
+              $orange-color,
+              $orange-dark
+            );
+          }
+
+          &:hover {
+            border-color: $orange-color;
+          }
+        }
+      }
+    }
+  }
+}

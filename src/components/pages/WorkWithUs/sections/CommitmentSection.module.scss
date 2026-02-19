@@ -1,0 +1,60 @@
+@use "../../../../globalStyles/_colors.scss" as *;
+
+.commitmentSection {
+  background: linear-gradient(135deg, $ultra-lightgray, $pale-gray 60%);
+  padding: 4rem 0;
+  .commitmentContainer {
+    max-width: 896px;
+    margin: 0 auto;
+    background: $white-color;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 32px rgba($primaryDark-color, 0.07);
+    padding: 2.5rem 2rem 2rem;
+    .commitmentTitle {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: $primaryDark-color;
+      margin-bottom: 2rem;
+    }
+    .commitmentList {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .commitmentItem {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        .commitmentIcon {
+          color: $success-dark;
+          width: 1.75rem;
+          height: 1.75rem;
+          flex-shrink: 0;
+          margin-top: 0.25rem;
+        }
+        .commitmentItemTitle {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: $primaryDark-color;
+          margin: 0;
+        }
+        .commitmentItemText {
+          margin: 0;
+        }
+      }
+    }
+    .commitmentNote {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: linear-gradient(90deg, $primaryDark-color, $primary-color);
+      border-radius: 1rem;
+      color: $white-color;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+  .commitmentNoteText {
+    margin: 0;
+  }
+}
