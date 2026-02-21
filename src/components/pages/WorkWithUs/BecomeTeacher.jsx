@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styles from "./BecomeTeacher.module.scss";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
