@@ -4,26 +4,23 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function CTASection() {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("pages/workWithPage");
   const locale = i18n.language;
   return (
     <section className={styles.ctaSection}>
       <div className={styles.ctaBadge}>
         <Heart className={styles.ctaBadgeIcon} />
-        <span>Make a Difference</span>
+        <span>{t("cta.badge")}</span>
       </div>
-      <h2 className={styles.ctaTitle}>Be Part of Something Greater</h2>
-      <p className={styles.ctaText}>
-        Be part of the team that stands for education, diversity, and the
-        protection of languages worldwide.
-      </p>
+      <h2 className={styles.ctaTitle}>{t("cta.title")}</h2>
+      <p className={styles.ctaText}>{t("cta.text")}</p>
       <div className={styles.ctaActions}>
         <Link to={`/${locale}/contact`} className={styles.ctaJoinBtn}>
-          Join Our Community
+          {t("cta.join")}
           <ArrowRight className={styles.ctaJoinBtnIcon} />
         </Link>
         <Link to={`/${locale}/about`} className={styles.ctaLearnBtn}>
-          Learn More
+          {t("cta.learn")}
         </Link>
       </div>
     </section>
