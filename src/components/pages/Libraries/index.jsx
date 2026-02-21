@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import VideoModal from "../../UI/VideoModal";
 import "./Libraries.scss";
 
@@ -25,20 +25,6 @@ const videos = [
 
 const Libraries = () => {
   const [openVideo, setOpenVideo] = useState(null);
-  const [cardWidth, setCardWidth] = useState(320);
-
-  useEffect(() => {
-    const update = () => {
-      if (typeof window === "undefined") return;
-      const w = window.innerWidth;
-      if (w <= 640) setCardWidth("100%");
-      else if (w <= 980) setCardWidth("48%");
-      else setCardWidth(320);
-    };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
 
   return (
     <main className="libraries-page">
@@ -58,7 +44,6 @@ const Libraries = () => {
                 <article
                   key={v.id}
                   className="video-card"
-                  style={{ width: cardWidth }}
                   onClick={() => setOpenVideo(v)}
                 >
                   <div className="thumb">
