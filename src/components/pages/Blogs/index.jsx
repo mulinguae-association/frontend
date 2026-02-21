@@ -58,7 +58,7 @@ const Blogs = () => {
         setPostsToDisplay((prevPostsToDisplay) =>
           counterRef.current <= 2
             ? prevPostsToDisplay + 3
-            : prevPostsToDisplay + 4
+            : prevPostsToDisplay + 4,
         );
       }
     }, 200);
