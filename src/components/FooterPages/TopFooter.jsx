@@ -55,7 +55,7 @@ const TopFooter = () => {
                   </Link>
                 </li>
                 <li className="item">
-                  <Link className="link_item" to={`/`}>
+                  <Link className="link_item" to={`pages/libraries`}>
                     {t("link7")}
                   </Link>
                 </li>

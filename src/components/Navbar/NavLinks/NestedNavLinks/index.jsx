@@ -1,14 +1,16 @@
-import React, { useEffect, useRef } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
-import "./NestedNavLinks.scss"
-import { useTranslation } from 'react-i18next'
+import React, { useEffect, useRef } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import "./NestedNavLinks.scss";
+import { useTranslation } from "react-i18next";
 import { BsCurrencyExchange } from "react-icons/bs";
 const NestedNavLinks = (props) => {
-  const { t } = useTranslation("pages/pagesLinks")
-  const NestedLinksRef = useRef(null)
+  const { t } = useTranslation("pages/pagesLinks");
+  const NestedLinksRef = useRef(null);
   const location = useLocation();
+
   const handleClickOutside = (event) => {
-    if (NestedLinksRef.current &&
+    if (
+      NestedLinksRef.current &&
       !NestedLinksRef.current.contains(event.target) &&
       !NestedLinksRef.current.parentNode.contains(event.target)
     ) {
@@ -17,21 +19,20 @@ const NestedNavLinks = (props) => {
   };
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   });
   return (
-
-    <div ref={NestedLinksRef} className='nestedNavLinks'>
-      <ul className='nestedNavContainer'>
+    <div ref={NestedLinksRef} className="nestedNavLinks">
+      <ul className="nestedNavContainer">
         <li>
           <NavLink
             to={`pages/multilingualism`}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            {t('Multilingualism')}
+            {t("Multilingualism")}
           </NavLink>
         </li>
         <li>
@@ -39,7 +40,7 @@ const NestedNavLinks = (props) => {
             to={`pages/linguicide`}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            {t('Linguicide')}
+            {t("Linguicide")}
           </NavLink>
         </li>
         <li>
@@ -47,16 +48,17 @@ const NestedNavLinks = (props) => {
             to={`pages/teachers`}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            {t('Teachers')}
+            {t("Teachers")}
           </NavLink>
         </li>
         <li>
           <NavLink
             to={`pages/teachers#meetOurTeachers`}
-            relative='path'
+            relative="path"
             className={() =>
-              (location.hash === "#meetOurTeachers" ? "active" : "")
-            }>
+              location.hash === "#meetOurTeachers" ? "active" : ""
+            }
+          >
             {t("Meet our teachers")}
           </NavLink>
         </li>
@@ -65,7 +67,7 @@ const NestedNavLinks = (props) => {
             to={`pages/students`}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            {t('Students')}
+            {t("Students")}
           </NavLink>
         </li>
         <li>
@@ -73,7 +75,15 @@ const NestedNavLinks = (props) => {
             to={`pages/blogs`}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            {t('Blogs')}
+            {t("Blogs")}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to={`pages/libraries`}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            All Libraries
           </NavLink>
         </li>
         <li>
@@ -84,7 +94,7 @@ const NestedNavLinks = (props) => {
             {t("100 basic phrases")}
           </NavLink>
         </li>
-        <li className='donation_link'>
+        <li className="donation_link">
           <NavLink
             to={`pages/donations`}
             className={({ isActive }) => (isActive ? "active" : "")}
@@ -92,10 +102,14 @@ const NestedNavLinks = (props) => {
             <BsCurrencyExchange /> {t("donate")}
           </NavLink>
         </li>
-      </ul >
-      <img className='book_list' src='/images/icons/BooksList.png' alt="BooksList" />
+      </ul>
+      <img
+        className="book_list"
+        src="/images/icons/BooksList.png"
+        alt="BooksList"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default NestedNavLinks
+export default NestedNavLinks;
