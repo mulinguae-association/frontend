@@ -1,0 +1,59 @@
+@use "../../../../globalStyles/_colors.scss" as *;
+
+.heroSection {
+  padding: 0rem 1rem;
+  text-align: center;
+  @media (min-width: 1024px) {
+    padding: 5rem 2rem;
+  }
+  .heroContent {
+    max-width: 1024px;
+    margin: 0 auto;
+    .heroBadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: $ultra-lightgray;
+      color: $darkBlue-color;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      .heroBadgeIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .heroTitle {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: $darkBlue-color;
+      margin-bottom: 0.75rem;
+      @media (min-width: 1024px) {
+        font-size: 2.25rem;
+      }
+    }
+    .heroSubtitle {
+      font-size: 1rem;
+      color: $darkgray-color;
+      margin-bottom: 1.5rem;
+      .em {
+        font-weight: 600;
+        color: $darkBlue-color;
+      }
+    }
+    .heroCommunity {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: $ultra-lightgray;
+      color: $darkBlue-color;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      .heroCommunityIcon {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+}

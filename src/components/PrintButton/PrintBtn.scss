@@ -20,6 +20,7 @@
     border: 1px solid $primary-color;
     text-transform: capitalize;
     @include flexbox($alignItems: center, $justifyContent: space-between);
+    max-height: 1.875rem;
     cursor: pointer;
     transition:
       box-shadow,

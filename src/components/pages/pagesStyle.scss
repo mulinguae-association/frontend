@@ -5,6 +5,7 @@
     font-size: 2.2rem;
     font-size: clamp(1.7rem, 4vw, 2.2rem);
     color: $darkBlue-color;
+    margin-bottom: 1.5rem;
   }
   padding: 50px 0;
   .head {
@@ -12,6 +13,7 @@
     font-size: clamp(1.6rem, 4vw, 2.2rem);
     color: $primaryDark-color;
     max-width: 80%;
+    margin: 2rem auto;
     margin-inline-start: 4rem;
     @media (max-width: 991px) {
       margin-inline-start: 0;
@@ -26,6 +28,7 @@
   }
   span,
   p {
+    margin: 1rem 0;
     .link {
       color: $primaryDark-color;
       word-wrap: break-word;

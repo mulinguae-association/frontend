@@ -75,12 +75,15 @@ const TopFooter = () => {
               <h3 className="footer_head">{t("JoinUs_title")}</h3>
               <ul className="list_item">
                 <li className="item">
-                  <Link className="link_item" to={`/`}>
+                  <Link className="link_item" to={`pages/work-with-us`}>
                     {t("link10")}
                   </Link>
                 </li>
                 <li className="item">
-                  <Link className="link_item" to={`/`}>
+                  <Link
+                    className="link_item"
+                    to={`pages/work-with-us/become-teacher`}
+                  >
                     {t("link11")}
                   </Link>
                 </li>

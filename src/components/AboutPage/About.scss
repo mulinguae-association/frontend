@@ -7,6 +7,7 @@
   & .header {
     font-size: clamp(1.5rem, 4vw, 2rem);
     color: $primaryDark-color;
+    margin: 1.5rem 0;
   }
 
   .group {
@@ -25,6 +26,9 @@
       object-fit: contain;
       border-radius: 10px;
       max-width: none;
+    }
+    p {
+      margin: 1rem 0;
     }
   }
 
