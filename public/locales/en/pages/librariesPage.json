@@ -1,0 +1,21 @@
+{
+  "title": "Video Library",
+  "head": "Curated videos about disappearing languages. Click a card to watch.",
+  "videos": [
+    {
+      "id": "frh81KFbxpg",
+      "title": "Documentary: Languages Lost and Remembered",
+      "description": "A broad, accessible documentary tracing the causes of language loss — migration, assimilation, and globalization — with interviews and archival recordings."
+    },
+    {
+      "id": "K1YCXLea9p0",
+      "title": "Case Study: A Language's Final Speakers",
+      "description": "An intimate case study following the last speakers of a threatened language, showing cultural impact and personal stories."
+    },
+    {
+      "id": "bFWcT3Gbrw4",
+      "title": "Revival & Documentation Efforts",
+      "description": "Focuses on linguists, communities, and grassroots projects working to document, archive, and revive endangered languages."
+    }
+  ]
+}
