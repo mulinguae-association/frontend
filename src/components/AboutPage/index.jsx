@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import Header from "../HeaderPages";
 import "./About.scss";
 import PrintBtn from "../PrintButton";
@@ -81,10 +81,18 @@ const About = () => {
                 />
               </picture>
               <div>
-                <p>{t("about_mission")}</p>
                 <p>
-                  <strong>{t("about_mission2")}</strong>
+                  <Trans
+                    i18nKey="about_mission"
+                    t={t}
+                    components={{ bold: <strong /> }}
+                  />
                 </p>
+                {t("about_mission2") ? (
+                  <p>
+                    <strong>{t("about_mission2")}</strong>
+                  </p>
+                ) : null}
               </div>
             </div>
           </article>
@@ -98,7 +106,13 @@ const About = () => {
                 loading="lazy"
               />
             </header>
-            <p className="about">{t("about_story")}</p>
+            <p className="about">
+              <Trans
+                i18nKey="about_story"
+                t={t}
+                components={{ bold: <strong /> }}
+              />
+            </p>
           </article>
 
           <article className="our_vision">
@@ -110,7 +124,13 @@ const About = () => {
                 loading="lazy"
               />
             </header>
-            <p className="about">{t("about_vision")}</p>
+            <p className="about">
+              <Trans
+                i18nKey="about_vision"
+                t={t}
+                components={{ bold: <strong /> }}
+              />
+            </p>
           </article>
 
           <article className="our_tutors">
@@ -122,7 +142,13 @@ const About = () => {
                 loading="lazy"
               />
             </header>
-            <p className="about">{t("about_tutors")}</p>
+            <p className="about">
+              <Trans
+                i18nKey="about_tutors"
+                t={t}
+                components={{ bold: <strong /> }}
+              />
+            </p>
           </article>
         </div>
       </section>
