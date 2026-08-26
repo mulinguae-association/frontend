@@ -9,6 +9,7 @@ import { notifyError, notifySuccess } from "../../Notify";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useTranslation } from "react-i18next";
 import logError from "../../../utils/logError";
+import { SEO } from "../../SEO";
 
 const FeedBack = () => {
   const { t } = useTranslation("pages/FAQs");
@@ -37,8 +38,8 @@ const FeedBack = () => {
     // Filter out fields with empty values
     const nonEmptyFields = Object.fromEntries(
       Object.entries(formData).filter(
-        ([_, value]) => value !== "" && value !== null
-      )
+        ([_, value]) => value !== "" && value !== null,
+      ),
     );
 
     try {
@@ -142,73 +143,84 @@ const FeedBack = () => {
   };
 
   return (
-    <main className="FAQs">
-      <div className="container">
-        <h2>{t("header")}</h2>
-        <form onSubmit={handleSubmit}>
-          <h3>{t("form.head")}</h3>
-          <label>
-            {t("form.emailLabel")}
-            <input
-              value={formData.email}
-              onChange={(e) => handleChange("email", e.target.value)}
-              placeholder={t("form.emailPlaceholder")}
-            />
-          </label>
-
-          <label>
-            {t("form.fullNameLabel")}
-            <input
-              type="text"
-              value={formData.fullName}
-              onChange={(e) => handleChange("fullName", e.target.value)}
-              placeholder={t("form.fullNamePlaceholder")}
-            />
-          </label>
-          <AffiliationSelect formData={formData} handleChange={handleChange} />
-          <TypeSelect formData={formData} handleChange={handleChange} />
-          <label>
-            {t("form.detailsLabel")}
-            <textarea
-              value={formData.details}
-              onChange={(e) => handleChange("details", e.target.value)}
-              placeholder={t("form.detailsPlaceholder")}
-            />
-          </label>
-
-          {formData.type === t("typeSelect.options.bug") && (
-            <Bug handleChange={handleChange} formData={formData} />
-          )}
-
-          {formData.type !== t("typeSelect.options.comment") && (
+    <>
+      <SEO
+        title="Feedback | Contact Mulinguae Team & Report Issues"
+        description="Send feedback, report bugs, or contact the Mulinguae team. Help us improve our multilingual community and language learning platform."
+        keywords="feedback, contact, report bugs, mulinguae, mulingua, language learning, multilingual community"
+        path="/pages/feedback"
+      />
+      <main className="FAQs">
+        <div className="container">
+          <h2>{t("header")}</h2>
+          <form onSubmit={handleSubmit}>
+            <h3>{t("form.head")}</h3>
             <label>
-              {t("form.urlLabel")}
+              {t("form.emailLabel")}
               <input
-                type="url"
-                value={formData.url}
-                onChange={(e) => handleChange("url", e.target.value)}
-                placeholder={t("form.urlPlaceholder")}
+                value={formData.email}
+                onChange={(e) => handleChange("email", e.target.value)}
+                placeholder={t("form.emailPlaceholder")}
               />
             </label>
-          )}
 
-          <button disabled={isBtnLoading["FAQS_button"]} type="submit">
-            {isBtnLoading["FAQs_button"]
-              ? t("form.submittingButton")
-              : t("form.submitButton")}
-          </button>
+            <label>
+              {t("form.fullNameLabel")}
+              <input
+                type="text"
+                value={formData.fullName}
+                onChange={(e) => handleChange("fullName", e.target.value)}
+                placeholder={t("form.fullNamePlaceholder")}
+              />
+            </label>
+            <AffiliationSelect
+              formData={formData}
+              handleChange={handleChange}
+            />
+            <TypeSelect formData={formData} handleChange={handleChange} />
+            <label>
+              {t("form.detailsLabel")}
+              <textarea
+                value={formData.details}
+                onChange={(e) => handleChange("details", e.target.value)}
+                placeholder={t("form.detailsPlaceholder")}
+              />
+            </label>
 
-          <span className="earth_icon">
-            <FaGlobe />
-          </span>
+            {formData.type === t("typeSelect.options.bug") && (
+              <Bug handleChange={handleChange} formData={formData} />
+            )}
 
-          <div className="shape one"></div>
-          <div className="shape two"></div>
-          <div className="shape three"></div>
-          <div className="shape four"></div>
-        </form>
-      </div>
-    </main>
+            {formData.type !== t("typeSelect.options.comment") && (
+              <label>
+                {t("form.urlLabel")}
+                <input
+                  type="url"
+                  value={formData.url}
+                  onChange={(e) => handleChange("url", e.target.value)}
+                  placeholder={t("form.urlPlaceholder")}
+                />
+              </label>
+            )}
+
+            <button disabled={isBtnLoading["FAQS_button"]} type="submit">
+              {isBtnLoading["FAQs_button"]
+                ? t("form.submittingButton")
+                : t("form.submitButton")}
+            </button>
+
+            <span className="earth_icon">
+              <FaGlobe />
+            </span>
+
+            <div className="shape one"></div>
+            <div className="shape two"></div>
+            <div className="shape three"></div>
+            <div className="shape four"></div>
+          </form>
+        </div>
+      </main>
+    </>
   );
 };
 export default FeedBack;

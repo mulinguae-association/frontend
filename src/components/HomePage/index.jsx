@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import "./Home.scss";
 import { Link } from "react-router-dom";
 import i18n from "../../i18n";
-import { HelmetProvider } from "react-helmet-async";
+import { SEO } from "../SEO";
 
 const Home = ({ imgAnimation }) => {
   const { t, ready } = useTranslation("home", { useSuspense: false });
@@ -10,7 +10,28 @@ const Home = ({ imgAnimation }) => {
   const langQu = i18n.language === "qu"; // check if language is Arabic
 
   return (
-    <HelmetProvider>
+    <>
+      <SEO
+        title="Mulinguae | Multilingual Community & Language Exchange"
+        description="Mulinguae is a global multilingual community for language exchange and learning. Learn languages with native speakers, connect with people worldwide, and join Mulinguae today. (Not affiliated with Mulingua.)"
+        keywords="mulinguae, mulingua, language learning, multilingual, language exchange, native speakers, global community"
+        path="/"
+        ldJson={{
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          name: "Mulinguae",
+          alternateName: "Mulingua",
+          url: `https://mulinguae.com/${i18n.language}/`,
+          logo: "https://res.cloudinary.com/di24dufhu/image/upload/v1770301054/acs-logo_ctleql.webp",
+          sameAs: [
+            "https://www.facebook.com/mulinguae",
+            "https://twitter.com/mulinguae",
+            "https://www.linkedin.com/company/mulinguae",
+          ],
+          description:
+            "Mulinguae is a global multilingual community for language exchange, learning, and cultural connection.",
+        }}
+      />
       <main className="hero_section">
         <div className="hero_image_wrapper">
           <img
@@ -139,7 +160,7 @@ const Home = ({ imgAnimation }) => {
           </div>
         </div>
       </main>
-    </HelmetProvider>
+    </>
   );
 };
 
