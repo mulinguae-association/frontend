@@ -1,0 +1,120 @@
+@use "../../../../globalStyles/_colors.scss" as *;
+
+.ctaSection {
+  padding: 4rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    width: 8rem;
+    height: 8rem;
+    background: rgba($primary-color, 0.2);
+    border-radius: 9999px;
+    filter: blur(60px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    width: 10rem;
+    height: 10rem;
+    background: rgba($success-dark, 0.2);
+    border-radius: 9999px;
+    filter: blur(70px);
+  }
+  .ctaBadge {
+    display: inline-flex;
+    align-items: center;
+    color: $medium-darkblue;
+    gap: 0.5rem;
+    backdrop-filter: blur(6px);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  .ctaBadgeIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: $medium-darkblue;
+  }
+  .ctaTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 48px;
+    position: relative;
+    z-index: 2;
+    color: $medium-darkblue;
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+  .ctaText {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 33px;
+    position: relative;
+    z-index: 2;
+  }
+  .ctaActions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    @media (min-width: 640px) {
+      flex-direction: row;
+    }
+  }
+  .ctaJoinBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: $white-color;
+    color: $darkBlue-color;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    &:hover {
+      box-shadow: 0 25px 50px rgba($darkgray-color, 0.25);
+      transform: scale(1.01);
+    }
+  }
+  .ctaJoinBtnIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .ctaLearnBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba($white-color, 0.1);
+    backdrop-filter: blur(6px);
+    border: 2px solid $white-color;
+    color: $medium-darkblue;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    &:hover {
+      background: rgba($white-color, 0.2);
+    }
+  }
+}

@@ -15,6 +15,9 @@ const Linguicide = React.lazy(
   () => import("../components/pages/Linguicide/index.jsx"),
 );
 const Blogs = React.lazy(() => import("../components/pages/Blogs/index.jsx"));
+const Libraries = React.lazy(
+  () => import("../components/pages/Libraries/index.jsx"),
+);
 const HundredPhrases = React.lazy(
   () => import("../components/pages/hundredPhrases/index.jsx"),
 );
@@ -66,6 +69,12 @@ const PrivacyPolicy = React.lazy(
 const UnityAndSolidarity = React.lazy(
   () => import("../components/pages/unity&solidarity/index.jsx"),
 );
+const WorkWithUs = React.lazy(
+  () => import("../components/pages/WorkWithUs/index.jsx"),
+);
+const BecomeTeacher = React.lazy(
+  () => import("../components/pages/WorkWithUs/BecomeTeacher.jsx"),
+);
 const NotFound = React.lazy(() => import("../components/NotFound/index.jsx"));
 
 const router = createBrowserRouter([
@@ -114,6 +123,10 @@ const router = createBrowserRouter([
             ),
           },
           {
+            path: "libraries",
+            element: <Libraries />,
+          },
+          {
             path: "100-basic-phrases",
             element: <HundredPhrases />,
           },
@@ -136,6 +149,14 @@ const router = createBrowserRouter([
           {
             path: "unity-solidarity",
             element: <UnityAndSolidarity />,
+          },
+          {
+            path: "work-with-us",
+            element: <WorkWithUs />,
+          },
+          {
+            path: "work-with-us/become-teacher",
+            element: <BecomeTeacher />,
           },
         ],
       },

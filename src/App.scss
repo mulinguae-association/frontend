@@ -54,12 +54,14 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  margin: 0;
 }
 
 // Headings in RTL already covered by the global selector
 p {
   line-height: 1.7;
   font-size: clamp(1rem, 4vw, 1.0625rem);
+  margin: 0;
 }
 
 // style images
@@ -143,6 +145,19 @@ $arrow-size: 5px; // Adjust the size of the arrow
 
 .fade-in.active {
   opacity: 1;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    $primary-color,
+    $secondary-color,
+    transparent
+  );
+  margin: 2px auto;
+  width: 80%;
 }
 
 .disabled {

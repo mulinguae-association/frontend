@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "badge": "Join Our Mission",
+    "title": "WORK WITH US",
+    "subtitle": "At ACS Mulinguae, you do not work <em>for us</em> — you work <em>with us</em>.",
+    "community": "Building a collaborative community of educators"
+  },
+  "mission": {
+    "header": "Our Shared Objective",
+    "paragraph1": "We are building a collaborative community of educators united by a shared objective: to promote multilingualism and to protect the world's languages from the risk of disappearance.",
+    "paragraph2": "When you join ACS Mulinguae, you become part of a committed team that believes linguistic diversity is not optional — it is essential."
+  },
+  "values": {
+    "title": "Why Languages Matter",
+    "subtitle": "Every language carries knowledge, culture, identity, and history. Preserving them is not simply an academic goal; it is a responsibility to humanity.",
+    "items": {
+      "knowledge": {
+        "title": "Knowledge",
+        "text": "Languages preserve unique ways of understanding and interacting with the world"
+      },
+      "culture": {
+        "title": "Culture",
+        "text": "Each language embodies the traditions, values, and wisdom of its speakers"
+      },
+      "identity": {
+        "title": "Identity",
+        "text": "Language is fundamental to personal and community identity and belonging"
+      },
+      "history": {
+        "title": "History",
+        "text": "Languages connect us to our past and carry forward ancestral knowledge"
+      }
+    }
+  },
+  "commitment": {
+    "title": "Our Commitment",
+    "items": [
+      {
+        "title": "Inclusive Education",
+        "text": "We ensure that education welcomes and values all learners, regardless of their linguistic background"
+      },
+      {
+        "title": "Accessible Learning",
+        "text": "We break down barriers to make language education available to everyone, everywhere"
+      },
+      {
+        "title": "Respectful of Heritage",
+        "text": "We honor and preserve the linguistic heritage that defines communities around the world"
+      }
+    ],
+    "note": "Together, we work to ensure that education is inclusive, accessible, and respectful of linguistic heritage."
+  },
+  "partnership": {
+    "badge": "Collaboration",
+    "title": "Together We Work Better and Faster!",
+    "subtitle": "We are open to work with other organisations that have the same objectives as us and share our values.",
+    "introParagraphs": [
+      "At ACS Mulinguae, we are committed to advancing equitable access to education through the promotion of multilingualism and the preservation of linguistic diversity.",
+      "We believe that language is not merely a tool of communication, but a carrier of knowledge systems, cultural memory, identity, and social cohesion. Yet today, hundreds of languages are at risk of disappearance, and millions of learners remain underserved by education systems that do not reflect their linguistic realities."
+    ],
+    "missionPointsTitle": "Our Mission",
+    "missionPoints": [
+      {
+        "title": "Promote Multilingual Education",
+        "text": "As a driver of inclusion and academic success"
+      },
+      {
+        "title": "Strengthen Language Protection",
+        "text": "Protection and revitalization of vulnerable languages"
+      },
+      {
+        "title": "Support Teachers",
+        "text": "Through collaborative, research-informed pedagogical practices"
+      },
+      {
+        "title": "Sustainable Education Models",
+        "text": "That respect linguistic diversity"
+      }
+    ],
+    "whyHeader": "Why Partnership Matters",
+    "whySubtitle": "Strategic partnerships enable us to:",
+    "whyList": [
+      "Expand multilingual curriculum development",
+      "Provide teacher training and professional development",
+      "Develop educational materials in underrepresented languages",
+      "Conduct research and impact evaluation",
+      "Scale sustainable models of inclusive education"
+    ],
+    "note": "Our work directly contributes to global education and cultural preservation objectives, including inclusive and equitable quality education and the safeguarding of intangible cultural heritage."
+  },
+  "partnerCallout": {
+    "title": "Seeking Like-Minded Partners",
+    "text": "We seek partners who recognize that linguistic diversity is not a marginal issue, but a foundational pillar of sustainable development, social justice, and long-term human advancement.",
+    "highlight": "Together, we can ensure that education systems empower learners in their own languages — and that no language, and no learner, is left behind.",
+    "button": "Partner With Us"
+  },
+  "cta": {
+    "badge": "Make a Difference",
+    "title": "Be Part of Something Greater",
+    "text": "Be part of the team that stands for education, diversity, and the protection of languages worldwide.",
+    "join": "Join Our Community",
+    "learn": "Learn More"
+  },
+  "becomeTeacher": {
+    "title": "Become a Teacher with ACS Mulinguae",
+    "lead": "At ACS Mulinguae, we believe that multilingualism is a powerful bridge between cultures and a vital pathway to equitable access to education and the empowerment of vulnerable communities worldwide. Please complete the application form and submit it together with your CV.",
+    "button": "Join Our Community"
+  }
+}

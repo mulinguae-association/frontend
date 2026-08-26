@@ -24,7 +24,7 @@ const BlogList = ({ acceptedPosts }) => {
       }
       setWindowWidth({ width });
     },
-    [windowWidth, clearCache]
+    [windowWidth, clearCache],
   );
 
   const padding = useMemo(() => (isMobile ? `10px 0` : `30px 0`), [isMobile]);
@@ -59,7 +59,7 @@ const BlogList = ({ acceptedPosts }) => {
         </CellMeasurer>
       );
     },
-    [acceptedPosts, padding, minHeight, cache]
+    [acceptedPosts, padding, minHeight, cache],
   );
 
   return (

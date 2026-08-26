@@ -19,8 +19,14 @@ const About = () => {
     "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1024/v1707342711/education_mission_iupsiq.webp 1024w",
     "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711/education_mission_iupsiq.webp 1280w",
   ];
-  const imagesizes =
-    "(max-width:256px) 256px,(max-width:480px) 480px,(max-width:768px) 768px,(max-width:1024px) 1024px,(max-width:1280px) 1280px";
+  const imagesizes = [
+    "(max-width:256px) 256px,(max-width:480px) 480px,(max-width:768px) 768px,(max-width:1024px) 1024px,(max-width:1280px) 1280px",
+    "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_256/v1707342711/education_mission_iupsiq.webp 256w",
+    "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_480/v1707342711/education_mission_iupsiq.webp 480w",
+    "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_768/v1707342711/education_mission_iupsiq.webp 768w",
+    "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1024/v1707342711/education_mission_iupsiq.webp 1024w",
+    "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711/education_mission_iupsiq.webp 1280w",
+  ];
 
   const imgSrc =
     "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_1280/v1707342711/education_mission_iupsiq.webp";
