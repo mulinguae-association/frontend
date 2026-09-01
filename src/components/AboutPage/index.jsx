@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import Header from "../HeaderPages";
 import "./About.scss";
 import PrintBtn from "../PrintButton";
@@ -109,7 +109,9 @@ const About = () => {
                   />
                 </picture>
                 <div>
-                  <p>{t("about_mission")}</p>
+                  <p>
+                    <Trans i18nKey="about_mission" ns="about" />
+                  </p>
                   <p>
                     <strong>{t("about_mission2")}</strong>
                   </p>
@@ -126,7 +128,9 @@ const About = () => {
                   loading="lazy"
                 />
               </header>
-              <p className="about">{t("about_story")}</p>
+              <p className="about">
+                <Trans i18nKey="about_story" ns="about" />
+              </p>
             </article>
 
             <article className="our_vision">
@@ -138,7 +142,9 @@ const About = () => {
                   loading="lazy"
                 />
               </header>
-              <p className="about">{t("about_vision")}</p>
+              <p className="about">
+                <Trans i18nKey="about_vision" ns="about" />
+              </p>
             </article>
 
             <article className="our_tutors">
@@ -150,7 +156,9 @@ const About = () => {
                   loading="lazy"
                 />
               </header>
-              <p className="about">{t("about_tutors")}</p>
+              <p className="about">
+                <Trans i18nKey="about_tutors" ns="about" />
+              </p>
             </article>
           </div>
         </section>
