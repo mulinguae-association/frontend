@@ -46,3 +46,30 @@ $strength-weak: #ff5722; // Weak password
 $strength-medium: #ffc107; // Medium password
 $strength-strong: #4caf50; // Strong password
 $strength-very-strong: #2e7d32; // Very strong password
+
+// ============================================
+// Dark Mode Colors
+// Shared across dark-themed UI (e.g. the AI chatbot).
+// Brand colors are reused from above ($primary-color / $primaryDark-color).
+// ============================================
+
+// Dark surfaces
+$dark-bg-deep: #0b0f1a; // Deepest panel background
+$dark-bg-surface: #111827; // Main surface
+$dark-bg-surface-2: #1a2333; // Secondary surface
+$dark-bg-input: #0f1626; // Input background
+$dark-border: #263247; // Borders / dividers
+
+// Dark text
+$dark-text-primary: #eef2f8; // Primary text
+$dark-text-secondary: #9aa6b9; // Secondary text
+$dark-text-muted: #667085; // Muted text
+
+// Dark accents
+$dark-success: #34d399; // Success
+$dark-error: #f87171; // Error
+$dark-warning: #fbbf24; // Warning
+
+// Dark chat bubbles
+$dark-bot-bubble: #1c2740; // Bot message bubble
+$dark-user-bubble: linear-gradient(135deg, $primary-color, $primaryDark-color); // User message bubble

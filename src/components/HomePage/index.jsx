@@ -71,7 +71,7 @@ const Home = ({ imgAnimation }) => {
                 }`}
               >
                 <img
-                  fetchPriority="high"
+                  fetchpriority="high"
                   src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp"
                   srcSet="
                     https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_256/v1707246278/earth_fnjwsd.webp 256w,
@@ -142,7 +142,7 @@ const Home = ({ imgAnimation }) => {
               }`}
             >
               <img
-                fetchPriority="high"
+                fetchpriority="high"
                 src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp"
                 srcSet="
                   https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp 640w,

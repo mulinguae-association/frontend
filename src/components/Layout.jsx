@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Loader from './Loader'
 import useLoader from './Loader/useLoader'
 import { ToastContainer } from "react-toastify";
+import Chatbot from './Chatbot/Chatbot';
 const ScrollToTop = React.lazy(() => import('../utils/ScrollToTop'));
 const ToTopBtn = React.lazy(() => import('../components/ToTopBtn'));
 const Footer = React.lazy(() => import('./FooterPages/index'));
@@ -42,6 +43,7 @@ const Layout = () => {
             <ScrollToTop />
             <ToTopBtn />
           </React.Suspense>
+          <Chatbot domain="general" position="bottom-right" />
         </>
       }
     </>
