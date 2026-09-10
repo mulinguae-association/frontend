@@ -4,6 +4,7 @@ import { useClickOutside } from "../../../utils/ClickOutside";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 import i18next from "i18next";
 import i18n from "../../../i18n";
+import { isAdminRole } from "../../../utils/isAdminRole";
 import { useTranslation } from "react-i18next";
 
 const UserMenu = ({ handleLogout, setShowMenuUser }) => {
@@ -21,7 +22,7 @@ const UserMenu = ({ handleLogout, setShowMenuUser }) => {
         isAr_Ur ? { left: 0, right: "unset" } : { right: 0, left: "unset" }
       }
     >
-      {isAuth && userData.role === "admin" && (
+      {isAuth && isAdminRole(userData.role) && (
         <Link to={`/${i18next.language}/dashboard`} className="user-link">
           {t("dashBtn")}
         </Link>

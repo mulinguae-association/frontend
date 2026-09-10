@@ -17,16 +17,22 @@ export const useUpdateCommentLocally = (blogId, parentComment) => {
         }))
       }))
     } else {
-      queryClient.setQueriesData(["remaining-replies", parentComment], (prevComments) => ({
+      const updateReply = (prevComments) => ({
         ...prevComments,
         pages: prevComments.pages.map((page) => ({
           ...page,
+          lastAcceptedReply:
+            page.lastAcceptedReply?._id === commentId
+              ? { ...page.lastAcceptedReply, status: updatedContent, content: value }
+              : page.lastAcceptedReply,
           remainingReplies: page.remainingReplies.map((reply) =>
             reply._id === commentId ?
               { ...reply, status: updatedContent, content: value } : reply
           )
         }))
-      }))
+      });
+      queryClient.setQueryData(["remaining-replies", parentComment], updateReply);
+      queryClient.setQueryData(["remaining-replies-preview", parentComment], updateReply);
     }
   };
   return updateCommentLocally;

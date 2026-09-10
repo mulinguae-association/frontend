@@ -199,12 +199,11 @@
       border: 2px solid #00a2ff42;
       box-shadow: 0 4px 15px $blue-shadow-light;
       width: 80%;
-      margin: 0px auto;
+      margin: 0 auto 20px auto;
       background: rgba(#fff, 0.8);
       @media (max-width: 767px) {
         & {
           box-shadow: none;
-          margin: 0;
           width: 100%;
           padding: 12px 16px;
           border: none;

@@ -18,16 +18,20 @@ export const useRemoveCommentMutation = (blogId, parentComment) => {
       onMutate: async ({ commentId }) => {
         await queryClient.cancelQueries(['comments', blogId]);
         await queryClient.cancelQueries(['remaining-replies', parentComment]);
+        await queryClient.cancelQueries(['remaining-replies-preview', parentComment]);
         // get return previous comments or replies on Error
         const previousComments = await queryClient.cancelQueries(['comments', blogId]);
         const previousReplies = await queryClient.cancelQueries(['remaining-replies', parentComment]);
+        const previousPreviewReplies = await queryClient.cancelQueries(['remaining-replies-preview', parentComment]);
         // Optimistically update the comments
         queryClient.setQueryData(['comments', blogId], (oldData) => updateComments(oldData, commentId));
         if (parentComment !== null) {
-          queryClient.setQueryData(["remaining-replies", parentComment], (oldData) => updateReplies(oldData, commentId));
+          const updateRepliesData = (oldData) => updateReplies(oldData, commentId);
+          queryClient.setQueryData(["remaining-replies", parentComment], updateRepliesData);
+          queryClient.setQueryData(["remaining-replies-preview", parentComment], updateRepliesData);
         }
 
-        return { previousComments, previousReplies };
+        return { previousComments, previousReplies, previousPreviewReplies };
       },
       onSuccess: (res) => handleSuccess(res, blogId, queryClient, clearCache),
       onError: (error, _, context) => handleErrorCase(error, context, blogId, parentComment, queryClient)
@@ -85,6 +89,9 @@ const handleErrorCase = (error, context, blogId, parentComment, queryClient) => 
   }
   if (context?.previousReplies) {
     queryClient.setQueryData(['remaining-replies', parentComment], context.previousReplies);
+  }
+  if (context?.previousPreviewReplies) {
+    queryClient.setQueryData(['remaining-replies-preview', parentComment], context.previousPreviewReplies);
   }
   logError('Error removing comment:', error);
   notifyError(handleError(error));

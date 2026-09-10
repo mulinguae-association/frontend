@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     const { fetchUserProfile } = await import("../apis/auth-api");
     return fetchUserProfile();
   };
-  useQuery("userProfile", fetchUserProfile, {
+  const { isLoading: authLoading } = useQuery("userProfile", fetchUserProfile, {
     retry: false, // Don't retry on failure
     staleTime: 10 * 60 * 1000, // 10 minutes
     cacheTime: 15 * 60 * 1000, // 15 minutes
@@ -36,7 +36,9 @@ export const AuthProvider = ({ children }) => {
   });
 
   return (
-    <AuthContext.Provider value={{ userData, isAuth, setIsAuth, setUserData }}>
+    <AuthContext.Provider
+      value={{ userData, isAuth, setIsAuth, setUserData, authLoading }}
+    >
       {children}
     </AuthContext.Provider>
   );

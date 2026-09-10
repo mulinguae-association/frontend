@@ -7,6 +7,7 @@ import logError from "../../../utils/logError";
 import handleError from "../../../utils/handleError";
 import { notifyError } from "../../../components/Notify";
 import i18n from "../../../i18n";
+import { isAdminRole } from "../../../utils/isAdminRole";
 
 export const useCreateCommentMutation = () => {
   const queryClient = useQueryClient();
@@ -15,7 +16,7 @@ export const useCreateCommentMutation = () => {
   const { clearCache } = useCache();
 
   // Assuming userData contains user roles or privileges
-  const isAdmin = userData?.role === "admin"; // Or any other logic to determine admin role
+  const isAdmin = isAdminRole(userData?.role); // Or any other logic to determine admin role
   const commentStatus = isAdmin ? "accepted" : "pending";
 
   const updateCommentsData = (blogId, commentData) => {
