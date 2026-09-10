@@ -1,138 +1,193 @@
 {
   "courses": {
-    "heading": "Our Courses",
-    "subHeading": "ACS Mulinguae provides the following courses:",
+    "heading": "Kananchisqap Yachaykuna",
+    "subHeading": "ACS Mulinguaeqa kay yachaykunata qhanichinmi:",
     "sectionTitles": {
-      "esl": "1. English as a Second Language (ESL) - General English (six levels)",
-      "efp": "2. English for Specific Purposes (EFP)",
-      "languages": "As a promoter of languages, ACS Mulinguae is very keen to look for teachers of any language that you want to learn. Just drop some words in the Contact Box"
+      "esl": "1. Inlishqa Huk Simiyuq Yachay (ESL) - General English (isqhay khipukunapas)",
+      "efp": "2. Inlishqa Kananchisqa Kananpasqanpaq (EFP)",
+      "languages": "Simikunapaq Yanapaq hina, ACS Mulinguaeqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi. Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "courseCategories": "Kananchisqap Simi Yachaykuna"
+    },
+    "intro": {
+      "description": "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "eslDescription": "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "efpDescription": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "phrasesDescription": "Tukuy simikunapaq allin rimaykunapas, kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "otherLanguagesDescription": "Astawan simikunata munankichu? Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi."
     },
     "common": {
-      "contactUsLink": "Contact us"
+      "contactUsLink": "Kananchisqapaq yachayta sapanqanmanta",
+      "exploreButton": "Yachaykunata Rikuy"
     },
     "specificPurposeCourses": [
-      "English for Accounting",
-      "English for Anthropology",
-      "English for Development Studies",
-      "Business English",
-      "English for International Studies",
-      "Legal English",
-      "English for Trade Union Studies",
-      "English for Travel and Tourism",
-      "English for Women Studies"
+      "Inlishqa Qullqi Yachaypaq",
+      "Inlishqa Runakuna Yachaypaq",
+      "Inlishqa Kananchisqa Kananpasqanpaq Yachaypaq",
+      "Llank'ay Inlishqa",
+      "Inlishqa Tukuy Llaqtakunapaq Yachaypaq",
+      "Kanan Inlishqa",
+      "Inlishqa Tukuy Llaqtakunapaq Yachaypaq",
+      "Inlishqa Musuqyaykunapaspaq hinaspa Yachaypaq",
+      "Inlishqa Warmikunapaq Yachaypaq",
+      "Inlishqa Chakuchaykunapaq Yachaypaq"
     ],
     "languagesList": [
-      { "label": "amari", "value": "Am" },
-      { "label": "arabic", "value": "Ar" },
-      { "label": "aymara", "value": "Ay" },
-      { "label": "cantonese", "value": "Ca" },
-      { "label": "french", "value": "Fr" },
-      { "label": "hindi", "value": "Hi" },
-      { "label": "italian", "value": "It" },
-      { "label": "kreolHaiti", "value": "KH" },
-      { "label": "kreolMorisyen", "value": "KM" },
-      { "label": "mandarin", "value": "Mn" },
-      { "label": "portuguese", "value": "Pt" },
-      { "label": "quechua", "value": "Qu" },
-      { "label": "russian", "value": "Ru" },
-      { "label": "spanish", "value": "Es" },
-      { "label": "urdu", "value": "Ur" }
+      {
+        "label": "amari",
+        "value": "Am"
+      },
+      {
+        "label": "arabi",
+        "value": "Ar"
+      },
+      {
+        "label": "aymara",
+        "value": "Ay"
+      },
+      {
+        "label": "cantonese",
+        "value": "Ca"
+      },
+      {
+        "label": "fransay",
+        "value": "Fr"
+      },
+      {
+        "label": "hindi",
+        "value": "Hi"
+      },
+      {
+        "label": "italiyanu",
+        "value": "It"
+      },
+      {
+        "label": "kreolHaiti",
+        "value": "KH"
+      },
+      {
+        "label": "kreolMorisyen",
+        "value": "KM"
+      },
+      {
+        "label": "mandarin",
+        "value": "Mn"
+      },
+      {
+        "label": "portugués",
+        "value": "Pt"
+      },
+      {
+        "label": "quechua",
+        "value": "Qu"
+      },
+      {
+        "label": "rusiyu",
+        "value": "Ru"
+      },
+      {
+        "label": "español",
+        "value": "Es"
+      },
+      {
+        "label": "urdu",
+        "value": "Ur"
+      }
     ],
     "englishCoursesTitle": {
-      "Level": "Level:",
-      "Duration": "Duration:",
-      "Description": "Description:",
-      "LearningOutcomes": "Learning Outcomes:"
+      "Level": "Khipu:",
+      "Duration": "Pacham:",
+      "Description": "Rikuchiy:",
+      "LearningOutcomes": "Yachanakuykunapas:"
     },
     "englishCourses": [
       {
         "id": "1",
-        "CourseName": "General English for Absolute Beginners",
-        "Level": "Level 1 or A1 (Beginner)",
-        "Duration": "50 hours",
-        "Description": "Absolute Beginners are learners who have had no or very little instruction in the target language. It is distinguished from false beginners who are learners who have studied the target language before but never acquire a real grasp of the language.",
+        "CourseName": "Llapan Runapaq Yachay Qallarichiwanapaq",
+        "Level": "Khipu 1 o A1 (Qallarichiwanapaq)",
+        "Duration": "50 p'unchaw",
+        "Description": "Qallarichiwanapaqkunaqa yachayta mana yachanpasqankupas, pisi yachanpasqankupas. Kayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
         "LearningOutcomes": [
-          "Ask and answer simple questions on very familiar topics",
-          "Use simple phrases and sentences to describe where they live and people they know",
-          "Understand familiar words and very basic phrases when spoken slowly and clearly",
-          "Read simple words, phrases, and sentences",
-          "Write short, simple postcards and fill in forms with personal details"
+          "Yuyaykunata atikuykunata rimaqkunata atikuykunapas",
+          "Tupakuq rimaykunapas, yachaykunapas",
+          "Yuyaykunata yachanpasqanpas, yuyaykunapas",
+          "Qillqaykunapas, yachaykunapas",
+          "Kuchuykunapas, chaski pukyukunapas"
         ]
       },
       {
         "id": "2",
-        "CourseName": "General English",
-        "Level": "Level 2 (A1+ or Elementary)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 1 or have already a basic knowledge of the target language. It covers subjects such as definite and indefinite articles, congratulating, giving / justifying opinions, spelling skills, nouns and pronouns, positive and negative.",
+        "CourseName": "Llapan Runapaq Yachay",
+        "Level": "Khipu 2 (A1+ o Qallarichiwanapaq)",
+        "Duration": "50 p'unchaw",
+        "Description": "Kay yachayqa kananchisqapaq 1 khiputa llasqanpasqanpas, khipu 1 khipuyuqkunapaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
         "LearningOutcomes": [
-          "Communicate in simple and routine tasks on family topics and activities",
-          "Make simple description of their family and other people, living conditions, educational background and their present or most recent job",
-          "Understand phrases and common vocabulary on common areas",
-          "Read very short, simple texts and find specific, predictable information in advertisements, prospectuses, menus and time tables and understand short simple personal letters",
-          "Write short, simple notes and messages, simple personal letters such as thanking someone"
+          "Ayllu yachaykunapaq, ayllu llank'aykunapaq rimaykunapas",
+          "Ayllu rikuchiykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+          "Yuyaykunapas, yachaykunapas",
+          "Qillqaykunapas, yachaykunapas",
+          "Kuchuykunapas, chaski pukyukunapas"
         ]
       },
       {
         "id": "3",
-        "CourseName": "General English",
-        "Level": "Level 3 (A2 or Pre-Intermediate)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 2 or have reached this level in another set-up. (The learner will sit a test to determine his or her level). The course covers subjects such as the use of the continuous and perfect tenses, passive voice, adverbs and vocabulary surrounding presentation, restaurant and leisure venues, common dishes, personal experiences, weather and climate change.",
+        "CourseName": "Llapan Runapaq Yachay",
+        "Level": "Khipu 3 (A2 o Qallarichiwanapaq)",
+        "Duration": "50 p'unchaw",
+        "Description": "Kay yachayqa kananchisqapaq 2 khiputa llasqanpasqanpas, khipu 2 khipuyuqkunapaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
         "LearningOutcomes": [
-          "Deal with most situations when they travel in places where people speak English",
-          "Talk about experiences and events, dreams, hopes and ambitions, give reasons and explanations for opinions and plans, tell the story of a book or film and describe reactions",
-          "Understand the main points of a clear speech on work, school and leisure, understand the main point on many radio or TV programs on current affairs or familiar topics, when the speaker speaks slowly and clearly",
-          "Write simply about familiar topics, write personal letters describing experiences and impressions"
+          "Tukuy kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
         ]
       },
       {
         "id": "4",
-        "CourseName": "General English",
-        "Level": "Level 4 (B1 or Intermediate)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 3 or have reached this level in another set-up. (The learner will sit a test to determine his or her level)",
+        "CourseName": "Llapan Runapaq Yachay",
+        "Level": "Khipu 4 (B1 o Qallarichiwanapaq)",
+        "Duration": "50 p'unchaw",
+        "Description": "Kay yachayqa kananchisqapaq 3 khiputa llasqanpasqanpas, khipu 3 khipuyuqkunapaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
         "LearningOutcomes": [
-          "Speak regularly with any English speakers",
-          "Discuss familiar topics in detail and give their opinions and explain advantages and disadvantages",
-          "Understand long speeches and lectures and follow complex arguments if the topic is reasonably familiar, understand most TV news and current affairs programs and the majority of films in common accents",
-          "Read articles and reports about common topics and understand modern novels",
-          "Write clearly and in detail about a wide range of subjects, including essays, reports and letters about events and personal experiences"
+          "Inlishqa rimaykunata atikuykunapas",
+          "Yuyaykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+          "Hatun rimaqkunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+          "Qillqaykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+          "Kuchuykunapas, chaski pukyukunapas"
         ]
       },
       {
         "id": "5",
-        "CourseName": "General English",
-        "Level": "Level 5 (B2 or Upper Intermediate)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 4 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
+        "CourseName": "Llapan Runapaq Yachay",
+        "Level": "Khipu 5 (B2 o Qallarichiwanapaq)",
+        "Duration": "50 p'unchaw",
+        "Description": "Kay yachayqa kananchisqapaq 4 khiputa llasqanpasqanpas, khipu 4 khipuyuqkunapaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
         "LearningOutcomes": [
-          "Speak fluently without searching for language",
-          "Give ideas and opinions and relate their ideas to those of other speakers",
-          "Talk about complex subjects and develop arguments",
-          "Understand long complex speech",
-          "Understand most television programs and films",
-          "Understand long and complex factual literary texts, with different styles",
-          "Understand specialized articles and long technical instructions",
-          "Write long, clear, well-structured text to express their points of view",
-          "Write about complex subject in a letter, an essay or a report",
-          "Write in an appropriate style"
+          "Allinta rimaykunapas",
+          "Yuyaykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+          "Yuyaykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+          "Tukuy kananchisqapaq rikuykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Kuchuykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Qillqaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Ruraykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta."
         ]
       },
       {
         "id": "6",
-        "CourseName": "General English",
-        "Level": "Level 6 (C1 or Advanced)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 5 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
+        "CourseName": "Llapan Runapaq Yachay",
+        "Level": "Khipu 6 (C1 o Qallarichiwanapaq)",
+        "Duration": "50 p'unchaw",
+        "Description": "Kay yachayqa kananchisqapaq 5 khiputa llasqanpasqanpas, khipu 5 khipuyuqkunapaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
         "LearningOutcomes": [
-          "Take part fluently and effortlessly in any conversation and have a good familiarity with idiomatic expressions and colloquialisms",
-          "Present a clear, smoothly-flowing description or argument in a style appropriate to the context and with an effective logical structure",
-          "Understand any kind of spoken language, live or broadcast, at fast native speed when the learner has some time to get familiar with different accent",
-          "Read with ease abstract structurally or linguistically complex texts such as manuals, specialized articles and literary works",
-          "Write clear, smoothly flowing texts in an appropriate style",
-          "Write complex letters, reports or articles which present a case with an effective logical structure",
-          "Write summaries and reviews of professional or literary works"
+          "Allinta rimaykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+          "Rikuchiykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+          "Qillqaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Kuchuykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Qillqaykunapas, yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+          "Yachaykunapas, kananchisqa kananpasqanpaq yachayta sapanqanmanta."
         ]
       }
     ]

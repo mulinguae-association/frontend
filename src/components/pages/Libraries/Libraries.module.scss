@@ -87,6 +87,11 @@
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
         }
+
+        .play-circle:dir(rtl)::after {
+          border-left: none;
+          border-right: 16px solid $white-color;
+        }
       }
     }
 

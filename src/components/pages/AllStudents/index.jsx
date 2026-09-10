@@ -10,9 +10,9 @@ const AllStudents = () => {
   return (
     <>
       <SEO
-        title="Students of All Ages | Mulinguae Multilingual Education"
-        description="Discover how Mulinguae supports students of all ages in multilingual education. Learn about our programs, methods, and equality initiatives."
-        keywords="students of all ages, multilingual education, mulinguae, mulingua, equality, learning methods, global community"
+        title={t("seo.allStudents.title")}
+        description={t("seo.allStudents.description")}
+        keywords={t("seo.allStudents.keywords")}
         path="/pages/students-of-all-ages"
       />
       <div className="studentsAllAges">

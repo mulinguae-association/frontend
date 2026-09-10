@@ -602,3 +602,63 @@
     }
   }
 }
+
+// RTL: mirror heading underlines, collapse button, and list item direction.
+[dir="rtl"] {
+  .course-section h2 {
+    padding-right: 0;
+    padding-left: 50px;
+
+    &::after {
+      left: auto;
+      right: 0;
+      background: linear-gradient(
+        to left,
+        $primary-color,
+        rgba($primary-color, 0.3)
+      );
+    }
+  }
+
+  .course-section h3 {
+    &::after {
+      left: auto;
+      right: 0;
+      background: linear-gradient(to left, $primary-color, transparent);
+    }
+  }
+
+  .collapseBtn {
+    right: auto;
+    left: 12px;
+    transform-origin: center right;
+  }
+
+  .course-details li {
+    &:hover {
+      padding-left: 0;
+      padding-right: 8px;
+      transform: translateX(-3px);
+    }
+
+    svg {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+
+  .course-details ul {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  .course-details li:not(.right)::before {
+    right: auto;
+    left: -35px;
+  }
+
+  .course-details li.right::before {
+    left: auto;
+    right: -35px;
+  }
+}

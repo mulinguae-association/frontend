@@ -7,9 +7,11 @@ import logError from "../../utils/logError";
 import { useCreateTeacherMutation } from "../../apis/mutations/teachers/createTeacher";
 import { useQueryClient } from "react-query";
 import { notifySuccess } from "../../components/Notify";
+import { useTranslation } from "react-i18next";
 
 const Dashboard = () => {
   const queryClient = useQueryClient();
+  const { t } = useTranslation("global");
   const [pendingComments, setPendingComments] = useState([]);
   const [pendingPosts, setPendingPosts] = useState([]);
   const defaultFormState = {
@@ -72,9 +74,7 @@ const Dashboard = () => {
       queryClient.invalidateQueries({ queryKey: ["acceptedPosts"] });
 
       // Show success notification
-      notifySuccess(
-        "Blog post approved and will appear in the blog posts list"
-      );
+      notifySuccess(t("admin.blogApproved"));
     } catch (error) {
       logError(error.message);
     }
@@ -120,7 +120,7 @@ const Dashboard = () => {
       queryClient.invalidateQueries({ queryKey: ["comments"] });
 
       // Show success notification
-      notifySuccess("Comment approved and will appear in the comments list");
+      notifySuccess(t("admin.commentApproved"));
     } catch (error) {
       logError(error.message);
     }

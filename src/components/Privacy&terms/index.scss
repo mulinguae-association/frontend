@@ -317,3 +317,30 @@
     }
   }
 }
+
+// RTL: toc items slide to the left on hover
+[dir="rtl"] {
+  .privacy {
+    .content ul,
+    .toc_items ul {
+      margin-right: 12px;
+      margin-left: 0;
+    }
+
+    .main_content ul {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+
+    .toc_items ul li:hover {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .privacy .main_content ul {
+    margin-right: 4px;
+    margin-left: 0;
+  }
+}

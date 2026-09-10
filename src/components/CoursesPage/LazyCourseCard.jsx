@@ -24,7 +24,7 @@ const LazyCourseCard = ({ collapse, course, toggleCollapse, isEnglish, t }) => {
         onKeyDown={(e) => e.key === 'Enter' && toggleCollapse(course.Level)}
         role="button"
         tabIndex="0"
-        title={collapse[course.Level] ? "Expand course details" : "Collapse course details"}
+        title={collapse[course.Level] ? t("app.expandCourseDetails") : t("app.collapseCourseDetails")}
         aria-expanded={!collapse[course.Level]}
       >
         {collapse[course.Level] ? <FaArrowDown /> : <FaArrowUp />}

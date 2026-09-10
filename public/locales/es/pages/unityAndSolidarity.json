@@ -1,0 +1,77 @@
+{
+  "header": {
+    "title": "Igualdad, Unidad y Solidaridad"
+  },
+  "tabs": {
+    "overview": "Resumen",
+    "principles": "Principios",
+    "education": "Educación"
+  },
+  "overview": {
+    "title": "Nuestros Principios Rectores",
+    "subtitle": "Los cimientos de nuestro proyecto",
+    "equality": {
+      "title": "Igualdad",
+      "description": "Los valores supremos de igualdad entre todos los seres humanos guían nuestro proyecto. La igualdad se opone a la discriminación y la exclusión en cualquiera de sus formas"
+    },
+    "humanValues": {
+      "title": "Valores humanos",
+      "description": "Reconocer que, como seres humanos, todos tenemos los mismos valores. Esto significa que todos tenemos los mismos derechos, que todos debemos recibir el mismo nivel de respeto y tener el mismo acceso a las oportunidades."
+    },
+    "whenEqualityAbsent": {
+      "title": "Cuando falta la igualdad",
+      "description": "Cuando no hay igualdad, la unidad y la solidaridad son el recurso."
+    }
+  },
+  "principles": {
+    "unity": {
+      "title": "Unidad",
+      "subtitle": "El poder de la unión",
+      "description": [
+        "La unidad es estar junto o unido con alguien o algo. Es lo opuesto a estar dividido. Los seres humanos siempre han utilizado este concepto para sobrevivir en este planeta.",
+        "En una sociedad de clases donde un pequeño grupo de personas controla los recursos comunes, la unidad es una herramienta poderosa para que la mayoría defienda sus intereses."
+      ]
+    },
+    "solidarity": {
+      "title": "Solidaridad",
+      "subtitle": "Unidos por el cambio",
+      "description": [
+        "La solidaridad o el solidarismo es la conciencia de intereses, objetivos, estándares y simpatías compartidas que crea un sentido psicológico de unidad grupal o de clase. La solidaridad es muy importante cuando los trabajadores y otros grupos discriminados en la sociedad no tienen voz.",
+        "Etimológicamente, solidaridad proviene de la palabra latina solidus, una unidad de cuenta en la antigua Roma. La solidaridad describe los lazos entre individuos que les permiten formar una unidad social cohesiva. Émile Durkheim, sociólogo, filósofo y educador francés, argumentó que la solidaridad es la condición normal de la sociedad, y que la sociedad no podría existir sin ella."
+      ]
+    }
+  },
+  "education": {
+    "project": {
+      "title": "Nuestro Proyecto Educativo",
+      "subtitle": "Promoviendo la igualdad a través de la educación",
+      "goals": {
+        "title": "Objetivos del Proyecto",
+        "description": "Nuestro proyecto educativo está abierto a todas las organizaciones e individuos cuyo objetivo es combatir la discriminación y promover la igualdad como un derecho humano fundamental y un principio fundamental de justicia social."
+      },
+      "approach": {
+        "title": "Nuestro Enfoque",
+        "description": "Comparte los supuestos fundamentales de la filosofía de los derechos humanos: por ejemplo, que, como derecho humano, la igualdad es un derecho y no un beneficio, y debe ser legalmente exigible, como cualquier otro derecho humano."
+      }
+    },
+    "declaration": {
+      "title": "Declaración Universal de los Derechos Humanos",
+      "subtitle": "Artículo 26 - Derecho a la Educación",
+      "quote": "Toda persona tiene derecho a la educación. La educación debe ser gratuita, al menos en lo que se refiere a la enseñanza elemental y fundamental. La enseñanza elemental será obligatoria. La enseñanza técnica y profesional será generalizada y el acceso a los estudios superiores será igual para todos, en función del mérito."
+    },
+    "equity": {
+      "title": "Equidad Educativa",
+      "subtitle": "Garantizando el acceso justo a una educación de calidad",
+      "accordion": {
+        "item1": {
+          "title": "¿Por qué es importante la equidad educativa?",
+          "content": "La equidad educativa es crucial porque afecta las oportunidades de empleo futuro y la calidad de vida general de una persona. Garantiza que todos los individuos, sin importar su origen, tengan acceso a una educación de calidad."
+        },
+        "item2": {
+          "title": "¿Cómo logramos la equidad educativa?",
+          "content": "En una sociedad igualitaria, la educación de calidad no estaría reservada para personas con altos ingresos. Pagar la universidad no significaría que un estudiante tuviera que pagar durante años préstamos con altos intereses. La equidad educativa es especialmente importante debido a su impacto en las oportunidades de empleo futuro de una persona."
+        }
+      }
+    }
+  }
+}

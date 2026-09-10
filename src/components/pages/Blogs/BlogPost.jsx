@@ -9,7 +9,6 @@ import CommentsSection from "./comments/CommentsSection";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 import InteractionComponent from "./interaction/InteractionComments";
 import { useRemoveBlogMutation } from "../../../apis/mutations/blogs/removeBlog";
-import { detectLanguage } from "../../../utils/detectLanguage";
 import { BiLoaderAlt } from "react-icons/bi";
 import { useCache } from "../../../contexts/BlogsCache";
 import {
@@ -17,11 +16,13 @@ import {
   getRemainingAcceptedReplies,
 } from "../../../apis/blog-api";
 import { useInfiniteQuery } from "react-query";
+import { useTranslation } from "react-i18next";
+import i18n from "../../../i18n";
 const BlogPopup = React.lazy(() => import("./BlogPopup"));
 const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
 
 const BlogPost = ({ blog, list }) => {
-  console.log("🚀 ~ BlogPost ~ blog:", blog);
+  const { t } = useTranslation("pages/blogs");
   const { clearCache } = useCache();
   const [showFullContent, setShowFullContent] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
@@ -107,10 +108,7 @@ const BlogPost = ({ blog, list }) => {
   // const checkStatus = blog?.status === "accepted";
 
   // check language to change style and direction
-  const lang = detectLanguage(
-    blog.content.slice(0, 25) || blog.title[0] || blog.subTitle[0] || ""
-  );
-  const ArUR = ["ar", "ur"].includes(lang);
+  const ArUR = ["ar", "ur"].includes(i18n.language);
   return (
     <article
       style={ArUR ? { direction: "rtl" } : { direction: "ltr" }}
@@ -146,6 +144,7 @@ const BlogPost = ({ blog, list }) => {
             onClick={() => setShowModal(true)}
             className="remove-button"
             disabled={isBtnLoading["RemoveBlogPost"]}
+            aria-label={t("deleteBtn")}
           >
             x
           </button>
@@ -197,7 +196,7 @@ const BlogPost = ({ blog, list }) => {
           fallback={<BiLoaderAlt className="spin-loader" color="#fff" />}
         >
           <ConfirmationModal
-            message={`Are you sure you want to delete this Post?`}
+            message={t("app.confirmDeletePost")}
             onConfirm={() => handleRemoveBlogPost(blog._id)}
             onCancel={() => setShowModal(false)}
             isLoading={isBtnLoading["RemoveBlogPost"]}

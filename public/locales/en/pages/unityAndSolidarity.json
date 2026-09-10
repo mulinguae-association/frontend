@@ -13,6 +13,14 @@
     "equality": {
       "title": "Equality",
       "description": "The highest values of equality between all human beings guide our project. Equality opposes discrimination and exclusion in any form"
+    },
+    "humanValues": {
+      "title": "Human Values",
+      "description": "Recognize that as human beings, we all have the same values. This means that we all have the same rights, that we should all receive the same level of respect and have the same access to opportunities."
+    },
+    "whenEqualityAbsent": {
+      "title": "When Equality is Absent",
+      "description": "When there is no equality, unity and solidarity are the recourse."
     }
   },
   "principles": {

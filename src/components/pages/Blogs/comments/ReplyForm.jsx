@@ -15,7 +15,7 @@ const ReplyForm = ({ commentsId: parentCommentId, blogId }) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       if (replyConetnt === "") {
-        notifyError("Comment cannot be empty");
+        notifyError(t("commentCannotBeEmpty"));
         return;
       }
       handleAddReply({ parentCommentId, blogId, replyConetnt });
@@ -23,7 +23,7 @@ const ReplyForm = ({ commentsId: parentCommentId, blogId }) => {
   };
   const handleMouseDown = (e) => {
     if (replyConetnt === "") {
-      notifyError("Comment cannot be empty");
+      notifyError(t("commentCannotBeEmpty"));
       return;
     }
     handleAddReply({ parentCommentId, blogId, replyConetnt });
@@ -40,7 +40,7 @@ const ReplyForm = ({ commentsId: parentCommentId, blogId }) => {
         onKeyDown={handleKeyPress}
       />
       <button style={isAr_Ur ? { borderRadius: "10px 0 0 0" } : { borderRadius: "0 10px 0 0" }} className='button-font' disabled={isBtnLoading[btnKey]} onClick={handleMouseDown}>
-        {isBtnLoading[btnKey] ? "Loading..." : t("replyBtn")}
+        {isBtnLoading[btnKey] ? t("app.loading") : t("replyBtn")}
       </button>
     </div>
   )

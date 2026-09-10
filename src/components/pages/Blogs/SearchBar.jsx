@@ -16,7 +16,7 @@ const SearchBar = (props) => {
       ) : null}
       <InputField
         className={`input-search`}
-        label="Search by title or user name"
+        label={t("app.searchByTitleOrUser")}
         id={props.id}
         name={props.id}
         type="search"

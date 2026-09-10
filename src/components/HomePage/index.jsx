@@ -12,9 +12,9 @@ const Home = ({ imgAnimation }) => {
   return (
     <>
       <SEO
-        title="Mulinguae | Multilingual Community & Language Exchange"
-        description="Mulinguae is a global multilingual community for language exchange and learning. Learn languages with native speakers, connect with people worldwide, and join Mulinguae today. (Not affiliated with Mulingua.)"
-        keywords="mulinguae, mulingua, language learning, multilingual, language exchange, native speakers, global community"
+        title={t("seo.home.title")}
+        description={t("seo.home.description")}
+        keywords={t("seo.home.keywords")}
         path="/"
         ldJson={{
           "@context": "https://schema.org",
@@ -46,7 +46,7 @@ const Home = ({ imgAnimation }) => {
               https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_1200/v1726238642/amazon_people.webp 1200w
             "
             sizes="(max-width: 768px) 100vw, 1200px"
-            alt="Diverse group of people representing multilingualism"
+            alt={t("app.altMultilingualGroup")}
             width={1200}
             height={600}
             style={{ width: "100%", height: "100%", display: "block" }}
@@ -71,7 +71,7 @@ const Home = ({ imgAnimation }) => {
                 }`}
               >
                 <img
-                  fetchPriority="high"
+                  fetchpriority="high"
                   src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp"
                   srcSet="
                     https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_256/v1707246278/earth_fnjwsd.webp 256w,
@@ -80,7 +80,7 @@ const Home = ({ imgAnimation }) => {
                     https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_700/v1707246278/earth_fnjwsd.webp 700w
                   "
                   sizes="(max-width: 640px) 100vw, 640px"
-                  alt="Earth illustration representing multilingualism"
+                  alt={t("app.altEarth")}
                   loading="eager"
                   decoding="async"
                   width={700}
@@ -114,11 +114,11 @@ const Home = ({ imgAnimation }) => {
                   <button
                     name="read-more"
                     type="button"
-                    title="Learn more about our company"
+                    title={t("app.learnMoreCompany")}
                     aria-labelledby="websiteName websiteDescription"
                   >
                     <span className="visually-hidden">
-                      Learn More about our Company
+                      {t("app.learnMoreCompany")}
                     </span>
                     {t("hero_button")}
                   </button>
@@ -142,14 +142,14 @@ const Home = ({ imgAnimation }) => {
               }`}
             >
               <img
-                fetchPriority="high"
+                fetchpriority="high"
                 src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp"
                 srcSet="
                   https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_640/v1707246278/earth_fnjwsd.webp 640w,
                   https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,q_auto:eco,w_700/v1707246278/earth_fnjwsd.webp 700w
                 "
                 sizes="(max-width: 1024px) 100vw, 700px"
-                alt="Earth illustration representing multilingualism"
+                alt={t("app.altEarth")}
                 loading="eager"
                 decoding="async"
                 width={700}

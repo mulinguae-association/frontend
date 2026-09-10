@@ -336,3 +336,9 @@
     }
   }
 }
+
+[dir="rtl"] .section-header {
+  &:hover {
+    transform: translateX(-3px);
+  }
+}

@@ -4,6 +4,7 @@ import { notifyError, notifySuccess } from "../../../components/Notify";
 import logError from "../../../utils/logError";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { createTeacher } from "../../apiUtility";
+import i18n from "../../../i18n";
 
 export const useCreateTeacherMutation = (defaultFormState) => {
   const { setButtonLoading } = useGlobal();
@@ -24,7 +25,7 @@ export const useCreateTeacherMutation = (defaultFormState) => {
       logError(error);
     },
     onSuccess: (_, { setFormState }) => {
-      notifySuccess("Successfully added a new teacher");
+      notifySuccess(i18n.t("admin.addTeacherSuccess"));
       setFormState({ ...defaultFormState });
     },
     onSettled: () => {

@@ -1,3 +1,5 @@
+import i18n from "../../i18n";
+
 export function formatRelativeTime(dateString) {
 	const d = new Date(dateString);
 	const n = new Date();
@@ -9,12 +11,14 @@ export function formatRelativeTime(dateString) {
 	const day = Math.floor(h / 24);
 
 	if (day > 0) {
-		return `${day}d ago`;
+		return i18n.t("time.daysAgo", { count: day });
 	} else if (h > 0) {
-		return `${h}h ago`;
+		return i18n.t("time.hoursAgo", { count: h });
 	} else if (m > 0) {
-		return `${m}m ago`;
+		return i18n.t("time.minutesAgo", { count: m });
 	} else {
-		return "just now";
+		return i18n.t("time.justNow");
 	}
 }
+
+export default formatRelativeTime;

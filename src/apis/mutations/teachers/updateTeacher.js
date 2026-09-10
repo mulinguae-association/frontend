@@ -3,6 +3,7 @@ import handleError from "../../../utils/handleError";
 import { notifyError, notifySuccess } from "../../../components/Notify";
 import logError from "../../../utils/logError";
 import { updateTeacher } from "../../apiUtility";
+import i18n from "../../../i18n";
 
 export const useUpdateTeacherMutation = (onEdit) => {
   const queryClient = useQueryClient();
@@ -26,7 +27,7 @@ export const useUpdateTeacherMutation = (onEdit) => {
         logError(error);
       },
       onSuccess: () => {
-        notifySuccess('Successfully updated a teacher');
+        notifySuccess(i18n.t('admin.updateTeacherSuccess'));
       }
     }
   );

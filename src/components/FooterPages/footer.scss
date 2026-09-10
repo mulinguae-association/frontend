@@ -148,3 +148,10 @@
     }
   }
 }
+
+// RTL: footer list items slide to the left on hover
+[dir="rtl"] {
+  .footer .item:hover {
+    transform: translateX(-5px);
+  }
+}

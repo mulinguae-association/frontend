@@ -39,5 +39,7 @@
   "sec7_about5": "Teacher Collaboration",
   "sec7_about6": "Classroom Management",
   "sec7_about7": "Behavior Management",
-  "sec7_about8": "Additional Information"
+  "sec7_about8": "Additional Information",
+  "notFound": "Teacher not found",
+  "noAboutAvailable": "No {{field}} available"
 }

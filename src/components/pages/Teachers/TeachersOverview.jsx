@@ -111,7 +111,7 @@ const TeachersOverview = ({ t }) => {
                               ? teacher?.image
                               : "/images/fallBackUser.png"
                           }
-                          alt="teacher_image"
+                          alt={t("app.altTeacherImage")}
                           onError={(e) => {
                             e.target.src = "/images/fallBackUser.png";
                           }}
@@ -156,7 +156,7 @@ const TeachersOverview = ({ t }) => {
                         <img
                           height={"64px"}
                           src="/images/icons/edit.png"
-                          alt="edit teacher card"
+                          alt={t("app.altEditTeacherCard")}
                         />
                       </button>
                     </>
@@ -170,9 +170,9 @@ const TeachersOverview = ({ t }) => {
         )}
       </Swiper>
       {showModal && (
-        <React.Suspense fallback="Loading...">
+        <React.Suspense fallback={<span>{t("app.loading")}</span>}>
           <ConfirmationModal
-            message={`Are you sure you want to delete this teacher?`}
+            message={t("app.confirmDeleteTeacher")}
             onConfirm={() => confirmDeleteTeacher(teacherToDelete)}
             onCancel={() => setShowModal(false)}
             isLoading={false}

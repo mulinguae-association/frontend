@@ -2,7 +2,8 @@
   "titles": {
     "mainTitle": "رابطہ کریں",
     "teacherFormTitle": "استاد فارم",
-    "studentFormTitle": "طالب علم فارم"
+    "studentFormTitle": "طالب علم فارم",
+    "subHeading": "ہم آپ سے سننا چاہتے ہیں۔ ہمیں پیغام بھیجیں اور ہم جلد از جلد جواب دیں گے۔"
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -14,10 +15,16 @@
       "title": "آفس ہوس",
       "value": {
         "mondayToFriday": "پیر سے جمعہ: صبح 7 بجے سے شام 11 بجے تک",
-        "saturdayAndSunday": "اتوار اور یکم: صبح 8 بجے سے شام 5 بجے تک"
+        "saturdayAndSunday": "اتوار اور یکم: صبح 8 بجے سے شام 5 بجے تک",
+        "mondayToFridayLabel": "پیر سے جمعہ:",
+        "saturdayAndSundayLabel": "اتوار اور پیر:"
       }
     },
-    "email": "acsmulinguae@gmail.com"
+    "email": "acsmulinguae@gmail.com",
+    "time": {
+      "am": "ص",
+      "pm": "ش"
+    }
   },
   "buttons": {
     "teacherButton": "استاد بنیں؟",
@@ -43,7 +50,9 @@
     "countryPlaceholder": "آپ کا ملک درج کریں",
     "languagesSpokenPlaceholder": "(مثال کے طور پر، انگریزی، عربی،...)",
     "subjectsTaughtPlaceholder": "مثال کے طور پر، ریاضی، سائنس، وغیرہ۔",
-    "addressPlaceholder": "آپ کا پتہ"
+    "addressPlaceholder": "آپ کا پتہ",
+    "fullNameLabel": "پورا نام",
+    "languagesSpokenTitle": "براہ کرم وہ زبانیں درج کریں جو آپ بولتے ہیں"
   },
   "studentForm": {
     "nameLabel": "نام",
@@ -59,6 +68,9 @@
     "countryPlaceholder": "آپ کا ملک درج کریں",
     "agePlaceholder": "آپ کی عمر درج کریں",
     "languagesSpokenPlaceholder": "بولی جانے والی زبانیں (مثال کے طور پر، انگریزی، عربی،...)",
-    "cvUploadButtonText": "لوڈ ہو رہا ہے..."
+    "cvUploadButtonText": "لوڈ ہو رہا ہے...",
+    "languagesSpokenTitle": "براہ کرم وہ زبانیں درج کریں جو آپ بولتے ہیں",
+    "messageLabel": "پیغام",
+    "messagePlaceholder": "یہاں اپنا پیغام لکھیں..."
   }
 }

@@ -1,0 +1,23 @@
+{
+  "title": "Bibliothèque vidéo",
+  "head": "Vidéos sélectionnées sur les langues en voie de disparition. Cliquez sur une carte pour regarder.",
+  "videos": [
+    {
+      "id": "frh81KFbxpg",
+      "title": "Documentaire : Langues perdues et mémorisées",
+      "description": "Un large et accessible documentaire retracent les causes de la perte des langues — migration, assimilation et mondialisation — avec des interviews et des enregistrements d'archives."
+    },
+    {
+      "id": "K1YCXLea9p0",
+      "title": "Étude de cas : Les derniers locuteurs d'une langue",
+      "description": "Une étude de cas intime suivant les derniers locuteurs d'une langue menacée, montrant l'impact culturel et les histoires personnelles."
+    },
+    {
+      "id": "bFWcT3Gbrw4",
+      "title": "Efforts de revitalisation et de documentation",
+      "description": "Met en lumière les linguistes, les communautés et les projets citoyens qui œuvrent à documenter, archiver et revitaliser les langues en danger."
+    }
+  ],
+  "videoLibrary": "Médiathèque vidéo",
+  "videoLibraryDescription": "Des vidéos sélectionnées sur les langues en voie de disparition. Cliquez sur une carte pour regarder."
+}

@@ -12,12 +12,9 @@ const Libraries = () => {
     <main className={styles["libraries-page"]}>
       <section className={styles.section} style={{ padding: "1rem 0" }}>
         <div className="container">
-          <h1 className={styles["page-title"]}>Video Library</h1>
+          <h1 className={styles["page-title"]}>{t("videoLibrary")}</h1>
           <div className={styles.head}>
-            <p>
-              Curated videos about disappearing languages. Click a card to
-              watch.
-            </p>
+            <p>{t("videoLibraryDescription")}</p>
           </div>
 
           <div className={styles["libraries-page"]}>

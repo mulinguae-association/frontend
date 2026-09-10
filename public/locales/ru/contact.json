@@ -2,7 +2,8 @@
   "titles": {
     "mainTitle": "Свяжитесь с Нами",
     "teacherFormTitle": "Форма Преподавателя",
-    "studentFormTitle": "Форма Студента"
+    "studentFormTitle": "Форма Студента",
+    "subHeading": "Мы будем рады от вас. Отправьте нам сообщение, и мы ответим как можно скорее."
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -14,7 +15,9 @@
       "title": "Часы Офиса",
       "value": {
         "mondayToFriday": "Понедельник - Пятница: 7 утра - 11 вечера",
-        "saturdayAndSunday": "Суббота и Воскресенье: 8 утра - 5 вечера"
+        "saturdayAndSunday": "Суббота и Воскресенье: 8 утра - 5 вечера",
+        "mondayToFridayLabel": "Понедельник - Пятница:",
+        "saturdayAndSundayLabel": "Суббота и Воскресенье:"
       }
     },
     "email": "acsmulinguae@gmail.com",
@@ -47,7 +50,9 @@
     "countryPlaceholder": "Страна",
     "languagesSpokenPlaceholder": "(например, Английский, Арабский,...)",
     "subjectsTaughtPlaceholder": "Например, Математика, Науки, и т.д.",
-    "addressPlaceholder": "Ваш адрес"
+    "addressPlaceholder": "Ваш адрес",
+    "fullNameLabel": "Полное имя",
+    "languagesSpokenTitle": "Пожалуйста, укажите языки, на которых вы говорите"
   },
   "studentForm": {
     "nameLabel": "Фамилия и Имя",
@@ -63,6 +68,9 @@
     "countryPlaceholder": "Страна",
     "agePlaceholder": "Ваш возраст",
     "languagesSpokenPlaceholder": "Знание языков (например, Английский, Арабский,...)",
-    "cvUploadButtonText": "Загрузка..."
+    "cvUploadButtonText": "Загрузка...",
+    "languagesSpokenTitle": "Пожалуйста, укажите языки, на которых вы говорите",
+    "messageLabel": "Сообщение",
+    "messagePlaceholder": "Напишите ваше сообщение здесь..."
   }
 }

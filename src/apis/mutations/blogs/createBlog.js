@@ -5,6 +5,7 @@ import { notifyError, notifySuccess } from "../../../components/Notify";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { submitBlogPost } from "../../blog-api";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
+import i18n from "../../../i18n";
 
 export const useAddBlogMutation = () => {
   const { acceptedPosts, postsToDisplay } = useBlogPosts();
@@ -21,10 +22,10 @@ export const useAddBlogMutation = () => {
           ["acceptedPosts", postsToDisplay],
           [data.blogPost, ...acceptedPosts]
         );
-        notifySuccess("Successfully submitted blog post");
+        notifySuccess(i18n.t("pages/blogs:successSubmittedBlog"));
       } else {
         setNotificationPopup({
-          message: "Your Blog has been submitted for review.",
+          message: i18n.t("pages/blogs:blogSubmittedReview"),
         });
       }
     },

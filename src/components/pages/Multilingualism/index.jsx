@@ -17,9 +17,9 @@ const Multilingualism = () => {
   return (
     <>
       <SEO
-        title="Multilingualism | Mulinguae Language Diversity & Global Community"
-        description="Explore multilingualism with Mulinguae (Mulingua). Learn about language diversity, cultural exchange, and the benefits of being multilingual in our global community."
-        keywords="multilingualism, mulingua, mulinguae, language diversity, language learning, cultural exchange, global community"
+        title={t("seo.multilingualism.title")}
+        description={t("seo.multilingualism.description")}
+        keywords={t("seo.multilingualism.keywords")}
         path="/pages/multilingualism"
       />
       <main>

@@ -34,9 +34,9 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About Mulinguae | Our Mission & Multilingual Community"
-        description="Learn about Mulinguae's mission to connect people worldwide through language learning, multilingualism, and cultural exchange. Discover how Mulinguae (Mulingua) empowers language learners and native speakers to grow together."
-        keywords="about mulinguae, about mulingua, language learning, multilingual, language exchange, our mission, global community, native speakers"
+        title={global("seo.about.title")}
+        description={global("seo.about.description")}
+        keywords={global("seo.about.keywords")}
         path="/about"
         image="https://res.cloudinary.com/di24dufhu/image/upload/v1770300755/Mulinguae_1_mioi4d.jpg"
         ldJson={{
@@ -73,7 +73,7 @@ const About = () => {
                 <img
                   src="/images/icons/ourMissionIcon.svg"
                   loading="lazy"
-                  alt="our mission"
+                  alt={global("app.altAboutMission")}
                 />
               </header>
               <div className="group">
@@ -105,7 +105,7 @@ const About = () => {
                     width="1100px"
                     height="450px"
                     loading="eager"
-                    alt="aboutUs"
+                    alt={global("app.altAboutUs")}
                   />
                 </picture>
                 <div>
@@ -124,7 +124,7 @@ const About = () => {
                 <h2 className="header">{t("story_head")}</h2>
                 <img
                   src="/images/icons/ourStoryIcon.svg"
-                  alt="our story"
+                  alt={global("app.altAboutStory")}
                   loading="lazy"
                 />
               </header>
@@ -138,7 +138,7 @@ const About = () => {
                 <h2 className="header">{t("vision_head")}</h2>
                 <img
                   src="/images/icons/ourVisionIcon.svg"
-                  alt="our vision"
+                  alt={global("app.altAboutVision")}
                   loading="lazy"
                 />
               </header>
@@ -152,7 +152,7 @@ const About = () => {
                 <h2 className="header">{t("tutors_head")}</h2>
                 <img
                   src="/images/icons/ourTutorsIcon.svg"
-                  alt="our tutors"
+                  alt={global("app.altAboutTutors")}
                   loading="lazy"
                 />
               </header>

@@ -39,5 +39,8 @@
   "sec7_about5": "Colaboración entre Profesores",
   "sec7_about6": "Gestión del Aula",
   "sec7_about7": "Gestión del Comportamiento",
-  "sec7_about8": "Información Adicional"
+  "sec7_about8": "Información Adicional",
+  "sec3_about4": "Fomentamos el pensamiento crítico. Los profesores deben reflexionar continuamente sobre sus propias creencias, sesgos y prácticas, y participar en un desarrollo profesional continuo para mejorar su capacidad para crear entornos de aprendizaje inclusivos y equitativos.",
+  "notFound": "Profesor no encontrado",
+  "noAboutAvailable": "No hay {{field}} disponible"
 }

@@ -1,0 +1,77 @@
+{
+  "header": {
+    "title": "Yanapakuy, Ch'usay hinaspa Sutiykuna"
+  },
+  "tabs": {
+    "overview": "Yachanakuy",
+    "principles": "Kananchisqa",
+    "education": "Yachay"
+  },
+  "overview": {
+    "title": "Kananchisqakunapaq Sutiykuna",
+    "subtitle": "Kay proyectopaq kananchisqa",
+    "equality": {
+      "title": "Yanapakuy",
+      "description": "Tukuy runakunapaq yanapakuyqa kananchisqa kananpasqanpaq yachayta sapanqanmi. Yanapakuyqa kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmi."
+    },
+    "humanValues": {
+      "title": "Runakunap chaninchaynin",
+      "description": "Riqsiykuy tukuyninchik runakuna kaqmi sapaqnin chaninchayniyoq. Kay ñiqin: tukuy runakuna forunku derecho nisqaykupas, paqta respetota chaskinchik, chay oportunidades nisqapas paqta kaykumni."
+    },
+    "whenEqualityAbsent": {
+      "title": "Mana igualdad kaspan",
+      "description": "Mana igualdad kanqa, unidad chay solidaridadmi yanapakuy kanqa."
+    }
+  },
+  "principles": {
+    "unity": {
+      "title": "Ch'usay",
+      "subtitle": "Ch'usayninta kallpachanay",
+      "description": [
+        "Ch'usayqa hukniray kawsaymanta, hukniray kananchisqamanta. Kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmi. Runakunaqa kananchisqa kananpasqanpaq yachayta sapanqanmi.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi."
+      ]
+    },
+    "solidarity": {
+      "title": "Sutiykuna",
+      "subtitle": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+      "description": [
+        "Sutiykunaqa kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmi. Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwnikunapas."
+      ]
+    }
+  },
+  "education": {
+    "project": {
+      "title": "Kananchisqap Yachay Proyectonkuna",
+      "subtitle": "Yachaywanmi yanapakuy",
+      "goals": {
+        "title": "Proyecto Nisqankunapaq Sutiykuna",
+        "description": "Kananchisqap yachay proyectonkunaqa tukuy organizacionkunapas, tukuy runakunapas kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi."
+      },
+      "approach": {
+        "title": "Kananchisqap Ruraykuna",
+        "description": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwnikunapas."
+      }
+    },
+    "declaration": {
+      "title": "Runakunap Hayñinmanta Tukuy Pachantin Willakuy",
+      "subtitle": "26 Artículo - Yachayninta Yuyanay",
+      "quote": "Tukuy runaqa yachayninta yuyanqanmi. Yachayqa mana qullqipanmi kananqa, yuyaykunapi chiqachinmanta, tukuy runakunapaq. Chiqachinmanta yachayqa kananchisqa kananqa. Yachayqa tukuy runakunapaq yachaninpasqanpaqmi, kananpasqanpaqmi, yuyanpasqanpaqmi."
+    },
+    "equity": {
+      "title": "Yachay Yanapakuy",
+      "subtitle": "Allin yachayta kananpasqanpaq",
+      "accordion": {
+        "item1": {
+          "title": "Imatapaqmi yachay yanapakuyqa allin?",
+          "content": "Yachay yanapakuyqa kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwnikunapas."
+        },
+        "item2": {
+          "title": "Imallataqmi yachay yanapakuyta ruwanku?",
+          "content": "Yanapakuy kaq llaqtaqa, kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi."
+        }
+      }
+    }
+  }
+}

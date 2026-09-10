@@ -63,7 +63,7 @@ const BlogsHeader = ({
                     ? userData.profileImage
                     : "/images/fallBackUser.png"
                 }
-                alt="user_image"
+                alt={t("app.altUserImage")}
                 onError={(e) => (e.target.src = "/images/fallBackUser.png")}
                 loading="lazy"
               />

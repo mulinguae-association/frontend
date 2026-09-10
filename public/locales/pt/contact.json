@@ -2,7 +2,8 @@
   "titles": {
     "mainTitle": "Entre em Contato",
     "teacherFormTitle": "Bem-vindo Professor",
-    "studentFormTitle": "Bem-vindo Aluno"
+    "studentFormTitle": "Bem-vindo Aluno",
+    "subHeading": "Adoraríamos ouvir de si. Envie-nos uma mensagem e responderemos o mais rapidamente possível."
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -26,12 +27,12 @@
     }
   },
   "buttons": {
-    "teacherButton": "És professor?",
-    "studentButton": "És aluno?",
-    "loadingText": "carregando..."
+    "teacherButton": "É professor?",
+    "studentButton": "É aluno?",
+    "loadingText": "A carregar..."
   },
   "messages": {
-    "submissionMessage": "Sua informação foi enviada para revisão"
+    "submissionMessage": "A sua informação foi enviada para revisão"
   },
   "teacherForm": {
     "nameLabel": "Nome",
@@ -43,13 +44,15 @@
     "addressLabel": "Endereço",
     "uploadCvLabel": "Carregar CV",
     "cvUploadButtonText": "Enviar",
-    "fullNamePlaceholder": "Seu nome completo",
-    "emailPlaceholder": "Seu e-mail",
-    "phoneNumberPlaceholder": "Seu número de telefone",
-    "countryPlaceholder": "Seu país",
-    "languagesSpokenPlaceholder": "(por exemplo, Inglês, Árabe, ...)",
+    "fullNamePlaceholder": "O seu nome completo",
+    "emailPlaceholder": "O seu e-mail",
+    "phoneNumberPlaceholder": "O seu número de telefone",
+    "countryPlaceholder": "O seu país",
+    "languagesSpokenPlaceholder": "(por exemplo, Inglês, Árabe,...)",
     "subjectsTaughtPlaceholder": "por exemplo, Matemática, Ciências, etc.",
-    "addressPlaceholder": "Seu endereço"
+    "addressPlaceholder": "O seu endereço",
+    "fullNameLabel": "Nome completo",
+    "languagesSpokenTitle": "Por favor, insira os idiomas que fala"
   },
   "studentForm": {
     "nameLabel": "Nome",
@@ -59,14 +62,14 @@
     "ageLabel": "Idade",
     "languagesSpokenLabel": "Idioma/s falado/s",
     "submitButton": "Enviar",
-    "fullNamePlaceholder": "Seu nome completo",
-    "emailPlaceholder": "Seu e-mail",
-    "phoneNumberPlaceholder": "Seu número de telefone",
-    "countryPlaceholder": "Seu país",
-    "agePlaceholder": "Sua idade",
-    "languagesSpokenPlaceholder": "Insira idiomas (por exemplo, Inglês, Árabe, ...)",
+    "fullNamePlaceholder": "O seu nome completo",
+    "emailPlaceholder": "O seu e-mail",
+    "phoneNumberPlaceholder": "O seu número de telefone",
+    "countryPlaceholder": "O seu país",
+    "agePlaceholder": "A sua idade",
+    "languagesSpokenPlaceholder": "Insira idiomas (por exemplo, Inglês, Árabe,...)",
     "messageLabel": "Mensagem",
-    "messagePlaceholder": "Escreva sua mensagem aqui...",
-    "cvUploadButtonText": "carregando..."
+    "messagePlaceholder": "Escreva a sua mensagem aqui...",
+    "languagesSpokenTitle": "Por favor, insira os idiomas que fala"
   }
 }

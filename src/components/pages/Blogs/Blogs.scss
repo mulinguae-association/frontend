@@ -495,7 +495,7 @@
 .comments {
   .comment_title {
     font-size: 16px;
-    text-align: left;
+    text-align: start;
     @include flexbox($alignItems: center);
     gap: 4px;
     .comment_count {
@@ -529,7 +529,7 @@
         text-wrap: wrap;
       }
       .replies {
-        margin-left: 25px;
+        margin-inline-start: 25px;
         @include flexbox($direction: column);
       }
       @media (max-width: 768px) {

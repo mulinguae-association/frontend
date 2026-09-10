@@ -104,3 +104,12 @@
     }
   }
 }
+
+// In RTL the sidebar slides in from the right instead of the left.
+[dir="rtl"] .sidebar {
+  transform: translateX(100%);
+
+  &.open {
+    transform: translateX(0);
+  }
+}

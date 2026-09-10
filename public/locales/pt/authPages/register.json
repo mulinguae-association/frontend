@@ -1,22 +1,22 @@
 {
-  "registerTitle": "Registrar",
+  "registerTitle": "Criar uma Conta",
   "nameLabel": "Nome:",
   "emailLabel": "E-mail:",
   "passwordLabel": "Senha:",
   "confirmPasswordLabel": "Confirmar Senha:",
-  "namePlaceholder": "Seu Nome",
-  "emailPlaceholder": "Seu E-mail",
-  "passwordPlaceholder": "Sua Senha",
-  "confirmPasswordPlaceholder": "Confirmar Senha",
-  "passwordLengthError": "A senha deve ter pelo menos 6 caracteres.",
-  "Label_Agree_To": "Eu concordo com ",
-  "Text_The_Terms": "os termos ",
+  "namePlaceholder": "Insira o seu nome completo",
+  "emailPlaceholder": "Insira o seu e-mail",
+  "passwordPlaceholder": "Crie uma senha forte",
+  "confirmPasswordPlaceholder": "Confirme a sua senha",
+  "passwordLengthError": "A senha deve ter pelo menos 8 caracteres.",
+  "Label_Agree_To": "Concordo com os ",
+  "Text_The_Terms": "termos ",
   "Text_and": "e ",
   "Text_Privacy_Policy": "política de privacidade",
-  "registerButton": "Registrar",
-  "loadingText": "Carregando...",
+  "registerButton": "Criar Conta",
+  "loadingText": "A criar conta...",
   "haveAccountText": "Já tem uma conta?",
-  "loginLinkText": "Login",
+  "loginLinkText": "Iniciar sessão",
   "passwordStrength": {
     "none": "",
     "veryWeak": "Muito Fraca",
@@ -24,5 +24,6 @@
     "medium": "Média",
     "strong": "Forte",
     "veryStrong": "Muito Forte"
-  }
+  },
+  "registrationSuccessful": "Registo bem-sucedido! Por favor, verifique o seu e-mail para confirmar a sua conta."
 }

@@ -36,7 +36,7 @@ const Sidebar = (props) => {
         to={`${i18n.language}/contact`}
         name="join us"
         className="cta-button"
-        aria-label="join us"
+        aria-label={props.t("app.joinUs")}
       >
         {props.t("joinBtn")}
       </Link>

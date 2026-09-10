@@ -67,3 +67,23 @@
     top: 100px;
   }
 }
+
+// RTL: mirror decorative shapes to the opposite edges.
+[dir="rtl"] {
+  .shape.one {
+    right: auto;
+    left: -55px;
+  }
+  .shape.two {
+    left: auto;
+    right: -60px;
+  }
+  .shape.three {
+    right: auto;
+    left: -75px;
+  }
+  .shape.four {
+    left: auto;
+    right: -60px;
+  }
+}

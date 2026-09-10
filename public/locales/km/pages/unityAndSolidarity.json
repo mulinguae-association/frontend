@@ -1,0 +1,77 @@
+{
+  "header": {
+    "title": "Legalite, Linite ek Solidarite"
+  },
+  "tabs": {
+    "overview": "Apersi",
+    "principles": "Prinsip",
+    "education": "Ledikasion"
+  },
+  "overview": {
+    "title": "Nou Bann Prinsip Direksion",
+    "subtitle": "Fondasion nou proze",
+    "equality": {
+      "title": "Legalite",
+      "description": "Bann pli o valer legalite ant tou bann lezom gid nou proze. Legalite lager kont diskriminasion ek eksklizion dan okenn form"
+    },
+    "humanValues": {
+      "title": "Valeur imen",
+      "description": "Rekonnet ki kouma bann lizim, nou tou enn mem valer. Sa vedir ki nou tou enn mem drwa, ki nou tou divwar gagn mem nivo respe ek mem aksè ousia bann okazion."
+    },
+    "whenEqualityAbsent": {
+      "title": "Kan Egalite pa existe",
+      "description": "Kan pa ena egalite, linite ek solidarite se rekour."
+    }
+  },
+  "principles": {
+    "unity": {
+      "title": "Linite",
+      "subtitle": "Pouvwar linit ansam",
+      "description": [
+        "Linite vedir lini ansam ouswa lini avèk enn dimoun ouswa enn kiksoz. Li kontrer divizion. Bann lezom finn toultan servi sa konsep-la pou siviv lor sa planet-la.",
+        "Dan enn lasosyete klas kot enn ti group dimoun kontrol bann resours komen, linite se enn zouti puisan pou majorite-la pou defann zot bann intere."
+      ]
+    },
+    "solidarity": {
+      "title": "Solidarite",
+      "subtitle": "Deboute ansam pou sannzman",
+      "description": [
+        "Solidarite ouswa solidarism se konesans bann intere, bi, standar, ek simpati partaze ki kree enn santiman psikolozik linite group ouswa klas. Solidarite byen inportan kan bann travayer ek lezot group ki pe sibi diskriminasion dan lasosyete pa ena lavwa.",
+        "Lord lor plan etimolozik, solidarite vinn depi mo latin solidus, enn linite kont dan ansien Rom. Solidarite deskrir bann lyezon ant bann individi ki permet zot form enn linite sosyal kolere. Émile Durkheim, enn sosiolog, filozof, ek edikater franse, finn avanse ki solidarite se kondision norman lasosyete, ek ki lasosyete pa ti kapav egziste san li."
+      ]
+    }
+  },
+  "education": {
+    "project": {
+      "title": "Nou Proze Ledikasion",
+      "subtitle": "Promouvwar legalite atraver ledikasion",
+      "goals": {
+        "title": "Bi Proze",
+        "description": "Nou proze ledikasion ouver a tou bann lorizasion ek individi ki zot bi se konbat diskriminasion ek promouvwar legalite kouma enn drwa imin fondamantal ek enn prinsip fondamantal lazistis sosyal."
+      },
+      "approach": {
+        "title": "Nou Lapros",
+        "description": "Li partaz bann sipozision fondamantal filozofi bann drwa imin: par egzanp, ki kouma enn drwa imin, legalite se enn drwa ek pa enn benefis, ek bizin kapav ranforsi legalman, kouma tou lezot drwa imin."
+      }
+    },
+    "declaration": {
+      "title": "Deklarasion Universel bann Drwa Imin",
+      "subtitle": "Artik 26 - Drwa a Ledikasion",
+      "quote": "Tou dimoun ena drwa a ledikasion. Ledikasion bizin gratis, omwen dan ledikasion primer ek fondamantal. Ledikasion primer bizin obligatwar. Ledikasion teknik ek profesyonel bizin universel ek akse a ledikasion siperyer bizin egal pou tou dimoun, baze lor merit."
+    },
+    "equity": {
+      "title": "Ledikasion Ekite",
+      "subtitle": "Asire enn akse jis a ledikasion kalite",
+      "accordion": {
+        "item1": {
+          "title": "Kifer ledikasion ekite inportan?",
+          "content": "Ledikasion ekite bien inportan pars ki li afekte bann loportinite plwayman futir enn dimoun ek kalite lavi an zeneral. Li asire ki tou individi, san konsider zot origin, ena akse a enn ledikasion kalite."
+        },
+        "item2": {
+          "title": "Kouma nou reyaliz ledikasion ekite?",
+          "content": "Dan enn lasosyete egalitar, enn ledikasion kalite pa ti pou rezerve a bann dimoun ki ena o reveni. Peye pou kolaz pa ti pou vedir ki enn etidyan bezwen peye pandan plizir lane pre o intere. Ledikasion ekite espesyalman inportan akoz so limpak lor bann loportinite plwayman futir enn dimoun."
+        }
+      }
+    }
+  }
+}

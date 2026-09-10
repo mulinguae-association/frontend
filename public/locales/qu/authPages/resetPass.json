@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "Ñanpasmi konfirmachiy",
   "resetButton": "Ñanpas Allinchay",
   "resetSuccessMessage": "Ñanpasqa allinchaypim wasichakuy.",
-  "loadingText": "Yanapan..."
+  "loadingText": "Yanapan...",
+  "missingFieldsError": "Ama hina kaspalla, llapan reqisitu kanan kaqkunata huntachiy."
 }

@@ -1,32 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
-import Navbar from './Navbar'
-import Loader from './Loader'
-import useLoader from './Loader/useLoader'
+import React, { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Navbar from "./Navbar";
+import Loader from "./Loader";
+import useLoader from "./Loader/useLoader";
 import { ToastContainer } from "react-toastify";
-const ScrollToTop = React.lazy(() => import('../utils/ScrollToTop'));
-const ToTopBtn = React.lazy(() => import('../components/ToTopBtn'));
-const Footer = React.lazy(() => import('./FooterPages/index'));
+import Chatbot from "./Chatbot/Chatbot";
+const ScrollToTop = React.lazy(() => import("../utils/ScrollToTop"));
+const ToTopBtn = React.lazy(() => import("../components/ToTopBtn"));
+const Footer = React.lazy(() => import("./FooterPages/index"));
 
 const Layout = () => {
   const location = useLocation();
-  const isAppLoading = useLoader()
+  const isAppLoading = useLoader();
   const [toastifyLoaded, setToastifyLoaded] = useState(false);
 
-  const excludePath = !(
-    location.pathname.match(
-      new RegExp(
-        `^/(?:[^/]+/?)?(?:home|dashboard|user-settings)?/?$`
-      ))
-  )
+  const excludePath = !location.pathname.match(
+    new RegExp(`^/(?:[^/]+/?)?(?:home|dashboard|user-settings)?/?$`),
+  );
 
   useEffect(() => {
-    import('react-toastify/dist/ReactToastify.css').then(() => {
+    import("react-toastify/dist/ReactToastify.css").then(() => {
       setToastifyLoaded(true);
     });
   }, []);
 
-  if (isAppLoading) return <Loader />
+  if (isAppLoading) return <Loader />;
 
   return (
     <>
@@ -42,10 +40,11 @@ const Layout = () => {
             <ScrollToTop />
             <ToTopBtn />
           </React.Suspense>
+          <Chatbot domain="general" position="bottom-right" />
         </>
       }
     </>
-  )
-}
+  );
+};
 
 export default Layout;

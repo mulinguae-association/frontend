@@ -1,0 +1,547 @@
+{
+  "EffectiveDate": "Dat efektiv: 1 Ziyet 2023",
+  "ContentHead": "Bienveni dan Politik Prive ACS Mulinguae.",
+  "Introduction": "Sa Politik-la dir ou kouma nou kolekte ek itiliz ou done personel (konn osi kouma linfomasion personel). Li osi inform ou lor kouma nou gard ou done sekirize ek bann swa ki ou kapav ena, alor silvouple asire ou lir li. Nou anvi sa Politik-la fasil pou lir. Dan kik sektion, ou kapav klik pou gagn plis detay lor seki nou fer. Silvouple noter, tou bann pati sa Politik-la aplik a tou bann kiksoz ki nou fer. Nou kapav donn bann lavenisman plis pou kik Servis ek kote, ek sa bann-la bizin lir ansam avek sa Politik-la. Nou Servis kapav ena bann link vers lezot sit. Nou pa kontrol sa bann sit-la ek nou ankouraz ou pou lir zot bann lavenisman lor privekte. Nou Servis pa devret servi par bann individi ki ena mwin ki 16 an.",
+  "Policy Coverage": {
+    "title": "Kisa sa Politik-la kouver?",
+    "policyPoints": [
+      "Sa Politik-la dir ou kouma nou kolekte ek itiliz ou done personel (konn osi kouma linfomasion personel). Li osi inform ou lor kouma nou gard ou done sekirize ek bann swa ki ou kapav ena, alor silvouple asire ou lir li.",
+      "Nou anvi sa Politik-la fasil pou lir. Dan kik sektion, ou kapav klik pou gagn plis detay lor seki nou fer. Silvouple noter, tou bann pati sa Politik-la aplik a tou bann kiksoz ki nou fer. Nou kapav donn bann lavenisman plis pou kik Servis ek kote, ek sa bann-la bizin lir ansam avek sa Politik-la.",
+      "Nou Servis kapav ena bann link vers lezot sit. Nou pa kontrol sa bann sit-la ek nou ankouraz ou pou lir zot bann lavenisman lor privekte.",
+      "Nou Servis pa devret servi par bann individi ki ena mwin ki 16 an."
+    ]
+  },
+  "Collect Data": {
+    "summary": "Kisaki done ki nou kolekte, itiliz, ek partaz? (rezyme)",
+    "noticeAtCollection": "Sa sektion-la konstitie nou lavenisman lor koleksion konformeman a CCPA.",
+    "categories": [
+      {
+        "category": "Bann Identifian Personel",
+        "description": "Kouma non, sinon, ladres postal, ladres imel, numerotelefon, identifian anlin, ladres Protokol Entrnet, non kont, ledikasion, plwayman, numer kart kredi ouswa debi, okenn linfomasion finansie, ek linfomasion sansib kouma numer Sekirite Sosyal, akse kont, ek linfomasion lor bann kart idantifikasion gouvernman.",
+        "purpose": "Fournir nou Servis ek realize ou bann demand.",
+        "uses": [
+          "Pou anrejistre ek sekiriz ou kont.",
+          "Pou resevwar ek reponn a bann apel ek mesaz depi ou.",
+          "Pou tike ou idantite ek elizibilite pou nou Servis.",
+          "Pou ed ou gagn bann pli bon pris ek prodwi ki nou ena.",
+          "Pou dir ou ver bann sit web nou bann partener.",
+          "Pou trete bann transaksion ant ou ek nou, ouswa nou bann partener.",
+          "Pou personaliz Servis-la ki ou gagne.",
+          "Pou gard ou done azour.",
+          "Pou fournir servi kliyan ek soutien.",
+          "Pou konplete bann demand drwa done ki ou finn fer.",
+          "Pou permet ou itiliz bann zouti partaz sosyal.",
+          "Pou swiv vandasion ek gagn peye par nou bann partener.",
+          "Pou permet ou itiliz nou Servis lor enn aparoy ek koumans kot ou ti arret lor enn lot aparoy."
+        ]
+      },
+      {
+        "category": "Amelyor ek promouvwar nou Servis ek sa bann lezot.",
+        "description": "Kouma analiz ek resers marke, prezant Servis klerman ek efektivman, fer bann konkou ek sondaz, kree bann prodwi pli bon, ek lezot bi ki rapore.",
+        "purpose": "Pou ed amelior ek promouvwar nou Servis, ek Servis nou bann partener.",
+        "uses": [
+          "Pou realize analiz ek resers marke.",
+          "Pou ed prezant nou Servis klerman ek dan fason pli efektif.",
+          "Pou fer bann konkou ek sondaz.",
+          "Pou ed nou ek nou bann partener kree bann prodwi pli bon pou ou.",
+          "Pou trete okenn rekonpans ki nou kapav ofer ou.",
+          "Pou voy bann metrazazour ek mesaz Servis lor ou bann prodwi ek servis.",
+          "Pou fer ou konnet nou bann servis ek promosion par imel, medya sosyal (par egzanp, Facebook), ek leresvwar bann notifikasion push (kot ou dakor).",
+          "Pou fer ou konnet Servis lezot mar Red Ventures.",
+          "Pou bati, antrene, ek ogmante bann model ki ed nou konprann ou bann intere probab ek sa lezot konsomater.",
+          "Pou vise piblisite ver ou, lor sa ek lezot sit web, baze lor done ki nou finn kolekte ouswa kree.",
+          "Pou fournir bann ofr baze lor lokasion baz lor lokasion fizik ou aparoy (kot ou dakor).",
+          "Pou ed nou konprann si ek kouma nou ek lezot marketin la marshe."
+        ]
+      },
+      {
+        "category": "Fonksyonnman nou biznis.",
+        "description": "Kouma bann devwar neseser pou fer marshe nou Servis ek biznis, sekiriz nou biznis ek anpes fród, kree bann rapor pou bann bi intern ouswa ekstern, konform a bann demand legal lezitim, ek lezot bi ki rapore.",
+        "purpose": "Dan kour marshe nou biznis, nou kapav itiliz ou done.",
+        "uses": [
+          "Pou kondi bann devwar neseser pou fer marshe nou Servis ek biznis.",
+          "Pou ed sekiriz nou biznis ek anpes fród.",
+          "Pou kree bann rapor pou bann bi intern ouswa ekstern.",
+          "Pou konform a bann demand legal lezitim.",
+          "Pou verifye nou biznis ek bann prosesis.",
+          "Pou protez bann intere nou biznis, ek sa nou bann partener.",
+          "Pou lezot bi ki pa deskrir dan sa Politik Privekte-la ki ou konsanti (de tan an tan) ek konformeman a seki lwa permet."
+        ]
+      },
+      {
+        "category": "Bann Karakteristik Klasifikasion Proteze",
+        "description": "Linfomasion personel sansib kouma ou laz, ras, zanset, origin nasionnal, sitwayente, sitiasion marye, ek sex."
+      },
+      {
+        "category": "Linfomasion Komersial",
+        "description": "Linfomasion lor bann prodwi ouswa servis ki ou finn aste, gagne, ouswa konsidere."
+      },
+      {
+        "category": "Linfomasion Aktivite Entrnet ouswa Rezo",
+        "description": "Inklir listwar navigasion, listwar resers, ek interaksion avek bann sit web ouswa aplikasion."
+      },
+      {
+        "category": "Linfomasion Jeyolokasion",
+        "description": "Done deriye depi ou aparoy pou lokaliz ou dan enn zon jeografik."
+      },
+      {
+        "category": "Linfomasion Odiviziel ouswa Viziel",
+        "description": "Kouma bann reanglisman odiviziel ouswa lekran (avek ou permision)."
+      },
+      {
+        "category": "Bann Inferans",
+        "description": "Tire depi bann done laba ki kapav kree enn profil ki reflet ou bann preferans, karakteristik, konportman, ek setera."
+      }
+    ],
+    "OtherDisclosures": [
+      {
+        "title": "Lezot Divilgasion",
+        "content": "Nou kapav partaz ou done personel avek ou konsantman ouswa pou konform a bann lwa ouswa lezot prosesis legal."
+      },
+      {
+        "title": "Vand Ou Done Personel",
+        "notice": "Nou pa vand, loue, ouswa prete ou done personel a bann trwazyem pati pou larzan.",
+        "details": "Sepandan, sousrezerv a ou bann swa privekte, nou kapav partaz ou done (seksion Identifian, Aktivite Entrnet ouswa Rezo, ek Jeyolokasion dan tablo laba) avek bann platform medya sosyal, bann founiser analiz, ek bann konpagni piblisite, ek sa kapav konsidere kouma enn 'vand' anba sertin lwa. Get seksion Kouman Ou Kapav Kontrol Ou Done sa Politik-la pou plis detay lor ou bann swa privekte."
+      },
+      {
+        "title": "Retansion Done",
+        "content": "Nou gard ou done pandan otan ki nou bezwen pou fournir ou bann Servis ek pou konform a nou obliasion biznis ek legal. Kan nou pa rekin plis ou done pou nou bann bi deklare, nou efas li dan fason sekirize."
+      },
+      {
+        "title": "Koleksion Done depi Bann Zanfan",
+        "content": "Nou rekonet limportans proteksion privekte ek sekirite bann zanfan. Nou Servis pa adrese a bann zanfan. Nou pa kolekte, konesansman, bann done lor bann zanfan anba laz 16 an ouswa bann minœr ki defini lezotman dan lwa ouswa regulasion lokal san enn konsantman paran verifyab. Si nou aprann ki enn dimoun anba 16 an finn donn nou so done, nou pou fer bann zefor rezonab pou retire sa done-la depi nou bann baz done."
+      }
+    ]
+  },
+  "dataCollection": {
+    "title": "Kisaki done ki nou kolekte?",
+    "description": "Lor ou servi nou Servis, nou kolekte ek itiliz done dan kat fason prinsipal:",
+    "waysOfCollection": [
+      "Ou donn nou done kan ou pe servi nou Servis (kouma ou non ouswa imel).",
+      "Done kolekte otomatikman pandan ou pe servi nou Servis (kouma ou ladres IP).",
+      "Nou gagne done depi lezot pati pou ed fer marshe nou Servis.",
+      "Nou itiliz ouswa kombine done ki nou gagne pou infer bann kiksoz lor ou (kouma, kisa ki sanble interese ou)."
+    ],
+    "legitimatePurposes": "Nou kolekte done ki neseser pou nou bann bi lezitim.",
+    "detailsCollection": "Pou fournir nou Servis a ou, nou itiliz done. Kik ponn done sa-la done personel. Sa vedir ki li rapore a enn dimoun ki nou kapav kapab identifie. Nou kolekte kik ponn sa done-la depi ou ek lezot, ek kik ponn nou kree. Sertin done personel sansib, sa inklir done lor ras, politik, religion ek kroaians, lasante, ek osi SSN. An zeneral, nou pa kolekte done sansib me li kapav neseser pou itiliz kik ponn nou Servis. Kot sa-la se ka, ou ena enn swa pou fournir done-la (ek itiliz Servis-la) ouswa pa.",
+    "dataYouProvide": {
+      "title": "Done ki ou fournir nou",
+      "description": "Pou itiliz kik ponn nou Servis, ou bezwen partaz kik ponn ou done avek nou, leresvwar formulair anlin ouswa lezot mwayin. Kisaki done ki nou bezwen pou depann lor Servis ki ou anvi itiliz, me li kapav inklir sa ki swiv:",
+      "dataList": [
+        "Non ouswa non itilizater",
+        "Imel",
+        "Ladres postal",
+        "Ladres fakterasion",
+        "Numerotelefon",
+        "Kart payman",
+        "Mak ek model lili",
+        "Ledikasion"
+      ],
+      "sensitiveDataDes": "Parfwa, done ki nou bezwen pou ofer nou Servis sansib, kouma:",
+      "sensitiveDataList": [
+        "Servis militere",
+        "Identifian nasionnal, kouma SSN",
+        "Listwar kredi",
+        "Reveni ek balans kont"
+      ],
+      "additionalData": "Ou kapav swazir partaz lezot done avek nou, kouma ou sitiasion, bann limaz, komanter, intere, kouma ek pa, ek bann repons sondaz."
+    },
+    "dataCollectedAutomatically": {
+      "title": "Done ki kolekte otomatikman",
+      "description": "Lor ou servi nou Servis, nou ek nou bann partener biznis kapav kolekte sertain done otomatikman.",
+      "collectedData": [
+        "ISP",
+        "Sous (kouma ou finn ariv lor nou sit)",
+        "Bann klik, vizit paz, ek lezot aksion",
+        "Dire vizit",
+        "Cookie ek lezot ID",
+        "Ladres IP",
+        "Done aparoy ek navigater",
+        "Renejisman ou bann sesion",
+        "Bann imel ki ou finn ouver"
+      ],
+      "additionalDataCollection": "Avekk ou konsantman, nou kapav osi kolekte bann done lokasion pli presi."
+    },
+    "dataFromOtherSources": {
+      "title": "Done ki nou gagne depi lezot sous",
+      "description": "Depann lor Servis ki ou pe itiliz, nou kapav gagne done depi lezot pati.",
+      "obtainedData": [
+        "Non",
+        "Imel",
+        "Ladres",
+        "Numerotelefon",
+        "Biznis",
+        "Rol",
+        "Laz",
+        "Sex",
+        "Grander fami",
+        "Ledikasion",
+        "Bann intere probab",
+        "Bann aste",
+        "Bann aksion andeyor sit (par egzanp, bann baner ki finn klik)",
+        "Done piblik (par egzanp, bann post anlin)",
+        "Bann rapor kredi"
+      ],
+      "consentObtained": "Nou kapav osi demann ou konsantman pou gagne done lor ou depi lezot sous (par egzanp, bann founiser servis finansie)"
+    },
+    "dataWeCreate": {
+      "title": "Done ki nou kree",
+      "description": "Nou kapav itiliz ouswa kombine okenn done ki nou gagne pou kree nouvo done lor ou.",
+      "createdData": [
+        "Lokasion aproksimativ",
+        "Bann inferans lor ou bann intere ek preferans",
+        "Bann group intere",
+        "Bann aparoy ki lye"
+      ],
+      "sensitiveDataNote": "Silvouple noter: Nou pa servis done ki nou kolekte pou infer done sansib lor ou."
+    },
+    "anonymousData": {
+      "title": "Done anonim",
+      "description": "Nou kapav kombine ou done avek done lezot pou kree done anonim.",
+      "createdDataDescription": "Sa done-la pa kapav servi pou izole ou, li pa konsidere kouma personel, ek nou pa esey re-identifie ou depi sa done-la."
+    },
+    "howDoWeUseData": {
+      "title": "Kouma nou itiliz ou done?",
+      "description": "Nou itiliz ou done pou servi ou ek fer marshe nou biznis.",
+      "serviceProvision": {
+        "title": "Fournir nou Servis ek realize ou bann demand.",
+        "description": "Lor fournir nou Servis, nou kapav itiliz ou done pou plizir bi.",
+        "purposes": [
+          "Pou anrejistre ek sekiriz ou kont.",
+          "Pou resevwar ek reponn a bann apel ek mesaz depi ou.",
+          "Pou tike ou idantite ek elizibilite pou nou Servis.",
+          "Pou ed ou gagn bann pli bon pris ek prodwi ki nou ena.",
+          "Pou dir ou ver bann sit web nou bann partener.",
+          "Pou trete bann transaksion ant ou ek nou, ouswa nou bann partener.",
+          "Pou personaliz Servis-la ki ou gagne.",
+          "Pou gard ou done azour avek bann pli bon linfomasion ki nou ena.",
+          "Pou fournir servi kliyan ek soutien.",
+          "Pou konplete bann demand drwa done ki ou finn fer.",
+          "Pou permet ou itiliz bann zouti partaz sosyal.",
+          "Pou swiv vandasion ek gagn peye par nou bann partener."
+        ]
+      },
+      "improvingAndPromotingServices": {
+        "title": "Amelyor ek promouvwar Servis nou ek lezot.",
+        "description": "Pou ed amelior ek promouvwar nou Servis, ek Servis nou bann partener, nou kapav itiliz ou done pou bann diferan bi.",
+        "objectives": [
+          "Pou realize analiz ek resers marke.",
+          "Pou ed prezant nou Servis klerman ek dan fason pli efektif.",
+          "Pou fer bann konkou ek sondaz.",
+          "Pou ed nou ek nou bann partener kree bann prodwi pli bon pou ou.",
+          "Pou trete okenn rekonpans ki nou kapav ofer ou.",
+          "Pou voy bann metrazazour ek mesaz Servis lor ou bann prodwi ek servis.",
+          "Pou fer ou konnet nou bann servis ek promosion par imel, medya sosyal (par egzanp, Facebook), ek leresvwar bann notifikasion push (kot ou dakor).",
+          "Pou fer ou konnet Servis lezot mar Red Ventures.",
+          "Pou bati, antrene, ek ogmante bann model ki ed nou konprann ou bann intere probab, ek sa lezot konsomater.",
+          "Pou vise piblisite ver ou, lor sa ek lezot sit web, baze lor done ki nou finn kolekte ouswa kree.",
+          "Pou ed nou konprann si ek kouma nou ek lezot marketin la marshe."
+        ]
+      },
+      "operatingBusiness": {
+        "title": "Fonksyonnman nou biznis.",
+        "description": "Dan kour marshe nou biznis, nou kapav itiliz ou done pou plizir rezon operasionnel.",
+        "operationalReasons": [
+          "Pou kondi bann devwar neseser pou fer marshe nou Servis ek biznis.",
+          "Pou ed sekiriz nou biznis ek anpes fród.",
+          "Pou kree bann rapor pou bann bi intern ouswa ekstern.",
+          "Pou konform a bann demand legal lezitim.",
+          "Pou verifye nou biznis ek bann prosesis.",
+          "Pou protez bann intere nou biznis, ek sa nou bann partener."
+        ]
+      },
+      "otherPurposes": "Pou lezot bi ki pa deskrir dan sa Politik Privekte-la ki ou konsanti (de tan an tan) ek konformeman a seki lwa permet."
+    }
+  },
+  "howDoWeUseCookies": {
+    "title": "Kouma nou itiliz cookies?",
+    "description": "Bann cookie se bann ti dosie tèks ki servi an larz dan bann sit web. Nou itiliz cookie ek bann zouti parer lor nou bann sit web pou swiv bann viziter ki pe revini, pou stoke done pou itilizasyon plitar, ek pou vise piblisite.",
+    "note": "Ajust bann reazman navigater pou bloke cookie kapav limpekte bann fonksionalite kik nou Servis. Refer a nou Politik Cookie pou linfomasion detaye lor bann cookie ki nou itiliz ek zot bann bi."
+  },
+  "dataSharing": {
+    "title": "Kan nou partaz done avek lezot?",
+    "description": "Pou ofer nou Servis ek fer marshe nou biznis, nou bizin partaz kik done.",
+    "reasonsForSharing": {
+      "title": "Bann Rezon pour Partaz",
+      "list": [
+        "Nou kapav partaz done avek bann trwazyem pati pou fournir nou Servis. Par egzanp, avek bann partener ki bann prodwi ou finn swazir.",
+        "Nou kapav partaz done avek bann trwazyem pati ki nou servi zot servis pou fer marshe nou biznis. Par egzanp, nou peye enn trwazyem pati pou host nou bann baz done pou nou.",
+        "Nou kapav partaz done avek bann trwazyem pati pou konform a lwa ek defann nou bann intere, ek sa nou bann partener. Par egzanp, nou partaz done avek bann avoka, bann konsiltern ekstern, ek lezot profesyonel.",
+        "Nou kapav partaz done ki kolekte andan ACS Mulinguae. Sa ed nou gard ou done sekirize ek stoke efikasman. Nou lezot mar kapav itiliz sa done-la pou fournir bann Servis ki ou demann, pou sizez nou lezot Servis, ek montre ou bann piblisite baze lor ou bann intere (ki nou finn aprann depi tou done ki nou finn kolekte).",
+        "Nou kapav osi partaz ou done avek bann trwazyem pati kan:"
+      ]
+    },
+    "otherReasons": [
+      {
+        "title": "Aste ek Vand Bann Laktif",
+        "description": "Parfwa nou kapav bezwen partaz ou done avek enn pati ki anvi aste nou antrepriz ouswa enn laktif ki nou possede, ouswa kan nou aste bann laktif lezot. Avo nou fasse sa, nou pou asire ki nou protez ou done aproprieman."
+      },
+      {
+        "title": "Bann Biznis Kliyan",
+        "description": "Kan nou kolekte done lor non nou bann kliyan, nou pou partaz ou done avek zot."
+      },
+      {
+        "title": "Bann Founiser Servis",
+        "description": "Nou kapav partaz ou done avek bann pati ki nou servi zot servis pou fer marshe nou biznis. Kot nou itiliz sa bann servis trwazyem pati-la, nou bann founiser pabli kouma drwa itiliz nou done pou zot prop bi."
+      },
+      {
+        "title": "Bann Promosion Partener",
+        "description": "Nou kapav ofer bann konkou, bann loteri, ouswa lezot evennman avek bann partener trwazyem pati. Si ou rant dan enn de sa-la, ou done pou partaze avek trwazyem pati-la. Silvouple noter, zot pou ena zot prop reg pou itiliz ou done ek ou bizin lir zot bann politik."
+      },
+      {
+        "title": "Mezir Lodisans",
+        "description": "Nou kapav partaz ou done avek bann konpagni ki ed nou konprann kisaki pe itiliz nou Servis, ek kouma zot pe servi."
+      },
+      {
+        "title": "Get Bann Videyo",
+        "description": "Avek enn konsantman apoprie, nou kapav partaz done lor kisa videyo ki ou get avek lezot konpagni, kouma bann piblisiter ouswa bann sit medya sosyal, me zis si li permet par lwa."
+      },
+      {
+        "title": "Piblisite ek Marketin",
+        "description": "Avekk ou permision (kan neseser), nou kapav partaz done avek bann konpagni ki montre piblisite, kouma Google, Live Ramp, The Trade Desk, ek Facebook. Sa ed nou montre ou bann piblisite ki koresponn avek ou bann intere. Nou osi ed lezot dimoun fer piblisite zot prodwi, alor ou kapav truv zot bann mesaz lor nou bann sit ouswa lezot kote anlin."
+      },
+      {
+        "title": "Exizans Legal",
+        "description": "Nou kapav partaz ou done avek lezot, si nou krwar ki lwa dir nou bizin fer li, ouswa si gouvernman demann li. Nou osi bizin protez nou bann drwa ek bann drwa nou bann kliyan, alor nou kapav osi partaz ou done pou gagn konsey depi bann avoka ek exper."
+      },
+      {
+        "title": "Bann SITIASION DIZAS",
+        "description": "Si nou krwar ki enn dimoun an danze, nou rezerv drwa pou partaz done pou ed protez li."
+      },
+      {
+        "title": "Lezot Dimoun ek Mesaz",
+        "description": "Kan ou dakor, kik Servis pou kapav partaz ou done avek lezot konpagni ki anvi voy ou bann mesaz lor zot bann servis. Zot kapav kontakte ou par imel, telefon, pos, ouswa lezot fason. Silvouple noter, zot osi ena zot prop bann reg privekte."
+      },
+      {
+        "title": "Done Anonim",
+        "description": "Nou kree ek partaz done zeneral lor nou bann konsomater — ou pa kapav izole andan sa done-la."
+      },
+      {
+        "title": "Transfer Done",
+        "description": "ACS Mulinguae ena bann kontak dan bann diferan pei ek nou partaz done ant zot. Sa vedir ki ou done kapav stoke ek servi dan enn lot pei. Kan sa arive, nou itiliz bann kontrol legal pou ed asire ki ou done trete konformeman a bann reg pei kot li finn kolekte. Sepandan, ou done kapav osi sibye a bann lwa lokal pei kot nou pe itiliz li. Sa kapav vedir ki bann lakour, polis, ouswa lezot lajans kapav ena akse li, si zot lwa permet."
+      }
+    ],
+    "note": "Silvouple noter: nou zis partaz done sansib kan nou pe fournir ou bann Servis ek pou lezot bi ki lwa permet."
+  },
+  "socialFeatures": {
+    "title": "Bann Fonksion Sosyal",
+    "description": "Kik ponn nou Servis permet ou itiliz bann 'Fonksion Sosyal' ki ofer par bann trwazyem pati. Par egzanp, ou kapav kapab 'like' ouswa 'partaz' bann kiksoz lor Facebook / Instagram, Google / YouTube, Linked In, Snapchat, Tik Tok, ek Twitter. Pou itiliz sa bann fonksion-la, ou kapav bezwen ena enn kont avek founiser-la, ek ou bizin asire ou konprann zot bann pratik privekte.\n\n Si ou swazir itiliz bann Fonksion Sosyal lor nou Servis ouswa akse nou Servis depi bann Fonksion Sosyal, nou ek founiser-la kapav ena akse a done lor ou itilizasion. Si ou konekte dan bann servis enn founiser, zot kapav kapab konekte ou vizit avek lezot done personel ki zot gard lor ou. Nou (ek lezot) kapav itiliz sa done-la pou met bann piblisite baze lor ou bann intere lor sa bann founiser-la so servis. Anplis, nou kapav demann ou si nou kapav akse ek kolekte done depi ou bann kont, ek post konteni a ou bann kontak pou ou.\n\n Kan ou lye enn founiser Fonksion Sosyal avek enn kont pou enn de nou Servis, ou akord nou akse a sertin done lor ou pou fournir konteni ek servis. Sa akse-la gouvern par politik privekte ek bann swa ki ou fer avek sa founiser-la."
+  },
+  "dataUsage": {
+    "title": "Kifer nou kapav itiliz ou done",
+    "description": [
+      "Pou kolekte ek itiliz ou done, nou bizin ena enn rezon valab.",
+      "Sa bann rezon-la varye baze lor seki nou pe fer me zot normalman pou akoz:"
+    ],
+    "reasons": [
+      "Ou finn donn nou ou konsantman pou itiliz ou done.",
+      "Nou bezwen realize enn kontra ki nou ena avek ou ouswa pran bann etap ver formasion enn kontra.",
+      "Se nou devwar legal itiliz ou done dan sertin fason.",
+      "Itiliz ou done pou sertin rezon legityim.",
+      "Nou bezwen ena bann bon rezon pou kolekte ek itiliz ou done. Nou bann rezon kle se:"
+    ],
+    "keyReasons": [
+      {
+        "title": "Kontra",
+        "description": "Nou itiliz ou done kan nou ena enn akor avek ou, ouswa kan nou bezwen fer bann kiksoz avan fer enn akor."
+      },
+      {
+        "title": "Konsantman",
+        "description": "Ou donn nou ou konsantman pou itiliz ou done dan sertin fason (ou kapav sannz ou lide plitar si ou anvi)."
+      },
+      {
+        "title": "Exizans Legal",
+        "description": "Nou (ouswa enn lot konpagni) bizin itiliz ou done pou swiv bann lwa ouswa regulasion ki nou sibye."
+      },
+      {
+        "title": "Lezot Bi Lezitim",
+        "description": [
+          "Nou ena bann bon rezon pou itiliz ou done pou servi ou pli byen, pou ed nou fer nou bann servis pli bon, ouswa pou gard nou biznis pe marshe byen. Kik egzanp inklir:"
+        ],
+        "examples": [
+          "Partaz done avek nou bann partener kouma parti nou Servis.",
+          "Partaz done avek bann partener ki ed nou ofer bann rekonpans ek benefis.",
+          "Voy ou bann imel lor ou bann rezilta kan ou servi nou Servis.",
+          "Pran kontak pou fer ou konnet nou Servis, ek bann sannzman ki ena.",
+          "Fer resers pou aprann plis lor seki bann dimoun kontan (ouswa pa kontan) lor nou Servis.",
+          "Tike ek amelior nou bann prosesis pou asire ki tou fer korekt.",
+          "Gard nou bann servis sekirize ek disponib anlin.",
+          "Arete fród pou protez ou ek lezot.",
+          "Parfwa, nou kapav itiliz ou done si nou krwar ki li pou ed protez enn individi (soit ou ouswa enn lot konsomater)."
+        ]
+      }
+    ]
+  },
+  "dataRetention": {
+    "title": "Konbie tan nou gard ou done?",
+    "description": [
+      "Nou gard ou done pandan otan ki li neseser pou fournir ou nou Servis.",
+      "Pou determinen konbie tan nou bezwen gard ou done, nou konsidere:"
+    ],
+    "considerations": [
+      "montan done,",
+      "tip done,",
+      "bann risk ki itilizasion ouswa divilgasion innatandu kapav amene, ek",
+      "si nou kapav fer seki nou bezwen leresvwar mwin done."
+    ],
+    "additionalInfo": [
+      "Anplis, nou kapav osi gard ek itiliz ou done pandan otan ki li neseser pou bann rezon legal ouswa kontraktiel, rezolision gerdi, prevansion fród, ek sekirite.",
+      "Nou gard ou done pandan otan ki nou bezwen li pou ofer ou nou Servis, ek pou lezot bon rezon biznis, kouma:"
+    ],
+    "validReasons": [
+      "Tenir dosie finansie",
+      "Konform a lwa ouswa lezot exizans regilater",
+      "Asire sekirite ek disponibilite nou Servis"
+    ],
+    "decition": {
+      "title": "Kan nou deside konbie tan pou gard ou done, nou reflesi lor konbie nou ena, ki kalite done li ye, bann risk ki itilizasion ouswa divilgasion innatandu kapav amene, ek seki lwa dir. Sa vedir ki nou kapav gard kik ponn ou done pli lontan ki seki nou gard lezot done. Bien sir, ou osi ena bann swa - ou kapav demann nou pou efas ouswa koriz ou done.",
+      "description": [
+        "A ninport ki leresmoman, nou kapav fer ou done anonim, ki vedir li pa kapav lye avek ou.",
+        "Kan nou pa rekin plis gard done pou nou bann bi, ouswa kan nou gagne enn demand valab pou efas, nou koumans enn prosesis pou efas done-la an sekirite depi nou bann sistem."
+      ]
+    }
+  },
+  "dataSafety": {
+    "title": "Kouma nou gard ou done sekirize?",
+    "description": [
+      "Nou pran proteksion ou done o serieu.",
+      "Nou itiliz bann meyer pratik pou ed gard ou done sekirize. Sepandan, touzour ena enn kik risk kan nou stoke done ouswa voy li lor entrnet. Koumam sa, nou pa kapav garanti sekirite ou done, ek ou bizin konnet ki partaz li se ou prop risk.",
+      "Dan mezi ki nou stoke ek itiliz done ki finn dez-identifie, nou pa pou esey re-identifie done-la swaf si lwa permet."
+    ],
+    "moreDetails": [
+      "Nou travay for pou gard ou done sekirize ek ansekirite. Nou itiliz bann zouti ek teknik pou sorvelye ek protez done ki nou kolekte ek itiliz lor ou.",
+      "Nou osi ena bann reg an plas pou asire ki ou done kapav zis servi par bann dimoun ki ena bann rezon biznis valab, kouma fournir ou nou Servis.",
+      "Tandis ki nou travay for pou protez ou done, li inportan konnet ki okenn metod voy done anlin ouswa stoke li pa perfek. Parfwa bann kiksoz kapav arive andeyor nou kontrol.",
+      "Si nou zame bizin dir ou lor enn problem avek ou done, nou pou fer ou konnet osi byen ki nou kapav leresvwar bann mesaz, liter, ouswa apel telefon.",
+      "Si ou kree enn kont lor nou bann sit web, ou kapav bezwen kree enn modpas. Li bien inportan gard sa modpas-la pou ou-mem ek pa partaz li avek personn. Ou responsab pou asire ki personn lezot pa kapav akse ou kont leresvwar ou modpas ouswa ou aparoy. Si ou zame panse ki enn lot dimoun pe servi ou kont, silvouple dir nou touswit pou ki nou kapav ed."
+    ]
+  },
+  "dataControl": {
+    "title": "Kouman ou kapav kontrol ou done?",
+    "description": [
+      "Ou kapav fer sertin swa lor fason nou kolekte, itiliz, stoke, ek partaz ou done.",
+      "Parfwa sa bann swa-la aplik a tou dimoun ki servi enn Servis (par egzanp, okenn dimoun ki gagne enn bulten depi nou kapav dezabone depi bann imel futir); lezot fwa sa bann swa-la zis aplik a bann dimoun ki kouver par enn sertin lwa privekte.",
+      "Nou zere tou bann demand ki finn poze nou konformeman a seki lwa egzize. Sa vedir ki kapav ena bann rezon legal kifer nou pa kapav konplete tou bann demand.",
+      "Silvouple noter: nou kapav bezwen enn preuv ou idantite avan nou kapav koumans ou demand.",
+      "Pou fer sa bann swa-la ou bizin itiliz bann link vers bann formulair anba pou soumet enn demand."
+    ],
+    "moreDetails": {
+      "title": "Ou bann swa lor done",
+      "description": "Ou ena bann swa lor ou done ek kouma nou kominike avek ou, leresvwar nou formulair anlin isi done.",
+      "dataControlChoices": [
+        {
+          "title": "Akse a ou done",
+          "description": "Ou kapav demann akse a done ki nou ena lor ou, ek nou pou onore bann demand valab."
+        },
+        {
+          "title": "Sannzman dan ou done",
+          "description": "Li inportan gard ou done presi ek azour. Si ou bezwen metazur ou done, silvouple fer nou konnet. Parfwa, nou bizin gard done pou bann rezon legal, me nou pou esey metazur li."
+        },
+        {
+          "title": "Efas ou done",
+          "description": "Ou kapav demann nou efas done ki nou ena lor ou. Parfwa nou bizin gard ou done pou bann rezon spesifik, kouma swiv lwa ouswa rezoud bann problem, me nou pou efas seki nou bizin."
+        },
+        {
+          "title": "Souleve Objeksion pou sertin itilizasion",
+          "description": "Si ena enn kiksoz ki ou pa kontan lor fason nou itiliz ou done, silvouple dir nou. Nou pou ekoute ek gete si nou kapav fer bann sannzman. Par egzanp, ou kapav dezabone depi piblisite sible leresvwar nou bann kontrol cookie."
+        },
+        {
+          "title": "Retire ou konsantman",
+          "description": "Si ou sannz ou lide ek anvi retire ou konsantman pou bann kiksoz ki ou ti finn dakor avan, ou kapav dir nou. Zis sonnye ki, si ou fer sa, nou kapav pa kapab fournir kik Servis a ou."
+        },
+        {
+          "title": "Soumision Demand ek Limitasion",
+          "description": "Si ou swazir soumet enn demand a nou, li kapav limit ou kapasite pou itiliz kik nou Servis (par egzanp, si nou finn efas done ki ti servi pou fournir Servis-la), me nou pa pou chang fason nou fournir ou nou Servis."
+        },
+        {
+          "title": "Verifikasion Idantite pou Proteksion Done",
+          "description": "Pou protez ou done, nou bizin asire ki se verite ou ki pe fer sa bann demand-la. Alor, nou souvan demann kik linfomasion pou verifye ou idantite. Enn fwa ou soumet enn demand a nou, nou pou imel ou avek enn link ver nou servi verifikasion idantite."
+        },
+        {
+          "title": "Bann Metod Kontak Alternativ",
+          "description": "Si ou anvi fer okenn de sa bann swa-la me prefer pa itiliz nou formulair anlin, ou kapav kontakte nou par imel ouswa pos, leresvwar bann detay anba.",
+          "contactDetails": [
+            {
+              "title": "Imel:",
+              "desc": "acsmulinguae@gmail.com"
+            },
+            {
+              "title": "Pos:",
+              "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Peru. (Atansyon: Ofisie Privekte)"
+            }
+          ]
+        },
+        {
+          "title": "Bann Sino Preferans Kontrol Privekte",
+          "description": "Nou rekonet bann sino preferans Kontrol Privekte Global pou ki ou kapav fer ou prop bann swa privekte."
+        },
+        {
+          "title": "Bann Ajan Otorize",
+          "description": "Si enn lot dimoun, kouma paran ouswa gardien bann individi laz 16 a 18 an, bizin fer sa bann swa-la pou ou, zot kapav fer li osi. Zot zis bizin swiv bann mem etap ki nou finn mansione."
+        },
+        {
+          "title": "Explikasion Refi Demann ek Apel",
+          "description": "Si ou soumet enn demand ek nou pa kapav onore li, nou pou dir ou kifer. Nou pou osi met enn formulair apel disponib pou ou, si ou pa satisfe avek nou desizion."
+        }
+      ],
+      "communicationPreferences": {
+        "title": "Bann preferans kominikasion",
+        "description": "Ou kapav osi swazir kouma nou kominike avek ou. Isi ou bann opsion:",
+        "options": [
+          {
+            "title": "Bann preferans kominikasion",
+            "description": "Ou kapav osi swazir kouma nou kominike avek ou. Isi ou bann opsion:"
+          },
+          {
+            "title": "Bann Imel Promosionel",
+            "description": "Si ou pa anvi resevwar bann imel avek bann ofr spesial ouswa sondaz, ou kapav dezabone swiv bann linstriksion dan bann imel. Me pa trakase, nou kapav ankor voy ou bann mesaz inportan lor nou Servis."
+          },
+          {
+            "title": "Bann Pos Promosionel",
+            "description": "Si ou pa anvi resevwar bann pos fizik depi nou, kouma bann ofr ouswa katalok, zis fer nou konnet. Voy nou enn imel avek 'NO SNAIL MAIL' dan liyn sije, ansam avek ou non, ladres, ek kodo postal. Mem si ou demann nou pou arete, ou kapav ankor gagne kik pos ki ti deza an kemin avan nou finn retire ou non."
+          },
+          {
+            "title": "Bann Mesaj Tèks ek Notifikasion Push",
+            "description": "Si ou resevwar bann mesaj tèks avek bann promosion depi nou, ou kapav dezabone leresvwar reponn 'STOP' ouswa 'UNSUBSCRIBE.' Ou kapav osi kontrol bann notifikasion push lor ou aparoy."
+          },
+          {
+            "title": "Bann Kominikasion Transaksionel ouswa Servis",
+            "description": "Silvouple noter: Nou kapav ankor bizin kominike avek ou pou bann rezon transaksionel ouswa Servis. Par egzanp, voy enn imel pou metazur modpas ouswa bann metazur lor nou bann term."
+          }
+        ]
+      }
+    }
+  },
+  "complaints": {
+    "title": "Bann Reklemasion",
+    "description": "Nou ti pou apresie si ou donn nou enn sans pou adrese okenn reklemasion ki ou kapav ena. Ou kapav itiliz bann detay anba pou soumet enn reklemasion, ek ou kapav osi kapab soulve enn reklemasion avek ou regilater lokal."
+  },
+  "contactUs": {
+    "title": "Kouman ou kapav kontakte nou?",
+    "description": "Kontakte nou leresvwar bann detay anba si ou ena okenn kestyon lor sa Politik-la ouswa anvi fer enn reklemasion.",
+    "contactDetails": [
+      {
+        "title": "Imel:",
+        "desc": "acsmulinguae@gmail.com"
+      },
+      {
+        "title": "Pos:",
+        "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Peru. (Atansyon: Ofisie Privekte)"
+      }
+    ]
+  },
+  "changesToPolicy": {
+    "title": "Sannzman dan sa Politik-la",
+    "description": [
+      "Parfwa nou bezwen fer bann sannzman dan fason nou kolekte, itiliz, ek protez ou done.",
+      "Kan nou fer li, nou pou fer ou konnet lor li an metazur sa politik-la.",
+      "Si bann sannzman ki nou fer inportan, nou pou osi met enn lavenisman spesial lor nou sit web.",
+      "Okenn sannzman pou normalman zis afekte done ki nou kolekte apre politik nouvo-la finn pibliye.",
+      "Okenn done ki nou finn kolekte avan bann sannzman-la pou ankor kouver par ansien politik.",
+      "Nou pou osi fer ou konnet lere nou finn fer sa bann sannzman-la an dernie, an pibliye dat ki nou finn sannz li an dernie.",
+      "ACS MULINGUAE angaze pou bati bann prodwi digital inklizif.",
+      "Pou bann kestyon lor aksesibilite, bann demand pou logman, ouswa pou soumet enn problem aksesibilite, kontakte nou."
+    ],
+    "lastUpdated": "13/10/2023, 10:39:06"
+  }
+}

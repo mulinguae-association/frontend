@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import debounce from "lodash/debounce";
+import { useTranslation } from "react-i18next";
 import BlogsHeader from "./BlogsHeader";
 import BlogList from "./BlogList";
 import ScrollDownArrow from "../../HelperComponents/ScrollDownArrow";
@@ -10,6 +11,7 @@ import { CacheProvider } from "../../../contexts/BlogsCache";
 import { SEO } from "../../SEO.jsx";
 
 const Blogs = () => {
+  const { t } = useTranslation("pages/blogs");
   const {
     acceptedPosts,
     loading,
@@ -18,14 +20,6 @@ const Blogs = () => {
     searchQuery,
     setPostsToDisplay,
   } = useBlogPosts(); // Use the context hook
-  // Add these debug logs
-  console.log("BlogsPage Debug:", {
-    hasAcceptedPosts: Boolean(acceptedPosts),
-    postsLength: acceptedPosts?.length,
-    isLoading: loading,
-    hasError: errorDisplayPosts,
-    allLoaded: allPostsLoaded,
-  });
   const [previousQuery, setPreviousQuery] = useState("");
   const searchMutation = useSearchMutation(searchQuery);
   const counterRef = useRef(0);
@@ -82,9 +76,9 @@ const Blogs = () => {
   return (
     <>
       <SEO
-        title="Mulinguae Blog | Language Learning Stories & Community Insights"
-        description="Read the latest blog posts from Mulinguae's multilingual community. Discover language learning tips, cultural stories, and updates from Mulinguae (Mulingua)."
-        keywords="mulinguae blog, mulingua blog, language learning, multilingual, language exchange, community stories, mulingua, mulinguae"
+        title={t("seo.blogs.title")}
+        description={t("seo.blogs.description")}
+        keywords={t("seo.blogs.keywords")}
         path="/pages/blogs"
         ldJson={{
           "@context": "https://schema.org",
@@ -107,14 +101,14 @@ const Blogs = () => {
           </CacheProvider>
           {errorDisplayPosts ? (
             <p className="finished-message">
-              {"An error occurred while fetching blog posts."}
+              {t("errorFetchingPosts")}
             </p>
           ) : acceptedPosts && acceptedPosts?.length <= 0 ? (
-            <p className="finished-message">No results found!</p>
+            <p className="finished-message">{t("noResultsFound")}</p>
           ) : allPostsLoaded ? (
-            <p className="finished-message">All blog posts have been loaded.</p>
+            <p className="finished-message">{t("allPostsLoaded")}</p>
           ) : loading ? ( // Check for both loading and isSearching
-            <p className="finished-message">Loading....</p>
+            <p className="finished-message">{t("loadingPosts")}</p>
           ) : (
             <ScrollDownArrow />
           )}

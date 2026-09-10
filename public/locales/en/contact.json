@@ -50,7 +50,9 @@
     "countryPlaceholder": "Your country",
     "languagesSpokenPlaceholder": "(e.g., English, Arabic,...)",
     "subjectsTaughtPlaceholder": "e.g., Math, science, etc.",
-    "addressPlaceholder": "Your address"
+    "addressPlaceholder": "Your address",
+    "fullNameLabel": "Full Name",
+    "languagesSpokenTitle": "Please enter the languages you speak"
   },
   "studentForm": {
     "nameLabel": "Name",

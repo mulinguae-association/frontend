@@ -13,9 +13,9 @@ const Students = () => {
   return (
     <>
       <SEO
-        title="Mulinguae Students | Language Learners & Multilingual Community"
-        description="Meet the students of Mulinguae (Mulingua). Join our multilingual community of language learners and connect with people worldwide. Discover language learning stories and experiences."
-        keywords="mulingua students, mulinguae students, language learners, multilingual, language learning, global community"
+        title={t("seo.students.title")}
+        description={t("seo.students.description")}
+        keywords={t("seo.students.keywords")}
         path="/pages/students"
       />
       <main>
@@ -32,7 +32,7 @@ const Students = () => {
             </header>
             <article className="group">
               <div className="students_img">
-                <img src="/images/studentsImg.jpg" alt="students-img" />
+                <img src="/images/studentsImg.jpg" alt={global("app.altStudentsImg")} />
               </div>
               <div>
                 <p>{t("sec1_about1")}</p>

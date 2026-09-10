@@ -9,10 +9,10 @@
   "passwordPlaceholder": "Ñanpas yachay",
   "confirmPasswordPlaceholder": "Ñanpasmi konfirmachiy",
   "passwordLengthError": "Ñanpasqa rikuchisqa 6 hark'aypi",
-  "Label_Agree_To": "Mwan ",
-  "Text_The_Terms": "dispozisyon ",
-  "Text_and": "ek ",
-  "Text_Privacy_Policy": "lapolitik laprivasi",
+  "Label_Agree_To": "Yuyani ",
+  "Text_The_Terms": "kamachikuykunata ",
+  "Text_and": "hinaspa ",
+  "Text_Privacy_Policy": "huklla rikch'aynin politikata",
   "registerButton": "Rikuchiy",
   "loadingText": "Yanapan...",
   "haveAccountText": "Ama llank'aynin?",
@@ -24,5 +24,6 @@
     "medium": "Chawpi",
     "strong": "Kallpasapa",
     "veryStrong": "Ancha Kallpasapa"
-  }
+  },
+  "registrationSuccessful": "Allintam rurakuchirqa! Ama hina kaspalla, chaski pukyuykita qhawaspa cuenta qillqaykunata tanqapay."
 }

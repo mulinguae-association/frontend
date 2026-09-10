@@ -1,0 +1,23 @@
+{
+  "title": "Bibliyotek Video",
+  "head": "Bann video ki finn selekte lor langaz ki pe dispar. Klike lor enn kart pou gade.",
+  "videos": [
+    {
+      "id": "frh81KFbxpg",
+      "title": "Film Dokimenter: Langaz Perdi ek Remembre",
+      "description": " enn film dokimenter lapresib ki trase koz bann langaz pe dispar — migras, asimilasyon ek gloubalisasyon — avek enterflyo ek anarv rezonmanyen."
+    },
+    {
+      "id": "K1YCXLea9p0",
+      "title": "Zet Kazy: Dernye Pale Ze enn Langaz",
+      "description": "zet kazy personal ki suiv dernye pale zenn langaz ki menase, montre linpak kiltirel ek lhistwar personel."
+    },
+    {
+      "id": "bFWcT3Gbrw4",
+      "title": "Revitekasyon ek Docimentasyon",
+      "description": "Sentar lor linquist, kominote ek proze baz popileir ki travay pou dokimant, arkeve ek revoze langaz ki an danze."
+    }
+  ],
+  "videoLibrary": "Bibliyotek video",
+  "videoLibraryDescription": "Bann video sélectioné lor bann langaz ki pe disparet. Klik enn kart pou gad video."
+}

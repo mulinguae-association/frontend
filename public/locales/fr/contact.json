@@ -2,7 +2,8 @@
   "titles": {
     "mainTitle": "Contactez-nous",
     "teacherFormTitle": "Bienvenue Enseignant",
-    "studentFormTitle": "Bienvenue Étudiant"
+    "studentFormTitle": "Bienvenue Étudiant",
+    "subHeading": "Nous aimerions avoir de vos nouvelles. Envoyez-nous un message et nous vous répondrons dès que possible."
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -49,7 +50,9 @@
     "countryPlaceholder": "Votre pays",
     "languagesSpokenPlaceholder": "(par exemple, Anglais, Arabe, ...)",
     "subjectsTaughtPlaceholder": "par exemple, Mathématiques, Sciences, etc.",
-    "addressPlaceholder": "Votre adresse"
+    "addressPlaceholder": "Votre adresse",
+    "fullNameLabel": "Nom complet",
+    "languagesSpokenTitle": "Veuillez indiquer les langues que vous parlez"
   },
   "studentForm": {
     "nameLabel": "Nom",
@@ -67,6 +70,7 @@
     "languagesSpokenPlaceholder": "Entrez les langues (par exemple, Anglais, Arabe, ...)",
     "messageLabel": "Message",
     "messagePlaceholder": "Écrivez votre message ici...",
-    "cvUploadButtonText": "chargement..."
+    "cvUploadButtonText": "chargement...",
+    "languagesSpokenTitle": "Veuillez indiquer les langues que vous parlez"
   }
 }

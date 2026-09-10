@@ -3,6 +3,7 @@ import CommentReply from "./CommentReply";
 import { getRemainingAcceptedReplies } from "../../../../apis/blog-api";
 import { BiLoaderCircle } from "react-icons/bi";
 import { Fragment } from "react";
+import { useTranslation } from "react-i18next";
 
 const ShowMoreRepliesBtn = ({
   comments,
@@ -12,6 +13,7 @@ const ShowMoreRepliesBtn = ({
   editCommentId,
   handleEdit,
 }) => {
+  const { t } = useTranslation("pages/blogs");
   const { data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
     useInfiniteQuery(
       ["remaining-replies", commentId],
@@ -73,14 +75,14 @@ const ShowMoreRepliesBtn = ({
                   onClick={() => !isFetching && fetchNextPage()}
                   disabled={isFetchingNextPage || !hasNextPage}
                 >
-                  Show more replies
+                  {t("showMoreReplies")}
                 </button>
 
-                <p className="reply-counter">{`${remaining} from ${repliesCount}`}</p>
+                <p className="reply-counter">{t("remainingCounter", { remaining, total: repliesCount })}</p>
               </>
             )
           ) : (
-            <span className="replies_loaded">All replies have loaded</span>
+            <span className="replies_loaded">{t("allRepliesLoaded")}</span>
           )}
         </div>
       )}

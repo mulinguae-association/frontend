@@ -87,7 +87,7 @@ const Navbar = () => {
                 height="100%"
                 src={"/images/acs-logo.png"}
                 sizes="(max-width:768px) 50px, 55px"
-                alt="Mulinguae Logo"
+                alt={t("app.altLogo")}
               />
             </picture>
             <span className="logo_title">Mulinguae</span>
@@ -98,7 +98,7 @@ const Navbar = () => {
               to={`/${i18n.language}/contact`}
               name="join us"
               className="cta-button"
-              aria-label=" Join Mulinguae"
+              aria-label={t("app.joinMulinguae")}
             >
               {t("joinBtn")}
             </Link>
@@ -106,14 +106,14 @@ const Navbar = () => {
               className="cta-outline watch-intro"
               onClick={() => setShowIntro(true)}
             >
-              {t("watchIntro") || "Watch Intro"}
+              {t("watchIntro")}
             </button>
             <LanguageSwitcher className="custom-dropdown" />
           </div>
           <div
             role="button"
             tabIndex={0}
-            aria-label="Toggle menu button to change language"
+            aria-label={t("app.toggleMenuLanguage")}
             id="burger_menu"
             className={menuOpen ? "open" : ""}
             onClick={handleBurgerMenu}

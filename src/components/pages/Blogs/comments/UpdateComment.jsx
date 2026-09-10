@@ -35,10 +35,10 @@ const UpdateComment = ({ editComment, initialValue, setIsEditComment }) => {
   const handleUpdateComment = async (e) => {
     e.preventDefault();
     if (value.trim() === initialValue.trim()) {
-      notifyError("No changes were made!");
+      notifyError(t("app.noChangesMade"));
       return;
     } else if (value.trim() === "") {
-      notifyError("Comment cannot be empty!");
+      notifyError(t("commentCannotBeEmpty"));
       return;
     }
     const requestedBody = {
@@ -50,9 +50,9 @@ const UpdateComment = ({ editComment, initialValue, setIsEditComment }) => {
       clearCache();
       if (res.status === 201) {
         isAdmin
-          ? notifySuccess("Successfully updated comment")
+          ? notifySuccess(t("successUpdatedComment"))
           : setNotificationPopup({
-              message: "Your comment has been submitted for review.",
+              message: t("commentSubmittedReview"),
             });
         updateCommentLocally(
           editCommentId,
@@ -61,11 +61,11 @@ const UpdateComment = ({ editComment, initialValue, setIsEditComment }) => {
         );
         setIsEditComment(false);
       } else {
-        notifyError("Failed updating comment"); // Corrected typo
+        notifyError(t("failedUpdatingComment")); // Corrected typo
       }
     } catch (err) {
       logError(err);
-      notifyError("Failed updating comment");
+      notifyError(t("failedUpdatingComment"));
     }
   };
   const handleKeyPress = (e) => {

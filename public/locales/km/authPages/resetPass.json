@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "Konfirme nouv modpas ou",
   "resetButton": "Resit Modpas",
   "resetSuccessMessage": "Modpas ou finn resit avek sikse.",
-  "loadingText": "Loading..."
+  "loadingText": "Pe charz...",
+  "missingFieldsError": "Tanpri ranpli tou bann chan oblizatwa."
 }

@@ -1,0 +1,75 @@
+{
+  "Head": "المحتويات",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "ماذا تغطي هذه السياسة؟",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "ما البيانات التي نجمعها ونستخدمها ونشاركها؟ (ملخص)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "ما البيانات التي نجمعها؟",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "كيف نستخدم بياناتك؟",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "كيف نستخدم ملفات تعريف الارتباط؟",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "متى نشارك البيانات مع الآخرين؟",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "الميزات الاجتماعية.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "لماذا يمكننا استخدام بياناتك.",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "كم من الوقت نحتفظ ببياناتك؟",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "كيف نحافظ على أمان بياناتك؟",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "كيف يمكنك التحكم في بياناتك؟",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "الشكاوى.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "كيف يمكنك التواصل معنا؟",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "تغييرات على هذه السياسة",
+      "link": "data-changing"
+    }
+  ]
+}

@@ -1,203 +1,214 @@
 {
   "phrases": [
     {
-      "title": "Greetings",
+      "title": "Napaykuna",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
-      "alt": "Greetings Image",
+      "alt": "Napaykuna Rikchay",
       "phrases": [
-        "Hi! / Hello.",
-        "Good morning.",
-        "Good afternoon.",
+        "¡Napaykullayki! / Allillanchu.",
+        "Allin p'unchaw tutamanta.",
+        "Allin ch'isi.",
         {
-          "subtitle": "Asking questions",
-          "phrases": ["How are you?"]
+          "subtitle": "Tapuykuna",
+          "phrases": [
+            "¿Imaynallan kachkanki?"
+          ]
         },
         {
-          "subtitle": "Reply",
+          "subtitle": "Kutichiy",
           "phrases": [
-            "Fine, thanks.",
-            "Okay/ Ok.",
-            "And you?",
-            "Good / more or less."
+            "Allinmi, añay.",
+            "Allin/ OK.",
+            "¿Qamri?",
+            "Allin / allinraq."
           ]
         }
       ]
     },
     {
-      "title": "Goodbyes",
-      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
-      "alt": "Goodbyes Image",
-      "phrases": ["Bye.", "Goodbye.", "See you later.", "Good night."]
+      "title": "Kacharikuykuna",
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp",
+      "alt": "Kacharikuy Rikchay",
+      "phrases": [
+        "Kay tukuchiy.",
+        "Tupananchiskama.",
+        "Wachapisunki.",
+        "Allin tuta."
+      ]
     },
     {
-      "title": "Apologize",
+      "title": "Disculpa mañay",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
-      "alt": "Apologize Image",
-      "phrases": ["Excuse me.", "I'm sorry."]
+      "alt": "Disculpa Rikchay",
+      "phrases": [
+        "Pampachaway.",
+        "Llakikuni."
+      ]
     },
     {
-      "title": "Asking for help and answers",
+      "title": "Yanapayta hinaspa kutichina tapuy",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
-      "alt": "Asking for Help Image",
+      "alt": "Yanapay Rikchay",
       "phrases": [
-        "Where is the immigration office/ police station / Travel agency?",
-        "It is ……….in the main square/ near the market / on the forth floor.",
-        "What does the word “impeccable” mean?",
-        "Exemplary, flawless."
+        "¿Maypitaq inmigracion oficina/ policia / turismo agencia?",
+        "Aswan kan pampapi/ qatu qayllapi / tawa piso peru.",
+        "¿Imatataq ñiyta munan “impeccable” simi?",
+        "Ejemplar, mana pantaq."
       ]
     },
     {
-      "title": "Market",
+      "title": "Qatu",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
-      "alt": "Market Image",
+      "alt": "Qatu Rikchay",
       "phrases": [
-        "What are these?",
-        "They are tomatoes.",
-        "How much is it?",
-        "It is 1 (one) pound per kilo.",
-        "How do you say ¨cabbage¨ in Spanish/ Arabic/ Quechua, etc. etc.?",
-        "It´s called “col” in Spanish.",
-        "Could you speak more slowly please?",
-        "Of course!",
-        "Do you understand?",
-        "I don´t understand.",
-        "Do you speak Quechua/ Spanish/ French?",
-        "I speak ……………….."
+        "¿Imakunan kaykuna?",
+        "Tumatekunam kaykuna.",
+        "¿Haykataq?",
+        "Chayqa 1 (huk) libra sapa kilo.",
+        "¿Imaynataq “cabbage” nisqata Español/ Árabe/ Quechua, hukkunapipas?",
+        "Españolpim “col” nisqa.",
+        "¿Hina kaspalla, aswan allinlla rimaykuwaymanchu?",
+        "¡Allin!",
+        "¿Entiendenkichu?",
+        "Mana entiendenichu.",
+        "¿Quechua/ Español/ Francés rimankichu?",
+        "Ñuqaqa rimani ……………….."
       ]
     },
     {
-      "title": "Important daily expressions",
+      "title": "Sapa p'unchaw musuq rimaykuna",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
-      "alt": "Daily Expressions Image",
+      "alt": "Sapa P'unchaw Rimay Rikchay",
       "phrases": [
-        "Sure.",
-        "Yes",
-        "No.",
-        "I don´t know.",
-        "Please.",
-        "Thank you.",
-        "You´re welcome.",
-        "No problem.",
-        "Ok; all right."
+        "Ciertom.",
+        "Arí",
+        "Mana.",
+        "Mana yachanichu.",
+        "Añayku.",
+        "Añay.",
+        "Allillanmi.",
+        "Mana problmayuq.",
+        "Allin."
       ]
     },
     {
-      "title": "Introducing and being introduced.",
+      "title": "Riqsichiy hinaspa riqsichisqa kay.",
       "img": "/images/hundredPhrases/introducing.webp",
-      "alt": "Introducing Image",
+      "alt": "Riqsichiy Rikchay",
       "phrases": [
-        "This is Ms. Arletta.",
-        "I´d like you (informal) to meet some of my friends.",
-        "Nice to meet you.",
-        "My pleasure.",
-        "Do you (formal) know Maria?",
-        "How do you do.",
-        "I´m Angelo.",
-        "What´s your name?",
-        "My name is Angelo."
+        "Kaymi Señora Arletta.",
+        "Munalayku amigoykunawan tupayta.",
+        "Allinmi riqsiykullayki.",
+        "Kusikuywan.",
+        "¿Maria riqsiykichu?",
+        "Allillanchiki.",
+        "Angelo kam.",
+        "¿Imataq sutiyki?",
+        "Sutiymi Angelo."
       ]
     },
     {
-      "title": "Talking about your country of origin",
+      "title": "Llaqtaykimanta rimay",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
-      "alt": "Talking about Country Image",
+      "alt": "Llaqta Rikchay",
       "phrases": [
-        "Where are you from?",
-        "I´m from Peru/ Egypt/ Mauritius/ Brazil/ etc.",
-        "Are you Chinese?",
-        "Yes, I am.",
-        "No, I´m Peruvian/Egyptian/Mauritian/Brazilian/ etc."
+        "¿Maymantataq hamunkichu?",
+        "Perú/ Egipto/ Mauricio/ Brasil/ hukkunamantam hamuni.",
+        "¿Chino kankichu?",
+        "Arí, kachkani.",
+        "Mana, Peruano/Egipcio/Mauritano/Brasileño/ hukkunam kani."
       ]
     },
     {
-      "title": "Telling someone how long you´re staying.",
+      "title": "Haykakama kawsakusqaykimanta willay.",
       "phrases": [
-        "How long are you staying?",
-        "Two weeks.",
-        "Just a few days.",
-        "One month.",
-        "Some days only."
+        "¿Haykakama qhipakunkichu?",
+        "Iskay semanamanta.",
+        "Aslla p'unchaykunallam.",
+        "Huk killam.",
+        "Wakin p'unchaykunallam."
       ]
     },
     {
-      "title": "Telling how you like a place.",
+      "title": "Kawsay wasikunamanta rimay.",
       "phrases": [
-        "How do you like it here?",
-        "I love it.",
-        "It´s great.",
-        "Well, not that much."
+        "¿Kaypi munachkankichu?",
+        "Anchatan munayku.",
+        "Ancha sumaqmi.",
+        "Hina, mana chaykama."
       ]
     },
     {
-      "title": "Talking about work.",
+      "title": "Llankaymanta rimay.",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
-      "alt": "Talking about Work Image",
+      "alt": "Llankay Rikchay",
       "phrases": [
-        "What do you do?",
-        "I´m a teacher/ engineer/ carpenter/fitter/ doctor/ etc.",
-        "I work with computers.",
-        "I take care of my two kids",
-        "Do you like your job?",
-        "Yes, I do.",
-        "Not that much/ not really…it´s boring.",
-        "It´s all right for now."
+        "¿Imatam ruwankichu?",
+        "Profesor/ ingeniero/ carpintero/ monto/ médico/ hukkunam kani.",
+        "Computadorakunawanmi llamkani.",
+        "Iskay wawaykunata qhawamuni",
+        "¿Llankaykita munankichu?",
+        "Arí, munaycha.",
+        "Mana chaykama/ mana chiqapchu…cansa.",
+        "Kunanpaqqa allin."
       ]
     },
     {
-      "title": "Talking about school.",
+      "title": "Escuelamanta rimay.",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
-      "alt": "Talking about School Image",
+      "alt": "Escuela Rikchay",
       "phrases": [
-        "Are you a student?",
-        "Yes.",
-        "What are you studying?",
-        "I´m studying natural calamities/ law/ medicine.",
-        "Where is your school?",
-        "Not so far from my house.",
-        "Quite near from here.",
-        "Walking distance."
+        "¿Estudiante kankichu?",
+        "Arí.",
+        "¿Imatam estudiachkanki?",
+        "Naturaleza/ leykuna/ medicina estudiachkani.",
+        "¿Maypitaq escuela?",
+        "Mana ancha karuchu wasiymanta.",
+        "Ancha qayllam kaymanta.",
+        "Puriy pachallam."
       ]
     },
     {
-      "title": "Talking about leisure activities",
+      "title": "Samay pachamanta rimay",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
-      "alt": "Leisure Activities Image",
+      "alt": "Samay Rikchay",
       "phrases": [
-        "What do you do for fun?",
-        "I like dancing.",
-        "I love to travel.",
-        "I listen to music.",
-        "What kind of music do you like?",
-        "I like almost all music.",
-        "I´m into jazz.",
-        "How about you?",
-        "Do you like sports?",
-        "Yes, I do.",
-        "No, I don´t I like to play tennis/ volleyball/ ping pong/ football/ etc."
+        "¿Imatam kusirayniykipaq ruwanki?",
+        "Tusuyta munani.",
+        "Anchatan viajayta munani.",
+        "Takikunata uyarini.",
+        "¿Imaynalla taki munanki?",
+        "Tukuy takikunataña munani.",
+        "Jazzmanta kaqmi kani.",
+        "¿Qamri?",
+        "¿Deportes munankichu?",
+        "Arí, munaycha.",
+        "Mana, ichaqa tenis/ volley/ ping pong/ futbol/ hukkunata pukllayta munani."
       ]
     },
     {
-      "title": "Making friends/ small talks.",
+      "title": "Amigokunata rurachiy / pisi rimaykuna.",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
-      "alt": "Making Friends Image",
+      "alt": "Amigo Rikchay",
       "phrases": [
-        "Are you thirsty?",
-        "What would you like to drink?",
-        "Would you like something to drink?",
-        "No, but I´m hungry.",
-        "I´d like a beer, please.",
-        "A cup of coffee, please.",
-        "How was the weather yesterday?",
-        "Not very different from today/ it was very sunny yesterday/ It has been raining all day/",
+        "¿Yakunayachkanchu?",
+        "¿Imatataq upyayta munankichu?",
+        "¿Upyaynaykita munankichu?",
+        "Mana, ichaqa micunayan.",
+        "Cervezata munani, añayku.",
+        "Café tasatam munani, añayku.",
+        "¿Imaynalla qayna p'unchaw karqa?",
+        "Kunanmanta mana ancha tupaq/ qayna p'unchaw ruphasqa/ tukuy p'unchaw paramuykukachka/",
         {
-          "subtitle": "Taking a taxi",
+          "subtitle": "Taxi muyuy",
           "phrases": [
-            "Is this taxi free?",
-            "Yes, where do you want to go?",
+            "¿Kay taxi librechu?",
+            "Arí, ¿maymantataq rina munanki?",
             "Hotel Down Town"
           ]
         }
       ]
     }
-  ]
+  ],
+  "headerTitle": "Huk hawa llaqtaman risqaykipi yachanaykipaq 100 rimaykuna"
 }

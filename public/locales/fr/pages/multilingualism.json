@@ -24,7 +24,6 @@
   "about_linguaFranca2": "a établi",
   "link6": "des normes minimales pour le multilinguisme web de l'ONU” ",
   "link7": " https://www.un.org/en/our-work/official-languages",
-
   "langFacts_head": "Quelques faits et chiffres pour avoir une idée de la situation des langues dans le monde.",
   "about_langFacts": [
     {
@@ -67,7 +66,8 @@
     },
     {
       "title": "Il y a des demandes pour que les six langues soient utilisées de manière équitable. 'Afin d'éliminer l'écart entre l'utilisation de l'anglais et l'utilisation des cinq autres langues officielles' et 'de garantir le traitement complet et équitable de toutes les langues officielles', comme le mandate l'Assemblée générale des Nations unies, le Département de la communication mondiale a fixé des normes minimales pour le multilinguisme sur le Web des Nations unies.'",
-      "link": " https://www.un.org/en/our-work/official-languages"
+      "link": " https://www.un.org/en/our-work/official-languages",
+      "title2": "Le Département de la communication mondiale a fixé des normes minimales pour le multilinguisme sur le Web de l'ONU”"
     },
     {
       "title": "La résolution A/RES/74/135 de l'Assemblée générale des Nations unies a proclamé la période 2022-2032 comme la Décennie internationale des langues autochtones (IDIL 2022-2032).",

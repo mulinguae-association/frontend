@@ -1,0 +1,75 @@
+{
+  "Head": "Índice",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "O que cobre esta Política?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "Que dados recolhemos, utilizamos e partilhamos? (resumo)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "Que dados recolhemos?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "Como utilizamos os seus dados?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "Como utilizamos cookies?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "Quando partilhamos dados com terceiros?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "Funcionalidades sociais.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "Porque podemos utilizar os seus dados.",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "Quanto tempo guardamos os seus dados?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "Como protegemos os seus dados?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "Como pode controlar os seus dados?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "Reclamações.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "Como pode contactar-nos?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "Alterações a esta Política",
+      "link": "data-changing"
+    }
+  ]
+}

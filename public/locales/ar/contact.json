@@ -50,7 +50,9 @@
     "countryPlaceholder": "بلدك",
     "languagesSpokenPlaceholder": "(مثل: الإنجليزية، العربية، ...)",
     "subjectsTaughtPlaceholder": "مثل: الرياضيات، العلوم، إلخ",
-    "addressPlaceholder": "عنوانك"
+    "addressPlaceholder": "عنوانك",
+    "fullNameLabel": "الاسم الكامل",
+    "languagesSpokenTitle": "يرجى إدخال اللغات التي تتحدثها"
   },
   "studentForm": {
     "nameLabel": "الاسم",
@@ -67,6 +69,7 @@
     "agePlaceholder": "عمرك",
     "languagesSpokenPlaceholder": "أدخل اللغات (مثل: الإنجليزية، العربية، ...)",
     "messageLabel": "الرسالة",
-    "messagePlaceholder": "اكتب رسالتك هنا..."
+    "messagePlaceholder": "اكتب رسالتك هنا...",
+    "languagesSpokenTitle": "يرجى إدخال اللغات التي تتحدثها"
   }
 }

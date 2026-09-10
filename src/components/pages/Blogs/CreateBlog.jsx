@@ -28,7 +28,7 @@ const CreateBlog = () => {
   // Function to toggle between preview and edit mode
   const togglePreview = () => {
     if (formState.title === "" || formState.content === "") {
-      notifyError("Please fill in both the title and content fields.");
+      notifyError(t("editor.errFillBoth"));
       return;
     }
     setFormState((prevState) => ({
@@ -67,7 +67,7 @@ const CreateBlog = () => {
     e.preventDefault();
     if (!formState.preview) {
       if (formState.title.trim() === "" || formState.content === "") {
-        notifyError("Please fill in both the title and content fields.");
+        notifyError(t("editor.errFillBoth"));
         return;
       }
     }
@@ -102,7 +102,7 @@ const CreateBlog = () => {
                   isRtl ? { paddingRight: "15px" } : { paddingLeft: "15px" }
                 }
                 className="input-field"
-                label="Blog Title"
+                label={t("editor.blogTitleLabel")}
                 type="text"
                 placeholder={t("titlePlaceholder")}
                 value={formState.title}
@@ -116,7 +116,7 @@ const CreateBlog = () => {
                   isRtl ? { paddingRight: "15px" } : { paddingLeft: "15px" }
                 }
                 className="input-field"
-                label="Blog Subtitle"
+                label={t("editor.blogSubtitleLabel")}
                 type="text"
                 placeholder={t("subTitlePlaceholder")}
                 value={formState.subtitle}
@@ -132,7 +132,7 @@ const CreateBlog = () => {
           {renderContent()}
           <div className="form_btns">
             <button className="submit-button" type="submit">
-              {isBtnLoading["addBlogBtn"] ? "Submitting..." : t("submitBtn")}
+              {isBtnLoading["addBlogBtn"] ? t("editor.submitting") : t("submitBtn")}
             </button>
             <button
               style={{ zIndex: 99 }}

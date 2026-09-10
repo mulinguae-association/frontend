@@ -1,0 +1,75 @@
+{
+  "Head": "Contenido",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "¿Qué cubre esta Política?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "¿Qué datos recopilamos, utilizamos y compartimos? (resumen)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "¿Qué datos recopilamos?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "¿Cómo utilizamos sus datos?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "¿Cómo utilizamos las cookies?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "¿Cuándo compartimos datos con otros?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "Funciones sociales.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "¿Por qué podemos usar sus datos?",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "¿Cuánto tiempo conservamos sus datos?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "¿Cómo protegemos sus datos?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "¿Cómo puede controlar sus datos?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "Reclamaciones.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "¿Cómo puede contactarnos?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "Cambios en esta Política",
+      "link": "data-changing"
+    }
+  ]
+}

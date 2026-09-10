@@ -1,0 +1,75 @@
+{
+  "Head": "فہرست مضامین",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "یہ پالیسی کس چیز کا احاطہ کرتی ہے؟",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "ہم کونسا ڈیٹا جمع، استعمال اور بانٹتے ہیں؟ (خلاصہ)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "ہم کونسا ڈیٹا جمع کرتے ہیں؟",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "ہم آپ کا ڈیٹا کیسے استعمال کرتے ہیں؟",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "ہم کوکیز کیسے استعمال کرتے ہیں؟",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "ہم دیگر کے ساتھ ڈیٹا کب بانٹتے ہیں؟",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "سوشل خصوصیات۔",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "ہم آپ کا ڈیٹا کیوں استعمال کر سکتے ہیں۔",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "ہم آپ کا ڈیٹا کتنی مدت رکھتے ہیں؟",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "ہم آپ کے ڈیٹا کی حفاظت کیسے کرتے ہیں؟",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "آپ اپنے ڈیٹا کو کیسے کنٹرول کر سکتے ہیں؟",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "شکایات۔",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "آپ ہم سے کیسے رابطہ کر سکتے ہیں؟",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "اس پالیسی میں تبدیلیاں",
+      "link": "data-changing"
+    }
+  ]
+}

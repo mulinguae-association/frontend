@@ -1,0 +1,75 @@
+{
+  "Head": "Содержание",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "Что охватывает эта политика?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "Какие данные мы собираем, используем и передаём? (сводка)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "Какие данные мы собираем?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "Как мы используем ваши данные?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "Как мы используем файлы cookie?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "Когда мы передаём данные третьим лицам?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "Социальные функции.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "Почему мы можем использовать ваши данные.",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "Как долго мы храним ваши данные?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "Как мы защищаем ваши данные?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "Как вы можете управлять своими данными?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "Жалобы.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "Как связаться с нами?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "Изменения в этой политике",
+      "link": "data-changing"
+    }
+  ]
+}

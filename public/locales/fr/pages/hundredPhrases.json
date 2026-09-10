@@ -26,9 +26,9 @@
     },
     {
       "title": "Au revoir",
-      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp",
       "alt": "Image d'adieux",
-      "phrases": ["Au revoir.", "Goodbye.", "À plus tard.", "Bonne nuit."]
+      "phrases": ["Au revoir.", "Adieu.", "À plus tard.", "Bonne nuit."]
     },
     {
       "title": "S'excuser",

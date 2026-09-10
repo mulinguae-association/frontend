@@ -1,11 +1,13 @@
 import { createContext, useContext, useState } from "react";
 import { useQuery } from "react-query";
+import { useTranslation } from "react-i18next";
 import { notifyError } from "../components/Notify";
 import handleError from "../utils/handleError";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const { t } = useTranslation("global");
   const [isAuth, setIsAuth] = useState(false);
   const [userData, setUserData] = useState(null);
   const fetchUserProfile = async () => {
@@ -21,7 +23,7 @@ export const AuthProvider = ({ children }) => {
       setUserData(null); // Clear userData on error
       if (err.response?.status === 401) {
         if (err.response.data.message === "Token Expired") {
-          notifyError("Your session has expired. Please log in again.");
+          notifyError(t("app.sessionExpired"));
         }
       } else {
         notifyError(handleError(err));

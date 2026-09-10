@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { scrollToElement } from '../../utils/scrollUtils';
 
 const CategoryCard = ({
@@ -12,6 +13,8 @@ const CategoryCard = ({
   scrollTarget,
   children
 }) => {
+  const { i18n } = useTranslation();
+  const isRTL = ['ar', 'ur'].includes(i18n.language);
   const handleClick = () => {
     if (scrollTarget) {
       scrollToElement(scrollTarget, 700);
@@ -41,7 +44,7 @@ const CategoryCard = ({
           <div className="card-action">
             <Link to={linkTo} className="action-link" onClick={handleClick}>
               {linkText}
-              <span className="arrow-icon">→</span>
+              <span className="arrow-icon">{isRTL ? '←' : '→'}</span>
             </Link>
           </div>
         )}

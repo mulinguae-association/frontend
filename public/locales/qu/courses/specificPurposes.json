@@ -1,120 +1,177 @@
 {
+  "specificPurposesTitle": {
+    "duration": "Pacham:",
+    "targetAudience": "Yachaypaq Runakuna:",
+    "description": "Rikuchiy:",
+    "goals": "Yachanakuykunapas:",
+    "methodology": "Yachachiy Chenakuy:",
+    "areasCovered": "Yachaypaq T'aqa:",
+    "requiredLevel": "Kananpasqanpaq Khipu:"
+  },
   "specificPurposes": [
     {
       "id": "english-for-development-studies",
-      "name": "english For Development Studies",
-      "duration": "50 hours",
-      "targetAudience": "Professionals and students in Development Studies who are non-native English speakers.",
-      "description": "This course covers a multidisciplinary program that includes anthropology, sociology, world geography, political science, international relations, and gender studies, with a focus on the fundamentals of development.",
+      "name": "Inlishqa Kananchisqa Kananpasqanpaq Yachaypaq",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Kananchisqa kananpasqanpaq yachaypaq llamk'aq hinaspa yachaqkuna, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
       "goals": [
-        "Increase the learner's range of vocabulary and technical terms in development studies.",
-        "Practice and increase comprehension of development texts and international economic and financial terms.",
-        "Develop confidence in communicating in a variety of situations with colleagues, business partners, and on political and social platforms both in speaking and writing.",
-        "Extend the knowledge of international development systems."
+        "Yachakuqpaq rimaykunapas, yachaykunapas kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
       ],
-      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for rural, national, and international development.",
-      "areasCovered": "The course covers areas such as the power of language, language skills development, and the use of English for different branches of development studies.",
-      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
     },
     {
       "id": "english-for-accounting",
-      "name": "english For Accounting",
-      "duration": "50 hours",
-      "targetAudience": "Accountants, auditors, bankers, professionals of the financial sector, and students in these fields who are non-native English speakers.",
-      "description": "This course focuses on the fundamentals of accounting.",
+      "name": "Inlishqa Qullqi Yachaypaq",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Qullqi yachaypaq llamk'aqkuna, auditor, banker, kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
       "goals": [
-        "Increase the learner's range of vocabulary in accounting.",
-        "Practice and increase comprehension of accounting texts and international financial terms.",
-        "Develop confidence in communicating in a variety of situations with colleagues and business partners, both in speaking and writing.",
-        "Extend the knowledge of the international financial system."
+        "Yachakuqpaq rimaykunapas, yachaykunapas kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
       ],
-      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for the international financial system.",
-      "areasCovered": "The course covers areas such as the power of language, language skills development, and the use of English for different branches of accounting such as financial accounting, management accounting, cost accounting, tax accounting, and auditing.",
-      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
     },
     {
       "id": "legal-english",
-      "name": "legal English",
-      "duration": "50 hours",
-      "targetAudience": "Lawyers, law students, and professionals who are non-native English speakers with a focus on the fundamentals of international legal English of Anglo-Saxon and Anglo-American jurisdictions in practice.",
-      "description": "This course aims to increase the learners' range of legal English vocabulary and comprehension of legal texts in various areas of law with a hands-on approach.",
+      "name": "Kanan Inlishqa",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Abogadokuna, kanan yachaqkuna, kananchisqa kananpasqanpaq yachayta sapanqanmanta, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
       "goals": [
-        "Increase the learners' range of legal English vocabulary.",
-        "Practice and increase comprehension of legal texts in various areas of law with a hands-on approach.",
-        "Develop confidence in communicating in applied Legal English Language, both in speaking and writing.",
-        "Extend the knowledge of international Legal English practice."
+        "Yachakuqpaq rimaykunapas, yachaykunapas kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
       ],
-      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for International English Legal vocabulary.",
-      "areasCovered": "The course covers areas such as the power of language, the characteristics of legal language, language skills development, and the use of English for different branches of law such as commercial, human rights, family, labor, and international law.",
-      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
     },
     {
       "id": "english-for-trade-union-studies",
-      "name": "english for trade union studies",
-      "duration": "50 hours",
-      "targetAudience": "Trade unionists and students in trade union and labor studies who are non-native English speakers.",
-      "description": "This course is aimed at trade unionists and students in trade union and labor studies who are non-native English speakers. It covers a multidisciplinary program that includes labor policies, development strategies, labor response to the challenges of globalization, ILO conventions, worker´s and trade union´s rights, social justice, and workers enterprises. \n The course focuses on the history of the worker´s movement around the world and the use of English as lingua franca in the construction of international worker´s solidarity.",
+      "name": "Inlishqa Llamk'ay Hatarisqakunapaq Yachaypaq",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Llamk'ay hatarisqakunaq llamk'aqkuna, hinaspa llamk'ay yachaqkuna, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi. \n Kay yachayqa llamk'aykunapaq historia pachakunapi, hinaspa Inlishqa simi, tukuy llaqtakunapaq llamk'ay ch'usaykunata ruwanpaq.",
       "goals": [
-        "Increase the learner´s range of vocabulary and technical terms in workers struggle history, international labor standards, multinational companies, development policies, and research cooperation on global labor issues.",
-        "Practice and increase comprehension of the literature of the worker´s struggle.",
-        "Develop confidence in communicating in a variety of situations with colleagues, on political and social platforms both in speaking and writing.",
-        "Extend the knowledge of international workers solidarity."
+        "Yachakuqpaq rimaykunapas, yachaykunapas, tukuy llaqtakunapaq llamk'aykunapaq.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
       ],
-      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. The reading texts are authentic or semi-authentic and provide context for worker´s emancipation.",
-      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of multilingualism in building workers solidarity.\n(A detailed syllabus is available when you join the course.)",
-      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.\n(Ayllu yachaypaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta.)",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
     },
     {
       "id": "english-for-travel-and-tourism",
-      "name": "English for Travel and Tourism",
-      "duration": "50 hours",
-      "targetAudience": "Professionals and students in the travel and tourism industry who are non-native English speakers.",
-      "description": "This course covers a multidisciplinary program that includes geography, psychology, culinary, catering, leisure, and related disciplines. The course focuses on the fundamentals of travel and tourism.",
+      "name": "Inlishqa Yachaypaq hinaspa Yachaykunapaq",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Yachaypaq hinaspa yachaykunapaq llamk'aqkuna hinaspa yachaqkuna, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
       "goals": [
-        "Increase the learner´s range of vocabulary and technical terms in tourism and catering.",
-        "Practice and increase comprehension of travel and catering.",
-        "Develop confidence in communicating in a variety of situations with colleagues, business partners, and on political and social platforms both in speaking and writing.",
-        "Extend the knowledge of the global travel and tourism industry."
+        "Yachakuqpaq rimaykunapas, yachaykunapas yachaypaq hinaspa yachaykunapaq.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
       ],
-      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for the travel and tourism industry.",
-      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of English and multilingualism in the travel and tourism industry.(A detailed syllabus is available when you join the course.)",
-      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.(Ayllu yachaypaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta.)",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
     },
     {
       "id": "english-for-women-studies",
-      "name": "English for women and gender studies",
-      "duration": "50 hours",
-      "targetAudience": "Professionals and students in all fields of study who are non-native English speakers.",
-      "description": "This course covers an interdisciplinary program that includes an introduction to gender, sexuality, and women´s studies. The course focuses on the concept of gender equality, international women´s struggles around the world, and the use of English as lingua franca in the construction of international women´s solidarity.",
+      "name": "Inlishqa Warmikunapaq hinaspa Yachaykunapaq",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Tukuy yachaypaq llamk'aqkuna hinaspa yachaqkuna, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
       "goals": [
-        "Increase the learner´s range of vocabulary and technical terms in women´s and gender studies.",
-        "Practice and increase comprehension of the literature of the worker´s struggle.",
-        "Develop confidence in communicating in a variety of situations with colleagues, on political and social platforms both in speaking and writing.",
-        "Extend the knowledge of international women’s and gender struggles."
+        "Yachakuqpaq rimaykunapas, yachaykunapas warmikunapaq hinaspa yachaykunapaq.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
       ],
-      "methodology": "A broadly communicative and interactive methodology and a text and task-based approach are used. Reading texts are authentic or semi-authentic and provide context for women´s and gender studies.",
-      "areasCovered": "The course covers areas such as the power of language, language skills development, the use of multilingualism in building women´s solidarity.\n(A detailed syllabus is available when you join the course.)",
-      "requiredLevel": "Intermediate to upper intermediate level of English as a second language or the equivalent."
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.\n(Ayllu yachaypaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta.)",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
     },
     {
-      "id": "inglispayman-pachakamayuqkuna",
-      "name": "Inglespayman Pachakamayuqkuna",
-      "duration": "50 ñiqin",
-      "targetAudience": "Agronomu, agronumuyuqkuna, jach'aqullu, jach'aqulluyuqkuna, puklluqkuna, puklluqkunayuqkuna, jach'aqulluyuqkuna, jach'aqulluyuqkunayuqkuna, imayna Inglesqa rikuchinayuqkuna.",
-      "description": "Kay munaykuy pachakamayuqkunaqa kananqa agronomiapi, agronomia-suqpi. Inglespayman Pachakamayuqkunaqa, uñachakuy: agronomia, ñawi qullu warmi, ñawi qullu warmiyuqkuna, ñawi qulluyuqkuna, rikch'a pukllu, rikch'a puklluqkuna, jach'aqullu, jach'aqulluyuqkuna, ñawi qulluyuqkuna, orgániku agronomiapi, rikch'a pukllu, jach'aqullu, ñawi qullu warmi, ñawi qulluyuqkuna.",
+      "id": "business-english",
+      "name": "Llank'ay Inlishqa",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Llank'aykunapaq llamk'aqkuna hinaspa yachaqkuna, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
       "goals": [
-        "Agronomia, agronomia-suqpiqa vokabulario pachakamayuqkunata atichiy.",
-        "Agronomia, agronomia-suqpiqa rikuchiy, yachayniy, tarirqunayniy ñawi qulluyuqkunapi.",
-        "Ñawi situasionpi imaynata qillqanayniy, ch'uyanayniy, rikuchiy, ñawi qulluyuqkunapi, rikch'a puklluqkunapi.",
-        "Agronomia, agronomia-suqpiqa yachayniy.",
-        "Agronomia, agronomia-suqpiqa, jach'aqulluyuqkunapi, chaypi rikch'a puklluqkunapi vokabulario pachakamayuqkunata atichiy.",
-        "Agronomia, agronomia-suqpiqa rikuchiy, yachayniy, tarirqunayniy ñawi qulluyuqkunapi, chaypi rikch'a puklluqkunapi, qillqanayniy ñawi qulluyuqkunapi.",
-        "Ñawi situasionpi imaynata qillqanayniy, ch'uyanayniy, rikuchiy, ñawi qulluyuqkunapi, rikch'a puklluqkunapi.",
-        "Agronomia, agronomia-suqpiqa yachayniy, jach'aqulluyuqkunapi, chaypi rikch'a puklluqkunapi."
+        "Yachakuqpaq rimaykunapas, yachaykunapas llank'aypaq.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
       ],
-      "methodology": "Pachakamayuqkunataqa munaykuyka, rikuchinkuqka, karqanapaq pachakunapiqa rikuchinkuqka, tekstupa pachakunataqa karqanapaq pachakunapiqa ch'uyanchin.",
-      "areasCovered": "Kay munaykuyqa kananqa ñawi sutiyuqkunata, ñawi sutinta rikuchinkuqkunata, inglispayman agronomiapi, agronomia-suqpiqa, agronomiapi, agronomia-suqpiqa, ñawi qullu warmi, ñawi qulluyuqkuna, ñawi qulluyuqkunayuqkuna, ñawi sutiyuqkuna, ñawi sutinta rikuchinkuqkunata, jach'aqullu, jach'aqulluyuqkuna, ñawi qulluyuqkuna, orgániku agronomiapi, rikch'a pukllu, jach'aqullu, ñawi qullu warmi, ñawi qulluyuqkuna.",
-      "requiredLevel": "Inglispayman rikuchiykuna, inglispayman rikuchiykunapaq ñawinchinapaq nisqataqa, ukhupiqa ñawinchinapaq."
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.\n (Ayllu yachaypaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta.)",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
+    },
+    {
+      "id": "english-for-international-studies",
+      "name": "Inlishqa Tukuy Llaqtakunapaq Yachaypaq",
+      "duration": "50 p'unchaw sapa khipu",
+      "targetAudience": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas, mana Inlishqa simi mama llak'aypi. Kaykunapas, periodista, diplomático kananpasqanpaq llamk'aqkuna, organizacionkunapaq kananchisqa kananpasqanpaq yachayta sapanqanmanta.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "goals": [
+        "Yachakuqpaq rimaykunapas, yachaykunapas tukuy llaqtakunapaq yachaypaq.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
+      ],
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.\n (Ayllu yachaypaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta.)",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
+    },
+    {
+      "id": "english-for-anthropology",
+      "name": "Inlishqa Runakuna Yachaypaq",
+      "duration": "50 p'unchaw sapa khipu",
+      "targetAudience": "Runakuna yachaypaq llamk'aqkuna hinaspa yachaqkuna, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "goals": [
+        "Yachakuqpaq rimaykunapas, yachaykunapas runakuna yachaypaq.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
+      ],
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.\n(Ayllu yachaypaq kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta.)",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
+    },
+    {
+      "id": "english-for-agriculture",
+      "name": "Inlishqa Chakuchaykunapaq Yachaypaq",
+      "duration": "50 p'unchaw",
+      "targetAudience": "Chakuchaypaq llamk'aqkuna, yachaqkuna, kananchisqa kananpasqanpaq yachayta sapanqanmanta, mana Inlishqa simi mama llak'aypi.",
+      "description": "Kay yachayqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "goals": [
+        "Yachakuqpaq rimaykunapas, yachaykunapas chakuchaypaq.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Yachakuqpaq rimaykunapas, yachaykunapas chakuchaypaq hinaspa wakicha.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+        "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas."
+      ],
+      "methodology": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "areasCovered": "Yachayqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+      "requiredLevel": "Inlishqa Huk Simiyuq Yachaypaq, chawpi qallarichiwanapaq."
     }
   ]
 }

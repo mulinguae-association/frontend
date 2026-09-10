@@ -4,6 +4,7 @@ import { formatRelativeTime } from "../../../HelperComponents/RelativeDate";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { isTextTruncated } from "../../../../utils/isTextTruncated";
 import { useRemoveCommentMutation } from "../../../../apis/mutations/blogs/removeComment";
+import { useTranslation } from "react-i18next";
 const EllipsisMenu = React.lazy(() => import("../EllipsisMenu"));
 const UpdateComment = React.lazy(() => import("./UpdateComment"));
 
@@ -15,6 +16,7 @@ const CommentReply = ({
   setIsEditComment,
 }) => {
   const { userData, isAuth } = useAuth();
+  const { t } = useTranslation("pages/blogs");
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
@@ -81,7 +83,7 @@ const CommentReply = ({
                     comment?.postedBy?.profileImage ||
                     "/images/fallBackUser.png"
                   }
-                  alt="personal avatar"
+                  alt={t("app.altPersonalAvatar")}
                   onError={(e) => {
                     e.target.src = "/images/fallBackUser.png";
                   }}
@@ -100,7 +102,7 @@ const CommentReply = ({
               </p>
               {isTruncated && (
                 <button className="read-more-button" onClick={toggleReadMore}>
-                  {isExpanded ? "Show less" : "Read more"}
+                  {isExpanded ? t("showLess") : t("readMore")}
                 </button>
               )}
             </div>

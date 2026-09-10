@@ -5,10 +5,12 @@
     "sectionTitles": {
       "esl": "1. Inglés como segundo idioma (ESL) - Inglés general (seis niveles)",
       "efp": "2. Inglés con fines específicos (EFP)",
-      "languages": "Como promotor de idiomas, ACS Mulinguae está muy interesado en buscar profesores de cualquier idioma que desees aprender. Simplemente deja algunas palabras en el Cuadro de Contacto"
+      "languages": "Como promotor de idiomas, ACS Mulinguae está muy interesado en buscar profesores de cualquier idioma que desees aprender. Simplemente deja algunas palabras en el Cuadro de Contacto",
+      "courseCategories": "Nuestros Programas de Idiomas"
     },
     "common": {
-      "contactUsLink": "Contáctanos"
+      "contactUsLink": "Contáctanos",
+      "exploreButton": "Explorar Cursos"
     },
     "specificPurposeCourses": [
       "Inglés para Contabilidad",
@@ -19,24 +21,70 @@
       "Inglés Jurídico",
       "Inglés para Estudios Sindicales",
       "Inglés para Viajes y Turismo",
-      "Inglés para Estudios de Mujeres"
+      "Inglés para Estudios de Mujeres",
+      "Inglés para Agricultura"
     ],
     "languagesList": [
-      { "label": "amari", "value": "Am" },
-      { "label": "arabic", "value": "Ar" },
-      { "label": "aymara", "value": "Ay" },
-      { "label": "cantonese", "value": "Ca" },
-      { "label": "french", "value": "Fr" },
-      { "label": "hindi", "value": "Hi" },
-      { "label": "italian", "value": "It" },
-      { "label": "kreolHaiti", "value": "KH" },
-      { "label": "kreolMorisyen", "value": "KM" },
-      { "label": "mandarin", "value": "Mn" },
-      { "label": "portuguese", "value": "Pt" },
-      { "label": "quechua", "value": "Qu" },
-      { "label": "russian", "value": "Ru" },
-      { "label": "spanish", "value": "Es" },
-      { "label": "urdu", "value": "Ur" }
+      {
+        "label": "amari",
+        "value": "Am"
+      },
+      {
+        "label": "arabic",
+        "value": "Ar"
+      },
+      {
+        "label": "aymara",
+        "value": "Ay"
+      },
+      {
+        "label": "cantonese",
+        "value": "Ca"
+      },
+      {
+        "label": "french",
+        "value": "Fr"
+      },
+      {
+        "label": "hindi",
+        "value": "Hi"
+      },
+      {
+        "label": "italian",
+        "value": "It"
+      },
+      {
+        "label": "kreolHaiti",
+        "value": "KH"
+      },
+      {
+        "label": "kreolMorisyen",
+        "value": "KM"
+      },
+      {
+        "label": "mandarin",
+        "value": "Mn"
+      },
+      {
+        "label": "portuguese",
+        "value": "Pt"
+      },
+      {
+        "label": "quechua",
+        "value": "Qu"
+      },
+      {
+        "label": "russian",
+        "value": "Ru"
+      },
+      {
+        "label": "spanish",
+        "value": "Es"
+      },
+      {
+        "label": "urdu",
+        "value": "Ur"
+      }
     ],
     "englishCoursesTitle": {
       "Level": "Nivel:",
@@ -135,6 +183,13 @@
           "Escribir resúmenes y reseñas de obras profesionales o literarias"
         ]
       }
-    ]
+    ],
+    "intro": {
+      "description": "Descubre experiencias de aprendizaje de idiomas adaptadas a tus objetivos e intereses.",
+      "eslDescription": "Cursos integrales de idioma inglés para todos los niveles de competencia.",
+      "efpDescription": "Cursos especializados de inglés adaptados para campos profesionales específicos.",
+      "phrasesDescription": "Frases esenciales en múltiples idiomas para ayudarte a comunicarte de manera efectiva.",
+      "otherLanguagesDescription": "¿Te interesan otros idiomas? Contáctanos para conocer nuestras ofertas adicionales de idiomas."
+    }
   }
 }

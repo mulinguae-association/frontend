@@ -46,9 +46,9 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Mulinguae | Get in Touch with Our Multilingual Team"
-        description="Contact Mulinguae (Mulingua) for language learning, partnership, or support. Reach out to our multilingual team and join our global community."
-        keywords="contact mulinguae, contact mulingua, language support, multilingual, language exchange, global community"
+        title={t("seo.contact.title")}
+        description={t("seo.contact.description")}
+        keywords={t("seo.contact.keywords")}
         path="/contact"
       />
 
@@ -56,8 +56,7 @@ const Contact = () => {
         <div className="hero-content">
           <h1 className="hero-subtitle">{t("titles.mainTitle")}</h1>
           <p className="hero-description">
-            {t("titles.subHeading") ||
-              "We'd love to hear from you. Send us a message and we'll respond as soon as possible."}
+            {t("titles.subHeading")}
           </p>
         </div>
         <ContactInfo />

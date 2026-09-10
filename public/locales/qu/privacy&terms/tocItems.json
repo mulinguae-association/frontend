@@ -1,0 +1,75 @@
+{
+  "Head": "Yachaykuna",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "Imatapaqmi kay Politikaqa?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "Imatapaqmi khipukunata llamasqanakuykuna, llamk'anchis hinaspa rikuchinchis? (sipas)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "Imatapaqmi khipukunata llamasqanakuykuna?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "Imatapaqmi khipukunatami llamk'anchis?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "Imatapaqmi cookieskunatami llamk'anchis?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "Ñawpaqmi khipukunata rikuchinchis?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "Social Features.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "Imatapaqmi khipukunatami llamk'anchis?",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "Ñawpaqmi khipukunata waqaychanchis?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "Imatapaqmi khipukunata waqaychanchis?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "Imatapaqmi khipukunata yachankichik?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "Yachanakuykunata llamk'anchis.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "Imatapaqmi llamk'anchis?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "Kay Politikaqa kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+      "link": "data-changing"
+    }
+  ]
+}

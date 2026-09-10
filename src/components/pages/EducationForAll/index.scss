@@ -423,3 +423,12 @@
     }
   }
 }
+
+// RTL: underline links grow from the right edge.
+[dir="rtl"] .educationForAll p a::after {
+  transform-origin: left;
+}
+
+[dir="rtl"] .educationForAll p a:hover::after {
+  transform-origin: right;
+}

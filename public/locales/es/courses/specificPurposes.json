@@ -6,7 +6,8 @@
     "goals": "Objetivos:",
     "methodology": "Metodología:",
     "areaCovered": "Áreas Cubiertas:",
-    "requiredLevel": "Nivel Requerido"
+    "requiredLevel": "Nivel Requerido",
+    "areasCovered": "Áreas Cubiertas:"
   },
   "specificPurposes": [
     {
@@ -45,7 +46,6 @@
       "id": "inglés-jurídico",
       "name": "Inglés Jurídico",
       "duration": "50 horas",
-
       "targetAudience": "Abogados, estudiantes de derecho y profesionales que no son hablantes nativos de inglés, con un enfoque en los fundamentos del inglés jurídico internacional de jurisdicciones anglosajonas y angloamericanas en la práctica.",
       "description": "Este curso tiene como objetivo aumentar el rango de vocabulario en inglés jurídico del alumno y la comprensión de textos legales en diversas áreas del derecho con un enfoque práctico.",
       "goals": [

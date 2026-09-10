@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function ReplyList({ parentId, initialReplies = [], initialCount = 0, previewLimit = 2, apiBase = '/comments' }) {
+  const { t } = useTranslation('global');
   const [replies, setReplies] = useState(initialReplies);
   const [totalCount, setTotalCount] = useState(initialCount);
   const [page, setPage] = useState(initialReplies.length ? 2 : 1);
@@ -48,7 +50,7 @@ export default function ReplyList({ parentId, initialReplies = [], initialCount 
 
       {remaining > 0 && (
         <button onClick={loadMore} disabled={loading} className="show-more-replies">
-          {loading ? 'Loading…' : `Show ${nextChunk} more repl${nextChunk > 1 ? 'ies' : 'y'} (${remaining} left)`}
+          {loading ? t('app.loadingEllipsis') : t(nextChunk > 1 ? 'showMoreRepliesPlural' : 'showMoreRepliesSingular', { count: nextChunk, remaining })}
         </button>
       )}
     </div>

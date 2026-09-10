@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "Подтвердите новый пароль",
   "resetButton": "Сбросить пароль",
   "resetSuccessMessage": "Ваш пароль успешно сброшен.",
-  "loadingText": "Загрузка..."
+  "loadingText": "Загрузка...",
+  "missingFieldsError": "Пожалуйста, заполните все обязательные поля."
 }

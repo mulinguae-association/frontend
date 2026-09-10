@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "اپنے نئے پاسورڈ کی تصدیق کریں",
   "resetButton": "پاسورڈ دوبارہ ترتیب دیں",
   "resetSuccessMessage": "آپ کا پاسورڈ کامیابی سے دوبارہ ترتیب دیا گیا ہے۔",
-  "loadingText": "لوڈ ہو رہا ہے..."
+  "loadingText": "لوڈ ہو رہا ہے...",
+  "missingFieldsError": "براہ کرم تمام مطلوبہ فیلڈز پُر کریں۔"
 }
