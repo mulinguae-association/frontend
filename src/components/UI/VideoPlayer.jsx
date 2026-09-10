@@ -1,6 +1,8 @@
 import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 const VideoPlayer = ({ id, videoId, title, description, autoplay = false }) => {
+  const { t } = useTranslation("global");
   const src = useMemo(() => {
     const base = `https://www.youtube.com/embed/${videoId}`;
     const params = ["rel=0"];
@@ -28,7 +30,7 @@ const VideoPlayer = ({ id, videoId, title, description, autoplay = false }) => {
       >
         <iframe
           src={src}
-          title={title || "video"}
+          title={title || t("app.videoTitleFallback")}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "badge": "Junte-se à Nossa Missão",
+    "title": "TRABALHE CONOSCO",
+    "subtitle": "Na ACS Mulinguae, você não trabalha <em>para nós</em> — você trabalha <em>connosco</em>.",
+    "community": "Construindo uma comunidade colaborativa de educadores"
+  },
+  "mission": {
+    "header": "O Nosso Objetivo Comum",
+    "paragraph1": "Estamos a construir uma comunidade colaborativa de educadores unidos por um objetivo comum: promover o multilinguismo e proteger as línguas do mundo do risco de desaparecimento.",
+    "paragraph2": "Quando se junta à ACS Mulinguae, torna-se parte de uma equipa comprometida que acredita que a diversidade linguística não é opcional — é essencial."
+  },
+  "values": {
+    "title": "Porque as Línguas São Importantes",
+    "subtitle": "Cada língua carrega conhecimento, cultura, identidade e história. Preservá-las não é simplesmente um objetivo académico; é uma responsabilidade com a humanidade.",
+    "items": {
+      "knowledge": {
+        "title": "Conhecimento",
+        "text": "As línguas preservam formas únicas de compreender e interagir com o mundo"
+      },
+      "culture": {
+        "title": "Cultura",
+        "text": "Cada língua incorpora as tradições, valores e sabedoria dos seus falantes"
+      },
+      "identity": {
+        "title": "Identidade",
+        "text": "A língua é fundamental para a identidade e pertença pessoal e comunitária"
+      },
+      "history": {
+        "title": "História",
+        "text": "As línguas conectam-nos ao nosso passado e transmitem o conhecimento ancestral"
+      }
+    }
+  },
+  "commitment": {
+    "title": "O Nosso Compromisso",
+    "items": [
+      {
+        "title": "Educação Inclusiva",
+        "text": "Garantimos que a educação acolhe e valoriza todos os aprendizes, independentemente do seu background linguístico"
+      },
+      {
+        "title": "Aprendizagem Acessível",
+        "text": "Derrubamos barreiras para tornar a educação linguística acessível a todos, em todo o lado"
+      },
+      {
+        "title": "Respeito pelo Património",
+        "text": "Honramos e preservamos o património linguístico que define comunidades em todo o mundo"
+      }
+    ],
+    "note": "Juntos, trabalhamos para garantir que a educação é inclusiva, acessível e respeitosa do património linguístico."
+  },
+  "partnership": {
+    "badge": "Colaboração",
+    "title": "Juntos Trabalhamos Melhor e Mais Rápido!",
+    "subtitle": "Estamos abertos a trabalhar com outras organizações que tenham os mesmos objetivos que nós e partilhem os nossos valores.",
+    "introParagraphs": [
+      "Na ACS Mulinguae, estamos comprometidos em promover o acesso equitativo à educação através da promoção do multilinguismo e da preservação da diversidade linguística.",
+      "Acreditamos que a língua não é apenas uma ferramenta de comunicação, mas um veículo de sistemas de conhecimento, memória cultural, identidade e coesão social. No entanto, hoje em dia, centenas de línguas estão em risco de desaparecimento, e milhões de aprendizes permanecem mal servidos por sistemas educativos que não refletem as suas realidades linguísticas."
+    ],
+    "missionPointsTitle": "A Nossa Missão",
+    "missionPoints": [
+      {
+        "title": "Promover a Educação Multilingue",
+        "text": "Como motor de inclusão e sucesso académico"
+      },
+      {
+        "title": "Reforçar a Proteção das Línguas",
+        "text": "Proteção e revitalização de línguas vulneráveis"
+      },
+      {
+        "title": "Apoiar os Professores",
+        "text": "Através de práticas pedagógicas colaborativas e baseadas na investigação"
+      },
+      {
+        "title": "Modelos Educativos Sustentáveis",
+        "text": "Que respeitem a diversidade linguística"
+      }
+    ],
+    "whyHeader": "Porque a Parceria É Importante",
+    "whySubtitle": "As parcerias estratégicas permitem-nos:",
+    "whyList": [
+      "Expandir o desenvolvimento curricular multilingue",
+      "Fornecer formação de professores e desenvolvimento profissional",
+      "Desenvolver materiais educativos em línguas sub-representadas",
+      "Realizar investigação e avaliação de impacto",
+      "Escalabilizar modelos sustentáveis de educação inclusiva"
+    ],
+    "note": "O nosso trabalho contribui diretamente para os objetivos de educação global e preservação cultural, incluindo a educação de qualidade inclusiva e equitativa e a salvaguarda do património cultural imaterial."
+  },
+  "partnerCallout": {
+    "title": "Procuramos Parceiros com os Mesmos Objetivos",
+    "text": "Procuramos parceiros que reconheçam que a diversidade linguística não é uma questão marginal, mas um pilar fundamental do desenvolvimento sustentável, justiça social e progresso humano a longo prazo.",
+    "highlight": "Juntos, podemos garantir que os sistemas educativos capacitam os aprendizes nas suas próprias línguas — e que nenhuma língua, e nenhum aprendiz, fica para trás.",
+    "button": "Seja Nosso Parceiro"
+  },
+  "cta": {
+    "badge": "Faça a Diferença",
+    "title": "Faça Parte de Algo Maior",
+    "text": "Faça parte da equipa que defende a educação, a diversidade e a proteção das línguas em todo o mundo.",
+    "join": "Junte-se à Nossa Comunidade",
+    "learn": "Saiba Mais"
+  },
+  "becomeTeacher": {
+    "title": "Torne-se Professor com a ACS Mulinguae",
+    "lead": "Na ACS Mulinguae, acreditamos que o multilinguismo é uma ponte poderosa entre culturas e um caminho vital para o acesso equitativo à educação e o empoderamento de comunidades vulneráveis em todo o mundo. Por favor, preencha o formulário de candidatura e submeta-o juntamente com o seu CV.",
+    "button": "Junte-se à Nossa Comunidade"
+  }
+}

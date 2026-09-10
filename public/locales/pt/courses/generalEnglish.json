@@ -5,10 +5,19 @@
     "sectionTitles": {
       "esl": "1. Inglês como Segunda Língua (ESL) - Inglês Geral (seis níveis)",
       "efp": "2. Inglês para Propósitos Específicos (EFP)",
-      "languages": "Como promotor de idiomas, a ACS Mulinguae está muito interessada em buscar professores de qualquer idioma que você queira aprender. Basta deixar algumas palavras na Caixa de Contato"
+      "languages": "Como promotor de idiomas, a ACS Mulinguae está muito interessada em buscar professores de qualquer idioma que você queira aprender. Basta deixar algumas palavras na Caixa de Contato",
+      "courseCategories": "Os Nossos Programas de Idiomas"
+    },
+    "intro": {
+      "description": "Descubra experiências de aprendizagem de idiomas adaptadas aos seus objetivos e interesses.",
+      "eslDescription": "Cursos abrangentes de língua inglesa para todos os níveis de proficiência.",
+      "efpDescription": "Cursos especializados de inglês adaptados para campos profissionais específicos.",
+      "phrasesDescription": "Frases essenciais em múltiplos idiomas para o ajudar a comunicar de forma eficaz.",
+      "otherLanguagesDescription": "Interessado noutros idiomas? Contacte-nos para saber sobre as nossas ofertas linguísticas adicionais."
     },
     "common": {
-      "contactUsLink": "Entre em contato"
+      "contactUsLink": "Entre em contato",
+      "exploreButton": "Explorar Cursos"
     },
     "specificPurposeCourses": [
       "Inglês para Contabilidade",
@@ -19,7 +28,8 @@
       "Inglês Jurídico",
       "Inglês para Estudos Sindicais",
       "Inglês para Viagens e Turismo",
-      "Inglês para Estudos de Mulheres"
+      "Inglês para Estudos de Mulheres",
+      "Inglês para Agricultura"
     ],
     "languagesList": [
       { "label": "amari", "value": "Am" },

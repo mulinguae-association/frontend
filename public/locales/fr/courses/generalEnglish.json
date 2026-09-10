@@ -5,10 +5,12 @@
     "sectionTitles": {
       "esl": "1. Anglais langue seconde (ALS) - Anglais général (six niveaux)",
       "efp": "2. Anglais à des fins spécifiques (APS)",
-      "languages": "En tant que promoteur des langues, ACS Mulinguae est très désireux de rechercher des enseignants pour n'importe quelle langue que vous souhaitez apprendre. Laissez simplement quelques mots dans la boîte de contact."
+      "languages": "En tant que promoteur des langues, ACS Mulinguae est très désireux de rechercher des enseignants pour n'importe quelle langue que vous souhaitez apprendre. Laissez simplement quelques mots dans la boîte de contact.",
+      "courseCategories": "Nos programmes linguistiques"
     },
     "common": {
-      "contactUsLink": "Contactez-nous"
+      "contactUsLink": "Contactez-nous",
+      "exploreButton": "Explorer les cours"
     },
     "specificPurposeCourses": [
       "Anglais pour la comptabilité",
@@ -19,24 +21,70 @@
       "Anglais juridique",
       "Anglais pour les études syndicales",
       "Anglais pour les voyages et le tourisme",
-      "Anglais pour les études féminines"
+      "Anglais pour les études féminines",
+      "Anglais pour l’agriculture"
     ],
     "languagesList": [
-      { "label": "amari", "value": "Am" },
-      { "label": "arabic", "value": "Ar" },
-      { "label": "aymara", "value": "Ay" },
-      { "label": "cantonese", "value": "Ca" },
-      { "label": "french", "value": "Fr" },
-      { "label": "hindi", "value": "Hi" },
-      { "label": "italian", "value": "It" },
-      { "label": "kreolHaiti", "value": "KH" },
-      { "label": "kreolMorisyen", "value": "KM" },
-      { "label": "mandarin", "value": "Mn" },
-      { "label": "portuguese", "value": "Pt" },
-      { "label": "quechua", "value": "Qu" },
-      { "label": "russian", "value": "Ru" },
-      { "label": "spanish", "value": "Es" },
-      { "label": "urdu", "value": "Ur" }
+      {
+        "label": "amari",
+        "value": "Am"
+      },
+      {
+        "label": "arabic",
+        "value": "Ar"
+      },
+      {
+        "label": "aymara",
+        "value": "Ay"
+      },
+      {
+        "label": "cantonese",
+        "value": "Ca"
+      },
+      {
+        "label": "french",
+        "value": "Fr"
+      },
+      {
+        "label": "hindi",
+        "value": "Hi"
+      },
+      {
+        "label": "italian",
+        "value": "It"
+      },
+      {
+        "label": "kreolHaiti",
+        "value": "KH"
+      },
+      {
+        "label": "kreolMorisyen",
+        "value": "KM"
+      },
+      {
+        "label": "mandarin",
+        "value": "Mn"
+      },
+      {
+        "label": "portuguese",
+        "value": "Pt"
+      },
+      {
+        "label": "quechua",
+        "value": "Qu"
+      },
+      {
+        "label": "russian",
+        "value": "Ru"
+      },
+      {
+        "label": "spanish",
+        "value": "Es"
+      },
+      {
+        "label": "urdu",
+        "value": "Ur"
+      }
     ],
     "englishCoursesTitle": {
       "Level": "Niveau :",
@@ -135,6 +183,13 @@
           "Écrire des résumés et des critiques d'œuvres professionnelles ou littéraires"
         ]
       }
-    ]
+    ],
+    "intro": {
+      "description": "Découvrez des expériences d'apprentissage de langues adaptées à vos objectifs et centres d'intérêt.",
+      "eslDescription": "Cours d'anglais complets pour tous les niveaux de compétence.",
+      "efpDescription": "Cours d'anglais spécialisés adaptés à des domaines professionnels spécifiques.",
+      "phrasesDescription": "Expressions essentielles dans plusieurs langues pour vous aider à communiquer efficacement.",
+      "otherLanguagesDescription": "Intéressé par d'autres langues ? Contactez-nous pour découvrir nos offres linguistiques supplémentaires."
+    }
   }
 }

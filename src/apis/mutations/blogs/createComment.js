@@ -6,6 +6,7 @@ import { useCache } from "../../../contexts/BlogsCache";
 import logError from "../../../utils/logError";
 import handleError from "../../../utils/handleError";
 import { notifyError } from "../../../components/Notify";
+import i18n from "../../../i18n";
 
 export const useCreateCommentMutation = () => {
   const queryClient = useQueryClient();
@@ -32,11 +33,6 @@ export const useCreateCommentMutation = () => {
     ({ blogId, commentData }) => createComment(blogId, commentData),
     {
       onMutate: async ({ blogId, commentData }) => {
-        console.log(
-          "🚀 ~ useCreateCommentMutation ~ commentData:",
-          commentData
-        );
-        console.log("🚀 ~ useCreateCommentMutation ~ commentData:", blogId);
         await queryClient.cancelQueries(["comments", blogId]);
         const previousComments = queryClient.getQueryData(["comments", blogId]);
         setButtonLoading(`postComment_${blogId}`, true);
@@ -57,8 +53,6 @@ export const useCreateCommentMutation = () => {
         return { previousComments, tempCommentId: tempComment._id };
       },
       onSuccess: ({ status, data }, { blogId, commentData }, context) => {
-        console.log(status, data);
-
         const { tempCommentId } = context;
         if (isAdmin) {
           queryClient.setQueryData(["comments", blogId], (prevComments) => ({
@@ -72,7 +66,7 @@ export const useCreateCommentMutation = () => {
           }));
         } else {
           setNotificationPopup({
-            message: "Your comment has been submitted for review",
+            message: i18n.t("pages/blogs:commentSubmittedReview"),
           });
         }
       },

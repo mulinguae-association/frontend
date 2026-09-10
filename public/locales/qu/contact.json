@@ -1,8 +1,9 @@
 {
   "titles": {
     "mainTitle": "Rimaykunasunchis",
-    "teacherFormTitle": "Kamachiqpiy Teacher",
-    "studentFormTitle": "Kamachiqpiy Student"
+    "teacherFormTitle": "Allin hamusqayki, Yachachiq",
+    "studentFormTitle": "Allin hamusqayki, Yachaq",
+    "subHeading": "Munayku qam rimasqaykita uyariyta. Apachimuwanku willay, allin utkaylla kutichimusaqku."
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -14,51 +15,62 @@
       "title": "Ofis Sutiyuq",
       "value": {
         "mondayToFriday": "Lunispaqmi hina p'unchawmi: 7am - 11pm",
-        "saturdayAndSunday": "Intip Chawpiy hina Qhapaq Chawpiy: 8am - 5pm"
+        "saturdayAndSunday": "Intip Chawpiy hina Qhapaq Chawpiy: 8am - 5pm",
+        "mondayToFridayLabel": "Lunis hinaspa Wiraq'ocha p'unchaw:",
+        "saturdayAndSundayLabel": "Sabadomanta Intip Chawpin p'unchaw:"
       }
     },
-    "email": "acsmulinguae@gmail.com"
+    "email": "acsmulinguae@gmail.com",
+    "time": {
+      "am": "am",
+      "pm": "pm"
+    }
   },
   "buttons": {
-    "teacherButton": "Kamachiqpiy Teachermi?",
-    "studentButton": "Kamachiqpiy Studentmi?",
+    "teacherButton": "¿Yachachiqchu kanki?",
+    "studentButton": "¿Yachaqchu kanki?",
     "loadingText": "chaypi..."
   },
   "messages": {
-    "submissionMessage": "Yachachiqpaqmi Info has been submitted for review"
+    "submissionMessage": "Yachachiykunaqa qhawasqa kananpaq kachasqaña"
   },
   "teacherForm": {
     "nameLabel": "Suti yachana",
-    "emailLabel": "Email",
+    "emailLabel": "Chaski pukyu",
     "phoneNumberLabel": "Q'epasni simi (manammi lliwllamanta)",
     "countryLabel": "Llaqta",
     "languagesSpokenLabel": "Simi musquy",
     "subjectsTaughtLabel": "Yachanaykuna?",
     "addressLabel": "Chaski",
-    "uploadCvLabel": "CV Upload",
+    "uploadCvLabel": "CV kachay",
     "cvUploadButtonText": "Yachachiqpaq",
     "fullNamePlaceholder": "Suti yachana",
     "emailPlaceholder": "Suti email",
     "phoneNumberPlaceholder": "Suti q'epasni simi",
     "countryPlaceholder": "Suti llaqta",
-    "languagesSpokenPlaceholder": "(ejemplo, Inglés, Árabe,...)",
-    "subjectsTaughtPlaceholder": "ejemplo, Matemáticas, Ciencias, etc.",
-    "addressPlaceholder": "Suti chaski"
+    "languagesSpokenPlaceholder": "(yalli, Ingles, Watpay,...)",
+    "subjectsTaughtPlaceholder": "yalli, Yupay yachay, Pachamama yachay, hukkunapas",
+    "addressPlaceholder": "Suti chaski",
+    "fullNameLabel": "Sutinta hunt'a",
+    "languagesSpokenTitle": "Ama hina kaspalla, rimasqayki simikunata yaykuchiy"
   },
   "studentForm": {
     "nameLabel": "Suti yachana",
-    "emailLabel": "Email",
+    "emailLabel": "Chaski pukyu",
     "phoneNumberLabel": "Q'epasni simi",
     "countryLabel": "Llaqta",
     "ageLabel": "Tantan",
-    "languagesSpokenLabel": "Langaz koté ou kozé",
+    "languagesSpokenLabel": "Rimasqa simikuna",
     "submitButton": "Yachachiqpaq",
     "fullNamePlaceholder": "Suti yachana",
     "emailPlaceholder": "Suti email",
     "phoneNumberPlaceholder": "Suti q'epasni simi",
     "countryPlaceholder": "Suti llaqta",
     "agePlaceholder": "Suti tantan",
-    "languagesSpokenPlaceholder": "Tann langaz (par exemple, Anglés, Arabe,...)",
-    "cvUploadButtonText": "chaypi..."
+    "languagesSpokenPlaceholder": "Yaykuchiy simikuna (yalli, Ingles, Watpay,...)",
+    "cvUploadButtonText": "chaypi...",
+    "languagesSpokenTitle": "Ama hina kaspalla, rimasqayki simikunata yaykuchiy",
+    "messageLabel": "Willay",
+    "messagePlaceholder": "Kunanqa willaykita kaypi qillqay..."
   }
 }

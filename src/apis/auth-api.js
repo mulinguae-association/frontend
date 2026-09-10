@@ -1,5 +1,6 @@
 import axios from "axios";
 import logError from "../utils/logError";
+import i18n from "../i18n";
 
 const fetchUserProfile = async () => {
   try {
@@ -20,7 +21,7 @@ async function submitRegister(registerData) {
     throw new Error("Error sending registration data");
   } catch (error) {
     logError("Error registering:", error);
-    return { error: error.response?.data?.error || "An error occurred" };
+    return { error: error.response?.data?.error || i18n.t("errorMessages.default") };
   }
 }
 
@@ -33,7 +34,7 @@ async function submitLogin(loginData) {
     throw new Error("Error sending login data");
   } catch (error) {
     logError("Error logging in:", error);
-    return { error: error.response?.data?.error || "An error occurred" };
+    return { error: error.response?.data?.error || i18n.t("errorMessages.default") };
   }
 }
 async function submitLogout() {

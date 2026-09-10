@@ -26,5 +26,250 @@
     "502": "Mauvais passerelle. Server finn resev enn repons pa valab.",
     "503": "Servi pa disponib. Silvouple esey ankor plis tar.",
     "504": "Tan limit passerelle. Silvouple esey ankor plis tar."
+  },
+  "chatbot": {
+    "title": "Asistan AI Mulinguae",
+    "subtitle": "La pou ed u aprann",
+    "typing": "Pe tape...",
+    "online": "Anlin (online)",
+    "viewConversations": "Get konversasyon",
+    "closeChat": "Ferm chat",
+    "toggleChat": "Lir/ferm chat",
+    "quickQuestions": "Bann kestyon vit",
+    "popularTopics": "Bann sizhe popiler",
+    "tapQuestion": "Tape enn kestyon pou poz li",
+    "typeMessage": "Ekrir enn mesaz...",
+    "askAbout": "Demann lor {{topic}}...",
+    "startVoice": "Koumans antre lavwa",
+    "stopVoice": "Arret antre lavwa",
+    "startConversation": "Koumans enn konversasyon! Demann mwa nimporte koi lor Mulinguae.",
+    "somethingWrong": "Enn kiksoz finn ale mal. Swiv esey ankor.",
+    "yourConversations": "Ou bann konversasyon",
+    "newChat": "Nouvo chat",
+    "loadingConversations": "Pe load konversasyon...",
+    "loadFailed": "Pa finn kapav load konversasyon.",
+    "noConversations": "Ankor pa ena konversasyon.",
+    "startNewChat": "Koumans enn nouvo chat pou truv led.",
+    "openConversation": "Lir konversasyon lor {{domain}}",
+    "msgs": "{{count}} mesaz",
+    "categories": {
+      "gettingStarted": "Koumansman",
+      "teachers": "Bann Profeser",
+      "courses": "Bann Kurs",
+      "booking": "Rendvo (Booking)",
+      "technical": "Teknik",
+      "community": "Lakomote (Community)"
+    },
+    "questions": {
+      "gettingStarted": [
+        "Kouma mo koumans aprann enn langaz lor Mulinguae?",
+        "Kouma mo truv bon profeser pou mwa?",
+        "Kan langaz disponib?",
+        "Avegn enn esey gratuit?",
+        "Kouma mo kre enn kont?"
+      ],
+      "teachers": [
+        "Kouma mo vinn enn profeser lor Mulinguae?",
+        "Ki bann kondision ki profeser bezwen?",
+        "Kouma verifikasion profeser marse?",
+        "Kouma bann profeser gagn peyman?",
+        "Mo kapav met mo program ek mo bann prix?"
+      ],
+      "courses": [
+        "Ki tip kurs disponib?",
+        "Kouma bann nivo kurs (A1-C2) marsé?",
+        "Bann kurs ena sertifika?",
+        "Mo kapav aprann lor mo prop ritm?",
+        "Ki materyo inkliz?"
+      ],
+      "booking": [
+        "Kouma mo rendv enn leson?",
+        "Ki arive si mo bezwen kansioner ou koze ankor?",
+        "Kouma bann leson esey marsé?",
+        "Ki bann metod peyman aksepte?",
+        "Ena enn polisi ristrasyon (refund)?"
+      ],
+      "technical": [
+        "Ki aparé ek navigaser supporté?",
+        "Kouma mo servi lasal videyo?",
+        "Mo kapav servi Mulinguae offline?",
+        "Kouma mo sanz mo preferans langaz?",
+        "Ki arive si mo ena problenm teknik?"
+      ],
+      "community": [
+        "Kouma mo konekte avek lezot zelv?",
+        "Mo kapav ekrir bann post blog?",
+        "Ki program Linite ek Solidarite?",
+        "Kouma bann los lankree langaz marsé?",
+        "Ena bann evnman lakomote?"
+      ]
+    },
+    "errorGeneric": "Sori, enn problem inn ariv. Swiv azay ankor.",
+    "errorLoadConversation": "Insukses pou lwad sa konversasion-là.",
+    "domain": {
+      "general": "Zeneral",
+      "teachers": "Bann Profeser",
+      "courses": "Bann Kurs",
+      "blogs": "Bann Blog",
+      "getting-started": "Koumansman",
+      "booking": "Rendvo (Booking)",
+      "technical": "Teknik",
+      "community": "Lakomote (Community)"
+    },
+    "errorStreaming": "Streaming pa siporte pa sa navigateur la.",
+    "sendFailed": "Nou pa finn kapav voye mesaz."
+  },
+  "app": {
+    "yes": "Wi",
+    "no": "Non",
+    "loading": "Ap traka...",
+    "loadingEllipsis": "Ap traka…",
+    "sessionExpired": "To sesion fini. Swiv konekte ankor.",
+    "loginSuccess": "Koneksyon reyisi",
+    "imageTooLarge": "Dimeksion imaz depas limit maksimom.",
+    "noChangesMade": "Napa sanzman’n fer.",
+    "confirmDeleteTeacher": "Ou siir to ou lé enviey dir profeser-la?",
+    "confirmDeletePost": "Ou siir to ou enviey antyé post-la?",
+    "learnMoreCompany": "Apri plis lor nou lantrepriz",
+    "watchIntro": "Gad direk mofinn",
+    "joinMulinguae": "R'nire Mulinguae",
+    "backToTop": "R'tour en ha",
+    "toggleMenuLanguage": "Sa lasén meni pou sanz langaz",
+    "joinUs": "R'nire nou",
+    "searchByTitleOrUser": "Riserté par tity ou ino. itilizater",
+    "expandCourseDetails": "Elarz detay kurs",
+    "collapseCourseDetails": "Pliy' detay kurs",
+    "closeIntro": "Farm direk mofinn",
+    "closeVideo": "Farm video",
+    "videoTitleFallback": "video",
+    "allLibraries": "Tu bann bibliyotek",
+    "altLogo": "Logo Mulinguae",
+    "altLanguagesIcon": "Bann langaz",
+    "altRightIcon": "Elarz",
+    "altBooksList": "Lis liv",
+    "altProfile": "Profil pérsonél",
+    "altTeacherImage": "Imaz profeser",
+    "altEditTeacherCard": "Edit kart profeser",
+    "altPersonalAvatar": "Avatar pérsonél",
+    "altUserImage": "Imaz itilizater",
+    "altDonation": "Donasion",
+    "altStudentsImg": "Imaz zelv",
+    "altMultilingualGroup": "Group divers dimoun ki reprezant miltilangism",
+    "altEarth": "Desein ter pe reprezant miltilangism",
+    "altAboutMission": "Nou misyon",
+    "altAboutUs": "Konsérnir nou",
+    "altAboutStory": "Nou listwar",
+    "altAboutVision": "Nou vizion",
+    "altAboutTutors": "Nou bann titer",
+    "printArticle": "Imprim latik-la",
+    "altPrintImg": "Imaz imprim"
+  },
+  "admin": {
+    "addTeacherInfo": "Aout informasion profeser",
+    "firstName": "Premie nom",
+    "enterFirstName": "Met premie nom",
+    "lastName": "Dernie nom",
+    "enterLastName": "Met dernie nom",
+    "email": "E-mail",
+    "enterEmail": "Met e-mail",
+    "jobBrief": "Rezime travay",
+    "enterJobBrief": "Met rezime travay",
+    "aboutTeacher": "Konsérnir profeser",
+    "enterAboutTeacher": "Met warir profeser",
+    "telephone": "Telefonn",
+    "enterTelephone": "Met telefonn / mobil",
+    "uploadImage": "Upload imaz",
+    "chooseImageLess1MB": "swazir enn imaz mwins ki 1MB",
+    "chooseImageLessThan1MB": "swazir enn imaz mwins ki 1MB",
+    "addingTeacher": "Ap out profeser...",
+    "addTeacher": "Aout profeser",
+    "update": "Azhourn",
+    "changeImage": "Sanz imaz",
+    "pendingBlogs": "Bann blog an atend",
+    "accept": "Aksepte",
+    "refuse": "Refize",
+    "pendingComments": "Bann komantr an atend",
+    "blogApproved": "Post blog aprouve ek li pou paret dan lis bann post blog",
+    "commentApproved": "Komantr aprouve ek li pou paret dan lis bann komantr",
+    "addTeacherSuccess": "Ensenyanz nouvo finn azoute avik siksès",
+    "deleteTeacherSuccess": "Ensenyanz finn elimine avik siksès",
+    "updateTeacherSuccess": "Ensenyanz finn met a zour avik siksès"
+  },
+  "seo": {
+    "home": {
+      "title": "Mulinguae | Kominote miltileng ek echanz langaz",
+      "description": "Mulinguae se enn kominote miltileng global pou echanz ek aprann langaz. Aprann langaz ar bann lokater natif, konekte ar bann dimoun partou dan lemond, ek vinn partani Mulinguae zordi. (Pa afilie ar Mulingua.)",
+      "keywords": "mulinguae, mulingua, aprann langaz, miltileng, echanz langaz, lokater natif, kominote global"
+    },
+    "contact": {
+      "title": "Kontakte Mulinguae | Kaz ar nou bann lekip miltileng",
+      "description": "Kontakte Mulinguae (Mulingua) pou aprann langaz, partenaria, oubien sipor. Kaz ar nou bann lekip miltileng ek vinn partani nou kominote global.",
+      "keywords": "kontak mulinguae, kontak mulingua, sipor langaz, miltileng, echanz langaz, kominote global"
+    },
+    "about": {
+      "title": "Apropos Mulinguae | Nou misyon ek nou kominote miltileng",
+      "description": "Aproprann misyon Mulinguae pou konekte bann dimoun partou lemond atraver aprann langaz, miltilengism, ek echanz kiltirel. Dekouver kouma Mulinguae (Mulingua) donn puisans bann aprann langaz ek bann lokater natif pou grandi ansam.",
+      "keywords": "aprops mulinguae, apropos mulingua, aprann langaz, miltileng, echanz langaz, nou misyon, kominote global, lokater natif"
+    },
+    "allStudents": {
+      "title": "Bann zetidyan tou laaz | Ledikasion miltileng Mulinguae",
+      "description": "Dekouver ki maniere Mulinguae siport bann zetidyan tou laaz dan ledikasion miltileng. Aproprann nou bann program, bann metod, ek bann inisiatif legalite.",
+      "keywords": "zetidyan tou laaz, ledikasion miltileng, mulinguae, mulingua, legalite, bann metod aprantisaz, kominote global"
+    },
+    "hundredPhrases": {
+      "title": "100 fraz itil | Aprantisaz miltileng Mulinguae",
+      "description": "Eksplore 100 fraz itil pou aprantisaz ek komunikasion miltileng. Mulinguae fourni bann resours langaz pou bann aprann partou lemond.",
+      "keywords": "100 fraz, bann fraz itil, miltileng, aprann langaz, mulinguae, mulingua, komunikasion"
+    },
+    "feedback": {
+      "title": "Feedback | Kontakte lekip Mulinguae ek raport bann problem",
+      "description": "Anvoy feedback, raport bann bug, oubien kontakte lekip Mulinguae. Ed nou pou amelyore nou kominote miltileng ek nou platform aprann langaz.",
+      "keywords": "feedback, kontak, raport bug, mulinguae, mulingua, aprann langaz, kominote miltileng"
+    },
+    "blogs": {
+      "title": "Blog Mulinguae | Listwar aprann langaz ek vizion kominote",
+      "description": "Lir bann dernier post blog ki sorti dan kominote miltileng Mulinguae. Dekouver bann konsey aprann langaz, bann listwar kiltirel, ek bann nouvel Mulinguae (Mulingua).",
+      "keywords": "blog mulinguae, blog mulingua, aprann langaz, miltileng, echanz langaz, listwar kominote, mulingua, mulinguae"
+    },
+    "multilingualism": {
+      "title": "Miltilengism | Diversite langaz Mulinguae ek kominote global",
+      "description": "Eksplore miltilengism ar Mulinguae (Mulingua). Aproprann apropos diversite langaz, echanz kiltirel, ek bann benefis pou se miltileng dan nou kominote global.",
+      "keywords": "miltilengism, mulingua, mulinguae, diversite langaz, aprann langaz, echanz kiltirel, kominote global"
+    },
+    "unity": {
+      "title": "Linite ek solidarite | Princip kominote Mulinguae",
+      "description": "Dekouver bann princip linite ek solidarite dan kominote miltileng Mulinguae. Aproprann apropos nou bann valer, ledikasion, ek kolaborasion global.",
+      "keywords": "linite, solidarite, mulinguae, mulingua, kominote, princip, ledikasion, kolaborasion global"
+    },
+    "linguicide": {
+      "title": "Lengwisid | Parde langaz ek prezervasion - Mulinguae",
+      "description": "Aproprann apropos lengwisid, parde langaz, ek bann seffor prezervasion dan kominote miltileng Mulinguae. Eksplore bann resours ek bann inisiatif global.",
+      "keywords": "lengwisid, parde langaz, prezervasion langaz, mulinguae, mulingua, bann langaz an danze, bann inisiatif global"
+    },
+    "teachers": {
+      "title": "Bann profeser Mulinguae | Rankontre nou bann ledikater langaz miltileng",
+      "description": "Rankontre bann profeser Mulinguae (Mulingua). Nou bann ledikater miltileng ed ou pou aprann langaz ek konekte ar enn kominote global. Dekouver nou lekip ansennman ek zot ekspertiz.",
+      "keywords": "bann profeser mulingua, bann profeser mulinguae, bann ledikater langaz, miltileng, aprann langaz, kominote global"
+    },
+    "students": {
+      "title": "Bann zetidyan Mulinguae | Bann aprann langaz ek kominote miltileng",
+      "description": "Rankontre bann zetidyan Mulinguae (Mulingua). Vinn partani nou kominote miltileng pou bann aprann langaz ek konekte ar bann dimoun partou lemond. Dekouver bann listwar ek eksperians aprann langaz.",
+      "keywords": "bann zetidyan mulingua, bann zetidyan mulinguae, bann aprann langaz, miltileng, aprann langaz, kominote global"
+    }
+  },
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Tres feb",
+    "weak": "Feb",
+    "medium": "Mwayen",
+    "strong": "Fort",
+    "veryStrong": "Tres fort"
+  },
+  "Error_Recaptcha": "Verifikasion reCAPTCHA finn efwat. S'il vous plait esey ankor.",
+  "time": {
+    "daysAgo": "{{count}} zur devan",
+    "hoursAgo": "{{count}} l-er devan",
+    "minutesAgo": "{{count}} minit devan",
+    "justNow": "zis kler"
   }
 }

@@ -1,4 +1,6 @@
-﻿/**
+﻿import { formatTime as formatTimeShared } from "../../../utils/formatTime";
+
+/**
  * Utility functions for the chatbot feature.
  * All utilities are designed to be reusable and extensible.
  */
@@ -14,12 +16,11 @@ export const generateConversationId = () => {
 /**
  * Format a timestamp for display in the chat UI.
  * @param {Date|string|number} timestamp - The timestamp to format.
- * @returns {string} Formatted time string (e.g., "2:30 PM").
+ * @param {string} [language] - i18n language code (defaults to current).
+ * @returns {string} Formatted time string (e.g., "2:30 PM", "2:30 م").
  */
-export const formatTime = (timestamp) => {
-  const date = new Date(timestamp);
-  return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-};
+export const formatTime = (timestamp, language) =>
+  formatTimeShared(timestamp, language);
 
 /**
  * Sanitize user input to prevent XSS attacks.
@@ -123,7 +124,7 @@ const TOPIC_DOMAIN_MAP = {
  */
 export const topicToDomain = (categoryKey) => TOPIC_DOMAIN_MAP[categoryKey] || "general";
 
-// Human-friendly labels for each stored domain.
+// Human-friendly labels for each stored domain (fallback, used when no translator is provided).
 const DOMAIN_LABELS = {
   general: "General",
   teachers: "Teachers",
@@ -138,9 +139,17 @@ const DOMAIN_LABELS = {
 /**
  * Convert a stored conversation domain into a human-readable label.
  * @param {string} domain - Stored domain value.
+ * @param {Function} [t] - Optional i18next translate function. When provided,
+ *   the label is looked up under `chatbot.domain.<domain>` so it is localized.
  * @returns {string} Display label.
  */
-export const domainToLabel = (domain) => DOMAIN_LABELS[domain] || "General";
+export const domainToLabel = (domain, t) => {
+  if (t && typeof t === "function") {
+    const localized = t(`chatbot.domain.${domain}`, { defaultValue: "" });
+    if (localized) return localized;
+  }
+  return DOMAIN_LABELS[domain] || "General";
+};
 
 export default {
   generateConversationId,

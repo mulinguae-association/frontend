@@ -354,3 +354,11 @@ $ani-delay: 1s;
     opacity: 0;
   }
 }
+
+[dir="rtl"] .hero_description .des_link::after {
+  transform-origin: left;
+}
+
+[dir="rtl"] .hero_description .des_link:hover::after {
+  transform-origin: right;
+}

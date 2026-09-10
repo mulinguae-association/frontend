@@ -566,6 +566,10 @@ $warning: $dark-warning;
       color: $text-muted;
       cursor: not-allowed;
     }
+
+    [dir="rtl"] & {
+      transform: rotateY(180deg);
+    }
   }
 
   &__voice-btn {
@@ -802,7 +806,9 @@ $warning: $dark-warning;
     color: #fff;
     cursor: pointer;
     box-shadow: 0 4px 12px $primary-glow;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
 
     &:hover {
       transform: scale(1.08) rotate(90deg);
@@ -952,6 +958,11 @@ $warning: $dark-warning;
     height: 56px;
     margin-right: 16px;
     margin-bottom: calc(16px + env(safe-area-inset-bottom, 0));
+
+    // RTL: keep the toggle on the right (cross-start in RTL = right edge).
+    [dir="rtl"] & {
+      align-self: flex-start;
+    }
   }
 
   .chatbot:has(.chatbot__panel) .chatbot__toggle {
@@ -1046,5 +1057,46 @@ $warning: $dark-warning;
   .chatbot__toggle {
     width: 52px;
     height: 52px;
+  }
+}
+
+// RTL adjustments for the chatbot widget.
+// The widget always stays anchored to the same corner (default: bottom-right)
+// and the toggle/close button never moves, so we do not swap its sides.
+// Note: in RTL the cross-axis of a column flexbox flips, so `align-items:
+// flex-end` would pin children to the LEFT. We re-couple alignment to the
+// physical corner so the toggle/close button stays where it is in LTR.
+[dir="rtl"] {
+  .chatbot--bottom-right {
+    align-items: flex-start;
+  }
+
+  .chatbot--bottom-left {
+    align-items: flex-end;
+  }
+
+  .chat-header__actions .chat-header__close {
+    order: -1;
+  }
+
+  .chat-header::after {
+    left: auto;
+    right: -30px;
+  }
+
+  .predefined-suggestions__item {
+    text-align: right;
+
+    &:hover {
+      transform: translateX(-3px);
+    }
+  }
+
+  .conv-list__item {
+    text-align: right;
+
+    &:hover {
+      transform: translateX(-3px);
+    }
   }
 }

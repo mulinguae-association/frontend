@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "Confirmez votre nouveau mot de passe",
   "resetButton": "Réinitialiser le mot de passe",
   "resetSuccessMessage": "Votre mot de passe a été réinitialisé avec succès.",
-  "loadingText": "Chargement..."
+  "loadingText": "Chargement...",
+  "missingFieldsError": "Veuillez remplir tous les champs obligatoires."
 }

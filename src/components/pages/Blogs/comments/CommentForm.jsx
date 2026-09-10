@@ -29,11 +29,10 @@ const CommentForm = ({ blogId }) => {
     };
 
     if (comment === "") {
-      notifyError("Comment cannot be empty.");
+      notifyError(t("commentCannotBeEmpty"));
       return;
     }
 
-    console.log("🚀 ~ handleCommentSubmit ~ commentData:", commentData);
     await createCommentMutation({ blogId, commentData });
     setComment("");
   };

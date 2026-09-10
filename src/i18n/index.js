@@ -22,12 +22,8 @@ i18n
       "qu",
       "ru",
       "ur",
-      "kh",
       "mn",
-      "it",
       "km",
-      "ay",
-      "ca",
     ],
     nonExplicitSupportedLngs: false,
     interpolation: {

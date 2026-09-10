@@ -24,5 +24,6 @@
     "medium": "Moyen",
     "strong": "Fort",
     "veryStrong": "Très Fort"
-  }
+  },
+  "registrationSuccessful": "Inscription réussie ! Veuillez vérifier votre e-mail pour confirmer votre compte."
 }

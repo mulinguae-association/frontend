@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import VideoPlayer from "./VideoPlayer";
 
 const VideoModal = ({ show, onClose, videoId, title, autoplay = true }) => {
+  const { t } = useTranslation("global");
   const containerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -56,7 +58,7 @@ const VideoModal = ({ show, onClose, videoId, title, autoplay = true }) => {
       >
         <button
           onClick={onClose}
-          aria-label="Close video"
+          aria-label={t("app.closeVideo")}
           style={{
             position: "absolute",
             right: 8,

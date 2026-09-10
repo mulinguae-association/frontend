@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import "./ToTop_Btn.scss"
 
 const ToTopBtn = () => {
+  const { t } = useTranslation('global');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -28,7 +30,7 @@ const ToTopBtn = () => {
   };
   return (
     <button
-      aria-label="BackToToBtn"
+      aria-label={t("app.backToTop")}
       name='toTopBtn'
       className={`back-to-top-button ${isVisible ? 'visible' : ''}`}
       onClick={scrollToTop}

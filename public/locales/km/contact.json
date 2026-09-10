@@ -2,7 +2,8 @@
   "titles": {
     "mainTitle": "Kontakte Avek Nou",
     "teacherFormTitle": "Bienveni Profesè",
-    "studentFormTitle": "Bienveni Élev"
+    "studentFormTitle": "Bienveni Élev",
+    "subHeading": "Nou kontan tann depi ou. Voy nou enn mesaz ek nou pou repond尽快 posib."
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -14,15 +15,21 @@
       "title": "Ezour Ofis",
       "value": {
         "mondayToFriday": "Lindi ziska Vandredi: 7am - 11pm",
-        "saturdayAndSunday": "Samdi ek Dimans: 8am - 5pm"
+        "saturdayAndSunday": "Samdi ek Dimans: 8am - 5pm",
+        "mondayToFridayLabel": "Lindi ziska Vandredi:",
+        "saturdayAndSundayLabel": "Samdi ek Dimans:"
       }
     },
-    "email": "acsmulinguae@gmail.com"
+    "email": "acsmulinguae@gmail.com",
+    "time": {
+      "am": "am",
+      "pm": "pm"
+    }
   },
   "buttons": {
     "teacherButton": "Eski ou enn Profesè?",
     "studentButton": "Eski ou enn Élev?",
-    "loadingText": "loding..."
+    "loadingText": "Pe charz..."
   },
   "messages": {
     "submissionMessage": "Zot lavi finn soumet pou revizyon"
@@ -43,7 +50,9 @@
     "countryPlaceholder": "Dilo pey ou",
     "languagesSpokenPlaceholder": "(par exemple, Anglè, Arab,...)",
     "subjectsTaughtPlaceholder": "par exemple, Matematik, Syans, etc.",
-    "addressPlaceholder": "Dilo adrès ou"
+    "addressPlaceholder": "Dilo adrès ou",
+    "fullNameLabel": "Non konple",
+    "languagesSpokenTitle": "Tanpri entrer bann langaz ki ou koze"
   },
   "studentForm": {
     "nameLabel": "Non",
@@ -60,9 +69,13 @@
     "phoneNumberPlaceholder": "Dilo nimero telefon ou",
     "countryPlaceholder": "Dilo pey ou",
     "languagesSpokenPlaceholder": "(par exemple, Anglè, Arab,...)",
-    "messageLabel": "សារ",
-    "messagePlaceholder": "សរសេរសាររបស់អ្នកនៅទីនេះ...",
+    "messageLabel": "Mesaz",
+    "messagePlaceholder": "Ekrir ou mesaz isi...",
     "subjectsTaughtPlaceholder": "par exemple, Matematik, Syans, etc.",
-    "addressPlaceholder": "Dilo adrès ou"
+    "addressPlaceholder": "Dilo adrès ou",
+    "ageLabel": "Laz",
+    "languagesSpokenTitle": "Tanpri entrer bann langaz ki ou koze",
+    "submitButton": "Soumet",
+    "agePlaceholder": "Ou laz"
   }
 }

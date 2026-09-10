@@ -1,0 +1,75 @@
+{
+  "Head": "目录",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "本政策覆盖了什么？",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "我们收集、使用和共享哪些数据？（摘要）",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "我们收集哪些数据？",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "我们如何使用您的数据？",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "我们如何使用Cookie？",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "我们何时与他人共享数据？",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "社交功能。",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "为什么我们可以使用您的数据。",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "我们保存您的数据多久？",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "我们如何保护您的数据安全？",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "您如何控制自己的数据？",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "投诉。",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "您如何联系我们？",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "本政策的变更",
+      "link": "data-changing"
+    }
+  ]
+}

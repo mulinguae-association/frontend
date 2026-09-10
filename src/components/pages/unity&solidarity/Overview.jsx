@@ -33,12 +33,11 @@ export default function Overview() {
         <div className={styles.card__item}>
           <BiHeart className={styles.card__icon} />
           <div className={styles.card__content}>
-            <h3 className={styles.card__heading}>Human Values</h3>
+            <h3 className={styles.card__heading}>
+              {t("overview.humanValues.title")}
+            </h3>
             <p className={styles.card__text}>
-              Recognize that as human beings, we all have the same values. This
-              means that we all have the same rights, that we should all receive
-              the same level of respect and have the same access to
-              opportunities.
+              {t("overview.humanValues.description")}
             </p>
           </div>
         </div>

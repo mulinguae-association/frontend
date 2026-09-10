@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "确认您的新密码",
   "resetButton": "重设密码",
   "resetSuccessMessage": "您的密码已成功重设。",
-  "loadingText": "加载中..."
+  "loadingText": "加载中...",
+  "missingFieldsError": "请填写所有必填字段。"
 }

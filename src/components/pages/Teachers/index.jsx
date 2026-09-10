@@ -27,9 +27,9 @@ const Teachers = () => {
   return (
     <>
       <SEO
-        title="Mulinguae Teachers | Meet Our Multilingual Language Educators"
-        description="Meet the teachers of Mulinguae (Mulingua). Our multilingual educators help you learn languages and connect with a global community. Discover our teaching team and their expertise."
-        keywords="mulingua teachers, mulinguae teachers, language educators, multilingual, language learning, global community"
+        title={t("seo.teachers.title")}
+        description={t("seo.teachers.description")}
+        keywords={t("seo.teachers.keywords")}
         path="/pages/teachers"
       />
       <main>
@@ -115,7 +115,7 @@ const Teachers = () => {
                 </h2>
               </header>
               <div id="meetOurTeachers" className="teachers_overview">
-                <Suspense fallback="Loading....">
+                <Suspense fallback={<span>{global("app.loading")}</span>}>
                   <TeachersOverview t={t} />
                 </Suspense>
               </div>

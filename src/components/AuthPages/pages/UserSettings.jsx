@@ -28,7 +28,7 @@ function UserSettings() {
     if (file && file.size <= maxImageSize) {
       setProfileImage(file);
     } else {
-      alert("Image size exceeds the maximum allowed limit.");
+      alert(t("app.imageTooLarge"));
     }
   };
 
@@ -89,7 +89,7 @@ function UserSettings() {
                 }
                 width="100px"
                 height="100px"
-                alt="personal profile"
+                alt={t("app.altProfile")}
                 onError={(e) => (e.target.src = "/images/fallBackUser.png")}
               />
             </div>

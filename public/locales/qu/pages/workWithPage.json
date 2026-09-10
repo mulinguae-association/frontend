@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "badge": "Kananchisqanwan Tinkuykuy",
+    "title": "ÑUQANCHIKWAN LLANK'AY",
+    "subtitle": "ACS Mulinguaepi <em>kananchisqanpaq</em> llank'aychu — <em>kananchisqanwan</em>mi llank'aykunmi.",
+    "community": "Kananchisqa yachachiqkunapaq kaniwni ruraykuq"
+  },
+  "mission": {
+    "header": "Kananchisqanpasqanpaq Sutin",
+    "paragraph1": "Kananchisqa yachachiqkunapaq kaniwni ruraykuqmi, huk kananchisqa kananpasqanpaq yachayta sapanqanmanta, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy llaqtaq simikunata chinkanakuytapas riksichiyta.",
+    "paragraph2": "ACS Mulinguaepaqtinwanmi kananchisqanpasqanmi, tukuy simikunapaqmi kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanmi."
+  },
+  "values": {
+    "title": "Imatapaqmi Simikunaqa Allin?",
+    "subtitle": "Tukuy simiqa yachaninkuna, kulturapaq, sutiyuqmi, pachapawa. Simikunata waqaychasqayqa mana yachay chiqachinmanta kananqa, runakunapaq kaniwninmi.",
+    "items": {
+      "knowledge": {
+        "title": "Yachaninkuna",
+        "text": "Simikunapaqmi kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi"
+      },
+      "culture": {
+        "title": "Kulturapaq",
+        "text": "Tukuy simiqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi"
+      },
+      "identity": {
+        "title": "Sutiyuqmi",
+        "text": "Simiqa runakunapaq kaniwninpas, kananchisqapaq kaniwninpasmi"
+      },
+      "history": {
+        "title": "Pachakutin",
+        "text": "Simikunapaqmi kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi"
+      }
+    }
+  },
+  "commitment": {
+    "title": "Kananchisqanpasqanpaq Sutin",
+    "items": [
+      {
+        "title": "Kaniwniyuq Yachay",
+        "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy yachaqkunapaq, mana simi yachaninpasqanpas."
+      },
+      {
+        "title": "Kaniwniyuq Yachay",
+        "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy llaqtapi, tukuy pachapi."
+      },
+      {
+        "title": "Kaniwninpasqanpaq Yuyanapakuy",
+        "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy llaqtaq simikunata waqaychasqankunata."
+      }
+    ],
+    "note": "Kananchisqanwanmi, kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy llaqtaq simikunata."
+  },
+  "partnership": {
+    "badge": "Kananchisqa",
+    "title": "Kananchisqanwanmi aswan allinmi, aswan utkam!",
+    "subtitle": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+    "introParagraphs": [
+      "ACS Mulinguaepi, kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy simikunata.",
+      "Kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy yachaninkunata, kulturapawa, sutiyuqmi, kaniwninpasqanpaq."
+    ],
+    "missionPointsTitle": "Kananchisqanpasqanpaq Sutin",
+    "missionPoints": [
+      {
+        "title": "Tawa Simi Yachayta Kananchisqa",
+        "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi"
+      },
+      {
+        "title": "Simikunata Yachayta Kananchisqa",
+        "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi"
+      },
+      {
+        "title": "Yachachiqkunata Yanapasqanmi",
+        "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi"
+      },
+      {
+        "title": "Kawsay Miyuq Yachay Yanakuy",
+        "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi"
+      }
+    ],
+    "whyHeader": "Imatapaqmi Kananchisqa Kananpasqanpaq Allin?",
+    "whySubtitle": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi:",
+    "whyList": [
+      "Tawa Simi Yachayta Kananchisqa",
+      "Yachachiqkunapaq Yanapakuy hinaspa Yachayta Kananchisqa",
+      "Mana allin simikunapapmi yachay churaykunata ruwanchis",
+      "Yachanakuy hinaspa kananchisqa kananpasqanpaq yachayta sapanqanmanta ruraykunata ruwanchis",
+      "Kawsay Miyuq Yachay Yanakuykunata kananchisqa kananpasqanpaq yachayta sapanqanmanta ruwanchis"
+    ],
+    "note": "Kananchisqap llank'aykunapaqmi kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwninpas."
+  },
+  "partnerCallout": {
+    "title": "Kananchisqa Kananpasqanpaq Yachayta Sapanqanmanta",
+    "text": "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+    "highlight": "Kananchisqanwanmi, kananchisqa kananpasqanpaq yachayta sapanqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy simikunapaq, tukuy yachaqkunapaqpas.",
+    "button": "Kananchisqanwan Tinkuykuy"
+  },
+  "cta": {
+    "badge": "Huk tukuyta ruranchis",
+    "title": "Aswan hatunmi kananchisqanwanmi",
+    "text": "Yachaypaq, kulturapaq, tukuy pachapi simikunata waqaychasqankunapaq kananchisqanwanmi tinkuykuy.",
+    "join": "Kananchisqanwan Tinkuykuy",
+    "learn": "Astawan Yachay"
+  },
+  "becomeTeacher": {
+    "title": "ACS Mulinguaepi Yachachiqkanman",
+    "lead": "ACS Mulinguaepi, tawa simiqa kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi, kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwninpasqanpaq. Chaynallataq, kananchisqa kananpasqanpaq yachayta sapanqanmanta kallpachanqanpaq, tukuy llaqtapi.",
+    "button": "Kananchisqanwan Tinkuykuy"
+  }
+}

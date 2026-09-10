@@ -26,5 +26,250 @@
     "502": "Wakcha mach’ay. Ñawi chinkayta rikuy.",
     "503": "Suma yachay. Tinkuykuy hukñichiy.",
     "504": "Mach’ay ñakuy. Tinkuykuy hukñichiy."
+  },
+  "chatbot": {
+    "title": "Mulinguae AI yanapakuq",
+    "subtitle": "Yachanaykipaq kaypi kachkani",
+    "typing": "Qelqashan...",
+    "online": "En línea (online)",
+    "viewConversations": "Rimanakuykunata qhaway",
+    "closeChat": "Chatta wisq'ay",
+    "toggleChat": "Chatta kichay/wisq'ay",
+    "quickQuestions": "Utqay tapuykuna",
+    "popularTopics": "Allin reqsisqa temakuna",
+    "tapQuestion": "Tapuykunamanta hukta ñit'iy tapunaykipaq",
+    "typeMessage": "Qelqay huk willayta...",
+    "askAbout": "{{topic}}manta tapukuy...",
+    "startVoice": "Qhaway qelqayta qallariy",
+    "stopVoice": "Qhaway qelqayta sayachiy",
+    "startConversation": "Rimanakuytachallay! Mulinguae manta imatapas tapukumay.",
+    "somethingWrong": "Imaymana pantay karqan. Hukmanta ñak'ay.",
+    "yourConversations": "Rimanakuykunayki",
+    "newChat": "Musuq chat",
+    "loadingConversations": "Rimanakuykuna chayamushan...",
+    "loadFailed": "Manam atiparkuchu rimanakuykunata chayachiyta.",
+    "noConversations": "Manaraqmi kanchu rimanakuykuna.",
+    "startNewChat": "Musuq chatta qallariy yanapay chaskinaykipaq.",
+    "openConversation": "{{domain}}manta rimanakuyta kichariy",
+    "msgs": "{{count}} willaykuna",
+    "categories": {
+      "gettingStarted": "Qallariyninpaq",
+      "teachers": "Yachachiqkuna",
+      "courses": "Cursokuna",
+      "booking": "Riservakuna",
+      "technical": "Tekniku yanapay",
+      "community": "Rimanakuy ayllu"
+    },
+    "questions": {
+      "gettingStarted": [
+        "¿Imaynatan qallarini Mulinguae nisqapi simita yachayta?",
+        "¿Imaynatan tarini noqaman allin yachachiqta?",
+        "¿Ima simikunan disponible kachkan?",
+        "¿Kanchu libre prueba?",
+        "¿Imaynatan ruwakuni cuenta?"
+      ],
+      "teachers": [
+        "¿Imaynatan Mulinguae nisqapi yachachiqman tukunku?",
+        "¿Ima requisitokunan kachkan yachachiq kanapaq?",
+        "¿Imaynatan yachachiqkunap verificación nisqan llamk'an?",
+        "¿Imaynatan yachachiqkuna qullqita chaskinku?",
+        "¿Atinichu noqaq horario nisqayta chay royalta chaninchayta?"
+      ],
+      "courses": [
+        "¿Ima cursokunan disponible kachkan?",
+        "¿Imaynatan cursokunap nivel nisqankuna (A1-C2) llamk'an?",
+        "¿Cursokunapi kanchu certificadokuna?",
+        "¿Atinichu noqaq ritmo nisqaywanmi yachayta?",
+        "¿Ima materialkunan incluido kachkan?"
+      ],
+      "booking": [
+        "¿Imaynatan reservakuni lostimantata (lesson)?",
+        "¿Imataq kanman cancel nispa utaq huk p'unchawman churay nispa?",
+        "¿Imaynatan prueba lesonkuna llamk'an?",
+        "¿Ima pagu metodokunan chaskikun?",
+        "¿Kanchu refund politikayuq?"
+      ],
+      "technical": [
+        "¿Ima aparatokuna, browserkunan soportakun?",
+        "¿Imaynatan servikuni video klas-kuarto?",
+        "¿Atinichu Mulinguae sin internet llamk'ayta?",
+        "¿Imaynatan tikrakuni language preferencia?",
+        "¿Imataq kanman problema técnico kaspanchik?"
+      ],
+      "community": [
+        "¿Imaynatan huk yachakuqkunawan rimayta qallarini?",
+        "¿Atinichu blog postkuna qelqayta?",
+        "¿Ima program taq Unity Solidaridad?",
+        "¿Imaynatan simi intercambio llamk'an?",
+        "¿Kanchu comunidad paqtankuna?"
+      ]
+    },
+    "errorGeneric": "Ñuqayku disculpakuyku, pillo nanay ruwakurqa. Wateqmanta yanapakuy.",
+    "errorLoadConversation": "Kay tapukuy mana yaykuyta atikú",
+    "domain": {
+      "general": "Kunanrayku",
+      "teachers": "Yachachiqkuna",
+      "courses": "Cursokuna",
+      "blogs": "Blogkuna",
+      "getting-started": "Qallariyninpaq",
+      "booking": "Riservakuna",
+      "technical": "Tekniku yanapay",
+      "community": "Rimanakuy ayllu"
+    },
+    "errorStreaming": "Streamingqa kay navegadorpi mana kamachiqchu.",
+    "sendFailed": "Manam willayta kachayta atirqachu."
+  },
+  "app": {
+    "yes": "Ari",
+    "no": "Mana",
+    "loading": "Kargachkuchkan...",
+    "loadingEllipsis": "Kargachkuchkan…",
+    "sessionExpired": "Sesionniki tukusqa kachkan. Wateqmanta log-in-kay.",
+    "loginSuccess": "Login atiqanña",
+    "imageTooLarge": "Imaz akarasqa lúmite maximo nisqamanta aswan hatunmi.",
+    "noChangesMade": "Manam ima tikraytapas ruwarqanichu.",
+    "confirmDeleteTeacher": "¿Cheqaqchu kay yachachiqta pichayta munanki?",
+    "confirmDeletePost": "¿Cheqaqchu kay post-a pichayta munanki?",
+    "learnMoreCompany": "Aswan yachay empresaykumanta",
+    "watchIntro": "Qhawariy yaykuyta",
+    "joinMulinguae": "Mulinguae-ta yapakuy",
+    "backToTop": "Wateqmanta hanaq-man",
+    "toggleMenuLanguage": "Menu-btn-ta kachun simi tikrakuypaq",
+    "joinUs": "Ñoqaykuman yapakuy",
+    "searchByTitleOrUser": "Maskhay tity chay user sutiwan",
+    "expandCourseDetails": "Mastariy cursopa detaylenta",
+    "collapseCourseDetails": "Kutichiy cursopa detaylenta",
+    "closeIntro": "Wisqay yaykuyta",
+    "closeVideo": "Wisqay video",
+    "videoTitleFallback": "video",
+    "allLibraries": "Tukuy bibliotekakuna",
+    "altLogo": "Mulinguae logo",
+    "altLanguagesIcon": "Simikuna",
+    "altRightIcon": "Mastariy",
+    "altBooksList": "Libros lista",
+    "altProfile": "Personal perfilsiy",
+    "altTeacherImage": "Yachachiq imazen",
+    "altEditTeacherCard": "Ruray yachachiq card-ta",
+    "altPersonalAvatar": "Personal avatar",
+    "altUserImage": "Itilizater imazen",
+    "altDonation": "Qoy (donacion)",
+    "altStudentsImg": "Yachakuqkuna imazen",
+    "altMultilingualGroup": "Ayllukuna ima simikunamanta",
+    "altEarth": "Patsaq dibujo miltilangism",
+    "altAboutMission": "Misionninchik",
+    "altAboutUs": "Ñoqaykumanta",
+    "altAboutStory": "Historianchik",
+    "altAboutVision": "Visionninchik",
+    "altAboutTutors": "Yachachiqninchikkuna",
+    "printArticle": "Imprimiy kay qelqata",
+    "altPrintImg": "Imprimiynak imazen"
+  },
+  "admin": {
+    "addTeacherInfo": "Yapay yachachiqpa informacionta",
+    "firstName": "Qayna sutiyki",
+    "enterFirstName": "Qelqay qayna sutita",
+    "lastName": "Qepa sutiyki",
+    "enterLastName": "Qelqay qepa sutita",
+    "email": "Correo",
+    "enterEmail": "Qelqay correota",
+    "jobBrief": "Ima llamk’ay",
+    "enterJobBrief": "Qelqay llamk’ay rezuminta",
+    "aboutTeacher": "Yachachiqmanta",
+    "enterAboutTeacher": "Qelqay yachachiqmanta",
+    "telephone": "Telefowno",
+    "enterTelephone": "Qelqay telefownota",
+    "uploadImage": "Churay imazta",
+    "chooseImageLess1MB": "akllay imaz 1MB-manta pisiyuqta",
+    "chooseImageLessThan1MB": "akllay imaz 1MB-manta pisiyuqta",
+    "addingTeacher": "Yapachkuchkan yachachiqta...",
+    "addTeacher": "Yapay yachachiqta",
+    "update": "Tikray (update)",
+    "changeImage": "Tikray imazta",
+    "pendingBlogs": "Sujana blog",
+    "accept": "Chaskiy",
+    "refuse": "Llamiy (refuse)",
+    "pendingComments": "Sujana comentariokuna",
+    "blogApproved": "Blog aprobadonñam kanqa blog listapi",
+    "commentApproved": "Comentario aprobadonñam kanqa listapi",
+    "addTeacherSuccess": "Musuq yachachiq allinta yapakurqa",
+    "deleteTeacherSuccess": "Yachachiq allinta qhullurqa",
+    "updateTeacherSuccess": "Yachachiq allinta tikrakurqa"
+  },
+  "seo": {
+    "home": {
+      "title": "Mulinguae | Simimanta runakunaq tantanakuynin, sapan simikuna hapinakuy",
+      "description": "Mulinguae nisqan tukuynin pachapi runakunata huñun simikunata yachachikuynintin. Yachakuy sapan simikunata qallariy. Kunan pachamanta Mulinguae nisqaman yaykuy. (Mulingua nisqanwan manam tinkun.)",
+      "keywords": "mulinguae, mulingua, simikuna yachay, achka simi, simi hapinakuy, runa simillikuna, pachantin tantanakuy"
+    },
+    "contact": {
+      "title": "Mulinguaewan rimanakuy | Tinkunakuy achka simiyuq llaqtanchikwan",
+      "description": "Mulinguae (Mulingua) nisqanwan rimanakuy simikuna yachay, hukllanakuymanta utaq yanapaymanta. Rimariy achka simiyuq llaqtanchikwan, yaykuykunam pachantin tantanakuy.",
+      "keywords": "mulinguaewan rimanakuy, mulinguawan rimanakuy, simi yanapay, achka simi, simi hapinakuy, pachantin tantanakuy"
+    },
+    "about": {
+      "title": "Mulinguae nisqamanta | Misiónninchik & achka simiyuq tantanakuyninchik",
+      "description": "Yachay Mulinguaeq misiónninta runakunata tinkunapaq pachantinpi simikuna yachay, achka simi kay, cultural echanzkuna nisqanwan. Qhaway imayna Mulinguae (Mulingua) yachaqkunatawan rimaykuna yachachiqkunatapas wiñachiqta.",
+      "keywords": "mulinguae nisqamanta, mulingua nisqamanta, simikuna yachay, achka simi, simi hapinakuy, misiónninchik, pachantin tantanakuy, rimaykuna yachachiqkuna"
+    },
+    "allStudents": {
+      "title": "Tukuy watayuq yachakuqkuna | Mulinguae achka simiyuq yachachiy",
+      "description": "Qhaway imayna Mulinguae yanapa tukuy watayuq yachakuqkunata achka simiyuq yachachiy. Yachay programanskunamanta, metodokunamanta, iguallidad iniciativakunamantawan.",
+      "keywords": "tukuy watayuq yachakuqkuna, achka simiyuq yachachiy, mulinguae, mulingua, igualdad, yachay metodokuna, pachantin tantanakuy"
+    },
+    "hundredPhrases": {
+      "title": "100 ruway rimakuna | Mulinguae achka simiyuq yachachikuy",
+      "description": "Chaskiy 100 ruway rimakunata achka simiyuq yachachikuyhina rimanakunapas. Mulinguae quy simi recursos global yachakuqkunapaq.",
+      "keywords": "100 rimakuna, ruway rimakuna, achka simi, simikuna yachay, mulinguae, mulingua, rimanakuy"
+    },
+    "feedback": {
+      "title": "Willakuy | Mulinguaeq llaqtanwan rimanakuy, sasachakuykunata willay",
+      "description": "Apachimuy willakuyta, willay sasachakuykunata utaq rimay Mulinguaeq llaqtanwan. Yanapawayku mejorar achka simiyuq tantanakuyninchik simi yachay metaforma.",
+      "keywords": "willakuy, rimanakuy, sasachakuy willay, mulinguae, mulingua, simikuna yachay, achka simiyuq tantanakuy"
+    },
+    "blogs": {
+      "title": "Blog Mulinguae | Simi yachay willakuykuna & tantanakuy yuyaykuna",
+      "description": "Lee qepa blog postkuna Mulinguaeq achka simiyuq tantanakuyninmanta. Qhaway simi yachay consejokuna, cultural willakuykuna, Mulinguae (Mulingua) noticiakunawan.",
+      "keywords": "blog mulinguae, blog mulingua, simikuna yachay, achka simi, simi hapinakuy, tantanakuy willakuy, mulingua, mulinguae"
+    },
+    "multilingualism": {
+      "title": "Achka simi kay | Mulinguae simi tinkunakuy & pachantin tantanakuy",
+      "description": "Qhaway achka simi kayhina Mulinguae (Mulingua) nisqanwan. Yachay simi diversidad, cultural echanz, achka simiyuq kayq allinkunamanta pachantin tantanakuyninchikpi.",
+      "keywords": "achka simi kay, mulingua, mulinguae, simi diversidad, simikuna yachay, cultural echanz, pachantin tantanakuy"
+    },
+    "unity": {
+      "title": "Huñunakuymanta & yanapanakuy | Mulinguaeq tantanakuynin principiokuna",
+      "description": "Qhaway hukllanakuymanta & yanapanakuypa principiokunata Mulinguaeq achka simiyuq tantanakuyninpi. Yachay valorninchikmanta, yachachiy, pachantin llamk'aymantawan.",
+      "keywords": "hukllanakuy, yanapanakuy, mulinguae, mulingua, tantanakuy, principiokuna, yachachiy, pachantin llamk'ay"
+    },
+    "linguicide": {
+      "title": "Simi wañuy | Simi chinkay & waqaychay - Mulinguae",
+      "description": "Yachay simi wañuy, simi chinkay, waqaychay llamk'aykunamantapas Mulinguaeq achka simiyuq tantanakuyninpi. Qhaway recursos & pachantin iniciativakuna.",
+      "keywords": "simi wañuy, simi chinkay, simi waqaychay, mulinguae, mulingua, wañusqa simikuna, pachantin iniciativakuna"
+    },
+    "teachers": {
+      "title": "Mullinguae yachachikqkuna | Tinkunakuy achka simiyuq simi yachachikuqkunawan",
+      "description": "Tinkunakuy Mulinguae (Mulingua) yachachikqkunawan. Achka simiyuq yachachikqkuna yanapankiku simikunata yachay, pachantin tantanakuyniwan tinkunapaq. Qhaway yachachiy llaqtachikuyta experienciakunawan.",
+      "keywords": "mulingua yachachikqkuna, mulinguae yachachikqkuna, simi yachachikqkuna, achka simi, simikuna yachay, pachantin tantanakuy"
+    },
+    "students": {
+      "title": "Mulinguae yachakuqkuna | Simi yachakuqkuna & achka simiyuq tantanakuy",
+      "description": "Tinkunakuy Mulinguae (Mulingua) yachakuqkunawan. Yaykuy achka simiyuq tantanakuyninchik paq simi yachakuq, tinkuy pachantin runakunawan. Qhaway simi yachay willakuykunata experimentokunatawan.",
+      "keywords": "mulingua yachakuqkuna, mulinguae yachakuqkuna, simi yachakuqkuna, achka simi, simikuna yachay, pachantin tantanakuy"
+    }
+  },
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Ancha llulla",
+    "weak": "Llulla",
+    "medium": "Chawpi",
+    "strong": "Sinchi",
+    "veryStrong": "Ancha sinchi"
+  },
+  "Error_Recaptcha": "reCAPTCHA chiqaqchayqa manam llallirqachu. Ama hina kaspalla hukmanta ruway.",
+  "time": {
+    "daysAgo": "{{count}} punchaw ñawpaqta",
+    "hoursAgo": "{{count}} ura ñawpaqta",
+    "minutesAgo": "{{count}} minutu ñawpaqta",
+    "justNow": "kunallanmi"
   }
 }

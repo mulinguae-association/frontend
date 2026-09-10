@@ -51,7 +51,7 @@
         width: 100%;
         @include flexbox($justifyContent: center, $direction: column);
         gap: 15px;
-        text-align: left;
+        text-align: start;
         @media (max-width: 767px) {
           gap: 12px;
         }

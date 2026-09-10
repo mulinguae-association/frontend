@@ -13,9 +13,9 @@ const HundredPhrases = () => {
   return (
     <>
       <SEO
-        title="100 Useful Phrases | Mulinguae Multilingual Learning"
-        description="Explore 100 useful phrases for multilingual learning and communication. Mulinguae provides language resources for global learners."
-        keywords="100 phrases, useful phrases, multilingual, language learning, mulinguae, mulingua, communication"
+        title={t("seo.hundredPhrases.title")}
+        description={t("seo.hundredPhrases.description")}
+        keywords={t("seo.hundredPhrases.keywords")}
         path="/pages/100-basic-phrases"
       />
       <main className="hundred_phrases" ref={componentRef}>

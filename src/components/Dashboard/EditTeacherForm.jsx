@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { notifyError } from '../Notify';
 import InputField from '../HelperComponents/InputField';
 import Tooltip from '../HelperComponents/toolTip';
+import { useTranslation } from 'react-i18next';
 import { useUpdateTeacherMutation } from '../../apis/mutations/teachers/updateTeacher';
 
 const EditTeacherForm = ({ teacher, onEdit }) => {
+  const { t } = useTranslation('global');
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -41,7 +43,7 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
     if (file && file.size <= maxImageSize) {
       setFormData({ ...formData, image: file });
     } else {
-      alert('Image size exceeds the maximum allowed limit.')
+      alert(t('app.imageTooLarge'))
     }
   };
 
@@ -63,7 +65,7 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
       ...formData
     };
     if (!isFormDataChanged()) {
-      notifyError("No changes were made.");
+      notifyError(t("app.noChangesMade"));
       return;
     }
     updateTeacherMutation({ teacherId: teacher._id, updatedTeacher });
@@ -72,8 +74,8 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
   return (
     <form className="edit_form" onSubmit={handleUpdate}>
       <label className="upload_image" htmlFor="image">
-        {!formData.image ? 'Change Image' : formData.image.name || 'Change Image'}
-        <Tooltip text="choose an image less than 1MB" />
+        {!formData.image ? t('admin.changeImage') : formData.image.name || t('admin.changeImage')}
+        <Tooltip text={t('admin.chooseImageLessThan1MB')} />
       </label>
       <input
         id="image"
@@ -86,7 +88,7 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
       <div className="teacher_name block">
         <div className='block'>
           <label className="visually-hidden" htmlFor="firstName">
-            First Name
+            {t('admin.firstName')}
           </label>
           <InputField
             type="text"
@@ -94,13 +96,13 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
             id="firstName"
             value={formData.firstName}
             onChange={handleInputChange}
-            placeholder="First Name"
+            placeholder={t('admin.firstName')}
             required
           />
         </div>
         <div className='block'>
           <label className="visually-hidden" htmlFor="lastName">
-            Last Name
+            {t('admin.lastName')}
           </label>
           <InputField
             type="text"
@@ -108,13 +110,13 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
             id="lastName"
             value={formData.lastName}
             onChange={handleInputChange}
-            placeholder="Last Name"
+            placeholder={t('admin.lastName')}
             required
           />
         </div>
       </div>
       <label className="visually-hidden" htmlFor="jobBrief">
-        Job Brief
+        {t('admin.jobBrief')}
       </label>
       <InputField
         type="text"
@@ -122,10 +124,10 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
         id="jobBrief"
         value={formData.jobBrief}
         onChange={handleInputChange}
-        placeholder="Job Brief"
+        placeholder={t('admin.jobBrief')}
       />
       <label className="visually-hidden" htmlFor="telephone">
-        Telephone
+        {t('admin.telephone')}
       </label>
       <InputField
         type="tel"
@@ -133,10 +135,10 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
         id="telephone"
         value={formData.telephone}
         onChange={handleInputChange}
-        placeholder="Telephone"
+        placeholder={t('admin.telephone')}
       />
       <label className="visually-hidden" htmlFor="email">
-        Email
+        {t('admin.email')}
       </label>
       <InputField
         type="email"
@@ -144,10 +146,10 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
         id="email"
         value={formData.email}
         onChange={handleInputChange}
-        placeholder="Email"
+        placeholder={t('admin.email')}
       />
       <label className="visually-hidden" htmlFor="aboutTeacher">
-        About Teacher
+        {t('admin.aboutTeacher')}
       </label>
       <textarea
         rows={4}
@@ -156,9 +158,9 @@ const EditTeacherForm = ({ teacher, onEdit }) => {
         id="aboutTeacher"
         value={formData.aboutTeacher}
         onChange={handleInputChange}
-        placeholder="About Teacher"
+        placeholder={t('admin.aboutTeacher')}
       />
-      <InputField className="updateBtn" type="submit" value="Update" />
+      <InputField className="updateBtn" type="submit" value={t('admin.update')} />
     </form>
   );
 };

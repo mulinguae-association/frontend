@@ -83,7 +83,7 @@ const NestedNavLinks = (props) => {
             to={`pages/libraries`}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            All Libraries
+            {t("app.allLibraries")}
           </NavLink>
         </li>
         <li>
@@ -106,7 +106,7 @@ const NestedNavLinks = (props) => {
       <img
         className="book_list"
         src="/images/icons/BooksList.png"
-        alt="BooksList"
+        alt={t("app.altBooksList")}
       />
     </div>
   );

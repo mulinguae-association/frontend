@@ -1,0 +1,75 @@
+{
+  "Head": "Konteni",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "Kisa sa Politik-la kouver?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "Kisaki nou kolekte, itiliz ek partaz kouma done? (rezyme)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "Kisaki done ki nou kolekte?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "Kouma nou itiliz ou done?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "Kouma nou itiliz cookies?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "Kan nou partaz done avek lezot?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "Bann fonksion sosyal.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "Kifer nou kapav itiliz ou done.",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "Konbie tan nou gard ou done?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "Kouma nou gard ou done sekirize?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "Kouma ou kapav kontrol ou done?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "Bann Reklemasion.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "Kouma ou kapav kontakte nou?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "Sannzman dan sa Politik-la",
+      "link": "data-changing"
+    }
+  ]
+}

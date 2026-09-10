@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "تأكيد كلمة المرور الجديدة",
   "resetButton": "إعادة تعيين كلمة المرور",
   "resetSuccessMessage": "تم إعادة تعيين كلمة المرور بنجاح.",
-  "loadingText": "جار التحميل..."
+  "loadingText": "جار التحميل...",
+  "missingFieldsError": "يرجى ملء جميع الحقول المطلوبة."
 }

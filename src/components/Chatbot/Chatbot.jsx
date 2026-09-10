@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useRef } from "react";
 import { MessagesSquare, X, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import ChatHeader from "./components/ChatHeader";
 import MessageList from "./components/MessageList";
 import ChatInput from "./components/ChatInput";
@@ -32,6 +33,7 @@ const Chatbot = ({
   showVoice = false,
   showSuggestions = true,
 }) => {
+  const { t } = useTranslation("global");
   const { isAuth } = useAuth();
 
   const [isOpen, setIsOpen] = useState(initialOpen);
@@ -217,15 +219,13 @@ const Chatbot = ({
 
             // Only show error message if no content was received yet.
             if (botMsgIdRef.current) {
-              ensureBotContent(
-                "Sorry, something went wrong. Please try again.",
-              );
+              ensureBotContent(t("chatbot.errorGeneric"));
             }
           },
         },
       });
     },
-    [chatState.activeTopic, chatState.conversationId],
+    [chatState.activeTopic, chatState.conversationId, t],
   );
 
   const toggleChat = useCallback(() => {
@@ -266,7 +266,7 @@ const Chatbot = ({
     } catch (err) {
       setChatState((prev) => ({
         ...prev,
-        error: "Failed to load this conversation.",
+        error: t("chatbot.errorLoadConversation"),
         view: "list",
       }));
     }
@@ -322,7 +322,7 @@ const Chatbot = ({
                 onSend={handleSendMessage}
                 disabled={isLoading}
                 showVoiceButton={showVoice}
-                placeholder={`Ask about ${chatState.activeTopic}...`}
+                placeholder={t("chatbot.askAbout", { topic: chatState.activeTopic })}
               />
             </>
           ) : (
@@ -337,7 +337,7 @@ const Chatbot = ({
       <button
         className={`chatbot__toggle ${isOpen ? "chatbot__toggle--active" : ""}`}
         onClick={toggleChat}
-        aria-label="Toggle chat"
+        aria-label={t("chatbot.toggleChat")}
       >
         {isOpen ? (
           <X

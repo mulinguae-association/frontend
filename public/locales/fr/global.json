@@ -26,5 +26,250 @@
     "502": "Mauvaise passerelle. Le serveur a reçu une réponse invalide.",
     "503": "Service indisponible. Veuillez réessayer plus tard.",
     "504": "Délai d'attente de la passerelle. Veuillez réessayer plus tard."
+  },
+  "chatbot": {
+    "title": "Assistant IA Mulinguae",
+    "subtitle": "Là pour vous aider à apprendre",
+    "typing": "Saisie en cours...",
+    "online": "En ligne",
+    "viewConversations": "Voir les conversations",
+    "closeChat": "Fermer le chat",
+    "toggleChat": "Ouvrir/fermer le chat",
+    "quickQuestions": "Questions rapides",
+    "popularTopics": "Sujets populaires",
+    "tapQuestion": "Touchez une question pour la poser",
+    "typeMessage": "Écrivez un message...",
+    "askAbout": "Interrogez sur {{topic}}...",
+    "startVoice": "Démarrer la saisie vocale",
+    "stopVoice": "Arrêter la saisie vocale",
+    "startConversation": "Commencez une conversation ! Posez-moi n’importe quelle question sur Mulinguae.",
+    "somethingWrong": "Une erreur s’est produite. Veuillez réessayer.",
+    "yourConversations": "Vos conversations",
+    "newChat": "Nouveau chat",
+    "loadingConversations": "Chargement des conversations...",
+    "loadFailed": "Échec du chargement des conversations.",
+    "noConversations": "Aucune conversation pour le moment.",
+    "startNewChat": "Démarrez un nouveau chat pour obtenir de l’aide.",
+    "openConversation": "Ouvrir la conversation sur {{domain}}",
+    "msgs": "{{count}} messages",
+    "categories": {
+      "gettingStarted": "Pour commencer",
+      "teachers": "Enseignants",
+      "courses": "Cours",
+      "booking": "Réservation",
+      "technical": "Support technique",
+      "community": "Communauté"
+    },
+    "questions": {
+      "gettingStarted": [
+        "Comment commencer à apprendre une langue sur Mulinguae ?",
+        "Comment trouver le bon professeur pour moi ?",
+        "Quelles langues sont disponibles ?",
+        "Existe-t-il un essai gratuit ?",
+        "Comment créer un compte ?"
+      ],
+      "teachers": [
+        "Comment devenir enseignant sur Mulinguae ?",
+        "Quelles sont les exigences pour être enseignant ?",
+        "Comment fonctionne la vérification des enseignants ?",
+        "Comment les enseignants sont-ils payés ?",
+        "Puis-je fixer mes propres horaires et tarifs ?"
+      ],
+      "courses": [
+        "Quels types de cours sont disponibles ?",
+        "Comment fonctionnent les niveaux de cours (A1-C2) ?",
+        "Les cours incluent-ils des certificats ?",
+        "Puis-je apprendre à mon rythme ?",
+        "Quels matériaux sont inclus ?"
+      ],
+      "booking": [
+        "Comment réserver un cours ?",
+        "Que faire si je dois annuler ou reprogrammer ?",
+        "Comment fonctionnent les cours d'essai ?",
+        "Quels moyens de paiement sont acceptés ?",
+        "Existe-t-il une politique de remboursement ?"
+      ],
+      "technical": [
+        "Quels appareils et navigateurs sont pris en charge ?",
+        "Comment utiliser la salle de classe vidéo ?",
+        "Puis-je utiliser Mulinguae hors ligne ?",
+        "Comment changer ma préférence de langue ?",
+        "Que faire si j'ai des problèmes techniques ?"
+      ],
+      "community": [
+        "Comment entrer en contact avec d'autres apprenants ?",
+        "Puis-je écrire des articles de blog ?",
+        "Qu'est-ce que le programme Unité et Solidarité ?",
+        "Comment fonctionnent les échanges linguistiques ?",
+        "Y a-t-il des événements communautaires ?"
+      ]
+    },
+    "errorGeneric": "Désolé, une erreur est survenue. Veuillez réessayer.",
+    "errorLoadConversation": "Échec du chargement de cette conversation.",
+    "domain": {
+      "general": "Général",
+      "teachers": "Enseignants",
+      "courses": "Cours",
+      "blogs": "Articles",
+      "getting-started": "Pour commencer",
+      "booking": "Réservation",
+      "technical": "Support technique",
+      "community": "Communauté"
+    },
+    "errorStreaming": "Le streaming n'est pas pris en charge par ce navigateur.",
+    "sendFailed": "Échec de l'envoi du message."
+  },
+  "app": {
+    "yes": "Oui",
+    "no": "Non",
+    "loading": "Chargement...",
+    "loadingEllipsis": "Chargement…",
+    "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
+    "loginSuccess": "Connexion réussie",
+    "imageTooLarge": "La taille de l'image dépasse la limite maximale autorisée.",
+    "noChangesMade": "Aucun changement effectué.",
+    "confirmDeleteTeacher": "Voulez-vous vraiment supprimer cet enseignant ?",
+    "confirmDeletePost": "Voulez-vous vraiment supprimer cette publication ?",
+    "learnMoreCompany": "En savoir plus sur notre entreprise",
+    "watchIntro": "Regarder l'introduction",
+    "joinMulinguae": "Rejoindre Mulinguae",
+    "backToTop": "Retour en haut",
+    "toggleMenuLanguage": "Basculer l'ouverture du menu pour changer de langue",
+    "joinUs": "Rejoignez-nous",
+    "searchByTitleOrUser": "Rechercher par titre ou nom d'utilisateur",
+    "expandCourseDetails": "Développer les détails du cours",
+    "collapseCourseDetails": "Replier les détails du cours",
+    "closeIntro": "Fermer l'introduction",
+    "closeVideo": "Fermer la vidéo",
+    "videoTitleFallback": "vidéo",
+    "allLibraries": "Toutes les bibliothèques",
+    "altLogo": "Logo Mulinguae",
+    "altLanguagesIcon": "Langues",
+    "altRightIcon": "Développer",
+    "altBooksList": "Liste de livres",
+    "altProfile": "Profil personnel",
+    "altTeacherImage": "Image de l'enseignant",
+    "altEditTeacherCard": "Modifier la fiche de l'enseignant",
+    "altPersonalAvatar": "Avatar personnel",
+    "altUserImage": "Image de l'utilisateur",
+    "altDonation": "Don",
+    "altStudentsImg": "Image d'étudiants",
+    "altMultilingualGroup": "Groupe diversifié représentant le multilinguisme",
+    "altEarth": "Illustration de la Terre représentant le multilinguisme",
+    "altAboutMission": "Notre mission",
+    "altAboutUs": "À propos de nous",
+    "altAboutStory": "Notre histoire",
+    "altAboutVision": "Notre vision",
+    "altAboutTutors": "Nos tuteurs",
+    "printArticle": "Imprimer cet article",
+    "altPrintImg": "Image d'impression"
+  },
+  "admin": {
+    "addTeacherInfo": "Ajouter les informations de l'enseignant",
+    "firstName": "Prénom",
+    "enterFirstName": "Saisir le prénom",
+    "lastName": "Nom de famille",
+    "enterLastName": "Saisir le nom de famille",
+    "email": "E-mail",
+    "enterEmail": "Saisir l'e-mail",
+    "jobBrief": "Résumé du poste",
+    "enterJobBrief": "Saisir le résumé du poste",
+    "aboutTeacher": "À propos de l'enseignant",
+    "enterAboutTeacher": "Saisir les informations sur l'enseignant",
+    "telephone": "Téléphone",
+    "enterTelephone": "Saisir le téléphone / mobile",
+    "uploadImage": "Téléverser une image",
+    "chooseImageLess1MB": "choisissez une image de moins de 1 Mo",
+    "chooseImageLessThan1MB": "choisissez une image de moins de 1 Mo",
+    "addingTeacher": "Ajout de l'enseignant...",
+    "addTeacher": "Ajouter un enseignant",
+    "update": "Mettre à jour",
+    "changeImage": "Changer l'image",
+    "pendingBlogs": "Articles en attente",
+    "accept": "Accepter",
+    "refuse": "Refuser",
+    "pendingComments": "Commentaires en attente",
+    "blogApproved": "Publication approuvée et elle apparaîtra dans la liste des articles",
+    "commentApproved": "Commentaire approuvé et il apparaîtra dans la liste des commentaires",
+    "addTeacherSuccess": "Enseignant ajouté avec succès",
+    "deleteTeacherSuccess": "Enseignant supprimé avec succès",
+    "updateTeacherSuccess": "Enseignant mis à jour avec succès"
+  },
+  "seo": {
+    "home": {
+      "title": "Mulinguae | Communauté multilingue et échange linguistique",
+      "description": "Mulinguae est une communauté multilingue mondiale d'échange et d'apprentissage des langues. Apprenez des langues avec des locuteurs natifs, connectez-vous avec des personnes du monde entier et rejoignez Mulinguae dès aujourd'hui. (Non affilié à Mulingua.)",
+      "keywords": "mulinguae, mulingua, apprentissage des langues, multilingue, échange linguistique, locuteurs natifs, communauté mondiale"
+    },
+    "contact": {
+      "title": "Contactez Mulinguae | Échangez avec notre équipe multilingue",
+      "description": "Contactez Mulinguae (Mulingua) pour l'apprentissage des langues, un partenariat ou du soutien. Contactez notre équipe multilingue et rejoignez notre communauté mondiale.",
+      "keywords": "contact mulinguae, contact mulingua, soutien linguistique, multilingue, échange linguistique, communauté mondiale"
+    },
+    "about": {
+      "title": "À propos de Mulinguae | Notre mission et notre communauté multilingue",
+      "description": "Découvrez la mission de Mulinguae, qui consiste à connecter les gens du monde entier grâce à l'apprentissage des langues, au multilinguisme et à l'échange culturel. Découvrez comment Mulinguae (Mulingua) permet aux apprenants et aux locuteurs natifs de grandir ensemble.",
+      "keywords": "à propos de mulinguae, à propos de mulingua, apprentissage des langues, multilingue, échange linguistique, notre mission, communauté mondiale, locuteurs natifs"
+    },
+    "allStudents": {
+      "title": "Étudiants de tous âges | Éducation multilingue Mulinguae",
+      "description": "Découvrez comment Mulinguae soutient les étudiants de tous âges dans l'éducation multilingue. Découvrez nos programmes, nos méthodes et nos initiatives d'égalité.",
+      "keywords": "étudiants de tous âges, éducation multilingue, mulinguae, mulingua, égalité, méthodes d'apprentissage, communauté mondiale"
+    },
+    "hundredPhrases": {
+      "title": "100 phrases utiles | Apprentissage multilingue Mulinguae",
+      "description": "Explorez 100 phrases utiles pour l'apprentissage et la communication multilingues. Mulinguae fournit des ressources linguistiques aux apprenants du monde entier.",
+      "keywords": "100 phrases, phrases utiles, multilingue, apprentissage des langues, mulinguae, mulingua, communication"
+    },
+    "feedback": {
+      "title": "Commentaires | Contactez l'équipe Mulinguae et signalez les problèmes",
+      "description": "Envoyez vos commentaires, signalez des bugs ou contactez l'équipe Mulinguae. Aidez-nous à améliorer notre communauté multilingue et notre plateforme d'apprentissage des langues.",
+      "keywords": "commentaires, contact, signaler des bugs, mulinguae, mulingua, apprentissage des langues, communauté multilingue"
+    },
+    "blogs": {
+      "title": "Blog Mulinguae | Histoires d'apprentissage des langues et communauté",
+      "description": "Lisez les derniers articles du blog de la communauté multilingue de Mulinguae. Découvrez des conseils pour apprendre les langues, des histoires culturelles et des actualités de Mulinguae (Mulingua).",
+      "keywords": "blog mulinguae, blog mulingua, apprentissage des langues, multilingue, échange linguistique, histoires de la communauté, mulingua, mulinguae"
+    },
+    "multilingualism": {
+      "title": "Multilinguisme | Diversité linguistique Mulinguae et communauté mondiale",
+      "description": "Explorez le multilinguisme avec Mulinguae (Mulingua). Découvrez la diversité linguistique, l'échange culturel et les avantages d'être multilingue dans notre communauté mondiale.",
+      "keywords": "multilinguisme, mulingua, mulinguae, diversité linguistique, apprentissage des langues, échange culturel, communauté mondiale"
+    },
+    "unity": {
+      "title": "Unité et solidarité | Principes de la communauté Mulinguae",
+      "description": "Découvrez les principes d'unité et de solidarité dans la communauté multilingue de Mulinguae. Découvrez nos valeurs, notre éducation et notre collaboration mondiale.",
+      "keywords": "unité, solidarité, mulinguae, mulingua, communauté, principes, éducation, collaboration mondiale"
+    },
+    "linguicide": {
+      "title": "Linguicide | Perte et préservation des langues - Mulinguae",
+      "description": "Découvrez le linguicide, la perte des langues et les efforts de préservation dans la communauté multilingue de Mulinguae. Explorez des ressources et des initiatives mondiales.",
+      "keywords": "linguicide, perte des langues, préservation des langues, mulinguae, mulingua, langues menacées, initiatives mondiales"
+    },
+    "teachers": {
+      "title": "Enseignants Mulinguae | Rencontrez nos éducateurs multilingues",
+      "description": "Rencontrez les enseignants de Mulinguae (Mulingua). Nos éducateurs multilingues vous aident à apprendre des langues et à vous connecter à une communauté mondiale. Découvrez notre équipe pédagogique et son expertise.",
+      "keywords": "enseignants mulingua, enseignants mulinguae, éducateurs de langues, multilingue, apprentissage des langues, communauté mondiale"
+    },
+    "students": {
+      "title": "Étudiants Mulinguae | Apprenants de langues et communauté multilingue",
+      "description": "Rencontrez les étudiants de Mulinguae (Mulingua). Rejoignez notre communauté multilingue d'apprenants de langues et connectez-vous avec des personnes du monde entier. Découvrez des histoires et expériences d'apprentissage.",
+      "keywords": "étudiants mulingua, étudiants mulinguae, apprenants de langues, multilingue, apprentissage des langues, communauté mondiale"
+    }
+  },
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Très faible",
+    "weak": "Faible",
+    "medium": "Moyen",
+    "strong": "Fort",
+    "veryStrong": "Très fort"
+  },
+  "Error_Recaptcha": "La vérification reCAPTCHA a échoué. Veuillez réessayer.",
+  "time": {
+    "daysAgo": "il y a {{count}} j",
+    "hoursAgo": "il y a {{count}} h",
+    "minutesAgo": "il y a {{count}} min",
+    "justNow": "à l'instant"
   }
 }

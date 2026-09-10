@@ -21,7 +21,7 @@ const BlogContent = ({ blog, setShowFullContent }) => {
             width="100px"
             height="100px"
             src={blog.postedBy?.profileImage ? blog.postedBy?.profileImage : "/images/fallBackUser.png"}
-            alt="user"
+            alt={t("contentAlt")}
             onError={(e) => {
               e.target.src = '/images/fallBackUser.png';
             }}

@@ -1,138 +1,148 @@
 {
   "courses": {
-    "heading": "Our Courses",
-    "subHeading": "ACS Mulinguae provides the following courses:",
+    "heading": "Nou Bann Kour",
+    "subHeading": "ACS Mulinguae fournir bann kour ki swiv:",
     "sectionTitles": {
-      "esl": "1. English as a Second Language (ESL) - General English (six levels)",
-      "efp": "2. English for Specific Purposes (EFP)",
-      "languages": "As a promoter of languages, ACS Mulinguae is very keen to look for teachers of any language that you want to learn. Just drop some words in the Contact Box"
+      "esl": "1. Angle kouma Dezyem Langaz (ESL) - Angle Zeneral (sis nivo)",
+      "efp": "2. Angle pou Bi Partikilye (EFP)",
+      "languages": "Kouma enn promoter langaz, ACS Mulinguae anvi an pes astre pou rod bann anseyan de kik langaz ki ou anvi aprann. Anvol ou mesaz dan Bo Kontakt",
+      "courseCategories": "Nou Bann Program Langaz"
+    },
+    "intro": {
+      "description": "Dekuvrir bann lexperyans aprantisaz langaz ki adapte a ou bann bi ek intere.",
+      "eslDescription": "Kour angle konplè pou tou nivo konpetans.",
+      "efpDescription": "Kour angle spesialize ki adapte a kampen profesional partikilye.",
+      "phrasesDescription": "Bann fraz esansiel dan plizir langaz pou ed ou kominike efikasman.",
+      "otherLanguagesDescription": "Intérese par lezot langaz? Kontakte nou pou konnsa nou lezot ofr langaz."
     },
     "common": {
-      "contactUsLink": "Contact us"
+      "contactUsLink": "Kontakte nou",
+      "exploreButton": "Ekzamin Kour"
     },
     "specificPurposeCourses": [
-      "English for Accounting",
-      "English for Anthropology",
-      "English for Development Studies",
-      "Business English",
-      "English for International Studies",
-      "Legal English",
-      "English for Trade Union Studies",
-      "English for Travel and Tourism",
-      "English for Women Studies"
+      "Angle pou Kontabilite",
+      "Angle pou Antropolozi",
+      "Angle pou Letid Devlopman",
+      "Angle Biznis",
+      "Angle pou Letid Internasyonal",
+      "Angle Legal",
+      "Angle pou Letid Sindiqual",
+      "Angle pou Vwayaz ek Tourizm",
+      "Angle pou Letid Fam",
+      "Angle pou Lagrikiltir"
     ],
     "languagesList": [
       { "label": "amari", "value": "Am" },
-      { "label": "arabic", "value": "Ar" },
+      { "label": "arab", "value": "Ar" },
       { "label": "aymara", "value": "Ay" },
-      { "label": "cantonese", "value": "Ca" },
-      { "label": "french", "value": "Fr" },
-      { "label": "hindi", "value": "Hi" },
-      { "label": "italian", "value": "It" },
-      { "label": "kreolHaiti", "value": "KH" },
+      { "label": "kantoné", "value": "Ca" },
+      { "label": "franse", "value": "Fr" },
+      { "label": "indi", "value": "Hi" },
+      { "label": "italyen", "value": "It" },
+      { "label": "kreolAyti", "value": "KH" },
       { "label": "kreolMorisyen", "value": "KM" },
-      { "label": "mandarin", "value": "Mn" },
-      { "label": "portuguese", "value": "Pt" },
-      { "label": "quechua", "value": "Qu" },
-      { "label": "russian", "value": "Ru" },
-      { "label": "spanish", "value": "Es" },
-      { "label": "urdu", "value": "Ur" }
+      { "label": "mandaren", "value": "Mn" },
+      { "label": "portige", "value": "Pt" },
+      { "label": "kechwa", "value": "Qu" },
+      { "label": "ris", "value": "Ru" },
+      { "label": "espanyol", "value": "Es" },
+      { "label": "urdi", "value": "Ur" }
     ],
     "englishCoursesTitle": {
-      "Level": "Level:",
-      "Duration": "Duration:",
-      "Description": "Description:",
-      "LearningOutcomes": "Learning Outcomes:"
+      "Level": "Nivo:",
+      "Duration": "Lirester:",
+      "Description": "Deskripsion:",
+      "LearningOutcomes": "Rezilta Aprantisaz:"
     },
     "englishCourses": [
       {
         "id": "1",
-        "CourseName": "General English for Absolute Beginners",
-        "Level": "Level 1 or A1 (Beginner)",
-        "Duration": "50 hours",
-        "Description": "Absolute Beginners are learners who have had no or very little instruction in the target language. It is distinguished from false beginners who are learners who have studied the target language before but never acquire a real grasp of the language.",
+        "CourseName": "Angle Zeneral pou Bann Komansan Absoliman",
+        "Level": "Nivo 1 ouswa A1 (Komansan)",
+        "Duration": "50 zèr",
+        "Description": "Bann Komansan Absoliman se bann aprann ki pa enna ouswa ki ena trèt polarization ti dan langaz ki vise. Li difer de bann komansan divan ki se bann aprann ki finn etidye langaz ki vise avan me ki zame finn gagn vré konpreansyon langaz-la.",
         "LearningOutcomes": [
-          "Ask and answer simple questions on very familiar topics",
-          "Use simple phrases and sentences to describe where they live and people they know",
-          "Understand familiar words and very basic phrases when spoken slowly and clearly",
-          "Read simple words, phrases, and sentences",
-          "Write short, simple postcards and fill in forms with personal details"
+          "Pozé ek reponn bann kesyon simpl par kot se sibzè ki byen konen",
+          "Itiliz bann fraz ek fraz simpl pou dekri kote ki zot lévé ek bann dimoun ki zot konen",
+          "Konprann bann mo ki konen ek bann fraz trè bazik kan zot koze lantman ek klerman",
+          "Lir bann mo simpl, fraz, ek fraz",
+          "Ekrir bann katpostal ti ek simpl ek rempli bann formulé avek bann detay personel"
         ]
       },
       {
         "id": "2",
-        "CourseName": "General English",
-        "Level": "Level 2 (A1+ or Elementary)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 1 or have already a basic knowledge of the target language. It covers subjects such as definite and indefinite articles, congratulating, giving / justifying opinions, spelling skills, nouns and pronouns, positive and negative.",
+        "CourseName": "Angle Zeneral",
+        "Level": "Nivo 2 (A1+ ouswa Elemanter)",
+        "Duration": "50 zèr",
+        "Description": "Sa kour-la pou bann aprann ki finn terminé nivo ouswa ki déja ena enn konnesans bazik langaz ki vise. Li kouvri bann sibzè kouma bann lartisan definiman ek indéfiniman, félicitasion, donn / jistifie opinion, abilite ortografi, bann nom ek bann pronom, pozitif ek negatif.",
         "LearningOutcomes": [
-          "Communicate in simple and routine tasks on family topics and activities",
-          "Make simple description of their family and other people, living conditions, educational background and their present or most recent job",
-          "Understand phrases and common vocabulary on common areas",
-          "Read very short, simple texts and find specific, predictable information in advertisements, prospectuses, menus and time tables and understand short simple personal letters",
-          "Write short, simple notes and messages, simple personal letters such as thanking someone"
+          "Kominike dan bann travay simpl ek routinyer par kot se sibzè fami ek aktivite",
+          "Fér bann deskripsion simpl fami ek lezot dimoun, konsision vi, fond edikatif ek travay prosen ouswa resan",
+          "Konprann bann fraz ek vokabiler ki konen par kot se domenn ki konen",
+          "Lir bann tèks trè ti, simpl ek truv bann linformasion spesifik ek previzib dan bann publisite, bann prospectus, bann meni ek bann orè ek konprann bann liter personel ti ek simpl",
+          "Ekrir bann nòt ti ek simpl, bann mesaz, bann liter personel simpl kouma remersié kikenn"
         ]
       },
       {
         "id": "3",
-        "CourseName": "General English",
-        "Level": "Level 3 (A2 or Pre-Intermediate)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 2 or have reached this level in another set-up. (The learner will sit a test to determine his or her level). The course covers subjects such as the use of the continuous and perfect tenses, passive voice, adverbs and vocabulary surrounding presentation, restaurant and leisure venues, common dishes, personal experiences, weather and climate change.",
+        "CourseName": "Angle Zeneral",
+        "Level": "Nivo 3 (A2 ouswa Pré-Entermiedier)",
+        "Duration": "50 zèr",
+        "Description": "Sa kour-la pou bann aprann ki finn terminé nivo 2 ouswa ki finn atant nivo sa dan enn lot kaden. (Laprenan pou asiz enn test pou determinen so nivo). Kour-la kouvri bann sibzè kouma itilizasion bann tan kontinie ek parfe, voas pasiv, adver ek vokabiler ki entou prezantasyon, restoran ek platenn lezer, bann manje ki konen, lexperyans personel, laté ek chanjman klimatik.",
         "LearningOutcomes": [
-          "Deal with most situations when they travel in places where people speak English",
-          "Talk about experiences and events, dreams, hopes and ambitions, give reasons and explanations for opinions and plans, tell the story of a book or film and describe reactions",
-          "Understand the main points of a clear speech on work, school and leisure, understand the main point on many radio or TV programs on current affairs or familiar topics, when the speaker speaks slowly and clearly",
-          "Write simply about familiar topics, write personal letters describing experiences and impressions"
+          "Fé fas a bann sitiyasyon ki plipar kan zot vwayaz dan bann kote ki dimoun koze angle",
+          "Kozé par kot bann lexperyans ek bann evenman, réve, lesper, ek ambisyon, donn rézon ek eskplanasion par kot bann opinyon ek plan, rakonté istwar enn liv ouswa fim ek dekri bann réaksion",
+          "Konprann bann pwen prinsipal discours kler par kot travay, lekol ek lezer, konprann bann pwen prinsipal dan bann progrèm radyo ouswa TV par kot aktyalite ouswa sibzè ki konen, kan orator la koze lantman ek klerman",
+          "Ekrir par kot bann sibzè ki konen, ekrir bann liter personel ki dekri bann lexperyans ek impo"
         ]
       },
       {
         "id": "4",
-        "CourseName": "General English",
-        "Level": "Level 4 (B1 or Intermediate)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 3 or have reached this level in another set-up. (The learner will sit a test to determine his or her level)",
+        "CourseName": "Angle Zeneral",
+        "Level": "Nivo 4 (B1 ouswa Entermiedier)",
+        "Duration": "50 zèr",
+        "Description": "Sa kour-la pou bann aprann ki finn terminé nivo 3 ouswa ki finn atant nivo sa dan enn lot kaden. (Laprenan pou asiz enn test pou determinen so nivo)",
         "LearningOutcomes": [
-          "Speak regularly with any English speakers",
-          "Discuss familiar topics in detail and give their opinions and explain advantages and disadvantages",
-          "Understand long speeches and lectures and follow complex arguments if the topic is reasonably familiar, understand most TV news and current affairs programs and the majority of films in common accents",
-          "Read articles and reports about common topics and understand modern novels",
-          "Write clearly and in detail about a wide range of subjects, including essays, reports and letters about events and personal experiences"
+          "Koze régilyerman avek kik angle ki pale",
+          "Diskité par kot sibzè ki konen an detail ek donn zot opinyon ek eskplané bann avanitizer ek dezavantitizer",
+          "Konprann bann long discours ek lékiké ek suiv bann argiman kompleks si sibzè-la byen konen, konprann plipar progrèm TV nouvél ek aktyalité ek bann plipar fim dan bann akasan ki konen",
+          "Lir bann lartik ek rapor par kot sibzè ki konen ek konprann bann roman modèn",
+          "Ekrir kléman ek an detail par kot enn laroj sibzè, inklir bann esè, rapor ek liter par kot bann evenman ek lexperyans personel"
         ]
       },
       {
         "id": "5",
-        "CourseName": "General English",
-        "Level": "Level 5 (B2 or Upper Intermediate)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 4 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
+        "CourseName": "Angle Zeneral",
+        "Level": "Nivo 5 (B2 ouswa Antre-Entermiedier)",
+        "Duration": "50 zèr",
+        "Description": "Sa kour-la pou bann aprann ki finn terminé nivo 4 ouswa ki finn atant nivo sa dan enn lot kaden. (Laprenan pou asiz enn test pou determinen so nivo)",
         "LearningOutcomes": [
-          "Speak fluently without searching for language",
-          "Give ideas and opinions and relate their ideas to those of other speakers",
-          "Talk about complex subjects and develop arguments",
-          "Understand long complex speech",
-          "Understand most television programs and films",
-          "Understand long and complex factual literary texts, with different styles",
-          "Understand specialized articles and long technical instructions",
-          "Write long, clear, well-structured text to express their points of view",
-          "Write about complex subject in a letter, an essay or a report",
-          "Write in an appropriate style"
+          "Koze fluaman san rod langaz",
+          "Donn bann lide ek opinyon ek lié zot lide avek sa lezot oratè",
+          "Kozé par kot sibzè kompleks ek devlope bann argiman",
+          "Konprann bann long discours kompleks",
+          "Konprann plipar progrèm televizyon ek fim",
+          "Konprann bann tèks literè faktuel long ek kompleks, avek bann stil diferan",
+          "Konprann bann lartik spesializé ek bann lirstraksyon teknik long",
+          "Ekrir bann tèks long, klér, byen struture pou ekspimé zot pwen devwa",
+          "Ekrir par kot sibzè kompleks dan enn liter, enn esè ouswa enn rapor",
+          "Ekrir dan enn stil aproprie"
         ]
       },
       {
         "id": "6",
-        "CourseName": "General English",
-        "Level": "Level 6 (C1 or Advanced)",
-        "Duration": "50 hours",
-        "Description": "This course is for learners who have completed level 5 or have reached this level in another set-up. (The learner will have to sit for a test to determine his or her level)",
+        "CourseName": "Angle Zeneral",
+        "Level": "Nivo 6 (C1 ouswa Avanse)",
+        "Duration": "50 zèr",
+        "Description": "Sa kour-la pou bann aprann ki finn terminé nivo 5 ouswa ki finn atant nivo sa dan enn lot kaden. (Laprenan pou asiz enn test pou determinen so nivo)",
         "LearningOutcomes": [
-          "Take part fluently and effortlessly in any conversation and have a good familiarity with idiomatic expressions and colloquialisms",
-          "Present a clear, smoothly-flowing description or argument in a style appropriate to the context and with an effective logical structure",
-          "Understand any kind of spoken language, live or broadcast, at fast native speed when the learner has some time to get familiar with different accent",
-          "Read with ease abstract structurally or linguistically complex texts such as manuals, specialized articles and literary works",
-          "Write clear, smoothly flowing texts in an appropriate style",
-          "Write complex letters, reports or articles which present a case with an effective logical structure",
-          "Write summaries and reviews of professional or literary works"
+          "Partisipé fluaman ek san efò dan kik konversasyon ek ena enn bon konnesans bann ekspresyon idiomatik ek kolokyalis",
+          "Prezanté enn deskripsion ouswa argiman kler ek lis an stil ki aproprie konteks-la ek avek enn striltur lojik efikas",
+          "Konprann kik langaj oral, en difizyon, an vitès nativel kan laprenan ena kik tan pou konen diferan akasan",
+          "Lir avan les bann tèks abstrè ki kompleks dan striltur ouswa langaz kouma bann manyel, bann lartik spesializé ek bann lèv literè",
+          "Ekrir bann tèks kler, lis dan stil aproprie",
+          "Ekrir bann liter kompleks, rapor ouswa lartik ki prezanté enn ka avek enn striltur lojik efikas",
+          "Ekrir bann rézimé ek révyu par kot lèv profesional ouswa literè"
         ]
       }
     ]

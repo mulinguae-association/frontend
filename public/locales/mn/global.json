@@ -26,5 +26,250 @@
     "502": "错误网关。服务器收到无效响应。",
     "503": "服务不可用。请稍后再试。",
     "504": "网关超时。请稍后再试。"
+  },
+  "chatbot": {
+    "title": "Mulinguae AI 助手",
+    "subtitle": "随时助您学习",
+    "typing": "正在输入...",
+    "online": "在线",
+    "viewConversations": "查看对话",
+    "closeChat": "关闭聊天",
+    "toggleChat": "打开/关闭聊天",
+    "quickQuestions": "快速提问",
+    "popularTopics": "热门话题",
+    "tapQuestion": "点击问题即可提问",
+    "typeMessage": "输入消息...",
+    "askAbout": "询问{{topic}}...",
+    "startVoice": "开始语音输入",
+    "stopVoice": "停止语音输入",
+    "startConversation": "开始对话吧！欢迎就 Mulinguae 提出任何问题。",
+    "somethingWrong": "出错了，请重试。",
+    "yourConversations": "您的对话",
+    "newChat": "新对话",
+    "loadingConversations": "正在加载对话...",
+    "loadFailed": "对话加载失败。",
+    "noConversations": "暂无对话。",
+    "startNewChat": "开始新对话以获取帮助。",
+    "openConversation": "打开关于{{domain}}的对话",
+    "msgs": "{{count}}条消息",
+    "categories": {
+      "gettingStarted": "快速开始",
+      "teachers": "教师",
+      "courses": "课程",
+      "booking": "预订",
+      "technical": "技术支持",
+      "community": "社区"
+    },
+    "questions": {
+      "gettingStarted": [
+        "如何开始在 Mulinguae 上学习一门语言？",
+        "如何找到适合我的老师？",
+        "支持哪些语言？",
+        "有免费试用吗？",
+        "如何创建账户？"
+      ],
+      "teachers": [
+        "如何成为 Mulinguae 上的教师？",
+        "成为教师有哪些要求？",
+        "教师认证如何运作？",
+        "教师如何获得报酬？",
+        "我可以自己设置时间安排和价格吗？"
+      ],
+      "courses": [
+        "提供哪些课程类型？",
+        "课程级别（A1-C2）如何运作？",
+        "课程包含证书吗？",
+        "我可以按照自己的进度学习吗？",
+        "包含哪些教材？"
+      ],
+      "booking": [
+        "如何预订课程？",
+        "如果需要取消或改期怎么办？",
+        "试听课如何运作？",
+        "接受哪些付款方式？",
+        "有退款政策吗？"
+      ],
+      "technical": [
+        "支持哪些设备和浏览器？",
+        "如何使用视频教室？",
+        "我可以离线使用 Mulinguae 吗？",
+        "如何更改我的语言偏好？",
+        "如果遇到技术问题怎么办？"
+      ],
+      "community": [
+        "如何与其他学习者联系？",
+        "我可以写博客文章吗？",
+        "什么是团结与互助计划？",
+        "语言交流如何运作？",
+        "有社区活动吗？"
+      ]
+    },
+    "errorGeneric": "对不起，出了点问题。请重试。",
+    "errorLoadConversation": "无法加载此对话。",
+    "domain": {
+      "general": "通用",
+      "teachers": "教师",
+      "courses": "课程",
+      "blogs": "博文",
+      "getting-started": "快速开始",
+      "booking": "预订",
+      "technical": "技术支持",
+      "community": "社区"
+    },
+    "errorStreaming": "此浏览器不支持流式传输。",
+    "sendFailed": "发送消息失败。"
+  },
+  "app": {
+    "yes": "是",
+    "no": "不",
+    "loading": "加载中...",
+    "loadingEllipsis": "加载中…",
+    "sessionExpired": "您的会话已过期。请重新登录。",
+    "loginSuccess": "登录成功",
+    "imageTooLarge": "图片尺寸超过允许的最大限制。",
+    "noChangesMade": "未进行任何更改。",
+    "confirmDeleteTeacher": "您确定要删除这位老师吗？",
+    "confirmDeletePost": "您确定要删除这篇文章吗？",
+    "learnMoreCompany": "了解更多关于我们公司的信息",
+    "watchIntro": "观看介绍",
+    "joinMulinguae": "加入 Mulinguae",
+    "backToTop": "返回顶部",
+    "toggleMenuLanguage": "点击菜单按钮切换语言",
+    "joinUs": "加入我们",
+    "searchByTitleOrUser": "按标题或用户名搜索",
+    "expandCourseDetails": "展开课程详情",
+    "collapseCourseDetails": "折叠课程详情",
+    "closeIntro": "关闭介绍",
+    "closeVideo": "关闭视频",
+    "videoTitleFallback": "视频",
+    "allLibraries": "所有图书馆",
+    "altLogo": "Mulinguae 标志",
+    "altLanguagesIcon": "语言",
+    "altRightIcon": "展开",
+    "altBooksList": "图书清单",
+    "altProfile": "个人资料",
+    "altTeacherImage": "老师图片",
+    "altEditTeacherCard": "编辑老师卡片",
+    "altPersonalAvatar": "个人头像",
+    "altUserImage": "用户图片",
+    "altDonation": "捐赠",
+    "altStudentsImg": "学生图片",
+    "altMultilingualGroup": "代表多语能力的不同人群",
+    "altEarth": "代表多语能力的地球插图",
+    "altAboutMission": "我们的使命",
+    "altAboutUs": "关于我们",
+    "altAboutStory": "我们的故事",
+    "altAboutVision": "我们的愿景",
+    "altAboutTutors": "我们的导师",
+    "printArticle": "打印本文",
+    "altPrintImg": "打印图片"
+  },
+  "admin": {
+    "addTeacherInfo": "添加老师信息",
+    "firstName": "名",
+    "enterFirstName": "输入名字",
+    "lastName": "姓",
+    "enterLastName": "输入姓氏",
+    "email": "电子邮箱",
+    "enterEmail": "输入电子邮箱",
+    "jobBrief": "工作要点",
+    "enterJobBrief": "输入工作要点",
+    "aboutTeacher": "关于老师",
+    "enterAboutTeacher": "输入关于老师的信息",
+    "telephone": "电话",
+    "enterTelephone": "输入电话/手机号码",
+    "uploadImage": "上传图片",
+    "chooseImageLess1MB": "请选择小于 1MB 的图片",
+    "chooseImageLessThan1MB": "请选择小于 1MB 的图片",
+    "addingTeacher": "正在添加老师...",
+    "addTeacher": "添加老师",
+    "update": "更新",
+    "changeImage": "更换图片",
+    "pendingBlogs": "待审核的博文",
+    "accept": "接受",
+    "refuse": "拒绝",
+    "pendingComments": "待审核的评论",
+    "blogApproved": "博文已批准，将出现在博文列表中",
+    "commentApproved": "评论已批准，将出现在评论列表中",
+    "addTeacherSuccess": "新老师已成功添加",
+    "deleteTeacherSuccess": "老师已成功删除",
+    "updateTeacherSuccess": "老师信息已成功更新"
+  },
+  "seo": {
+    "home": {
+      "title": "Mulinguae | 多语言社区与语言交流",
+      "description": "Mulinguae 是一个全球多语言社区，用于语言交流与学习。与母语者一起学习语言，与世界各地的朋友联系，今天就来加入 Mulinguae。（与 Mulingua 无关。）",
+      "keywords": "mulinguae, mulingua, 语言学习, 多语言, 语言交流, 母语者, 全球社区"
+    },
+    "contact": {
+      "title": "联系 Mulinguae | 与我们多语言的团队沟通",
+      "description": "如需语言学习、合作或支持，请联系 Mulinguae（Mulingua）。与我们多语言的团队联系并加入我们的全球社区。",
+      "keywords": "联系 mulinguae, 联系 mulingua, 语言支持, 多语言, 语言交流, 全球社区"
+    },
+    "about": {
+      "title": "关于 Mulinguae | 我们的使命与多语言社区",
+      "description": "了解 Mulinguae 通过语言学习、多语言和文化交流连接世界各地人们的使命。了解 Mulinguae（Mulingua）如何让语言学习者和母语者共同成长。",
+      "keywords": "关于 mulinguae, 关于 mulingua, 语言学习, 多语言, 语言交流, 我们的使命, 全球社区, 母语者"
+    },
+    "allStudents": {
+      "title": "所有年龄段的学生 | Mulinguae 多语言教育",
+      "description": "了解 Mulinguae 如何支持所有年龄段学生的多语言教育。了解我们的项目、方法和平等倡议。",
+      "keywords": "所有年龄段的学生, 多语言教育, mulinguae, mulingua, 平等, 学习方法, 全球社区"
+    },
+    "hundredPhrases": {
+      "title": "100 个常用短语 | Mulinguae 多语言学习",
+      "description": "探索 100 个用于多语言学习和交流的常用短语。Mulinguae 为全球学习者提供语言资源。",
+      "keywords": "100 个短语, 常用短语, 多语言, 语言学习, mulinguae, mulingua, 交流"
+    },
+    "feedback": {
+      "title": "反馈 | 联系 Mulinguae 团队并报告问题",
+      "description": "发送反馈、报告错误或联系 Mulinguae 团队。帮助我们改进多语言社区和语言学习平台。",
+      "keywords": "反馈, 联系, 报告错误, mulinguae, mulingua, 语言学习, 多语言社区"
+    },
+    "blogs": {
+      "title": "Mulinguae 博客 | 语言学习故事与社区洞察",
+      "description": "阅读 Mulinguae 多语言社区的最新博客文章。发现语言学习技巧、文化故事和 Mulinguae（Mulingua）的最新动态。",
+      "keywords": "mulinguae 博客, mulingua 博客, 语言学习, 多语言, 语言交流, 社区故事, mulingua, mulinguae"
+    },
+    "multilingualism": {
+      "title": "多语言 | Mulinguae 语言多样性与全球社区",
+      "description": "与 Mulinguae（Mulingua）一起探索多语言。了解我们全球社区中的语言多样性、文化交流和多语言的益处。",
+      "keywords": "多语言, mulingua, mulinguae, 语言多样性, 语言学习, 文化交流, 全球社区"
+    },
+    "unity": {
+      "title": "团结与互助 | Mulinguae 社区原则",
+      "description": "探索 Mulinguae 多语言社区中团结与互助的原则。了解我们的价值观、教育和全球合作。",
+      "keywords": "团结, 互助, mulinguae, mulingua, 社区, 原则, 教育, 全球合作"
+    },
+    "linguicide": {
+      "title": "语言消亡 | 语言消失与保护 - Mulinguae",
+      "description": "了解 Mulinguae 多语言社区中关于语言消亡、语言消失和保护的努力。探索资源和全球倡议。",
+      "keywords": "语言消亡, 语言消失, 语言保护, mulinguae, mulingua, 濒危语言, 全球倡议"
+    },
+    "teachers": {
+      "title": "Mulinguae 教师 | 认识我们多语言的语言教育者",
+      "description": "认识 Mulinguae（Mulingua）的教师。我们多语言的教育者帮助您学习语言并与全球社区联系。了解我们的教学团队及其专业知识。",
+      "keywords": "mulingua 教师, mulinguae 教师, 语言教育者, 多语言, 语言学习, 全球社区"
+    },
+    "students": {
+      "title": "Mulinguae 学生 | 语言学习者和多语言社区",
+      "description": "认识 Mulinguae（Mulingua）的学生。加入我们由语言学习者组成的多语言社区，并与世界各地的人们联系。发现语言学习的故事和经验。",
+      "keywords": "mulingua 学生, mulinguae 学生, 语言学习者, 多语言, 语言学习, 全球社区"
+    }
+  },
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "非常弱",
+    "weak": "弱",
+    "medium": "中等",
+    "strong": "强",
+    "veryStrong": "非常强"
+  },
+  "Error_Recaptcha": "reCAPTCHA 验证失败。请重试。",
+  "time": {
+    "daysAgo": "{{count}}天前",
+    "hoursAgo": "{{count}}小时前",
+    "minutesAgo": "{{count}}分钟前",
+    "justNow": "刚刚"
   }
 }

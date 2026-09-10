@@ -30,7 +30,6 @@ export const BlogPostsProvider = ({ children }) => {
       },
     },
   );
-  console.log("🚀 ~ BlogPostsProvider ~ data:", data);
 
   const contextValue = {
     acceptedPosts: data,

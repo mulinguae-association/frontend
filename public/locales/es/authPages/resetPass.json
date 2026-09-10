@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "Confirma tu nueva contraseña",
   "resetButton": "Restablecer contraseña",
   "resetSuccessMessage": "Tu contraseña se ha restablecido correctamente.",
-  "loadingText": "Cargando..."
+  "loadingText": "Cargando...",
+  "missingFieldsError": "Por favor, complete todos los campos obligatorios."
 }

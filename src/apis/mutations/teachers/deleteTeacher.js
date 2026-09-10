@@ -3,6 +3,7 @@ import handleError from "../../../utils/handleError";
 import { notifyError, notifySuccess } from "../../../components/Notify";
 import logError from "../../../utils/logError";
 import { deleteTeacher } from "../../apiUtility"
+import i18n from "../../../i18n";
 
 export const useDeleteTeacherMutation = () => {
   const queryClient = useQueryClient();
@@ -23,7 +24,7 @@ export const useDeleteTeacherMutation = () => {
         logError(error);
       },
       onSuccess: () => {
-        notifySuccess("Successfully deleted a teacher")
+        notifySuccess(i18n.t("admin.deleteTeacherSuccess"))
       }
     }
   );

@@ -12,7 +12,7 @@ const IntroVideoModal = ({
   captions = {},
 }) => {
   const playerRef = useRef(null);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const lang = i18n.language || "en";
 
   const [blobTracks, setBlobTracks] = useState({});
@@ -132,7 +132,7 @@ const IntroVideoModal = ({
         <button
           className="intro-close"
           onClick={handleClose}
-          aria-label="Close intro"
+          aria-label={t("app.closeIntro")}
         >
           ×
         </button>

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { isValidMessage } from "../utils/chatbotUtils";
 
 /**
@@ -19,9 +20,11 @@ const ChatInput = ({
   showVoiceButton = false,
   onVoiceStart,
   onVoiceEnd,
-  placeholder = "Type a message...",
+  placeholder,
   maxLength = 4000,
 }) => {
+  const { t } = useTranslation("global");
+  const inputPlaceholder = placeholder || t("chatbot.typeMessage");
   const [message, setMessage] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const inputRef = useRef(null);
@@ -74,7 +77,7 @@ const ChatInput = ({
           value={message}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          placeholder={placeholder}
+          placeholder={inputPlaceholder}
           disabled={disabled || isRecording}
           rows={1}
           maxLength={maxLength}
@@ -85,7 +88,7 @@ const ChatInput = ({
               type="button"
               className={`chat-input__voice-btn ${isRecording ? "chat-input__voice-btn--active" : ""}`}
               onClick={handleVoiceToggle}
-              aria-label={isRecording ? "Stop voice input" : "Start voice input"}
+              aria-label={isRecording ? t("chatbot.stopVoice") : t("chatbot.startVoice")}
             >
               {isRecording ? "⏹" : "🎙"}
             </button>

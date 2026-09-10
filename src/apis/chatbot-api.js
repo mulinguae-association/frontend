@@ -1,4 +1,5 @@
 import axios from "axios";
+import i18n from "../i18n";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
@@ -68,7 +69,7 @@ export const streamChatMessage = (message, options = {}) => {
       onStatus?.(response.status);
 
       if (!response.ok) {
-        let detail = "Failed to get response from AI.";
+        let detail = i18n.t("chatbot.errorGeneric");
         try {
           const errBody = await response.json();
           detail = errBody.error || errBody.message || detail;
@@ -81,7 +82,7 @@ export const streamChatMessage = (message, options = {}) => {
       }
 
       if (!response.body) {
-        onError?.("Streaming is not supported by this browser.");
+        onError?.(i18n.t("chatbot.errorStreaming"));
         onDone?.();
         return;
       }
@@ -117,7 +118,7 @@ export const streamChatMessage = (message, options = {}) => {
       onDone?.();
     } catch (err) {
       if (err.name === "AbortError") return;
-      onError?.(err.message || "Failed to send message.");
+      onError?.(err.message || i18n.t("chatbot.sendFailed"));
       onDone?.();
     }
   })();

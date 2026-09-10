@@ -5,6 +5,7 @@ import { useAuth } from '../../../../contexts/AuthContext';
 import { isTextTruncated } from '../../../../utils/isTextTruncated';
 import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs/removeComment';
 import i18n from '../../../../i18n';
+import { useTranslation } from 'react-i18next';
 import { BiLoaderAlt } from 'react-icons/bi';
 import { useCache } from '../../../../contexts/BlogsCache';
 const UpdateComment = React.lazy(() => import('./UpdateComment'));
@@ -19,6 +20,7 @@ const Comment = ({
   list
 }) => {
   const { userData, isAuth } = useAuth();
+  const { t } = useTranslation("pages/blogs");
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
   const contentRef = useRef(null);
@@ -67,7 +69,7 @@ const Comment = ({
                 ? comment.postedBy?.profileImage
                 : '/images/fallBackUser.png'
             }
-            alt='personal avatar'
+            alt={t('app.altPersonalAvatar')}
             onError={(e) => {
               e.target.src = '/images/fallBackUser.png';
             }}
@@ -94,7 +96,7 @@ const Comment = ({
               <p ref={contentRef} className={`comment_content ${isExpanded ? 'expanded' : 'truncated'}`}>{comment?.content}</p>
               <button className='read-more-button' onClick={toggleReadMore}>
                 {isTruncated && (
-                  isExpanded ? "Show less" : "Read more"
+                  isExpanded ? t("showLess") : t("readMore")
                 )}
               </button>
             </div>

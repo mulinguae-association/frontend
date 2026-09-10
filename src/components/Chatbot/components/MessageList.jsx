@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import ChatMessage from "./ChatMessage";
+import { useTranslation } from "react-i18next";
 
 /**
  * Renders a list of chat messages with auto-scroll.
@@ -16,6 +17,7 @@ const MessageList = ({
   error = false,
   errorMessage = "",
 }) => {
+  const { t } = useTranslation("global");
   const messagesEndRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -26,7 +28,7 @@ const MessageList = ({
     <div className="message-list">
       {messages.length === 0 && !isLoading && !error && (
         <div className="message-list__empty">
-          <p>Start a conversation! Ask me anything about Mulinguae.</p>
+          <p>{t("chatbot.startConversation")}</p>
         </div>
       )}
 
@@ -51,7 +53,7 @@ const MessageList = ({
       {error && (
         <div className="chat-message chat-message--error">
           <div className="chat-message__bubble">
-            <p>{errorMessage || "Something went wrong. Please try again."}</p>
+            <p>{errorMessage || t("chatbot.somethingWrong")}</p>
           </div>
         </div>
       )}

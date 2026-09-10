@@ -1,0 +1,77 @@
+{
+  "header": {
+    "title": "Égalité, unité et solidarité"
+  },
+  "tabs": {
+    "overview": "Aperçu",
+    "principles": "Principes",
+    "education": "Éducation"
+  },
+  "overview": {
+    "title": "Nos principes directeurs",
+    "subtitle": "Les fondements de notre projet",
+    "equality": {
+      "title": "Égalité",
+      "description": "Les plus hautes valeurs d'égalité entre tous les êtres humains guident notre projet. L'égalité s'oppose à la discrimination et à l'exclusion sous toutes leurs formes."
+    },
+    "humanValues": {
+      "title": "Valeurs humaines",
+      "description": "Reconnaître qu'en tant qu'êtres humains nous avons tous les mêmes valeurs. Cela signifie que nous avons tous les mêmes droits, que nous devons tous recevoir le même niveau de respect et avoir le même accès aux opportunités."
+    },
+    "whenEqualityAbsent": {
+      "title": "Quand l'égalité est absente",
+      "description": "Quand l'égalité fait défaut, l'unité et la solidarité sont le recours."
+    }
+  },
+  "principles": {
+    "unity": {
+      "title": "Unité",
+      "subtitle": "La force de l'union",
+      "description": [
+        "L'unité consiste à être ensemble ou unis avec quelqu'un ou quelque chose. C'est le contraire d'être divisé. Les êtres humains ont toujours utilisé ce concept pour survivre sur cette planète.",
+        "Dans une société de classes où un petit groupe de personnes contrôle les ressources communes, l'unité est un outil puissant pour la majorité afin de défendre ses intérêts."
+      ]
+    },
+    "solidarity": {
+      "title": "Solidarité",
+      "subtitle": "Unis pour le changement",
+      "description": [
+        "La solidarité ou le solidarisme est la conscience des intérêts, des objectifs, des normes et des sympathies partagés qui crée un sentiment psychologique d'unité de groupe ou de classe. La solidarité est très importante lorsque les travailleurs et les autres groupes discriminés dans la société n'ont pas de voix.",
+        "Étymologiquement, le mot solidarité vient du latin solidus, une unité de compte dans la Rome antique. La solidarité décrit les liens entre les individus qui leur permettent de former une unité sociale cohérente. Émile Durkheim, sociologue, philosophe et pédagogue français, a soutenu que la solidarité est l'état normal de la société, et que la société ne pourrait pas exister sans elle."
+      ]
+    }
+  },
+  "education": {
+    "project": {
+      "title": "Notre projet éducatif",
+      "subtitle": "Promouvoir l'égalité par l'éducation",
+      "goals": {
+        "title": "Objectifs du projet",
+        "description": "Notre projet éducatif est ouvert à toutes les organisations et à tous les individus dont l'objectif est de combattre la discrimination et de promouvoir l'égalité en tant que droit fondamental de l'homme et principe fondamental de la justice sociale."
+      },
+      "approach": {
+        "title": "Notre approche",
+        "description": "Elle partage les hypothèses fondamentales de la philosophie des droits de l'homme : par exemple, qu'en tant que droit humain, l'égalité est un droit et non un avantage, et doit être juridiquement applicable, comme tout autre droit de l'homme."
+      }
+    },
+    "declaration": {
+      "title": "Déclaration universelle des droits de l'homme",
+      "subtitle": "Article 26 - Droit à l'éducation",
+      "quote": "Toute personne a droit à l'éducation. L'éducation est gratuite, au moins en ce qui concerne l'enseignement élémentaire et fondamental. L'enseignement élémentaire est obligatoire. L'enseignement technique et professionnel est généralisé et l'accès aux études supérieures est ouvert à tous en fonction du mérite."
+    },
+    "equity": {
+      "title": "Équité éducative",
+      "subtitle": "Garantir un accès équitable à une éducation de qualité",
+      "accordion": {
+        "item1": {
+          "title": "Pourquoi l'équité éducative est-elle importante ?",
+          "content": "L'équité éducative est cruciale car elle a un impact sur les opportunités d'emploi futures d'une personne et sur sa qualité de vie globale. Elle garantit que tous les individus, quel que soit leur milieu d'origine, ont accès à une éducation de qualité."
+        },
+        "item2": {
+          "title": "Comment atteindre l'équité éducative ?",
+          "content": "Dans une société égalitaire, l'éducation de qualité ne serait pas réservée aux personnes à revenus élevés. Payer des études supérieures ne signifierait pas qu'un étudiant devrait rembourser des prêts à intérêts élevés pendant des années. L'équité éducative est particulièrement importante en raison de son impact sur les opportunités d'emploi futures d'une personne."
+        }
+      }
+    }
+  }
+}

@@ -97,7 +97,6 @@ export async function createComment(blogId, commentData) {
     if (response.status === 201) {
       return { status: 201, data: response.data };
     }
-    console.log(response);
     logError("Error creating comment:", response.status);
     return { status: response.status, error: "Error creating comment" };
   } catch (error) {

@@ -1,0 +1,14 @@
+{
+  "title": "Étudiants de tous âges",
+  "intro": "Cette plateforme est ouverte aux personnes de tous âges. Le projet accueille des étudiants de tous âges dans le monde de l'éducation. Nous condamnons fermement toute forme de discrimination fondée sur l'âge. Tout préjugé ou discrimination fondé sur l'âge d'une personne est pris au sérieux et signalé afin que des mesures appropriées puissent être prises.",
+  "categoriesTitle": "Catégories d'étudiants",
+  "categories": ["Maternelle", "Primaire", "Secondaire", "Université", "Adultes"],
+  "learningMethodsTitle": "Méthodes d'apprentissage",
+  "learningMethodsText": "Notre attention ne se porte pas uniquement sur la méthodologie d'enseignement pour chaque catégorie d'étudiants, mais aussi sur les méthodes d'apprentissage. Les experts ont observé qu'il existe différentes façons d'apprendre et qu'il est nécessaire de choisir des méthodologies qui correspondent à la diversité des méthodes d'apprentissage.",
+  "costReductionTitle": "Réduction des coûts",
+  "costReductionText": "En tant qu'organisation à but non lucratif, nous faisons tout notre possible pour réduire le coût de vos études le plus possible, tout en reconnaissant que l'association a des frais de fonctionnement à supporter.",
+  "equalityTitle": "Égalité et inclusion",
+  "equalityText": "L'académie considère tous les étudiants comme égaux et prête une attention particulière aux groupes discriminés dans l'éducation, tels que les peuples autochtones, les personnes âgées, les filles, les femmes et les étudiants à faibles revenus.",
+  "participationTitle": "Encourager la participation",
+  "participationText": "Nous encourageons la participation de tous à toutes les activités majeures du projet, y compris l'apprentissage intergénérationnel pour faciliter l'échange réciproque de connaissances entre étudiants de tous âges."
+}

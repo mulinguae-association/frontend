@@ -1,0 +1,75 @@
+{
+  "Head": "विषय सूची",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "यह नीति क्या कवर करती है?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "हम कौन सा डेटा एकत्र, उपयोग और साझा करते हैं? (सारांश)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "हम कौन सा डेटा एकत्र करते हैं?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "हम आपका डेटा कैसे उपयोग करते हैं?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "हम कुकीज़ का उपयोग कैसे करते हैं?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "हम दूसरों के साथ डेटा कब साझा करते हैं?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "सामाजिक सुविधाएँ।",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "हम आपका डेटा क्यों उपयोग कर सकते हैं।",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "हम आपका डेटा कितने समय तक रखते हैं?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "हम आपके डेटा को सुरक्षित कैसे रखते हैं?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "आप अपने डेटा को कैसे नियंत्रित कर सकते हैं?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "शिकायतें।",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "आप हमसे कैसे संपर्क कर सकते हैं?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "इस नीति में परिवर्तन",
+      "link": "data-changing"
+    }
+  ]
+}

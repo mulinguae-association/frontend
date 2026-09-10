@@ -25,9 +25,9 @@ export default function UnityAndSolidarity() {
   return (
     <>
       <SEO
-        title="Unity & Solidarity | Mulinguae Community Principles"
-        description="Discover the principles of unity and solidarity in the Mulinguae multilingual community. Learn about our values, education, and global collaboration."
-        keywords="unity, solidarity, mulinguae, mulingua, community, principles, education, global collaboration"
+        title={t("seo.unity.title")}
+        description={t("seo.unity.description")}
+        keywords={t("seo.unity.keywords")}
         path="/pages/unity-solidarity"
       />
       <main className="main_content">
@@ -72,12 +72,12 @@ export default function UnityAndSolidarity() {
           </div>
           <Card className="card">
             <CardHeader
-              title={"When Equality is Absent"}
+              title={t("overview.whenEqualityAbsent.title")}
               icon={IoWarningOutline}
               className={"absent_equality"}
             />
             <p className="warning-text">
-              When there is no equality, unity and solidarity are the recourse.
+              {t("overview.whenEqualityAbsent.description")}
             </p>
           </Card>
         </div>

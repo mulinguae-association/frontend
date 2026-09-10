@@ -20,5 +20,10 @@
     "medium": "Media",
     "strong": "Fuerte",
     "veryStrong": "Muy Fuerte"
-  }
+  },
+  "Label_Agree_To": "Acepto los ",
+  "Text_The_Terms": "términos ",
+  "Text_and": "y la ",
+  "Text_Privacy_Policy": "política de privacidad",
+  "registrationSuccessful": "¡Registro exitoso! Por favor, revise su correo electrónico para verificar su cuenta."
 }

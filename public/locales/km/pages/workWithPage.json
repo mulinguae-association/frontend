@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "badge": "Ranz Nou Misyon",
+    "title": "TRAVAY AK NOU",
+    "subtitle": "Dor ACS Mulinguae, ou pa travay <em>pou nou</em> — ou travay <em>avèk nou</em>.",
+    "community": "Pou bann edikater bann ti kominote kolaborativ"
+  },
+  "mission": {
+    "header": "Nou Bi Komen",
+    "paragraph1": "Nou pe bati enn kominote kolaborativ bann edikater lini par enn bi komen: promouvwar miltilingwism ek protez bann langaz lemond kont risk disparision.",
+    "paragraph2": "Kan ou rant dan ACS Mulinguae, ou vinn part enn lekip angaze ki krwar ki diversite lingwistik pa se enn opsion — li esansiel."
+  },
+  "values": {
+    "title": "Kifer Bann Langaz Inportan",
+    "subtitle": "Sak langaz pote konesans, kiltir, idantite, ek listwar. Protez zot pa zis enn bi akademik; se enn responsabilite anver limanite.",
+    "items": {
+      "knowledge": {
+        "title": "Konesans",
+        "text": "Bann langaz prezerv bann fason inik pou konprann ek antre an relasion avek lemond"
+      },
+      "culture": {
+        "title": "Kiltir",
+        "text": "Sak langaz inkarn bann tradisyon, valer, ek sazes so bann lokiter"
+      },
+      "identity": {
+        "title": "Idantite",
+        "text": "Langaz fondamantal pou idantite personel ek kominoter ek pou santiman apartenans"
+      },
+      "history": {
+        "title": "Listwar",
+        "text": "Bann langaz konekte nou avek nou pase ek pous devan konesans bann zanset"
+      }
+    }
+  },
+  "commitment": {
+    "title": "Nou Angazman",
+    "items": [
+      {
+        "title": "Ledikasion Inklizif",
+        "text": "Nou asire ki ledikasion akseye ek valoriz tou bann aprann, san konsider zot fond lingwistik"
+      },
+      {
+        "title": "Aprantisaz Aksesib",
+        "text": "Nou kraze bann baryer pou fer ledikasion langaz disponib pou tou dimoun, tou kote"
+      },
+      {
+        "title": "Respe Eriter",
+        "text": "Nou onore ek prezerv eriter lingwistik ki defini bann kominote partou dan lemond"
+      }
+    ],
+    "note": "Ansam, nou travay pou asire ki ledikasion inklizif, aksesib, ek respekte eriter lingwistik."
+  },
+  "partnership": {
+    "badge": "Kolaborasion",
+    "title": "Ansam Nou Travay Pli Byen ek Pli Vit!",
+    "subtitle": "Nou ouver pou travay avek lezot lorizasion ki ena mem bi ki nou ek ki partaz nou bann valer miss",
+    "introParagraphs": [
+      "Dor ACS Mulinguae, nou angaze pou fer avan bann akse ekitab a ledikasion atraver promosion miltilingwism ek prezervasion diversite lingwistik.",
+      "Nou krwar ki langaz pa zis enn zouti kominikasion, me enn poteur sistem konesans, memwar kiltirel, idantite, ek koesion sosyal. Me zordi, bann santenn langaz an risk disparision, ek bann milyon aprann reste mal servi par bann sistem ledikasion ki pa reflet zot reyalite lingwistik."
+    ],
+    "missionPointsTitle": "Nou Misyon",
+    "missionPoints": [
+      {
+        "title": "Promouvwar Ledikasion Miltiling",
+        "text": "Kouma enn moteur inklizion ek sike akademik"
+      },
+      {
+        "title": "Ranforsi Proteksion Langaz",
+        "text": "Proteksion ek revitalizasion bann langaz vilnerab"
+      },
+      {
+        "title": "Soutir Bann Anseyan",
+        "text": "Aterver bann pratik pedagozik kolaborativ ki baze lor resers"
+      },
+      {
+        "title": "Model Ledikasion Dirab",
+        "text": "Ki respekte diversite lingwistik"
+      }
+    ],
+    "whyHeader": "Kifer Partenaria Inportan",
+    "whySubtitle": "Bann partenaria stratezik permet nou pou:",
+    "whyList": [
+      "Agraandi devlopman kurikulum miltiling",
+      "Fournir formasion anseyan ek devlopman profesyonel",
+      "Devlop bann materyel ledikasion dan bann langaz ki pa byen reprezante",
+      "Kondui resers ek evalyasion limpak",
+      "Agraandi bann model dirab ledikasion inklizif"
+    ],
+    "note": "Nou travay kontribie direkteman a bann bi ledikasion global ek prezervasion kiltirel, inklir enn ledikasion kalite inklizif ek ekitab ek gard sekirite eriter kiltirel imateryel."
+  },
+  "partnerCallout": {
+    "title": "Nou Pe Sear Bann Partener Mantalite Parey",
+    "text": "Nou sear bann partener ki rekonet ki diversite lingwistik pa enn problem marginal, me enn pilye fondamantal devlopman dirab, lazistis sosyal, ek avansman imin lor long term.",
+    "highlight": "Ansam, nou kapav asire ki bann sistem ledikasion donn pouvwar bann aprann dan zot prop langaz — ek ki okenn langaz, ek okenn aprann, pa kit deryer.",
+    "button": "Vinn Partener avèk Nou"
+  },
+  "cta": {
+    "badge": "Fer enn Diferans",
+    "title": "Vinn Part Enn Kiksoz Pli Gran",
+    "text": "Vinn part lekip ki debout pou ledikasion, diversite, ek proteksion bann langaz partou dan lemond.",
+    "join": "Ranz Nou Kominote",
+    "learn": "Apri Pli"
+  },
+  "becomeTeacher": {
+    "title": "Vinn Enn Anseyan avèk ACS Mulinguae",
+    "lead": "Dor ACS Mulinguae, nou krwar ki miltilingwism se enn pon puisan ant bann kiltir ek enn chemin vital ver akse ekitab a ledikasion ek pou gagn pouvwar bann kominote vilnerab partou dan lemond. Silvouple, ranpli formulair aplikasion la ek soumet li avek ou CV.",
+    "button": "Ranz Nou Kominote"
+  }
+}

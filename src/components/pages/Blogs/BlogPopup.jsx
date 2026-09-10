@@ -8,6 +8,7 @@ import sanitizeHtml from "../../../utils/sanitizeHtml";
 import { useTranslation } from "react-i18next";
 import SkeletonComment from "../../Skeletons/SkeletonComment";
 import ShowMoreRepliesBtn from "./comments/ShowMoreRepliesBtn";
+import i18n from "../../../i18n";
 
 const BlogPopup = ({
   blog,
@@ -21,6 +22,7 @@ const BlogPopup = ({
 }) => {
   const { userData } = useAuth();
   const { t } = useTranslation("pages/blogs");
+  const isAr_Ur = ["ar", "ur"].includes(i18n.language);
   const { isEditComment, handleEdit, setIsEditComment, editCommentId } =
     useCommentEditState();
   const [loading, setLoading] = useState(false);
@@ -53,11 +55,14 @@ const BlogPopup = ({
           </>
         )}
         {showAllComments && (
-          <div className="popup_content">
+          <div
+            className="popup_content"
+            style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }}
+          >
             <div className="comments_header">
               <h1 className="comment_title">
                 <span className="special">{blog?.title} </span>
-                Comments
+                {t("blogPopupComments")}
               </h1>
             </div>
             {comments.map((comment, index) =>
@@ -107,7 +112,7 @@ const BlogPopup = ({
               {!hasNextPage && (
                 <div className="last_comment">
                   <span className="point"></span>
-                  <span>All Comments Loaded</span>
+                  <span>{t("allCommentsLoaded")}</span>
                 </div>
               )}
             </div>
@@ -117,7 +122,11 @@ const BlogPopup = ({
             </button>
           </div>
         )}
-        <button onClick={() => show(false)} className="blog_close">
+        <button
+          onClick={() => show(false)}
+          className="blog_close"
+          aria-label={t("closeBtn")}
+        >
           x
         </button>
       </div>

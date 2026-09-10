@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { getCommonQuestionsByCategory, getAllSuggestionCategories } from "../knowledge/websiteKnowledge";
+import { useTranslation } from "react-i18next";
+import { getAllSuggestionCategories } from "../knowledge/websiteKnowledge";
 
 /**
  * Predefined suggestion buttons for the chatbot.
@@ -10,6 +11,8 @@ import { getCommonQuestionsByCategory, getAllSuggestionCategories } from "../kno
  * @param {boolean} [props.showTrigger] - Whether to show the trigger button initially.
  */
 const PredefinedSuggestions = ({ onSelectSuggestion, showTrigger = true }) => {
+  const { t, i18n } = useTranslation("global");
+  const isRTL = ["ar", "ur"].includes(i18n.language);
   const [isOpen, setIsOpen] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("gettingStarted");
   const categories = getAllSuggestionCategories();
@@ -18,10 +21,12 @@ const PredefinedSuggestions = ({ onSelectSuggestion, showTrigger = true }) => {
 
   // Load suggestions when category changes
   useEffect(() => {
-    const loaded = getCommonQuestionsByCategory(selectedCategory);
-    setSuggestions(loaded);
+    const loaded = t(`chatbot.questions.${selectedCategory}`, {
+      returnObjects: true,
+    });
+    setSuggestions(Array.isArray(loaded) ? loaded : []);
     setAnimateKey((k) => k + 1); // retrigger animation
-  }, [selectedCategory]);
+  }, [selectedCategory, t]);
 
   const handleSuggestionClick = useCallback(
     (suggestion) => {
@@ -47,7 +52,9 @@ const PredefinedSuggestions = ({ onSelectSuggestion, showTrigger = true }) => {
             {isOpen ? "✕" : "💡"}
           </span>
           {!isOpen && (
-            <span className="predefined-suggestions__trigger-text">Quick Questions</span>
+            <span className="predefined-suggestions__trigger-text">
+              {t("chatbot.quickQuestions")}
+            </span>
           )}
         </button>
       )}
@@ -55,8 +62,8 @@ const PredefinedSuggestions = ({ onSelectSuggestion, showTrigger = true }) => {
       {isOpen && (
         <div className="predefined-suggestions__panel">
           <div className="predefined-suggestions__header">
-            <h4 className="predefined-suggestions__title">💡 Popular Topics</h4>
-            <span className="predefined-suggestions__hint">Tap a question to ask</span>
+            <h4 className="predefined-suggestions__title">💡 {t("chatbot.popularTopics")}</h4>
+            <span className="predefined-suggestions__hint">{t("chatbot.tapQuestion")}</span>
           </div>
 
           <div className="predefined-suggestions__categories">
@@ -74,7 +81,7 @@ const PredefinedSuggestions = ({ onSelectSuggestion, showTrigger = true }) => {
                   {categories[catKey].icon}
                 </span>
                 <span className="predefined-suggestions__category-label">
-                  {categories[catKey].label}
+                  {t(`chatbot.categories.${catKey}`)}
                 </span>
               </button>
             ))}
@@ -89,7 +96,7 @@ const PredefinedSuggestions = ({ onSelectSuggestion, showTrigger = true }) => {
                 style={{ animationDelay: `${index * 40}ms` }}
               >
                 <span className="predefined-suggestions__item-text">{suggestion}</span>
-                <span className="predefined-suggestions__item-arrow">→</span>
+                <span className="predefined-suggestions__item-arrow">{isRTL ? "←" : "→"}</span>
               </button>
             ))}
           </div>

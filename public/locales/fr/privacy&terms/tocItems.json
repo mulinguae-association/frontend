@@ -1,0 +1,75 @@
+{
+  "Head": "Sommaire",
+  "tocItems": [
+    {
+      "id": 1,
+      "title": "Que couvre cette politique ?",
+      "link": "policy-cover"
+    },
+    {
+      "id": 2,
+      "title": "Quelles données collectons-nous, utilisons-nous et partageons-nous ? (résumé)",
+      "link": "data-collection-summary"
+    },
+    {
+      "id": 3,
+      "title": "Quelles données collectons-nous ?",
+      "link": "data-collection"
+    },
+    {
+      "id": 4,
+      "title": "Comment utilisons-nous vos données ?",
+      "link": "data-using"
+    },
+    {
+      "id": 5,
+      "title": "Comment utilisons-nous les cookies ?",
+      "link": "cookies-information"
+    },
+    {
+      "id": 6,
+      "title": "Quand partageons-nous des données avec des tiers ?",
+      "link": "data-sharing"
+    },
+    {
+      "id": 7,
+      "title": "Fonctionnalités sociales.",
+      "link": "social-features"
+    },
+    {
+      "id": 8,
+      "title": "Pourquoi pouvons-nous utiliser vos données ?",
+      "link": "data-usage"
+    },
+    {
+      "id": 9,
+      "title": "Combien de temps conservons-nous vos données ?",
+      "link": "data-retention"
+    },
+    {
+      "id": 10,
+      "title": "Comment protégeons-nous vos données ?",
+      "link": "data-protection"
+    },
+    {
+      "id": 11,
+      "title": "Comment pouvez-vous contrôler vos données ?",
+      "link": "data-control"
+    },
+    {
+      "id": 12,
+      "title": "Plaintes.",
+      "link": "complaints"
+    },
+    {
+      "id": 13,
+      "title": "Comment pouvez-vous nous contacter ?",
+      "link": "contact-us"
+    },
+    {
+      "id": 14,
+      "title": "Modifications de cette politique",
+      "link": "data-changing"
+    }
+  ]
+}

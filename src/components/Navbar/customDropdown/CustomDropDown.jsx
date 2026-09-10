@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./CustomDropdown.scss";
 
 const CustomDropdown = ({ options, onSelect, className }) => {
+  const { t } = useTranslation("global");
   const [selectedLang, setSelectedLang] = useState(
     localStorage.getItem("i18nextLng") || options[0]
   );
@@ -38,7 +40,7 @@ const CustomDropdown = ({ options, onSelect, className }) => {
           <img
             className="languages_icon"
             src={"/images/icons/languages-icon.png"}
-            alt="languagesIcon"
+            alt={t("app.altLanguagesIcon")}
           />
           <span className={`arrow_down ${isOpen ? "rotate" : ""}`}></span>
         </div>
@@ -63,7 +65,7 @@ const CustomDropdown = ({ options, onSelect, className }) => {
               <span className="option">
                 {option.label}
                 {selectedLang.toLowerCase() === option?.value && (
-                  <img src={"/images/icons/right-icon.png"} alt="right-icon" />
+                  <img src={"/images/icons/right-icon.png"} alt={t("app.altRightIcon")} />
                 )}
               </span>
             </li>

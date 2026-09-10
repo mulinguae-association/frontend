@@ -13,9 +13,9 @@ const Linguicide = () => {
   return (
     <>
       <SEO
-        title="Linguicide | Language Loss & Preservation - Mulinguae"
-        description="Learn about linguicide, language loss, and preservation efforts in the Mulinguae multilingual community. Explore resources and global initiatives."
-        keywords="linguicide, language loss, language preservation, mulinguae, mulingua, endangered languages, global initiatives"
+        title={t("seo.linguicide.title")}
+        description={t("seo.linguicide.description")}
+        keywords={t("seo.linguicide.keywords")}
         path="/pages/linguicide"
       />
       <main>

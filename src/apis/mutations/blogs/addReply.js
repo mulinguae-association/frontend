@@ -6,6 +6,7 @@ import { notifyError } from "../../../components/Notify";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 import { useCache } from "../../../contexts/BlogsCache";
+import i18n from "../../../i18n";
 
 export const useAddReplyMutation = (setReplyContent) => {
   const { userData } = useAuth();
@@ -94,7 +95,7 @@ export const useAddReplyMutation = (setReplyContent) => {
           );
         } else {
           setNotificationPopup({
-            message: "Your reply comment has been submitted for review",
+            message: i18n.t("pages/blogs:replySubmittedReview"),
           });
         }
       },

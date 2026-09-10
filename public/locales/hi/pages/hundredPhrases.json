@@ -11,7 +11,9 @@
         "शुभ अपराह्न।",
         {
           "subtitle": "सवाल पूछना",
-          "phrases": ["आप कैसे हैं?"]
+          "phrases": [
+            "आप कैसे हैं?"
+          ]
         },
         {
           "subtitle": "उत्तर",
@@ -26,15 +28,23 @@
     },
     {
       "title": "विदाई",
-      "img": https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp
+      "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255613/zkmdtuweqnxoqlffvbm7.webp",
       "alt": "विदाई चित्र",
-      "phrases": ["अलविदा।", "फिर मिलेंगे।", "शुभ रात्रि।"]
+      "phrases": [
+        "अलविदा।",
+        "फिर मिलेंगे।",
+        "शुभ रात्रि।",
+        "शुभ रात्रि।"
+      ]
     },
     {
       "title": "माफ़ी मांगना",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
       "alt": "माफ़ी मांगना चित्र",
-      "phrases": ["क्षमा करें।", "मुझे खेद है।"]
+      "phrases": [
+        "क्षमा करें।",
+        "मुझे खेद है।"
+      ]
     },
     {
       "title": "मदद और जवाब मांगना",

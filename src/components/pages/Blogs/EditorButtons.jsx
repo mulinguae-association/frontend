@@ -1,15 +1,18 @@
 import React, { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { BiImageAdd, BiLink } from "react-icons/bi";
 import { notifyError } from "../../Notify";
 import { validateImageUrl } from "../../../utils/validateImages";
 import { validateUrl } from "../../../utils/validateUrl";
 
 const EditorButtons = ({ editor }) => {
+  const { t } = useTranslation("pages/blogs");
+
   const setLink = useCallback(async () => {
     const previousUrl = editor.getAttributes("link").href;
-    const url = window.prompt("URL", previousUrl);
+    const url = window.prompt(t("editor.promptUrl"), previousUrl);
     if (!validateUrl(url)) {
-      return notifyError("invalid Url ");
+      return notifyError(t("editor.errorInvalidUrl"));
     }
     // cancelled
     if (url === null) {
@@ -24,14 +27,14 @@ const EditorButtons = ({ editor }) => {
     }
     // update link
     editor.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
-  }, [editor]);
+  }, [editor, t]);
 
   const addImage = async () => {
-    const url = window.prompt("URL");
+    const url = window.prompt(t("editor.promptUrl"));
 
     const isValidImage = await validateImageUrl(url); // validate image URL
     if (!isValidImage) {
-      notifyError("Invalid image URL. Please provide a valid image.");
+      notifyError(t("editor.errorInvalidImage"));
       return;
     }
     if (url) {
@@ -45,7 +48,7 @@ const EditorButtons = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleBold().run()}
         disabled={!editor.can().chain().focus().toggleBold().run()}
         className={editor.isActive("bold") ? "is-active" : ""}
-        title="Bold (Ctrl+B)"
+        title={t("editor.bold")}
       >
         B
       </button>
@@ -54,7 +57,7 @@ const EditorButtons = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleItalic().run()}
         disabled={!editor.can().chain().focus().toggleItalic().run()}
         className={editor.isActive("italic") ? "is-active" : ""}
-        title="Italic (Ctrl+I)"
+        title={t("editor.italic")}
       >
         I
       </button>
@@ -62,7 +65,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleUnderline().run()}
         className={editor.isActive("underline") ? "is-active" : ""}
-        title="Underline (Ctrl+U)"
+        title={t("editor.underline")}
       >
         U
       </button>
@@ -71,7 +74,7 @@ const EditorButtons = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleStrike().run()}
         disabled={!editor.can().chain().focus().toggleStrike().run()}
         className={editor.isActive("strike") ? "is-active" : ""}
-        title="Strikethrough"
+        title={t("editor.strikethrough")}
       >
         S
       </button>
@@ -80,7 +83,7 @@ const EditorButtons = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleCode().run()}
         disabled={!editor.can().chain().focus().toggleCode().run()}
         className={editor.isActive("code") ? "is-active" : ""}
-        title="Inline Code"
+        title={t("editor.inlineCode")}
       >
         `
       </button>
@@ -88,7 +91,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().setParagraph().run()}
         className={editor.isActive("paragraph") ? "is-active" : ""}
-        title="Paragraph"
+        title={t("editor.paragraph")}
       >
         P
       </button>
@@ -96,7 +99,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
         className={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
-        title="Heading 2"
+        title={t("editor.heading", { level: 2 })}
       >
         H2
       </button>
@@ -104,7 +107,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
         className={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}
-        title="Heading 3"
+        title={t("editor.heading", { level: 3 })}
       >
         H3
       </button>
@@ -112,7 +115,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
         className={editor.isActive("heading", { level: 4 }) ? "is-active" : ""}
-        title="Heading 4"
+        title={t("editor.heading", { level: 4 })}
       >
         H4
       </button>
@@ -120,7 +123,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}
         className={editor.isActive("heading", { level: 5 }) ? "is-active" : ""}
-        title="Heading 5"
+        title={t("editor.heading", { level: 5 })}
       >
         H5
       </button>
@@ -128,7 +131,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
         className={editor.isActive("heading", { level: 6 }) ? "is-active" : ""}
-        title="Heading 6"
+        title={t("editor.heading", { level: 6 })}
       >
         H6
       </button>
@@ -136,7 +139,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={editor.isActive("bulletList") ? "is-active" : ""}
-        title="Bullet List"
+        title={t("editor.bulletList")}
       >
         ••
       </button>
@@ -144,7 +147,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         className={editor.isActive("orderedList") ? "is-active" : ""}
-        title="Ordered List"
+        title={t("editor.orderedList")}
       >
         1.
       </button>
@@ -152,7 +155,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         className={editor.isActive("codeBlock") ? "is-active" : ""}
-        title="Code Block"
+        title={t("editor.codeBlock")}
       >
         {`</>`}
       </button>
@@ -160,7 +163,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         className={editor.isActive("blockquote") ? "is-active" : ""}
-        title="Blockquote"
+        title={t("editor.blockquote")}
       >
         "
       </button>
@@ -168,7 +171,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={setLink}
         className={editor.isActive("link") ? "is-active" : ""}
-        title="Add Link"
+        title={t("editor.addLink")}
       >
         <BiLink fontSize={20} />
       </button>
@@ -176,24 +179,24 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().unsetLink().run()}
         disabled={!editor.isActive("link")}
-        title="Remove Link"
+        title={t("editor.removeLink")}
       >
         🔗x
       </button>
-      <button type="button" onClick={addImage} title="Add Image from URL">
+      <button type="button" onClick={addImage} title={t("editor.addImageUrl")}>
         <BiImageAdd fontSize={20} />
       </button>
       <button
         type="button"
         onClick={() => editor.chain().focus().setHorizontalRule().run()}
-        title="Horizontal Line"
+        title={t("editor.horizontalLine")}
       >
         ─
       </button>
       <button
         type="button"
         onClick={() => editor.chain().focus().setHardBreak().run()}
-        title="Line Break"
+        title={t("editor.lineBreak")}
       >
         ↵
       </button>
@@ -201,7 +204,7 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().undo().run()}
         disabled={!editor.can().chain().focus().undo().run()}
-        title="Undo (Ctrl+Z)"
+        title={t("editor.undo")}
       >
         ↶
       </button>
@@ -209,14 +212,14 @@ const EditorButtons = ({ editor }) => {
         type="button"
         onClick={() => editor.chain().focus().redo().run()}
         disabled={!editor.can().chain().focus().redo().run()}
-        title="Redo (Ctrl+Y)"
+        title={t("editor.redo")}
       >
         ↷
       </button>
       <button
         type="button"
         onClick={() => editor.chain().focus().unsetAllMarks().run()}
-        title="Clear Formatting"
+        title={t("editor.clearFormatting")}
       >
         X
       </button>
@@ -226,7 +229,7 @@ const EditorButtons = ({ editor }) => {
         className={
           editor.isActive("textStyle", { color: "#00008B" }) ? "is-active" : ""
         }
-        title="Set Text Color"
+        title={t("editor.setTextColor")}
       >
         🔵
       </button>
@@ -237,7 +240,7 @@ const EditorButtons = ({ editor }) => {
         }
         value={editor.getAttributes("textStyle").color || "#013220"}
         data-testid="setColor"
-        title="Pick Text Color"
+        title={t("editor.pickTextColor")}
       />
     </div>
   );

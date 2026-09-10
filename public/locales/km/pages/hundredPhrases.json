@@ -4,37 +4,52 @@
     {
       "title": "Kuma Salye",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255641/gvredxjktbswekfvt4jw.webp",
-      "alt": "Greetings Image",
+      "alt": "Imaz Salye",
       "phrases": [
         "Alo/ Ki manier",
         "Bonzur",
         "Bonn apremidi",
         {
           "subtitle": "Dimann kesyon",
-          "phrases": ["Ki manier?"]
+          "phrases": [
+            "Ki manier?"
+          ]
         },
         {
           "subtitle": "Repons",
-          "phrases": ["Korek, mersi.", "Oke", "E twa?", "Korek/ pli zu mwin"]
+          "phrases": [
+            "Korek, mersi.",
+            "Oke",
+            "E twa?",
+            "Korek/ pli zu mwin"
+          ]
         }
       ]
     },
     {
       "title": "Bonzour",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255613/zkmdtuweqnxoqlffvbm7.webp",
-      "alt": "Goodbyes Image",
-      "phrases": ["Bay.", "O revwar.", "Un zwenn plitar.", "Bonn nwi."]
+      "alt": "Imaz Bonzour",
+      "phrases": [
+        "Bay.",
+        "O revwar.",
+        "Un zwenn plitar.",
+        "Bonn nwi."
+      ]
     },
     {
       "title": "Dimann ekskiz",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,f_auto,c_fill/v1707255591/gwm74wwcxpdj1c863kdz.png",
-      "alt": "Apologize Image",
-      "phrases": ["Ekskiz mwa", "Pardonn mwa"]
+      "alt": "Imaz Ekskiz",
+      "phrases": [
+        "Ekskiz mwa",
+        "Pardonn mwa"
+      ]
     },
     {
       "title": "Dimann kudme e repons",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill/v1707255595/g73tpmnwtgilmdgwk5kx.webp",
-      "alt": "Asking for Help Image",
+      "alt": "Imaz Dimann Kudme",
       "phrases": [
         "Kot ofis imgrasyon / stasyon lapolis/ lazans vwayaz ete?",
         "Li truv ……………….dan sant vil/ pre avek bazar/ lor katriem letaz.",
@@ -45,7 +60,7 @@
     {
       "title": "Bazar",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255657/wika18wmuvlv3dnbu5sv.webp",
-      "alt": "Market Image",
+      "alt": "Imaz Bazar",
       "phrases": [
         "Ki ete sa ?",
         "Apel sa pomdamur.",
@@ -64,7 +79,7 @@
     {
       "title": "Bann ekspresyon zurnalye",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255617/jnmysr8vyavme2k6mjlx.webp",
-      "alt": "Daily Expressions Image",
+      "alt": "Imaz Bann Ekspresyon",
       "phrases": [
         "Byen sir",
         "Wi",
@@ -80,7 +95,7 @@
     {
       "title": "Prezansazyon",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,f_auto,c_fill/v1707255158/introduce_others.jpg_yv2bln.webp",
-      "alt": "Introducing Image",
+      "alt": "Imaz Prezantasyon",
       "phrases": [
         "Mo prezant twa/ ou Arletta",
         "Mo invit twa rankont mo bann kamarad",
@@ -96,7 +111,7 @@
     {
       "title": "Koz lor to pei dorizinn",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_400,c_fill,f_auto,q_70/v1707255661/jz1mg2vwv99sxxckhzbe.webp",
-      "alt": "Talking about Country Image",
+      "alt": "Imaz Pei Dorizin",
       "phrases": [
         "Ki pei to sorti?",
         "Mo pei apel Peru( Lezip/ Moris/ Brezil eksetera.",
@@ -127,7 +142,7 @@
     {
       "title": "Koz lor travay",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255692/mxtnxphqsc8yrebrq83d.webp",
-      "alt": "Talking about Work Image",
+      "alt": "Imaz Travay",
       "phrases": [
         "Ki to fer dan lavi?",
         "Mo enn profeser( inzenyer/ sarpantye/ fiter/dokter( eksetera",
@@ -142,7 +157,7 @@
     {
       "title": "Koz lor lekol",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto,w_450,c_fill/v1707255679/s4m8jom7dz3npmoxo7ka.webp",
-      "alt": "Talking about School Image",
+      "alt": "Imaz Lekol",
       "phrases": [
         "To enn etidya?",
         "Wi",
@@ -157,7 +172,7 @@
     {
       "title": "Koz lor bann lwazir",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_450,c_fill,f_auto/v1707255682/fk9m24bvidwcw8b3liye.webp",
-      "alt": "Leisure Activities Image",
+      "alt": "Imaz Bann Lwazir",
       "phrases": [
         "Ki to fer pu dister twa?",
         "Mo kontan danse",
@@ -175,7 +190,7 @@
     {
       "title": "Fer kamarad/ bann ti koze",
       "img": "https://res.cloudinary.com/dfnwjr7vo/image/upload/w_500,c_fill,f_auto/v1707255645/hwlmzwliczl2nykqfobg.webp",
-      "alt": "Making Friends Image",
+      "alt": "Imaz Fer Kamarad",
       "phrases": [
         "Eski to swaf?",
         "Ki to kontan bwar?",

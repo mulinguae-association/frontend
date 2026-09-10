@@ -2,10 +2,10 @@
   "page_title": "Multilinguismo",
   "definition_head": "Definição",
   "about_definition": "Existem várias definições sobre o que é o multilinguismo, encontradas em dicionários e plataformas de mídia social. Uma definição abrangente é a da Comissão Europeia, o órgão executivo da União Europeia.",
-  "about_definition2": "“Multilinguismo é a capacidade de sociedades, instituições, grupos e indivíduos interagirem regularmente com mais de um idioma em seu dia a dia”.",
+  "about_definition2": "\"Multilinguismo é a capacidade de sociedades, instituições, grupos e indivíduos interagirem regularmente com mais de um idioma em seu dia a dia\".",
   "about_definition3": "A definição não se limita apenas ao bilinguismo e trilinguismo, mas abrange a expressão das identidades culturais, ajudando a preservar a democracia, a transparência e a responsabilidade.",
-  "about_definition4": "“Nenhuma legislação pode entrar em vigor até ser traduzida para todos os idiomas oficiais e publicada no Jornal Oficial da UE. Críticamente, as disposições relacionadas ao regime linguístico da UE só podem ser alteradas por voto unânime no Conselho da UE”.",
-  "about_definition5": "A UNESCO, agência da Organização das Nações Unidas, afirma que “A diversidade linguística é essencial para a herança humana. Cada idioma incorpora a sabedoria cultural única de um povo. A perda de qualquer idioma é uma perda para toda a humanidade”.",
+  "about_definition4": "\"Nenhuma legislação pode entrar em vigor até ser traduzida para todos os idiomas oficiais e publicada no Jornal Oficial da UE. Críticamente, as disposições relacionadas ao regime linguístico da UE só podem ser alteradas por voto unânime no Conselho da UE\".",
+  "about_definition5": "A UNESCO, agência da Organização das Nações Unidas, afirma que \"A diversidade linguística é essencial para a herança humana. Cada idioma incorpora a sabedoria cultural única de um povo. A perda de qualquer idioma é uma perda para toda a humanidade\".",
   "importanceLanguage_head": "A importância da diversidade linguística",
   "about_importanceLang": "A linguagem faz parte do código genético do homo sapiens. É o requisito para uma habilidade humana única. É a base de uma civilização e une as pessoas. Sendo o meio de representação da formação e expressão da cultura de uma nação, a linguagem deve ser preservada e protegida contra qualquer tentativa de impor um idioma dominante.",
   "about_importanceLang2": "A UNESCO destaca que todos têm o direito à liberdade de expressão em um idioma de sua escolha na Internet e no domínio público, conforme consagrado nos instrumentos internacionais de direitos humanos, incluindo a",
@@ -19,13 +19,11 @@
   "link4": "Década Internacional das Línguas Indígenas ",
   "about_importanceLang7": "em colaboração com a UNDESA e outras agências relevantes.",
   "linguaFranca_head": "Inglês como língua franca internacional",
-  "about_linguaFranca": "O inglês é considerado a língua franca dominante atual na diplomacia internacional, negócios, ciência, cultura popular, tecnologia e aviação. O inglês é ensinado como disciplina na maioria dos países do mundo e está sendo cada vez mais utilizado como língua de instrução em todos os níveis de educação. O inglês é mais importante no currículo do que qualquer outro idioma estrangeiro no passado. O inglês é introduzido mais cedo e frequentemente utilizado como idioma adicional de instrução. No entanto, vale ressaltar que há um debate ativo em fóruns internacionais, como as Nações Unidas, para dar aos outros idiomas internacionais oficiais - árabe, francês, chinês, russo e espanhol - o mesmo status do inglês e tornar o multilinguismo eficaz.",
-  "about_linguaFranca2": "“Para eliminar a 'disparidade entre o uso do inglês e o uso dos outros cinco idiomas oficiais' e 'garantir o tratamento pleno e equitativo de todos os idiomas oficiais', como ordenado pela Assembleia Geral das Nações Unidas, o",
+  "about_linguaFranca": "O inglês é considerado a língua franca dominante atual na diplomacia internacional, negócios, ciência, cultura popular, tecnologia e aviação. O inglês é ensinado como disciplina na maioria dos países do mundo e está sendo cada vez mais utilizado como língua de instrução em todos os níveis de educação. O inglês é mais importante no currículo do que qualquer outro idioma estrangeiro no passado. O inglês é introduzido mais cedo e frequentemente utilizado como idioma adicional de instrução. No entanto, vale ressaltar que há um debate ativo em fóruns internacionais, como as Nações Unidas, para dar aos outros idiomas internacionais oficiais — árabe, francês, chinês, russo e espanhol — o mesmo status do inglês e tornar o multilinguismo eficaz. \"Para eliminar a 'disparidade entre o uso do inglês e o uso dos outros cinco idiomas oficiais' e 'garantir o tratamento pleno e equitativo de todos os idiomas oficiais', como ordenado pela Assembleia Geral das Nações Unidas, o",
   "link5": "Departamento de Comunicações Globais ",
-  "about_linguaFranca3": "definiu ",
-  "link6": "padrões mínimos para multilinguismo na web da ONU” ",
+  "about_linguaFranca2": "definiu ",
+  "link6": "padrões mínimos para multilinguismo na web da ONU\" ",
   "link7": " https://www.un.org/en/our-work/official-languages",
-
   "langFacts_head": "Alguns fatos e números para ter uma ideia da situação das línguas no mundo.",
   "about_langFacts": [
     {
@@ -67,7 +65,8 @@
       "link": " https://www.unjiu.org/sites/www.unjiu.org/files/jiu_rep_2020_6_english.pdf"
     },
     {
-      "title": "Há pedidos para que as seis línguas sejam usadas equitativamente. 'Para eliminar a 'disparidade entre o uso do inglês e o uso das outras cinco línguas oficiais' e 'garantir o tratamento completo e equitativo de todas as línguas oficiais', como ordenado pela Assembleia Geral da ONU, o Departamento de Comunicações Globais estabeleceu padrões mínimos para o multilinguismo na web da ONU.'",
+      "title": "Há pedidos para que as seis línguas sejam usadas equitativamente. \"Para eliminar a 'disparidade entre o uso do inglês e o uso das outras cinco línguas oficiais' e 'garantir o tratamento completo e equitativo de todas as línguas oficiais', como ordenado pela Assembleia Geral da ONU, o Departamento de Comunicações Globais estabeleceu padrões mínimos para o multilinguismo na web da ONU.\"",
+      "title2": "O Departamento de Comunicações Globais estabeleceu padrões mínimos para o multilinguismo na web da ONU\"",
       "link": " https://www.un.org/en/our-work/official-languages"
     },
     {
@@ -75,7 +74,7 @@
       "link": " https://www.unesco.org/en/decades/indigenous-languages"
     },
     {
-      "title": "O multilinguismo faz parte da realidade da maioria dos países do mundo. Não devemos retroceder permitindo que as línguas desapareçam. 'O multilinguismo sempre foi o contexto padrão para os seres humanos. Crianças na maioria das partes do mundo crescem com duas ou mais línguas disponíveis para elas, e cada vez mais jovens em seus estudos e trabalho se mudam para locais onde outras línguas além de sua língua materna são a norma, e eles devem aprender a ser bilíngues ou multilíngues.'",
+      "title": "O multilinguismo faz parte da realidade da maioria dos países do mundo. Não devemos retroceder permitindo que as línguas desapareçam. \"O multilinguismo sempre foi o contexto padrão para os seres humanos. Crianças na maioria das partes do mundo crescem com duas ou mais línguas disponíveis para elas, e cada vez mais jovens em seus estudos e trabalho se mudam para locais onde outras línguas além de sua língua materna são a norma, e eles devem aprender a ser bilíngues ou multilíngues.\"",
       "link": " https://www.cambridgeenglish.org/Images/539682-perspectives-impact-on-multilingualism.pdf"
     }
   ]

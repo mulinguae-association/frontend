@@ -2,7 +2,8 @@
   "titles": {
     "mainTitle": "संपर्क करें",
     "teacherFormTitle": "शिक्षक फॉर्म",
-    "studentFormTitle": "छात्र फॉर्म"
+    "studentFormTitle": "छात्र फॉर्म",
+    "subHeading": "हम आपसे सुनना पसंद करेंगे। हमें एक संदेश भेजें और हम जितनी जल्दी हो सके जवाब देंगे।"
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -49,7 +50,9 @@
     "countryPlaceholder": "देश",
     "languagesSpokenPlaceholder": "(उदाहरण के लिए, अंग्रेजी, अरबी,...)",
     "subjectsTaughtPlaceholder": "उदाहरण के लिए, गणित, विज्ञान, आदि।",
-    "addressPlaceholder": "आपका पता"
+    "addressPlaceholder": "आपका पता",
+    "fullNameLabel": "पूरा नाम",
+    "languagesSpokenTitle": "कृपया वे भाषाएँ दर्ज करें जो आप बोलते हैं"
   },
   "studentForm": {
     "nameLabel": "नाम",
@@ -67,6 +70,7 @@
     "languagesSpokenPlaceholder": "भाषाएं (उदाहरण के लिए, अंग्रेजी, अरबी,...)",
     "messageLabel": "संदेश",
     "messagePlaceholder": "अपना संदेश यहां लिखें...",
-    "cvUploadButtonText": "लोड हो रहा है..."
+    "cvUploadButtonText": "लोड हो रहा है...",
+    "languagesSpokenTitle": "कृपया वे भाषाएँ दर्ज करें जो आप बोलते हैं"
   }
 }

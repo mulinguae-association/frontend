@@ -7,5 +7,6 @@
   "confirmPasswordPlaceholder": "Confirme sua nova senha",
   "resetButton": "Redefinir Senha",
   "resetSuccessMessage": "Sua senha foi redefinida com sucesso.",
-  "loadingText": "Carregando..."
+  "loadingText": "Carregando...",
+  "missingFieldsError": "Preencha todos os campos obrigatórios."
 }

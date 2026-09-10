@@ -2,7 +2,8 @@
   "titles": {
     "mainTitle": "Ponte en Contacto",
     "teacherFormTitle": "Bienvenido Profesor",
-    "studentFormTitle": "Bienvenido Estudiante"
+    "studentFormTitle": "Bienvenido Estudiante",
+    "subHeading": "Nos encantaría saber de usted. Envíenos un mensaje y le responderemos lo antes posible."
   },
   "contactInfo": {
     "phone": "+51 (939) 499-087",
@@ -49,7 +50,9 @@
     "countryPlaceholder": "Su país",
     "languagesSpokenPlaceholder": "(por ejemplo, Inglés, Árabe,...)",
     "subjectsTaughtPlaceholder": "por ejemplo, Matemáticas, Ciencias, etc.",
-    "addressPlaceholder": "Su dirección"
+    "addressPlaceholder": "Su dirección",
+    "fullNameLabel": "Nombre completo",
+    "languagesSpokenTitle": "Por favor, ingrese los idiomas que habla"
   },
   "studentForm": {
     "nameLabel": "Nombre",
@@ -67,6 +70,7 @@
     "languagesSpokenPlaceholder": "Insira idiomas (por ejemplo, Inglés, Árabe, ...)",
     "messageLabel": "Mensaje",
     "messagePlaceholder": "Escriba su mensaje aquí...",
-    "cvUploadButtonText": "cargando..."
+    "cvUploadButtonText": "cargando...",
+    "languagesSpokenTitle": "Por favor, ingrese los idiomas que habla"
   }
 }

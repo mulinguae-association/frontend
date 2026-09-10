@@ -1,27 +1,27 @@
 {
-  "optional": "(ជម្រើស)",
-  "required": "តម្រូវ",
-  "loading": "កំពុងផ្ទុក...",
-  "submit": "ដាក់ស្នើ",
-  "cancel": "បោះបង់",
-  "save": "រក្សាទុក",
-  "edit": "កែសម្រួល",
-  "delete": "លុប",
-  "close": "បិទ",
-  "back": "ត្រឡប់ក្រោយ",
-  "next": "បន្ទាប់",
-  "yes": "បាទ/ចាស",
-  "no": "ទេ",
+  "optional": "(Opsionel)",
+  "required": "Obligater",
+  "loading": "Pe charz...",
+  "submit": "Soumet",
+  "cancel": "Anile",
+  "save": "Gard",
+  "edit": "Edite",
+  "delete": "Efase",
+  "close": "Ferme",
+  "back": "Retourn",
+  "next": "Sivan",
+  "yes": "Wi",
+  "no": "Non",
   "error": {
-    "general": "មានកំហុសមួយបានកើតឡើង",
-    "required": "វាលនេះត្រូវបានទាមទារ",
-    "email": "សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលត្រឹមត្រូវ",
-    "phone": "សូមបញ្ចូលលេខទូរស័ព្ទត្រឹមត្រូវ"
+    "general": "Enn ero finn arive",
+    "required": "Cham sa bizin rempli",
+    "email": "Tanpri antre enn adrès imel valab",
+    "phone": "Tanpri antre enn numer telefon valab"
   },
   "success": {
-    "general": "ជោគជ័យ!",
-    "saved": "បានរក្សាទុកដោយជោគជ័យ",
-    "updated": "បានធ្វើបច្ចុប្បន្នភាពដោយជោគជ័យ",
-    "deleted": "បានលុបដោយជោគជ័យ"
+    "general": "Reisi!",
+    "saved": "Gard avek sikse",
+    "updated": "Mett a zour avek sikse",
+    "deleted": "Efase avek sikse"
   }
 }

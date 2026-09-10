@@ -18,7 +18,7 @@ const TeacherProfile = () => {
   }
 
   if (isError) {
-    return <div className='not-found'>Teacher not found</div>;
+    return <div className='not-found'>{t('notFound')}</div>;
   }
 
   const teacherImg = typeof teacher?.image === "object"
@@ -51,7 +51,7 @@ const TeacherProfile = () => {
               {teacher?.teaching_philosophy ? (
                 <p>{teacher.teaching_philosophy}</p>
               ) : (
-                <p>No {t('sec7_about1')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about1') })}</p>
               )}
             </div>
             <div className='block'>
@@ -59,7 +59,7 @@ const TeacherProfile = () => {
               {teacher?.career_summary ? (
                 <p>{teacher.career_summary}</p>
               ) : (
-                <p>No {t('sec7_about2')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about2') })}</p>
               )}
             </div>
             <div className='block'>
@@ -67,7 +67,7 @@ const TeacherProfile = () => {
               {teacher?.teaching_methods ? (
                 <p>{teacher.teaching_methods}</p>
               ) : (
-                <p>No {t('sec7_about3')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about3') })}</p>
               )}
             </div>
             <div className='block'>
@@ -75,7 +75,7 @@ const TeacherProfile = () => {
               {teacher?.qualification_cert ? (
                 <p>{teacher.qualification_cert}</p>
               ) : (
-                <p>No {t('sec7_about4')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about4') })}</p>
               )}
             </div>
             <div className='block'>
@@ -83,7 +83,7 @@ const TeacherProfile = () => {
               {teacher?.teacher_collaboration ? (
                 <p>{teacher.teacher_collaboration}</p>
               ) : (
-                <p>No {t('sec7_about5')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about5') })}</p>
               )}
             </div>
             <div className='block'>
@@ -91,7 +91,7 @@ const TeacherProfile = () => {
               {teacher?.classroom_management ? (
                 <p>{teacher.classroom_management}</p>
               ) : (
-                <p>No {t('sec7_about6')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about6') })}</p>
               )}
             </div>
             <div className='block'>
@@ -99,7 +99,7 @@ const TeacherProfile = () => {
               {teacher?.behavior_management ? (
                 <p>{teacher.behavior_management}</p>
               ) : (
-                <p>No {t('sec7_about7')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about7') })}</p>
               )}
             </div>
             <div className='block'>
@@ -107,7 +107,7 @@ const TeacherProfile = () => {
               {teacher?.additional_info ? (
                 <p>{teacher.additional_info}</p>
               ) : (
-                <p>No {t('sec7_about8')} available</p>
+                <p>{t('noAboutAvailable', { field: t('sec7_about8') })}</p>
               )}
             </div>
           </article>

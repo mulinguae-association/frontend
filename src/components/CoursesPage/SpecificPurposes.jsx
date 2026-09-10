@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const SpecificPurposes = ({
@@ -8,6 +9,7 @@ const SpecificPurposes = ({
   isEnglish,
   S,
 }) => {
+  const { t } = useTranslation("global");
   return (
     <div
       id={course.id}
@@ -36,8 +38,8 @@ const SpecificPurposes = ({
         tabIndex="0"
         title={
           collapse[course.id]
-            ? "Expand course details"
-            : "Collapse course details"
+            ? t("app.expandCourseDetails")
+            : t("app.collapseCourseDetails")
         }
         aria-expanded={!collapse[course.id]}
       >

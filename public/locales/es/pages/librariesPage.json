@@ -1,0 +1,23 @@
+{
+  "title": "Biblioteca de Videos",
+  "head": "Videos seleccionados sobre idiomas en desaparición. Haz clic en una tarjeta para ver.",
+  "videos": [
+    {
+      "id": "frh81KFbxpg",
+      "title": "Documental: Idiomas Perdidos y Recordados",
+      "description": "Un documental amplio y accesible que recorre las causas de la pérdida de idiomas — migración, asimilación y globalización — con entrevistas y grabaciones de archivo."
+    },
+    {
+      "id": "K1YCXLea9p0",
+      "title": "Estudio de Caso: Los Últimos Hablantes de un Idioma",
+      "description": "Un íntimo estudio de caso que sigue a los últimos hablantes de un idioma amenazado, mostrando el impacto cultural e historias personales."
+    },
+    {
+      "id": "bFWcT3Gbrw4",
+      "title": "Esfuerzos de Revitalización y Documentación",
+      "description": "Se centra en lingüistas, comunidades y proyectos de base que trabajan para documentar, archivar y revitalizar idiomas en peligro de extinción."
+    }
+  ],
+  "videoLibrary": "Biblioteca de vídeo",
+  "videoLibraryDescription": "Vídeos seleccionados sobre lenguas en extinción. Haz clic en una tarjeta para verlos."
+}

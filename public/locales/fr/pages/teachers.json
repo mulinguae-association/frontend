@@ -39,5 +39,8 @@
   "sec7_about5": "Collaboration entre Enseignants",
   "sec7_about6": "Gestion de la Salle de Classe",
   "sec7_about7": "Gestion du Comportement",
-  "sec7_about8": "Informations Supplémentaires"
+  "sec7_about8": "Informations Supplémentaires",
+  "sec3_about4": "Nous encourageons la pensée critique. Les enseignants doivent continuellement réfléchir à leurs propres croyances, préjugés et pratiques, et s'engager dans un développement professionnel continu pour améliorer leur capacité à créer des environnements d'apprentissage inclusifs et équitables.",
+  "notFound": "Professeur introuvable",
+  "noAboutAvailable": "Aucune {{field}} disponible"
 }

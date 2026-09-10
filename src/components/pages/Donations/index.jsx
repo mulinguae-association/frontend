@@ -31,7 +31,7 @@ const Donation = () => {
               width={500}
               height={335}
               src="https://res.cloudinary.com/dfnwjr7vo/image/upload/f_auto/w_600/v1723499391/donate_1000x667_c9o1wl.jpg"
-              alt="Donation"
+              alt={t("app.altDonation")}
             />
           </picture>
         </header>

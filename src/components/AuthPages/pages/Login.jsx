@@ -57,7 +57,7 @@ function Login() {
         password: "",
       });
 
-      notifySuccess("Login successful");
+      notifySuccess(t("app.loginSuccess"));
       queryClient.setQueryData("userProfile", res);
       navigate(`/${i18next.language}/pages/Blogs`);
     } catch (error) {

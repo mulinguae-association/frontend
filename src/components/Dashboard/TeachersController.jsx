@@ -4,9 +4,11 @@ import Tooltip from "../HelperComponents/toolTip";
 import { useState } from "react";
 import { useRef } from "react";
 import { useGlobal } from "../../contexts/AppContext.jsx";
+import { useTranslation } from "react-i18next";
 
 const TeachersController = ({ handleFormSubmit }) => {
   const { isBtnLoading } = useGlobal();
+  const { t } = useTranslation("global");
   const fileInputRef = useRef(null);
   const [formState, setFormState] = useState({
     firstName: "",
@@ -33,7 +35,7 @@ const TeachersController = ({ handleFormSubmit }) => {
     if (file && file.size <= maxImageSize) {
       setFormState({ ...formState, image: file });
     } else {
-      alert("Image size exceeds the maximum allowed limit.");
+      alert(t("app.imageTooLarge"));
       setFormState({ ...formState, image: null });
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
@@ -43,16 +45,16 @@ const TeachersController = ({ handleFormSubmit }) => {
 
   return (
     <section className="teacher_form">
-      <h1>Add Teacher Information</h1>
+      <h1>{t("admin.addTeacherInfo")}</h1>
       <form
         className="teacher_form"
         onSubmit={(e) => handleFormSubmit(e, formState, setFormState)}
       >
         <div className="teacher_name block">
           <InputField
-            label="First Name"
+            label={t("admin.firstName")}
             type="text"
-            placeholder="Enter First Name"
+            placeholder={t("admin.enterFirstName")}
             value={formState.firstName}
             onChange={(e) =>
               setFormState({ ...formState, firstName: e.target.value })
@@ -60,9 +62,9 @@ const TeachersController = ({ handleFormSubmit }) => {
             required
           />
           <InputField
-            label="Last Name"
+            label={t("admin.lastName")}
             type="text"
-            placeholder="Enter Last Name"
+            placeholder={t("admin.enterLastName")}
             value={formState.lastName}
             onChange={(e) =>
               setFormState({ ...formState, lastName: e.target.value })
@@ -72,9 +74,9 @@ const TeachersController = ({ handleFormSubmit }) => {
         </div>
         <div className="block">
           <InputField
-            label="Email"
+            label={t("admin.email")}
             type="email"
-            placeholder="Enter Email"
+            placeholder={t("admin.enterEmail")}
             value={formState.email}
             onChange={(e) =>
               setFormState({ ...formState, email: e.target.value })
@@ -82,9 +84,9 @@ const TeachersController = ({ handleFormSubmit }) => {
             required
           />
           <InputField
-            label="Job Brief"
+            label={t("admin.jobBrief")}
             type="text"
-            placeholder="Enter Job Brief"
+            placeholder={t("admin.enterJobBrief")}
             value={formState.jobBrief}
             onChange={(e) =>
               setFormState({ ...formState, jobBrief: e.target.value })
@@ -94,11 +96,11 @@ const TeachersController = ({ handleFormSubmit }) => {
         </div>
         <div className="block">
           <label className="visually-hidden" htmlFor="aboutTeacher">
-            About Teacher
+            {t("admin.aboutTeacher")}
           </label>
           <textarea
             id="aboutTeacher"
-            placeholder="Enter About Teacher"
+            placeholder={t("admin.enterAboutTeacher")}
             value={formState.aboutTeacher}
             onChange={(e) =>
               setFormState({ ...formState, aboutTeacher: e.target.value })
@@ -108,9 +110,9 @@ const TeachersController = ({ handleFormSubmit }) => {
             required
           />
           <InputField
-            label="Telephone"
+            label={t("admin.telephone")}
             type="tel" // Use "tel" type for telephone input
-            placeholder="Enter Telephone / Cellphone"
+            placeholder={t("admin.enterTelephone")}
             value={formState.telephone}
             onChange={(e) =>
               setFormState({ ...formState, telephone: e.target.value })
@@ -119,8 +121,8 @@ const TeachersController = ({ handleFormSubmit }) => {
           />
         </div>
         <label className="upload_image" htmlFor="image">
-          {!formState.image ? "Upload Image" : formState.image.name}
-          <Tooltip text="choose image less than 1MB" />
+          {!formState.image ? t("admin.uploadImage") : formState.image.name}
+          <Tooltip text={t("admin.chooseImageLess1MB")} />
         </label>
         <input
           id="image"
@@ -132,8 +134,8 @@ const TeachersController = ({ handleFormSubmit }) => {
         />
         <button type="submit">
           {isBtnLoading["createTeacherBtn"]
-            ? "Adding Teacher..."
-            : "Add Teacher"}
+            ? t("admin.addingTeacher")
+            : t("admin.addTeacher")}
         </button>
       </form>
     </section>

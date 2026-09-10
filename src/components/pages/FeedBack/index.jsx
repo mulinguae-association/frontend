@@ -145,9 +145,9 @@ const FeedBack = () => {
   return (
     <>
       <SEO
-        title="Feedback | Contact Mulinguae Team & Report Issues"
-        description="Send feedback, report bugs, or contact the Mulinguae team. Help us improve our multilingual community and language learning platform."
-        keywords="feedback, contact, report bugs, mulinguae, mulingua, language learning, multilingual community"
+        title={t("seo.feedback.title")}
+        description={t("seo.feedback.description")}
+        keywords={t("seo.feedback.keywords")}
         path="/pages/feedback"
       />
       <main className="FAQs">

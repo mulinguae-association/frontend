@@ -1,0 +1,547 @@
+{
+  "EffectiveDate": "Fecha de vigencia: 1 de julio de 2023",
+  "ContentHead": "Bienvenido a la Política de Privacidad de ACS Mulinguae.",
+  "Introduction": "Esta Política le indica cómo recopilamos y utilizamos sus datos personales (también conocidos como información personal). También le informa sobre cómo mantenemos sus datos seguros y las opciones que puede tener, así que por favor asegúrese de leerla. Queremos que esta Política sea fácil de leer. En algunas secciones, puede hacer clic para obtener más detalles sobre lo que hacemos. Por favor, tenga en cuenta que todas las partes de esta Política se aplican a todas las cosas que hacemos. Podemos dar avisos adicionales para algunos Servicios y lugares, y estos deben leerse junto con esta Política. Nuestros Servicios pueden contener enlaces a otros sitios. No controlamos estos sitios y le animamos a leer sus avisos de privacidad. Nuestros Servicios no deben ser utilizados por personas menores de 16 años.",
+  "Policy Coverage": {
+    "title": "¿Qué cubre esta Política?",
+    "policyPoints": [
+      "Esta Política le indica cómo recopilamos y utilizamos sus datos personales (también conocidos como información personal). También le informa sobre cómo mantenemos sus datos seguros y las opciones que puede tener, así que por favor asegúrese de leerla.",
+      "Queremos que esta Política sea fácil de leer. En algunas secciones, puede hacer clic para obtener más detalles sobre lo que hacemos. Por favor, tenga en cuenta que todas las partes de esta Política se aplican a todas las cosas que hacemos. Podemos dar avisos adicionales para algunos Servicios y lugares, y estos deben leerse junto con esta Política.",
+      "Nuestros Servicios pueden contener enlaces a otros sitios. No controlamos estos sitios y le animamos a leer sus avisos de privacidad.",
+      "Nuestros Servicios no deben ser utilizados por personas menores de 16 años."
+    ]
+  },
+  "Collect Data": {
+    "summary": "¿Qué datos recopilamos, utilizamos y compartimos? (resumen)",
+    "noticeAtCollection": "Esta sección constituye nuestro aviso de recopilación de conformidad con la CCPA.",
+    "categories": [
+      {
+        "category": "Identificadores Personales",
+        "description": "Como nombre, alias, dirección postal, correo electrónico, número de teléfono, identificador en línea, dirección de Protocolo de Internet, nombre de cuenta, educación, empleo, número de tarjeta de crédito o débito, cualquier información financiera e información sensible como número de Seguro Social, inicio de sesión de cuenta e información en documentos de identificación gubernamentales.",
+        "purpose": "Proporcionar nuestros Servicios y llevar a cabo sus solicitudes.",
+        "uses": [
+          "Para registrar y proteger su cuenta.",
+          "Para recibir y responder a llamadas y mensajes suyos.",
+          "Para verificar su identidad y elegibilidad para nuestros Servicios.",
+          "Para ayudarle a obtener los mejores precios y productos que tenemos.",
+          "Para dirigirle a los sitios web de nuestros socios.",
+          "Para procesar transacciones entre usted y nosotros, o nuestros socios.",
+          "Para personalizar el Servicio que recibe.",
+          "Para mantener sus datos actualizados.",
+          "Para proporcionar servicio al cliente y soporte.",
+          "Para completar las solicitudes de derechos de datos que haya realizado.",
+          "Para permitirle usar herramientas de intercambio social.",
+          "Para rastrear ventas y recibir pagos de nuestros socios.",
+          "Para permitirle usar nuestros Servicios en un dispositivo y continuar sin interrupciones donde lo dejó en otro dispositivo."
+        ]
+      },
+      {
+        "category": "Mejora y promoción de nuestros Servicios y los de otros.",
+        "description": "Como análisis e investigación de mercado, presentación de Servicios de manera clara y efectiva, realización de sorteos y encuestas, creación de mejores productos y otros fines relacionados.",
+        "purpose": "Para ayudar a mejorar y promocionar nuestros Servicios y los Servicios de nuestros socios.",
+        "uses": [
+          "Para realizar análisis e investigación de mercado.",
+          "Para ayudar a presentar nuestros Servicios de manera clara y efectiva.",
+          "Para realizar sorteos y encuestas.",
+          "Para ayudarnos a nosotros y a nuestros socios a crear mejores productos para usted.",
+          "Para procesar cualquier recompensa que le podamos ofrecer.",
+          "Para enviar actualizaciones y mensajes de Servicio sobre sus productos y servicios.",
+          "Para informarle sobre nuestros servicios y promociones por correo electrónico, redes sociales (por ejemplo, Facebook) y usando notificaciones push (cuando usted acepte).",
+          "Para informarle sobre los Servicios de otras marcas de Red Ventures.",
+          "Para crear, entrenar y mejorar modelos que nos ayuden a comprender sus posibles intereses y los de otros consumidores.",
+          "Para dirigir publicidad a usted, en este y otros sitios web, basada en datos que hayamos recopilado o creado.",
+          "Para ofrecer ofertas basadas en la ubicación de su dispositivo (cuando usted acepte).",
+          "Para ayudarnos a comprender si y cómo funciona nuestra publicidad y la de otros."
+        ]
+      },
+      {
+        "category": "Operación de nuestro negocio.",
+        "description": "Como tareas necesarias para operar nuestros Servicios y negocio, proteger nuestro negocio y prevenir el fraude, crear informes para fines internos o externos, cumplir con solicitudes legítimas legales y otros fines relacionados.",
+        "purpose": "En el curso de operar nuestro negocio, podemos usar sus datos.",
+        "uses": [
+          "Para realizar tareas necesarias para operar nuestros Servicios y negocio.",
+          "Para ayudar a proteger nuestro negocio y prevenir el fraude.",
+          "Para crear informes para fines internos o externos.",
+          "Para cumplir con solicitudes legítimas legales.",
+          "Para auditar nuestro negocio y procesos.",
+          "Para proteger los intereses de nuestro negocio y los de nuestros socios.",
+          "Para otros fines no descritos en esta Política de Privacidad a los que usted consienta (de vez en cuando) y según lo permita la ley."
+        ]
+      },
+      {
+        "category": "Características de Clasificación Protegida",
+        "description": "Información personal sensible como su edad, raza, ascendencia, origen nacional, ciudadanía, estado civil y sexo."
+      },
+      {
+        "category": "Información Comercial",
+        "description": "Información sobre productos o servicios que usted adquirió, obtuvo o consideró."
+      },
+      {
+        "category": "Información de Actividad de Internet o Red",
+        "description": "Incluye historial de navegación, historial de búsqueda e interacción con sitios web o aplicaciones."
+      },
+      {
+        "category": "Información de Geolocalización",
+        "description": "Datos derivados de su dispositivo para ubicarle dentro de un área geográfica."
+      },
+      {
+        "category": "Información Audio o Visual",
+        "description": "Como grabaciones de audio o de pantalla (con su permiso)."
+      },
+      {
+        "category": "Inferencias",
+        "description": "Obtenidas de los datos anteriores que podrían crear un perfil que refleje sus preferencias, características, comportamiento, etc."
+      }
+    ],
+    "OtherDisclosures": [
+      {
+        "title": "Otras Divulgaciones",
+        "content": "Podemos compartir sus datos personales con su consentimiento o para cumplir con leyes u otros procesos legales."
+      },
+      {
+        "title": "Venta de Datos Personales",
+        "notice": "No vendemos, alquilamos ni prestamos sus datos personales a terceros a cambio de dinero.",
+        "details": "Sin embargo, sujeto a sus elecciones de privacidad, podemos compartir sus datos (secciones de Identificadores, Datos de Actividad de Internet o Red e Información de Geolocalización del gráfico anterior) con plataformas de redes sociales, proveedores de analítica y empresas de publicidad, y esto puede ser tratado como una \"venta\" bajo ciertas leyes. Consulte la sección ¿Cómo Puede Controlar Sus Datos de esta Política para más detalles sobre sus elecciones de privacidad."
+      },
+      {
+        "title": "Retención de Datos",
+        "content": "Conservamos sus datos durante el tiempo que sea necesario para proporcionarle Servicios y para cumplir con nuestras obligaciones comerciales y legales. Cuando ya no necesitamos sus datos para nuestros fines declarados, los eliminamos de forma segura."
+      },
+      {
+        "title": "Recopilación de Datos de Menores",
+        "content": "Reconocemos la importancia de proteger la privacidad y la seguridad de los menores. Nuestros Servicios no están dirigidos a menores. No recopilamos deliberadamente datos sobre menores de 16 años o menores definidos de otra manera en la legislación o regulación local sin el consentimiento verificable de los padres. Si nos enteramos de que alguien menor de 16 años nos ha dado sus datos, haremos esfuerzos razonables para eliminar esos datos de nuestras bases de datos."
+      }
+    ]
+  },
+  "dataCollection": {
+    "title": "¿Qué datos recopilamos?",
+    "description": "Cuando utiliza nuestros Servicios, recopilamos y utilizamos datos de cuatro maneras principales:",
+    "waysOfCollection": [
+      "Usted nos proporciona datos al usar nuestros Servicios (como su nombre o correo electrónico).",
+      "Los datos se recopilan automáticamente cuando usa nuestros Servicios (como su dirección IP).",
+      "Obtenemos datos de otras partes para ayudar a operar nuestros Servicios.",
+      "Usamos o combinamos los datos que obtenemos para inferir cosas sobre usted (como lo que parece interesarle)."
+    ],
+    "legitimatePurposes": "Recopilamos los datos necesarios para nuestros fines legítimos.",
+    "detailsCollection": "Para proporcionarle nuestros Servicios, usamos datos. Algunos de estos datos son datos personales. Eso significa que se relacionan con alguien que podemos identificar. Recopilamos algunos de estos datos de usted y otros, y algunos los creamos nosotros. Algunos datos personales son sensibles, estos incluyen datos sobre raza, política, religión y creencias, salud, así como número de Seguro Social. Generalmente, no recopilamos datos sensibles, pero puede ser necesario usar algunos de nuestros Servicios. En estos casos, usted tiene la opción de proporcionar los datos (y usar los Servicios) o no.",
+    "dataYouProvide": {
+      "title": "Datos que usted nos proporciona",
+      "description": "Para usar algunos de nuestros Servicios, necesita compartir algunos de sus datos con nosotros, usando formularios en línea u otros medios. Los datos que necesitamos dependerán del Servicio que desee usar, pero pueden incluir los siguientes:",
+      "dataList": [
+        "Nombre o nombre de usuario",
+        "Correo electrónico",
+        "Dirección postal",
+        "Dirección de facturación",
+        "Número de teléfono",
+        "Tarjeta de pago",
+        "Marca y modelo del automóvil",
+        "Educación"
+      ],
+      "sensitiveDataDes": "A veces, los datos que necesitamos para ofrecer nuestros Servicios son sensibles, como:",
+      "sensitiveDataList": [
+        "Servicio militar",
+        "Identificador nacional, como número de Seguro Social",
+        "Historial crediticio",
+        "Ingresos y saldos de cuentas"
+      ],
+      "additionalData": "Puede optar por compartir otros datos con nosotros, como su estado, imágenes, comentarios, intereses, gustos y disgustos, y respuestas a encuestas."
+    },
+    "dataCollectedAutomatically": {
+      "title": "Datos recopilados automáticamente",
+      "description": "Cuando utiliza nuestros Servicios, nosotros y nuestros socios comerciales podemos recopilar algunos datos automáticamente.",
+      "collectedData": [
+        "ISP",
+        "Fuente (cómo llegó a nuestro sitio)",
+        "Clics, vistas de página y otras acciones",
+        "Duración de la visita",
+        "Cookies e otros identificadores",
+        "Dirección IP",
+        "Datos del dispositivo y navegador",
+        "Reproducciones de sus sesiones",
+        "Correos electrónicos que ha abierto"
+      ],
+      "additionalDataCollection": "Con su consentimiento, también podemos recopilar datos de ubicación más precisos."
+    },
+    "dataFromOtherSources": {
+      "title": "Datos que obtenemos de otras fuentes",
+      "description": "Dependiendo del Servicio que esté usando, podemos obtener datos de otras partes.",
+      "obtainedData": [
+        "Nombre",
+        "Correo electrónico",
+        "Dirección",
+        "Número de teléfono",
+        "Negocio",
+        "Cargo",
+        "Edad",
+        "Género",
+        "Tamaño familiar",
+        "Educación",
+        "Posibles intereses",
+        "Compras",
+        "Acciones fuera del sitio (por ejemplo, clics en anuncios publicitarios)",
+        "Datos públicos (por ejemplo, publicaciones en línea)",
+        "Informes crediticios"
+      ],
+      "consentObtained": "También podemos pedir su consentimiento para obtener datos sobre usted de otras fuentes (por ejemplo, proveedores de servicios financieros)"
+    },
+    "dataWeCreate": {
+      "title": "Datos que creamos",
+      "description": "Podemos usar o combinar cualquier dato que obtengamos para crear nuevos datos sobre usted.",
+      "createdData": [
+        "Ubicación aproximada",
+        "Inferencias sobre sus intereses y preferencias",
+        "Grupos de intereses",
+        "Dispositivos vinculados"
+      ],
+      "sensitiveDataNote": "Por favor, tenga en cuenta: No usamos los datos que recopilamos para inferir datos sensibles sobre usted."
+    },
+    "anonymousData": {
+      "title": "Datos anónimos",
+      "description": "Podemos combinar sus datos con los datos de otros para crear datos anónimos.",
+      "createdDataDescription": "Estos datos no pueden usarse para identificarle individualmente, no se consideran personales, y no intentamos reidentificarle a partir de estos datos."
+    },
+    "howDoWeUseData": {
+      "title": "¿Cómo usamos sus datos?",
+      "description": "Usamos sus datos para atenderle y operar nuestro negocio.",
+      "serviceProvision": {
+        "title": "Proporcionar nuestro Servicio y llevar a cabo sus solicitudes.",
+        "description": "Al proporcionar nuestros Servicios, podemos usar sus datos para varios fines.",
+        "purposes": [
+          "Para registrar y proteger su cuenta.",
+          "Para recibir y responder a llamadas y mensajes suyos.",
+          "Para verificar su identidad y elegibilidad para nuestros Servicios.",
+          "Para ayudarle a obtener los mejores precios y productos que tenemos.",
+          "Para dirigirle a los sitios web de nuestros socios.",
+          "Para procesar transacciones entre usted y nosotros, o nuestros socios.",
+          "Para personalizar el Servicio que recibe.",
+          "Para mantener sus datos actualizados con la mejor información que tenemos.",
+          "Para proporcionar servicio al cliente y soporte.",
+          "Para completar las solicitudes de derechos de datos que haya realizado.",
+          "Para permitirle usar herramientas de intercambio social.",
+          "Para rastrear ventas y recibir pagos de nuestros socios."
+        ]
+      },
+      "improvingAndPromotingServices": {
+        "title": "Mejora y promoción de los Servicios propios y de otros.",
+        "description": "Para ayudar a mejorar y promocionar nuestros Servicios y los Servicios de nuestros socios, podemos usar sus datos para diferentes objetivos.",
+        "objectives": [
+          "Para realizar análisis e investigación de mercado.",
+          "Para ayudar a presentar nuestros Servicios de manera clara y efectiva.",
+          "Para realizar sorteos y encuestas.",
+          "Para ayudarnos a nosotros y a nuestros socios a crear mejores productos para usted.",
+          "Para procesar cualquier recompensa que le podamos ofrecer.",
+          "Para enviar actualizaciones y mensajes de Servicio sobre sus productos y servicios.",
+          "Para informarle sobre nuestros servicios y promociones por correo electrónico, redes sociales (por ejemplo, Facebook) y usando notificaciones push (cuando usted acepte).",
+          "Para informarle sobre los Servicios de otras marcas de Red Ventures.",
+          "Para crear, entrenar y mejorar modelos que nos ayuden a comprender sus posibles intereses y los de otros consumidores.",
+          "Para dirigir publicidad a usted, en este y otros sitios web, basada en datos que hayamos recopilado o creado.",
+          "Para ayudarnos a comprender si y cómo funciona nuestra publicidad y la de otros."
+        ]
+      },
+      "operatingBusiness": {
+        "title": "Operación de nuestro negocio.",
+        "description": "En el curso de operar nuestro negocio, podemos usar sus datos por diversas razones operativas.",
+        "operationalReasons": [
+          "Para realizar tareas necesarias para operar nuestros Servicios y negocio.",
+          "Para ayudar a proteger nuestro negocio y prevenir el fraude.",
+          "Para crear informes para fines internos o externos.",
+          "Para cumplir con solicitudes legítimas legales.",
+          "Para auditar nuestro negocio y procesos.",
+          "Para proteger los intereses de nuestro negocio y los de nuestros socios."
+        ]
+      },
+      "otherPurposes": "Para otros fines no descritos en esta Política de Privacidad a los que usted consienta (de vez en cuando) y según lo permita la ley."
+    }
+  },
+  "howDoWeUseCookies": {
+    "title": "¿Cómo usamos las cookies?",
+    "description": "Las cookies son pequeños archivos de texto ampliamente utilizados en los sitios web. Usamos cookies y herramientas similares en nuestros sitios web para rastrear visitantes recurrentes, almacenar datos para uso posterior y dirigir publicidad.",
+    "note": "Ajustar la configuración del navegador para bloquear las cookies puede afectar la funcionalidad de algunos de nuestros Servicios. Consulte nuestra Política de Cookies para información detallada sobre las cookies que usamos y sus propósitos."
+  },
+  "dataSharing": {
+    "title": "¿Cuándo compartimos datos con otros?",
+    "description": "Para ofrecer nuestros Servicios y operar nuestro negocio, debemos compartir algunos datos.",
+    "reasonsForSharing": {
+      "title": "Razones para Compartir",
+      "list": [
+        "Podemos compartir datos con terceros para proporcionar nuestros Servicios. Por ejemplo, con los socios cuyos productos usted ha seleccionado.",
+        "Podemos compartir datos con terceros cuyos servicios usamos para operar nuestro negocio. Por ejemplo, pagamos a un tercero para alojar nuestras bases de datos.",
+        "Podemos compartir datos con terceros para cumplir con la ley y defender nuestros intereses y los de nuestros socios. Por ejemplo, compartimos datos con abogados, asesores externos y otros profesionales.",
+        "Podemos compartir los datos recopilados dentro de ACS Mulinguae. Esto nos ayuda a mantener sus datos seguros y almacenados de manera eficiente. Nuestras otras marcas pueden usar estos datos para proporcionar los Servicios que usted solicita, para sugerir nuestros otros Servicios y mostrarle anuncios basados en sus intereses (que hemos aprendido de todos los datos recopilados).",
+        "También podemos compartir sus datos con terceros cuando:"
+      ]
+    },
+    "otherReasons": [
+      {
+        "title": "Compra y Venta de Activos",
+        "description": "A veces podemos necesitar compartir sus datos con una parte que desee comprar nuestra empresa o un activo que poseamos, o cuando compramos los activos de otros. Antes de hacer esto, nos aseguraremos de proteger adecuadamente sus datos."
+      },
+      {
+        "title": "Empresas Clientes",
+        "description": "Cuando recopilamos datos en nombre de nuestros clientes, compartiremos sus datos con ellos."
+      },
+      {
+        "title": "Proveedores de Servicios",
+        "description": "Podemos compartir sus datos con partes cuyos servicios usamos para operar nuestro negocio. Donde usamos estos servicios de terceros, nuestros proveedores no pueden usar nuestros datos para sus propios fines."
+      },
+      {
+        "title": "Promociones de Socios",
+        "description": "Podemos ofrecer concursos, sorteos u otros eventos con socios terceros. Si participa en uno de estos, sus datos serán compartidos con el tercero. Por favor, tenga en cuenta que ellos tendrán sus propias reglas para usar sus datos y debe leer sus políticas."
+      },
+      {
+        "title": "Medición de Audiencia",
+        "description": "Podemos compartir sus datos con empresas que nos ayudan a aprender quién está usando nuestros Servicios y cómo se utilizan."
+      },
+      {
+        "title": "Visualización de Videos",
+        "description": "Con el consentimiento apropiado, podemos compartir datos sobre qué videos ve con otras empresas, como anunciantes o sitios de redes sociales, pero solo si la ley lo permite."
+      },
+      {
+        "title": "Anuncios y Marketing",
+        "description": "Con su permiso (según sea necesario), podemos compartir datos con empresas que muestran anuncios, como Google, Live Ramp, The Trade Desk y Facebook. Esto nos ayuda a mostrarle anuncios que coincidan con sus intereses. También ayudamos a otras personas a anunciar sus productos, por lo que puede ver sus mensajes en nuestros sitios u otros lugares en línea."
+      },
+      {
+        "title": "Requisito Legal",
+        "description": "Podemos compartir sus datos con otros, si creemos que la ley dice que debemos hacerlo, o si el gobierno lo solicita. También necesitamos proteger nuestros derechos y los de nuestros clientes, por lo que también podemos compartir sus datos para obtener asesoramiento de abogados y expertos."
+      },
+      {
+        "title": "Emergencias",
+        "description": "Si creemos que alguien está en peligro, nos reservamos el derecho de compartir datos para ayudar a protegerlo."
+      },
+      {
+        "title": "Otras Personas y Mensajes",
+        "description": "Cuando usted acepta, algunos Servicios pueden compartir sus datos con otras empresas que deseen enviarle mensajes sobre sus servicios. Pueden contactarle por correo electrónico, teléfono, correo postal u otras formas. Por favor, tenga en cuenta que ellos también tienen sus propias reglas de privacidad."
+      },
+      {
+        "title": "Datos Anónimos",
+        "description": "Creamos y compartimos datos generales sobre nuestros consumidores — no puede ser identificado individualmente dentro de estos datos."
+      },
+      {
+        "title": "Transferencia de Datos",
+        "description": "ACS Mulinguae tiene contactos en diferentes países y compartimos datos entre ellos. Esto significa que sus datos pueden ser almacenados y utilizados en otro país. Cuando esto sucede, usamos controles legales para ayudar a garantizar que sus datos sean tratados de acuerdo con las reglas del país donde fueron recopilados. Sin embargo, sus datos también pueden estar sujetos a las leyes locales del país donde los estamos usando. Esto puede significar que los tribunales, la policía u otras agencias puedan acceder a ellos, si su ley lo permite."
+      }
+    ],
+    "note": "Por favor, tenga en cuenta: solo compartimos datos sensibles al proporcionarle Servicios y para otros fines permitidos por la ley."
+  },
+  "socialFeatures": {
+    "title": "Funciones Sociales",
+    "description": "Algunos de nuestros Servicios le permiten usar 'Funciones Sociales' que son ofrecidas por terceros. Por ejemplo, puede \"me gusta\" o \"compartir\" cosas en Facebook / Instagram, Google / YouTube, LinkedIn, Snapchat, Tik Tok y Twitter. Para usar estas funciones, puede necesitar tener una cuenta con el proveedor, y debe asegurarse de comprender sus prácticas de privacidad.\n\n Si elige usar Funciones Sociales en nuestros Servicios o acceder a nuestros Servicios desde Funciones Sociales, tanto nosotros como el proveedor podemos tener acceso a datos sobre su uso. Si está conectado a los servicios de un proveedor, estos pueden conectar su visita con otros datos personales que tengan sobre usted. Nosotros (y otros) podemos usar estos datos para colocar anuncios basados en sus intereses en los servicios de estos proveedores. Además, podemos preguntarle si podemos acceder y recopilar datos de sus cuentas, y publicar contenido en sus contactos por usted.\n\n Cuando vincula un proveedor de Funciones Sociales con una cuenta de uno de nuestros Servicios, nos otorga acceso a ciertos datos sobre usted para proporcionar contenido y servicios. Este acceso está regido por la política de privacidad y las opciones que haga con ese proveedor."
+  },
+  "dataUsage": {
+    "title": "Por qué podemos usar sus datos",
+    "description": [
+      "Para recopilar y usar sus datos, debemos tener una razón válida.",
+      "Estas razones varían según lo que estemos haciendo, pero normalmente serán porque:"
+    ],
+    "reasons": [
+      "Usted nos ha dado su consentimiento para usar sus datos.",
+      "Necesitamos cumplir un contrato que tenemos con usted o tomar medidas hacia la formación de un contrato.",
+      "Es nuestro deber legal usar sus datos de ciertas maneras.",
+      "El uso de sus datos por ciertas razones es legítimo.",
+      "Necesitamos tener buenas razones para recopilar y usar sus datos. Nuestras razones principales son:"
+    ],
+    "keyReasons": [
+      {
+        "title": "Contrato",
+        "description": "Usamos sus datos cuando tenemos un acuerdo con usted, o cuando necesitamos hacer cosas antes de formalizar un acuerdo."
+      },
+      {
+        "title": "Consentimiento",
+        "description": "Usted nos da su consentimiento para usar sus datos de ciertas maneras (puede cambiar de opinión más tarde si lo desea)."
+      },
+      {
+        "title": "Requisito legal",
+        "description": "Nosotros (u otra empresa) debemos usar sus datos para cumplir con las leyes o regulaciones a las que estamos sujetos."
+      },
+      {
+        "title": "Otros fines legítimos",
+        "description": [
+          "Tenemos buenas razones para usar sus datos para atenderle mejor, para ayudarnos a mejorar nuestros servicios o para mantener nuestro negocio funcionando bien. Algunos ejemplos incluyen:"
+        ],
+        "examples": [
+          "Compartir datos con nuestros socios como parte de nuestros Servicios.",
+          "Compartir datos con socios que nos ayudan a ofrecer recompensas y beneficios.",
+          "Enviarle correos electrónicos con sus resultados cuando use nuestros Servicios.",
+          "Ponerse en contacto para informarle sobre nuestros Servicios y cambios en los mismos.",
+          "Realizar investigaciones para aprender más sobre lo que a la gente le gusta (o no le gusta) de nuestros Servicios.",
+          "Verificar y mejorar nuestros procesos para asegurar que todo se haga correctamente.",
+          "Mantener nuestros servicios seguros y disponibles en línea.",
+          "Prevenir el fraude para protegerle a usted y a otros.",
+          "A veces, podemos usar sus datos si creemos que ayudarán a proteger a un individuo (ya sea usted u otro consumidor)."
+        ]
+      }
+    ]
+  },
+  "dataRetention": {
+    "title": "¿Cuánto tiempo conservamos sus datos?",
+    "description": [
+      "Conservamos sus datos durante el tiempo que sea necesario para proporcionarle nuestros Servicios.",
+      "Para determinar cuánto tiempo debemos conservar sus datos, consideramos:"
+    ],
+    "considerations": [
+      "la cantidad de datos,",
+      "el tipo de datos,",
+      "los riesgos que el uso o divulgación no intencionados podrían traer, y",
+      "si podemos lograr lo que necesitamos usando menos datos."
+    ],
+    "additionalInfo": [
+      "Además, también podemos conservar y usar sus datos durante el tiempo que sea necesario por razones legales o contractuales, resolución de disputas, prevención del fraude y seguridad.",
+      "Conservamos sus datos durante el tiempo que los necesitemos para ofrecerle nuestros Servicios, y por otras razones comerciales válidas, como:"
+    ],
+    "validReasons": [
+      "Mantenimiento de registros financieros",
+      "Cumplimiento de la ley u otros requisitos regulatorios",
+      "Garantizar la seguridad y disponibilidad de nuestros Servicios"
+    ],
+    "decition": {
+      "title": "Cuando decidimos cuánto tiempo conservar sus datos, pensamos en cuántos tenemos, qué tipo de datos son, los riesgos que el uso o divulgación no intencionados podrían traer, y lo que dice la ley. Esto significa que podemos conservar algunos de sus datos por más tiempo que otros. Por supuesto, usted también tiene opciones — puede solicitar que eliminemos o corrijamos sus datos.",
+      "description": [
+        "En cualquier momento, podemos hacer que sus datos sean anónimos, lo que significa que no se pueden vincular con usted.",
+        "Cuando ya no necesitamos conservar datos para nuestros fines, o cuando recibimos una solicitud válida de eliminación, iniciamos un proceso para eliminar de forma segura los datos de nuestros sistemas."
+      ]
+    }
+  },
+  "dataSafety": {
+    "title": "¿Cómo mantenemos seguros sus datos?",
+    "description": [
+      "Tomamos muy en serio la protección de sus datos.",
+      "Usamos mejores prácticas para ayudar a mantener sus datos seguros. Sin embargo, siempre hay algún riesgo al almacenar datos o enviarlos por internet. Como tal, no podemos garantizar la seguridad de sus datos, y debe saber que compartirlos se hace bajo su propio riesgo.",
+      "En la medida en que almacenamos y usamos datos desidentificados, no intentaremos reidentificar los datos a menos que la ley lo permita."
+    ],
+    "moreDetails": [
+      "Trabajamos arduamente para mantener sus datos seguros y protegidos. Usamos herramientas y técnicas para monitorear y proteger los datos que recopilamos y usamos sobre usted.",
+      "También tenemos reglas para asegurar que sus datos solo puedan ser usados por aquellos que tengan razones comerciales válidas, como proporcionarle nuestros Servicios.",
+      "Si bien trabajamos arduamente para proteger sus datos, es importante saber que ningún método de envío de datos por internet o almacenamiento es perfecto. A veces pueden ocurrir cosas fuera de nuestro control.",
+      "Si alguna vez necesitamos informarle sobre un problema con sus datos, le informaremos de la mejor manera que podamos usando mensajes, cartas o llamadas telefónicas.",
+      "Si crea una cuenta en nuestros sitios web, puede necesitar crear una contraseña. Es muy importante mantener esta contraseña para usted y no compartirla con nadie. Usted es responsable de asegurar que nadie más pueda acceder a su cuenta usando su contraseña o dispositivo. Si alguna vez cree que alguien más podría estar usando su cuenta, por favor avísenos de inmediato para que podamos ayudar."
+    ]
+  },
+  "dataControl": {
+    "title": "¿Cómo puede controlar sus datos?",
+    "description": [
+      "Puede tomar ciertas decisiones sobre la forma en que recopilamos, usamos, almacenamos y compartimos sus datos.",
+      "A veces estas decisiones se aplican a todos los que usan un Servicio (por ejemplo, cualquiera que reciba un boletín nuestro puede darse de baja de futuros correos electrónicos); otras veces estas decisiones solo se aplican a los cubiertos por una cierta ley de privacidad.",
+      "Gestionamos todas las solicitudes que se nos plantean como lo requiere la ley. Esto significa que puede haber razones legales por las que no podemos completar todas las solicitudes.",
+      "Por favor, tenga en cuenta: podemos necesitar prueba de su identidad antes de poder iniciar su solicitud.",
+      "Para tomar estas decisiones, debe usar los enlaces a los formularios a continuación para enviar una solicitud."
+    ],
+    "moreDetails": {
+      "title": "Sus decisiones sobre datos",
+      "description": "Usted tiene decisiones sobre sus datos y cómo nos comunicamos con usted, usando nuestro formulario en línea aquí.",
+      "dataControlChoices": [
+        {
+          "title": "Acceso a sus datos",
+          "description": "Puede solicitar acceso a los datos que tenemos sobre usted, y honraremos las solicitudes válidas."
+        },
+        {
+          "title": "Cambios a sus datos",
+          "description": "Es importante mantener sus datos precisos y actualizados. Si necesita actualizar sus datos, por favor avísenos. A veces, debemos conservar datos por razones legales, pero intentaremos actualizarlos."
+        },
+        {
+          "title": "Eliminación de sus datos",
+          "description": "Puede solicitar que eliminemos los datos que tenemos sobre usted. A veces debemos conservar sus datos por razones específicas, como cumplir con la ley o resolver problemas, pero eliminaremos lo que debamos."
+        },
+        {
+          "title": "Oposición a ciertos usos",
+          "description": "Si hay algo que no le gusta sobre cómo usamos sus datos, por favor avísenos. Escucharemos y veremos si podemos hacer cambios. Por ejemplo, puede darse de baja de la publicidad dirigida usando nuestros controles de cookies."
+        },
+        {
+          "title": "Retirada de su consentimiento",
+          "description": "Si cambia de opinión y desea retirar su consentimiento para cosas a las que anteriormente accedió, puede decírnoslo. Solo recuerde que, si lo hace, es posible que no podamos proporcionarle algunos Servicios."
+        },
+        {
+          "title": "Envío de Solicitudes y Limitaciones",
+          "description": "Si elige enviarnos una solicitud, puede limitar su capacidad de usar algunos de nuestros Servicios (por ejemplo, si hemos eliminado los datos utilizados para proporcionar el Servicio), pero no alteraremos la forma en que proporcionamos nuestros Servicios."
+        },
+        {
+          "title": "Verificación de Identidad para Protección de Datos",
+          "description": "Para proteger sus datos, necesitamos asegurarnos de que es realmente usted quien hace estas solicitudes. Por lo tanto, a menudo pedimos información para verificar su identidad. Una vez que nos envíe una solicitud, le enviaremos un correo electrónico con un enlace a nuestro servicio de verificación de identidad."
+        },
+        {
+          "title": "Métodos de Contacto Alternativos",
+          "description": "Si desea tomar cualquiera de estas decisiones pero prefiere no usar nuestro formulario en línea, puede contactarnos por correo electrónico o correo postal, usando los datos a continuación.",
+          "contactDetails": [
+            {
+              "title": "Correo electrónico:",
+              "desc": "acsmulinguae@gmail.com"
+            },
+            {
+              "title": "Correo postal:",
+              "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Perú. (Atención: Oficial de Privacidad)"
+            }
+          ]
+        },
+        {
+          "title": "Señales de Preferencia de Control de Privacidad",
+          "description": "Reconocemos las señales de preferencia del Control de Privacidad Global para que pueda tomar sus propias decisiones de privacidad."
+        },
+        {
+          "title": "Agentes Autorizados",
+          "description": "Si otra persona, como el padre o tutor de individuos de 16 a 18 años, necesita tomar estas decisiones por usted, también puede hacerlo. Solo necesitan seguir los mismos pasos que mencionamos."
+        },
+        {
+          "title": "Explicación de Denegación de Solicitud y Apelación",
+          "description": "Si nos envía una solicitud y no podemos atenderla, le diremos por qué. También pondremos a su disposición un formulario de apelación si no está satisfecho con nuestra decisión."
+        }
+      ],
+      "communicationPreferences": {
+        "title": "Preferencias de comunicación",
+        "description": "También puede elegir cómo nos comunicamos con usted. Estas son sus opciones:",
+        "options": [
+          {
+            "title": "Preferencias de comunicación",
+            "description": "También puede elegir cómo nos comunicamos con usted. Estas son sus opciones:"
+          },
+          {
+            "title": "Correos Electrónicos Promocionales",
+            "description": "Si no desea recibir correos electrónicos con ofertas especiales o encuestas, puede darse de baja siguiendo las instrucciones en los correos. Pero no se preocupe, aún podemos enviarle mensajes importantes sobre nuestros Servicios."
+          },
+          {
+            "title": "Envíos Promocionales por Correo",
+            "description": "Si no desea recibir correo físico de nosotros, como ofertas o catálogos, solo avísenos. Envíenos un correo electrónico con 'NO SNAIL MAIL' en el asunto, junto con su nombre, dirección y código postal. Incluso si nos pide que dejemos de enviar, podría seguir recibiendo algunos envíos que ya estaban en camino antes de que elimináramos su nombre."
+          },
+          {
+            "title": "Mensajes de Texto y Notificaciones Push",
+            "description": "Si recibe mensajes de texto con promociones de nuestra parte, puede darse de baja respondiendo con 'STOP' o 'UNSUBSCRIBE.' También puede controlar las notificaciones push en su dispositivo."
+          },
+          {
+            "title": "Comunicaciones Transaccionales o de Servicio",
+            "description": "Por favor, tenga en cuenta: podemos necesitar comunicarnos con usted por razones transaccionales o de Servicio. Por ejemplo, enviar un correo electrónico de restablecimiento de contraseña o actualizaciones a nuestros términos."
+          }
+        ]
+      }
+    }
+  },
+  "complaints": {
+    "title": "Reclamaciones",
+    "description": "Le agradeceríamos que nos diera la oportunidad de abordar cualquier reclamación que pueda tener. Puede usar los datos a continuación para presentar una reclamación, y también podría poder presentar una reclamación con su regulador local."
+  },
+  "contactUs": {
+    "title": "¿Cómo puede contactarnos?",
+    "description": "Contáctenos usando los datos a continuación si tiene alguna pregunta sobre esta Política o desea hacer una reclamación.",
+    "contactDetails": [
+      {
+        "title": "Correo electrónico:",
+        "desc": "acsmulinguae@gmail.com"
+      },
+      {
+        "title": "Correo postal:",
+        "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Perú. (Atención: Oficial de Privacidad)"
+      }
+    ]
+  },
+  "changesToPolicy": {
+    "title": "Cambios en esta Política",
+    "description": [
+      "A veces necesitamos hacer cambios en la forma en que recopilamos, usamos y protegemos sus datos.",
+      "Cuando lo hagamos, le informaremos actualizando esta política.",
+      "Si los cambios que hacemos son importantes, también publicaremos un aviso especial en nuestro sitio web.",
+      "Cualquier cambio generalmente solo afectará los datos que recopilamos después de que se haya publicado la nueva política.",
+      "Cualquier dato que hayamos recopilado antes de los cambios seguirá cubierto por la política anterior.",
+      "También le informaremos cuándo hicimos estos cambios por última vez publicando la fecha en que los modificamos.",
+      "ACS MULINGUAE está comprometida a construir productos digitales inclusivos.",
+      "Para preguntas sobre accesibilidad, solicitudes de adaptaciones, o para presentar un problema de accesibilidad, contáctenos."
+    ],
+    "lastUpdated": "13/10/2023, 10:39:06"
+  }
+}

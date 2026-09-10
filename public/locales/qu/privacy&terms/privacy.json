@@ -1,0 +1,547 @@
+{
+  "EffectiveDate": "Kanan p'unchaw: 2023 wata, Lluq'ichi killa, 1",
+  "ContentHead": "ACS Mulinguaepa Huklla Rikch'ayninpaq Kayninkunata.",
+  "Introduction": "Kay Politikaqa kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi. Chaynallataq, khipukunata waqaychanpaq, khipukunata yachanpaqmi. Kay Politikata kananchisqapaq allinmi qillqan. Seccioneskunapi, yuyarikuykunapas kananchisqapaq yuyanqanpaq kananqa ruranki. Kay Politikaqa tukuy llank'aykunapapis kananpasqanmi. Kay wikiqa tukuy llaqtaq wikikunapapas kananchisqa kananpasqanmi. Kay wikiqa 16 watayuqta llasqanpasqanpas kananchisqapaq yachayta sapanqanmi.",
+  "Policy Coverage": {
+    "title": "Imatapaqmi kay Politikaqa?",
+    "policyPoints": [
+      "Kay Politikaqa kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi. Chaynallataq, khipukunata waqaychanpaq, khipukunata yachanpaqmi.",
+      "Kay Politikata kananchisqapaq allinmi qillqan. Seccioneskunapi, yuyarikuykunapas kananchisqapaq yuyanqanpaq kananqa ruranki. Kay Politikaqa tukuy llank'aykunapapis kananpasqanmi. Kay wikiqa tukuy llaqtaq wikikunapapas kananchisqa kananpasqanmi.",
+      "Kay wikiqa tukuy llaqtaq wikikunapapas kananchisqa kananpasqanmi. Mana kananchisqapaq wikikunata qhawanchischu, kananchisqa kananpasqanpaq yachayta sapanqanpaq.",
+      "Kay wikiqa 16 watayuqta llasqanpasqanpas kananchisqapaq yachayta sapanqanmi."
+    ]
+  },
+  "Collect Data": {
+    "summary": "Imatapaqmi khipukunata llamasqanakuykuna, llamk'anchis hinaspa rikuchinchis? (sipas)",
+    "noticeAtCollection": "Kay secciónqa CCPA nisqanpaq kananchisqapaq yachayta sapanqanmanta.",
+    "categories": [
+      {
+        "category": "Sutiyuq Khipu Runakuna",
+        "description": "Sutiyuqmi, imaylla chaski pukyu, teléfono, internet, yachay, llank'ay, qullqi yachay, chaynallataq hukña khipukunapas, khipukunapas.",
+        "purpose": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+        "uses": [
+          "Kananchisqapaq khipukunata waqaychanpaq.",
+          "Kananchisqapaq rimaqkunata chaskikunata chayapunkichikwan.",
+          "Kananchisqapaq yachayta yachanpaqmi.",
+          "Kananchisqapaq allin qullqiykunata rikuchinpaq.",
+          "Kananchisqapaq wikikunapap rikuchinpaq.",
+          "Kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+          "Kananchisqapaq khipukunata ruraypaq.",
+          "Kananchisqapaq khipukunata waqaychanpaq.",
+          "Yachayta sapanqanpaq.",
+          "Kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+          "Kananchisqapaq tawakuykunata atiykuchiy.",
+          "Tikrachiykunata rikuchinpaqmi.",
+          "Kananchisqapaq huk aparato kamachiypi yanapakusqaykipaq, huknin aparatopipas tukuy ruwaykikta chaypuniña yaykuyta hap'inaykipaq."
+        ]
+      },
+      {
+        "category": "Kananchisqapaq Yachayta Ruranchisqanpas",
+        "description": "Yachanakuy, maskay, pukllaykunata ruwanchis, kananchisqapaq yachayta sapanqanpaq.",
+        "purpose": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq yachayta sapanqanmanta kallpachanqanpaq.",
+        "uses": [
+          "Yachanakuy hinaspa maskay ruranchis.",
+          "Kananchisqapaq yachayta allinmi ruranchis.",
+          "Pukllaykunata hinaspa maskaykunata ruwanchis.",
+          "Kananchisqapaq allin churaykunata ruwanchispaq.",
+          "Yachachinakuykunata ruranchis.",
+          "Kananchisqapaq qillqaykunata yachanapanchis.",
+          "Chaski pukyu, social media (Facebook librisinmi), hinaspa push notificationkunata chaskinchis.",
+          "Tukuy kananchisqapaq Red Ventures marcapa yachayta yachanapanchis.",
+          "Kananchisqapaq munasqakunata yachanpaqmi, kallpanchanpasqanpaq.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas kananchisqapaqmi.",
+          "Kananchisqapaq chaskiyuqmanta kananchisqapaq yachayta sapanqanmanta.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas kananchisqapaqmi."
+        ]
+      },
+      {
+        "category": "Kananchisqapaq Llank'aymi",
+        "description": "Yachanakuy, maskay, pukllaykunata ruwanchis, kananchisqapaq yachayta sapanqanpaq, yachayta sapanqanmanta kallpachanqanpaq.",
+        "purpose": "Kananchisqapaq llank'aymi yachayta sapanqanmi.",
+        "uses": [
+          "Yachanakuy hinaspa maskay ruranchis.",
+          "Kananchisqapaq yachayta allinmi ruranchis.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas kananchisqapaqmi.",
+          "Kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwniyukunapas.",
+          "Kananchisqapaq llank'aykunata rikuchinpaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq yachayta sapanqanmanta kallpachanqanpaq.",
+          "Tukuy kananchisqapaq yachayta sapanqanmanta kallpachanqanpaqmi."
+        ]
+      },
+      {
+        "category": "Kananchisqa Kananchisqa Sutiyuq Khipukunapas",
+        "description": "Tantan, ayllu, yachay, kananchisqa kananpasqanpaq yachayta sapanqanmanta khipukunapas."
+      },
+      {
+        "category": "Yachanakuy Khipukunapas",
+        "description": "Kananchisqapaq tikrachiykunapas, yachanakuykunapas, kananchisqapaq yachayta sapanqanmanta."
+      },
+      {
+        "category": "Internetpi Yachaykunapas",
+        "description": "Qhawasqaykunapas, maskaykunapas, wikikunapi llank'aykunapas."
+      },
+      {
+        "category": "Pacha Khipukunapas",
+        "description": "Kananchisqapaq chaskiyuqmanta kananchisqapaq yachayta sapanqanmanta."
+      },
+      {
+        "category": "Rimaq o Rikuykunapas",
+        "description": "Rimaq o rikuykunapas, kananchisqapaq yachayta sapanqanpaq."
+      },
+      {
+        "category": "Yachanakuykunapas",
+        "description": "Kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      }
+    ],
+    "OtherDisclosures": [
+      {
+        "title": "Tukuy Khipukunapas",
+        "content": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata kananchisqapaq rimaqmi kananchisqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas."
+      },
+      {
+        "title": "Khipukunap Riqtin",
+        "notice": "Mana kananchisqapaq khipukunata qullqichu urpichu, tukuy runakunapaq.",
+        "details": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Khipukunap Waqaychan",
+        "content": "Kananchisqapaq khipukunata kananchisqapapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas kananchisqapaqmi."
+      },
+      {
+        "title": "Wawakunapaq Khipukunapas",
+        "content": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata 16 watayuqta llasqanpasqanpas kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas."
+      }
+    ]
+  },
+  "dataCollection": {
+    "title": "Imatapaqmi khipukunata llamasqanakuykuna?",
+    "description": "Kananchisqapaq yachayta sapanqanpaq, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+    "waysOfCollection": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata churankichik (suti chaski pukyu librisinmi).",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata ruranchis (IP chaski librisinmi).",
+      "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas.",
+      "Kananchisqapaq khipukunata chayapunkichikwanmi, kananchisqapaq yachayta sapanqanmanta."
+    ],
+    "legitimatePurposes": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+    "detailsCollection": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi. Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas kananchisqa kananpasqanmi.",
+    "dataYouProvide": {
+      "title": "Kananchisqapaq yachayta churankichik",
+      "description": "Kananchisqapaq yachayta sapanqanpaq, kananchisqapaq khipukunata churankichikmi.",
+      "dataList": [
+        "Suti",
+        "Chaski pukyu",
+        "Chaski",
+        "Qullqi chaski",
+        "Teléfono",
+        "Qullqi tarjeta",
+        "Llaqtan hinaspa ñawinaq",
+        "Yachay"
+      ],
+      "sensitiveDataDes": "Kananchisqapaq yachayta sapanqanpaq, kananchisqapaq khipukunata churankichikmi, khipukunapas:",
+      "sensitiveDataList": [
+        "Yachay khipu",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+        "Yachay khipu",
+        "Qullqi hinaspa khipukunapas"
+      ],
+      "additionalData": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+    },
+    "dataCollectedAutomatically": {
+      "title": "Kananchisqapaq yachayta sapanqanmi, ruranchisqa khipukunapas",
+      "description": "Kananchisqapaq yachayta sapanqanpaq, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+      "collectedData": [
+        "ISP",
+        "Ñawin (kananchisqapaq wikikunamanmi)",
+        "Tiqaq, p'ancha khipu, tukuy khipukunapas",
+        "Ñawinkuymanta",
+        "Cookies hinaspa tukuy khipukunapas",
+        "IP chaski",
+        "Yachay hinaspa navegador khipukunapas",
+        "Kananchisqapaq yachayta sapanqanmi",
+        "Kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi"
+      ],
+      "additionalDataCollection": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+    },
+    "dataFromOtherSources": {
+      "title": "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta",
+      "description": "Kananchisqapaq yachayta sapanqanpaq, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "obtainedData": [
+        "Suti",
+        "Chaski pukyu",
+        "Chaski",
+        "Teléfono",
+        "Llaqta",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+        "Tantan",
+        "Warmi o ch'eqa",
+        "Ayllu",
+        "Yachay",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+        "Tikrachiy",
+        "Yachanakuykunapas",
+        "Chaski pukyukunapas",
+        "Yachay khipu"
+      ],
+      "consentObtained": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+    },
+    "dataWeCreate": {
+      "title": "Kananchisqapaq yachayta ruranchisqanpas",
+      "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata chayapunkichikwanmi.",
+      "createdData": [
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+        "Kananchisqapaq munasqakunapas, kallpanchanpasqanpas",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta",
+        "Kananchisqapaq yachayta sapanqanmi"
+      ],
+      "sensitiveDataNote": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+    },
+    "anonymousData": {
+      "title": "Mana sutiyuq Khipukunapas",
+      "description": "Kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+      "createdDataDescription": "Kay khipukunapas kananchisqapaq sutiyta mana rikuchinchu, khipukunapas kananchisqapaqmi."
+    },
+    "howDoWeUseData": {
+      "title": "Imatapaqmi kananchisqapaq khipukunatami llamk'anchis?",
+      "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "serviceProvision": {
+        "title": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+        "description": "Kananchisqapaq yachayta sapanqanpaq, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+        "purposes": [
+          "Kananchisqapaq khipukunata waqaychanpaq.",
+          "Kananchisqapaq rimaqkunata chaskikunata chayapunkichikwan.",
+          "Kananchisqapaq yachayta yachanpaqmi.",
+          "Kananchisqapaq allin qullqiykunata rikuchinpaq.",
+          "Kananchisqapaq wikikunapap rikuchinpaq.",
+          "Kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq khipukunata ruraypaq.",
+          "Kananchisqapaq khipukunata allinmi waqaychanpaq.",
+          "Yachayta sapanqanpaq.",
+          "Kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq tawakuykunata atiykuchiy.",
+          "Tikrachiykunata rikuchinpaqmi."
+        ]
+      },
+      "improvingAndPromotingServices": {
+        "title": "Kananchisqapaq yachayta allinmi ruranchis.",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq yachayta sapanqanmanta kallpachanqanpaq.",
+        "objectives": [
+          "Yachanakuy hinaspa maskay ruranchis.",
+          "Kananchisqapaq yachayta allinmi ruranchis.",
+          "Pukllaykunata hinaspa maskaykunata ruwanchis.",
+          "Kananchisqapaq allin churaykunata ruwanchispaq.",
+          "Yachachinakuykunata ruranchis.",
+          "Kananchisqapaq qillqaykunata yachanapanchis.",
+          "Chaski pukyu, social media (Facebook librisinmi), hinaspa push notificationkunata chaskinchis.",
+          "Tukuy kananchisqapaq Red Ventures marcapa yachayta yachanapanchis.",
+          "Kananchisqapaq munasqakunata yachanpaqmi, kallpanchanpasqanpaq.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas kananchisqapaqmi.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas kananchisqapaqmi."
+        ]
+      },
+      "operatingBusiness": {
+        "title": "Kananchisqapaq llank'aymi.",
+        "description": "Kananchisqapaq llank'aymi yachayta sapanqanmi.",
+        "operationalReasons": [
+          "Yachanakuy hinaspa maskay ruranchis.",
+          "Kananchisqapaq yachayta allinmi ruranchis.",
+          "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas.",
+          "Kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwniyukunapas.",
+          "Kananchisqapaq llank'aykunata rikuchinpaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq yachayta sapanqanmanta kallpachanqanpaq."
+        ]
+      },
+      "otherPurposes": "Tukuy kananchisqapaq yachayta sapanqanmanta kallpachanqanpaqmi, kananpaq kananchisqa kananpasqanpaq yachanakuy yañakunapas."
+    }
+  },
+  "howDoWeUseCookies": {
+    "title": "Imatapaqmi cookieskunatami llamk'anchis?",
+    "description": "Cookieskunaqa kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqapaq yachanakuy yañakunapas. Kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+    "note": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+  },
+  "dataSharing": {
+    "title": "Imatapaqmi khipukunata rikuchinchis?",
+    "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+    "reasonsForSharing": {
+      "title": "Rikuchinapaq Sutiykuna",
+      "list": [
+        "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, tikrachiykunapas.",
+        "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, tikrachiykunapas.",
+        "Kananchisqa kananpasqanpaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas, kananchisqapaq yachayta sapanqanmanta.",
+        "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi.",
+        "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, tikrachiykunapas."
+      ]
+    },
+    "otherReasons": [
+      {
+        "title": "Tikrachiy hinaspa Riqtin",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Kananchisqapaq Llaqtakunapas",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Yachayta Sapanqanapaq",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Kananchisqapaq Yanapakuy",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Yachanakuykunapaq Rikuchiy",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Rikuykunapas",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Kamachiy hinaspa Yanapakuy",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Kananpasqanpaq",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Llakiykunapas",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Tukuy Runakuna hinaspa Yachaykuna",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Mana Sutiyuq Khipukunapas",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      },
+      {
+        "title": "Khipu Pachapakuy",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+      }
+    ],
+    "note": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+  },
+  "socialFeatures": {
+    "title": "Social kaqkuna (Redes sociales)",
+    "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq, khipukunata llamk'anchisqanapaqmi."
+  },
+  "dataUsage": {
+    "title": "Imatapaqmi kananchisqapaq khipukunatami llamk'anchis?",
+    "description": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "reasons": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwniyuqmi.",
+      "Kananchisqapaq yachayta sapanqanmanta, kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "keyReasons": [
+      {
+        "title": "Yachanakuy",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+      },
+      {
+        "title": "Kananchisqa Kananpasqanpaq",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+      },
+      {
+        "title": "Kananpasqanpaq",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+      },
+      {
+        "title": "Tukuy Kananchisqa Kananpasqanpaq Yachayta Sapanqanmi",
+        "description": [
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        ],
+        "examples": [
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        ]
+      }
+    ]
+  },
+  "dataRetention": {
+    "title": "Ñawpaqmi kananchisqapaq khipukunatami waqaychanchis?",
+    "description": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "considerations": [
+      "Kananchisqapaq khipukunapaq",
+      "Kananchisqapaq khipukunapaq",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "additionalInfo": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "validReasons": [
+      "Qullqi khipu",
+      "Kananchisqa kananpasqanpaq yachayta sapanqanmanta kaniwniyukunapas",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq"
+    ],
+    "decition": {
+      "title": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "description": [
+        "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+        "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+      ]
+    }
+  },
+  "dataSafety": {
+    "title": "Imatapaqmi kananchisqapaq khipukunatami waqaychanchis?",
+    "description": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "moreDetails": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ]
+  },
+  "dataControl": {
+    "title": "Imatapaqmi kananchisqapaq khipukunatami yachankichik?",
+    "description": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "moreDetails": {
+      "title": "Kananchisqapaq Khipu Akllaykuna",
+      "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "dataControlChoices": [
+        {
+          "title": "Kananchisqapaq khipukunaman hayk'uy",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Kananchisqapaq khipukunap hukch'ay",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Kananchisqapaq khipukunata chinkachiy",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Kananchisqapaq yachayta sapanqanmanta kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Kananchisqapaq yachayta sapanqanmanta kallpanchanpasqanmanta kananchisqa kananpasqanpaq yachanakuy yañakunapas",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Rikuchiykunapaq Yachayta Sapanqanpaq",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Yachaykunapaq Rikuchiy",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Tukuy Rimanakuykunapas",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+          "contactDetails": [
+            {
+              "title": "Chaski pukyu:",
+              "desc": "acsmulinguae@gmail.com"
+            },
+            {
+              "title": "Chaski:",
+              "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Peru. (Attn: Privacy Officer)"
+            }
+          ]
+        },
+        {
+          "title": "Huklla Rikch'aynin Kananchisqa Kananpasqanpaq",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Kananchisqapaq Runakuna",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        },
+        {
+          "title": "Rikuchiykunapaq Yachayta Sapanqanpaq, Hinaspa Rikuchiy",
+          "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+        }
+      ],
+      "communicationPreferences": {
+        "title": "Rimanakuykunapaq Akllaykuna",
+        "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+        "options": [
+          {
+            "title": "Rimanakuykunapaq Akllaykuna",
+            "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+          },
+          {
+            "title": "Yachaykunapaq Rimanakuykuna",
+            "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+          },
+          {
+            "title": "Chaskikuna Yanapakuykunapas",
+            "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+          },
+          {
+            "title": "Yachaykunapaq Yachanakuykuna",
+            "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+          },
+          {
+            "title": "Kananchisqapaq Yachayta Sapanqanmi",
+            "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+          }
+        ]
+      }
+    }
+  },
+  "complaints": {
+    "title": "Yachanakuykunata llamk'anchis",
+    "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+  },
+  "contactUs": {
+    "title": "Imatapaqmi llamk'anchis?",
+    "description": "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+    "contactDetails": [
+      {
+        "title": "Chaski pukyu:",
+        "desc": "acsmulinguae@gmail.com"
+      },
+      {
+        "title": "Chaski:",
+        "desc": "Jr Contisuyo 246 Maranga, San Miguel, Lima; Peru. (Attn: Privacy Officer)"
+      }
+    ]
+  },
+  "changesToPolicy": {
+    "title": "Kay Politikaqa kananchisqapaq khipukunata llamasqanakuykunapaq",
+    "description": [
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "ACS Mulinguae nisqaqa kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq.",
+      "Kananchisqapaq yachayta sapanqanmi, kananchisqapaq khipukunata llamasqanakuykunapaq."
+    ],
+    "lastUpdated": "13/10/2023, 10:39:06"
+  }
+}

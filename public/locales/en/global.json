@@ -26,5 +26,250 @@
     "502": "Bad gateway. The server received an invalid response.",
     "503": "Service unavailable. Please try again later.",
     "504": "Gateway timeout. Please try again later."
+  },
+  "chatbot": {
+    "title": "Mulinguae AI Assistant",
+    "subtitle": "Here to help you learn",
+    "typing": "Typing...",
+    "online": "Online",
+    "viewConversations": "View conversations",
+    "closeChat": "Close chat",
+    "toggleChat": "Toggle chat",
+    "quickQuestions": "Quick Questions",
+    "popularTopics": "Popular Topics",
+    "tapQuestion": "Tap a question to ask",
+    "typeMessage": "Type a message...",
+    "askAbout": "Ask about {{topic}}...",
+    "startVoice": "Start voice input",
+    "stopVoice": "Stop voice input",
+    "startConversation": "Start a conversation! Ask me anything about Mulinguae.",
+    "somethingWrong": "Something went wrong. Please try again.",
+    "yourConversations": "Your Conversations",
+    "newChat": "New chat",
+    "loadingConversations": "Loading conversations...",
+    "loadFailed": "Failed to load conversations.",
+    "noConversations": "No conversations yet.",
+    "startNewChat": "Start a new chat to get help.",
+    "openConversation": "Open conversation about {{domain}}",
+    "msgs": "{{count}} msgs",
+    "categories": {
+      "gettingStarted": "Getting Started",
+      "teachers": "Teachers",
+      "courses": "Courses",
+      "booking": "Booking",
+      "technical": "Technical",
+      "community": "Community"
+    },
+    "questions": {
+      "gettingStarted": [
+        "How do I start learning a language on Mulinguae?",
+        "How do I find the right teacher for me?",
+        "What languages are available?",
+        "Is there a free trial?",
+        "How do I create an account?"
+      ],
+      "teachers": [
+        "How do I become a teacher on Mulinguae?",
+        "What are the teacher requirements?",
+        "How does teacher verification work?",
+        "How do teachers get paid?",
+        "Can I set my own schedule and prices?"
+      ],
+      "courses": [
+        "What types of courses are available?",
+        "How do course levels work (A1-C2)?",
+        "Do courses include certificates?",
+        "Can I learn at my own pace?",
+        "What materials are included?"
+      ],
+      "booking": [
+        "How do I book a lesson?",
+        "What if I need to cancel or reschedule?",
+        "How do trial lessons work?",
+        "What payment methods are accepted?",
+        "Is there a refund policy?"
+      ],
+      "technical": [
+        "What devices and browsers are supported?",
+        "How do I use the video classroom?",
+        "Can I use Mulinguae offline?",
+        "How do I change my language preference?",
+        "What if I have technical issues?"
+      ],
+      "community": [
+        "How do I connect with other learners?",
+        "Can I write blog posts?",
+        "What is the Unity & Solidarity program?",
+        "How do language exchanges work?",
+        "Are there community events?"
+      ]
+    },
+    "errorGeneric": "Sorry, something went wrong. Please try again.",
+    "errorLoadConversation": "Failed to load this conversation.",
+    "domain": {
+      "general": "General",
+      "teachers": "Teachers",
+      "courses": "Courses",
+      "blogs": "Blogs",
+      "getting-started": "Getting Started",
+      "booking": "Booking",
+      "technical": "Technical",
+      "community": "Community"
+    },
+    "errorStreaming": "Streaming is not supported by this browser.",
+    "sendFailed": "Failed to send message."
+  },
+  "app": {
+    "yes": "Yes",
+    "no": "No",
+    "loading": "Loading...",
+    "loadingEllipsis": "Loading…",
+    "sessionExpired": "Your session has expired. Please log in again.",
+    "loginSuccess": "Login successful",
+    "imageTooLarge": "Image size exceeds the maximum allowed limit.",
+    "noChangesMade": "No changes were made.",
+    "confirmDeleteTeacher": "Are you sure you want to delete this teacher?",
+    "confirmDeletePost": "Are you sure you want to delete this Post?",
+    "learnMoreCompany": "Learn More about our Company",
+    "watchIntro": "Watch Intro",
+    "joinMulinguae": "Join Mulinguae",
+    "backToTop": "Back to top",
+    "toggleMenuLanguage": "Toggle menu button to change language",
+    "joinUs": "Join us",
+    "searchByTitleOrUser": "Search by title or user name",
+    "expandCourseDetails": "Expand course details",
+    "collapseCourseDetails": "Collapse course details",
+    "closeIntro": "Close intro",
+    "closeVideo": "Close video",
+    "videoTitleFallback": "video",
+    "allLibraries": "All Libraries",
+    "altLogo": "Mulinguae Logo",
+    "altLanguagesIcon": "Languages",
+    "altRightIcon": "Expand",
+    "altBooksList": "Books list",
+    "altProfile": "Personal profile",
+    "altTeacherImage": "Teacher image",
+    "altEditTeacherCard": "Edit teacher card",
+    "altPersonalAvatar": "Personal avatar",
+    "altUserImage": "User image",
+    "altDonation": "Donation",
+    "altStudentsImg": "Students image",
+    "altMultilingualGroup": "Diverse group of people representing multilingualism",
+    "altEarth": "Earth illustration representing multilingualism",
+    "altAboutMission": "Our mission",
+    "altAboutUs": "About us",
+    "altAboutStory": "Our story",
+    "altAboutVision": "Our vision",
+    "altAboutTutors": "Our tutors",
+    "printArticle": "Print this article",
+    "altPrintImg": "Print image"
+  },
+  "admin": {
+    "addTeacherInfo": "Add Teacher Information",
+    "firstName": "First Name",
+    "enterFirstName": "Enter First Name",
+    "lastName": "Last Name",
+    "enterLastName": "Enter Last Name",
+    "email": "Email",
+    "enterEmail": "Enter Email",
+    "jobBrief": "Job Brief",
+    "enterJobBrief": "Enter Job Brief",
+    "aboutTeacher": "About Teacher",
+    "enterAboutTeacher": "Enter About Teacher",
+    "telephone": "Telephone",
+    "enterTelephone": "Enter Telephone / Cellphone",
+    "uploadImage": "Upload Image",
+    "chooseImageLess1MB": "choose image less than 1MB",
+    "chooseImageLessThan1MB": "choose an image less than 1MB",
+    "addingTeacher": "Adding Teacher...",
+    "addTeacher": "Add Teacher",
+    "update": "Update",
+    "changeImage": "Change Image",
+    "pendingBlogs": "Pending Blogs",
+    "accept": "Accept",
+    "refuse": "Refuse",
+    "pendingComments": "Pending Comments",
+    "blogApproved": "Blog post approved and will appear in the blog posts list",
+    "commentApproved": "Comment approved and will appear in the comments list",
+    "addTeacherSuccess": "Successfully added a new teacher",
+    "deleteTeacherSuccess": "Successfully deleted a teacher",
+    "updateTeacherSuccess": "Successfully updated a teacher"
+  },
+  "seo": {
+    "home": {
+      "title": "Mulinguae | Multilingual Community & Language Exchange",
+      "description": "Mulinguae is a global multilingual community for language exchange and learning. Learn languages with native speakers, connect with people worldwide, and join Mulinguae today. (Not affiliated with Mulingua.)",
+      "keywords": "mulinguae, mulingua, language learning, multilingual, language exchange, native speakers, global community"
+    },
+    "contact": {
+      "title": "Contact Mulinguae | Get in Touch with Our Multilingual Team",
+      "description": "Contact Mulinguae (Mulingua) for language learning, partnership, or support. Reach out to our multilingual team and join our global community.",
+      "keywords": "contact mulinguae, contact mulingua, language support, multilingual, language exchange, global community"
+    },
+    "about": {
+      "title": "About Mulinguae | Our Mission & Multilingual Community",
+      "description": "Learn about Mulinguae's mission to connect people worldwide through language learning, multilingualism, and cultural exchange. Discover how Mulinguae (Mulingua) empowers language learners and native speakers to grow together.",
+      "keywords": "about mulinguae, about mulingua, language learning, multilingual, language exchange, our mission, global community, native speakers"
+    },
+    "allStudents": {
+      "title": "Students of All Ages | Mulinguae Multilingual Education",
+      "description": "Discover how Mulinguae supports students of all ages in multilingual education. Learn about our programs, methods, and equality initiatives.",
+      "keywords": "students of all ages, multilingual education, mulinguae, mulingua, equality, learning methods, global community"
+    },
+    "hundredPhrases": {
+      "title": "100 Useful Phrases | Mulinguae Multilingual Learning",
+      "description": "Explore 100 useful phrases for multilingual learning and communication. Mulinguae provides language resources for global learners.",
+      "keywords": "100 phrases, useful phrases, multilingual, language learning, mulinguae, mulingua, communication"
+    },
+    "feedback": {
+      "title": "Feedback | Contact Mulinguae Team & Report Issues",
+      "description": "Send feedback, report bugs, or contact the Mulinguae team. Help us improve our multilingual community and language learning platform.",
+      "keywords": "feedback, contact, report bugs, mulinguae, mulingua, language learning, multilingual community"
+    },
+    "blogs": {
+      "title": "Mulinguae Blog | Language Learning Stories & Community Insights",
+      "description": "Read the latest blog posts from Mulinguae's multilingual community. Discover language learning tips, cultural stories, and updates from Mulinguae (Mulingua).",
+      "keywords": "mulinguae blog, mulingua blog, language learning, multilingual, language exchange, community stories, mulingua, mulinguae"
+    },
+    "multilingualism": {
+      "title": "Multilingualism | Mulinguae Language Diversity & Global Community",
+      "description": "Explore multilingualism with Mulinguae (Mulingua). Learn about language diversity, cultural exchange, and the benefits of being multilingual in our global community.",
+      "keywords": "multilingualism, mulingua, mulinguae, language diversity, language learning, cultural exchange, global community"
+    },
+    "unity": {
+      "title": "Unity & Solidarity | Mulinguae Community Principles",
+      "description": "Discover the principles of unity and solidarity in the Mulinguae multilingual community. Learn about our values, education, and global collaboration.",
+      "keywords": "unity, solidarity, mulinguae, mulingua, community, principles, education, global collaboration"
+    },
+    "linguicide": {
+      "title": "Linguicide | Language Loss & Preservation - Mulinguae",
+      "description": "Learn about linguicide, language loss, and preservation efforts in the Mulinguae multilingual community. Explore resources and global initiatives.",
+      "keywords": "linguicide, language loss, language preservation, mulinguae, mulingua, endangered languages, global initiatives"
+    },
+    "teachers": {
+      "title": "Mulinguae Teachers | Meet Our Multilingual Language Educators",
+      "description": "Meet the teachers of Mulinguae (Mulingua). Our multilingual educators help you learn languages and connect with a global community. Discover our teaching team and their expertise.",
+      "keywords": "mulingua teachers, mulinguae teachers, language educators, multilingual, language learning, global community"
+    },
+    "students": {
+      "title": "Mulinguae Students | Language Learners & Multilingual Community",
+      "description": "Meet the students of Mulinguae (Mulingua). Join our multilingual community of language learners and connect with people worldwide. Discover language learning stories and experiences.",
+      "keywords": "mulingua students, mulinguae students, language learners, multilingual, language learning, global community"
+    }
+  },
+  "passwordStrength": {
+    "none": "",
+    "veryWeak": "Very Weak",
+    "weak": "Weak",
+    "medium": "Medium",
+    "strong": "Strong",
+    "veryStrong": "Very Strong"
+  },
+  "Error_Recaptcha": "reCAPTCHA verification failed. Please try again.",
+  "time": {
+    "daysAgo": "{{count}}d ago",
+    "hoursAgo": "{{count}}h ago",
+    "minutesAgo": "{{count}}m ago",
+    "justNow": "just now"
   }
 }

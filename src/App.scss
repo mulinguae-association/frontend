@@ -18,6 +18,33 @@
   div {
     line-height: 1.8;
   }
+
+  // Avoid letter-spacing with connected RTL scripts (Arabic/Urdu)
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span,
+  li,
+  button,
+  label {
+    letter-spacing: normal !important;
+  }
+
+  // Page header content should start from the right
+  .header_pages {
+    text-align: right;
+  }
+
+  // Keep dropdown/absolute menus anchored to the right side
+  .custom-dropdown .options {
+    right: 0;
+    left: auto;
+  }
 }
 .main {
   position: relative;
@@ -158,6 +185,16 @@ $arrow-size: 5px; // Adjust the size of the arrow
   );
   margin: 2px auto;
   width: 80%;
+
+  [dir="rtl"] & {
+    background: linear-gradient(
+      to left,
+      transparent,
+      $primary-color,
+      $secondary-color,
+      transparent
+    );
+  }
 }
 
 .disabled {
