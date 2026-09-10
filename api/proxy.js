@@ -1,9 +1,5 @@
 import { Readable } from "stream";
 
-export const config = {
-  runtime: "nodejs",
-};
-
 const HOP_BY_HOP = new Set([
   "connection",
   "keep-alive",
@@ -32,7 +28,16 @@ export default async function handler(req, res) {
     return;
   }
 
-  const target = baseUrl.replace(/\/+$/, "") + req.url;
+  const url = new URL(req.url, "http://local.invalid");
+  const apiPath = url.searchParams.get("apiPath") || "";
+  url.searchParams.delete("apiPath");
+  const queryString = url.searchParams.toString();
+
+  const target =
+    baseUrl.replace(/\/+$/, "") +
+    "/api/" +
+    apiPath +
+    (queryString ? "?" + queryString : "");
 
   const headers = {};
   for (const [key, value] of Object.entries(req.headers)) {
