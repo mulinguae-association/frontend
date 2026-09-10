@@ -29,9 +29,12 @@ export async function fetchPendingPosts() {
   }
 }
 
-export async function fetchAcceptedPosts(limit) {
+export async function fetchAcceptedPosts({ cursor, limit }) {
+  console.log(cursor);
   try {
-    const response = await axios.get(`/api/blogPosts/accepted?limit=${limit}`);
+    const params = { limit: limit || 5 };
+    if (cursor) params.cursor = cursor;
+    const response = await axios.get(`/api/blogPosts/accepted`, { params });
 
     if (response.status === 200) {
       return response.data;
@@ -156,7 +159,7 @@ export async function handleReplySubmit(content, blogId, parentCommentId) {
     const requestBody = { content, blogId, parentCommentId };
     const response = await axios.post(
       `/api/comments/reply/${parentCommentId}`,
-      requestBody
+      requestBody,
     );
     if (response.status === 201) {
       return { status: 201, data: response.data };
@@ -173,7 +176,7 @@ export async function updatedComment(commentId, requestedBody) {
   try {
     const response = await axios.patch(
       `/api/comments/update/${commentId}`,
-      requestedBody
+      requestedBody,
     );
     if (response.status === 201) {
       return { status: 201, data: response.data };
@@ -193,7 +196,7 @@ export async function updatedComment(commentId, requestedBody) {
 export async function interactWithComment(modelType, id, action) {
   try {
     const response = await axios.post(
-      `/api/comments/${modelType}/${id}/${action}`
+      `/api/comments/${modelType}/${id}/${action}`,
     );
 
     if (response.status === 200) {

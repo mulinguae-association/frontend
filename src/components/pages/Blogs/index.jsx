@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import debounce from "lodash/debounce";
 import { useTranslation } from "react-i18next";
 import BlogsHeader from "./BlogsHeader";
@@ -17,12 +17,13 @@ const Blogs = () => {
     loading,
     allPostsLoaded,
     errorDisplayPosts,
+    hasMore,
+    fetchNextPage,
+    isFetchingNextPage,
     searchQuery,
-    setPostsToDisplay,
   } = useBlogPosts(); // Use the context hook
   const [previousQuery, setPreviousQuery] = useState("");
   const searchMutation = useSearchMutation(searchQuery);
-  const counterRef = useRef(0);
 
   const debouncedSearch = debounce((query) => {
     if (query !== previousQuery) {
@@ -44,17 +45,8 @@ const Blogs = () => {
   useEffect(() => {
     const handleScrollToFooter = debounce((entries) => {
       const footerEntry = entries[0];
-      if (
-        footerEntry.isIntersecting &&
-        !allPostsLoaded &&
-        acceptedPosts?.length > 0
-      ) {
-        counterRef.current += 1;
-        setPostsToDisplay((prevPostsToDisplay) =>
-          counterRef.current <= 2
-            ? prevPostsToDisplay + 3
-            : prevPostsToDisplay + 4,
-        );
+      if (footerEntry.isIntersecting && hasMore && !isFetchingNextPage) {
+        fetchNextPage();
       }
     }, 200);
     const options = {
@@ -72,7 +64,7 @@ const Blogs = () => {
     return () => {
       observer.disconnect();
     };
-  }, [allPostsLoaded, acceptedPosts, setPostsToDisplay]);
+  }, [hasMore, isFetchingNextPage, fetchNextPage]);
   return (
     <>
       <SEO

@@ -7,60 +7,68 @@ import React, {
 } from "react";
 import { fetchAcceptedPosts } from "../apis/blog-api";
 import logError from "../utils/logError";
-import { useQuery, useQueryClient } from "react-query";
+import { useInfiniteQuery, useQueryClient } from "react-query";
 
 const BlogPostsContext = createContext();
 
 export const BlogPostsProvider = ({ children }) => {
-  const [allPostsLoaded, setAllPostsLoaded] = useState(false);
   const searchQuery = useRef("");
-  const [postsToDisplay, setPostsToDisplay] = useState(1);
   const [isSearch, setIsSearch] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const queryClient = useQueryClient();
-  const { data, isFetching, isError } = useQuery(
-    ["acceptedPosts", postsToDisplay],
-    () => fetchAcceptedPosts(postsToDisplay),
+
+  const {
+    data,
+    isFetching,
+    isFetchingNextPage,
+    isError,
+    fetchNextPage,
+    hasNextPage,
+  } = useInfiniteQuery(
+    ["acceptedPosts"],
+    ({ pageParam }) => fetchAcceptedPosts({ cursor: pageParam }),
     {
-      keepPreviousData: true,
-      cacheTime: Infinity,
-      onSuccess: (data) => {
-        queryClient.setQueryData(["acceptedPosts", postsToDisplay], data);
-        isSearch
-          ? setAllPostsLoaded(true)
-          : setAllPostsLoaded(data?.length < postsToDisplay);
-      },
+      getNextPageParam: (lastPage) => lastPage?.nextCursor || undefined,
       onError: (error) => {
-        setAllPostsLoaded(true);
         logError(error);
       },
-    },
+    }
   );
+
+  const acceptedPosts = data?.pages.flatMap((page) => page.posts || []) || [];
 
   const contextValue = useMemo(
     () => ({
-      acceptedPosts: data,
-      loading: isFetching,
-      allPostsLoaded,
-      setAllPostsLoaded,
+      acceptedPosts,
+      loading: isFetching && !isFetchingNextPage,
+      hasMore: hasNextPage,
+      allPostsLoaded: isSearch ? true : !hasNextPage,
       errorDisplayPosts: isError,
+      fetchNextPage,
+      isFetchingNextPage,
       searchQuery,
-      postsToDisplay,
-      setPostsToDisplay,
-      fetchAcceptedPosts,
+      isSearch,
       setIsSearch,
       setIsSearching,
       isSearching,
+      resetList: () => {
+        queryClient.setQueryData(["acceptedPosts"], {
+          pages: [],
+          pageParams: [],
+        });
+        queryClient.invalidateQueries(["acceptedPosts"]);
+      },
     }),
     [
-      data,
+      acceptedPosts,
       isFetching,
-      allPostsLoaded,
+      isFetchingNextPage,
       isError,
-      searchQuery,
-      postsToDisplay,
+      hasNextPage,
+      isSearch,
       isSearching,
-    ],
+      queryClient,
+    ]
   );
 
   return (
