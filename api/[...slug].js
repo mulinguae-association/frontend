@@ -1,7 +1,7 @@
 import { Readable } from "stream";
 
 export const config = {
-  runtime: "nodejs20.x",
+  runtime: "nodejs",
 };
 
 const HOP_BY_HOP = new Set([
