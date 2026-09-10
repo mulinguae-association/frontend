@@ -4,6 +4,7 @@ import { formatRelativeTime } from "../../../HelperComponents/RelativeDate";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { isTextTruncated } from "../../../../utils/isTextTruncated";
 import { useRemoveCommentMutation } from "../../../../apis/mutations/blogs/removeComment";
+import { isAdminRole } from "../../../../utils/isAdminRole";
 import { useTranslation } from "react-i18next";
 const EllipsisMenu = React.lazy(() => import("../EllipsisMenu"));
 const UpdateComment = React.lazy(() => import("./UpdateComment"));
@@ -51,8 +52,7 @@ const CommentReply = ({
         className="nested_comments"
       >
         {isAuth &&
-          (comment?.postedBy._id === userData?.userId ||
-            userData?.role === "admin") && (
+          (comment?.postedBy._id === userData?.userId || isAdminRole(userData?.role)) && (
             <React.Suspense className="Loading...">
               <EllipsisMenu
                 handleDelete={() =>

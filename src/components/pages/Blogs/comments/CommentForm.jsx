@@ -4,6 +4,7 @@ import { useGlobal } from "../../../../contexts/AppContext";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { useCreateCommentMutation } from "../../../../apis/mutations/blogs/createComment";
 import i18n from "../../../../i18n";
+import { isAdminRole } from "../../../../utils/isAdminRole";
 import { useTranslation } from "react-i18next";
 const CommentForm = ({ blogId }) => {
   const [comment, setComment] = useState("");
@@ -21,7 +22,7 @@ const CommentForm = ({ blogId }) => {
       _id: crypto.randomUUID().toString(),
       parentComment: null,
       replies: [],
-      status: userData?.role === "admin" ? "accepted" : "pending",
+      status: isAdminRole(userData?.role) ? "accepted" : "pending",
       likes: [],
       unlikes: [],
       loves: [],

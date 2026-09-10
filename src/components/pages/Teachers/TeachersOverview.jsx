@@ -11,6 +11,7 @@ import handleError from "../../../utils/handleError";
 import { BiLoaderCircle } from "react-icons/bi";
 import i18n from "../../../i18n";
 import { useDeleteTeacherMutation } from "../../../apis/mutations/teachers/deleteTeacher";
+import { isAdminRole } from "../../../utils/isAdminRole";
 import { useQuery } from "react-query";
 import { fetchTeachers } from "../../../apis/apiUtility";
 const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
@@ -140,7 +141,7 @@ const TeachersOverview = ({ t }) => {
                       onEdit={setEditingTeacher}
                     />
                   )}
-                  {isAuth && userData?.role === "admin" && (
+                  {isAuth && isAdminRole(userData?.role) && (
                     <>
                       <button
                         className="deleteBtn"

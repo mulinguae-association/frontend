@@ -5,7 +5,7 @@ export async function submitBlogPost(newpost) {
   try {
     const response = await axios.post(`/api/blogPosts`, newpost);
 
-    if (response.status === 200) {
+    if (response.status >= 200 && response.status < 300) {
       return response.data;
     }
     throw new Error("Error submitting blog post");

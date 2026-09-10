@@ -11,6 +11,7 @@ import { useUpdateCommentLocally } from "../../../../apis/mutations/blogs/update
 import { useTranslation } from "react-i18next";
 import i18n from "../../../../i18n";
 import { useCache } from "../../../../contexts/BlogsCache";
+import { isAdminRole } from "../../../../utils/isAdminRole";
 const UpdateComment = ({ editComment, initialValue, setIsEditComment }) => {
   const { userData } = useAuth();
   const { clearCache } = useCache();
@@ -44,7 +45,7 @@ const UpdateComment = ({ editComment, initialValue, setIsEditComment }) => {
     const requestedBody = {
       content: value,
     };
-    const isAdmin = userData.role === "admin";
+    const isAdmin = isAdminRole(userData.role);
     try {
       const res = await updatedComment(editCommentId, requestedBody);
       clearCache();

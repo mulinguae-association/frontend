@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useRef } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useRef,
+  useMemo,
+} from "react";
 import { fetchAcceptedPosts } from "../apis/blog-api";
 import logError from "../utils/logError";
 import { useQuery, useQueryClient } from "react-query";
@@ -31,20 +37,31 @@ export const BlogPostsProvider = ({ children }) => {
     },
   );
 
-  const contextValue = {
-    acceptedPosts: data,
-    loading: isFetching,
-    allPostsLoaded,
-    setAllPostsLoaded,
-    errorDisplayPosts: isError,
-    searchQuery,
-    postsToDisplay,
-    setPostsToDisplay,
-    fetchAcceptedPosts,
-    setIsSearch,
-    setIsSearching,
-    isSearching,
-  };
+  const contextValue = useMemo(
+    () => ({
+      acceptedPosts: data,
+      loading: isFetching,
+      allPostsLoaded,
+      setAllPostsLoaded,
+      errorDisplayPosts: isError,
+      searchQuery,
+      postsToDisplay,
+      setPostsToDisplay,
+      fetchAcceptedPosts,
+      setIsSearch,
+      setIsSearching,
+      isSearching,
+    }),
+    [
+      data,
+      isFetching,
+      allPostsLoaded,
+      isError,
+      searchQuery,
+      postsToDisplay,
+      isSearching,
+    ],
+  );
 
   return (
     <BlogPostsContext.Provider value={contextValue}>

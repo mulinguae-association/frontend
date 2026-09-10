@@ -5,6 +5,7 @@ import { useAuth } from '../../../../contexts/AuthContext';
 import { isTextTruncated } from '../../../../utils/isTextTruncated';
 import { useRemoveCommentMutation } from '../../../../apis/mutations/blogs/removeComment';
 import i18n from '../../../../i18n';
+import { isAdminRole } from '../../../../utils/isAdminRole';
 import { useTranslation } from 'react-i18next';
 import { BiLoaderAlt } from 'react-icons/bi';
 import { useCache } from '../../../../contexts/BlogsCache';
@@ -51,7 +52,7 @@ const Comment = ({
 
   return (
     <div style={isAr_Ur ? { direction: "rtl" } : { direction: "ltr" }} className='comment_info'>
-      {isAuth && (comment?.postedBy?._id === userData?.userId || userData?.role === "admin") && (
+      {isAuth && (comment?.postedBy?._id === userData?.userId || isAdminRole(userData?.role)) && (
         <React.Suspense fallback={<BiLoaderAlt color='#fff' className='spin-loader' />}>
           <EllipsisMenu
             handleDelete={() => handleRemoveComment({ commentId: comment?._id, blogId: comment.blogId })}

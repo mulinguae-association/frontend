@@ -7,13 +7,23 @@ import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 import { useCache } from "../../../contexts/BlogsCache";
 import i18n from "../../../i18n";
+import { isAdminRole } from "../../../utils/isAdminRole";
+
+const NORMAL_KEY = "remaining-replies";
+const PREVIEW_KEY = "remaining-replies-preview";
+
+const setReplyData = (queryClient, parentCommentId, updater) => {
+  [NORMAL_KEY, PREVIEW_KEY].forEach((base) => {
+    queryClient.setQueryData([base, parentCommentId], updater);
+  });
+};
 
 export const useAddReplyMutation = (setReplyContent) => {
   const { userData } = useAuth();
   const { setButtonLoading, setNotificationPopup } = useGlobal();
   const { clearCache } = useCache();
   const queryClient = useQueryClient();
-  const isAdmin = userData?.role === "admin";
+  const isAdmin = isAdminRole(userData?.role);
   const newReply = {
     _id: crypto.randomUUID().toString(),
     likes: [],
@@ -30,6 +40,10 @@ export const useAddReplyMutation = (setReplyContent) => {
     {
       onMutate: async ({ parentCommentId, blogId, replyConetnt }) => {
         await queryClient.cancelQueries(["remaining-replies", parentCommentId]);
+        await queryClient.cancelQueries([
+          "remaining-replies-preview",
+          parentCommentId,
+        ]);
         const previousPosts = queryClient.getQueryData([
           "remaining-replies",
           parentCommentId,
@@ -47,30 +61,27 @@ export const useAddReplyMutation = (setReplyContent) => {
           }));
 
           if (parentCommentId !== null) {
-            queryClient.setQueryData(
-              ["remaining-replies", parentCommentId],
-              (prevComments) => ({
-                ...prevComments,
-                pages: prevComments.pages.map((page) => ({
-                  ...page,
-                  remainingReplies: [
-                    ...page.remainingReplies,
-                    {
-                      ...newReply,
-                      blogId,
-                      content: replyConetnt,
-                      parentComment: parentCommentId,
-                    },
-                  ],
-                  lastAcceptedReply: {
+            setReplyData(queryClient, parentCommentId, (prevComments) => ({
+              ...prevComments,
+              pages: prevComments.pages.map((page) => ({
+                ...page,
+                remainingReplies: [
+                  ...page.remainingReplies,
+                  {
                     ...newReply,
                     blogId,
                     content: replyConetnt,
                     parentComment: parentCommentId,
                   },
-                })),
-              }),
-            );
+                ],
+                lastAcceptedReply: {
+                  ...newReply,
+                  blogId,
+                  content: replyConetnt,
+                  parentComment: parentCommentId,
+                },
+              })),
+            }));
           }
         }
         clearCache();
@@ -81,18 +92,19 @@ export const useAddReplyMutation = (setReplyContent) => {
         const newReplyRes = res.data?.comment;
 
         if (isAdmin) {
-          queryClient.setQueryData(
-            ["remaining-replies", parentCommentId],
-            (prevComments) => ({
-              ...prevComments,
-              pages: prevComments.pages.map((page) => ({
-                ...page,
-                remainingReplies: page.remainingReplies.map((reply) =>
-                  reply._id === tempReplyId ? newReplyRes : reply,
-                ),
-              })),
-            }),
-          );
+          setReplyData(queryClient, parentCommentId, (prevComments) => ({
+            ...prevComments,
+            pages: prevComments.pages.map((page) => ({
+              ...page,
+              remainingReplies: page.remainingReplies.map((reply) =>
+                reply._id === tempReplyId ? newReplyRes : reply,
+              ),
+              lastAcceptedReply:
+                page.lastAcceptedReply?._id === tempReplyId
+                  ? newReplyRes
+                  : page.lastAcceptedReply,
+            })),
+          }));
         } else {
           setNotificationPopup({
             message: i18n.t("pages/blogs:replySubmittedReview"),

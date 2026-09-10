@@ -18,6 +18,7 @@ import {
 import { useInfiniteQuery } from "react-query";
 import { useTranslation } from "react-i18next";
 import i18n from "../../../i18n";
+import { isAdminRole } from "../../../utils/isAdminRole";
 const BlogPopup = React.lazy(() => import("./BlogPopup"));
 const ConfirmationModal = React.lazy(() => import("../../ConfirmationModal"));
 
@@ -47,7 +48,7 @@ const BlogPost = ({ blog, list }) => {
   const lastCommentId = comments && comments.length > 0 && comments[0]._id;
 
   const { data: lastReplyData } = useInfiniteQuery(
-    ["remaining-replies", lastCommentId],
+    ["remaining-replies-preview", lastCommentId],
     ({ pageParam = 1 }) =>
       getRemainingAcceptedReplies({
         parentCommentIds: lastCommentId,
@@ -134,7 +135,7 @@ const BlogPost = ({ blog, list }) => {
       {showAllComments && <div className="overlay"></div>}
       {/* Delete Blog Post Button */}
       {isAuth &&
-        (blog.authorId === userData?.userId || userData?.role === "admin") && (
+        (blog.authorId === userData?.userId || isAdminRole(userData?.role)) && (
           <button
             style={
               ArUR

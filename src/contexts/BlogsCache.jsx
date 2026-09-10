@@ -1,23 +1,12 @@
-import React, { createContext, useRef, useContext } from "react";
-import { CellMeasurerCache } from "react-virtualized";
+import React, { createContext, useContext } from "react";
 
 const CacheContext = createContext();
 
 export const CacheProvider = ({ children }) => {
-  // Provide a sensible defaultHeight so rows are visible before measurement
-  const cache = useRef(
-    new CellMeasurerCache({
-      fixedWidth: true,
-      fixedHeight: false,
-      defaultHeight: 460,
-    }),
-  );
-  const clearCache = () => {
-    cache.current.clearAll(); // Clear the cache
-  };
+  const clearCache = () => {};
 
   return (
-    <CacheContext.Provider value={{ cache: cache.current, clearCache }}>
+    <CacheContext.Provider value={{ clearCache }}>
       {children}
     </CacheContext.Provider>
   );

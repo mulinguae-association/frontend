@@ -6,6 +6,7 @@ import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { submitBlogPost } from "../../blog-api";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 import i18n from "../../../i18n";
+import { isAdminRole } from "../../../utils/isAdminRole";
 
 export const useAddBlogMutation = () => {
   const { acceptedPosts, postsToDisplay } = useBlogPosts();
@@ -17,10 +18,10 @@ export const useAddBlogMutation = () => {
       setButtonLoading("addBlogBtn", true);
     },
     onSuccess: (data) => {
-      if (userData.role === "admin") {
+      if (isAdminRole(userData?.role) && data?.blogPost) {
         queryClient.setQueryData(
           ["acceptedPosts", postsToDisplay],
-          [data.blogPost, ...acceptedPosts]
+          [data.blogPost, ...(acceptedPosts || [])]
         );
         notifySuccess(i18n.t("pages/blogs:successSubmittedBlog"));
       } else {
