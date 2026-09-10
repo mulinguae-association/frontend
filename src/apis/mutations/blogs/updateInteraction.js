@@ -2,17 +2,16 @@ import { useMutation, useQueryClient } from "react-query";
 import logError from "../../../utils/logError";
 import handleError from "../../../utils/handleError";
 import { interactWithComment } from "../../blog-api";
-import { useBlogPosts } from "../../../contexts/BlogsContext.jsx";
 import { notifyError } from "../../../components/Notify";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
 import { getCurrentUserId } from "../../../utils/getCurrentUserId";
 
 const NORMAL_KEY = "remaining-replies";
 const PREVIEW_KEY = "remaining-replies-preview";
+const BLOG_LIST_KEY = ["acceptedPosts"];
 
 export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
   const queryClient = useQueryClient();
-  const { postsToDisplay } = useBlogPosts();
   const { userData } = useAuth();
 
   return useMutation(
@@ -20,19 +19,15 @@ export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
     {
       onMutate: async ({ id, action, modelType }) => {
         await queryClient.cancelQueries(["comments", blogId]);
-        await queryClient.cancelQueries(["acceptedPosts", postsToDisplay]);
+        await queryClient.cancelQueries(BLOG_LIST_KEY);
         await queryClient.cancelQueries([NORMAL_KEY, parentCommentId]);
         await queryClient.cancelQueries([PREVIEW_KEY, parentCommentId]);
-        const previousPosts = queryClient.getQueryData([
-          "acceptedPosts",
-          postsToDisplay,
-        ]);
+        const previousPosts = queryClient.getQueryData(BLOG_LIST_KEY);
         const previousComments = queryClient.getQueryData(["comments", blogId]);
 
         const currentState = getCurrentState(
           id,
           queryClient,
-          postsToDisplay,
           modelType,
           blogId
         );
@@ -46,7 +41,6 @@ export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
           id,
           updatedValues,
           queryClient,
-          postsToDisplay,
           modelType,
           blogId,
           parentCommentId
@@ -67,17 +61,13 @@ export const useUpdateInteractionMutation = ({ blogId, parentCommentId }) => {
           id,
           updatedValues,
           queryClient,
-          postsToDisplay,
           modelType,
           blogId,
           parentCommentId
         );
       },
       onError: (err, _, context) => {
-        queryClient.setQueryData(
-          ["acceptedPosts", postsToDisplay],
-          context.previousPosts
-        );
+        queryClient.setQueryData(BLOG_LIST_KEY, context.previousPosts);
         queryClient.setQueryData(
           ["comments", blogId],
           context.previousComments
@@ -101,7 +91,6 @@ const normalizeIds = (arr) =>
 const getCurrentState = (
   id,
   queryClient,
-  postsToDisplay,
   modelType,
   blogId
 ) => {
@@ -120,11 +109,19 @@ const getCurrentState = (
     const replyState = findReplyState(id, queryClient);
     if (replyState) return replyState;
   } else {
-    const blogs = queryClient.getQueryData(["acceptedPosts", postsToDisplay]);
-    const blog = blogs?.find((blog) => blog._id === id);
+    const blog = findBlogPost(id, queryClient);
     if (blog) return getInteractionState(blog);
   }
   return { likes: [], loves: [], unlikes: [] };
+};
+
+const findBlogPost = (id, queryClient) => {
+  const data = queryClient.getQueryData(BLOG_LIST_KEY);
+  for (const page of data?.pages || []) {
+    const blog = (page.posts || []).find((post) => post._id === id);
+    if (blog) return blog;
+  }
+  return null;
 };
 
 // Replies loaded via "show more" live in the remaining-replies caches, so
@@ -186,7 +183,6 @@ const updateInteraction = (
   id,
   updatedValues,
   queryClient,
-  postsToDisplay,
   modelType,
   blogId,
   parentCommentId
@@ -224,10 +220,18 @@ const updateInteraction = (
       );
     });
   }
-  queryClient.setQueryData(["acceptedPosts", postsToDisplay], (prevBlogs) =>
-    prevBlogs?.map((blog) =>
-      blog._id === id ? applyValues(blog) : blog
-    )
+  queryClient.setQueryData(BLOG_LIST_KEY, (prevPosts) =>
+    prevPosts
+      ? {
+          ...prevPosts,
+          pages: (prevPosts.pages || []).map((page) => ({
+            ...page,
+            posts: (page.posts || []).map((blog) =>
+              blog._id === id ? applyValues(blog) : blog
+            ),
+          })),
+        }
+      : prevPosts
   );
 };
 

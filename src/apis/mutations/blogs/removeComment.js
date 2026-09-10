@@ -1,14 +1,12 @@
 import { useMutation, useQueryClient } from 'react-query';
 import logError from '../../../utils/logError';
 import handleError from '../../../utils/handleError';
-// Removed unused import: useBlogPosts
 import { notifyError, notifySuccess } from '../../../components/Notify';
 import { refuseComment } from '../../blog-api';
 import { useCache } from '../../../contexts/BlogsCache';
 
 export const useRemoveCommentMutation = (blogId, parentComment) => {
   const queryClient = useQueryClient();
-  // We don't need postsToDisplay for this mutation
   const { clearCache } = useCache();
 
   return useMutation(

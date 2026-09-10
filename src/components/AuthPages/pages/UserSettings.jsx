@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../../contexts/AuthContext.jsx";
-import { useBlogPosts } from "../../../contexts/BlogsContext.jsx";
 import { useGlobal } from "../../../contexts/AppContext.jsx";
 import { useTranslation } from "react-i18next";
 import Tooltip from "../../HelperComponents/toolTip";
@@ -12,7 +11,6 @@ import { useQueryClient } from "react-query";
 function UserSettings() {
   const { t } = useTranslation("authPages/userProfile");
   const { userData } = useAuth();
-  const { postsToDisplay, setPostsToDisplay } = useBlogPosts();
   const { isBtnLoading, setButtonLoading } = useGlobal();
   const queryClient = useQueryClient();
 
@@ -55,9 +53,7 @@ function UserSettings() {
       notifySuccess(data.message);
       setProfileImage(null);
       queryClient.setQueryData("userProfile", data.data);
-      postsToDisplay > 1
-        ? setPostsToDisplay(1)
-        : queryClient.invalidateQueries(["acceptedPosts", postsToDisplay]);
+      queryClient.invalidateQueries(["acceptedPosts"]);
     } catch (error) {
       notifyError(error.response?.data?.error || error.message);
     } finally {
