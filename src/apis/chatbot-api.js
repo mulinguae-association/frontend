@@ -1,7 +1,7 @@
 import axios from "axios";
 import i18n from "../i18n";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "";
 
 const chatbotApi = axios.create({
   baseURL: `${BACKEND_URL}/api/chatbot`,
