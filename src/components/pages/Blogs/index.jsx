@@ -95,12 +95,12 @@ const Blogs = () => {
             <p className="finished-message">
               {t("errorFetchingPosts")}
             </p>
+          ) : loading ? ( // Check for both loading and isSearching
+            <p className="finished-message">{t("loadingPosts")}</p>
           ) : acceptedPosts && acceptedPosts?.length <= 0 ? (
             <p className="finished-message">{t("noResultsFound")}</p>
           ) : allPostsLoaded ? (
             <p className="finished-message">{t("allPostsLoaded")}</p>
-          ) : loading ? ( // Check for both loading and isSearching
-            <p className="finished-message">{t("loadingPosts")}</p>
           ) : (
             <ScrollDownArrow />
           )}
