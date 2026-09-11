@@ -19,15 +19,20 @@ export const useCreateCommentMutation = () => {
   const isAdmin = isAdminRole(userData?.role); // Or any other logic to determine admin role
   const commentStatus = isAdmin ? "accepted" : "pending";
 
+  // Update blog comment pages safely when the cache is still empty (prevents
+  // "Cannot read properties of null (reading 'pages')" crashing the mutation
+  // before the request is even sent).
+  const mapPages = (prev, updater) =>
+    prev ? { ...prev, pages: prev.pages.map(updater) } : prev;
+
   const updateCommentsData = (blogId, commentData) => {
-    queryClient.setQueryData(["comments", blogId], (prevComments) => ({
-      ...prevComments,
-      pages: prevComments.pages.map((page) => ({
+    queryClient.setQueryData(["comments", blogId], (prevComments) =>
+      mapPages(prevComments, (page) => ({
         ...page,
         totalComments: page.totalComments + 1,
         acceptedComments: [commentData, ...page.acceptedComments],
       })),
-    }));
+    );
   };
 
   return useMutation(
@@ -56,15 +61,14 @@ export const useCreateCommentMutation = () => {
       onSuccess: ({ status, data }, { blogId, commentData }, context) => {
         const { tempCommentId } = context;
         if (isAdmin) {
-          queryClient.setQueryData(["comments", blogId], (prevComments) => ({
-            ...prevComments,
-            pages: prevComments.pages.map((page) => ({
+          queryClient.setQueryData(["comments", blogId], (prevComments) =>
+            mapPages(prevComments, (page) => ({
               ...page,
               acceptedComments: page.acceptedComments.map((comment) =>
                 comment._id === tempCommentId ? data.comment : comment
               ),
             })),
-          }));
+          );
         } else {
           setNotificationPopup({
             message: i18n.t("pages/blogs:commentSubmittedReview"),

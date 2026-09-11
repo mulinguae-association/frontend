@@ -18,6 +18,12 @@ const setReplyData = (queryClient, parentCommentId, updater) => {
   });
 };
 
+// Update blog comment pages safely when the cache is still empty (prevents
+// "Cannot read properties of null (reading 'pages')" crashing the mutation
+// before the request is even sent).
+const mapCommentPages = (prev, updater) =>
+  prev ? { ...prev, pages: prev.pages.map(updater) } : prev;
+
 export const useAddReplyMutation = (setReplyContent) => {
   const { userData } = useAuth();
   const { setButtonLoading, setNotificationPopup } = useGlobal();
@@ -52,18 +58,16 @@ export const useAddReplyMutation = (setReplyContent) => {
         setButtonLoading(buttonKey, true);
         // Handle admin case
         if (isAdmin) {
-          queryClient.setQueriesData(["comments", blogId], (prevComments) => ({
-            ...prevComments,
-            pages: prevComments.pages.map((page) => ({
+          queryClient.setQueriesData(["comments", blogId], (prevComments) =>
+            mapCommentPages(prevComments, (page) => ({
               ...page,
               totalComments: page.totalComments + 1,
             })),
-          }));
+          );
 
           if (parentCommentId !== null) {
-            setReplyData(queryClient, parentCommentId, (prevComments) => ({
-              ...prevComments,
-              pages: prevComments.pages.map((page) => ({
+            setReplyData(queryClient, parentCommentId, (prevComments) =>
+              mapCommentPages(prevComments, (page) => ({
                 ...page,
                 remainingReplies: [
                   ...page.remainingReplies,
@@ -81,7 +85,7 @@ export const useAddReplyMutation = (setReplyContent) => {
                   parentComment: parentCommentId,
                 },
               })),
-            }));
+            );
           }
         }
         clearCache();
@@ -92,9 +96,8 @@ export const useAddReplyMutation = (setReplyContent) => {
         const newReplyRes = res.data?.comment;
 
         if (isAdmin) {
-          setReplyData(queryClient, parentCommentId, (prevComments) => ({
-            ...prevComments,
-            pages: prevComments.pages.map((page) => ({
+          setReplyData(queryClient, parentCommentId, (prevComments) =>
+            mapCommentPages(prevComments, (page) => ({
               ...page,
               remainingReplies: page.remainingReplies.map((reply) =>
                 reply._id === tempReplyId ? newReplyRes : reply,
@@ -104,7 +107,7 @@ export const useAddReplyMutation = (setReplyContent) => {
                   ? newReplyRes
                   : page.lastAcceptedReply,
             })),
-          }));
+          );
         } else {
           setNotificationPopup({
             message: i18n.t("pages/blogs:replySubmittedReview"),
