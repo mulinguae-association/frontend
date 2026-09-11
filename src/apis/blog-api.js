@@ -30,14 +30,17 @@ export async function fetchPendingPosts() {
 }
 
 export async function fetchAcceptedPosts({ cursor, limit }) {
-  console.log(cursor);
   try {
     const params = { limit: limit || 5 };
     if (cursor) params.cursor = cursor;
     const response = await axios.get(`/api/blogPosts/accepted`, { params });
 
     if (response.status === 200) {
-      return response.data;
+      const data = response.data;
+      if (Array.isArray(data)) {
+        return { posts: data, nextCursor: null };
+      }
+      return data;
     }
     throw new Error("Error fetching accepted blog posts");
   } catch (error) {
