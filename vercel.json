@@ -1,6 +1,12 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/proxy?apiPath=:path*" },
-    { "source": "/((?!api).*)", "destination": "/index.html" }
+    {
+      "source": "/api/:path*",
+      "destination": "https://mulinguae-backend.vercel.app/api/:path*"
+    },
+    {
+      "source": "/((?!api).*)",
+      "destination": "/index.html"
+    }
   ]
 }
