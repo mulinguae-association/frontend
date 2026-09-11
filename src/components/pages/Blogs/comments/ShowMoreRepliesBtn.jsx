@@ -14,7 +14,7 @@ const ShowMoreRepliesBtn = ({
   handleEdit,
 }) => {
   const { t } = useTranslation("pages/blogs");
-  const { data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
+  const { data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage, isLoading } =
     useInfiniteQuery(
       ["remaining-replies", commentId],
       ({ pageParam = 1 }) =>
@@ -29,6 +29,7 @@ const ShowMoreRepliesBtn = ({
             ? allPages.length + 1
             : undefined; // Proceed to fetch the next page
         },
+        staleTime: Infinity,
       },
     );
 
@@ -65,22 +66,20 @@ const ShowMoreRepliesBtn = ({
       ))}
       {remaining > 0 && (
         <div className="fetch_more_replies">
-          {hasNextPage ? (
-            isFetchingNextPage ? (
-              <BiLoaderCircle color="#fff" className="spin-loader" />
-            ) : (
-              <>
-                <button
-                  className="fetch_more_btn"
-                  onClick={() => !isFetching && fetchNextPage()}
-                  disabled={isFetchingNextPage || !hasNextPage}
-                >
-                  {t("showMoreReplies")}
-                </button>
+          {isLoading || isFetchingNextPage ? (
+            <BiLoaderCircle color="#fff" className="spin-loader" />
+          ) : hasNextPage ? (
+            <>
+              <button
+                className="fetch_more_btn"
+                onClick={() => !isFetching && fetchNextPage()}
+                disabled={isFetchingNextPage || !hasNextPage}
+              >
+                {t("showMoreReplies")}
+              </button>
 
-                <p className="reply-counter">{t("remainingCounter", { remaining, total: repliesCount })}</p>
-              </>
-            )
+              <p className="reply-counter">{t("remainingCounter", { remaining, total: repliesCount })}</p>
+            </>
           ) : (
             <span className="replies_loaded">{t("allRepliesLoaded")}</span>
           )}

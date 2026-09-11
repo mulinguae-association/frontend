@@ -41,6 +41,7 @@ const BlogPost = ({ blog, list }) => {
           ? allPages.length + 1
           : undefined;
       },
+      staleTime: Infinity,
     }
   );
   const comments = data?.pages.flatMap((page) => page.acceptedComments);
@@ -62,6 +63,7 @@ const BlogPost = ({ blog, list }) => {
           : undefined;
       },
       enabled: !!lastCommentId, // Enable query only if there's a last comment
+      staleTime: Infinity,
     }
   );
 
