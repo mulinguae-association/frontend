@@ -25,6 +25,19 @@ async function submitRegister(registerData) {
   }
 }
 
+let refreshPromise = null;
+
+const refreshAccessToken = () => {
+  if (!refreshPromise) {
+    refreshPromise = axios
+      .post(`/api/auth/refresh`, null, { withCredentials: true })
+      .finally(() => {
+        refreshPromise = null;
+      });
+  }
+  return refreshPromise;
+};
+
 async function submitLogin(loginData) {
   try {
     const response = await axios.post(`/api/auth/login`, loginData);
@@ -50,4 +63,10 @@ async function submitLogout() {
   }
 }
 
-export { fetchUserProfile, submitLogin, submitRegister, submitLogout };
+export {
+  fetchUserProfile,
+  submitLogin,
+  submitRegister,
+  submitLogout,
+  refreshAccessToken,
+};

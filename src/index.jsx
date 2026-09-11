@@ -2,12 +2,12 @@ import "./i18n";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
+import "./apis/httpInterceptor.js";
 import App from "./App.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import { AppProvider } from "./contexts/AppContext.jsx";
 import { registerServiceWorker } from "./registerServiceWorker";
 import { AuthProvider } from "./contexts/AuthContext.jsx";
-import { BlogPostsProvider } from "./contexts/BlogsContext.jsx";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 // Call the registerServiceWorker function to register the service worker
