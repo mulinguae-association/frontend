@@ -1,26 +1,27 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { useTranslation } from "react-i18next";
 import { notifyError } from "../components/Notify";
 import handleError from "../utils/handleError";
+import { getSession, setSession, subscribeSession } from "./sessionStore.js";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const { t } = useTranslation("global");
-  const [isAuth, setIsAuth] = useState(false);
-  const [userData, setUserData] = useState(null);
+  const [session, setSessionState] = useState(getSession);
+
   const fetchUserProfile = async () => {
-    const { fetchUserProfile } = await import("../apis/auth-api");
+    const { fetchUserProfile } = await import("../apis/auth-api.js");
     return fetchUserProfile();
   };
+
   const { isLoading: authLoading } = useQuery("userProfile", fetchUserProfile, {
-    retry: false, // Don't retry on failure
-    staleTime: 10 * 60 * 1000, // 10 minutes
-    cacheTime: 15 * 60 * 1000, // 15 minutes
+    retry: false,
+    staleTime: 10 * 60 * 1000,
+    cacheTime: 15 * 60 * 1000,
     onError: (err) => {
-      setIsAuth(false);
-      setUserData(null); // Clear userData on error
+      setSession({ isAuth: false, userData: null });
       if (err.response?.status === 401) {
         if (err.response.data.message === "Token Expired") {
           notifyError(t("app.sessionExpired"));
@@ -30,14 +31,21 @@ export const AuthProvider = ({ children }) => {
       }
     },
     onSuccess: (data) => {
-      setIsAuth(true);
-      setUserData(data);
+      setSession({ isAuth: true, userData: data });
     },
   });
 
+  useEffect(() => subscribeSession(setSessionState), []);
+
   return (
     <AuthContext.Provider
-      value={{ userData, isAuth, setIsAuth, setUserData, authLoading }}
+      value={{
+        userData: session.userData,
+        isAuth: session.isAuth,
+        setIsAuth: (v) => setSession({ isAuth: v }),
+        setUserData: (d) => setSession({ userData: d }),
+        authLoading,
+      }}
     >
       {children}
     </AuthContext.Provider>
