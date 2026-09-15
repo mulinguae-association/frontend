@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { MessageSquare, Plus, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { getConversations } from "../../../apis/chatbot-api";
+import { useConversations } from "../../../apis/chatbot-api";
 import { formatTime, domainToLabel } from "../utils/chatbotUtils";
 
 /**
@@ -15,25 +15,7 @@ import { formatTime, domainToLabel } from "../utils/chatbotUtils";
  */
 const ConversationsList = ({ onSelectConversation, onNewChat }) => {
   const { t } = useTranslation("global");
-  const [conversations, setConversations] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchConversations = async () => {
-      try {
-        setIsLoading(true);
-        const data = await getConversations();
-        setConversations(data);
-        setError(null);
-      } catch (err) {
-        setError(t("chatbot.loadFailed"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchConversations();
-  }, [t]);
+  const { data: conversations = [], isLoading, error } = useConversations();
 
   return (
     <div className="conv-list">
@@ -56,7 +38,9 @@ const ConversationsList = ({ onSelectConversation, onNewChat }) => {
       )}
 
       {!isLoading && error && (
-        <div className="conv-list__status conv-list__status--error">{error}</div>
+        <div className="conv-list__status conv-list__status--error">
+          {t("chatbot.loadFailed")}
+        </div>
       )}
 
       {!isLoading && !error && conversations.length === 0 && (

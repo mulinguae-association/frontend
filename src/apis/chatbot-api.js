@@ -1,12 +1,19 @@
 import axios from "axios";
+import { useMutation, useQuery } from "react-query";
 import i18n from "../i18n";
+import { setupAuthInterceptor } from "./httpInterceptor.js";
+import { refreshAccessToken } from "./auth-api.js";
+import { clearSession } from "../contexts/sessionStore.js";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "";
 
 const chatbotApi = axios.create({
   baseURL: `${BACKEND_URL}/api/chatbot`,
   withCredentials: true,
+  timeout: 30000,
 });
+
+setupAuthInterceptor(chatbotApi);
 
 /**
  * Parse an SSE line like `data: {...}`. Returns the parsed object or null
@@ -45,47 +52,61 @@ const parseSSELine = (line) => {
  */
 export const streamChatMessage = (message, options = {}) => {
   const { conversationId, domain = "general", callbacks = {} } = options;
-  const {
-    onConversationId,
-    onContent,
-    onMessage,
-    onDone,
-    onError,
-    onStatus,
-  } = callbacks;
+  const { onConversationId, onContent, onMessage, onDone, onError, onStatus } =
+    callbacks;
 
   const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
+
+  const attemptFetch = async (retryOn401 = true) => {
+    const response = await fetch(`${BACKEND_URL}/api/chatbot/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ message, conversationId, domain }),
+      signal: controller.signal,
+    });
+
+    if (response.status === 401 && retryOn401) {
+      try {
+        await refreshAccessToken();
+        return attemptFetch(false); // retry once with new token
+      } catch {
+        clearSession();
+        onError?.(i18n.t("errorMessages.401"));
+        onDone?.();
+        return null;
+      }
+    }
+
+    onStatus?.(response.status);
+
+    if (!response.ok) {
+      let detail = i18n.t("chatbot.errorGeneric");
+      try {
+        const errBody = await response.json();
+        detail = errBody.error || errBody.message || detail;
+      } catch {
+        // keep default message
+      }
+      onError?.(detail);
+      onDone?.();
+      return null;
+    }
+
+    if (!response.body) {
+      onError?.(i18n.t("chatbot.errorStreaming"));
+      onDone?.();
+      return null;
+    }
+
+    return response;
+  };
 
   (async () => {
     try {
-      const response = await fetch(`${BACKEND_URL}/api/chatbot/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ message, conversationId, domain }),
-        signal: controller.signal,
-      });
-
-      onStatus?.(response.status);
-
-      if (!response.ok) {
-        let detail = i18n.t("chatbot.errorGeneric");
-        try {
-          const errBody = await response.json();
-          detail = errBody.error || errBody.message || detail;
-        } catch {
-          // keep default message
-        }
-        onError?.(detail);
-        onDone?.();
-        return;
-      }
-
-      if (!response.body) {
-        onError?.(i18n.t("chatbot.errorStreaming"));
-        onDone?.();
-        return;
-      }
+      const response = await attemptFetch();
+      if (!response) return;
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
@@ -98,7 +119,7 @@ export const streamChatMessage = (message, options = {}) => {
 
         buffer += decoder.decode(value, { stream: true });
         const lines = buffer.split("\n");
-        buffer = lines.pop() || ""; // keep incomplete line for next chunk
+        buffer = lines.pop() || "";
 
         for (const line of lines) {
           const parsed = parseSSELine(line);
@@ -117,7 +138,12 @@ export const streamChatMessage = (message, options = {}) => {
       onMessage?.(fullContent);
       onDone?.();
     } catch (err) {
-      if (err.name === "AbortError") return;
+      clearTimeout(timeoutId);
+      if (err.name === "AbortError") {
+        onError?.(i18n.t("chatbot.errorGeneric"));
+        onDone?.();
+        return;
+      }
       onError?.(err.message || i18n.t("chatbot.sendFailed"));
       onDone?.();
     }
@@ -175,10 +201,52 @@ export const getConversationHistory = async (conversationId) => {
   return response.data;
 };
 
+// --- React Query hooks ---
+
+/**
+ * Mutation for sending a message via the sync (non-streaming) endpoint.
+ * Returns { conversationId, content, timestamp, cached }.
+ */
+export const useChatMessageSync = () => {
+  return useMutation(({ message, conversationId, domain }) =>
+    sendMessage(message, { conversationId, domain }),
+  );
+};
+
+/**
+ * Query for listing the authenticated user's past conversations.
+ * Returns array of { conversationId, domain, lastMessage, messageCount, updatedAt }.
+ */
+export const useConversations = () => {
+  return useQuery("chatbotConversations", getConversations, {
+    staleTime: 0,
+    retry: 1,
+  });
+};
+
+/**
+ * Query for fetching full message history for a single conversation.
+ * Only enabled when conversationId is provided.
+ */
+export const useConversationHistory = (conversationId) => {
+  return useQuery(
+    ["chatbotConversation", conversationId],
+    () => getConversationHistory(conversationId),
+    {
+      enabled: !!conversationId,
+      staleTime: 10 * 60 * 1000,
+      retry: 1,
+    },
+  );
+};
+
 export default {
   streamChatMessage,
   sendMessage,
   checkRateLimit,
   getConversations,
   getConversationHistory,
+  useChatMessageSync,
+  useConversations,
+  useConversationHistory,
 };

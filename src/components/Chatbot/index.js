@@ -15,13 +15,9 @@ export { default as PredefinedSuggestions } from "./components/PredefinedSuggest
 
 // Utils
 export {
-  generateConversationId,
   formatTime,
   sanitizeInput,
-  estimateTokenCount,
   isValidMessage,
-  formatDate,
-  parseGroqMessage,
-  toGroqMessageFormat,
-  getDomainSystemPrompt,
+  topicToDomain,
+  domainToLabel,
 } from "./utils/chatbotUtils";
