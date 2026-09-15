@@ -243,34 +243,40 @@ const Chatbot = ({
   }, [isOpen]);
 
   // Load a past conversation's full history and open it in the chat view.
-  const selectConversation = useCallback(async (selectedConversationId) => {
-    try {
+  const selectConversation = useCallback(
+    async (selectedConversationId) => {
       setChatState((prev) => ({
         ...prev,
+        view: "chat",
+        messages: [],
         error: null,
       }));
+      setIsLoading(true);
 
-      const data = await getConversationHistory(selectedConversationId);
+      try {
+        const data = await getConversationHistory(selectedConversationId);
 
-      setChatState((prev) => ({
-        ...prev,
-        conversationId: data.conversationId,
-        messages: data.messages.map((message, index) => ({
-          role: message.role,
-          content: message.content,
-          timestamp: message.timestamp,
-          _msgId: `msg-${index}-${Date.now()}`,
-        })),
-        view: "chat",
-      }));
-    } catch (err) {
-      setChatState((prev) => ({
-        ...prev,
-        error: t("chatbot.errorLoadConversation"),
-        view: "list",
-      }));
-    }
-  }, []);
+        setChatState((prev) => ({
+          ...prev,
+          conversationId: data.conversationId,
+          messages: data.messages.map((message, index) => ({
+            role: message.role,
+            content: message.content,
+            timestamp: message.timestamp,
+            _msgId: `msg-${index}-${Date.now()}`,
+          })),
+        }));
+      } catch (err) {
+        setChatState((prev) => ({
+          ...prev,
+          error: t("chatbot.errorLoadConversation"),
+        }));
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [t],
+  );
 
   // Handle when a user clicks a predefined suggestion.
   const handleSelectSuggestion = useCallback(

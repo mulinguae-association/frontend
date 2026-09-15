@@ -40,15 +40,17 @@ const MessageList = ({
         />
       ))}
 
-      {isLoading && (
-        <div className="chat-message chat-message--bot">
-          <div className="chat-message__bubble chat-message__bubble--typing">
-            <span></span>
-            <span></span>
-            <span></span>
+      {isLoading &&
+        (!messages.length ||
+          messages[messages.length - 1].role === "user") && (
+          <div className="chat-message chat-message--bot">
+            <div className="chat-message__bubble chat-message__bubble--typing">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
       {error && (
         <div className="chat-message chat-message--error">
