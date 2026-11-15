@@ -103,7 +103,7 @@ const Home = ({ imgAnimation }) => {
                     {t("second_link")}
                   </Link>
                   <span>{t("after_des_link2")}</span>
-                  <Link className="des_link" to={``}>
+                  <Link className="des_link" to={`pages/linguicide`}>
                     {t("third_link")}
                   </Link>
                   <span>{t("last_des_link")}</span>{" "}
