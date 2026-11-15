@@ -1,6 +1,105 @@
 @use "../../globalStyles/_colors.scss" as *;
 @use "../../globalStyles/mixins/about" as *;
 @use "../../globalStyles/mixins/mixins" as *;
+.mission_manifesto {
+  width: 85%;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid rgba($primaryDark-color, 0.2);
+  border-bottom: 0;
+  border-radius: 20px 20px 0 0;
+  letter-spacing: 0.4px;
+  background: rgba(#fff, 0.9);
+  color: $darkgray-color;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8;
+  text-transform: none;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 0;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  .manifesto_headline {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $primaryDark-color;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0;
+  }
+
+  .manifesto_closing {
+    font-weight: 600;
+    color: $darkBlue-color;
+    margin-top: 0.25rem;
+  }
+
+  .manifesto_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    a:first-child {
+      background-color: $darkBlue-color;
+      color: $white-color;
+
+      &:hover {
+        background-color: $medium-darkblue;
+      }
+    }
+
+    a:last-child {
+      background-color: transparent;
+      color: $primaryDark-color;
+      border: 1px solid rgba($primaryDark-color, 0.4);
+
+      &:hover {
+        background-color: rgba($primary-color, 0.08);
+      }
+    }
+
+    a:focus-visible {
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 576px) {
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .about_us_info {
   padding: 50px 0;
   text-transform: capitalize;
@@ -14,6 +113,13 @@
     border: 1px solid rgba($primaryDark-color, 0.2);
     border-top: 0;
     @include about();
+    border-radius: 0 0 20px 20px;
+    margin-top: 0;
+
+    @media (max-width: 768px) {
+      border-radius: 0;
+    }
+
     & div {
       padding: 30px;
       @media (max-width: 768px) {

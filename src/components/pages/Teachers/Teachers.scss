@@ -11,6 +11,55 @@
     color: $primaryDark-color;
   }
 }
+.Teachers_manifesto {
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba($primaryDark-color, 0.18);
+  border-radius: 12px;
+  background: rgba($white-color, 0.7);
+
+  .head {
+    margin-top: 0;
+  }
+
+  .about p {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+
+  .manifesto_cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.3rem;
+    min-height: 44px;
+    border-radius: 8px;
+    background-color: $primaryDark-color;
+    color: $white-color;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.15rem 1rem;
+  }
+}
+
 .teachers_overview {
   background-color: rgba($blue-shadow-light, 25%);
   padding: 10px;

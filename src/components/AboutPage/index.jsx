@@ -6,6 +6,8 @@ import PrintBtn from "../PrintButton";
 import { useRef } from "react";
 import PreloadImages from "../../utils/PreloadImages";
 import { SEO } from "../SEO";
+import { Link } from "react-router-dom";
+import i18n from "../../i18n";
 
 const About = () => {
   const { t } = useTranslation("about", { ns: "about" });
@@ -76,6 +78,21 @@ const About = () => {
                   alt={global("app.altAboutMission")}
                 />
               </header>
+              <div className="mission_manifesto">
+                <p className="manifesto_headline">{t("manifesto_head")}</p>
+                <p>{t("manifesto_intro")}</p>
+                <p>{t("manifesto_invite")}</p>
+                <p>{t("manifesto_collective")}</p>
+                <p className="manifesto_closing">{t("manifesto_closing")}</p>
+                <div className="manifesto_actions">
+                  <Link to={`/${i18n.language}/pages/work-with-us/become-teacher`}>
+                    {t("manifesto_cta_teachers")}
+                  </Link>
+                  <Link to={`/${i18n.language}/pages/feedback`}>
+                    {t("manifesto_cta_suggestions")}
+                  </Link>
+                </div>
+              </div>
               <div className="group">
                 <picture>
                   <source

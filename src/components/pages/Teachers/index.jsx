@@ -4,8 +4,9 @@ import "../pagesStyle.scss";
 import { useTranslation } from "react-i18next";
 import PrintBtn from "../../PrintButton";
 import TeachersOverview from "./TeachersOverview";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SEO } from "../../SEO";
+import i18n from "../../../i18n";
 
 const Teachers = () => {
   const { t } = useTranslation("pages/teachers");
@@ -42,6 +43,22 @@ const Teachers = () => {
               <h1 className="page_title">{t("page_title")}</h1>
               <p className="about">{t("sec1_about1")}</p>
             </header>
+            <article className="Teachers_manifesto">
+              <header>
+                <h2 className="head">{t("manifesto_head")}</h2>
+              </header>
+              <div className="about">
+                <p>{t("manifesto_lead")}</p>
+                <p>{t("manifesto_cooperation")}</p>
+                <Link
+                  className="manifesto_cta"
+                  to={`/${i18n.language}/pages/work-with-us/become-teacher`}
+                >
+                  {t("manifesto_cta")}
+                </Link>
+              </div>
+            </article>
+
             <article className="Teachers_Students_Rel">
               <header>
                 <h2 className="head">{t("sec2_head")}</h2>

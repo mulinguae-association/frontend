@@ -106,7 +106,10 @@ const Home = ({ imgAnimation }) => {
                   <Link className="des_link" to={``}>
                     {t("third_link")}
                   </Link>
-                  <span>{t("last_des_link")}</span>
+                  <span>{t("last_des_link")}</span>{" "}
+                  <Link className="des_link" to={`/${i18n.language}/about`}>
+                    {t("manifesto_teaser_link")}
+                  </Link>
                 </p>
               )}
               <Link className="hero_btn change_direction" to={`about`}>
